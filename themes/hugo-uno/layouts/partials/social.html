@@ -1,0 +1,27 @@
+<nav class="cover-navigation navigation--social">
+    <ul class="navigation">
+        <!-- Twitter -->
+        <li class="navigation__item">
+            <a href="http://twitter.com/heri" title="@heri on Twitter"> <i class='fa fa-twitter'></i> <span class="label">Twitter</span> </a>
+        </li> {{ if .Site.Params.bitbucket }}
+        <!-- Bitbucket -->
+        <li class="navigation__item">
+            <a href="https://bitbucket.org/{{ .Site.Params.bitbucket }}" title="{{ .Site.Params.bitbucket }} on bitbucket"> <i class='fa fa-bitbucket'></i> <span class="label">Bitbucket</span> </a>
+        </li> {{ end }}
+        <!-- github -->
+        <li class="navigation__item">
+            <a href="https://github.com/heri" title="heri on github"> <i class='fa fa-github'></i> <span class="label">Github</span> </a>
+        </li> {{ if .Site.Params.flickr }}
+        <!-- Flickr -->
+        <li class="navigation__item">
+            <a href="http://www.flickr.com/photos/{{ .Site.Params.flickr }}/" title="{{ .Site.Params.flickr }} on flickr"> <i class='fa fa-flickr'></i> <span class="label">Flickr</span> </a>
+        </li> {{ end }}
+        <!-- Medium -->
+        <li class="navigation__item">
+            <a href="http://medium.com/@heri" title="Linkedin"> <i class='fa fa-medium'></i> <span class="label">Medium</span> </a>
+        </li>
+        <!-- Email -->
+        <li class="navigation__item">
+            <a href="mailto:heri@studiokenzai.com" title="Email"> <i class='fa fa-envelope-o'></i> <span class="label">Email</span> </a>
+        </li>  </ul>
+</nav>

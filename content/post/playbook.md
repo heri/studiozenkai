@@ -10,27 +10,37 @@ Bonjour!
 Nous offrons _une expertise technique pour un résultat de qualité_ dans le développement de plateformes transactionnelles, de financement, de médias:
 
 * Étude et conception fonctionnelle et technique
+
 * Développement de solutions front, middle ou back-office
+
 * Développement d'applications iOS ou Android
+
 * Conduite de projet sur les technologies Ruby, Javascript, Lua, et plateformes mobiles; utilisation de base de données MySQL, Postgresql, ou redis, mongodb, ElasticSearch, Solr
+
 * Audit de code, de qualité et de performance des applications
+
 * Automatisation des tests et recettes
+
 * Intégration et interfaçage
+
 * Mise en production
+
 * Support et maintenance évolutive et corrective
 
 Nous développons de façon _lean_ et rapide, ce qui veut dire que vous obtenez votre produit rapidement et à un coût compétitif, le tout à un standard de qualité élevé.
 
 Développer une plateforme d'excellence démarre par un processus bien conçu. Ce document ou _Playbook_ décrit le processus utilisé pour tous nos projets, que ce soit les meilleurs pratiques, astuces et règles que nous avons établis au fil des années. Nous avons inclus un exemple de projet (DAMAVA) qui vous montre le processus en action. Nous encourageons les clients nouveaux et potentiels à lire ce document pour qu'ils savent à quoi s'attendre en travaillant avec nous. Ceci est un document vivant qui est régulièrement mis à jour par notre équipe à fur et à mesure que nous apprenons à mieux faire les choses, donc attendez-vous à des modifications en tout temps.
 
-# Le premier contact
+## Le premier contact
 
 La plupart de nos clients sont introduits par nos clients existants, qui nous trouvent par notre implication dans la communauté startup, via les publications en ligne ou via Google. Après avoir une recherche rapide, ils entrent en contact en remplissant un formulaire sur le site ou bien en nous envoyant un courriel.
 
 Après avoir reçu la première requête, nous planifions une première discussion pour discuter du projet en détail:
 
 * Est-ce que votre projet cadre avec nos compétences techniques (platforme et développement sur mesure, applications web, applications mobile, recherche et développement, intégration d'APIs externe, design) ?
+
 * Avez-vous un budget suffisant en accord avec l'ambition du projet?
+
 * Et-ce que votre calendrier cadre avec nos disponibilités?
 
 Après avoir confirmé qu'il y a une collaboration possible, nous parlerons plus en détail de notre culture et de notre philosophie sur le développement de technologie. Nous pouvons aussi aller en détail par rapport aux coûts et délais.
@@ -39,19 +49,26 @@ Si les deux partis s'entendent, nous signons normalement un accord de non-divilg
 
 *Exemple: Dans le projet DAMAVA, l'instigateur du projet a été introduit par la responsable économique de la Ville de Montréal, avec qui nous avons eu de bonnes collaborations. Après avoir discuté de plusieurs projets potentiels, nous nous sommes mis d'accord pour développer une nouvelle plateforme mettant en relation des aidants naturels et des personnes agées, à travers le Canada. Les compétences d'aidants naturels, leur calendrier de disponibilité, leur placement géographique, une messagerie par email et SMS, ainsi qu'une plateforme de paiement électronique devront être développés.*
 
-# La phase de découverte
+## La phase de découverte
 
 Développer une plateforme sur mesure est en soi complexe. Même les applications "simples" ont des couches de complexité cachées qui doivent être analysées et répertoriées. Cette phase de découverte permet à notre équipe d'investir le temps nécessaire pour comprendre votre application de A à Z, et d'aller à travers chaque fonctionnalité requise, user story, écran, etc. ce qui nous permet en retour d'estimer de manière plus précise le temps requis et le coût.
 
 De manière générale, la phase de découverte inclus:
 
 * la description des différents types d'utilisateur (utilisateur courant, utilisateur secondaire, administrateur, staff, partenaire commercial etc.),
+
 * la description des "user stories" pour les différents types d'utilisateur,
+
 * la description des fonctionnalités majeures de l'application,
+
 * le design de wireframe pour les pages principales de l'application,
+
 * le choix des technologies pour le front-end, le back-end, serveur etc.
+
 * ingénierie de la plateforme, par rapport au traffic planifié, nombre de commandes et besoins utilisateurs,
+
 * le calendrier détaillé de chaque section majeur de l'application et chaque étape du processus de développement de la plateforme,
+
 * l'estimation détaillé de chaque section majeure de l'application et chaque étape du processus.
 
 À la fin du processus de découverte, nous vous fournirons un document détaillé qui décrit tous les éléments ci-dessus.
@@ -85,7 +102,7 @@ Voici le prototype interactif pour DAMAVA:
 ![Prototype DAMAVA](/images/prototype.png "[Prototype DAMAVA")
 
 
-# La phase de développement
+## La phase de développement
 
 La programmation est la partie la plus complexe et qui nécessite le plus de temps dans le développement logiciel. Nous commençons seulement à programmer quand la phase de découverte et de design sont finis. Ceci assure que votre budget ne sera pas perdu dans le développement de fonctionnalités et des écrans qui vont nécessiter des révisions majeurs, ou pire, qui devront être effaçés et complètement refaits. C'est mieux de faire ces erreurs dans la phase moins coûteuse de design, quand on peut changer la plateforme rapidement avec juste quelques clics de souris. Comme mentionné ci-dessus, nous ne pouvons prendre un projet sans la phase de découverte et de design (ne pas suivre ces étapes assure l'échec du projet), et nous préférons refuser une collaboration plutôt que de se mettre d'accord sur un processus que nous savons voués à l'échec.
 
@@ -106,7 +123,7 @@ Dans la plupart des projets, la phase de développement inclus:
 ![Nous utilisons DigitalOcean pour héberger des instances flexibles et idéales pour le développement](/images/digitalocean.png "Nous utilisons DigitalOcean pour héberger des instances flexibles et idéales pour le développement")
 ![Gestion des fonctionnalités à developper avec Zenhub](/images/zenhub.png "Gestion des fonctionnalités à developper avec Zenhub")
 
-# La phase de "Beta Testing"
+## La phase de "Beta Testing"
 
 C'est le temps de voir comment votre application est reçue dans la "vrai vie". La plateforme la mieux programmée aura toujours des bogues, il est donc impératif que votre application soit testée, utilisée, revue par des utilisateurs potentiels avant le lancement officiel. Les beta-testeurs incluent souvent les vrais utilisateurs de la plateforme, qui vont l'utiliser dans les mêmes conditions et la même finalité que la plateforme finale.
 
@@ -114,12 +131,12 @@ Il arrive que le processus de beta soit découpé en un beta privé, où des uti
 
 *Exemple: dès qu'une version utilisable a été développé, toute l'équipe a été invité pour essayer la plateforme et essayer d'y trouver les limites. Ceci a mis avant des bogues graphiques, des bogues de logique, des bogues d'exception ainsi qu'un design à travailler pour le navigateur Firefox et Microsoft Edge. Ensuite le client a été invité à tester l'application et nous faire en détail de leur commentaire. Dès la fin de cette étape, des aidants naturels de la région de Montréal ont été invités à tester l'application sur le terrain. Il en est sortie une liste de feedback positifs, les utilisateurs beta ayant trouvé l'application facile à utiliser et naviguer.*
 
-# La phase de lancement
+## La phase de lancement
 
 Après de nombreux mois de travail ardu, l'application est lancé! C'est le temps de fêter et de se féliciter! Il y a eu des moments difficiles et longs, mais c'est le but. Comme l'a dit John Kennedy : "Nous avons choisi d'aller sur la lune, non parce que c'était facile, mais parce que c'était difficile"
 
 
-# Maintenance : Un accompagnement au delà du lancement du produit
+## Maintenance : Un accompagnement au delà du lancement du produit
 
 Comme tout système complexe, les plateformes requiert une maintenance. Quand vous achetez une nouvelle voiture tout fonctionne parfaitement. Mais avec le temps, si vous ne changez pas l'huile, alors le moteur va à un moment ou un autre se déteriorer et s'arrêter de fonctioner. C'est la même chose pour tout logiciel. Le jour où votre application est 100% complète n'arrivera jamais. Un certain niveau de maintenance est nécessaire, incluant:
 
@@ -137,18 +154,21 @@ Comme tout système complexe, les plateformes requiert une maintenance. Quand vo
 ![Nous utilisons Airbrake pour le suivi des erreurs](/images/airbrake.png "Nous utilisons Airbrake pour le suivi des erreur")
 
 
-# Développement continuel
+## Développement continuel
 
 Après que les clients utilisent votre plateforme pour des besoins concrets, vous pouvez vous rendre compte qu'ils vous manquent des fonctionnalités. Il se peut aussi que ce soit des fonctionnalités critiques et qui doivent être rajoutés _tout de suite_. Il est donc important d'avoir un budget de développement continuel. Encore une fois, les meilleurs plateformes sont celles qui sont toujours en développement, et ne sont jamais parfaitement finies.
 
 
-# Un projet et coût maîtrisé
+## Un projet et coût maîtrisé
 
 Comme vous l'avez peut-être deviné, la conception d'applications sur mesure est un processus complexe qui requiert une collaboration entre des professionnels différents. C'est courant d'avoir des projets incluant :
 
 * un gestionnaire de produit qui s'assure que la plateforme répond aux besoins clients, interface avec les développeurs, et coordonnne l'assurance qualité
+
 * un designer
+
 * un développeur front-end
+
 * un développeur back-end
 
 Selon la complexité du projet, ce nombre peut être restreint à une équipe de deux personnes, ou à l'inverse peut se rajouter un gestionnaire de projet, des développeurs back-end et mobile supplémentaires, et des personnes en assurance qualité.
@@ -160,9 +180,13 @@ _Un seul point de contact_. La dernière chose que nous voulons est que chaque p
 _Une rencontre hebdomadaire_ Vous êtes impatient d'avoir votre application et vous voulez la publier. Tous les jours, vous voulez donc savoir:
 
 * Qu'est ce qui a été fait aujourd'hui?
+
 * Qu'est ce qui a été réalisé hier?
+
 * Que sera fait demain?
+
 * Puis-je voir?
+
 * Quand est-ce que ce sera fini?
 
 Nous comprenons. Nous sommes aussi impatients aussi. Mais voici le bémol. Toutes ces discussions, appels et emails prennent beaucoup de notre temps, distraient l'équipe, diminue votre budget, et aussi rendent les choses plus lentes et non plus rapides.
@@ -176,15 +200,20 @@ _Démonstration_ Dans ces rencontres, une partie du temps sera réservée à vou
 _Outils de gestion de projet_. Nous utilisons une panoplie d'outils pour la gestion de projet pour améliorer notre vitesse et qualité. Voici les outils les plus utilisés:
 
 * Zenhub pour le suivi de développement, collaboration
+
 * Skype/Google Hangout pour les rencontres vidéos
+
 * Slack pour chat
+
 * Invision App pour visionner les écrans
+
 * Google Docs pour le travail sur Excel, Word, Powerpoint
+
 * Harvest pour le suivi précis du temps de travail et comptabilité
 
-# Notre philosophie de développement
+## Notre philosophie de développement
 
-## Méthodologie Lean et MVP
+### Méthodologie Lean et MVP
 
 Nous croyons au principe de développement lean... ce qui signifie tout simplement le développement de la version la plus simple possible d'application, aussi appellé MVP ou Produit Minimum Viable. Le MVP inclut seulement le coeur et les fonctionnalités critiques de votre application, et rien d'autre. Cette approche est la plus rapide et qui vous rapporte le plus en matière de retour sur investissement, pour que vous puissier obtenir du feedback et apprendre des comportements utilisateurs _AVANT_ de rajouter des fonctionnalités secondaires.
 
@@ -192,10 +221,10 @@ Excellent, non? Nous comprenons que nos clients veulent contrôler leur coûts, 
 
 Pourquoi cela? Parce que vous n'ajouterez pas de fonctionnalités superflues, qui bien que étant une très bonne idée initialement, n'était pas finalement celle que vos utilisateurs voulaient. Pourquoi allez-vous dépenser de l'argent sur des fonctionnalités qui sera envoyé à la poubelle? Nos clients ont trouvé que c'est mieux de démarrer lean et de dépenser de l'argent seulement sur des fonctionnalités sur des _besoins prouvés_.
 
-## 改善 : Faire le meilleur produit possible
+### 改善 : Faire le meilleur produit possible
 
 Nous tenons à faire le meilleur produit possible chaque jour. Nous améliorons de façon continue nos pratiques, notre efficacité personelle, et tenons à éliminer tout ce qui est superflu. C'est la philosophie 改善 ou Kaizen qui fait de nous des artisans du code passionnés.
 
-# Travaillons ensemble !
+## Travaillons ensemble !
 
 Maintenant que vous comprenez notre processus de développement et notre philosophie génerale et approche pour développer des plateformes réussis, discutons ensemble de votre prochain projet.

@@ -3,7 +3,7 @@
   <channel>
       <title>Posts on Studio Zenkai </title>
       <generator uri="https://gohugo.io">Hugo</generator>
-    <link>http://localhost:1313/post/</link>
+    <link>http://studiozenkai.com/post/</link>
     <language>en-us</language>
     
     
@@ -11,10 +11,10 @@
     
     <item>
       <title>Business potential of bots</title>
-      <link>http://localhost:1313/post/bots/</link>
+      <link>http://studiozenkai.com/post/bots/</link>
       <pubDate>Mon, 18 Apr 2016 10:35:26 EDT</pubDate>
       
-      <guid>http://localhost:1313/post/bots/</guid>
+      <guid>http://studiozenkai.com/post/bots/</guid>
       <description>
 
 &lt;p&gt;Upon hearing about Facebook and Microsoft efforts to deploy bot platforms, a friend reacted:&lt;/p&gt;
@@ -55,7 +55,7 @@
 
 &lt;p&gt;A simple case would be guessing the gender. A researcher would pick features such as weight and height, divide the data in a learning group and a testing group. A good machine learning algorithm would associate a person with shorter height and lesser weight to female gender:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/rplot.png&#34; alt=&#34;Gender weight height&#34; title=&#34;[Gender weight height&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://studiozenkai.com/images/rplot.png&#34; alt=&#34;Gender weight height&#34; title=&#34;[Gender weight height&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;The concept is different from bots decades ago&lt;/em&gt;. Previously, &amp;ldquo;bots&amp;rdquo; could only process discrete cases. Machine learning can cover the continuity of cases and even try guessing &amp;ldquo;out-of-bounds&amp;rdquo; cases. In the case of gender search, a programmer would write rules. &amp;ldquo;If height &amp;lt; 65 and weight &amp;lt; 150 pounds, then person is female&amp;rdquo;. But what about a person who is tall and lightweight? A good machine learning would still be able to provide answers.&lt;/p&gt;
 
@@ -125,10 +125,10 @@
     
     <item>
       <title>Becoming a self-taught programmer</title>
-      <link>http://localhost:1313/post/programming/</link>
+      <link>http://studiozenkai.com/post/programming/</link>
       <pubDate>Sun, 17 Apr 2016 12:55:51 EDT</pubDate>
       
-      <guid>http://localhost:1313/post/programming/</guid>
+      <guid>http://studiozenkai.com/post/programming/</guid>
       <description>
 
 &lt;p&gt;In six months I have shipped many apps, as an entrepreneur or as a freelancer. I have also contributed to open source projects and advised other projects. Yet I’m educated as an electrical engineer, not as a software engineer and consider myself largely self-taught in the area of programming.&lt;/p&gt;
@@ -236,10 +236,10 @@
     
     <item>
       <title>Playbook</title>
-      <link>http://localhost:1313/post/playbook/</link>
+      <link>http://studiozenkai.com/post/playbook/</link>
       <pubDate>Fri, 15 Jan 2016 12:22:27 -0400</pubDate>
       
-      <guid>http://localhost:1313/post/playbook/</guid>
+      <guid>http://studiozenkai.com/post/playbook/</guid>
       <description>
 
 &lt;p&gt;Bonjour!&lt;/p&gt;
@@ -319,7 +319,7 @@
 &lt;p&gt;&lt;em&gt;Exemple: Après notre première rencontre, nous avons planifié quelques rencontres pour avoir une meilleure compréhension de la plateforme voulue. L&amp;rsquo;idée semblait très simple, mais nous savions qu&amp;rsquo;il y avait une complexité cachée que nous devions découvrir durant le processus de découverte. Notamment, notre partenaire avait pensé aux besoins du client, mais n&amp;rsquo;avait pas pensé à l&amp;rsquo;interface d&amp;rsquo;administration nécessaire pour gérer les clients et données ou un interface utilisateur pour ceux qui commandent. D&amp;rsquo;autres questions sont aussi apparus: que se passe-t-il après une commande? comment sont servis les pages statiques? etc.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Aperçu de l&amp;rsquo;analyse écrite après la phase de découverte:
-&lt;img src=&#34;http://localhost:1313/images/discovery.png&#34; alt=&#34;Conclusion découverte DAMAVA&#34; title=&#34;[Conclusion découverte DAMAVA&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;http://studiozenkai.com/images/discovery.png&#34; alt=&#34;Conclusion découverte DAMAVA&#34; title=&#34;[Conclusion découverte DAMAVA&#34; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;la-phase-de-design:ae2e17d81343b352e5f8570697d79589&#34;&gt;La phase de design&lt;/h1&gt;
 
@@ -344,7 +344,7 @@
 &lt;p&gt;&lt;em&gt;Exemple: Pour DAMAVA, un prototype interactif couvrant les préférences utilisateur, et le processus de commande était disponible. Ce prototype était alors la référence pour tout future discussion sur les travaux à rendre&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Voici le prototype interactif pour DAMAVA:
-&lt;img src=&#34;http://localhost:1313/images/prototype.png&#34; alt=&#34;Prototype DAMAVA&#34; title=&#34;[Prototype DAMAVA&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;http://studiozenkai.com/images/prototype.png&#34; alt=&#34;Prototype DAMAVA&#34; title=&#34;[Prototype DAMAVA&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;la-phase-de-développement:ae2e17d81343b352e5f8570697d79589&#34;&gt;La phase de développement&lt;/h2&gt;
 
@@ -366,8 +366,8 @@
 
 &lt;p&gt;&lt;em&gt;Exemple: Dès que le processus de design et de découverte de DAMAVA a été finalisé, nous étions prêts pour démarrer le développement. Nous avons chargé tous les &amp;ldquo;user stories&amp;rdquo; créé durant la phase de découverte et design dans zenhub et nos développeurs étaient prêts. Puisque le projet a été bien défini durant les deux premières phases, la phase de développement s&amp;rsquo;est bien passé, avec très peu de surprises, et notre équipe a été capable de mettre en ligne la première version de l&amp;rsquo;application en 2 mois et demie.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/digitalocean.png&#34; alt=&#34;Nous utilisons DigitalOcean pour héberger des instances flexibles et idéales pour le développement&#34; title=&#34;Nous utilisons DigitalOcean pour héberger des instances flexibles et idéales pour le développement&#34; /&gt;
-&lt;img src=&#34;http://localhost:1313/images/zenhub.png&#34; alt=&#34;Gestion des fonctionnalités à developper avec Zenhub&#34; title=&#34;Gestion des fonctionnalités à developper avec Zenhub&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://studiozenkai.com/images/digitalocean.png&#34; alt=&#34;Nous utilisons DigitalOcean pour héberger des instances flexibles et idéales pour le développement&#34; title=&#34;Nous utilisons DigitalOcean pour héberger des instances flexibles et idéales pour le développement&#34; /&gt;
+&lt;img src=&#34;http://studiozenkai.com/images/zenhub.png&#34; alt=&#34;Gestion des fonctionnalités à developper avec Zenhub&#34; title=&#34;Gestion des fonctionnalités à developper avec Zenhub&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;la-phase-de-beta-testing:ae2e17d81343b352e5f8570697d79589&#34;&gt;La phase de &amp;ldquo;Beta Testing&amp;rdquo;&lt;/h2&gt;
 
@@ -397,7 +397,7 @@
 
 &lt;p&gt;&lt;em&gt;Exemple: Après la livraison d&amp;rsquo;une application fonctionnelle, un forfait de maintenance incluant l&amp;rsquo;hébérgement, la résolution de bogues, la maintenance logicielle et l&amp;rsquo;optimisation a été offert au client, qui peut donc se concentrer sur les besoins d&amp;rsquo;affaire.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/airbrake.png&#34; alt=&#34;Nous utilisons Airbrake pour le suivi des erreurs&#34; title=&#34;Nous utilisons Airbrake pour le suivi des erreur&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://studiozenkai.com/images/airbrake.png&#34; alt=&#34;Nous utilisons Airbrake pour le suivi des erreurs&#34; title=&#34;Nous utilisons Airbrake pour le suivi des erreur&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;développement-continuel:ae2e17d81343b352e5f8570697d79589&#34;&gt;Développement continuel&lt;/h2&gt;
 
@@ -483,10 +483,10 @@
     
     <item>
       <title>Cuda Cores Ranking for Machine learning</title>
-      <link>http://localhost:1313/post/cuda/</link>
+      <link>http://studiozenkai.com/post/cuda/</link>
       <pubDate>Sun, 11 Oct 2015 10:35:26 EDT</pubDate>
       
-      <guid>http://localhost:1313/post/cuda/</guid>
+      <guid>http://studiozenkai.com/post/cuda/</guid>
       <description>
 
 &lt;p&gt;NVIDIA graphic cards can be used to accelerate &lt;a href=&#34;https://developer.nvidia.com/gpu-accelerated-libraries&#34;&gt;scientific computing&lt;/a&gt;, &lt;a href=&#34;https://developer.nvidia.com/cudnn&#34;&gt;neural networks&lt;/a&gt;, video games and occasionally bitcoin computing.&lt;/p&gt;

@@ -3,7 +3,7 @@
   <channel>
       <title>Articles on Studio Zenkai </title>
       <generator uri="https://gohugo.io">Hugo</generator>
-    <link>http://localhost:1313/article/</link>
+    <link>http://studiozenkai.com/article/</link>
     <language>en-us</language>
     
     
@@ -11,10 +11,10 @@
     
     <item>
       <title>playbook</title>
-      <link>http://localhost:1313/article/playbook/</link>
+      <link>http://studiozenkai.com/article/playbook/</link>
       <pubDate>Sun, 17 Apr 2016 12:22:27 EDT</pubDate>
       
-      <guid>http://localhost:1313/article/playbook/</guid>
+      <guid>http://studiozenkai.com/article/playbook/</guid>
       <description>&lt;p&gt;Heri is an engineer with an Msc. from Telecom SudParis, a french engineering school and a post-graduate degree from HEC Montréal, Canada.&lt;/p&gt;
 
 &lt;p&gt;Heri designs and builds systems in Ruby, JS, Go, Erlang for web and mobile.&lt;/p&gt;

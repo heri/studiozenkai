@@ -26,7 +26,7 @@ Text messages are personal and asynchronous. With each text, the other party wou
 
 Text messages is also the most convenient when you are moving. Who has time to admire rich graphics when you are walking on a busy NYC sidewalk?
 
-Text messages allow you also to cut through all the decorum. Sign-up, confirm email, create profile, navigate, search, compare, view criterias, add to favorites, reserve, confirm, add shipping address, add credit card number, add billing address, confirm again. Who has patience for all that? It's the idea of using natural language instead of the artificial constructs of sites and apps. If rich media is more helpful, it is possible to send a link to a picture or a map.
+Text messages allow you also to cut through all the decorum. Sign-up, confirm email, create profile, navigate, search, compare, view criterias, add to favorites, reserve, confirm, add shipping address, add credit card number, add billing address, confirm again. Who has patience for all that? The idea of using natural language instead of the artificial constructs of sites and apps is indeed more powerful. If rich media is more helpful, it is possible to send a link to a picture or a map.
 
 Text messages is also the unifying interface, from the homeless person who is using an old Nokia, the executive with the Thinkpad to the hipster with an iPhone. It is accessible, from power users to disabled groups.
 
@@ -44,27 +44,29 @@ A simple case would be guessing the gender. A researcher would pick features suc
 
 *The concept is different from bots decades ago*. Previously, "bots" could only process discrete cases. In the case of gender search, a programmer would write rules. "If height < 65 and weight < 150 pounds, then person is female". But what about a person who is tall and lightweight?  Machine learning can cover the continuity of cases and even try guessing "out-of-bounds" cases.
 
-Mathematically, machine learning is at the core solving an equation and doing a series of matrix multiplications and transpositions. It is known by researchers in universities and proved useful in industry such as signal processing. However, it never had true commercial breakthrough.
+Mathematically, machine learning is in essence solving an equation and doing a series of matrix multiplications and transpositions. It is known by researchers in universities and proved useful in industry such as signal processing or basic optical character recognition. However, it never had true commercial breakthrough.
 
-Convolutional neural networks, inspired by biological systems, puts multiple layers together and feeds forward data. The idea was interesting but not deemed practical initially due to extreme cost of computation. A traditional machine learning problem already needs fast computers, so how can you find a computer able to process 10, 12, or 30 layers? What changed was the use of graphic user cards, such as NVIDIA's, to get realistic training times. A gaming laptop with Torch or Caffee libraries can do successful image analysis, natural language analysis or beat go champions in the case of Google's AlphaGo.
+Until we had convolutional neural networks, also called deep learning.
 
-Crafting a successful a machine learning algorithm is not trivial. Convolutional neural networks, also called "Deep learning", is even more complex:
+Convolutional neural networks, inspired by biological systems, puts multiple layers together and feeds forward data. A layer would process a sub-section of the data, send forward a tiny of information, and little by little, the system would get the bigger picture. The idea was interesting but not deemed practical initially due to extreme cost of computation. A traditional machine learning algorithm already needs fast computers, so how can you find a computer able to process 10, 12, or 30 layers? What changed mainly was the use of graphic user cards, such as NVIDIA's, to get realistic training times. A gaming laptop with Torch or caffe libraries can do successful image analysis, natural language processing or beat champions in the case of Google's AlphaGo.
 
-* It takes a PhD or at least a Master of sciences to craft an innovative machine learning algorithm, with prerequisites in computer science and statistics,
+Crafting a successful a machine learning algorithm is not trivial. Convolutional neural networks are even more complex:
+
+* There are libraries like TensorFlow which makes the job easier but it still takes a PhD or at least a Master of sciences to craft an innovative algorithm, with prerequisites in computer science and statistics.
 
 * Natural Language Processing needs linguists. Don't forget good grammar!
 
 * You need diverse, extensive, and well annotated data in a field where user requests are repetitive. This is seldom the case.
 
-* It is impossible with current technology to process different requests, even with deep learning. For example, you cannot craft a bot good at flower delivery requests that would also program your music playlist. This is the main reason Facebook is opening its Messenger Platform so third-parties can develop expertise in niches.
+* It is impossible with current technology to process different requests, even with deep learning. For example, you cannot craft a bot good at pizza delivery requests that would also program your music playlist. This is the main reason Facebook is opening its Messenger Platform so third-parties can develop expertise in niches.
 
 * Yet a machine learning project is not guaranteed success, even with significant time or financial investment.
 
-Machine Learning means a focus on "hard" science, and that's something I celebrate. It is also the promise of wider technology accessiblity.
+Yet, machine Learning means a focus on "hard" science, and that's something I celebrate. It is also the promise of wider technology accessiblity.
 
 ## Business use case
 
-If a convolutional neural network can beat go world champions, you can imagine more practical cases. With enough training data and smart feature selection, you could have:
+If a convolutional neural network can beat go world champions, you can imagine simple and practical cases. With enough training data and smart feature selection, you could have:
 
 > New customer: Hello. Can I see the dentist?
 
@@ -80,9 +82,9 @@ If a convolutional neural network can beat go world champions, you can imagine m
 
 > ..
 
-This bot would check in an availability calendar, and provide triage for new customers. Success would depend on past logging of customer interactions and tagging good answers.
+A step beyond x.ai, this bot would check in an availability calendar, and provide triage for new customers. Success would depend on past logging of customer interactions and tagging good answers.
 
-An assistant would provide better service, but the person would not be available at 3AM when the tooth hurts.
+An assistant would provide better service, but the person would not be available at 3AM when the tooth hurts!
 
 Here is another case:
 
@@ -96,6 +98,8 @@ Here is another case:
 
 This can be extended to most rental businesses, even for Airbnb-like platforms. The bot can go into the database of products and match with availability calendars.
 
-The next level would be crafting messages that would be personal, emotional, friendly and at times more talkative to build rapport, and why not, have users enjoy the service.
+If you add background processes, you can also design bots searching for optimal prices and would alert users when prices go below a certain treshhold.
 
-This is what I am currently researching. There is already a framework to process user requests and go into a calendar and a SQL database. It can also access third-party REST APIs. If you have a database of customer communications annotated with appropriate responses, we can see how bots can automate and increase customer outreach.
+The next level would be crafting messages that would be personal, emotional, friendly and at times more talkative to build rapport, and why not, have users enjoy the service. Tools like [smooch.io](https://smooch.io/) can help a seamless transition between bot replies and actual responses by a human, without customers knowing it.
+
+This is what I am currently researching. There is already a framework to process user requests and go into a calendar and a SQL database. The proof-of-concept can also access third-party REST APIs. If you have a database of customer communications annotated with appropriate responses, we can work together to see how bots can automate and increase customer outreach.

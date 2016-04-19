@@ -1858,10 +1858,10 @@ body {
   color: #666666; }
 
 ::selection {
-  background: #979dbd; }
+  background: orange; }
 
 ::-moz-selection {
-  background: #979dbd; }
+  background: orange; }
 
 a {
   text-decoration: none;
@@ -1958,7 +1958,7 @@ blockquote {
   font-weight: lighter;
   font-style: italic;
   font-size: 1.3em;
-  text-align: center; }
+  text-align: left; }
   blockquote p:last-child {
     margin-bottom: 0; }
 

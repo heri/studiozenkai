@@ -23,11 +23,11 @@
 &lt;p&gt;So bots are a thing now? I programmed bots 20 years ago&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;He is a successful technology entrepreneur and has developed systems on many platforms. I can understand him. There were tutorials in kids&amp;rsquo; magazine on writing a &amp;ldquo;Hello World&amp;rdquo; bot on MS-DOS 20 years ago. More impressive were the Artificial Intelligence (A.I.) found in games like Warcraft 3 or Command &amp;amp; Conquer. Friends would spend countless nights trying to beat the A.I. in normal difficulty mode. For everyone else, it would be the Clipper found in Microsoft Word. It had personality and would show tips.&lt;/p&gt;
+&lt;p&gt;He is a successful technology entrepreneur and has developed systems on many platforms. I can understand him. There were tutorials in kids&amp;rsquo; magazines on writing a &amp;ldquo;Hello World&amp;rdquo; bot on MS-DOS 20 years ago. More impressive were the Artificial Intelligence (A.I.) found in games like Warcraft 3 or Command &amp;amp; Conquer. Friends would spend countless nights trying to beat the A.I. For everyone else, it would be the Clipper found in Microsoft Word. It had personality and would show tips.&lt;/p&gt;
 
 &lt;p&gt;At that time, bots and A.I. were rule-based. &amp;ldquo;If player produces infantry, produce infantry-killing robots&amp;rdquo;. &amp;ldquo;If user clicks print, show links on how to print&amp;rdquo;. To get user satisfaction, you need to write rules covering all cases, as well as the exceptions. It is a creative and long but easy job.&lt;/p&gt;
 
-&lt;p&gt;But Microsoft&amp;rsquo;s clipper or video games AI showed their limits. &lt;em&gt;Apart from clear cases, bots could not process subtle situations&lt;/em&gt;. Typing a wrong letter would leave the bot stuck for example. Using a different expression would not work.&lt;/p&gt;
+&lt;p&gt;But Microsoft&amp;rsquo;s clipper or video games AI showed their limits. &lt;em&gt;Apart from clear cases, bots could not process subtle situations&lt;/em&gt;. Typing a wrong letter would leave the bot stuck for example. Using a different expression would not work. Creative players would find ways to beat the A.I. in ways unseen by video game designers.&lt;/p&gt;
 
 &lt;p&gt;Twenty years later, bots and A.I. seem to be commercial hype by bored journalists, like 3D movies two years ago. You can reuse old code, add a few words like A.I or &amp;ldquo;intelligent&amp;rdquo; in a press release, and get coverage by gullible bloggers. Fast forward a few months and you get millions from investors.&lt;/p&gt;
 
@@ -37,7 +37,7 @@
 
 &lt;p&gt;In East Africa or Asia, there is prevalence of text as user interface. When the West worked on interfaces with lush animation, text messages provides mobile banking and commerce elsewhere.&lt;/p&gt;
 
-&lt;p&gt;Text messages are personal and asynchronous. With each text, the other party would get more information and provide even better service. Ultimately, it is a transparent interface that could provide better meaning and deeper relationship.&lt;/p&gt;
+&lt;p&gt;Text messages are personal and asynchronous. With each text, the other party would get more information and provide even better service. Ultimately, it is a transparent interface with the promise of better meaning and deeper relationship.&lt;/p&gt;
 
 &lt;p&gt;Text messages is also the most convenient when you are moving. Who has time to admire rich graphics when you are walking on a busy NYC sidewalk?&lt;/p&gt;
 
@@ -57,24 +57,24 @@
 
 &lt;p&gt;&lt;img src=&#34;http://studiozenkai.com/images/rplot.png&#34; alt=&#34;Gender weight height&#34; title=&#34;[Gender weight height&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;The concept is different from bots decades ago&lt;/em&gt;. Previously, &amp;ldquo;bots&amp;rdquo; could only process discrete cases. Machine learning can cover the continuity of cases and even try guessing &amp;ldquo;out-of-bounds&amp;rdquo; cases. In the case of gender search, a programmer would write rules. &amp;ldquo;If height &amp;lt; 65 and weight &amp;lt; 150 pounds, then person is female&amp;rdquo;. But what about a person who is tall and lightweight? A good machine learning would still be able to provide answers.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;The concept is different from bots decades ago&lt;/em&gt;. Previously, &amp;ldquo;bots&amp;rdquo; could only process discrete cases. In the case of gender search, a programmer would write rules. &amp;ldquo;If height &amp;lt; 65 and weight &amp;lt; 150 pounds, then person is female&amp;rdquo;. But what about a person who is tall and lightweight?  Machine learning can cover the continuity of cases and even try guessing &amp;ldquo;out-of-bounds&amp;rdquo; cases.&lt;/p&gt;
 
-&lt;p&gt;Mathematically, machine learning is essentially solving an equation and doing a series of matrix multiplications and transpositions. It is known by researchers in universities and proved useful in industry such as signal processing. However, it was never a commercial breakthrough.&lt;/p&gt;
+&lt;p&gt;Mathematically, machine learning is at the core solving an equation and doing a series of matrix multiplications and transpositions. It is known by researchers in universities and proved useful in industry such as signal processing. However, it never had true commercial breakthrough.&lt;/p&gt;
 
-&lt;p&gt;Convolutional neural networks, inspired by biological systems, puts multiple layers together and feeds forward data. The idea was interesting but not deemed practical initially due to extreme cost of computation. A traditional machine learning problem already needs fast computers, so how can you find a computer able to process 10, 12, or 30 layers? What changed was the use of graphic user cards, such as NVIDIA&amp;rsquo;s, to get realistic training times. A gaming laptop with the Torch or Caffee libraries can do successful image analysis, natural language analysis or beat go champions in the case of Google&amp;rsquo;s AlphaGo.&lt;/p&gt;
+&lt;p&gt;Convolutional neural networks, inspired by biological systems, puts multiple layers together and feeds forward data. The idea was interesting but not deemed practical initially due to extreme cost of computation. A traditional machine learning problem already needs fast computers, so how can you find a computer able to process 10, 12, or 30 layers? What changed was the use of graphic user cards, such as NVIDIA&amp;rsquo;s, to get realistic training times. A gaming laptop with Torch or Caffee libraries can do successful image analysis, natural language analysis or beat go champions in the case of Google&amp;rsquo;s AlphaGo.&lt;/p&gt;
 
-&lt;p&gt;Crafting a successful a machine learning algorithm is not trivial. Deep learning is even more complex:&lt;/p&gt;
+&lt;p&gt;Crafting a successful a machine learning algorithm is not trivial. Convolutional neural networks, also called &amp;ldquo;Deep learning&amp;rdquo;, is even more complex:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;It takes a PhD or at least a Master of sciences to craft an innovative machine learning algorithm, with prerequisites in computer science and statistics,&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Natural Language Processing needs linguists as well as good English writers&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Natural Language Processing needs linguists. Don&amp;rsquo;t forget good grammar!&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;You need diverse, extensive, and well annotated data. This is seldom the case.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;You need diverse, extensive, and well annotated data in a field where user requests are repetitive. This is seldom the case.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;It is impossible with current technology to process different requests, even with deep learning. For example, you cannot craft a bot good at flower delivery requests that would aslo program your music playlist. This is the main reason Facebook is opening its Messenger Platform so third-parties can develop expertise in niches&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;It is impossible with current technology to process different requests, even with deep learning. For example, you cannot craft a bot good at flower delivery requests that would also program your music playlist. This is the main reason Facebook is opening its Messenger Platform so third-parties can develop expertise in niches.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;A machine learning project is not guaranteed success, even with significant time or financial investment.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Yet a machine learning project is not guaranteed success, even with significant time or financial investment.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Machine Learning means a focus on &amp;ldquo;hard&amp;rdquo; science, and that&amp;rsquo;s something I celebrate. It is also the promise of wider technology accessiblity.&lt;/p&gt;
@@ -119,7 +119,7 @@
 
 &lt;p&gt;The next level would be crafting messages that would be personal, emotional, friendly and at times more talkative to build rapport, and why not, have users enjoy the service.&lt;/p&gt;
 
-&lt;p&gt;This is what I am currently researching. There is already a framework to process user requests and go into a calendar and a SQL database. If you have a database of customer communications annotated with appropriate responses, we can see how bots can automate and increase customer outreach.&lt;/p&gt;
+&lt;p&gt;This is what I am currently researching. There is already a framework to process user requests and go into a calendar and a SQL database. It can also access third-party REST APIs. If you have a database of customer communications annotated with appropriate responses, we can see how bots can automate and increase customer outreach.&lt;/p&gt;
 </description>
     </item>
     

@@ -8,11 +8,11 @@ Upon hearing about Facebook and Microsoft efforts to deploy bot platforms, a fri
 
 > So bots are a thing now? I programmed bots 20 years ago
 
-He is a successful technology entrepreneur and has developed systems on many platforms. I can understand him. There were tutorials in kids' magazine on writing a "Hello World" bot on MS-DOS 20 years ago. More impressive were the Artificial Intelligence (A.I.) found in games like Warcraft 3 or Command & Conquer. Friends would spend countless nights trying to beat the A.I. in normal difficulty mode. For everyone else, it would be the Clipper found in Microsoft Word. It had personality and would show tips.
+He is a successful technology entrepreneur and has developed systems on many platforms. I can understand him. There were tutorials in kids' magazines on writing a "Hello World" bot on MS-DOS 20 years ago. More impressive were the Artificial Intelligence (A.I.) found in games like Warcraft 3 or Command & Conquer. Friends would spend countless nights trying to beat the A.I. For everyone else, it would be the Clipper found in Microsoft Word. It had personality and would show tips.
 
 At that time, bots and A.I. were rule-based. "If player produces infantry, produce infantry-killing robots". "If user clicks print, show links on how to print". To get user satisfaction, you need to write rules covering all cases, as well as the exceptions. It is a creative and long but easy job.
 
-But Microsoft's clipper or video games AI showed their limits. _Apart from clear cases, bots could not process subtle situations_. Typing a wrong letter would leave the bot stuck for example. Using a different expression would not work.
+But Microsoft's clipper or video games AI showed their limits. _Apart from clear cases, bots could not process subtle situations_. Typing a wrong letter would leave the bot stuck for example. Using a different expression would not work. Creative players would find ways to beat the A.I. in ways unseen by video game designers.
 
 Twenty years later, bots and A.I. seem to be commercial hype by bored journalists, like 3D movies two years ago. You can reuse old code, add a few words like A.I or "intelligent" in a press release, and get coverage by gullible bloggers. Fast forward a few months and you get millions from investors.
 
@@ -22,7 +22,7 @@ The example is not far-fetched. The majority of startups on Techcrunch do not ha
 
 In East Africa or Asia, there is prevalence of text as user interface. When the West worked on interfaces with lush animation, text messages provides mobile banking and commerce elsewhere.
 
-Text messages are personal and asynchronous. With each text, the other party would get more information and provide even better service. Ultimately, it is a transparent interface that could provide better meaning and deeper relationship.
+Text messages are personal and asynchronous. With each text, the other party would get more information and provide even better service. Ultimately, it is a transparent interface with the promise of better meaning and deeper relationship.
 
 Text messages is also the most convenient when you are moving. Who has time to admire rich graphics when you are walking on a busy NYC sidewalk?
 
@@ -42,23 +42,23 @@ A simple case would be guessing the gender. A researcher would pick features suc
 
 ![Gender weight height](/images/rplot.png "[Gender weight height")
 
-*The concept is different from bots decades ago*. Previously, "bots" could only process discrete cases. Machine learning can cover the continuity of cases and even try guessing "out-of-bounds" cases. In the case of gender search, a programmer would write rules. "If height < 65 and weight < 150 pounds, then person is female". But what about a person who is tall and lightweight? A good machine learning would still be able to provide answers.
+*The concept is different from bots decades ago*. Previously, "bots" could only process discrete cases. In the case of gender search, a programmer would write rules. "If height < 65 and weight < 150 pounds, then person is female". But what about a person who is tall and lightweight?  Machine learning can cover the continuity of cases and even try guessing "out-of-bounds" cases.
 
-Mathematically, machine learning is essentially solving an equation and doing a series of matrix multiplications and transpositions. It is known by researchers in universities and proved useful in industry such as signal processing. However, it was never a commercial breakthrough.
+Mathematically, machine learning is at the core solving an equation and doing a series of matrix multiplications and transpositions. It is known by researchers in universities and proved useful in industry such as signal processing. However, it never had true commercial breakthrough.
 
-Convolutional neural networks, inspired by biological systems, puts multiple layers together and feeds forward data. The idea was interesting but not deemed practical initially due to extreme cost of computation. A traditional machine learning problem already needs fast computers, so how can you find a computer able to process 10, 12, or 30 layers? What changed was the use of graphic user cards, such as NVIDIA's, to get realistic training times. A gaming laptop with the Torch or Caffee libraries can do successful image analysis, natural language analysis or beat go champions in the case of Google's AlphaGo.
+Convolutional neural networks, inspired by biological systems, puts multiple layers together and feeds forward data. The idea was interesting but not deemed practical initially due to extreme cost of computation. A traditional machine learning problem already needs fast computers, so how can you find a computer able to process 10, 12, or 30 layers? What changed was the use of graphic user cards, such as NVIDIA's, to get realistic training times. A gaming laptop with Torch or Caffee libraries can do successful image analysis, natural language analysis or beat go champions in the case of Google's AlphaGo.
 
-Crafting a successful a machine learning algorithm is not trivial. Deep learning is even more complex:
+Crafting a successful a machine learning algorithm is not trivial. Convolutional neural networks, also called "Deep learning", is even more complex:
 
 * It takes a PhD or at least a Master of sciences to craft an innovative machine learning algorithm, with prerequisites in computer science and statistics,
 
-* Natural Language Processing needs linguists as well as good English writers
+* Natural Language Processing needs linguists. Don't forget good grammar!
 
-* You need diverse, extensive, and well annotated data. This is seldom the case.
+* You need diverse, extensive, and well annotated data in a field where user requests are repetitive. This is seldom the case.
 
-* It is impossible with current technology to process different requests, even with deep learning. For example, you cannot craft a bot good at flower delivery requests that would aslo program your music playlist. This is the main reason Facebook is opening its Messenger Platform so third-parties can develop expertise in niches
+* It is impossible with current technology to process different requests, even with deep learning. For example, you cannot craft a bot good at flower delivery requests that would also program your music playlist. This is the main reason Facebook is opening its Messenger Platform so third-parties can develop expertise in niches.
 
-* A machine learning project is not guaranteed success, even with significant time or financial investment.
+* Yet a machine learning project is not guaranteed success, even with significant time or financial investment.
 
 Machine Learning means a focus on "hard" science, and that's something I celebrate. It is also the promise of wider technology accessiblity.
 
@@ -98,4 +98,4 @@ This can be extended to most rental businesses, even for Airbnb-like platforms. 
 
 The next level would be crafting messages that would be personal, emotional, friendly and at times more talkative to build rapport, and why not, have users enjoy the service.
 
-This is what I am currently researching. There is already a framework to process user requests and go into a calendar and a SQL database. If you have a database of customer communications annotated with appropriate responses, we can see how bots can automate and increase customer outreach.
+This is what I am currently researching. There is already a framework to process user requests and go into a calendar and a SQL database. It can also access third-party REST APIs. If you have a database of customer communications annotated with appropriate responses, we can see how bots can automate and increase customer outreach.

@@ -20,7 +20,7 @@ The example is not far-fetched. The majority of startups on Techcrunch do not ha
 
 ## Bots in a mobile world
 
-In East Africa or Asia, there is prevalence of text as user interface. When the West worked on interfaces with lush animation, text messages provides mobile banking and commerce elsewhere.
+In East Africa or Asia, there is prevalence of text as user interface. When the West worked on rich graphic interfaces with lush animation, text messages provides mobile banking, mobile communication and commerce elsewhere.
 
 Text messages are personal and asynchronous. With each text, the other party would get more information and provide even better service. Ultimately, it is a transparent interface with the promise of better meaning and deeper relationship.
 
@@ -34,9 +34,9 @@ Time is definitively ripe for text as the main interface.
 
 ## Advances in Machine Learning
 
-In addition, research in machine learning and especially convolutional neural networks promise better handling of user requests.
+In addition, research in machine learning and especially convolutional neural networks [1] promise better handling of user requests.
 
-Machine Learning feeds real-world data to an algorithm and correlate them to positive or negative outcomes. After testing, the algorithm is able to predict an outcome from new data.
+Machine Learning feeds real-world data to an algorithm and correlate them with positive or negative outcomes. After testing, the algorithm is able to predict an outcome from new data.
 
 A simple case would be guessing the gender. A researcher would pick features such as weight and height, divide the data in a learning group and a testing group. A good machine learning algorithm would associate a person with shorter height and lesser weight to female gender:
 
@@ -62,44 +62,30 @@ Crafting a successful a machine learning algorithm is not trivial. Convolutional
 
 * Yet a machine learning project is not guaranteed success, even with significant time or financial investment.
 
-Yet, machine Learning means a focus on "hard" science, and that's something I celebrate. It is also the promise of wider technology accessiblity.
+Yet, machine Learning means a focus on "hard" science, and that's something I celebrate. It is also the promise of wider technology accessibility.
 
 ## Business use case
 
 If a convolutional neural network can beat go world champions, you can imagine simple and practical cases. With enough training data and smart feature selection, you could have:
 
-> New customer: Hello. Can I see the dentist?
+![Dentist](/images/bot-dentist.jpg "[bot dentist]")
 
-> Bot: Hello. Is it urgent?
-
-> New customer: No. I need to extract my wisdom teeths
-
-> Bot: Would Thursday at 10AM be good for you?
-
-> New customer: Huh. I have class at that time. What about 1PM?
-
-> Bot: 1PM at 1500 Maisonneuve bvd West is good. What name should I put the reservation?
-
-> ..
-
-A step beyond x.ai, this bot would check in an availability calendar, and provide triage for new customers. Success would depend on past logging of customer interactions and tagging good answers.
+This bot would check in an availability calendar, and provide triage for new customers. Success would depend on past logging of customer interactions and tagging good answers.
 
 An assistant would provide better service, but the person would not be available at 3AM when the tooth hurts!
 
-Here is another case:
+In the same way, you could rent a car or an AirBnb. The bot can go into the database of products and match with availability calendars.
 
-> New customer : Hi. I'd like to rent a Tesla this saturday
+If you add background processes, you can also design bots searching for optimal prices and would alert users when prices go below a certain treshold. This is where you can imagine use cases not covered by mobile or web apps. Set reminders, check automatically on loved ones, work out project details with team members...
 
-> Bot: Hello. We have 1. a Tesla P90D for $300 at 9AM at our central downtown location and 2. a Tesla 70D at 10AM at the central station
-
-> New customer : 1 is good!
-
-> ..
-
-This can be extended to most rental businesses, even for Airbnb-like platforms. The bot can go into the database of products and match with availability calendars.
-
-If you add background processes, you can also design bots searching for optimal prices and would alert users when prices go below a certain treshhold.
-
-The next level would be crafting messages that would be personal, emotional, friendly and at times more talkative to build rapport, and why not, have users enjoy the service. Tools like [smooch.io](https://smooch.io/) can help a seamless transition between bot replies and actual responses by a human, without customers knowing it.
+The icing on the cake would be crafting messages that would be personal, emotional, friendly and at times more talkative to build rapport, and why not, have users enjoy the service [3]. Tools like [smooch.io](https://smooch.io/) can help a seamless transition between bot replies and actual responses by a human, without customers knowing it.
 
 This is what I am currently researching. There is already a framework to process user requests and go into a calendar and a SQL database. The proof-of-concept can also access third-party REST APIs. If you have a database of customer communications annotated with appropriate responses, we can work together to see how bots can automate and increase customer outreach.
+
+### Notes
+
+[1] https://en.wikipedia.org/wiki/Convolutional_neural_network
+
+[2] A good introduction to Machine Learning is Andrew Ng's course https://www.coursera.org/learn/machine-learning/home/info?source=phoenixCdp2016AbTest
+
+[3] The movie "Her" portrays well a bot with good rapport. For practical examples, Microsoft is already offering a bot in China http://www.geekwire.com/2015/people-china-love-microsofts-xiaoice-virtual-companion-says-artificial-intelligence/

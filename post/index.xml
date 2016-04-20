@@ -10,7 +10,7 @@
     <updated>Mon, 18 Apr 2016 10:35:26 EDT</updated>
     
     <item>
-      <title>Business potential of bots</title>
+      <title>Why bots are a thing now</title>
       <link>http://studiozenkai.com/post/bots/</link>
       <pubDate>Mon, 18 Apr 2016 10:35:26 EDT</pubDate>
       
@@ -35,7 +35,7 @@
 
 &lt;h2 id=&#34;bots-in-a-mobile-world:59bae6eb543303d192388c8a62ae8d8f&#34;&gt;Bots in a mobile world&lt;/h2&gt;
 
-&lt;p&gt;In East Africa or Asia, there is prevalence of text as user interface. When the West worked on rich graphic interfaces with lush animation, text messages provides mobile banking, mobile communication and commerce elsewhere.&lt;/p&gt;
+&lt;p&gt;In East Africa or Asia, there is prevalence of text as user interface. When the West worked on rich graphic interfaces with lush animation, text messages provides &lt;a href=&#34;https://en.wikipedia.org/wiki/M-Pesa&#34;&gt;mobile banking&lt;/a&gt;, mobile communication and commerce elsewhere.&lt;/p&gt;
 
 &lt;p&gt;Text messages are personal and asynchronous. With each text, the other party would get more information and provide even better service. Ultimately, it is a transparent interface with the promise of better meaning and deeper relationship.&lt;/p&gt;
 
@@ -43,13 +43,15 @@
 
 &lt;p&gt;Text messages allow you also to cut through all the decorum. Sign-up, confirm email, create profile, navigate, search, compare, view criterias, add to favorites, reserve, confirm, add shipping address, add credit card number, add billing address, confirm again. Who has patience for all that? The idea of using natural language instead of the artificial constructs of sites and apps is indeed more powerful. If rich media is more helpful, it is possible to send a link to a picture or a map.&lt;/p&gt;
 
+&lt;p&gt;&lt;img src=&#34;http://studiozenkai.com/images/buttons.png&#34; alt=&#34;Rich interfaces in text communication&#34; title=&#34;[Rich interfaces in text communication]&#34; /&gt;&lt;/p&gt;
+
 &lt;p&gt;Text messages is also the unifying interface, from the homeless person who is using an old Nokia, the executive with the Thinkpad to the hipster with an iPhone. It is accessible, from power users to disabled groups.&lt;/p&gt;
 
 &lt;p&gt;Time is definitively ripe for text as the main interface.&lt;/p&gt;
 
 &lt;h2 id=&#34;advances-in-machine-learning:59bae6eb543303d192388c8a62ae8d8f&#34;&gt;Advances in Machine Learning&lt;/h2&gt;
 
-&lt;p&gt;In addition, research in machine learning and especially convolutional neural networks [1] promise better handling of user requests.&lt;/p&gt;
+&lt;p&gt;In addition, research in machine learning [1] and especially &lt;a href=&#34;https://en.wikipedia.org/wiki/Convolutional_neural_network&#34;&gt;convolutional neural networks&lt;/a&gt; promise better handling of user requests.&lt;/p&gt;
 
 &lt;p&gt;Machine Learning feeds real-world data to an algorithm and correlate them with positive or negative outcomes. After testing, the algorithm is able to predict an outcome from new data.&lt;/p&gt;
 
@@ -63,7 +65,7 @@
 
 &lt;p&gt;Until we had convolutional neural networks, also called deep learning.&lt;/p&gt;
 
-&lt;p&gt;Convolutional neural networks, inspired by biological systems, puts multiple layers together and feeds forward data. A layer would process a sub-section of the data, send forward a tiny of information, and little by little, the system would get the bigger picture. The idea was interesting but not deemed practical initially due to extreme cost of computation. A traditional machine learning algorithm already needs fast computers, so how can you find a computer able to process 10, 12, or 30 layers? What changed mainly was the use of graphic user cards, such as NVIDIA&amp;rsquo;s, to get realistic training times. A gaming laptop with Torch or caffe libraries can do successful image analysis, natural language processing or beat champions in the case of Google&amp;rsquo;s AlphaGo.&lt;/p&gt;
+&lt;p&gt;Convolutional neural networks, inspired by biological systems, puts multiple layers together and feeds forward data. A layer would process a sub-section of the data, send forward a tiny bit of information, and little by little, the system would &amp;ldquo;get&amp;rdquo; the bigger picture. The idea was interesting but not deemed practical initially due to extreme cost of computation. A traditional machine learning algorithm already needs fast computers, so how can you find a computer able to process 10, 12, or 30 layers? What changed mainly was the use of graphic user cards, such as NVIDIA&amp;rsquo;s, to get realistic training times. A gaming laptop with Torch or caffe libraries can do successful image analysis, natural language processing or beat champions in the case of Google&amp;rsquo;s AlphaGo.&lt;/p&gt;
 
 &lt;p&gt;Crafting a successful a machine learning algorithm is not trivial. Convolutional neural networks are even more complex:&lt;/p&gt;
 
@@ -93,19 +95,17 @@
 
 &lt;p&gt;In the same way, you could rent a car or an AirBnb. The bot can go into the database of products and match with availability calendars.&lt;/p&gt;
 
-&lt;p&gt;If you add background processes, you can also design bots searching for optimal prices and would alert users when prices go below a certain treshold. This is where you can imagine use cases not covered by mobile or web apps. Set reminders, check automatically on loved ones, work out project details with team members&amp;hellip;&lt;/p&gt;
+&lt;p&gt;If you &lt;a href=&#34;https://github.com/heri/JuliaBot&#34;&gt;add background processes&lt;/a&gt;, you can also design bots searching for optimal prices and would alert users when prices go below a certain treshold. This is where you can imagine use cases not covered by mobile or web apps. Set reminders, check automatically on loved ones, work out project details with team members&amp;hellip;&lt;/p&gt;
 
-&lt;p&gt;The icing on the cake would be crafting messages that would be personal, emotional, friendly and at times more talkative to build rapport, and why not, have users enjoy the service [3]. Tools like &lt;a href=&#34;https://smooch.io/&#34;&gt;smooch.io&lt;/a&gt; can help a seamless transition between bot replies and actual responses by a human, without customers knowing it.&lt;/p&gt;
+&lt;p&gt;The icing on the cake would be crafting messages that would be personal, emotional, friendly and at times more talkative to build rapport, and why not, have users enjoy the service [2]. Tools like &lt;a href=&#34;https://smooch.io/&#34;&gt;smooch.io&lt;/a&gt; can help a seamless transition between bot replies and actual responses by a human, without customers knowing it.&lt;/p&gt;
 
 &lt;p&gt;This is what I am currently researching. There is already a framework to process user requests and go into a calendar and a SQL database. The proof-of-concept can also access third-party REST APIs. If you have a database of customer communications annotated with appropriate responses, we can work together to see how bots can automate and increase customer outreach.&lt;/p&gt;
 
 &lt;h3 id=&#34;notes:59bae6eb543303d192388c8a62ae8d8f&#34;&gt;Notes&lt;/h3&gt;
 
-&lt;p&gt;[1] &lt;a href=&#34;https://en.wikipedia.org/wiki/Convolutional_neural_network&#34;&gt;https://en.wikipedia.org/wiki/Convolutional_neural_network&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[1] A good introduction to Machine Learning is Andrew Ng&amp;rsquo;s course &lt;a href=&#34;https://www.coursera.org/learn/machine-learning/home/info?source=phoenixCdp2016AbTest&#34;&gt;https://www.coursera.org/learn/machine-learning/home/info?source=phoenixCdp2016AbTest&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;[2] A good introduction to Machine Learning is Andrew Ng&amp;rsquo;s course &lt;a href=&#34;https://www.coursera.org/learn/machine-learning/home/info?source=phoenixCdp2016AbTest&#34;&gt;https://www.coursera.org/learn/machine-learning/home/info?source=phoenixCdp2016AbTest&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;[3] The movie &amp;ldquo;Her&amp;rdquo; portrays well a bot with good rapport. For practical examples, Microsoft is already offering a bot in China &lt;a href=&#34;http://www.geekwire.com/2015/people-china-love-microsofts-xiaoice-virtual-companion-says-artificial-intelligence/&#34;&gt;http://www.geekwire.com/2015/people-china-love-microsofts-xiaoice-virtual-companion-says-artificial-intelligence/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[2] The movie &amp;ldquo;Her&amp;rdquo; portrays well a bot with good rapport. For practical examples, Microsoft is already offering a bot in China &lt;a href=&#34;http://www.geekwire.com/2015/people-china-love-microsofts-xiaoice-virtual-companion-says-artificial-intelligence/&#34;&gt;http://www.geekwire.com/2015/people-china-love-microsofts-xiaoice-virtual-companion-says-artificial-intelligence/&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

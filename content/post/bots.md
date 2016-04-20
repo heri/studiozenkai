@@ -28,7 +28,7 @@ Text messages is also the most convenient when you are moving. Who has time to a
 
 Text messages allow you also to cut through all the decorum. Sign-up, confirm email, create profile, navigate, search, compare, view criterias, add to favorites, reserve, confirm, add shipping address, add credit card number, add billing address, confirm again. Who has patience for all that? The idea of using natural language instead of the artificial constructs of sites and apps is indeed more powerful. If rich media is more helpful, it is possible to send a link to a picture or a map.
 
-![Rich interfaces in text communication](/images/buttons.png "[Rich interfaces in text communication]")
+![Rich interfaces in text communication](/images/buttons.jpg "[Rich interfaces in text communication]")
 
 Text messages is also the unifying interface, from the homeless person who is using an old Nokia, the executive with the Thinkpad to the hipster with an iPhone. It is accessible, from power users to disabled groups.
 

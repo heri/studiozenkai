@@ -58,13 +58,17 @@ Crafting a successful a machine learning algorithm is not trivial. Convolutional
 
 * Natural Language Processing needs linguists. Don't forget good grammar!
 
-* You need diverse, extensive, and well annotated data in a field where user requests are repetitive. This is seldom the case.
+* If convolutional neral networks can in theory compute any function, you need diverse, extensive, and well annotated data in a field where user requests are repetitive. This is seldom the case.
 
 * It is impossible with current technology to process different requests, even with deep learning. For example, you cannot craft a bot good at pizza delivery requests that would also program your music playlist. This is the main reason Facebook is opening its Messenger Platform so third-parties can develop expertise in niches.
 
 * Yet a machine learning project is not guaranteed success, even with significant time or financial investment.
 
-Yet, machine Learning means a focus on "hard" science, and that's something I celebrate. It is also the promise of wider technology accessibility.
+For example, I can get the following with data pulled from Yelp. However it's as much work as developing a small web app to get natural language from the bot.
+
+![Places recommendation](/images/italian.png "[Places recommendation]")
+
+Yet, machine learning means a focus on "hard" science, and that's something I celebrate. It is also the promise of wider technology accessibility.
 
 ## Business use case
 

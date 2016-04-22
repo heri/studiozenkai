@@ -22,9 +22,9 @@ The example is not far-fetched. The majority of startups on Techcrunch do not ha
 
 In East Africa or Asia, there is prevalence of text as user interface. When the West worked on rich graphic interfaces with lush animation, text messages provides [mobile banking](https://en.wikipedia.org/wiki/M-Pesa), mobile communication and commerce elsewhere.
 
-Text messages are personal and asynchronous. With each text, the other party would get more information and provide even better service. Ultimately, it is a transparent interface with the promise of better meaning and deeper relationship.
+Text messages are lightweight asynchronous. With each text, the other party can get more information and provide even better service. Ultimately, it is a transparent interface with the promise of better meaning and deeper relationship.
 
-Text messages is also the most convenient when you are moving. Who has time to admire rich graphics when you are walking on a busy NYC sidewalk?
+Text messages is also the most convenient when you are on the go. Who has time to admire rich graphics when you are walking on a busy New York city sidewalk?
 
 Text messages allow you also to cut through all the decorum. Sign-up, confirm email, create profile, navigate, search, compare, view criterias, add to favorites, reserve, confirm, add shipping address, add credit card number, add billing address, confirm again. Who has patience for all that? The idea of using natural language instead of the artificial constructs of sites and apps is indeed more powerful. If rich media is more helpful, it is possible to send a link to a picture or a map.
 
@@ -36,35 +36,35 @@ Time is definitively ripe for text as the main interface.
 
 ## Advances in Machine Learning
 
-In addition, research in machine learning [1] and especially [convolutional neural networks](https://en.wikipedia.org/wiki/Convolutional_neural_network) promise better handling of user requests.
+In addition, research in machine learning [1] and especially [deep neural networks](https://en.wikipedia.org/wiki/Convolutional_neural_network) promise better handling of user requests.
 
 Machine Learning feeds real-world data to an algorithm and correlate them with positive or negative outcomes. After testing, the algorithm is able to predict an outcome from new data.
 
-A simple case would be guessing the gender. A researcher would pick features such as weight and height, divide the data in a learning group and a testing group. A good machine learning algorithm would associate a person with shorter height and lesser weight to female gender:
+A simple case would be guessing the gender. A researcher would pick features such as weight and height, and can set aside data to test later if parameters are good. A good machine learning algorithm would associate a person with shorter height and lesser weight to female gender:
 
 ![Gender weight height](/images/rplot.png "[Gender weight height")
 
-*The concept is different from bots decades ago*. Previously, "bots" could only process discrete cases. In the case of gender search, a programmer would write rules. "If height < 65 and weight < 150 pounds, then person is female". But what about a person who is tall and lightweight?  Machine learning can cover the continuity of cases and even try guessing "out-of-bounds" cases.
+*Using this machine learning concept in bots would provide something different from decades ago*. Previously, "bots" could only process discrete cases. In the case of gender search, a programmer would write rules. "If height < 65 and weight < 150 pounds, then person is female". But what about a person who is tall and lightweight?  Machine learning can cover the continuity of cases and even try guessing "out-of-bounds" cases.
 
 Mathematically, machine learning is in essence solving an equation and doing a series of matrix multiplications and transpositions. It is known by researchers in universities and proved useful in industry such as signal processing or basic optical character recognition. However, it never had true commercial breakthrough.
 
-Until we had convolutional neural networks, also called deep learning.
+Until we had deep neural networks, also called deep learning.
 
-Convolutional neural networks, inspired by biological systems, puts multiple layers together and feeds forward data. A layer would process a sub-section of the data, send forward a tiny bit of information, and little by little, the system would "get" the bigger picture. The idea was interesting but not deemed practical initially due to extreme cost of computation. A traditional machine learning algorithm already needs fast computers, so how can you find a computer able to process 10, 12, or 30 layers? What changed mainly was the use of graphic user cards, such as NVIDIA's, to get realistic training times. A gaming laptop with Torch or caffe libraries can do successful image analysis, natural language processing or beat champions in the case of Google's AlphaGo.
+Deep neural networks, inspired by biological systems, puts multiple layers together and feeds forward data. A layer would process a sub-section of the data, send forward a tiny bit of information, and little by little, the system would "get" the bigger picture. Other deep neural networks correlate the sequence of data, making sense for example of word order in a sentence. The idea of deep neural networks was interesting but not deemed practical initially due to extreme cost of computation. A traditional machine learning algorithm already needs fast computers, so how can you find a computer able to process 10, 12, or 30 layers? Graphic Processing Unit cards, such as NVIDIA's, brought however realistic training times. A gaming laptop with Torch or caffe libraries can do successful image analysis, natural language processing or beat champions in the case of Google's AlphaGo.
 
-Crafting a successful a machine learning algorithm is not trivial. Convolutional neural networks are even more complex:
+Crafting a successful a machine learning algorithm is not trivial. Deep neural networks are even more complex:
 
 * There are libraries like TensorFlow which makes the job easier but it still takes a PhD or at least a Master of sciences to craft an innovative algorithm, with prerequisites in computer science and statistics.
 
-* Natural Language Processing needs linguists. Don't forget good grammar!
+* When we have amazing image and video processing, Natural Language Processing is still in its infancy. Lack of structured data is one of the issues.
 
-* If convolutional neral networks can in theory compute any function, you need diverse, extensive, and well annotated data in a field where user requests are repetitive. This is seldom the case.
+* If deep neural networks can in theory compute any function, you need diverse, extensive, and well annotated data in a field where user requests are repetitive. This is seldom the case.
 
 * It is impossible with current technology to process different requests, even with deep learning. For example, you cannot craft a bot good at pizza delivery requests that would also program your music playlist. This is the main reason Facebook is opening its Messenger Platform so third-parties can develop expertise in niches.
 
-* Yet a machine learning project is not guaranteed success, even with significant time or financial investment.
+* Yet a machine learning project is not guaranteed success. You _have to accept potential failure_, when most people think you can get a technology project succeed by throwing money and time at it.
 
-For example, I can get the following with data pulled from Yelp. However it's as much work as developing a small web app to get natural language from the bot.
+For example, I can get the following with data pulled from Yelp. However it's as much work as developing a web app to get satisfying responses from the bot.
 
 ![Places recommendation](/images/italian.png "[Places recommendation]")
 
@@ -76,9 +76,9 @@ If a convolutional neural network can beat go world champions, you can imagine s
 
 ![Dentist](/images/bot-dentist.jpg "[bot dentist]")
 
-This bot would check in an availability calendar, and provide triage for new customers. Success would depend on past logging of customer interactions and tagging good answers.
+This bot would check in an availability calendar, and provide triage for new customers. Success would depend on good tagging of customer interactions and offering good options that leaves little room for ambiguity.
 
-An assistant would provide better service, but the person would not be available at 3AM when the tooth hurts!
+A human assistant would provide better service with good empathy, but that person would not be available at 3AM when the tooth hurts!
 
 In the same way, you could rent a car or an AirBnb. The bot can go into the database of products and match with availability calendars.
 

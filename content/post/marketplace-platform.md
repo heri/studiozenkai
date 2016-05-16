@@ -12,26 +12,29 @@ In one hand, you entice merchants selling their products & services and on the o
 
 It is one of the most difficult ventures.
 
-Merchants are hard to convince if there are no buyers, and vice-versa. The definition of a chicken and egg problem.
+Merchants are hard to convince if there are no buyers, and vice-versa. It's the definition of a chicken and egg problem.
 
 What makes a marketplace successful?
 
-I dislike dry guides with dozens of to-dos. They are hardly inspiring and leaves nothing to the imagination.
-
-Ken Follett describes a rising cathedral and a nascent wool marketplace in "The Pillars of the Earth".
+Instead of dry guides that are hard inspiring and leaves nothing to the imagination, I like to compare with the nascent wool marketplace in Ken Follet's excellent "The Pillars of the Earth".
 
 ![The Pillars of the Earth](/images/earth.png "The Pillars of the Earth")
 
-It's a gripping epic set in the middle ages, filled with human tales, genius and evil. Yet, what is interesting for us is the wool marketplace,  a striking model for today's online marketplaces. The success is a combination of :
+It's a gripping epic set in the middle ages, filled with human tales, genius and evil. The wool marketplace thrives in the Pillars thanks to a combination of :
 
 * routes,
+
 * relic,
+
 * city,
+
 * emissaries,
+
 * annual fair,
+
 * and good rules.
 
-# Routes
+## Routes
 
 In the middle ages, marketplaces appeared at the intersection of trafficked routes: roads, bridges, rivers, ports.
 
@@ -57,22 +60,22 @@ In a similar way, Facebook offers advertising solutions, based on users profile.
 
 Strategic placement in a trusted blog can bring visitors with good intent. It is possible your marketplace brings amazing value for the blog's readers, such as a free resource or utility on your site. For example, a 10 pages guide on how to do glamour portraits on your photography marketplace can be linked from a photo blog. Those qualified and trusting visitors will be most likely to buy.
 
-# Relic
+## Relic
 
-In Ken Follet's epic, a relic revered by Christians brings believers from far away. It's just a small piece, but it is unique and appeal to the power of imagination.
+In Ken Follet's epic, a relic revered by Christians brings believers from far away. It's a small piece, but it is unique and appeals to the power of imagination.
 
-This is powerful.
+This is worth thinking about.
 
-I believe a marketplace will only thrive if there is something worth talking about. If it is provocative, crazy, unique, and difficult to own/share, then it's an excellent attractor.
+I believe a marketplace will only thrive if there is something worth talking about. It can be provocative, crazy, unique, or difficult to own/share.
 
-Uber is a great example, by creating heated discussions in cities around the world. Even those who have never taken taxis before feel obliged to think about Uber.
+Uber is a great example, by creating heated discussions in cities around the world. Even those who have never taken taxis before feel obliged to delve into the discussion.
 
 Amazon often have crazy ideas, such as Dash Buttons that will deliver commodities at the touch of a button or drone deliveries. It does not matter if Amazon will do one day drone delivery. Yet, it fascinates press and bloggers, and gets Amazon in the headlines.
 
 What is your saint relic?
 
 
-# Fair
+## Fair
 
 Routes and a relic will drive natural traffic.
 
@@ -84,11 +87,11 @@ The fair has selected merchants with amazing merchandise as well as rich buyers,
 
 In online marketplaces, fairs can be special, time-limited promotions.
 
-One good example is Alibaba's yearly single sales day, totalling $9.3 billions. The event is promoted heavily online and offline with creative marketing. Special discounts are arranged with top brands such as Xiaomi. And there are of course FREE shipping and lots of amazing specials. Alibaba advertises that stocks are sold out in minutes during the single day, therefore creating a rush effect where buyers try to get any good deal on their hands.
+One good example is Alibaba's yearly single sales day, totaling $9.3 billions. The event is promoted heavily online and offline with creative marketing. Special discounts are arranged with top brands such as Xiaomi. And there are of course FREE shipping and lots of amazing specials. Alibaba advertises that stocks are sold out in minutes during the single day, therefore creating a rush effect where buyers try to get any good deal on their hands.
 
 Can you do something similar?
 
-# Emissaries
+## Emissaries
 
 Emissaries are sent all over Europe prior the fair to guarantee the arrival of traders and buyers.
 
@@ -96,7 +99,7 @@ In the same manner, you can work on a well coordinated PR push to make sure all 
 
 You can also target popular conferences such as CES, SXSW and events popular in your trade. These usually have journalists, youtubers and bloggers hungry for news. Make sure to grab the headlines!
 
-# Good rules
+## Good rules
 
 Traffic, specials and buzz are all good for a marketplace. Yet without security and order, it is just a shiny place to rob buyers.
 
@@ -117,7 +120,7 @@ Moreover, the infrastructure is stable and tested regularly for any bugs or atta
 These rules are a priority for the marketplace manager, before revenues and profit.
 
 
-# City
+## City
 
 In "The Pillars of The Earth", a city and a cathedral signifies the durability of a marketplace. It provides talent, a base of customers, different entities such as a Chamber of Commerce and more. A rich ecosystem is born around the marketplace.
 

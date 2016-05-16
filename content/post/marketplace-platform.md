@@ -40,19 +40,23 @@ In the middle ages, marketplaces appeared at the intersection of trafficked rout
 
 A toll bridge forces merchants to wait. Soon, a few would decide to exchange goods while waiting for entrance.
 
+![road toll](/images/toll.jpg "road toll")
+
 The more routes, the better for the marketplace. If there are a couple of roads, a port, a toll bridge and a city, then a marketplace would thrive.
 
 Interestingly, if routes have fluidity, such as an intersection of well-paved roads, there would be hardly a marketplace. Congestion create opportunities to meet for merchants or buyers.
 
 On the Internet, "routes" are the different paths internet visitors take during their journey.
 
-As a marketplace owner, your role is to create those routes. Even better, you can position your marketplace at the intersection of existing and well-trafficked routes.
+As a marketplace owner, your role is to create those routes. Even better, you can **position your marketplace at the intersection of existing and well-trafficked routes**.
 
 In 2016, users go back and forth search engines, email, media sites and blogs, social media, eCommerce sites and more. Those are the main routes you need to position your marketplace on.
 
+![routes internet 2016](/images/traffic_internet.jpg "routes internet 2016")
+
 You can place yourself on the Google search route with Adwords. This is done by all established marketplaces such as eBay or Amazon, and should be studied. SEO work can further augment this route, but takes persistence and time.
 
-As mentioned, it is important to create "congestion" within this flow. Visitors will "accidentally" go through your products, before they go on their journey.
+As mentioned, it is important to create _"congestion"_ within this flow. Visitors will "accidentally" go through your products, before they go on their journey.
 
 You can add in a Twitter route. For example, a triathlon marketplace can contact or advertise to the [followers of the International Triathlon Union](https://twitter.com/worldtriathlon/followers?lang=en). This can be efficient if you can sort the twitter users based on their biography and their tweets, and communicate in a positive way.
 
@@ -64,9 +68,13 @@ Strategic placement in a trusted blog can bring visitors with good intent. It is
 
 In Ken Follet's epic, a relic revered by Christians brings believers from far away. It's a small piece, but it is unique and appeals to the power of imagination.
 
+![relic](/images/buzz_relic.png "relic")
+
 This is worth thinking about.
 
-I believe a marketplace will only thrive if there is something worth talking about. It can be provocative, crazy, unique, or difficult to own/share.
+I believe a marketplace will only thrive if **there is something worth talking about**. It can be provocative, crazy, unique, or difficult to own/share.
+
+If you are doing a copycat, there is hardly a reason for anyone to care.
 
 Uber is a great example, by creating heated discussions in cities around the world. Even those who have never taken taxis before feel obliged to delve into the discussion.
 
@@ -85,7 +93,9 @@ In the "Pillars of the Earth", an annual fair brings traders as far as Southern 
 
 The fair has selected merchants with amazing merchandise as well as rich buyers, squeezed into one week.
 
-In online marketplaces, fairs can be special, time-limited promotions.
+![annual wool marketplace the pillars of the earth](/images/gargiulo.jpg "annual wool marketplace the pillars of the earth")
+
+In online marketplaces, fairs can be **special, time-limited promotions**.
 
 One good example is Alibaba's yearly single sales day, totaling $9.3 billions. The event is promoted heavily online and offline with creative marketing. Special discounts are arranged with top brands such as Xiaomi. And there are of course FREE shipping and lots of amazing specials. Alibaba advertises that stocks are sold out in minutes during the single day, therefore creating a rush effect where buyers try to get any good deal on their hands.
 
@@ -95,15 +105,17 @@ Can you do something similar?
 
 Emissaries are sent all over Europe prior the fair to guarantee the arrival of traders and buyers.
 
+![Emissary announcing marketplace and fair](/images/town-crier.jpg "Emissary announcing marketplace and fair")
+
 In the same manner, you can work on a well coordinated PR push to make sure all media and blogs cover your event.
 
 You can also target popular conferences such as CES, SXSW and events popular in your trade. These usually have journalists, youtubers and bloggers hungry for news. Make sure to grab the headlines!
 
 ## Good rules
 
-Traffic, specials and buzz are all good for a marketplace. Yet without security and order, it is just a shiny place to rob buyers.
+All above are good for a marketplace. Yet without security and order, it is just a shiny place to rob buyers.
 
-To sustain a marketplace over the years, trust is paramount.
+**Trust and security are the foundations of a marketplace**. A marketplace would not be sustainable over the years without them.
 
 Merchants need to be selected.
 
@@ -124,7 +136,9 @@ These rules are a priority for the marketplace manager, before revenues and prof
 
 In "The Pillars of The Earth", a city and a cathedral signifies the durability of a marketplace. It provides talent, a base of customers, different entities such as a Chamber of Commerce and more. A rich ecosystem is born around the marketplace.
 
-In a similar manner, a marketplace becomes bigger than itself when it makes room for small and big actors.
+![medieval town ecosystem](/images/medieval-towns.jpg "medieval town ecosystem")
+
+In a similar manner, **a marketplace becomes bigger than itself when it makes room for small and big actors**.
 
 APIs allow third-party entrepreneurs to provide automation, analytics and tools for merchants.
 

@@ -5,15 +5,15 @@
       <generator uri="https://gohugo.io">Hugo</generator>
     <link>http://studiozenkai.com/</link>
     <language>en-us</language>
-
-
+    
+    
     <updated>Wed, 04 May 2016 15:35:26 EDT</updated>
-
+    
     <item>
       <title>Why my next laptop won&#39;t be an Apple</title>
       <link>http://studiozenkai.com/post/laptop-machine-learning/</link>
       <pubDate>Wed, 04 May 2016 15:35:26 EDT</pubDate>
-
+      
       <guid>http://studiozenkai.com/post/laptop-machine-learning/</guid>
       <description>
 
@@ -138,12 +138,12 @@
 &lt;p&gt;[1] &lt;a href=&#34;https://www.linkedin.com/grp/post/3078126-274143486&#34;&gt;Depending on your motherboard&lt;/a&gt;, you can be limited to 16GB of RAM. Make sure to check before expanding to 32 or 64GB&lt;/p&gt;
 </description>
     </item>
-
+    
     <item>
       <title>Why bots are a thing now</title>
       <link>http://studiozenkai.com/post/bots/</link>
       <pubDate>Mon, 18 Apr 2016 10:35:26 EDT</pubDate>
-
+      
       <guid>http://studiozenkai.com/post/bots/</guid>
       <description>
 
@@ -242,12 +242,12 @@
 &lt;p&gt;[2] The movie &amp;ldquo;Her&amp;rdquo; portrays well a bot with good rapport. For practical examples, Microsoft is already offering a bot in China &lt;a href=&#34;http://www.geekwire.com/2015/people-china-love-microsofts-xiaoice-virtual-companion-says-artificial-intelligence/&#34;&gt;http://www.geekwire.com/2015/people-china-love-microsofts-xiaoice-virtual-companion-says-artificial-intelligence/&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
-
+    
     <item>
       <title>Becoming a self-taught programmer</title>
       <link>http://studiozenkai.com/post/programming/</link>
       <pubDate>Sun, 17 Apr 2016 12:55:51 EDT</pubDate>
-
+      
       <guid>http://studiozenkai.com/post/programming/</guid>
       <description>
 
@@ -353,12 +353,12 @@
 &lt;p&gt;If you have comments or other resources, feel free to leave a note!&lt;/p&gt;
 </description>
     </item>
-
+    
     <item>
       <title>Playbook</title>
       <link>http://studiozenkai.com/post/playbook/</link>
       <pubDate>Fri, 15 Jan 2016 12:22:27 -0400</pubDate>
-
+      
       <guid>http://studiozenkai.com/post/playbook/</guid>
       <description>
 
@@ -600,12 +600,12 @@
 &lt;p&gt;Maintenant que vous comprenez notre processus de développement et notre philosophie génerale et approche pour développer des plateformes réussis, discutons ensemble de votre prochain projet.&lt;/p&gt;
 </description>
     </item>
-
+    
     <item>
       <title>Cuda Cores Ranking for Machine learning</title>
       <link>http://studiozenkai.com/post/cuda/</link>
       <pubDate>Sun, 11 Oct 2015 10:35:26 EDT</pubDate>
-
+      
       <guid>http://studiozenkai.com/post/cuda/</guid>
       <description>
 
@@ -654,6 +654,6 @@
 &lt;p&gt;Apple does not have anymore laptops with nvidia graphic cards. You will need to buy a used macbook pro from 2014 or build a hackintosh, i.e. buy one of the PC laptops above and install mac os x.&lt;/p&gt;
 </description>
     </item>
-
+    
   </channel>
 </rss>

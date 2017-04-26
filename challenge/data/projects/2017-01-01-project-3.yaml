@@ -1,0 +1,9 @@
+modalID: 3
+title: outcomereference
+date: January 2017
+status: alpha launched
+img: outcomereference.jpg
+client: outcomereference
+clientLink: "http://outcomereference.com"
+category: Elixir (Erlang), Postgres, Ruby on Rails, Machine Learning (Natural Language Processing), docker, digitalocean
+description: "OutcomeReference lets you find the exact risk & protective factors to increase physical performance or manage chronic diseases such as diabetes. Get the right nutrition advice, physical activity techniques & a list of environment factors to optimize. \n\nThis is powered by one of the largest, most up to date and independent health database, and a team dedicated to real & practical solutions to get you better."

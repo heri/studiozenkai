@@ -1,0 +1,9 @@
+modalID: 5
+title: Runnerslog
+date: March 2017
+img: RunnersLog.jpg
+status: in development
+client: RunnersLog
+clientLink: "http://"
+category: Phoenix Framework, ReactJS, aws
+description: "Share your runs, and track gear, nutrition and techniques and their impact on your performance."

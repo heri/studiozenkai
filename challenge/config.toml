@@ -1,0 +1,130 @@
+baseURL = "http://studiozenkai.com/challenge"
+subfolder = "/challenge"
+languageCode = "en-us"
+title = "1 Year 12 Apps Challenge"
+theme= "hugo-freelancer-theme"
+
+[params]
+
+    # You can use Markdown syntax for urls [text](//url.to/source) for
+    # most longer texts.
+
+    # To provide some metadata for search engines feel free to add a few
+    # information about you and your website.
+    name = "1 year challenge"
+    description = "1 health app every month, for one year"
+
+    # Since this template is static, the contact form uses www.formspree.io as a
+    # proxy. The form makes a POST request to their servers to send the actual
+    # email. Visitors can send up to a 1000 emails each month for free.
+    #
+    # What you need to do for the setup?
+    #
+    # - set your email address under 'email' below
+    # - upload the generated site to your server
+    # - send a dummy email youself to confirm your account
+    # - click the confirm link in the email from www.formspree.io
+    # - you're done. Happy mailing!
+    email = "heri@studiozenkai.com"
+
+    [params.navigation]
+        brand = "1 Year 12 Apps Challenge"
+
+
+    [params.header]
+        # Copy your own image into './static/img/'' if you wish
+        image = "heri.png"
+        name = "1 health app every month, for twelve months"
+        subtitle = "Bring the change you want to see"
+
+
+    [params.portfolio]
+        # All projects defined in their own files. You can find example projects
+        # at 'exampleSite/data/projects'. Copy the 'projects' folder into the 'data' directory
+        # at the root of this Hugo site.
+        # For more informtion take a look at the README.
+        title = "Apps"
+
+        [params.portfolio.modal]
+            client = "Site"
+            status = "Status"
+            date = "Date"
+            category = "Category"
+            buttontext = "Close"
+
+
+    [params.about]
+        title = "About the 1 year challenge"
+        # The about text is splitted into a left and right column
+        left = "In November 2015, I pledged to stop eating sugar, alcohol and processed foods for a year. This meant no pastries, no pizza, no restaurants and certainly no fast food. It required daily discipline and breaking away from decades of bad habits.\n\n I am still not sure how, but apart from a couple of birthday cakes, and a few parties, I did it! \n\nIn November 2016, I realized you could do the impossible with focus and good discipline. I decided to pursue a similarly difficult challenge: release a health web or mobile application every month, until November 2017. Each application should be innovative, improve the health of its users, while still achieving the highest standards of quality.\n\nThose involved in software projects know how one month per app is irrealistic. It's like building a small house: you need time to come up with good architecture and design, make sure the foundations are solid, get together a building team, and have meeting after meeting with the owners of the house to make sure the project is going in the right direction. The finish touches and testing can take as much time as the construction. You wouldn't do all that in one month, would you? Health technology projects are even more demanding: by nature, the field demands precaution, sales cycles takes years, data needs to be secure, many want an extensive clinical trial before using a new tool, and there is little funding."
+        right = "Worse, I only have my 2012 macbook pro, programming skills in Ruby/Javascript and experience here and there  developing web applications. It is far from uber-successful silicon valley entrepreneurs like Bill Gates, Mark Zuckerberg or Sean Parker who are pouring billions in healthtech initiatives. In comparison, I only have the bare minimum funding, which is rent and server hosting.\n\n So why starve and do the work of 5 people when you can get a comfortable job for $100k/year? Pursuing this challenge cuts myself from more stable opportunities. I do this to show that you don't need significant resources to bring innovation in health. I do this for myself and for all others that you can succeed and you don't need VC funding to succeed. I do this to prove that you can learn advanced frameworks like Caffe2 or Tensorflow and become a proeficient full-stack developer. I do this to also share the adventure and hope to share the lessons, by documenting, photographing and doing a lot more than just coding. And hopefully, I will be able to get support from you or anyone who find the adventure worthy.\n\nMake no mistake: this will be extremely difficult. Deadlines will be missed. Many will find the apps useless. Designs will be ugly. But I promise I will try my best, and get community support, one by one.\n\nWhat next? I invite you to check the projects above, follow me on Twitter or other platforms. Feedback is always appreciated. If possible, you can also support me on patreon. Those who support will be able to vote for the future of each project and will also be showcased in the apps as contributors. "
+
+        [params.about.button]
+            text = "Support Heri"
+            link = "http://patreon.com/heri"
+            icon = "thumbs-up"
+
+
+    [params.contact]
+        title = "Contact"
+
+        # 'error' defines error messages for invalid inputs
+        [params.contact.form.name]
+            text = "Name"
+            error = "Please enter your name."
+
+        [params.contact.form.email]
+            text = "Email Adress"
+            error = "Please enter your email address."
+
+        [params.contact.form.phone]
+            text = "Phone Number"
+            error = "Please enter your phone number."
+
+        [params.contact.form.message]
+            text = "Message"
+            error = "Please enter a message."
+
+        [params.contact.form.button]
+            text = "Send"
+
+
+    [params.footer]
+        copyright = "Published under the Apache License 2.0. Powered by [Hugo](//gohugo.io)."
+
+        [params.footer.location]
+            title = "Location"
+            # Postal address (add as many lines as necessary)
+            address = ["Made with ❤️ in Montréal"]
+
+        [params.footer.social]
+            title = "Follow the challenge"
+            # All icons using Fontawesome's icon font. Look at fortawesome.github.io/Font-Awesome/icons/
+            # for more icons. The icons are represented by their corresponding
+            # CSS class.
+
+            [[params.footer.social.networks]]
+                icon = "fa-twitter"
+                link=  "//twitter.com/heri"
+
+            [[params.footer.social.networks]]
+                icon = "fa-facebook"
+                link=  "//www.facebook.com/heri.rakotomalala"
+
+            [[params.footer.social.networks]]
+                icon = "fa-twitch"
+                link=  "//twitch.com/heri514"
+
+
+            [[params.footer.social.networks]]
+                icon = "fa-tumblr"
+                link=  "//tumblr.com/heri"
+
+            [[params.footer.social.networks]]
+                icon = "fa-github"
+                link = "//github.com/heri"
+
+
+        [params.footer.credits]
+            title = "Credits"
+            text = "Site built with go, Font Awesome & bootstrap. Support on Patreon to get your name here!"

@@ -1,0 +1,9 @@
+modalID: 8
+title: DicomShare
+date: May 2017
+img: DicomShare.jpg
+status: in early design
+client: DicomShare
+clientLink: "http://DicomShare.com"
+category: Python, go
+description: "Open source electronic health portal allowing cloud hosting of CT scans, MRIs, and echography files."

@@ -1,0 +1,10 @@
+modalID: 2
+title: damava
+date: December 2016
+img: damava.jpg
+status: beta launched
+client: damava
+clientLink: "http://damava.com"
+category: Ruby on Rails, Postgres (PostGIS), capybara/cucumber, jQuery, capistrano, digitalocean
+description: "We all know the aging population is growing with nearly 1 in 4 Canadians over 65. Most seniors want to continue living in the safety and comfort of their own home. But eventually, they end up surrendering some or all of their autonomy.\n\nThese are our parents and grandparents. And we need to find them help.\n\n
+Damava is a platform that allows you to hire the best caregivers in a unique and simple way. Directly."

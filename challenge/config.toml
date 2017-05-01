@@ -1,7 +1,7 @@
 baseURL = "http://studiozenkai.com/challenge/"
 subfolder = "/challenge"
 languageCode = "en-us"
-title = "1 Year 12 Apps Challenge"
+title = "1 Year Health Challenge"
 theme= "hugo-freelancer-theme"
 
 [params]
@@ -28,14 +28,14 @@ theme= "hugo-freelancer-theme"
     email = "heri@studiozenkai.com"
 
     [params.navigation]
-        brand = "1 Year 12 Apps Challenge"
+        brand = "1 Year Health Challenge"
 
 
     [params.header]
         # Copy your own image into './static/img/'' if you wish
         image = "heri.png"
         name = "1 health app every month, for twelve months"
-        subtitle = "Development at breakneck speed"
+        subtitle = "Bring the change you want to see"
 
 
     [params.portfolio]
@@ -49,15 +49,15 @@ theme= "hugo-freelancer-theme"
             client = "Site"
             status = "Status"
             date = "Date"
-            category = "Category"
+            category = "Technology stack"
             buttontext = "Close"
 
 
     [params.about]
-        title = "About the 1 year challenge"
+        title = "About the 1 year Health challenge"
         # The about text is splitted into a left and right column
-        left = "In November 2015, I pledged to stop eating sugar, alcohol and processed foods for a year. This meant no pastries, no restaurants or fast food. It required daily discipline and breaking away from decades of bad habits.\n\n I am still not sure how, but apart from a couple of birthday cakes, and a few parties, I did it! \n\nIn November 2016, I realized you could do the impossible with focus and good discipline. I decided to pursue an even more difficult challenge: release a health application every month, until November 2017. Each application will be innovative, improve the health of its users, while still achieving the highest standards.\n\nThose involved in software projects know how one month per app is unrealistic. It's like building a house. You need time for good architecture and design, make sure the foundations are solid, get together a team, and have regular meetings to make sure the project is going in the right direction. The finish can take as much time as the construction. You wouldn't do all that in one month, would you? Health technology projects are even more demanding. By nature, the field demands precaution, sales cycles takes years, data needs to be secure and there is little funding. And when done, medical professionals want a clinical trial before using the new tool."
-        right = "Worse, I only have my 2012 macbook pro, coding skills in Ruby/Javascript and experience here and there developing web applications. It is far from uber-successful silicon valley entrepreneurs like Bill Gates or Mark Zuckerberg who are pouring billions in healthtech initiatives. In comparison, I only have the bare minimum, which is rent and server hosting.\n\n So why starve and do the work of 5 people when you can get a comfortable job for $100k/year? Indeed, pursuing this challenge cuts myself from more stable opportunities. I do this to show that you don't need significant resources to bring innovation in health. I do this for myself and for all others that you can succeed and work ethics and persistence matters more than VC funding. I do this to prove that you can learn advanced frameworks like Caffe2 or Tensorflow and become a top full-stack engineer in one year. I do this to also share the adventure and hope to share the lessons, by documenting, photographing and doing a lot more than coding. And I hope to get support from you or anyone who find the adventure worthy.\n\nMake no mistake: this will be laborious. Deadlines will be missed. Many will find the apps useless. Designs will be ugly. But I promise I will do my best, and get community support, one by one.\n\nWhat next? I invite you to check the projects above, follow me on Twitter or other platforms. Feedback is most welcome. If possible, you can also support me on patreon. Those who support will be able to vote for project ideas and will also be presented in the apps as contributors."
+        left = "In November 2015, I pledged to stop eating sugar, alcohol and processed foods for a year. This meant no pastries, no restaurants or fast food. It required daily discipline and breaking away from decades of bad habits.\n\n I am still not sure how, but apart from a couple of birthday cakes and a handful of social events, I did it! \n\nIn November 2016, I realized you could do what seems to be the impossible with focus and good discipline. I decided to pursue a similar challenge: release a health application every month, for 1 year. Each project will be at the service of the health of its users, while still achieving the highest standards.\n\nThose involved in software projects know how one month per app is unrealistic. It's like building a house. You need time for good architecture and design, make sure the foundations are solid, get together a team, and have regular meetings to make sure the project is going in the right direction. The final touches can take as much time as the construction. You wouldn't do all that in one month, would you? Health technology projects are even more demanding. By nature, the field demands precaution, sales cycles takes years, the platform needs to be secure and there is little funding. And when done, medical professionals want studies before using the new tool."
+        right = "Worse, I only have my 2012 macbook pro, coding skills in Ruby/Javascript and experience here and there developing web applications. It is far from uber-successful silicon valley entrepreneurs like Bill Gates or Mark Zuckerberg who are pouring billions in healthtech initiatives. In comparison, I only have the bare minimum, which is rent and server hosting.\n\n So why starve and do the work of 5 people when you can get a six-figues comfortable job? I do this to show that you don't need significant resources to bring innovation in health. I do this for myself and for all others that you can succeed and work ethics and persistence matters more than VC funding. I do this to prove that you can learn advanced frameworks like Caffe2 or Tensorflow and become a top full-stack engineer in one year. I do this to also share the adventure and hope to share the lessons, by documenting, photographing and doing a lot more than coding. And I hope to get support from you or anyone who find the adventure worthy.\n\nMake no mistake: this will be laborious. Deadlines will be missed. Many will find the apps useless. Designs will be ugly. But I promise I will do my best, and get community support, one by one.\n\nWhat next? I invite you to check the projects above, follow me on Twitter or other platforms. Feedback is most welcome. If possible, you can also support me on patreon. Those who support will be able to vote for project ideas and will also be presented in the apps as contributors."
 
         [params.about.button]
             text = "Support Heri"

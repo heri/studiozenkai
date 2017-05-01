@@ -1,9 +1,9 @@
 modalID: 5
-title: Runnerslog
+title: TrackSprint
 date: March 2017
-img: RunnersLog.jpg
+img: TrackSpring.jpg
 status: in development
-client: RunnersLog
-clientLink: "http://"
-category: Phoenix Framework, ReactJS, aws
-description: "Share your runs, and track gear, nutrition and techniques and their impact on your performance."
+client: TrackSprint
+clientLink: "http://studiozenkai.com/challenge"
+category: Phoenix Framework (Elixir), aws
+description: "Share your runs. Track gear, nutrition and techniques and their impact on your performance."

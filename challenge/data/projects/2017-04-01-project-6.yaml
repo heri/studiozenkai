@@ -2,8 +2,8 @@ modalID: 6
 title: InsulinDb
 date: April 2017
 img: InsulinDb.jpg
-status: ongoing development
+status: in development
 client: InsulinDb
-clientLink: "http://InsulinDb.io"
+clientLink: "http://studiozenkai.com/challenge"
 category: Phoenix Framework, aws
-description: "This is the the only FREE app that shows glycaemic load as well as food insulin index, benefiting those who following a ketogenic or a low-carb high-fat diet.\n\nUsers can also input insulin changes."
+description: "This is the the only FREE app that shows glycaemic load as well as food insulin index, for those following a ketogenic or a low-carb high-fat diet."

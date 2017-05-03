@@ -61,7 +61,7 @@ theme= "hugo-freelancer-theme"
 
         [params.about.button]
             text = "Support Heri"
-            link = "http://patreon.com/heri"
+            link = "https://www.patreon.com/HeriRakotomalala"
             icon = "thumbs-up"
 
 

@@ -1,9 +1,9 @@
 modalID: 5
-title: TrackSprint
+title: Terrific.Run
 date: March 2017
 img: TrackSpring.jpg
 status: in development
-client: TrackSprint
-clientLink: "http://studiozenkai.com/challenge"
+client: Terrific.Run
+clientLink: "http://Terrific.Run"
 category: Phoenix Framework (Elixir), aws
 description: "Share your runs. Track gear, nutrition and techniques and their impact on your performance."

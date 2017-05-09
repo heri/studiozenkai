@@ -95,4 +95,4 @@ In my experience, it is hard to write a definitive performance guide that will w
 
 If you are looking for performance ideas, I advise taking one of your legacy apps and try to increase performance by 3x or 10x within a 48H hackathon. This exercise will force you to work on creative solutions and will teach you valuable technics for working applications later on.
 
-If you want to discuss, feel free to contact me on [Twitter](http://twitter.com/heri) or email heri@studiozenkai.com
+If you want to discuss, feel free to contact me on [Twitter](http://twitter.com/heri) or email heri@studiozenkai.com or comment on the [HN post](https://news.ycombinator.com/item?id=14299690)

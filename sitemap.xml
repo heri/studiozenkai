@@ -2,9 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://studiozenkai.com/</loc>
-    <lastmod>2016-05-04T15:35:26-04:00</lastmod>
-    <priority>0</priority>
+    <loc>http://studiozenkai.com/post/ruby-performance-checklist/</loc>
+    <lastmod>2017-05-08T10:35:26-04:00</lastmod>
   </url>
   
   <url>
@@ -30,6 +29,28 @@
   <url>
     <loc>http://studiozenkai.com/post/cuda/</loc>
     <lastmod>2015-10-11T10:35:26-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://studiozenkai.com/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://studiozenkai.com/post/</loc>
+    <lastmod>2017-05-08T10:35:26-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://studiozenkai.com/</loc>
+    <lastmod>2017-05-08T10:35:26-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://studiozenkai.com/tags/</loc>
+    <priority>0</priority>
   </url>
   
 </urlset>

@@ -7,7 +7,23 @@
     <language>en-us</language>
     
     
-    <updated>Mon, 08 May 2017 10:35:26 EDT</updated>
+    <updated>Thu, 18 May 2017 12:35:26 EDT</updated>
+    
+    <item>
+      <title>Writing Bold Code</title>
+      <link>http://studiozenkai.com/post/writing-bold-code/</link>
+      <pubDate>Thu, 18 May 2017 12:35:26 EDT</pubDate>
+      
+      <guid>http://studiozenkai.com/post/writing-bold-code/</guid>
+      <description>&lt;p&gt;I wrote a &lt;a href=&#34;http://studiozenkai.com/post/ruby-performance-checklist/&#34;&gt;Ruby Performance Checklist&lt;/a&gt;. Since then, I have seen the performance panel at RailsConf. Richard Schneeman (@schneems) then wrote an &lt;a href=&#34;http://schneems.com/2017/05/17/ruby-backend-performance-getting-started-guide/&#34;&gt;article on back-end performance&lt;/a&gt;, which starts by memory profiling tools like &lt;code&gt;scout&lt;/code&gt; or &lt;code&gt;rack-mini-profiler&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;I like his article. My checklist started by Ruby code complexity. If you refactor well your code and make it simpler, it is actually the same strategy as advised by @schneems.&lt;/p&gt;
+
+&lt;p&gt;This begs the question: why do we always always discuss Ruby performance?&lt;/p&gt;
+
+&lt;p&gt;A quick answer is that Ruby is slow and takes too much memory.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Ruby Performance checklist</title>
@@ -17,7 +33,7 @@
       <guid>http://studiozenkai.com/post/ruby-performance-checklist/</guid>
       <description>
 
-&lt;p&gt;I have shipped many applications, using a variety of frameworks, through &lt;a href=&#34;http://studiozenkai.com/challenge/&#34;&gt;the 1 year challenge&lt;/a&gt; or various collaborations. Real-world issues include low performance, such as servers needing more RAM, not able to sustain large traffic, or very slow rendering. Since this is a recurring issue, here is a checklist that can help developers get their Ruby application faster. Depending on your application, here are a few areas to look at:&lt;/p&gt;
+&lt;p&gt;I shipped many applications, using a variety of frameworks, through &lt;a href=&#34;http://studiozenkai.com/challenge/&#34;&gt;my current 1 year challenge&lt;/a&gt; or startups. Ruby issues include low performance, such as servers needing more RAM, not able to sustain large traffic, or slow rendering. Since this is a recurring issue, here is a checklist to help developers get their Ruby app faster:&lt;/p&gt;
 
 &lt;h2 id=&#34;code-complexity&#34;&gt;Code complexity&lt;/h2&gt;
 
@@ -25,100 +41,13 @@
 
 &lt;ul&gt;
 &lt;li&gt;create too many instance variables and statements. This means more allocations and more database calls. Often the variables are not even used.&lt;/li&gt;
-&lt;li&gt;add too many loops. This exponentially decreases performance. Do you really need yet another &lt;code&gt;each&lt;/code&gt; or collection?&lt;/li&gt;
-&lt;li&gt;use too many gems. There are very many nice gems that makes you life easier. Few however think if they really need yet another gem. Don&amp;rsquo;t bloat your app!&lt;/li&gt;
+&lt;li&gt;add too many loops. This exponentially decreases performance. Do you need yet another &lt;code&gt;each&lt;/code&gt; or collection?&lt;/li&gt;
+&lt;li&gt;use too many gems. There are many nice gems to make you life easier. Few however think if they need yet another gem. Don&amp;rsquo;t bloat your app!&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Less complex code is more readable and brings in most cases more performance. I like to use &lt;a href=&#34;https://github.com/whitesmith/rubycritic&#34;&gt;rubycritic&lt;/a&gt; to bring more sanity. Another alternative is &lt;a href=&#34;https://github.com/bbatsov/rubocop&#34;&gt;rubocop&lt;/a&gt;. There are also third-party services like skylight to show you details on total object allocation. Pick your tool, and focus efforts on the problematic methods. You don&amp;rsquo;t have to write terse one-liners, however there is a always a happy middle ground that will satisfy developers and product owners.&lt;/p&gt;
+&lt;p&gt;Less complex code is more readable and brings in most cases more performance. I like to use &lt;a href=&#34;https://github.com/whitesmith/rubycritic&#34;&gt;rubycritic&lt;/a&gt; to bring more sanity. Another alternative is &lt;a href=&#34;https://github.com/bbatsov/rubocop&#34;&gt;rubocop&lt;/a&gt;. There are also third-party services like skylight to show you object allocation. Pick your tool, and focus efforts on the most complex methods. You don&amp;rsquo;t have to write terse one-liners. However there is a always a happy middle ground that will satisfy developers and product owners.&lt;/p&gt;
 
 &lt;h2 id=&#34;database-calls&#34;&gt;Database calls&lt;/h2&gt;
-
-&lt;p&gt;ActiveRecord or Sequel makes life easier for Ruby developers. Perhaps too easy. If left unchecked, you find yourself doing hundreds of queries for a single page. Get the blog post, get the post comments, then get the comment users, and then their pictures. And why not the list of people who liked, or favorited the post. And&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;The first and easy solution is stop doing N+1 queries. Use a gem like &lt;a href=&#34;https://github.com/flyerhzm/bullet&#34;&gt;bullet&lt;/a&gt; or a service like &lt;a href=&#34;https://scoutapp.com/&#34;&gt;scoutapp&lt;/a&gt; to hunt N+1 queries. These allow you to set alert on Slack, or any similar messenging service, whenever a N+1 query is done. View an alert like a failure that you will have to solve before the end of the day!&lt;/p&gt;
-
-&lt;p&gt;My second (and less easy) solution is start learning and loving Postgres (or MySQL, if that&amp;rsquo;s your database of choice). This will take time, but hopefully you will be able to start using advanced joins, custom types such as ranges, arrays, json, or spatial types. Postgres also offer full-text search, so you don&amp;rsquo;t have to use ElasticSearch. Please investigate to make best use of existing resources.&lt;/p&gt;
-
-&lt;h2 id=&#34;devops-for-ruby&#34;&gt;DevOps for Ruby&lt;/h2&gt;
-
-&lt;p&gt;Even if you have a dedicated DevOps or an infrastructure engineer, I advise generally Ruby developers to learn how to deploy, maintain servers and also manage service disruptions. This will allow you to:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;learn load balancing&lt;/li&gt;
-&lt;li&gt;learn how to sustain good performance, even with limited hardware.&lt;/li&gt;
-&lt;li&gt;learn the pros and cons of passenger vs puma vs unicorn&lt;/li&gt;
-&lt;li&gt;learn how to commit and deploy without service uninterruption.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;the-art-of-caching&#34;&gt;The art of caching&lt;/h2&gt;
-
-&lt;p&gt;Caching can be done at multiple levels: front server, database, app, assets etc.&lt;/p&gt;
-
-&lt;p&gt;One of my favorite is ETag. Everyone wants to use Redis but smart use of etags lets you render pages in 40ms or less. It&amp;rsquo;s hard to beat. In the example of the blog post, the &lt;code&gt;updated_at&lt;/code&gt; column lets us bypass rendering or data loading. ETag also works for API calls so do not be shy in using ETag!&lt;/p&gt;
-
-&lt;p&gt;Another low-hanging fruit is caching. Most often, rendering a collection with a partial takes most of the time for a page render. Using &lt;code&gt;cached: true&lt;/code&gt; dramatically increase performance. Once you have a store for caching, you can also store there results of complex queries.&lt;/p&gt;
-
-&lt;p&gt;In this section, Redis will be your best friend. It&amp;rsquo;s stable as a rock, will ingest anything you throw at it, can be extended, and most importantly is super-fast. With a bit of work, you can serve requests from 100kreq/s to 1mreq/s.&lt;/p&gt;
-
-&lt;h2 id=&#34;the-impression-of-speed&#34;&gt;The impression of speed&lt;/h2&gt;
-
-&lt;p&gt;They say performance is in the eye of beholder. A static page means slow performance for users. However doing the following will make them think otherwise:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Using frameworks like ReactJs allows them to load instantly pages. The visitor can be &amp;ldquo;distracted&amp;rdquo; by a loading animation and/or various parts of the page moving. You can also let them enter data on a form while data is loaded from the server.&lt;/li&gt;
-&lt;li&gt;On select browsers such as Chrome or Firefox, service workers let users continue using the page, even if the server is slow or even unreachable. Performance is then only related to the performance of the front-end app.&lt;/li&gt;
-&lt;li&gt;Supplement data can be loaded only later. In the example of the article, the page title and content text can be loaded in one query. However, comments are only loaded when the user scrolls down to the relevant section. In a similar way, you can load later content requiring heavy calculations.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;There are many other UI patterns to give the impression of speed.&lt;/p&gt;
-
-&lt;h2 id=&#34;offloading&#34;&gt;Offloading&lt;/h2&gt;
-
-&lt;p&gt;Business goals might require a maximum render time. In this case, you can offload complex processing to a job server, most often Sidekiq/Redis. You can for example use this job server&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;To send emails and notify users&lt;/li&gt;
-&lt;li&gt;To work on the database, such as calculations, data processing, data import and export&lt;/li&gt;
-&lt;li&gt;To process media, such as encoding videos, resizing images&lt;/li&gt;
-&lt;li&gt;and generally any job that might slow down your main app&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;A drawback is that a job might fail. Or data might have changed between the job creation and job processing. Sidekiq is also not as reliable as Redis. Overall, data offloading might confuse users by presenting obsolete data - leading to users frantically reloading pages, spamming customer service, or just quit. Make sure to test!&lt;/p&gt;
-
-&lt;h2 id=&#34;sub-optimization&#34;&gt;Sub-optimization&lt;/h2&gt;
-
-&lt;p&gt;When I have done all the above, with lean methods, smart use of caching, and a job server, I might still be unsatisfied with Ruby performance.&lt;/p&gt;
-
-&lt;p&gt;It is possible to optimize key parts of your application by using C or Rust code. For example, the &lt;a href=&#34;https://github.com/SamSaffron/fast_blank&#34;&gt;fast_blank&lt;/a&gt; gem makes blank? statements 20x faster.&lt;/p&gt;
-
-&lt;p&gt;In a similar way, &lt;a href=&#34;https://github.com/danielpclark/faster_path&#34;&gt;faster_path&lt;/a&gt;, written in Rust, can optimize file loading. There is a also a newer gem, that I haven&amp;rsquo;t tested yet, named &lt;a href=&#34;https://github.com/tildeio/helix&#34;&gt;Helix&lt;/a&gt; that allows you to easily add Rust to your Rails application.&lt;/p&gt;
-
-&lt;p&gt;Make sure to test extensively (esp. unit tests)!&lt;/p&gt;
-
-&lt;h2 id=&#34;do-you-really-need-rails&#34;&gt;Do you really need Rails?&lt;/h2&gt;
-
-&lt;p&gt;Most companies dealing with poor Ruby performance use Ruby on Rails. Ruby on Rails is a heavyweight, the yokozuna that will eat any available RAM. Yet in many cases, we don&amp;rsquo;t need all the Active Support methods or everything that Active Record gives.&lt;/p&gt;
-
-&lt;p&gt;Did you know that &lt;a href=&#34;https://github.com/jeremyevans/roda&#34;&gt;roda&lt;/a&gt;, a micro Ruby framework, is faster than Phoenix, Play (a scala framework) and can be &lt;a href=&#34;https://www.techempower.com/benchmarks/previews/round14/#section=data-r14&amp;amp;hw=ph&amp;amp;test=query&#34;&gt;as fast as nodejs&lt;/a&gt;? &lt;a href=&#34;http://hanamirb.org/&#34;&gt;Hanami&lt;/a&gt; is another framework that will deliver superior performance compared to Rails.&lt;/p&gt;
-
-&lt;p&gt;Here&amp;rsquo;s how I&amp;rsquo;ve used a standalone Roda app or Hanami (in parallel to a Rails app) for various Ruby projects:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;json search results. Just a db query then transform to json. These are sent to a React/Angular front-end&lt;/li&gt;
-&lt;li&gt;embed. Bloggers and users looking to embed an object on their site or social media are served by roda&lt;/li&gt;
-&lt;li&gt;building a simple/minimalistic admin area&lt;/li&gt;
-&lt;li&gt;etc.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I have also used other frameworks such as Phoenix framework or in rare occasions Lapis (which uses OpenResty) or ExpressJs. Phoenix framework is lies on top of the Erlang VM and is almost impossible to kill. You can also schedule background processing jobs, which is quite nice compared to the experience with Rails. However the language is not as expressive as Ruby and you find yourself writing more lines (!). Like Phoenix, Lapis is another high-performance framework written in Lua, however the community is quite small. You can also check out golang frameworks such as beego. Not bad, however I would use a go framework only on select projects.&lt;/p&gt;
-
-&lt;h2 id=&#34;what-next&#34;&gt;What next?&lt;/h2&gt;
-
-&lt;p&gt;In my experience, it is hard to write a definitive performance guide that will work for most applications. A few applications require just a bit of front-end UI work solve all performance issues (i.e. add a spinner gif and everyone&amp;rsquo;s happy). Others require hand-crafted SQL queries. Sometimes, it&amp;rsquo;s just about beefing up server hardware. Use tools like scout-apm, skylight or newrelic. Work on the low-hanging fruits and then move up.&lt;/p&gt;
-
-&lt;p&gt;If you are looking for performance ideas, I advise taking one of your legacy apps and try to increase performance by 3x or 10x within a 48H hackathon. This exercise will force you to work on creative solutions and will teach you valuable technics for working applications later on.&lt;/p&gt;
-
-&lt;p&gt;If you want to discuss, feel free to contact me on &lt;a href=&#34;http://twitter.com/heri&#34;&gt;Twitter&lt;/a&gt; or email heri@studiozenkai.com&lt;/p&gt;
 </description>
     </item>
     
@@ -147,108 +76,6 @@
 &lt;p&gt;I doubled down. XCode, Final Cut Pro, Apple Aperture. A much more powerful 15&amp;rdquo; Macbook pro.&lt;/p&gt;
 
 &lt;p&gt;Those were the &lt;em&gt;golden age&lt;/em&gt;. Apple was the best choice in web development and creative work:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;OS X was the most advanced, most powerful and most reliable OS. Windows had viruses, the worst user experience with nagging dialog boxes, and always shipped with crapware. Linux was reliable, but lacked hardware compatibility and good software.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;OS X is a master class in UI and UX. Menus, notifications (if any), hardware integration. It seemed every detail was polished over and over.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Hardware was overpriced but well thought-out. It could handle dozens of Photoshop documents, xCode projects and Safari tabs, and will not crash.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Hardware was deeply integrated and transparent. When everyone else taunted numbers, Apple laptops just worked.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;All manufacturers would add software or hardware buttons and then announce an extra feature. Apple was going the other way, exploring to cut the extras. Everything was bold and clear.&lt;/p&gt;
-
-&lt;p&gt;Study what they have done if you want to release a technology product.&lt;/p&gt;
-
-&lt;h2 id=&#34;part-ii-apple-marketing&#34;&gt;Part II - Apple Marketing&lt;/h2&gt;
-
-&lt;p&gt;It is not easy to put an exact date. It might be around Steve Jobs&amp;rsquo; parting.&lt;/p&gt;
-
-&lt;p&gt;Priorities changed. No disruptive computing devices, just iterations.&lt;/p&gt;
-
-&lt;p&gt;Nagging dialog boxes appeared, without any options to deactivate.&lt;/p&gt;
-
-&lt;p&gt;Hardware and software for pros, like Final Cut Pro were dumbed down.&lt;/p&gt;
-
-&lt;p&gt;Mac Os X Server phased out, closing the window to OS X super computers.&lt;/p&gt;
-
-&lt;p&gt;Hardware that could be for grandmas introduced as &amp;ldquo;pro&amp;rdquo;, such as the iPad Pro.&lt;/p&gt;
-
-&lt;p&gt;Various consumer devices such as the Apple Watch took more space on the home page. At the same time, &amp;ldquo;serious&amp;rdquo; computing such as the Mac Pro took  an eternity to be updated.&lt;/p&gt;
-
-&lt;p&gt;Now, there is an emphasis on pink and yellow gold devices, with no influence on the performance.&lt;/p&gt;
-
-&lt;p&gt;This is where you think that &lt;em&gt;Apple might just be a better marketing company than technology&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;part-iii-the-schism&#34;&gt;Part III - The Schism&lt;/h2&gt;
-
-&lt;p&gt;The question is : Are Apple computers good enough for professionals?&lt;/p&gt;
-
-&lt;p&gt;It&amp;rsquo;s now 2016 and I spend time &lt;a href=&#34;http://studiozenkai.com/post/bots/&#34;&gt;researching machine learning&lt;/a&gt;. Computation power is critical.&lt;/p&gt;
-
-&lt;p&gt;Most data scientists and machine learners use powerful servers or desktops for computation needs.&lt;/p&gt;
-
-&lt;p&gt;You have ample space to add affordable parts or expensive NVIDIA Tesla cards.&lt;/p&gt;
-
-&lt;p&gt;In the startup world, laptops are kings though. There are frequent meetings in coworking spaces, coffee shops and demos in meetups. This makes laptops a requirement.&lt;/p&gt;
-
-&lt;p&gt;What are the laptop options for Machine Learners?&lt;/p&gt;
-
-&lt;p&gt;Let&amp;rsquo;s break the needs.&lt;/p&gt;
-
-&lt;h3 id=&#34;memory&#34;&gt;Memory&lt;/h3&gt;
-
-&lt;p&gt;I work with memory-mapped databases and the more memory the better. 16GB is the bare minimum, 32GB is comfortable, 64GB is better [1]&lt;/p&gt;
-
-&lt;p&gt;This already disqualifies most laptops on the market.&lt;/p&gt;
-
-&lt;h3 id=&#34;cpu&#34;&gt;CPU&lt;/h3&gt;
-
-&lt;p&gt;CPU is irrelevant. Of course, the faster the better. But if there is more budget, it&amp;rsquo;s better to put it in hard drives or RAM.&lt;/p&gt;
-
-&lt;h3 id=&#34;hard-drive&#34;&gt;Hard drive&lt;/h3&gt;
-
-&lt;p&gt;Solid state drives with good throughput and high IOPS are a must.&lt;/p&gt;
-
-&lt;p&gt;With a good hard drive, you can do many experiments every day and iterate quickly to a good model. With a slow hard drive, your only option could be model design during the day. Then you have to let the training run for a whole night.&lt;/p&gt;
-
-&lt;h3 id=&#34;gpu&#34;&gt;GPU&lt;/h3&gt;
-
-&lt;p&gt;A good GPU is the workhorse. Most of modern non-trivial machine learning or statistics libraries are done by a GPU.&lt;/p&gt;
-
-&lt;p&gt;I bet on NVIDIA with the latest CUDA drivers.&lt;/p&gt;
-
-&lt;p&gt;If someone intends to implement their own library from scratch or if they have a project that doesn&amp;rsquo;t use CUDA, then Radeon &amp;amp; OpenCL can be a viable alternative.&lt;/p&gt;
-
-&lt;p&gt;It is also important to check the RAM available on different models. A good NVIDIA card which can load in its 8GB DDR5 RAM all the data will chew through your data. Another NVIDIA card with a good GPU but with only 1GB RAM will have to swap through slow memory leaving you frustrated.&lt;/p&gt;
-
-&lt;h3 id=&#34;os&#34;&gt;OS&lt;/h3&gt;
-
-&lt;p&gt;Most machine learning and stats libraries are generally poorly supported on Windows, if not at all.&lt;/p&gt;
-
-&lt;p&gt;A few such as the Torch improvements developed by Facebook work on Linux.&lt;/p&gt;
-
-&lt;p&gt;Others (popular libraries on Github) work better on OSX.&lt;/p&gt;
-
-&lt;h2 id=&#34;part-iv-my-next-laptop&#34;&gt;Part IV - My Next Laptop&lt;/h2&gt;
-
-&lt;p&gt;Based on the requirements above, here are options:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;Low Budget:&lt;/em&gt; I can go with a thin client (a 12&amp;rdquo; macbook, a linux laptop) to SSH into Linux GPU AWS instances. OK in most situations but lacks versatility and could be more expensive than owning an expensive graphics card in the long term.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;em&gt;Mac:&lt;/em&gt; Macbook pros can have 16GB RAM and best-of-breed hardware. However, they can only have an AMD Radeon graphics card which is a big No. Even the powerful Mac Pro only has AMD cards. Why Apple? If you absolutely need an OSX platform, you could get a second hand macbook pro with a Nvidia GT 750M, like I did six months ago. It is still far from an ideal situation.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;em&gt;PC:&lt;/em&gt; With &lt;a href=&#34;https://blogs.windows.com/buildingapps/2016/03/30/run-bash-on-ubuntu-on-windows/&#34;&gt;Microsoft&amp;rsquo;s recent announcements of Linux support in bash&lt;/a&gt;, I consider PC laptops are now a viable choice. For the best performance for the money, there are gaming laptops built by &lt;a href=&#34;http://studiozenkai.com/post/cuda/&#34;&gt;Clevo, Sager, AORUS&lt;/a&gt;. Razer also sells the &lt;a href=&#34;http://www.razerzone.com/gaming-systems/razer-blade-stealth&#34;&gt;Blade Stealth&lt;/a&gt;,  a thin client that can work with an external GPU. Imagine having a Titan or a Tesla in the external box. Dell and Asus also have &lt;a href=&#34;http://www.dell.com/content/products/productdetails.aspx/alienware-graphics-amplifier?c=us&amp;amp;cs=19&amp;amp;l=en&amp;amp;s=dhs&amp;amp;sku=452-BBRG&#34;&gt;a similar external box to house NVIDIA cards&lt;/a&gt;. These external boxes are interesting however they are very few reviews. I would therefore looking into &lt;em&gt;Lenovo Laptops&lt;/em&gt; such as &lt;a href=&#34;http://shop.lenovo.com/ca/en/laptops/thinkpad/t-series/&#34;&gt;the T460p&lt;/a&gt; which have a dedicated nvidia GPU. These laptops are known for their reliability, guarantee and excellent Linux support.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I realize that &lt;strong&gt;there are no options from Apple for developers working in machine learning&lt;/strong&gt;.  This is not just a problem for machine learning but also for photographers and videographers who need graphics acceleration in Adobe Premiere or in BlackMagic resolve. NVIDIA cards are a requirement for Adobe&amp;rsquo;s Mercury Engine and can save hours in editing and post-production. This is why my next laptop won&amp;rsquo;t certainly be an Apple laptop but one running Windows 10.&lt;/p&gt;
-
-&lt;h3 id=&#34;notes&#34;&gt;Notes&lt;/h3&gt;
-
-&lt;p&gt;[1] &lt;a href=&#34;https://www.linkedin.com/grp/post/3078126-274143486&#34;&gt;Depending on your motherboard&lt;/a&gt;, you can be limited to 16GB of RAM. Make sure to check before expanding to 32 or 64GB&lt;/p&gt;
 </description>
     </item>
     
@@ -271,88 +98,6 @@
 &lt;p&gt;At that time, bots and A.I. were rule-based. &amp;ldquo;If player produces infantry, produce infantry-killing robots&amp;rdquo;. &amp;ldquo;If user clicks print, show links on how to print&amp;rdquo;. To get user satisfaction, you need to write rules covering all cases, as well as the exceptions. It is a creative and long but easy job.&lt;/p&gt;
 
 &lt;p&gt;But Microsoft&amp;rsquo;s clipper or video games AI showed their limits. &lt;em&gt;Apart from clear cases, bots could not process subtle situations&lt;/em&gt;. Typing a wrong letter would leave the bot stuck for example. Using a different expression would not work. Creative players would find ways to beat the A.I. in ways unseen by video game designers.&lt;/p&gt;
-
-&lt;p&gt;Twenty years later, bots and A.I. seem to be commercial hype by bored journalists, like 3D movies two years ago. You can reuse old code, add a few words like A.I or &amp;ldquo;intelligent&amp;rdquo; in a press release, and get coverage by gullible bloggers. Fast forward a few months and you get millions from investors.&lt;/p&gt;
-
-&lt;p&gt;The example is not far-fetched. The majority of startups on Techcrunch do not have true technology innovation. Yet, there is true disruption. Here is why.&lt;/p&gt;
-
-&lt;h2 id=&#34;bots-in-a-mobile-world&#34;&gt;Bots in a mobile world&lt;/h2&gt;
-
-&lt;p&gt;In East Africa or Asia, there is prevalence of text as user interface. When the West worked on rich graphic interfaces with lush animation, text messages provides &lt;a href=&#34;https://en.wikipedia.org/wiki/M-Pesa&#34;&gt;mobile banking&lt;/a&gt;, mobile communication and commerce elsewhere.&lt;/p&gt;
-
-&lt;p&gt;Text messages are lightweight asynchronous. With each text, the other party can get more information and provide even better service. Ultimately, it is a transparent interface with the promise of better meaning and deeper relationship.&lt;/p&gt;
-
-&lt;p&gt;Text messages is also the most convenient when you are on the go. Who has time to admire rich graphics when you are walking on a busy New York city sidewalk?&lt;/p&gt;
-
-&lt;p&gt;Text messages allow you also to cut through all the decorum. Sign-up, confirm email, create profile, navigate, search, compare, view criterias, add to favorites, reserve, confirm, add shipping address, add credit card number, add billing address, confirm again. Who has patience for all that? The idea of using natural language instead of the artificial constructs of sites and apps is indeed more powerful. If rich media is more helpful, it is possible to send a link to a picture or a map.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://studiozenkai.com/images/buttons.jpg&#34; alt=&#34;Rich interfaces in text communication&#34; title=&#34;[Rich interfaces in text communication]&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Text messages is also the unifying interface, from the homeless person who is using an old Nokia, the executive with the Thinkpad to the hipster with an iPhone. It is accessible, from power users to disabled groups.&lt;/p&gt;
-
-&lt;p&gt;Time is definitively ripe for text as the main interface.&lt;/p&gt;
-
-&lt;h2 id=&#34;advances-in-machine-learning&#34;&gt;Advances in Machine Learning&lt;/h2&gt;
-
-&lt;p&gt;In addition, research in machine learning [1] and especially &lt;a href=&#34;https://en.wikipedia.org/wiki/Convolutional_neural_network&#34;&gt;deep neural networks&lt;/a&gt; promise better handling of user requests.&lt;/p&gt;
-
-&lt;p&gt;Machine Learning feeds real-world data to an algorithm and correlate them with positive or negative outcomes. After testing, the algorithm is able to predict an outcome from new data.&lt;/p&gt;
-
-&lt;p&gt;A simple case would be guessing the gender. A researcher would pick features such as weight and height, and can set aside data to test later if parameters are good. A good machine learning algorithm would associate a person with shorter height and lesser weight to female gender:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://studiozenkai.com/images/rplot.png&#34; alt=&#34;Gender weight height&#34; title=&#34;[Gender weight height&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Using this machine learning concept in bots would provide something different from decades ago&lt;/em&gt;. Previously, &amp;ldquo;bots&amp;rdquo; could only process discrete cases. In the case of gender search, a programmer would write rules. &amp;ldquo;If height &amp;lt; 65 and weight &amp;lt; 150 pounds, then person is female&amp;rdquo;. But what about a person who is tall and lightweight?  Machine learning can cover the continuity of cases and even try guessing &amp;ldquo;out-of-bounds&amp;rdquo; cases.&lt;/p&gt;
-
-&lt;p&gt;Mathematically, machine learning is in essence solving an equation and doing a series of matrix multiplications and transpositions. It is known by researchers in universities and proved useful in industry such as signal processing or basic optical character recognition. However, it never had true commercial breakthrough.&lt;/p&gt;
-
-&lt;p&gt;Until we had deep neural networks, also called deep learning.&lt;/p&gt;
-
-&lt;p&gt;Deep neural networks, inspired by biological systems, puts multiple layers together and feeds forward data. A layer would process a sub-section of the data, send forward a tiny bit of information, and little by little, the system would &amp;ldquo;get&amp;rdquo; the bigger picture. Other deep neural networks correlate the sequence of data, making sense for example of word order in a sentence. The idea of deep neural networks was interesting but not deemed practical initially due to extreme cost of computation. A traditional machine learning algorithm already needs fast computers, so how can you find a computer able to process 10, 12, or 30 layers? Graphic Processing Unit cards, such as NVIDIA&amp;rsquo;s, brought however realistic training times. A gaming laptop with Torch or caffe libraries can do successful image analysis, natural language processing or beat champions in the case of Google&amp;rsquo;s AlphaGo.&lt;/p&gt;
-
-&lt;p&gt;Crafting a successful a machine learning algorithm is not trivial. Deep neural networks are even more complex:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;There are libraries like TensorFlow which makes the job easier but it still takes a PhD or at least a Master of sciences to craft an innovative algorithm, with prerequisites in computer science and statistics.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;When we have amazing image and video processing, Natural Language Processing is still in its infancy. Lack of structured data is one of the issues.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;If deep neural networks can in theory compute any function, you need diverse, extensive, and well annotated data in a field where user requests are repetitive. This is seldom the case.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;It is impossible with current technology to process different requests, even with deep learning. For example, you cannot craft a bot good at pizza delivery requests that would also program your music playlist. This is the main reason Facebook is opening its Messenger Platform so third-parties can develop expertise in niches.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Yet a machine learning project is not guaranteed success. You &lt;em&gt;have to accept potential failure&lt;/em&gt;, when most people think you can get a technology project succeed by throwing money and time at it.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;For example, I can get the following with data pulled from Yelp. However it&amp;rsquo;s as much work as developing a web app to get satisfying responses from the bot.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://studiozenkai.com/images/italian.png&#34; alt=&#34;Places recommendation&#34; title=&#34;[Places recommendation]&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Yet, machine learning means a focus on &amp;ldquo;hard&amp;rdquo; science, and that&amp;rsquo;s something I celebrate. It is also the promise of wider technology accessibility.&lt;/p&gt;
-
-&lt;h2 id=&#34;business-use-case&#34;&gt;Business use case&lt;/h2&gt;
-
-&lt;p&gt;If a convolutional neural network can beat go world champions, you can imagine simple and practical cases. With enough training data and smart feature selection, you could have:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://studiozenkai.com/images/bot-dentist.jpg&#34; alt=&#34;Dentist&#34; title=&#34;[bot dentist]&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This bot would check in an availability calendar, and provide triage for new customers. Success would depend on good tagging of customer interactions and offering good options that leaves little room for ambiguity.&lt;/p&gt;
-
-&lt;p&gt;A human assistant would provide better service with good empathy, but that person would not be available at 3AM when the tooth hurts!&lt;/p&gt;
-
-&lt;p&gt;In the same way, you could rent a car or an AirBnb. The bot can go into the database of products and match with availability calendars.&lt;/p&gt;
-
-&lt;p&gt;If you &lt;a href=&#34;https://github.com/heri/JuliaBot&#34;&gt;add background processes&lt;/a&gt;, you can also design bots searching for optimal prices and would alert users when prices go below a certain treshold. This is where you can imagine use cases not covered by mobile or web apps. Set reminders, check automatically on loved ones, work out project details with team members&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;The icing on the cake would be crafting messages that would be personal, emotional, friendly and at times more talkative to build rapport, and why not, have users enjoy the service [2]. Tools like &lt;a href=&#34;https://smooch.io/&#34;&gt;smooch.io&lt;/a&gt; can help a seamless transition between bot replies and actual responses by a human, without customers knowing it.&lt;/p&gt;
-
-&lt;p&gt;This is what I am currently researching. There is already a framework to process user requests and go into a calendar and a SQL database. The proof-of-concept can also access third-party REST APIs. If you have a database of customer communications annotated with appropriate responses, we can work together to see how bots can automate and increase customer outreach.&lt;/p&gt;
-
-&lt;h3 id=&#34;notes&#34;&gt;Notes&lt;/h3&gt;
-
-&lt;p&gt;[1] A good introduction to Machine Learning is Andrew Ng&amp;rsquo;s course &lt;a href=&#34;https://www.coursera.org/learn/machine-learning/home/info?source=phoenixCdp2016AbTest&#34;&gt;https://www.coursera.org/learn/machine-learning/home/info?source=phoenixCdp2016AbTest&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;[2] The movie &amp;ldquo;Her&amp;rdquo; portrays well a bot with good rapport. For practical examples, Microsoft is already offering a bot in China &lt;a href=&#34;http://www.geekwire.com/2015/people-china-love-microsofts-xiaoice-virtual-companion-says-artificial-intelligence/&#34;&gt;http://www.geekwire.com/2015/people-china-love-microsofts-xiaoice-virtual-companion-says-artificial-intelligence/&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -381,89 +126,6 @@
 &lt;p&gt;This guide is for those people in arts, marketing and many other fields who are now looking for the best way to learn how to code in six months. Since time is limited, it is focused on producing practical code instead of abstract topics such as data structures or compiling. I assume however that it is just the beginning of a journey and you will have time later on to pick on formal learning.&lt;/p&gt;
 
 &lt;h2 id=&#34;building-a-learning-environment&#34;&gt;Building a learning environment&lt;/h2&gt;
-
-&lt;p&gt;Any laptop or desktop is good to learn. However, it cannot be a phone or a tablet (no programming on iPhones folks!). It doesn’t matter if it’s Mac, PC or Linux as long as you have admin access and you are able to install anything you need.&lt;/p&gt;
-
-&lt;h3 id=&#34;interruptions-kill-productivity&#34;&gt;Interruptions kill productivity&lt;/h3&gt;
-
-&lt;p&gt;Learning programming is in a quiet environment, with little to no interruptions. Set aside at the very minimum two hours per day, ideally a good five hours.&lt;/p&gt;
-
-&lt;p&gt;Self-taught programming in 2015 is done with a relatively decent Internet connection. It means you can download a 50MB package without interruptions.&lt;/p&gt;
-
-&lt;h3 id=&#34;learn-from-the-best&#34;&gt;Learn from the best&lt;/h3&gt;
-
-&lt;p&gt;Contrary to perceptions, programming is best with social feedback, so make sure that you have a mentor who can give input and review your code. The stronger the feedback, the better!&lt;/p&gt;
-
-&lt;p&gt;You can also follow programmer’s blogs and read as part of your daily routine. Most don’t showcase code and instead explain how they design software or solve critical bugs, which is essential for your culture. I read Coding Horror, Daily WTF, the Netflix blog, igvita, Facebook Engineering, the Twitter engineering blog and a few others.&lt;/p&gt;
-
-&lt;h2 id=&#34;online-resources&#34;&gt;Online resources&lt;/h2&gt;
-
-&lt;p&gt;Currently, the best resources are not books but online resources.&lt;/p&gt;
-
-&lt;p&gt;Without any background in programming, you can start with the free resource Code Academy. It’s important to follow each lesson and take your time.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://cdn-images-1.medium.com/max/2000/1*6A2ZnlanQElatuc-pHzyXA.png&#34; alt=&#34;CodeAcademy&#34; title=&#34;[Code Academy]&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I love CodeAcademy’s interactive tools. You can try new code directly in the browserYour goal should be on building a simple static site (such as this) in 2 or 3 weeks after your codeacademy course. I recommend you put your own online resume, with a few pictures, and links to your work. Pick a code editor (take a look at Atom), a graphic program, and you have the tools to ship your first site.&lt;/p&gt;
-
-&lt;p&gt;Up next are either &lt;a href=&#34;http://CodeSchool.com&#34;&gt;CodeSchool&lt;/a&gt;, TeamTreeHouse or CodeAvengers. I especially like the guys at CodeSchool with their awesome service and amazing teachers, but others are also worth a look. At the end of the day, it’s important to choose one and stick to it. I would recommend at this point to pick one that has the best javascript course. Look at meteor or node-based frameworks.&lt;/p&gt;
-
-&lt;p&gt;An additional course to look at is Google’s python course for beginners. Schedule a week to learn about a SQL database, such as PostgreSQL.&lt;/p&gt;
-
-&lt;p&gt;Three months later, your goal should be on building a simple to-do list site after the first javascript course, and be able to deploy it on the Internet.&lt;/p&gt;
-
-&lt;h2 id=&#34;peer-feedback&#34;&gt;Peer Feedback&lt;/h2&gt;
-
-&lt;p&gt;In Montréal, there are social meetups such as Ladies Learning code. From the beginning, it’s good to attend those meetups and see what others are doing. You can get encouraged or perhaps guided in a better direction. In other cities, you can look at meetup or eventbrite to look what is best for you.&lt;/p&gt;
-
-&lt;p&gt;Social feedback can be also in forms of freelancing. When/If you have delivered your first site, you can publish offers on Craigslist or your local small ads site on making basic HTML sites for small businesses. Having a customer will train you in project management, learn the value of code, how to deal with pressure, ship code that you have built from scratch, as well as being compensated. Of course, you will not be able to charge a lot of money but you can charge from $80 to $200 to do a simple business site with a handful of pages.&lt;/p&gt;
-
-&lt;p&gt;Hackathons are a good experience. They are single day or whole weekend experiences where you are challenged to design, develop and launch an app. After 3 months on your path, it’s a great challenge to sign up as a developer, and also a good way to meet other programmers. Hackathons are exponentially more difficult than building simple HTML sites but so rewarding!&lt;/p&gt;
-
-&lt;p&gt;If the timing is right and if your progress is fast, you can apply to go to Google summer of Code, especially if you have managed to develop one or two innovative projects in hackathons.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://cdn-images-1.medium.com/max/2000/1*dh4aKkidVcYevooiZMvtVg.jpeg&#34; alt=&#34;Hackathons&#34; title=&#34;[Hackathons]&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;You can also start your social programming “life” online. StackOverflow is a good place to start. When stuck on CodeSchool, you can either search the site (recommended) or ask a question and get answers from the community. A few will laugh at your lack of experience but it’s important to persist.&lt;/p&gt;
-
-&lt;p&gt;Github is another major site. Start an account, browse repositories, try out frameworks, open issues and see if you can contribute. Many projects like Apache, node, Angular are also always looking for contributors.&lt;/p&gt;
-
-&lt;p&gt;The more you contribute publicly to Github, the higher the chances to be recruited!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://cdn-images-1.medium.com/max/1600/1*npcLRTMDVW2qx6PMMGMxYg.png&#34; alt=&#34;This is the account of a zealous although imaginary programmer.&#34; title=&#34;[Github]&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;internships&#34;&gt;Internships&lt;/h2&gt;
-
-&lt;p&gt;Due to the lack of programmers, many small businesses are looking for programming hands to help in projects. You can use the programming experience you have gathered both in freelancing and in hackathons to land a 2 months internship in either front-end development. It can be in a web agency or a new startup.&lt;/p&gt;
-
-&lt;p&gt;You will be challenged in your lack of experience. You will wonder how to solve specific problems. But don’t worry. Experienced programmers also have the same issues, although on another level. Make sure to learn, ask peers, find answers on programmer forums, and deliver what you are asked.&lt;/p&gt;
-
-&lt;p&gt;When following your internship, make sure to stay involved in social programming meetups. You can also start contributing to open source projects and start focusing on a specific language you like.&lt;/p&gt;
-
-&lt;h2 id=&#34;a-first-job&#34;&gt;A first job?&lt;/h2&gt;
-
-&lt;p&gt;Congratulations! Nothing is more satisfying than a first well-paid job in programming. Due to your lack of university degree in Computer science or Engineering, you can forget banks, finance institutions, large companies and focus instead on small businesses. They are more forgiving. Startups especially are more focused on your immediate talent and practically none of them are asking for a formal degree.&lt;/p&gt;
-
-&lt;h2 id=&#34;what-is-your-goal&#34;&gt;What is your goal?&lt;/h2&gt;
-
-&lt;p&gt;“Coding”. “Programming”. “Developing”. or “Hacking”&lt;/p&gt;
-
-&lt;p&gt;Then you hear words such as “Front-end”. “MySQL”. “node.js”. “Objective-C”. “Selenium”. “cloud server”. It seems programming has more trends than the fashion world in Milan or NYC. What’s up with that?&lt;/p&gt;
-
-&lt;p&gt;It is clear there are always new technologies. As such, it’s more important to learn fundamentals and learning how to learn, than learning a specific set of technologies.&lt;/p&gt;
-
-&lt;p&gt;As such, I recommend starting a blog and always write about the following:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Learn how to debug, i.e. how to find errors and test software,&lt;/li&gt;
-&lt;li&gt;Learn how to optimize performance, beginning by understanding performance issues, and learning where you can gain performance boosts&lt;/li&gt;
-&lt;li&gt;Learn how to design software, design algorithms and data structures&lt;/li&gt;
-&lt;li&gt;Learn how to work with other programmers, especially in the areas of code source control, documentation, unit testing&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;A blog will also help you “digest” what you have learnt in the past weeks, as well as establish your online brand as a programmer.&lt;/p&gt;
-
-&lt;p&gt;If you have comments or other resources, feel free to leave a note!&lt;/p&gt;
 </description>
     </item>
     
@@ -489,228 +151,6 @@
 &lt;li&gt;&lt;p&gt;Conduite de projet sur les technologies Ruby, Javascript, Lua, et plateformes mobiles; utilisation de base de données MySQL, Postgresql, ou redis, mongodb, ElasticSearch, Solr&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Audit de code, de qualité et de performance des applications&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Automatisation des tests et recettes&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Intégration et interfaçage&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Mise en production&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Support et maintenance évolutive et corrective&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Nous développons de façon &lt;em&gt;lean&lt;/em&gt; et rapide, ce qui veut dire que vous obtenez votre produit rapidement et à un coût compétitif, le tout à un standard de qualité élevé.&lt;/p&gt;
-
-&lt;p&gt;Développer une plateforme d&amp;rsquo;excellence démarre par un processus bien conçu. Ce document ou &lt;em&gt;Playbook&lt;/em&gt; décrit le processus utilisé pour tous nos projets, que ce soit les meilleurs pratiques, astuces et règles que nous avons établis au fil des années. Nous avons inclus un exemple de projet (DAMAVA) qui vous montre le processus en action. Nous encourageons les clients nouveaux et potentiels à lire ce document pour qu&amp;rsquo;ils savent à quoi s&amp;rsquo;attendre en travaillant avec nous. Ceci est un document vivant qui est régulièrement mis à jour par notre équipe à fur et à mesure que nous apprenons à mieux faire les choses, donc attendez-vous à des modifications en tout temps.&lt;/p&gt;
-
-&lt;h2 id=&#34;le-premier-contact&#34;&gt;Le premier contact&lt;/h2&gt;
-
-&lt;p&gt;La plupart de nos clients sont introduits par nos clients existants, qui nous trouvent par notre implication dans la communauté startup, via les publications en ligne ou via Google. Après avoir une recherche rapide, ils entrent en contact en remplissant un formulaire sur le site ou bien en nous envoyant un courriel.&lt;/p&gt;
-
-&lt;p&gt;Après avoir reçu la première requête, nous planifions une première discussion pour discuter du projet en détail:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Est-ce que votre projet cadre avec nos compétences techniques (platforme et développement sur mesure, applications web, applications mobile, recherche et développement, intégration d&amp;rsquo;APIs externe, design) ?&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Avez-vous un budget suffisant en accord avec l&amp;rsquo;ambition du projet?&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Et-ce que votre calendrier cadre avec nos disponibilités?&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Après avoir confirmé qu&amp;rsquo;il y a une collaboration possible, nous parlerons plus en détail de notre culture et de notre philosophie sur le développement de technologie. Nous pouvons aussi aller en détail par rapport aux coûts et délais.&lt;/p&gt;
-
-&lt;p&gt;Si les deux partis s&amp;rsquo;entendent, nous signons normalement un accord de non-divilguation (ou NDA) pour vous assurer que votre investissement sera protégé, et nous pouvons alors démarrer le processus de développement et le processus de découverte.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Exemple: Dans le projet DAMAVA, l&amp;rsquo;instigateur du projet a été introduit par la responsable économique de la Ville de Montréal, avec qui nous avons eu de bonnes collaborations. Après avoir discuté de plusieurs projets potentiels, nous nous sommes mis d&amp;rsquo;accord pour développer une nouvelle plateforme mettant en relation des aidants naturels et des personnes agées, à travers le Canada. Les compétences d&amp;rsquo;aidants naturels, leur calendrier de disponibilité, leur placement géographique, une messagerie par email et SMS, ainsi qu&amp;rsquo;une plateforme de paiement électronique devront être développés.&lt;/em&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;la-phase-de-découverte&#34;&gt;La phase de découverte&lt;/h2&gt;
-
-&lt;p&gt;Développer une plateforme sur mesure est en soi complexe. Même les applications &amp;ldquo;simples&amp;rdquo; ont des couches de complexité cachées qui doivent être analysées et répertoriées. Cette phase de découverte permet à notre équipe d&amp;rsquo;investir le temps nécessaire pour comprendre votre application de A à Z, et d&amp;rsquo;aller à travers chaque fonctionnalité requise, user story, écran, etc. ce qui nous permet en retour d&amp;rsquo;estimer de manière plus précise le temps requis et le coût.&lt;/p&gt;
-
-&lt;p&gt;De manière générale, la phase de découverte inclus:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;la description des différents types d&amp;rsquo;utilisateur (utilisateur courant, utilisateur secondaire, administrateur, staff, partenaire commercial etc.),&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;la description des &amp;ldquo;user stories&amp;rdquo; pour les différents types d&amp;rsquo;utilisateur,&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;la description des fonctionnalités majeures de l&amp;rsquo;application,&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;le design de wireframe pour les pages principales de l&amp;rsquo;application,&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;le choix des technologies pour le front-end, le back-end, serveur etc.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;ingénierie de la plateforme, par rapport au traffic planifié, nombre de commandes et besoins utilisateurs,&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;le calendrier détaillé de chaque section majeur de l&amp;rsquo;application et chaque étape du processus de développement de la plateforme,&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;l&amp;rsquo;estimation détaillé de chaque section majeure de l&amp;rsquo;application et chaque étape du processus.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;À la fin du processus de découverte, nous vous fournirons un document détaillé qui décrit tous les éléments ci-dessus.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Exemple: Après notre première rencontre, nous avons planifié quelques rencontres pour avoir une meilleure compréhension de la plateforme voulue. L&amp;rsquo;idée semblait très simple, mais nous savions qu&amp;rsquo;il y avait une complexité cachée que nous devions découvrir durant le processus de découverte. Notamment, notre partenaire avait pensé aux besoins du client, mais n&amp;rsquo;avait pas pensé à l&amp;rsquo;interface d&amp;rsquo;administration nécessaire pour gérer les clients et données ou un interface utilisateur pour ceux qui commandent. D&amp;rsquo;autres questions sont aussi apparus: que se passe-t-il après une commande? comment sont servis les pages statiques? etc.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Aperçu de l&amp;rsquo;analyse écrite après la phase de découverte:
-&lt;img src=&#34;http://studiozenkai.com/images/discovery.png&#34; alt=&#34;Conclusion découverte DAMAVA&#34; title=&#34;[Conclusion découverte DAMAVA&#34; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;la-phase-de-design&#34;&gt;La phase de design&lt;/h1&gt;
-
-&lt;p&gt;Les meilleures plateformes ont un design excellent, tant dans la forme que dans le fond.  Personne n&amp;rsquo;utilisera l&amp;rsquo;application si elle est &lt;em&gt;laide&lt;/em&gt; ou &lt;em&gt;ardue&lt;/em&gt; à naviguer. Tous vos efforts seront alors vains même si vous avez le concept le plus extraordinaire du monde.&lt;/p&gt;
-
-&lt;p&gt;Nous tenons une importance cruciale dans le succès de votre application et de votre compagnie. Avoir une plateforme populaire est aussi important pour vous que ce l&amp;rsquo;est pour nous, alors nous plaçons une haute priorité pour avoir le bon design, pour que vous ayez une application belle et fonctionnelle.&lt;/p&gt;
-
-&lt;p&gt;Il arrive aussi que nous travaillons avec des partenaires qui ont déjà un design. Dans ce cas, nous l&amp;rsquo;examinerons en détail et le discuterons avec vous.&lt;/p&gt;
-
-&lt;p&gt;Généralement, notre processus de design inclus:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;Développement de wireframes de chaque page de l&amp;rsquo;application&lt;/em&gt; : Les wireframes sont des sketches en noir et blanc qui montrent la mise en page. On peut voir la structure générale des différents écrans et où les boutons et contenu iront. Ils peuvent aussi décrire les interactions utilisateurs, comme drag &amp;amp; drop, clic, swipe, single tap etc.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;em&gt;Construction du sitemap&lt;/em&gt; : Quand tous les wireframes seront terminés, nous faisons un simple sitemap qui vous montre comment les pages et les sections de l&amp;rsquo;app vont interagir entre eux. Par exemple, cela va montrer quelle page sera chargée quand l&amp;rsquo;utilisateur clique sur un bouton et quand ils finissent de remplir un formulaire.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;em&gt;Interface graphique et Palette de couleurs&lt;/em&gt; Ensuite nous décidons du look de l&amp;rsquo;application. Durant cette étape seront choisis la typographie, la palette de couleurs, la librairie d&amp;rsquo;icônes etc. Tout sera mis ensemble dans un guide de style.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;em&gt;Prototype interactif&lt;/em&gt; : Finalement nous important tous les mockups dans Invision App (ou une application similaire), créant ainsi un prototype interactif qui a le &amp;ldquo;look &amp;amp; feel&amp;rdquo; de l&amp;rsquo;application finale.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;em&gt;Exemple: Pour DAMAVA, un prototype interactif couvrant les préférences utilisateur, et le processus de commande était disponible. Ce prototype était alors la référence pour tout future discussion sur les travaux à rendre&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Voici le prototype interactif pour DAMAVA:
-&lt;img src=&#34;http://studiozenkai.com/images/prototype.png&#34; alt=&#34;Prototype DAMAVA&#34; title=&#34;[Prototype DAMAVA&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;la-phase-de-développement&#34;&gt;La phase de développement&lt;/h2&gt;
-
-&lt;p&gt;La programmation est la partie la plus complexe et qui nécessite le plus de temps dans le développement logiciel. Nous commençons seulement à programmer quand la phase de découverte et de design sont finis. Ceci assure que votre budget ne sera pas perdu dans le développement de fonctionnalités et des écrans qui vont nécessiter des révisions majeurs, ou pire, qui devront être effaçés et complètement refaits. C&amp;rsquo;est mieux de faire ces erreurs dans la phase moins coûteuse de design, quand on peut changer la plateforme rapidement avec juste quelques clics de souris. Comme mentionné ci-dessus, nous ne pouvons prendre un projet sans la phase de découverte et de design (ne pas suivre ces étapes assure l&amp;rsquo;échec du projet), et nous préférons refuser une collaboration plutôt que de se mettre d&amp;rsquo;accord sur un processus que nous savons voués à l&amp;rsquo;échec.&lt;/p&gt;
-
-&lt;p&gt;Dans la plupart des projets, la phase de développement inclus:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;Mettre en place l&amp;rsquo;environnement de développement&lt;/em&gt; Nous démarrons en mettant en place un environnement de développement, aussi bien sur nos machines que sur nos serveurs qui vous seront accessible pour voir les progrès. Cela implique l&amp;rsquo;installation de logiciels et de librairies.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;em&gt;Développer l&amp;rsquo;architecture et la base de données&lt;/em&gt; Ceci inclus la structure de la base de données selon les outils choisis, le choix d&amp;rsquo;authentification utilisateur, création de compte, relations entre données. À cette étape, nous établissons les fondations de la plateforme.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;em&gt;Développement des fonctionnalités&lt;/em&gt; Nous prenons un à un les &amp;ldquo;user stories&amp;rdquo; répertoriés surant la phase de découverte et nous mettons dans zenhub, notre système de gestion de projet. Nous assignons ensuite chaque fonctionnalité à un développeur, estimons le temps requis, et rajoutons les informations pour chaque fonctionnalité, ainsi que les tests nécessaires pour la validité. À fur et à mesure que les développeurs réalisent chaque fonctionnalité, nous mettons à jour zenhub, et la fonctionnalité est alors sous la responsabilité de l&amp;rsquo;assurance qualité.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;em&gt;Assurance Qualité&lt;/em&gt; À fur et à mesure que les fonctionnalités sont réalisés, l&amp;rsquo;assurance qualité passe en revue le code ainsi que les tests pour voir s&amp;rsquo;assurer de la qualité et voir s&amp;rsquo;il y a des bogues. En plus, nous mettons en place un système de tests automatisés qui vous assurent la fonctionnalité de l&amp;rsquo;application. Nous suivons plusieurs principes qui ensemble, vous assure une couverture qualité des fonctionnalités de haut niveau du système ainsi que la qualité des différents sous-modules, aussi petits soit-ils. Avec un système automatisé, votre compagnie sera capable de développer, optimiser et maintenir le code, sans vous soucier des conséquences innattendus que la mise à jour de code peut entraîner.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;em&gt;La livraison&lt;/em&gt; Fonctionnalité par fonctionnalité, l&amp;rsquo;application est développé. Vous pouvez vérifiez à tout moment l&amp;rsquo;avancement du projet en allant sur zenhub ou bien en allant sur les serveurs de développement, jusqu&amp;rsquo;au jour où l&amp;rsquo;application sera prête pour être lancé.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;em&gt;Exemple: Dès que le processus de design et de découverte de DAMAVA a été finalisé, nous étions prêts pour démarrer le développement. Nous avons chargé tous les &amp;ldquo;user stories&amp;rdquo; créé durant la phase de découverte et design dans zenhub et nos développeurs étaient prêts. Puisque le projet a été bien défini durant les deux premières phases, la phase de développement s&amp;rsquo;est bien passé, avec très peu de surprises, et notre équipe a été capable de mettre en ligne la première version de l&amp;rsquo;application en 2 mois et demie.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://studiozenkai.com/images/digitalocean.png&#34; alt=&#34;Nous utilisons DigitalOcean pour héberger des instances flexibles et idéales pour le développement&#34; title=&#34;Nous utilisons DigitalOcean pour héberger des instances flexibles et idéales pour le développement&#34; /&gt;
-&lt;img src=&#34;http://studiozenkai.com/images/zenhub.png&#34; alt=&#34;Gestion des fonctionnalités à developper avec Zenhub&#34; title=&#34;Gestion des fonctionnalités à developper avec Zenhub&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;la-phase-de-beta-testing&#34;&gt;La phase de &amp;ldquo;Beta Testing&amp;rdquo;&lt;/h2&gt;
-
-&lt;p&gt;C&amp;rsquo;est le temps de voir comment votre application est reçue dans la &amp;ldquo;vrai vie&amp;rdquo;. La plateforme la mieux programmée aura toujours des bogues, il est donc impératif que votre application soit testée, utilisée, revue par des utilisateurs potentiels avant le lancement officiel. Les beta-testeurs incluent souvent les vrais utilisateurs de la plateforme, qui vont l&amp;rsquo;utiliser dans les mêmes conditions et la même finalité que la plateforme finale.&lt;/p&gt;
-
-&lt;p&gt;Il arrive que le processus de beta soit découpé en un beta privé, où des utilisateurs spécifiques sont invités pour tester l&amp;rsquo;application, et un beta publique, où n&amp;rsquo;importe qui peut s&amp;rsquo;identifier et &amp;ldquo;jouer&amp;rdquo; avec une version beta. Ce processus peut indéniablement souligner des bogues, ainsi que mettre en avant des fonctionnalités critiques manquantes qui devront être analysés et travaillés avant le lancement final.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Exemple: dès qu&amp;rsquo;une version utilisable a été développé, toute l&amp;rsquo;équipe a été invité pour essayer la plateforme et essayer d&amp;rsquo;y trouver les limites. Ceci a mis avant des bogues graphiques, des bogues de logique, des bogues d&amp;rsquo;exception ainsi qu&amp;rsquo;un design à travailler pour le navigateur Firefox et Microsoft Edge. Ensuite le client a été invité à tester l&amp;rsquo;application et nous faire en détail de leur commentaire. Dès la fin de cette étape, des aidants naturels de la région de Montréal ont été invités à tester l&amp;rsquo;application sur le terrain. Il en est sortie une liste de feedback positifs, les utilisateurs beta ayant trouvé l&amp;rsquo;application facile à utiliser et naviguer.&lt;/em&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;la-phase-de-lancement&#34;&gt;La phase de lancement&lt;/h2&gt;
-
-&lt;p&gt;Après de nombreux mois de travail ardu, l&amp;rsquo;application est lancé! C&amp;rsquo;est le temps de fêter et de se féliciter! Il y a eu des moments difficiles et longs, mais c&amp;rsquo;est le but. Comme l&amp;rsquo;a dit John Kennedy : &amp;ldquo;Nous avons choisi d&amp;rsquo;aller sur la lune, non parce que c&amp;rsquo;était facile, mais parce que c&amp;rsquo;était difficile&amp;rdquo;&lt;/p&gt;
-
-&lt;h2 id=&#34;maintenance-un-accompagnement-au-delà-du-lancement-du-produit&#34;&gt;Maintenance : Un accompagnement au delà du lancement du produit&lt;/h2&gt;
-
-&lt;p&gt;Comme tout système complexe, les plateformes requiert une maintenance. Quand vous achetez une nouvelle voiture tout fonctionne parfaitement. Mais avec le temps, si vous ne changez pas l&amp;rsquo;huile, alors le moteur va à un moment ou un autre se déteriorer et s&amp;rsquo;arrêter de fonctioner. C&amp;rsquo;est la même chose pour tout logiciel. Le jour où votre application est 100% complète n&amp;rsquo;arrivera jamais. Un certain niveau de maintenance est nécessaire, incluant:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;La surveillance des erreurs et résolution des bogues potentiels&lt;/em&gt; Tout plateforme doit être suivie pour tout erreur sur une base constante. À fur et à mesure que des utilisateurs différents sont rajoutés sur le système, et que l&amp;rsquo;application est utilisé de manière différente, plus de bogues ou besoins clients vont être découverts et devront être corrigés. Nous utilisons Airbrake pour la gestion des erreurs, et New Relic pour le suivi de performance.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;em&gt;Gestion des librairies&lt;/em&gt; Les applications mobiles et web modernes sont souvent développées avec des librairies en code ouvert, comme par exemple Ruby on Rails, jQuery, React, Bootstrap, Lapis etc. De plus, des APIs sont souvent intégrés pour utiliser des données externes, solutions de paiement, comptes de médias sociaux etc. Ces dépendances externes vont changer avec le temps : de nouvelles versions vont être publiés, des bogues vont apparaêtre, et les méthodes d&amp;rsquo;intégration vont changer. Par exemple, si vous utilisez Paypal, il se peut que ce fournisseur annonce une toute nouvelle façon de s&amp;rsquo;authentifier, qui invalide alors votre processus de paiement actuel. Pour avoir une application fonctionelle, vous aurez besoin de mettre à jour et maintenir ces dépendances sur une base constante.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;em&gt;Optimisation de performance&lt;/em&gt; À fur et à mesure que votre application devient populaire, la performance sera amoindrie. Les temps de chargement vont s&amp;rsquo;allonger, et la base de données devient moins responsive etc. Cela signifie qu&amp;rsquo;une optimisation continue devra être effectué.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;em&gt;Sécurité&lt;/em&gt; Les criminels recherchent régulièrement à pirater, soutirer de l&amp;rsquo;argent, attaquer votre plateforme, ou utiliser votre plateforme pour des fins illégaux. Cela signifie qu&amp;rsquo;une surveillance continue devra être effectué. Nous offrons différents solutions, selon le type d&amp;rsquo;application.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;em&gt;Exemple: Après la livraison d&amp;rsquo;une application fonctionnelle, un forfait de maintenance incluant l&amp;rsquo;hébérgement, la résolution de bogues, la maintenance logicielle et l&amp;rsquo;optimisation a été offert au client, qui peut donc se concentrer sur les besoins d&amp;rsquo;affaire.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://studiozenkai.com/images/airbrake.png&#34; alt=&#34;Nous utilisons Airbrake pour le suivi des erreurs&#34; title=&#34;Nous utilisons Airbrake pour le suivi des erreur&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;développement-continuel&#34;&gt;Développement continuel&lt;/h2&gt;
-
-&lt;p&gt;Après que les clients utilisent votre plateforme pour des besoins concrets, vous pouvez vous rendre compte qu&amp;rsquo;ils vous manquent des fonctionnalités. Il se peut aussi que ce soit des fonctionnalités critiques et qui doivent être rajoutés &lt;em&gt;tout de suite&lt;/em&gt;. Il est donc important d&amp;rsquo;avoir un budget de développement continuel. Encore une fois, les meilleurs plateformes sont celles qui sont toujours en développement, et ne sont jamais parfaitement finies.&lt;/p&gt;
-
-&lt;h2 id=&#34;un-projet-et-coût-maîtrisé&#34;&gt;Un projet et coût maîtrisé&lt;/h2&gt;
-
-&lt;p&gt;Comme vous l&amp;rsquo;avez peut-être deviné, la conception d&amp;rsquo;applications sur mesure est un processus complexe qui requiert une collaboration entre des professionnels différents. C&amp;rsquo;est courant d&amp;rsquo;avoir des projets incluant :&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;un gestionnaire de produit qui s&amp;rsquo;assure que la plateforme répond aux besoins clients, interface avec les développeurs, et coordonnne l&amp;rsquo;assurance qualité&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;un designer&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;un développeur front-end&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;un développeur back-end&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Selon la complexité du projet, ce nombre peut être restreint à une équipe de deux personnes, ou à l&amp;rsquo;inverse peut se rajouter un gestionnaire de projet, des développeurs back-end et mobile supplémentaires, et des personnes en assurance qualité.&lt;/p&gt;
-
-&lt;p&gt;Avec notre expérience, nous avons développé le processus de gestion de projet que nous utilisons sur chaque projet. Il est conçu pour augmenter la productivité et maximiser le retour sur votre investissement, et aussi pour vous permettre d&amp;rsquo;être au courant du projet. Vous pouvez vous attendre à:&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Un seul point de contact&lt;/em&gt;. La dernière chose que nous voulons est que chaque personne de votre équipe et chaque personne de notre équipe passent leur temps à communiquer et parler de la même chose. Pour rémédier à cela, c&amp;rsquo;est mieux d&amp;rsquo;avoir un seul point de contact de votre coté, et un seul de notre coté, à travers lequel toutes les échanges sont faites.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Une rencontre hebdomadaire&lt;/em&gt; Vous êtes impatient d&amp;rsquo;avoir votre application et vous voulez la publier. Tous les jours, vous voulez donc savoir:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Qu&amp;rsquo;est ce qui a été fait aujourd&amp;rsquo;hui?&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Qu&amp;rsquo;est ce qui a été réalisé hier?&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Que sera fait demain?&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Puis-je voir?&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Quand est-ce que ce sera fini?&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Nous comprenons. Nous sommes aussi impatients aussi. Mais voici le bémol. Toutes ces discussions, appels et emails prennent beaucoup de notre temps, distraient l&amp;rsquo;équipe, diminue votre budget, et aussi rendent les choses plus lentes et non plus rapides.&lt;/p&gt;
-
-&lt;p&gt;Nous voulons être respectueux de votre temps et de votre budget et nous voulons nous assurer que vous restez maître du projet. Ainsi, chaque lundi nous aurons des rencontres de vive voix ou en vidéo avec vous et votre équipe, où nous allons en revue ce qui a été réalisée la semaine précédente et ce qui est planifié pour être complété la semaine courante. De cette façon, vous savez toujours ce qui se passe et où en est le projet, et nous vous répondrons sur une base hebdomadaire.&lt;/p&gt;
-
-&lt;p&gt;Ceci signifie aussi que les emails, appels téléphoniques, messages textes, et chats devront être évités en dehors des rencontres hebdomadaires du lundi. Bien sûr, il y aura toujours des développement critiques qui engendreront des exceptions à cette règle, mais de façon régulière, nous préférons suivre ce plan pour que le projet avance comme prévu.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Démonstration&lt;/em&gt; Dans ces rencontres, une partie du temps sera réservée à vous montrer le travail réalisé jusqu&amp;rsquo;à présent. Le travail reste disponible sur les serveurs de développement.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Outils de gestion de projet&lt;/em&gt;. Nous utilisons une panoplie d&amp;rsquo;outils pour la gestion de projet pour améliorer notre vitesse et qualité. Voici les outils les plus utilisés:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Zenhub pour le suivi de développement, collaboration&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Skype/Google Hangout pour les rencontres vidéos&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Slack pour chat&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Invision App pour visionner les écrans&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Google Docs pour le travail sur Excel, Word, Powerpoint&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Harvest pour le suivi précis du temps de travail et comptabilité&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;notre-philosophie-de-développement&#34;&gt;Notre philosophie de développement&lt;/h2&gt;
-
-&lt;h3 id=&#34;méthodologie-lean-et-mvp&#34;&gt;Méthodologie Lean et MVP&lt;/h3&gt;
-
-&lt;p&gt;Nous croyons au principe de développement lean&amp;hellip; ce qui signifie tout simplement le développement de la version la plus simple possible d&amp;rsquo;application, aussi appellé MVP ou Produit Minimum Viable. Le MVP inclut seulement le coeur et les fonctionnalités critiques de votre application, et rien d&amp;rsquo;autre. Cette approche est la plus rapide et qui vous rapporte le plus en matière de retour sur investissement, pour que vous puissier obtenir du feedback et apprendre des comportements utilisateurs &lt;em&gt;AVANT&lt;/em&gt; de rajouter des fonctionnalités secondaires.&lt;/p&gt;
-
-&lt;p&gt;Excellent, non? Nous comprenons que nos clients veulent contrôler leur coûts, et en même temps proposer le meilleur produit sur le marché. C&amp;rsquo;est pour cela que nous collaborons de près avec nos clients pour s&amp;rsquo;assurer que la vision MVP soit bien consistant auprès de chaque membre de l&amp;rsquo;équipe. Notre expérience a montré que plus l&amp;rsquo;offre initiale est &amp;ldquo;lean&amp;rdquo;, mieux sera le retour sur investissment au long terme.&lt;/p&gt;
-
-&lt;p&gt;Pourquoi cela? Parce que vous n&amp;rsquo;ajouterez pas de fonctionnalités superflues, qui bien que étant une très bonne idée initialement, n&amp;rsquo;était pas finalement celle que vos utilisateurs voulaient. Pourquoi allez-vous dépenser de l&amp;rsquo;argent sur des fonctionnalités qui sera envoyé à la poubelle? Nos clients ont trouvé que c&amp;rsquo;est mieux de démarrer lean et de dépenser de l&amp;rsquo;argent seulement sur des fonctionnalités sur des &lt;em&gt;besoins prouvés&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;改善-faire-le-meilleur-produit-possible&#34;&gt;改善 : Faire le meilleur produit possible&lt;/h3&gt;
-
-&lt;p&gt;Nous tenons à faire le meilleur produit possible chaque jour. Nous améliorons de façon continue nos pratiques, notre efficacité personelle, et tenons à éliminer tout ce qui est superflu. C&amp;rsquo;est la philosophie 改善 ou Kaizen qui fait de nous des artisans du code passionnés.&lt;/p&gt;
-
-&lt;h2 id=&#34;travaillons-ensemble&#34;&gt;Travaillons ensemble !&lt;/h2&gt;
-
-&lt;p&gt;Maintenant que vous comprenez notre processus de développement et notre philosophie génerale et approche pour développer des plateformes réussis, discutons ensemble de votre prochain projet.&lt;/p&gt;
 </description>
     </item>
     
@@ -727,44 +167,6 @@
 &lt;p&gt;Video editing and post-production also benefit greatly from NVIDIA cards with Adobe&amp;rsquo;s Mercury Engine or BMD&amp;rsquo;s Davinci resolve.&lt;/p&gt;
 
 &lt;p&gt;In the case of scientific computing, performance is directly proportional to the number of cuda cores. As long as cpu speed is &amp;gt; 2GHz and you have as much RAM as you have GPU RAM, you are all good.&lt;/p&gt;
-
-&lt;p&gt;As such, this lists current top 10 laptops that have a good price vs cuda cores # ratio.&lt;/p&gt;
-
-&lt;h2 id=&#34;caveats&#34;&gt;Caveats&lt;/h2&gt;
-
-&lt;p&gt;If you are looking for top performance, building a rig with a few &lt;a href=&#34;http://www.amazon.com/NVIDIA-Tesla-Graphic-Card-900-22081-2220-000/dp/B00AA2C1DC/ref=sr_1_2?ie=UTF8&amp;amp;qid=1444533616&amp;amp;sr=8-2&amp;amp;keywords=Nvidia+K20X&#34;&gt;Nvidia K20X&lt;/a&gt; or Nvidia &lt;a href=&#34;http://www.amazon.com/EVGA-GeForce-GAMING-Graphics-12G-P4-2990-KR/dp/B00UVN21RQ/ref=sr_1_1?ie=UTF8&amp;amp;qid=1444534649&amp;amp;sr=8-1&amp;amp;keywords=geforce+titan+x&#34;&gt;TITAN X cards&lt;/a&gt; is more economic with the benefit of having a supercomputer in your hands. It is also possible to just use a cheap gpu-less laptop and upload data to a &amp;ldquo;cloud&amp;rdquo; computing service such as mindori or our friends from fuzzy.io&lt;/p&gt;
-
-&lt;p&gt;On SLI configuration, most neural networks processes will not use the SLI bridge and will just parallelize calculations as if it had 2 discrete gpu devices:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Caffe (UC Berkeley) : &lt;a href=&#34;https://github.com/BVLC/caffe/pull/1148&#34;&gt;parallelization&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Theano (University of Montréal) : &lt;a href=&#34;https://github.com/Theano/Theano/wiki/Using-Multiple-GPUs&#34;&gt;use of SLI&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Torch (NYU). It is difficult to use both gpus at the same time&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;15-inches-and-more&#34;&gt;15 inches and more&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;MSI Laptop GT80 TITAN, GTX 980M SLI, 3072 cuda cores, &lt;a href=&#34;http://www.amazon.com/MSI-18-4-Inch-GT80-TITAN-SLI-253/dp/B00YQNTLGG/ref=sr_1_8?s=pc&amp;amp;ie=UTF8&amp;amp;qid=1444529401&amp;amp;sr=1-8&amp;amp;keywords=gtx+980m+sli&#34;&gt;$3,079.99&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;MSI Laptop GT80 GT80, GTX 970M SLI, 2560 cuda cores, &lt;a href=&#34;http://www.amazon.com/dp/B00YPAZT0C/ref=psdc_565108_t2_B00YQNTLGG&#34;&gt;$2,599.99&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;AORUS X5-CF1, GTX 965M SLI, 2048 cuda cores, &lt;a href=&#34;http://www.amazon.com/X5-CF1-GTX965M-Broadwell-i7-5700HQ-Computer/dp/B0116GST9K/ref=sr_1_3?s=pc&amp;amp;ie=UTF8&amp;amp;qid=1444529775&amp;amp;sr=1-3&amp;amp;keywords=gtx+970m+sli&#34;&gt;$2,299.00&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;AORUS X7V2 X7V2-CF3, GTX 860M SLI w 4GB RAM, 1280 or 2304 cores, &lt;a href=&#34;http://www.amazon.com/AORUS-X7V2-X7V2-CF3-17-3-Inch-Laptop/dp/B00XRI2ABO/ref=sr_1_49?s=pc&amp;amp;ie=UTF8&amp;amp;qid=1444530463&amp;amp;sr=1-49&amp;amp;keywords=GTX+SLI&#34;&gt;1,798.99&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;★ Alienware ALW18-3002sLV, GTX 770M SLI w 3GB RAM, 1920 cuda cores, &lt;a href=&#34;http://www.amazon.com/Alienware-ALW18-3002sLV-i7-4700MQ-Processor-Silver-Anodized/dp/B00FEE7D5W/ref=sr_1_31?s=pc&amp;amp;ie=UTF8&amp;amp;qid=1444530185&amp;amp;sr=1-31&amp;amp;keywords=GTX+SLI&#34;&gt;$1899&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Gigabyte P35Xv3, GTX 980M w 8GB RAM, 1536 cuda cores, &lt;a href=&#34;http://www.amazon.com/Gigabyte-P35Xv3-i7-4710HQ-Notebook-Computer/dp/B00TFWN8IU/ref=sr_1_6?s=pc&amp;amp;ie=UTF8&amp;amp;qid=1444529061&amp;amp;sr=1-6&amp;amp;keywords=gtx+980m&#34;&gt;$1,694.99&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Lenovo IdeaPad Y510, GTX 750M SLI w 2x2GB RAM, 768 cuda cores, &lt;a href=&#34;http://www.amazon.com/Lenovo-IdeaPad-Performance-Gaming-Laptop/dp/B00ZQUY5SW/ref=sr_1_16?s=pc&amp;amp;ie=UTF8&amp;amp;qid=1444530851&amp;amp;sr=1-16&amp;amp;keywords=SLI&amp;amp;refinements=p_n_condition-type%3A2224371011&#34;&gt;$1149&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;MSI GP70 Leopard Pro, GTX 950M w 2GB RAM, 640 cuda cores, &lt;a href=&#34;http://www.amazon.com/Custom-GP70-Leopard-Pro-486-16GB-17-3/dp/B00UM6L2EU/ref=sr_1_6?s=pc&amp;amp;ie=UTF8&amp;amp;qid=1444531200&amp;amp;sr=1-6&amp;amp;keywords=nvidia+980m&amp;amp;refinements=p_n_condition-type%3A2224371011%2Cp_36%3A-170000&#34;&gt;$1079&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;13-inches-laptops&#34;&gt;13 inches laptops&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;★ AORUS X3Plus-CF1, GTX 870M w 6GB RAM, 1344 cuda cores , &lt;a href=&#34;http://www.xoticpc.com/aorus-x3pluscf1-p-7425.html&#34;&gt;$1793&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Alienware 13, GTX 960M w 2GB RAM, 640 cuda cores, &lt;a href=&#34;http://www.xoticpc.com/alienware-960m-fhd-backordered-p-8119.html&#34;&gt;$1357&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;mac&#34;&gt;Mac&lt;/h2&gt;
-
-&lt;p&gt;Apple does not have anymore laptops with nvidia graphic cards. You will need to buy a used macbook pro from 2014 or build a hackintosh, i.e. buy one of the PC laptops above and install mac os x.&lt;/p&gt;
 </description>
     </item>
     

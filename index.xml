@@ -7,57 +7,51 @@
     <language>en-us</language>
     
     
-    <updated>Thu, 18 May 2017 12:35:26 EDT</updated>
+    <updated>Wed, 05 Dec 2018 12:00:00 &#43;0000</updated>
     
     <item>
-      <title>Writing Bold Code</title>
-      <link>http://studiozenkai.com/post/writing-bold-code/</link>
-      <pubDate>Thu, 18 May 2017 12:35:26 EDT</pubDate>
+      <title>Looking again at Microsoft</title>
+      <link>http://studiozenkai.com/post/microsoft/</link>
+      <pubDate>Wed, 05 Dec 2018 12:00:00 &#43;0000</pubDate>
       
-      <guid>http://studiozenkai.com/post/writing-bold-code/</guid>
-      <description>&lt;p&gt;I wrote a &lt;a href=&#34;http://studiozenkai.com/post/ruby-performance-checklist/&#34;&gt;Ruby Performance Checklist&lt;/a&gt;. Since then, I have seen the performance panel at RailsConf. Richard Schneeman (@schneems) then wrote an &lt;a href=&#34;http://schneems.com/2017/05/17/ruby-backend-performance-getting-started-guide/&#34;&gt;article on back-end performance&lt;/a&gt;, which starts by memory profiling tools like &lt;code&gt;scout&lt;/code&gt; or &lt;code&gt;rack-mini-profiler&lt;/code&gt;.&lt;/p&gt;
+      <guid>http://studiozenkai.com/post/microsoft/</guid>
+      <description>&lt;p&gt;The natural cycle of companies is to innovate. The flame dies down, then it fights again to innovate.&lt;/p&gt;
 
-&lt;p&gt;I like his article. My checklist started by Ruby code complexity. If you refactor well your code and make it simpler, it is actually the same strategy as advised by @schneems.&lt;/p&gt;
+&lt;p&gt;Microsoft is one of those. Win 3.1 was revolutionary, and so was Win 95. With Win 3.1, you could point and click to start programs. With Windows 95, you could install games with a nice GUI instead of typing arduous commands in MS-DOS. No more failures at the video setup or having to find a driver file for your sound card.&lt;/p&gt;
 
-&lt;p&gt;This begs the question: why do we always always discuss Ruby performance?&lt;/p&gt;
+&lt;p&gt;Somewhere along the way, Microsoft went greedy. Instead of optimizing for good products, the mega corporation optimized for dollars. It sued any organization that threaten its dominant position. Innovation was adding recycled buttons and rows in Microsoft Office. This was good for shareholders but made everyone’s life more complex.&lt;/p&gt;
 
-&lt;p&gt;A quick answer is that Ruby is slow and takes too much memory.&lt;/p&gt;
+&lt;p&gt;At that time I switched to an Apple iBook. The white plastic made it look like a toy, but it “just worked”.&lt;/p&gt;
 
-&lt;p&gt;This is false. Ruby is as fast as many other languages, like Python or Erlang. Methods like &lt;code&gt;sort&lt;/code&gt; or &lt;code&gt;select&lt;/code&gt; are in C and are &lt;em&gt;very fast&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;I tried &lt;a href=&#34;https://code.visualstudio.com&#34;&gt;Visual Studio Code&lt;/a&gt; recently. To my surprise, it is a very well built piece of software. I remember Microsoft Visual Studio in engineering school. You needed to be “corporate” to go past the licensing pages, then feel out of place if you didn’t read 500 pages of C#. My initial computer science dreams died there.&lt;/p&gt;
 
-&lt;p&gt;It also possible to write a program in C that&amp;rsquo;s slower than Ruby for the same purpose. See &lt;a href=&#34;http://rubyquiz.com/quiz44.html&#34;&gt;here&lt;/a&gt; how a simple Ruby solution is better than another C implementation. As mentioned in the previous article, there are also frameworks like roda which are faster than nodejs or go frameworks.&lt;/p&gt;
+&lt;p&gt;I am happy to report VS Code is lightweight and lets you work right away. I have been using it for more than 18 months and have yet to find an issue. It just works. Previous Microsoft products could do everything and nothing. VS Code took courageous design choices so it performs well in the few things it&amp;rsquo;s designed to do.&lt;/p&gt;
 
-&lt;p&gt;I believe the main reason Ruby apps, and especially Rails apps, are slower are because most of them are unecessarily complex and also naively implement features, instead of being economical.&lt;/p&gt;
+&lt;p&gt;Typically, I have 3 to 5 workspaces open at the same time. A workspace has at least two folders, each folder representing an application. That is tens of thousands of javascript, ruby, python, shell, css/html files. I can search and replace a pattern in a 440MB log file, and it will not crash.&lt;/p&gt;
 
-&lt;p&gt;DHH for instance advises to create as many controllers as possible. You might get only one action per file, and get &amp;gt;100 controller files. This other &lt;a href=&#34;https://www.youtube.com/watch?v=52qChRS4M0Y&#34;&gt;keynote by Andrew Hao&lt;/a&gt; tells how he designs so-called &amp;ldquo;beautiful systems&amp;rdquo; by separating files into different namespaces. He continues and adds different initializers, adapters and layers. Are we done yet? Probably not, because having different layers will increase the need for security mechanisms. Andrew Hao will probably advise you to get another AWS instance and pay more developers, like DHH does.&lt;/p&gt;
+&lt;p&gt;Atom.io is a similar code editor from  Github. It also uses Electron. But where VS Code shines, Atom.io chokes up on large javascript files (&amp;gt;1Mb). I am not sure if Atom.io tries to execute the javascript or if it has a weak rendering engine. It is “OK” for editing text files or quick coding, but unproductive for a large project.&lt;/p&gt;
 
-&lt;p&gt;These are all expensive. Writing yet another method, called only once, is expensive. Adding another instance variable instead of using the existing is expensive. Callbacks &amp;amp; middleware are expensive. All the kitchen sink is expensive. And if you have a junior programmer in the team who likes to load all users with all comments and posts, because he can do that in one line with Ruby, that&amp;rsquo;s prohibitively expensive. A homepage request might allocate thousands and thousands of objects. I just have the impression that the Ruby (esp. Rails) community attracts people who code like there is no tomorrow.&lt;/p&gt;
+&lt;p&gt;Sublime Text is a nice native code editor. But I prefer VS Code&amp;rsquo;s built-in Github integration, workspaces, and extensions. TextMate, another code editor I used for years, also “just works”, but is dated. Now, I only use VS Code and vim for programming, on a Macbook Pro or a Windows or Linux laptop. It even works on Raspbian!&lt;/p&gt;
 
-&lt;p&gt;This is not specific to Ruby. I can have the same impression when reviewing code Javascript, php or many other languages.&lt;/p&gt;
+&lt;p&gt;VS Code is not an exception. I like the Microsoft Surface hardware line-up. The Surface Book could be a nice Macbook Pro replacement, if Windows had a good Terminal. I haven’t had the chance to try Azure, but I’ve been told it holds up compared to AWS or DigitalOcean, my preferred hosting provider.&lt;/p&gt;
 
-&lt;p&gt;What does all this mean? Practically it&amp;rsquo;s often a mess, because it&amp;rsquo;s too easy to add &amp;ldquo;stuff&amp;rdquo;. We all want to please, add more features, support more formats, add more conditions for edge and bondary cases. Because that justifies our salary, our budget or yet another push request to our name.&lt;/p&gt;
+&lt;p&gt;Somewhere along the way, somebody at Microsoft got people working together and started caring about making their users’ life easier. In other words, they started optimizing for good products, instead of optimizing for dollars.&lt;/p&gt;
 
-&lt;p&gt;What if there is another alternative? You will be interested in principles I have been following lately when writing code:&lt;/p&gt;
+&lt;p&gt;Here are a few good things I would love to see to commit fully to Microsoft:&lt;/p&gt;
 
-&lt;ol&gt;
-&lt;li&gt;Whatever you do, it has been already done (better) somewhere else&lt;/li&gt;
-&lt;li&gt;Otherwise, write as least as possible&lt;/li&gt;
-&lt;li&gt;And write boldly!&lt;/li&gt;
-&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Rendering fonts and subpixels is sketchy compared to Apple, no matter the screen resolution. Is it possible to get one of your hardware designer to work on this?&lt;/p&gt;&lt;/li&gt;
 
-&lt;p&gt;For (1), it means that many other programmers already invested valuable brain-hours in the issue. Whatever you can come up with, it is better in 98% of the cases to use what they&amp;rsquo;ve done. For example, don&amp;rsquo;t try to re-implement time zones. Don&amp;rsquo;t try to code another time reservation system. Don&amp;rsquo;t develop an Uber clone. Don&amp;rsquo;t think you can do a better queue system. You will loose and cry in a corner.&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;I would love if Microsoft (or Apple) made fingerprint profiles. If I use my fingerprint, allow access to all apps and data. If it’s a kid’s fingerprint, disable the App Store, and allow Youtube for a limited time. If it’s not a recognized fingerprint, show a clean desktop, with the rest of the data encrypted. I see computing devices as tools. I can share a tool or a car with a family member, why can’t you do the same with computing devices?&lt;/p&gt;&lt;/li&gt;
 
-&lt;p&gt;It does not mean to use any library you found on Github. It can be bloated, full of issues and unnecessary complex. I find a good programmer must spend good time in using various libraries, test them thouroughly, see what makes one better than the other, and make this a life-long practice. And, instead of writing 100 lines, you will find yourself writing just two configuration lines in the future.&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;A Linux Terminal. I would like to use shell scripts, docker in Windows, use ssh and any other tool I use in a Linux/Ubuntu machine. Please?&lt;/p&gt;&lt;/li&gt;
 
-&lt;p&gt;(2) : If your use case requires new code, then restrain yourself from writing new lines or characters as much as possible. If a new line is trivial, then there must be ways to skip it. But if your lines are so dense and complicated that a fresh pair of eyes will get lost trying to follow its meandering, splitting logic, then you probably haven&amp;rsquo;t tried hard it enough to make your code simpler and shorter.&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Forget about telemetry and offer complete privacy by default. We do not want devices that phones home or with back doors. If you treat us as pirates or irresponsible kids, we will become pirates and irresponsible kids. Please trust your users and we will trust you too.&lt;/p&gt;&lt;/li&gt;
 
-&lt;p&gt;Like (1) above, this does not come naturally. Beginners are tempted to write, line after line. One of my mantra is every time I re-read a line of my code, I try to improve it. Everytime, try to make it shorter. Make it easier to read. This gets harder with time, but then after a few thousands trials, there is a significant difference, until it becomes a natural, elegant and powerful flow.&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;I know you are working on a new browser. For the love of common sense, find a way to solve the GDPR, cookie popups, adtech and privacy abuses. Why can’t we have a browser setting “I accept/I do not accept cookies for all sites”? So it gets rids of all annoying popups. Why don’t we have the browser handle privacy? Browsers should be able to give websites a key to private data information, after a fingerprint confirmation. Once you are finished with a site, you could ask the browser to terminate access to the data.&lt;/p&gt;&lt;/li&gt;
 
-&lt;p&gt;Pro tip: it helps also reading people&amp;rsquo;s algorithms. And of course it helps to know the idioms in your particular language.&lt;/p&gt;
-
-&lt;p&gt;(3) : so what does boldness has anything to do with programming? Well, many developers want to please and try to accept anything. Yet they don&amp;rsquo;t even know what their customers want, and so they also send supplementary data. Those are the grey translucent fields that go from meta-tags, extra dates, object state to dozens of other data points that only makes everyone confused. Have you decided yet? I find therefore there&amp;rsquo;s a value in being bold, by showing 1 input and 1 output, and by discarding everything else :D Users might be surprised by the sparsity of the data, but they will thank you for the clarity, and the freshness of your app.&lt;/p&gt;
-
-&lt;p&gt;Rewritten in a different way, (3) means to choose to do only 1 thing and do it well. You don&amp;rsquo;t get any value by doing like everyone else. If a customer, a partner or a manager says &amp;ldquo;It would be good if it also &amp;hellip;&amp;rdquo;. Well you should be firm in your position and also review your relationship with them. Be Bold, young dev!&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Don’t annoy me with updates and questions. MacOS started asking constantly if it can update software and reboot. This interrupts my workflow and makes me think it is broken. If there is a critical update, and the core software needs to be updated, just do it, without interruption. If it is not a critical update, please give us an option “I will update my software manually” so we do not have to agree to a software update every week.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     

@@ -1,132 +1,66 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Posts on Studio Zenkai </title>
-      <generator uri="https://gohugo.io">Hugo</generator>
+    <title>Posts on Studio Zenkai</title>
     <link>http://studiozenkai.com/post/</link>
+    <description>Recent content in Posts on Studio Zenkai</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Wed, 05 Dec 2018 12:00:00 +0000</lastBuildDate>
     
+	<atom:link href="http://studiozenkai.com/post/index.xml" rel="self" type="application/rss+xml" />
     
-    <updated>Thu, 18 May 2017 12:35:26 EDT</updated>
     
     <item>
-      <title>Writing Bold Code</title>
-      <link>http://studiozenkai.com/post/writing-bold-code/</link>
-      <pubDate>Thu, 18 May 2017 12:35:26 EDT</pubDate>
+      <title>Looking again at Microsoft</title>
+      <link>http://studiozenkai.com/post/microsoft/</link>
+      <pubDate>Wed, 05 Dec 2018 12:00:00 +0000</pubDate>
       
-      <guid>http://studiozenkai.com/post/writing-bold-code/</guid>
-      <description>&lt;p&gt;I wrote a &lt;a href=&#34;http://studiozenkai.com/post/ruby-performance-checklist/&#34;&gt;Ruby Performance Checklist&lt;/a&gt;. Since then, I have seen the performance panel at RailsConf. Richard Schneeman (@schneems) then wrote an &lt;a href=&#34;http://schneems.com/2017/05/17/ruby-backend-performance-getting-started-guide/&#34;&gt;article on back-end performance&lt;/a&gt;, which starts by memory profiling tools like &lt;code&gt;scout&lt;/code&gt; or &lt;code&gt;rack-mini-profiler&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;I like his article. My checklist started by Ruby code complexity. If you refactor well your code and make it simpler, it is actually the same strategy as advised by @schneems.&lt;/p&gt;
-
-&lt;p&gt;This begs the question: why do we always always discuss Ruby performance?&lt;/p&gt;
-
-&lt;p&gt;A quick answer is that Ruby is slow and takes too much memory.&lt;/p&gt;
-</description>
+      <guid>http://studiozenkai.com/post/microsoft/</guid>
+      <description>The natural cycle of companies is to innovate. The flame dies down, then it fights again to innovate.
+Microsoft is one of those. Win 3.1 was revolutionary, and so was Win 95. With Win 3.1, you could point and click to start programs. With Windows 95, you could install games with a nice GUI instead of typing arduous commands in MS-DOS. No more failures at the video setup or having to find a driver file for your sound card.</description>
     </item>
     
     <item>
       <title>Ruby Performance checklist</title>
       <link>http://studiozenkai.com/post/ruby-performance-checklist/</link>
-      <pubDate>Mon, 08 May 2017 10:35:26 EDT</pubDate>
+      <pubDate>Mon, 08 May 2017 10:35:26 -0400</pubDate>
       
       <guid>http://studiozenkai.com/post/ruby-performance-checklist/</guid>
-      <description>
-
-&lt;p&gt;I shipped many applications, using a variety of frameworks, through &lt;a href=&#34;http://studiozenkai.com/challenge/&#34;&gt;my current 1 year challenge&lt;/a&gt; or startups. Ruby issues include low performance, such as servers needing more RAM, not able to sustain large traffic, or slow rendering. Since this is a recurring issue, here is a checklist to help developers get their Ruby app faster:&lt;/p&gt;
-
-&lt;h2 id=&#34;code-complexity&#34;&gt;Code complexity&lt;/h2&gt;
-
-&lt;p&gt;Ruby&amp;rsquo;s simplicity and ease of use allows beginners and experienced developers alike to ship features in record time. Good for business, otherwise bad for code quality. For instance, many :&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;create too many instance variables and statements. This means more allocations and more database calls. Often the variables are not even used.&lt;/li&gt;
-&lt;li&gt;add too many loops. This exponentially decreases performance. Do you need yet another &lt;code&gt;each&lt;/code&gt; or collection?&lt;/li&gt;
-&lt;li&gt;use too many gems. There are many nice gems to make you life easier. Few however think if they need yet another gem. Don&amp;rsquo;t bloat your app!&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Less complex code is more readable and brings in most cases more performance. I like to use &lt;a href=&#34;https://github.com/whitesmith/rubycritic&#34;&gt;rubycritic&lt;/a&gt; to bring more sanity. Another alternative is &lt;a href=&#34;https://github.com/bbatsov/rubocop&#34;&gt;rubocop&lt;/a&gt;. There are also third-party services like skylight to show you object allocation. Pick your tool, and focus efforts on the most complex methods. You don&amp;rsquo;t have to write terse one-liners. However there is a always a happy middle ground that will satisfy developers and product owners.&lt;/p&gt;
-
-&lt;h2 id=&#34;database-calls&#34;&gt;Database calls&lt;/h2&gt;
-</description>
+      <description>I shipped many applications, using a variety of frameworks, through my current 1 year challenge or startups. Ruby issues include low performance, such as servers needing more RAM, not able to sustain large traffic, or slow rendering. Since this is a recurring issue, here is a checklist to help developers get their Ruby app faster:
+Code complexity Ruby&amp;rsquo;s simplicity and ease of use allows beginners and experienced developers alike to ship features in record time.</description>
     </item>
     
     <item>
       <title>Why my next laptop won&#39;t be an Apple</title>
       <link>http://studiozenkai.com/post/laptop-machine-learning/</link>
-      <pubDate>Wed, 04 May 2016 15:35:26 EDT</pubDate>
+      <pubDate>Wed, 04 May 2016 15:35:26 -0400</pubDate>
       
       <guid>http://studiozenkai.com/post/laptop-machine-learning/</guid>
-      <description>
-
-&lt;h2 id=&#34;part-i-apple-s-craftmanship&#34;&gt;Part I - Apple&amp;rsquo;s Craftmanship&lt;/h2&gt;
-
-&lt;p&gt;I have used the original macbook, the 13&amp;rdquo; MacBook Air, the 13&amp;rdquo; Macbook pro, and 15&amp;rdquo; Macbook pros.&lt;/p&gt;
-
-&lt;p&gt;I loved the white plastic of the original macbook. It was better than any other computer I&amp;rsquo;ve used before, worked out of the box, and iMovie amazed me. Drag, drop, and five minutes later, you have a video.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://studiozenkai.com/images/macbook_white.jpg&#34; alt=&#34;macbook white&#34; title=&#34;[macbook white]&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I thought this is what computing should be.&lt;/p&gt;
-
-&lt;p&gt;When the hard drive died, I got a Macbook Air. It was professional looking, impossibly thin and had a polished OS.&lt;/p&gt;
-
-&lt;p&gt;I was an Apple fan.&lt;/p&gt;
-
-&lt;p&gt;I doubled down. XCode, Final Cut Pro, Apple Aperture. A much more powerful 15&amp;rdquo; Macbook pro.&lt;/p&gt;
-
-&lt;p&gt;Those were the &lt;em&gt;golden age&lt;/em&gt;. Apple was the best choice in web development and creative work:&lt;/p&gt;
-</description>
+      <description>Part I - Apple&amp;rsquo;s Craftmanship I have used the original macbook, the 13&amp;rdquo; MacBook Air, the 13&amp;rdquo; Macbook pro, and 15&amp;rdquo; Macbook pros.
+I loved the white plastic of the original macbook. It was better than any other computer I&amp;rsquo;ve used before, worked out of the box, and iMovie amazed me. Drag, drop, and five minutes later, you have a video.
+I thought this is what computing should be.</description>
     </item>
     
     <item>
       <title>Why bots are a thing now</title>
       <link>http://studiozenkai.com/post/bots/</link>
-      <pubDate>Mon, 18 Apr 2016 10:35:26 EDT</pubDate>
+      <pubDate>Mon, 18 Apr 2016 10:35:26 -0400</pubDate>
       
       <guid>http://studiozenkai.com/post/bots/</guid>
-      <description>
-
-&lt;p&gt;Upon hearing about Facebook and Microsoft efforts to deploy bot platforms, a friend reacted:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;So bots are a thing now? I programmed bots 20 years ago&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;He is a successful technology entrepreneur and has developed systems on many platforms. I can understand him. There were tutorials in kids&amp;rsquo; magazines on writing a &amp;ldquo;Hello World&amp;rdquo; bot on MS-DOS 20 years ago. More impressive were the Artificial Intelligence (A.I.) found in games like Warcraft 3 or Command &amp;amp; Conquer. Friends would spend countless nights trying to beat the A.I. For everyone else, it would be the Clipper found in Microsoft Word. It had personality and would show tips.&lt;/p&gt;
-
-&lt;p&gt;At that time, bots and A.I. were rule-based. &amp;ldquo;If player produces infantry, produce infantry-killing robots&amp;rdquo;. &amp;ldquo;If user clicks print, show links on how to print&amp;rdquo;. To get user satisfaction, you need to write rules covering all cases, as well as the exceptions. It is a creative and long but easy job.&lt;/p&gt;
-
-&lt;p&gt;But Microsoft&amp;rsquo;s clipper or video games AI showed their limits. &lt;em&gt;Apart from clear cases, bots could not process subtle situations&lt;/em&gt;. Typing a wrong letter would leave the bot stuck for example. Using a different expression would not work. Creative players would find ways to beat the A.I. in ways unseen by video game designers.&lt;/p&gt;
-</description>
+      <description>Upon hearing about Facebook and Microsoft efforts to deploy bot platforms, a friend reacted:
+ So bots are a thing now? I programmed bots 20 years ago
+ He is a successful technology entrepreneur and has developed systems on many platforms. I can understand him. There were tutorials in kids&amp;rsquo; magazines on writing a &amp;ldquo;Hello World&amp;rdquo; bot on MS-DOS 20 years ago. More impressive were the Artificial Intelligence (A.I.) found in games like Warcraft 3 or Command &amp;amp; Conquer.</description>
     </item>
     
     <item>
       <title>Becoming a self-taught programmer</title>
       <link>http://studiozenkai.com/post/programming/</link>
-      <pubDate>Sun, 17 Apr 2016 12:55:51 EDT</pubDate>
+      <pubDate>Sun, 17 Apr 2016 12:55:51 -0400</pubDate>
       
       <guid>http://studiozenkai.com/post/programming/</guid>
-      <description>
-
-&lt;p&gt;In six months I have shipped many apps, as an entrepreneur or as a freelancer. I have also contributed to open source projects and advised other projects. Yet I’m educated as an electrical engineer, not as a software engineer and consider myself largely self-taught in the area of programming.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Jeff Atwood : Geeks went from being social outsiders, outcasts, and rejects to.. part of the 1% power structure, with all that implies. Hard to adapt.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Just in Québec, there are about 7000 programmer or developer positions that are not filled every month. As a result, small and big companies are fighting to get the attention of programmers.&lt;/p&gt;
-
-&lt;p&gt;And it’s not just in Québec. Go in Toronto, New York city or in California. It seems you can find a highly rewarding job as long as you know how to code.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://cdn-images-1.medium.com/max/2000/1*R5FJAuwICPzY3ByLnkgpCg.jpeg&#34; alt=&#34;Barack Obama Code&#34; title=&#34;[Barack Obama Code]&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The trend has not gotten unnoticed. Smart people from all horizons are now learning and looking to land a job in the field.&lt;/p&gt;
-
-&lt;p&gt;This guide is for those people in arts, marketing and many other fields who are now looking for the best way to learn how to code in six months. Since time is limited, it is focused on producing practical code instead of abstract topics such as data structures or compiling. I assume however that it is just the beginning of a journey and you will have time later on to pick on formal learning.&lt;/p&gt;
-
-&lt;h2 id=&#34;building-a-learning-environment&#34;&gt;Building a learning environment&lt;/h2&gt;
-</description>
+      <description>In six months I have shipped many apps, as an entrepreneur or as a freelancer. I have also contributed to open source projects and advised other projects. Yet I’m educated as an electrical engineer, not as a software engineer and consider myself largely self-taught in the area of programming.
+ Jeff Atwood : Geeks went from being social outsiders, outcasts, and rejects to.. part of the 1% power structure, with all that implies.</description>
     </item>
     
     <item>
@@ -135,39 +69,24 @@
       <pubDate>Fri, 15 Jan 2016 12:22:27 -0400</pubDate>
       
       <guid>http://studiozenkai.com/post/playbook/</guid>
-      <description>
-
-&lt;p&gt;Bonjour!&lt;/p&gt;
-
-&lt;p&gt;Nous offrons &lt;em&gt;une expertise technique pour un résultat de qualité&lt;/em&gt; dans le développement de plateformes transactionnelles, de financement, de médias:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Étude et conception fonctionnelle et technique&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Développement de solutions front, middle ou back-office&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Développement d&amp;rsquo;applications iOS ou Android&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Conduite de projet sur les technologies Ruby, Javascript, Lua, et plateformes mobiles; utilisation de base de données MySQL, Postgresql, ou redis, mongodb, ElasticSearch, Solr&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Audit de code, de qualité et de performance des applications&lt;/p&gt;&lt;/li&gt;
-</description>
+      <description>Bonjour!
+Nous offrons une expertise technique pour un résultat de qualité dans le développement de plateformes transactionnelles, de financement, de médias:
+ Étude et conception fonctionnelle et technique
+ Développement de solutions front, middle ou back-office
+ Développement d&amp;rsquo;applications iOS ou Android
+ Conduite de projet sur les technologies Ruby, Javascript, Lua, et plateformes mobiles; utilisation de base de données MySQL, Postgresql, ou redis, mongodb, ElasticSearch, Solr
+ Audit de code, de qualité et de performance des applications</description>
     </item>
     
     <item>
       <title>Cuda Cores Ranking for Machine learning</title>
       <link>http://studiozenkai.com/post/cuda/</link>
-      <pubDate>Sun, 11 Oct 2015 10:35:26 EDT</pubDate>
+      <pubDate>Sun, 11 Oct 2015 10:35:26 -0400</pubDate>
       
       <guid>http://studiozenkai.com/post/cuda/</guid>
-      <description>
-
-&lt;p&gt;NVIDIA graphic cards can be used to accelerate &lt;a href=&#34;https://developer.nvidia.com/gpu-accelerated-libraries&#34;&gt;scientific computing&lt;/a&gt;, &lt;a href=&#34;https://developer.nvidia.com/cudnn&#34;&gt;neural networks&lt;/a&gt;, video games and occasionally bitcoin computing.&lt;/p&gt;
-
-&lt;p&gt;Video editing and post-production also benefit greatly from NVIDIA cards with Adobe&amp;rsquo;s Mercury Engine or BMD&amp;rsquo;s Davinci resolve.&lt;/p&gt;
-
-&lt;p&gt;In the case of scientific computing, performance is directly proportional to the number of cuda cores. As long as cpu speed is &amp;gt; 2GHz and you have as much RAM as you have GPU RAM, you are all good.&lt;/p&gt;
-</description>
+      <description>NVIDIA graphic cards can be used to accelerate scientific computing, neural networks, video games and occasionally bitcoin computing.
+Video editing and post-production also benefit greatly from NVIDIA cards with Adobe&amp;rsquo;s Mercury Engine or BMD&amp;rsquo;s Davinci resolve.
+In the case of scientific computing, performance is directly proportional to the number of cuda cores. As long as cpu speed is &amp;gt; 2GHz and you have as much RAM as you have GPU RAM, you are all good.</description>
     </item>
     
   </channel>

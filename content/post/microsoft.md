@@ -8,7 +8,7 @@ The natural cycle of companies is to innovate. The flame dies down, then it figh
 
 Microsoft is one of those. Win 3.1 was revolutionary, and so was Win 95. With Win 3.1, you could point and click to start programs. With Windows 95, you could install games with a nice GUI instead of typing arduous commands in MS-DOS. No more failures at the video setup or having to find a driver file for your sound card.
 
-Somewhere along the way, Microsoft went greedy. Instead of optimizing for good products, the mega corporation optimized for dollars. It sued any organization that threaten its dominant position. Innovation was adding recycled buttons and rows in Microsoft Office. This was good for shareholders but made everyone’s life more complex.
+Somewhere along the way, Microsoft went greedy. Instead of optimizing for good products, the mega corporation optimized for dollars. It sued any organization threatening its dominant position. Innovation was adding recycled buttons and rows in Microsoft Office. This was good for shareholders but made everyone’s life worse.
 
 At that time I switched to an Apple iBook. The white plastic made it look like a toy, but it “just worked”.
 

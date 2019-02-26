@@ -7,7 +7,108 @@
     <language>en-us</language>
     
     
-    <updated>Mon, 10 Dec 2018 12:00:00 &#43;0000</updated>
+    <updated>Tue, 26 Feb 2019 12:00:00 &#43;0000</updated>
+    
+    <item>
+      <title>Building an autonomous RC car</title>
+      <link>http://studiozenkai.com/post/autonomous-rc-car/</link>
+      <pubDate>Tue, 26 Feb 2019 12:00:00 &#43;0000</pubDate>
+      
+      <guid>http://studiozenkai.com/post/autonomous-rc-car/</guid>
+      <description>
+
+&lt;p&gt;This is a hands-on article that encourages you to experiment and see what works on the ground.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Shameless Promotion&lt;/em&gt;: If you are in Montréal, I (&lt;a href=&#34;https://twitter.com/heri&#34;&gt;@heri&lt;/a&gt;) do a meetup where people interested in computer vision, AI, robotics work on &lt;a href=&#34;https://www.meetup.com/DIY-Robocars-Montreal-Meetup-Autonomous-cars-race&#34;&gt;autonomous cars&lt;/a&gt;. Please drop by!&lt;/p&gt;
+
+&lt;h2 id=&#34;why-a-rc-car&#34;&gt;Why a RC car?&lt;/h2&gt;
+
+&lt;p&gt;Like developing an application, my recommendation is to build first a &lt;em&gt;Minimum Viable Product&lt;/em&gt; (MVP). Then iterate it quickly from there towards a version that works for you.&lt;/p&gt;
+
+&lt;p&gt;An autonomous car is at the bare minimum able to follow a course, without any input from a human driver. That is an engineering challenge, both on the hardware and software side. The car manufacturer needs to install a wide array of sophisticated sensors, ranging from cameras, &lt;a href=&#34;https://en.wikipedia.org/wiki/Lidar&#34;&gt;LIDAR&lt;/a&gt;, GPS to engine sensors. It also requires actuators so a computer can drive the engine, gears and steering. The software has to ingest a huge flow of data, decide on the best route based on missing or conflicting data, and make sure not to harm anything in the way.&lt;/p&gt;
+
+&lt;p&gt;These constraints means making a autonomous car is costly and prohibitive for most. If you want to build a life-sized self-driving car, you need to join a team at Waymo, Baidu, Yandex or another billion dollar company like Tesla.&lt;/p&gt;
+
+&lt;p&gt;A &lt;em&gt;hack&lt;/em&gt; is to work on an RC car, instead of a life-size car.&lt;/p&gt;
+
+&lt;p&gt;RC cars are plenty available. The smartphone and drones boom means there are plenty of cheap and diverse sensors and parts usable for your project.&lt;/p&gt;
+
+&lt;p&gt;RC cars are also light, which means an accident will not create body injury. If a part breaks, you can replace it easily and quickly.&lt;/p&gt;
+
+&lt;p&gt;Finally, RC cars can have simpler autonomous software. You don&amp;rsquo;t need a mission planner. Object tracking is not necessary. The MVP can just have track recognition. This is good news for those who want to study computer vision or neural networks, without being a specialist in hardware, mapping, motion planning or in Linux.&lt;/p&gt;
+
+&lt;p&gt;All this means development costs and times are cut down. Instead of months and years, you could have your first autonomous in a few weeks time!&lt;/p&gt;
+
+&lt;h2 id=&#34;anatomy-of-an-autonomous-rc-car&#34;&gt;Anatomy of an autonomous RC car&lt;/h2&gt;
+
+&lt;p&gt;An autonomous RC car mirrors a life-size car, with simpler parts:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A main motor with a transmission,&lt;/li&gt;
+&lt;li&gt;A battery,&lt;/li&gt;
+&lt;li&gt;At least one ESC or &lt;a href=&#34;https://en.wikipedia.org/wiki/Electronic_speed_control&#34;&gt;Electronic Speed Controller&lt;/a&gt;. The ESC will run the motor,&lt;/li&gt;
+&lt;li&gt;A &lt;a href=&#34;https://www.servocity.com/what-is-a-servo&#34;&gt;servo&lt;/a&gt;, for steering.&lt;/li&gt;
+&lt;li&gt;Sensor. At the bare minimum, you will need one wide-angle camera.&lt;/li&gt;
+&lt;li&gt;A computer or equivalent to record, run inference based on data from sensor and send outputs to the servo and ESC. A Raspberry Pi is good for the first version.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It does not need:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A RC transmitter/Receiver. Instead, you will use the &lt;a href=&#34;https://en.wikipedia.org/wiki/General-purpose_input/output&#34;&gt;GPIO pins&lt;/a&gt; of a Raspberry pi to send signals to the ESC.&lt;/li&gt;
+&lt;li&gt;A RC body. Electronics should be easily accessible and replaceable.&lt;/li&gt;
+&lt;li&gt;A gearbox&lt;/li&gt;
+&lt;li&gt;Turn signals (blinkers), brakes or headlights&lt;/li&gt;
+&lt;li&gt;a GPU card or TPUs, at least not in the beginning.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;On the software side, a RC car has a main python program that decides what to do next based on image recorded. Here, you can use either machine learning (Tensorflow/&lt;a href=&#34;https://keras.io/&#34;&gt;Keras&lt;/a&gt;) or computer vision. For machine learning, the application will have at its core a convolutional neural network taught with supervised learning. This means the neural network is trained on an external computer using image frames from the RC camera and then run the inference model on the edge computer to generate the corresponding outputs to the servo and the motor.&lt;/p&gt;
+
+&lt;p&gt;This is very similar to computational photography on Huawei or Google phones. Engineers took a variety of images from its camera, annotated parts of the image where it should be blurry (aka &lt;a href=&#34;https://en.wikipedia.org/wiki/Bokeh&#34;&gt;bokeh&lt;/a&gt; ). Each user can then produce portraits with bokeh on their phone, based on the model trained in the previous step. But instead of motor signals, we produce bokeh.&lt;/p&gt;
+
+&lt;p&gt;On the other hand, if you are using computer vision, the best way to start is with &lt;a href=&#34;http://openmv.io&#34;&gt;OpenMV.io&lt;/a&gt;. The camera has a board that will do the calculations such as &lt;a href=&#34;https://openmv.io/collections/cams/products/openmv-cam-m7&#34;&gt;line detection&lt;/a&gt;, contrast/exposure changes, optical flow and more. You can access the data with a Python program and feed it to another program. It&amp;rsquo;s less sophisticated andless &lt;em&gt;trendy&lt;/em&gt; than machine learning, but produces good results as well!&lt;/p&gt;
+
+&lt;p&gt;Fortunately, there is the amazing &lt;a href=&#34;http://docs.donkeycar.com&#34;&gt;Donkeycar&lt;/a&gt; project that has ready-to-use software and hardware instructions. There are links to find the appropriate parts, and if you are stuck, there is also an active community on Slack. There are also good projects like &lt;a href=&#34;https://github.com/RyanZotti/Self-Driving-Car&#34;&gt;RyanZotti&lt;/a&gt; which works well for smaller RC cars and Lego, the Udacity stack or Apollo. However, Donkeycar is the most usable and beginner-friendly in my opinion. You don&amp;rsquo;t need soldiering and you don&amp;rsquo;t need a lot of extra electronics to start.&lt;/p&gt;
+
+&lt;p&gt;When you combine the hardware and software and want to launch your first RC autonomous car, the process is the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;put together a track&lt;/li&gt;
+&lt;li&gt;connect through SSH to the Raspberry Pi, and then access driving controls on the web, or with a controller.&lt;/li&gt;
+&lt;li&gt;try to drive a few laps, like what a real good driver would do&lt;/li&gt;
+&lt;li&gt;once you are sure of your driving skills, begin recording laps. All image frames and inputs (throttle, steering angle) will be recorded&lt;/li&gt;
+&lt;li&gt;transfer training data to the main computer&lt;/li&gt;
+&lt;li&gt;training is done typically on a beefy computer with a recent Nvidia card, or otherwise on a cloud server with a GPU (Google Compute or Amazon). The loss value represents the difference between what the neural network computes and what would be an ideal output. You will want to minimize this, without overfitting the model. Once you&amp;rsquo;re happy with a loss value, you can validate it&lt;/li&gt;
+&lt;li&gt;use the trained model with your RC car, and race it!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For those who haven&amp;rsquo;t done neural networks, this is a great way to understand how it works, and perhaps have your first AI application.&lt;/p&gt;
+
+&lt;h2 id=&#34;what-s-next&#34;&gt;What&amp;rsquo;s next?&lt;/h2&gt;
+
+&lt;p&gt;Now, that is the Minimum Viable Product. Other developments could be:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Use instead an Nvidia Jetson board. This is much more powerful, and better suited for machine learning. Models can be trained and run directly on the board, without requiring an external computer with GPU. You can add easily multiple cameras, speed sensors, LIDAR, GPS without any issues, and run at the same time a mission planner. However it consumes significantly more power compared to a Raspberry Pi, costs at least x5 more, and takes so much space that you will have to upgrade to a &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;10&lt;/sub&gt; RC car.&lt;/li&gt;
+&lt;li&gt;Find a good driver of RC cars, or become a very good driver. Because after all, A.I. only learns from your inputs. This is what most people forget. Everyone wants to buy more expensive cameras, or just write more code. Often, models are fed garbage. It can be only as good as you are. This is why big corporations like Waymo require driver trainers with a &lt;em&gt;spotless&lt;/em&gt; driving history&lt;/li&gt;
+&lt;li&gt;Improve electronic parts so the RC car becomes more precise and more responsive. Often, RC cars have too much torque, imprecise steering, and also have a delay compared to life-size cars,&lt;/li&gt;
+&lt;li&gt;Try &lt;a href=&#34;https://en.wikipedia.org/wiki/Differential_steering&#34;&gt;differential steering&lt;/a&gt;. It can be a RC tracked vehicle, or a &lt;a href=&#34;https://en.wikipedia.org/wiki/Mars_rover&#34;&gt;Mars Rover&lt;/a&gt;-style robot&lt;/li&gt;
+&lt;li&gt;Improve the machine learning model. You can track &lt;a href=&#34;https://twitter.com/arxiv_cscv&#34;&gt;arXiv CV&lt;/a&gt;, and check out recent self-driving or computer vision papers. You can then try to implement the algorithm presented, if there is minimal code. You can work on reinforcement learning, data augmentation, use different kernel size, lens correction, sensor fusion etc.&lt;/li&gt;
+&lt;li&gt;Add actuators. For example, add a loader, or snowplow system. For example, this guy developed &lt;a href=&#34;https://www.hackster.io/abdullahsadiq/autonomous-delivery-system-4c2048&#34;&gt;a package delivery system&lt;/a&gt; based on the donkeycar! Isn&amp;rsquo;t that amazing? Now you can have your $100m VC funded startup with open source electronics :)&lt;/li&gt;
+&lt;li&gt;Add sensors for better depths perception, for example to prevent collisions. There are &lt;a href=&#34;https://www.dfrobot.com/product-1125.html&#34;&gt;LIDARs for $99&lt;/a&gt;. Or add an IMU (angle/orientation sensor), add a GPS, beacon system etc.&lt;/li&gt;
+&lt;li&gt;Add obstacles, small pedestrians models, traffic lights, etc.&lt;/li&gt;
+&lt;li&gt;Use the knowledge and extend it to autonomous boats, rockets, planes. There are competitions for &lt;a href=&#34;https://www.herox.com/alphapilot&#34;&gt;autonomous flight drones&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;Integrate more complex autonomous software such as Autoware or &lt;a href=&#34;https://github.com/ApolloAuto/apollo&#34;&gt;Apollo&lt;/a&gt; and make it run a complex command. Such as go pickup package at point A, go to point B, wait for a signal, then park.&lt;/li&gt;
+&lt;li&gt;There are &lt;a href=&#34;https://roboticsmasters.co/fullsizecars/&#34;&gt;autonomous car kits&lt;/a&gt; for real cars. Another kit &lt;a href=&#34;https://github.com/commaai/openpilot&#34;&gt;running openpilot&lt;/a&gt; is provided by comma.ai for recent Toyota/Honda cars.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I strongly suggest taking a lean approach. Do step by step improvements, save every model you&amp;rsquo;ve validated. It&amp;rsquo;s better to have regular small improvements than try to go big and then fail big.&lt;/p&gt;
+
+&lt;p&gt;If you are around, we&amp;rsquo;d love to have you at &lt;a href=&#34;https://www.meetup.com/DIY-Robocars-Montreal-Meetup-Autonomous-cars-race/events/259007280/&#34;&gt;our next meetup this wednesday Feb 27&lt;/a&gt; or &lt;a href=&#34;https://diyrobocars.com/local-meetup-groups/&#34;&gt;check other meetups near you&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Thanks to @joshnuss @166inter @MassimoFarina for their valuable feedback!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>All I want for Christmas is a small phone</title>

@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://studiozenkai.com/post/autonomous-rc-car/</loc>
+    <lastmod>2019-02-26T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://studiozenkai.com/post/small-phone/</loc>
     <lastmod>2018-12-10T12:00:00+00:00</lastmod>
   </url>
@@ -49,13 +54,13 @@
   
   <url>
     <loc>http://studiozenkai.com/post/</loc>
-    <lastmod>2018-12-10T12:00:00+00:00</lastmod>
+    <lastmod>2019-02-26T12:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://studiozenkai.com/</loc>
-    <lastmod>2018-12-10T12:00:00+00:00</lastmod>
+    <lastmod>2019-02-26T12:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

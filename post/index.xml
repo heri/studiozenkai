@@ -6,10 +6,21 @@
     <description>Recent content in Posts on Studio Zenkai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Dec 2018 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 26 Feb 2019 12:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://studiozenkai.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Building an autonomous RC car</title>
+      <link>http://studiozenkai.com/post/autonomous-rc-car/</link>
+      <pubDate>Tue, 26 Feb 2019 12:00:00 +0000</pubDate>
+      
+      <guid>http://studiozenkai.com/post/autonomous-rc-car/</guid>
+      <description>This is a hands-on article that encourages you to experiment and see what works on the ground.
+Shameless Promotion: If you are in Montréal, I (@heri) do a meetup where people interested in computer vision, AI, robotics work on autonomous cars. Please drop by!
+Why a RC car? Like developing an application, my recommendation is to build first a Minimum Viable Product (MVP). Then iterate it quickly from there towards a version that works for you.</description>
+    </item>
     
     <item>
       <title>All I want for Christmas is a small phone</title>

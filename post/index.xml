@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Studio Zenkai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 26 Feb 2019 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Sep 2019 15:30:20 -0400</lastBuildDate>
     
 	<atom:link href="http://studiozenkai.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>48 Hours Climate Change hackathon</title>
+      <link>http://studiozenkai.com/post/hackathon-challenge/</link>
+      <pubDate>Fri, 13 Sep 2019 15:30:20 -0400</pubDate>
+      
+      <guid>http://studiozenkai.com/post/hackathon-challenge/</guid>
+      <description>I am participating this weekend in the AI Climate Change Hackathon, and I will jot down here my notes and progress. Here is the event pitch:
+&amp;ldquo;Join us along with the other talented and diverse participants, supported by leading mentors in their fields who will come together to collaborate to attempt to address climate change and its impacts on communities and ecosystems. We hope to begin to achieve real positive impact in 48 hours using AI.</description>
+    </item>
     
     <item>
       <title>Building an autonomous RC car</title>

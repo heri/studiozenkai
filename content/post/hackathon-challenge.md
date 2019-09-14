@@ -93,7 +93,7 @@ You could sort siblings at the same level to get the min and max ecological foot
 
 This doesn't tell me yet how machine learning could be used. I could use Google's [Open Images V5](https://storage.googleapis.com/openimages/web/index.html) to categorize pictures of activities uploaded. Or maybe do some NLP. This is hard right now to answer because datasets and outputs are not clear. It would be good if a machine learning researcher could look into this tomorrow.
 
-# Saturday 14 Sep - Design phase
+## Saturday 14 Sep - Design phase
 
 Here is a tentative mockup:
 
@@ -106,3 +106,17 @@ If the user does not enter any input, it is assumed his choices is similar to th
 Imagine if it could connect to Alexa Smart Home, and deduce your energy consumption, cooking and other activities. Or it could tap into Garmin and many other popular data providers to provide better estimations. Machine Learning could be used further on top to improve carbon footprint estimations.
 
 What do you think so far? Head over to Twitter or email me. I'd love to discuss
+
+## Saturday 14 Sep - Discussions and first code lines
+
+I've talked to many people both online and offline, and the general consensus is that this project needs design, from how to ask for user inputs, to how to show information that does not demotivcate users. For example, somebody who is trying to make change in their life might feel discouraged by seeing the amounts of CO2 he generated recently.
+
+[tmrow](https://github.com/tmrowco/tmrowapp-contrib) has been working on this issue for the past 3 years with a solid danish/french team. They have a mobile app and a community base. You can contribute calculations and data to the repository linked earlier. The application is not publicly available so it does limit the usefulness of the app.
+
+Harry from [the Crowd Charity](http://thecrowd.charity) responded a lot of questions regarding datasets and also climate change practices. I feel privileged getting this information and hope to bring back with good work to the community in exchange.
+
+It's now less than 24 hours from Demo time in Montreal. Due to this time constraint, I have decided to build an API-based service where third-parties like The Crowd or other can query the carbon cost of various activities. So far, transport  category is covered, with data coming from OpenAMEE and calculations methods based on OpenAMEE sources. If there is no data for a category, the algorithm will look into children categories and get the median cost. All that's left for the user is inputting the number of km for the transport.
+
+![mockup](/images/hackathon-transport.png "[hackathon mockup]")
+
+I do not foresee having a front-end tomorrow as I will have to work on the other categories such as food, personal, home and business.

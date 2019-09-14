@@ -149,7 +149,7 @@
 
 <p>One can even imagine, that given enough users and patterns, you could be recommended specific products or actions that improves your &ldquo;climate change balance&rdquo;.</p>
 
-<p>Now, if it sounds like I am a green die-hard activist &ndash; I am not at all. This is just 48 hours of my time trying to build an app that can help regular people in their daily life.</p>
+<p>Now, if it sounds like I am a green die-hard activist &ndash; I am not at all. This is just 48 hours of my time trying to build an app that can give key information to people in their life, so they can decide what&rsquo;s best for them.</p>
 
 <p>Now, a bit of background:</p>
 
@@ -187,7 +187,7 @@
 
 <p>There are also <a href="https://www.academia.edu/Documents/in/Ecological_Footprint">various papers</a> in ecological footprints but with my experience with outcomereference, I know these would take forever to read, assimilate and use.</p>
 
-<p>I am also reading an extensive <a href="https://www.cdp.net/en/investor/ghg-emissions-dataset">study modeling GHG production</a> and their statistical framework. I think there are <em>some very good lessons</em> here for consumer/invidual applications.</p>
+<p>I am also reading an extensive <a href="https://www.cdp.net/en/investor/ghg-emissions-dataset">study modeling GHG production</a> and their statistical framework. I think there are some very good lessons here for consumer/invidual applications.</p>
 
 <p>I also found a few datasets such as <a href="https://github.com/OpenAMEE/datasets">OpenAMEE</a> or <a href="https://github.com/Mzkarim/Exploring--CO2-Emission-Data-">CO2 Emissions data</a> . The first one by OpenAMEE and various forks is especially interesting. I will have to look into the scientific validation of the dataset tomorrow but it is a good start.</p>
 
@@ -204,26 +204,40 @@
 <p>I have given some thoughts on the footprintcalculator.org design, linked above. They do not tell you figures but rather tell you how many Earths would be needed to support your activities. I like this idea, as this is easy to explain to people, even outside climate change communities, and can also be illustrated elegantly.</p>
 
 <p>Drive an SUV, eat red meat daily, spend thousands on plastic stuff you don&rsquo;t need =&gt; 4.5 Earths<br/>
-    Walk/Bike, produce your own veggies, work remotely =&gt; 0.3 Earths</p>
+Walk/Bike, produce your own veggies, work remotely =&gt; 0.3 Earths</p>
 
-<p>The OpenAMEE dataset above is also interesting, as it would be straightforward to map into a hierarchical database, like this:</p>
+<p>The OpenAMEE dataset mentioned earlier is also interesting, as it would be straightforward to map into a hierarchical database, like this:</p>
 
 <p>
-root activity<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\__ Transport activity 1.2 Earths<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\__ walking 0.02 Earths (or CO2 metric)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\__ biking 0.25 Earths<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\__ public transport (subway, electric) 0.85 Earths<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\__ public transport (bus, gas) 1.1 Earths<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\__ electric car 1.6 Earths<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\__ ICE car 2.3 Earths<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\__ SUV 3.5 Earths<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\__ flying Boeing Dreamliner 7.5 Earths<br/>
+root activity<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\__ Transport activity 1.2 Earths<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\__ walking 0.02 Earths (or CO2 metric)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\__ biking 0.25 Earths<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\__ public transport (subway, electric) 0.85 Earths<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\__ public transport (bus, gas) 1.1 Earths<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\__ electric car 1.6 Earths<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\__ ICE car 2.3 Earths<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\__ SUV 3.5 Earths<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\__ flying Boeing Dreamliner 7.5 Earths<br>
 </p>
 
 <p>You could sort siblings at the same level to get the min and max ecological footprint, the median, and also showcase alternative(s). For example, if you take the subway, the app could tell you that walking would have a lower ecological footprint but it would be definitively better than taking a truck for the same trip.</p>
 
 <p>This doesn&rsquo;t tell me yet how machine learning could be used. I could use Google&rsquo;s <a href="https://storage.googleapis.com/openimages/web/index.html">Open Images V5</a> to categorize pictures of activities uploaded. Or maybe do some NLP. This is hard right now to answer because datasets and outputs are not clear. It would be good if a machine learning researcher could look into this tomorrow.</p>
+
+<h1 id="saturday-14-sep-design-phase">Saturday 14 Sep - Design phase</h1>
+
+<p>Here is a tentative mockup:</p>
+
+<p><img src="/images/hackathon-mockup.png" alt="mockup" title="[hackathon mockup]" /></p>
+
+<p>One could add a picture of their flight. He can add flight duration, and then carbon intensity estimation is shown. This is added as one of his activity. At the end of the day, on the right side, a graph made up of his activities represents his &ldquo;carbon map&rdquo;. This is the key take-away from the app - knowing first what are the impact of each of your activities.</p>
+
+<p>If the user does not enter any input, it is assumed his choices is similar to the baseline, i.e. other people in his city for transport, food, shopping and activities (work, entertainment etc.)</p>
+
+<p>Imagine if it could connect to Alexa Smart Home, and deduce your energy consumption, cooking and other activities. Or it could tap into Garmin and many other popular data providers to provide better estimations. Machine Learning could be used further on top to improve carbon footprint estimations.</p>
+
+<p>What do you think so far? Head over to Twitter or email me. I&rsquo;d love to discuss</p>
 
           <div class="sharing">
 <p>© Heri Rakotomalala. All rights reserved. Powered by <a href="https://www.digitalocean.com/?refcode=ef57f6ccd2d8">Digital Ocean</a></p>

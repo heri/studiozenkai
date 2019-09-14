@@ -22,7 +22,7 @@ It's this ability to track daily actions and giving you a 10,000 feet global vie
 
 One can even imagine, that given enough users and patterns, you could be recommended specific products or actions that improves your "climate change balance".
 
-Now, if it sounds like I am a green die-hard activist -- I am not at all. This is just 48 hours of my time trying to build an app that can help regular people in their daily life.
+Now, if it sounds like I am a green die-hard activist -- I am not at all. This is just 48 hours of my time trying to build an app that can give key information to people in their life, so they can decide what's best for them.
 
 Now, a bit of background:
 
@@ -92,3 +92,17 @@ root activity
 You could sort siblings at the same level to get the min and max ecological footprint, the median, and also showcase alternative(s). For example, if you take the subway, the app could tell you that walking would have a lower ecological footprint but it would be definitively better than taking a truck for the same trip.
 
 This doesn't tell me yet how machine learning could be used. I could use Google's [Open Images V5](https://storage.googleapis.com/openimages/web/index.html) to categorize pictures of activities uploaded. Or maybe do some NLP. This is hard right now to answer because datasets and outputs are not clear. It would be good if a machine learning researcher could look into this tomorrow.
+
+# Saturday 14 Sep - Design phase
+
+Here is a tentative mockup:
+
+![mockup](/images/hackathon-mockup.png "[hackathon mockup]")
+
+One could add a picture of their flight. He can add flight duration, and then carbon intensity estimation is shown. This is added as one of his activity. At the end of the day, on the right side, a graph made up of his activities represents his "carbon map". This is the key take-away from the app - knowing first what are the impact of each of your activities.
+
+If the user does not enter any input, it is assumed his choices is similar to the baseline, i.e. other people in his city for transport, food, shopping and activities (work, entertainment etc.)
+
+Imagine if it could connect to Alexa Smart Home, and deduce your energy consumption, cooking and other activities. Or it could tap into Garmin and many other popular data providers to provide better estimations. Machine Learning could be used further on top to improve carbon footprint estimations.
+
+What do you think so far? Head over to Twitter or email me. I'd love to discuss

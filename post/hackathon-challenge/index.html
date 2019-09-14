@@ -175,8 +175,6 @@
 
 <p>To be continued. If you want to contact, I&rsquo;m on twitter @<a href="https://twitter.com/heri">heri</a> or heri [at] studiozenkai.com</p>
 
-<p>&ndash;</p>
-
 <h2 id="friday-13-sep-6pm">Friday 13 Sep - 6pm</h2>
 
 <p>Yoshua Bengio outlines how A.I. can be used, specifically optimizing operations of heavy industry or governments. I think he refers to work done at Element.AI, a commercial entity which works with big businesses. There is no mention of invididual or consumer applications. He also mentions climate and weather modeling, although I am not sure how this can be done in 48 hours. The other presenter, Sasha Luccioni, discusses the actual climate costs of Machine Learning work, and various applications with G.A.N. (??)</p>
@@ -189,7 +187,7 @@
 
 <p>There are also <a href="https://www.academia.edu/Documents/in/Ecological_Footprint">various papers</a> in ecological footprints but with my experience with outcomereference, I know these would take forever to read, assimilate and use.</p>
 
-<p>I am also reading an extensive <a href="https://www.cdp.net/en/investor/ghg-emissions-dataset">study modeling GHG production</a>] and their statistical framework. I think there are <em>some very good lessons</em> here for consumer/invidual applications.</p>
+<p>I am also reading an extensive <a href="https://www.cdp.net/en/investor/ghg-emissions-dataset">study modeling GHG production</a> and their statistical framework. I think there are <em>some very good lessons</em> here for consumer/invidual applications.</p>
 
 <p>I also found a few datasets such as <a href="https://github.com/OpenAMEE/datasets">OpenAMEE</a> or <a href="https://github.com/Mzkarim/Exploring--CO2-Emission-Data-">CO2 Emissions data</a> . The first one by OpenAMEE and various forks is especially interesting. I will have to look into the scientific validation of the dataset tomorrow but it is a good start.</p>
 
@@ -201,31 +199,31 @@
 
 <p>It&rsquo;s 7:30pm however and family duty calls. I&rsquo;m wrapping this up and will be here tomorrow 9AM sharp</p>
 
-<p>&ndash;</p>
-
 <h2 id="friday-13-sep-late-night-brainstorming">Friday 13 Sep - Late Night Brainstorming</h2>
 
-<p>I have given some thoughts on the footprintcalculator design, mentionned above. They do not tell you figures but rather tell you how many Earths would be neeed to support your activities. I like this idea, as this is easy to explain to many people and can also be illustrated elegantly.</p>
+<p>I have given some thoughts on the footprintcalculator.org design, linked above. They do not tell you figures but rather tell you how many Earths would be needed to support your activities. I like this idea, as this is easy to explain to people, even outside climate change communities, and can also be illustrated elegantly.</p>
 
-<p>Drive an SUV, eat red meat daily, spend thousands on plastic stuff you don&rsquo;t need =&gt; 4.5 Earths
-Walk/Bike, produce your own veggies, work remotely =&gt; 0.3 Earths</p>
+<p>Drive an SUV, eat red meat daily, spend thousands on plastic stuff you don&rsquo;t need =&gt; 4.5 Earths<br/>
+    Walk/Bike, produce your own veggies, work remotely =&gt; 0.3 Earths</p>
 
-<p>The OpenAMEE dataset is also very interesting, as it would be straightforward to map into a hierarchical database, like this:</p>
+<p>The OpenAMEE dataset above is also interesting, as it would be straightforward to map into a hierarchical database, like this:</p>
 
-<p>root activity
-__ Transport activity in North America / Europe 1.2 Earths
-      __ walking 0.02 Earths (or CO2 metric)
-      __ biking 0.25 Earths
-      __ public transport (subway, electric) 0.85 Earths
-      __ public transport (bus, gas) 1.1 Earths
-      __ electric car 1.6 Earths
-      __ ICE car 2.3 Earths
-      __ SUV 3.5 Earths
-      __ flying Boeing Dreamliner 7.5 Earths</p>
+<p>
+root activity<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\__ Transport activity 1.2 Earths<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\__ walking 0.02 Earths (or CO2 metric)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\__ biking 0.25 Earths<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\__ public transport (subway, electric) 0.85 Earths<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\__ public transport (bus, gas) 1.1 Earths<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\__ electric car 1.6 Earths<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\__ ICE car 2.3 Earths<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\__ SUV 3.5 Earths<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\__ flying Boeing Dreamliner 7.5 Earths<br/>
+</p>
 
-<p>You could sort siblings at the same level to get the min and max ecological footprint, the median, and also showcase alternative(s). For example, if you take the subway, the app could tell you that walking would have a lower ecological footprint but it would be definitively better than taking a truck for the same trip. It is also possible to have children activities to fine-tune the metrics.</p>
+<p>You could sort siblings at the same level to get the min and max ecological footprint, the median, and also showcase alternative(s). For example, if you take the subway, the app could tell you that walking would have a lower ecological footprint but it would be definitively better than taking a truck for the same trip.</p>
 
-<p>This doesn&rsquo;t tell me yet how machine learning could be used. I could use Google&rsquo;s <a href="https://storage.googleapis.com/openimages/web/index.html">Open Images V5</a> to categorize pictures of activities uploaded by users. Or maybe do some NLP. This is hard to answer because datasets and outputs are not even clear at the moment</p>
+<p>This doesn&rsquo;t tell me yet how machine learning could be used. I could use Google&rsquo;s <a href="https://storage.googleapis.com/openimages/web/index.html">Open Images V5</a> to categorize pictures of activities uploaded. Or maybe do some NLP. This is hard right now to answer because datasets and outputs are not clear. It would be good if a machine learning researcher could look into this tomorrow.</p>
 
           <div class="sharing">
 <p>© Heri Rakotomalala. All rights reserved. Powered by <a href="https://www.digitalocean.com/?refcode=ef57f6ccd2d8">Digital Ocean</a></p>

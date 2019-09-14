@@ -44,8 +44,6 @@ As you can see, there are data, back-end, design challenges and I hope to write 
 
 To be continued. If you want to contact, I'm on twitter @[heri](https://twitter.com/heri) or heri [at] studiozenkai.com
 
---
-
 ## Friday 13 Sep - 6pm 
 
 Yoshua Bengio outlines how A.I. can be used, specifically optimizing operations of heavy industry or governments. I think he refers to work done at Element.AI, a commercial entity which works with big businesses. There is no mention of invididual or consumer applications. He also mentions climate and weather modeling, although I am not sure how this can be done in 48 hours. The other presenter, Sasha Luccioni, discusses the actual climate costs of Machine Learning work, and various applications with G.A.N. (??)
@@ -58,7 +56,7 @@ On my side, I am *searching public datasets* that could be used, freely or with 
 
 There are also [various papers](https://www.academia.edu/Documents/in/Ecological_Footprint) in ecological footprints but with my experience with outcomereference, I know these would take forever to read, assimilate and use. 
 
-I am also reading an extensive [study modeling GHG production](https://www.cdp.net/en/investor/ghg-emissions-dataset)] and their statistical framework. I think there are *some very good lessons* here for consumer/invidual applications.
+I am also reading an extensive [study modeling GHG production](https://www.cdp.net/en/investor/ghg-emissions-dataset) and their statistical framework. I think there are some very good lessons here for consumer/invidual applications.
 
 I also found a few datasets such as [OpenAMEE](https://github.com/OpenAMEE/datasets) or [CO2 Emissions data](https://github.com/Mzkarim/Exploring--CO2-Emission-Data-) . The first one by OpenAMEE and various forks is especially interesting. I will have to look into the scientific validation of the dataset tomorrow but it is a good start.
 
@@ -70,19 +68,18 @@ On the social side, I've received a lot of positive responses from good folks li
 
 It's 7:30pm however and family duty calls. I'm wrapping this up and will be here tomorrow 9AM sharp
 
---
-
 ## Friday 13 Sep - Late Night Brainstorming
 
-I have given some thoughts on the footprintcalculator design, mentionned above. They do not tell you figures but rather tell you how many Earths would be neeed to support your activities. I like this idea, as this is easy to explain to many people and can also be illustrated elegantly.
+I have given some thoughts on the footprintcalculator.org design, linked above. They do not tell you figures but rather tell you how many Earths would be needed to support your activities. I like this idea, as this is easy to explain to people, even outside climate change communities, and can also be illustrated elegantly.
 
 Drive an SUV, eat red meat daily, spend thousands on plastic stuff you don't need => 4.5 Earths
+
 Walk/Bike, produce your own veggies, work remotely => 0.3 Earths 
 
-The OpenAMEE dataset is also very interesting, as it would be straightforward to map into a hierarchical database, like this:
+The OpenAMEE dataset mentioned earlier is also interesting, as it would be straightforward to map into a hierarchical database, like this:
 
 root activity
-\__ Transport activity in North America / Europe 1.2 Earths
+\__ Transport activity 1.2 Earths
       \__ walking 0.02 Earths (or CO2 metric)
       \__ biking 0.25 Earths
       \__ public transport (subway, electric) 0.85 Earths
@@ -92,6 +89,6 @@ root activity
       \__ SUV 3.5 Earths
       \__ flying Boeing Dreamliner 7.5 Earths
 
-You could sort siblings at the same level to get the min and max ecological footprint, the median, and also showcase alternative(s). For example, if you take the subway, the app could tell you that walking would have a lower ecological footprint but it would be definitively better than taking a truck for the same trip. It is also possible to have children activities to fine-tune the metrics.
+You could sort siblings at the same level to get the min and max ecological footprint, the median, and also showcase alternative(s). For example, if you take the subway, the app could tell you that walking would have a lower ecological footprint but it would be definitively better than taking a truck for the same trip.
 
-This doesn't tell me yet how machine learning could be used. I could use Google's [Open Images V5](https://storage.googleapis.com/openimages/web/index.html) to categorize pictures of activities uploaded by users. Or maybe do some NLP. This is hard to answer because datasets and outputs are not even clear at the moment
+This doesn't tell me yet how machine learning could be used. I could use Google's [Open Images V5](https://storage.googleapis.com/openimages/web/index.html) to categorize pictures of activities uploaded. Or maybe do some NLP. This is hard right now to answer because datasets and outputs are not clear. It would be good if a machine learning researcher could look into this tomorrow.

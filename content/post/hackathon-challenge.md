@@ -46,7 +46,7 @@ To be continued. If you want to contact, I'm on twitter @[heri](https://twitter.
 
 --
 
-Friday 13 Sep 2019 - 6pm 
+## Friday 13 Sep - 6pm 
 
 Yoshua Bengio outlines how A.I. can be used, specifically optimizing operations of heavy industry or governments. I think he refers to work done at Element.AI, a commercial entity which works with big businesses. There is no mention of invididual or consumer applications. He also mentions climate and weather modeling, although I am not sure how this can be done in 48 hours. The other presenter, Sasha Luccioni, discusses the actual climate costs of Machine Learning work, and various applications with G.A.N. (??)
 
@@ -72,7 +72,7 @@ It's 7:30pm however and family duty calls. I'm wrapping this up and will be here
 
 --
 
-Friday 13 Sep 2019 - Late Night Brainstorming
+## Friday 13 Sep - Late Night Brainstorming
 
 I have given some thoughts on the footprintcalculator design, mentionned above. They do not tell you figures but rather tell you how many Earths would be neeed to support your activities. I like this idea, as this is easy to explain to many people and can also be illustrated elegantly.
 

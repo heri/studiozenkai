@@ -251,7 +251,34 @@ root activity<br>
 
 <p><img src="/images/hackathon-transport.png" alt="mockup" title="[hackathon mockup]" /></p>
 
-<p>I do not foresee having a front-end tomorrow as I will have to work on the other categories such as food, personal, home and business :(</p>
+<p>I do not foresee having a front-end tomorrow as I will have to work on the other categories such as food, personal, home and business.</p>
+
+<h2 id="sun-15-sep-final-and-wrap-up">Sun 15 Sep - Final and Wrap-up</h2>
+
+<p>Like in most hackathons, there was a severe lack of time towards the end.</p>
+
+<p>I coded mechanically 🧟 and did some major copy/pasting for data, as well as bulk csv import.</p>
+
+<p>The application allows you to add your activity, one after the other. It will take the CO2 produced and apply a multiplier. It also gets CH4 production and other greenhouse gas, plus also required energy. There are &ldquo;stochiometry ratios&rdquo; to get the equivalent CO2 for any CH4 produced, as well as public data on CO2 produced per kwH depending on your current location.</p>
+
+<p><img src="/images/hackathon-final.png" alt="mockup" title="[hackathon final]" /></p>
+
+<p>In this case, the app sets the location to Canada. Here is the breakdown:</p>
+
+<ul>
+<li>cycling does not produce greenhouse gases. This is good</li>
+<li>the mini-bus activity was for 3 hours at 80kmh. The app calculates the distance and then divide by the number of participants to get 3.617 kg CO2. This is not bad as most people will produce more by driving their car in Canada for 3 hours.</li>
+<li>there are various activities like washing machine and watching TV. We convert the energy required to CO2</li>
+<li>the biggest culprit here is Dairy Cattle. Effectively, raising dairy cattle completely annihilates any climate change efforts. Dairy cattle produce a huge amount of CH4 and CH4 has a high CO2 ratio</li>
+</ul>
+
+<p>At this point, it is best to step back.</p>
+
+<p>Engineering-wise, I did not do unfortunately any unit or functional testing. I hate myself but it was about having something up in 30mn vs having something well-engineered. Fortunately, all the calculations and mathematical modeling made sense. I cross-referenced with a few other public calculators.</p>
+
+<p>Many other teams presented a working mobile app. I found it amazing that they would be able to work and get an accurate model, as well as build an Android or an iOS app. I didn't even have time to do some css. I remember a few years ago teams would struggle even to get a single web app working. What&rsquo;s up with that!</p>
+
+<p>If you are interested (holla or tweet at me), I can put this online as a service.</p>
 
           <div class="sharing">
 <p>© Heri Rakotomalala. All rights reserved. Powered by <a href="https://www.digitalocean.com/?refcode=ef57f6ccd2d8">Digital Ocean</a></p>

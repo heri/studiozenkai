@@ -117,6 +117,31 @@ Harry from [the Crowd Charity](http://thecrowd.charity) responded a lot of quest
 
 It's now less than 24 hours from Demo time in Montreal. Due to this time constraint, I have decided to build an API-based service where third-parties like The Crowd or other can query the carbon cost of various activities. So far, transport  category is covered, with data coming from OpenAMEE and calculations methods based on OpenAMEE sources. If there is no data for a category, the algorithm will look into children categories and get the median cost. All that's left for the user is inputting the number of km for the transport.
 
-![mockup](/images/hackathon-transport.png "[hackathon mockup]")
+![transport](/images/hackathon-transport.png "[hackathon mockup]")
 
 I do not foresee having a front-end tomorrow as I will have to work on the other categories such as food, personal, home and business.
+
+## Sun 15 Sep - Final and Wrap-up
+
+Like in most hackathons, there was a severe lack of time towards the end. 
+
+I coded mechanically and did some major copy/pasting for data, as well as bulk csv import 🧟
+
+The application allows you to add your activity, one after the other. It will take the CO2 produced and apply a multiplier. It also gets CH4 production and other greenhouse gas, plus also required energy. There are "stochiometry ratios" to get the equivalent CO2 for any CH4 produced, as well as public data on CO2 produced per kwH depending on your current location.
+
+![final](/images/hackathon-final.png "[hackathon final]")
+
+In this case, the app sets the location to Canada. Here is a breakdown for these few examples:
+
+* cycling does not produce greenhouse gases. This is good
+* the mini-bus activity was for 3 hours at 80kmh. The app calculates the distance and then divide by the number of participants to get 3.617 kg CO2. This is not bad as most people will produce more by driving their car in Canada for 3 hours.
+* there are various activities like washing machine and watching TV. We convert the energy required to CO2 
+* the biggest culprit here is Dairy Cattle. Effectively, raising dairy cattle completely annihilates any climate change efforts. Dairy cattle produce a huge amount of CH4 and CH4 has a high CO2 ratio
+
+At this point, it is best to step back.
+
+Engineering-wise, I did not do unfortunately any unit or functional testing. I hate myself but it was about having something up in 30mn vs having something well-engineered. Fortunately, all the calculations and mathematical modeling made sense. I cross-referenced with a few other public calculators.
+
+Many other teams presented a working mobile app. I found it amazing that they would be able to work and get an accurate model, as well as build an Android or an iOS app. I didn't even have time to do some css. I remember a few years ago teams would struggle even to get a single web app working. What's up with that!
+
+If you are interested (holla or tweet at me), I can put this online as a service. 

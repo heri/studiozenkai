@@ -203,8 +203,8 @@
 
 <p>I have given some thoughts on the footprintcalculator.org design, linked above. They do not tell you figures but rather tell you how many Earths would be needed to support your activities. I like this idea, as this is easy to explain to people, even outside climate change communities, and can also be illustrated elegantly.</p>
 
-<p>Drive an SUV, eat red meat daily, spend thousands on plastic stuff you don&rsquo;t need =&gt; 4.5 Earths<br/>
-Walk/Bike, produce your own veggies, work remotely =&gt; 0.3 Earths</p>
+<p>Drive an SUV, eat red meat daily, spend thousands on plastic stuff you don&rsquo;t need =&gt; 4.5 Earths
+<br/>Walk/Bike, produce your own veggies, work remotely =&gt; 0.3 Earths</p>
 
 <p>The OpenAMEE dataset mentioned earlier is also interesting, as it would be straightforward to map into a hierarchical database, like this:</p>
 
@@ -249,7 +249,7 @@ root activity<br>
 
 <p>It&rsquo;s now less than 24 hours from Demo time in Montreal. Due to this time constraint, I have decided to build an API-based service where third-parties like The Crowd or other can query the carbon cost of various activities. So far, transport  category is covered, with data coming from OpenAMEE and calculations methods based on OpenAMEE sources. If there is no data for a category, the algorithm will look into children categories and get the median cost. All that&rsquo;s left for the user is inputting the number of km for the transport.</p>
 
-<p><img src="/images/hackathon-transport.png" alt="mockup" title="[hackathon mockup]" /></p>
+<p><img src="/images/hackathon-transport.png" alt="transport" title="[hackathon mockup]" /></p>
 
 <p>I do not foresee having a front-end tomorrow as I will have to work on the other categories such as food, personal, home and business.</p>
 
@@ -257,13 +257,13 @@ root activity<br>
 
 <p>Like in most hackathons, there was a severe lack of time towards the end.</p>
 
-<p>I coded mechanically 🧟 and did some major copy/pasting for data, as well as bulk csv import.</p>
+<p>I coded mechanically and did some major copy/pasting for data, as well as bulk csv import 🧟</p>
 
 <p>The application allows you to add your activity, one after the other. It will take the CO2 produced and apply a multiplier. It also gets CH4 production and other greenhouse gas, plus also required energy. There are &ldquo;stochiometry ratios&rdquo; to get the equivalent CO2 for any CH4 produced, as well as public data on CO2 produced per kwH depending on your current location.</p>
 
-<p><img src="/images/hackathon-final.png" alt="mockup" title="[hackathon final]" /></p>
+<p><img src="/images/hackathon-final.png" alt="final" title="[hackathon final]" /></p>
 
-<p>In this case, the app sets the location to Canada. Here is the breakdown:</p>
+<p>In this case, the app sets the location to Canada. Here is a breakdown for these few examples:</p>
 
 <ul>
 <li>cycling does not produce greenhouse gases. This is good</li>
@@ -272,13 +272,28 @@ root activity<br>
 <li>the biggest culprit here is Dairy Cattle. Effectively, raising dairy cattle completely annihilates any climate change efforts. Dairy cattle produce a huge amount of CH4 and CH4 has a high CO2 ratio</li>
 </ul>
 
-<p>At this point, it is best to step back.</p>
-
 <p>Engineering-wise, I did not do unfortunately any unit or functional testing. I hate myself but it was about having something up in 30mn vs having something well-engineered. Fortunately, all the calculations and mathematical modeling made sense. I cross-referenced with a few other public calculators.</p>
 
-<p>Many other teams presented a working mobile app. I found it amazing that they would be able to work and get an accurate model, as well as build an Android or an iOS app. I didn't even have time to do some css. I remember a few years ago teams would struggle even to get a single web app working. What&rsquo;s up with that!</p>
+<p>Many other teams presented a working mobile app. I found it amazing that they would be able to work and get an accurate model, as well as build an Android or an iOS app. I didn&rsquo;t even have time to do some css. I remember a few years ago teams would struggle even to get a single web app working. What&rsquo;s up with that!</p>
 
-<p>If you are interested (holla or tweet at me), I can put this online as a service.</p>
+<p>If you are interested (holla or tweet at @heri), I can put this online as a service.</p>
+
+<h2 id="monday-16-sep-future">Monday 16 Sep - Future</h2>
+
+<p>What&rsquo;s next? To make this usable, the service needs to be tied to various data providers:</p>
+
+<ul>
+<li>MyFitnessPal logs your food. If I can connect to their API, I can associate each ingredient to their carbon footprint</li>
+<li>I would need to find a trusted service that logs your car trips and your flights, plus the type of car driven. This needs research</li>
+<li>There are popular fitness trackers such as Fitbit, Garmin or Google Fit that logs your bike and walking trips. This can be integrated and show your carbon intensity (or lack thereof)</li>
+<li>It looks like due to privacy reasons, there is no public API for Smart Homes. I could be wrong, but there is no way for example to list what are your smart appliances and when they run with Alexa Home, or the Google/Apple equivalent</li>
+</ul>
+
+<p>Using these data providers would be a much more seamless experience for potential users, since they get immediate results, and potentially immediate recommendations.</p>
+
+<p>I would love also to sit down with a climate change scientist to validate calculations. Plus good design people and marketing. Damn, that sounds like a team &hellip; I&rsquo;ll share this on social networks and see where it goes.</p>
+
+<p>Thanks to the team at <a href="https://launchlab.ai">MTLNewTech</a> and <a href="https://launchlab.ai">AI Launch Lab</a> who have organized the hackathon. I know from first hand how much dedication it takes to create such an event spanning several days. The food was delicious, coffee was plenty and there was a good diversity of attendees. A special holla to Ilias Benjeloun who gave his 120% and came the whole 3 days, even though he got a cold towards the end.</p>
 
           <div class="sharing">
 <p>© Heri Rakotomalala. All rights reserved. Powered by <a href="https://www.digitalocean.com/?refcode=ef57f6ccd2d8">Digital Ocean</a></p>

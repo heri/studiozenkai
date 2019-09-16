@@ -138,10 +138,23 @@ In this case, the app sets the location to Canada. Here is a breakdown for these
 * there are various activities like washing machine and watching TV. We convert the energy required to CO2 
 * the biggest culprit here is Dairy Cattle. Effectively, raising dairy cattle completely annihilates any climate change efforts. Dairy cattle produce a huge amount of CH4 and CH4 has a high CO2 ratio
 
-At this point, it is best to step back.
-
 Engineering-wise, I did not do unfortunately any unit or functional testing. I hate myself but it was about having something up in 30mn vs having something well-engineered. Fortunately, all the calculations and mathematical modeling made sense. I cross-referenced with a few other public calculators.
 
 Many other teams presented a working mobile app. I found it amazing that they would be able to work and get an accurate model, as well as build an Android or an iOS app. I didn't even have time to do some css. I remember a few years ago teams would struggle even to get a single web app working. What's up with that!
 
-If you are interested (holla or tweet at me), I can put this online as a service. 
+If you are interested (holla or tweet at @heri), I can put this online as a service. 
+
+## Monday 16 Sep - Future
+
+What's next? To make this usable, the service needs to be tied to various data providers:
+
+* MyFitnessPal logs your food. If I can connect to their API, I can associate each ingredient to their carbon footprint
+* I would need to find a trusted service that logs your car trips and your flights, plus the type of car driven. This needs research
+* There are popular fitness trackers such as Fitbit, Garmin or Google Fit that logs your bike and walking trips. This can be integrated and show your carbon intensity (or lack thereof)
+* It looks like due to privacy reasons, there is no public API for Smart Homes. I could be wrong, but there is no way for example to list what are your smart appliances and when they run with Alexa Home, or the Google/Apple equivalent
+
+Using these data providers would be a much more seamless experience for potential users, since they get immediate results, and potentially immediate recommendations.
+
+I would love also to sit down with a climate change scientist to validate calculations. Plus good design people and marketing. Damn, that sounds like a team ... I'll share this on social networks and see where it goes.
+
+Thanks to the team at [MTLNewTech](https://launchlab.ai) and [AI Launch Lab](https://launchlab.ai) who have organized the hackathon. I know from first hand how much dedication it takes to create such an event spanning several days. The food was delicious, coffee was plenty and there was a good diversity of attendees. A special holla to Ilias Benjeloun who gave his 120% and came the whole 3 days, even though he got a cold towards the end.

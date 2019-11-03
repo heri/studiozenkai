@@ -7,7 +7,49 @@
     <language>en-us</language>
     
     
-    <updated>Fri, 13 Sep 2019 15:30:20 EDT</updated>
+    <updated>Fri, 01 Nov 2019 10:35:26 EDT</updated>
+    
+    <item>
+      <title>Dokomaps</title>
+      <link>http://studiozenkai.com/post/dokomaps/</link>
+      <pubDate>Fri, 01 Nov 2019 10:35:26 EDT</pubDate>
+      
+      <guid>http://studiozenkai.com/post/dokomaps/</guid>
+      <description>
+
+&lt;p&gt;Aimable D. is a close friend since our engineering school days. Like me, he spent time in the corporate world. Bu he has also done multiple ventures, from eCommerce to corporate to consumer ventures.&lt;/p&gt;
+
+&lt;p&gt;Now he is focused on &lt;a href=&#34;http://dokomaps.com&#34;&gt;dokomaps&lt;/a&gt;. I am reviewing today Dokomaps to provide feedback, to showcase a good product, but also in the hope that Aimable reviews one of my current ventures, such as &lt;a href=&#34;http://outcomereference.com&#34;&gt;OutcomeReference&lt;/a&gt; :)&lt;/p&gt;
+
+&lt;h2 id=&#34;the-pitch&#34;&gt;The Pitch&lt;/h2&gt;
+
+&lt;p&gt;Please take the time to visit the &lt;a href=&#34;http://dokomaps.com&#34;&gt;site&lt;/a&gt;. It describes well what you get. Signing up is straightforward.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;rsquo;s what I get from it:&lt;/p&gt;
+
+&lt;p&gt;Dokomaps lets you favorite places, local or international, in personal lists. The list can be for personal use, but they are designed to be shared to the widest audience. Think &amp;ldquo;TOP 10 BEER PLACES&amp;rdquo; or &amp;ldquo;Top vacations places&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;The purpose is simple and will resonate in most people.&lt;/p&gt;
+
+&lt;h2 id=&#34;my-experience&#34;&gt;My experience&lt;/h2&gt;
+
+&lt;p&gt;I&amp;rsquo;ve created two lists. The first is &lt;a href=&#34;https://dokomaps.com/home/map/176&#34;&gt;Montreal for kids&lt;/a&gt;, divided in the outdoor and indoor categories. The second is the &lt;a href=&#34;https://dokomaps.com/home/map/29&#34;&gt;Montreal tech map&lt;/a&gt;. Creating those two lists were quick. I was able to add any place I could think of. The application finds the geographical coordinates, pictures and then zooms the map on the places. You can also re-order places, so I assume the first ranked place is the best of the category. Is this great or what?&lt;/p&gt;
+
+&lt;h2 id=&#34;the-value&#34;&gt;The Value&lt;/h2&gt;
+
+&lt;p&gt;My immediate value is sharing those lists and getting feedback from friends/family about places I&amp;rsquo;ve missed. I can&amp;rsquo;t think of any other app that provides this now. Or a Google Maps option somewhere?&lt;/p&gt;
+
+&lt;h2 id=&#34;wishlist&#34;&gt;Wishlist&lt;/h2&gt;
+
+&lt;p&gt;I discovered that visitors who don&amp;rsquo;t have an account need to register and sign-up. I doubt friends or family will easily sign up. I trust Aimable so I gave my email but everyone is worried about spam these days. I wish there was an option to make a list public.&lt;/p&gt;
+
+&lt;p&gt;People who&amp;rsquo;ve signed up can have an option to comment or add their feedback on the list. Otherwise the &amp;ldquo;conversation&amp;rdquo; will migrate outside Dokomaps, such as Facebook or Twitter, which is too bad.&lt;/p&gt;
+
+&lt;p&gt;I also wish there was an option to mark a place as done. For example, if I plan to visit X places, I can use dokomaps and check every place as soon as I&amp;rsquo;m done.&lt;/p&gt;
+
+&lt;p&gt;As a final point, I really like this venture. It&amp;rsquo;s always refreshing to see a new take that&amp;rsquo;s not done by Google or Facebook, and knowing your data won&amp;rsquo;t be analyzed, ingested and then sold back to you. If Google was doing this, they would know even more about you than you did, and we don&amp;rsquo;t want that.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>48 Hours Climate Change hackathon</title>
@@ -15,32 +57,36 @@
       <pubDate>Fri, 13 Sep 2019 15:30:20 EDT</pubDate>
       
       <guid>http://studiozenkai.com/post/hackathon-challenge/</guid>
-      <description>&lt;p&gt;I am participating this weekend in the AI Climate Change Hackathon, and I will jot down here my notes and progress. Here is the event pitch:&lt;/p&gt;
+      <description>
+
+&lt;p&gt;I am participating this weekend in the AI Climate Change &lt;a href=&#34;https://www.facebook.com/events/443903349789312/&#34;&gt;Hackathon&lt;/a&gt;, and I will jot down here my notes and progress. Here is the event pitch:&lt;/p&gt;
 
 &lt;p&gt;&amp;ldquo;Join us along with the other talented and diverse participants, supported by leading mentors in their fields who will come together to collaborate to attempt to address climate change and its impacts on communities and ecosystems. We hope to begin to achieve real positive impact in 48 hours using AI. We are also announcing 4 AI challenges: Plant Village Challenge, Extreme Weather Prediction, Climate-Related Risk Assessment, and Predict the Weather in Montréal.&amp;rdquo;&lt;/p&gt;
 
-&lt;p&gt;This sounds like a recipe to attract ecologists, students, and dreamers alike. It tells very little about technologies, specific goals and metrics, or even datasets, which are key in AI.&lt;/p&gt;
+&lt;p&gt;This sounds like a recipe to attract ecologists, students, and dreamers alike. It tells very little about technologies, specific goals and metrics, or  datasets, which are key in AI.&lt;/p&gt;
 
 &lt;p&gt;Neverthless, it should be a good opportunity to implement an idea I had recently.&lt;/p&gt;
 
-&lt;p&gt;A while ago, I used the iOS app Gyroscope, which excelled in giving you a picture of your daily health. The app has good integration with data providers like Garmin or Apple Health but it was also good at recognizing activities such as walking, biking or taking public transit. At the end of the day, a screen that I loved showed total energy expenditure, heart rates, sleep patterns and other core metrics.&lt;/p&gt;
+&lt;p&gt;A while ago, I used the iOS app &lt;a href=&#34;https://gyrosco.pe&#34;&gt;Gyroscope&lt;/a&gt;, which excels in giving a picture of your daily health. The app has good integration with data providers like Garmin or Apple Health. It was also good at recognizing activities such as walking, biking or taking public transit. At the end of the day, an elegant screen shows total energy expenditure, heart rates, sleep patterns and other core metrics.&lt;/p&gt;
 
-&lt;p&gt;Fitness apps are good into telling you if your work-out was good, but Gyroscope was better if overall, you were getting more fit (or more sedentary).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://brainhub.eu/blog/wp-content/uploads/2017/07/gyroscope-famous-react-native-app.jpeg&#34; alt=&#34;Health tracking with gyroscope&#34; title=&#34;Health tracking with gyroscope&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;It&amp;rsquo;s this ability to track daily actions and giving you a 10,000 feet global view that I want to render, in the case of climate change. Imaging taking an Uber, then getting your Starbucks, having a hamburger at lunch later, then finally biking home. The app will then sum up in a screen what are the positive/negative impact of these actions. You can then share this easily on social media or just bask in what you&amp;rsquo;ve done that day :)&lt;/p&gt;
+&lt;p&gt;Fitness apps are good into telling you if your work-out was good, but Gyroscope was great into showing if you were getting healthier, overall.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s this ability to track daily actions and giving you a 10,000 feet global view that I want to render, in the case of climate change. Imaging taking an Uber, then getting your Starbucks, having a hamburger at lunch later, then finally biking home. The app will then sum up in a screen what are the positive/negative impact of these actions. You can then share this on social media or just bask in what you&amp;rsquo;ve done that day :)&lt;/p&gt;
 
 &lt;p&gt;One can even imagine, that given enough users and patterns, you could be recommended specific products or actions that improves your &amp;ldquo;climate change balance&amp;rdquo;.&lt;/p&gt;
 
-&lt;p&gt;Now, if it sounds like I am a green die-hard activist. I am not at all. This is just 48 hours of my time trying to build an app that can help regular people in their daily life.&lt;/p&gt;
+&lt;p&gt;Now, if it sounds like I am a green die-hard activist &amp;ndash; I am not at all. This is just 48 hours of my time trying to build an app that can give key information to people in their life, so they can decide what&amp;rsquo;s best for them.&lt;/p&gt;
 
 &lt;p&gt;Now, a bit of background:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;I did outcomereference, which is able to correlate a food to diseases, and vice-versa. This project is still a work in progress, as it needs more precise statistical modeling, a course that was in my bottom 10 in engineering. But above all, it works and you can trust the results in any page.&lt;/li&gt;
-&lt;li&gt;I built a couple of self-driving RC vehicles, based on the donkeycar OSS. So I can do supervised learning, reinforcement learning, computer vision and more.&lt;/li&gt;
-&lt;li&gt;I also did a lot of AI modeling to know that you have to be either lucky or have an army of supervisers to get an accurate AI model. In 98% of cases, reverting to regression, medians or just brute-forcing with a database works better than an &amp;ldquo;AI model&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;I did &lt;a href=&#34;http://outcomereference.com&#34;&gt;outcomereference&lt;/a&gt;, which is able to correlate a food to diseases, and vice-versa. This project is still a work in progress, as it needs more precise statistical modeling, a course that was in my bottom priorities in engineering. But above all, it works and you can trust the results in any page.&lt;/li&gt;
+&lt;li&gt;I &lt;a href=&#34;https://www.meetup.com/DIY-Robocars-Montreal-Meetup-Autonomous-cars-race/&#34;&gt;built a couple of self-driving&lt;/a&gt; RC vehicles, based on the donkeycar open source project. So I can do supervised learning, reinforcement learning, computer vision and more.&lt;/li&gt;
+&lt;li&gt;I also did a lot of AI modeling to know that you have to be either lucky or have an army of supervisers to get an accurate AI model. In 98% of cases, reverting to regressions, mathematical modeling, or brute-forcing with a database works better than an &amp;ldquo;AI model&amp;rdquo;&lt;/li&gt;
 &lt;li&gt;I did a dozen of web apps, back-end, API or full-stack&lt;/li&gt;
-&lt;li&gt;I can do design and UI but it will generally be poor. I&amp;rsquo;m a sucker for slick designs so will need hel on this&lt;/li&gt;
+&lt;li&gt;I can do design and UI but it will generally be poor. I&amp;rsquo;m a sucker for slick designs so will need help on this&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;For this project, I foresee a few problems:&lt;/p&gt;
@@ -53,9 +99,128 @@
 &lt;li&gt;Is there even time to train a model and get an accurate model?&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;As you can see, there are data, back-end, design challenges for this and I hope to write down here regularly the challenges, analysis, the range of solutions, and also what was the course taken.&lt;/p&gt;
+&lt;p&gt;As you can see, there are data, back-end, design challenges and I hope to write down here the challenges, analysis, the range of solutions and the course taken.&lt;/p&gt;
 
-&lt;p&gt;To be continued. If you want to contact, I&amp;rsquo;m on twitter @heri or heri [at] studiozenkai.com&lt;/p&gt;
+&lt;p&gt;To be continued. If you want to contact, I&amp;rsquo;m on twitter @&lt;a href=&#34;https://twitter.com/heri&#34;&gt;heri&lt;/a&gt; or heri [at] studiozenkai.com&lt;/p&gt;
+
+&lt;h2 id=&#34;friday-13-sep-6pm&#34;&gt;Friday 13 Sep - 6pm&lt;/h2&gt;
+
+&lt;p&gt;Yoshua Bengio outlines how A.I. can be used, specifically optimizing operations of heavy industry or governments. I think he refers to work done at Element.AI, a commercial entity which works with big businesses. There is no mention of invididual or consumer applications. He also mentions climate and weather modeling, although I am not sure how this can be done in 48 hours. The other presenter, Sasha Luccioni, discusses the actual climate costs of Machine Learning work, and various applications with G.A.N. (??)&lt;/p&gt;
+
+&lt;p&gt;There is also a random guy who talks about hugging trees and children and taking a sabbatical leave :)&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s also the first time I go to the MILA / Element.AI building and it reminds me of Facebook/Google/Apple campuses. The building has a surprisingly massive footprint.&lt;/p&gt;
+
+&lt;p&gt;On my side, I am &lt;em&gt;searching public datasets&lt;/em&gt; that could be used, freely or with a license. &lt;a href=&#34;https://coolclimate.org/calculator&#34;&gt;CoolClimate&lt;/a&gt; has a calculator that uses CO2 for climate change costs with categories in travel, home, food and shopping. It would be possible to deduce activity costs with this calculator, and get sparse data that could be used as a foundation for the app. Another &lt;a href=&#34;https://www.footprintcalculator.org&#34;&gt;calculator&lt;/a&gt; has a better design for everyday users, however it would be hard to &amp;ldquo;reverse engineer&amp;rdquo; this.&lt;/p&gt;
+
+&lt;p&gt;There are also &lt;a href=&#34;https://www.academia.edu/Documents/in/Ecological_Footprint&#34;&gt;various papers&lt;/a&gt; in ecological footprints but with my experience with outcomereference, I know these would take forever to read, assimilate and use.&lt;/p&gt;
+
+&lt;p&gt;I am also reading an extensive &lt;a href=&#34;https://www.cdp.net/en/investor/ghg-emissions-dataset&#34;&gt;study modeling GHG production&lt;/a&gt; and their statistical framework. I think there are some very good lessons here for consumer/invidual applications.&lt;/p&gt;
+
+&lt;p&gt;I also found a few datasets such as &lt;a href=&#34;https://github.com/OpenAMEE/datasets&#34;&gt;OpenAMEE&lt;/a&gt; or &lt;a href=&#34;https://github.com/Mzkarim/Exploring--CO2-Emission-Data-&#34;&gt;CO2 Emissions data&lt;/a&gt; . The first one by OpenAMEE and various forks is especially interesting. I will have to look into the scientific validation of the dataset tomorrow but it is a good start.&lt;/p&gt;
+
+&lt;p&gt;At this point however, it is clear there is no extensive public database of ecological footprint of your daily actions.&lt;/p&gt;
+
+&lt;p&gt;The other part of the challenge was &lt;em&gt;finding metrics&lt;/em&gt; to qualify daily actions. Interestingly, the CoolClimate calculator seems to correlate all activities with CO2 production. Isn&amp;rsquo;t using CO2 simplistic? Or is it really a standard? I hope I meet a climate change specialist to confirm or deny this tomorrow. Personally, I see &amp;ldquo;climate change&amp;rdquo; as one of the many modern issues that needs to be tackled. I&amp;rsquo;m not sure that pesticides, radioactivity or microplastics contribute to climate change for instance, but I see them as important plagues that need action. I might go againt the grain, but I would even rather see climate change rather than having our lands filled with microplastics and chemicals everywhere. Or maybe, CO2, CH4, harmful chemicals can be different components and responses, much alike calories, sleep patterns and mindset are presented in different screens in Gyroscope.&lt;/p&gt;
+
+&lt;p&gt;On the social side, I&amp;rsquo;ve received a lot of positive responses from good folks like Nicole Fu, on the other side of the ocean. She&amp;rsquo;s working on &lt;a href=&#34;https://thecrowd.charity&#34;&gt;The Crowd&lt;/a&gt; app, which compels you to pledge positive climate change. I&amp;rsquo;ll have to look into this tomorrow am. I&amp;rsquo;ve got also good support on Twitter and Facebook. This is great and a sign that we are going in a good direction.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s 7:30pm however and family duty calls. I&amp;rsquo;m wrapping this up and will be here tomorrow 9AM sharp&lt;/p&gt;
+
+&lt;h2 id=&#34;friday-13-sep-late-night-brainstorming&#34;&gt;Friday 13 Sep - Late Night Brainstorming&lt;/h2&gt;
+
+&lt;p&gt;I have given some thoughts on the footprintcalculator.org design, linked above. They do not tell you figures but rather tell you how many Earths would be needed to support your activities. I like this idea, as this is easy to explain to people, even outside climate change communities, and can also be illustrated elegantly.&lt;/p&gt;
+
+&lt;p&gt;Drive an SUV, eat red meat daily, spend thousands on plastic stuff you don&amp;rsquo;t need =&amp;gt; 4.5 Earths&lt;/p&gt;
+
+&lt;p&gt;Walk/Bike, produce your own veggies, work remotely =&amp;gt; 0.3 Earths&lt;/p&gt;
+
+&lt;p&gt;The OpenAMEE dataset mentioned earlier is also interesting, as it would be straightforward to map into a hierarchical database, like this:&lt;/p&gt;
+
+&lt;p&gt;root activity
+__ Transport activity 1.2 Earths
+      __ walking 0.02 Earths (or CO2 metric)
+      __ biking 0.25 Earths
+      __ public transport (subway, electric) 0.85 Earths
+      __ public transport (bus, gas) 1.1 Earths
+      __ electric car 1.6 Earths
+      __ ICE car 2.3 Earths
+      __ SUV 3.5 Earths
+      __ flying Boeing Dreamliner 7.5 Earths&lt;/p&gt;
+
+&lt;p&gt;You could sort siblings at the same level to get the min and max ecological footprint, the median, and also showcase alternative(s). For example, if you take the subway, the app could tell you that walking would have a lower ecological footprint but it would be definitively better than taking a truck for the same trip.&lt;/p&gt;
+
+&lt;p&gt;This doesn&amp;rsquo;t tell me yet how machine learning could be used. I could use Google&amp;rsquo;s &lt;a href=&#34;https://storage.googleapis.com/openimages/web/index.html&#34;&gt;Open Images V5&lt;/a&gt; to categorize pictures of activities uploaded. Or maybe do some NLP. This is hard right now to answer because datasets and outputs are not clear. It would be good if a machine learning researcher could look into this tomorrow.&lt;/p&gt;
+
+&lt;h2 id=&#34;saturday-14-sep-design-phase&#34;&gt;Saturday 14 Sep - Design phase&lt;/h2&gt;
+
+&lt;p&gt;Here is a tentative mockup:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://studiozenkai.com/images/hackathon-mockup.png&#34; alt=&#34;mockup&#34; title=&#34;[hackathon mockup]&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;One could add a picture of their flight. He can add flight duration, and then carbon intensity estimation is shown. This is added as one of his activity. At the end of the day, on the right side, a graph made up of his activities represents his &amp;ldquo;carbon map&amp;rdquo;. This is the key take-away from the app - knowing first what are the impact of each of your activities.&lt;/p&gt;
+
+&lt;p&gt;If the user does not enter any input, it is assumed his choices is similar to the baseline, i.e. other people in his city for transport, food, shopping and activities (work, entertainment etc.)&lt;/p&gt;
+
+&lt;p&gt;Imagine if it could connect to Alexa Smart Home, and deduce your energy consumption, cooking and other activities. Or it could tap into Garmin and many other popular data providers to provide better estimations. Machine Learning could be used further on top to improve carbon footprint estimations.&lt;/p&gt;
+
+&lt;p&gt;What do you think so far? Head over to Twitter or email me. I&amp;rsquo;d love to discuss&lt;/p&gt;
+
+&lt;h2 id=&#34;saturday-14-sep-discussions-and-first-code-lines&#34;&gt;Saturday 14 Sep - Discussions and first code lines&lt;/h2&gt;
+
+&lt;p&gt;I&amp;rsquo;ve talked to many people both online and offline, and the general consensus is that this project needs design, from how to ask for user inputs, to how to show information that does not demotivcate users. For example, somebody who is trying to make change in their life might feel discouraged by seeing the amounts of CO2 he generated recently.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/tmrowco/tmrowapp-contrib&#34;&gt;tmrow&lt;/a&gt; has been working on this issue for the past 3 years with a solid danish/french team. They have a mobile app and a community base. You can contribute calculations and data to the repository linked earlier. The application is not publicly available so it does limit the usefulness of the app.&lt;/p&gt;
+
+&lt;p&gt;Harry from &lt;a href=&#34;http://thecrowd.charity&#34;&gt;the Crowd Charity&lt;/a&gt; responded a lot of questions regarding datasets and also climate change practices. I feel privileged getting this information and hope to bring back with good work to the community in exchange.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s now less than 24 hours from Demo time in Montreal. Due to this time constraint, I have decided to build an API-based service where third-parties like The Crowd or other can query the carbon cost of various activities. So far, transport  category is covered, with data coming from OpenAMEE and calculations methods based on OpenAMEE sources. If there is no data for a category, the algorithm will look into children categories and get the median cost. All that&amp;rsquo;s left for the user is inputting the number of km for the transport.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://studiozenkai.com/images/hackathon-transport.png&#34; alt=&#34;transport&#34; title=&#34;[hackathon mockup]&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I do not foresee having a front-end tomorrow as I will have to work on the other categories such as food, personal, home and business.&lt;/p&gt;
+
+&lt;h2 id=&#34;sun-15-sep-final-and-wrap-up&#34;&gt;Sun 15 Sep - Final and Wrap-up&lt;/h2&gt;
+
+&lt;p&gt;Like in most hackathons, there was a severe lack of time towards the end.&lt;/p&gt;
+
+&lt;p&gt;I coded mechanically and did some major copy/pasting for data, as well as bulk csv import 🧟&lt;/p&gt;
+
+&lt;p&gt;The application allows you to add your activity, one after the other. It will take the CO2 produced and apply a multiplier. It also gets CH4 production and other greenhouse gas, plus also required energy. There are &amp;ldquo;stochiometry ratios&amp;rdquo; to get the equivalent CO2 for any CH4 produced, as well as public data on CO2 produced per kwH depending on your current location.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://studiozenkai.com/images/hackathon-final.png&#34; alt=&#34;final&#34; title=&#34;[hackathon final]&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In this case, the app sets the location to Canada. Here is a breakdown for these few examples:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;cycling does not produce greenhouse gases. This is good&lt;/li&gt;
+&lt;li&gt;the mini-bus activity was for 3 hours at 80kmh. The app calculates the distance and then divide by the number of participants to get 3.617 kg CO2. This is not bad as most people will produce more by driving their car in Canada for 3 hours.&lt;/li&gt;
+&lt;li&gt;there are various activities like washing machine and watching TV. We convert the energy required to CO2&lt;/li&gt;
+&lt;li&gt;the biggest culprit here is Dairy Cattle. Effectively, raising dairy cattle completely annihilates any climate change efforts. Dairy cattle produce a huge amount of CH4 and CH4 has a high CO2 ratio&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Engineering-wise, I did not do unfortunately any unit or functional testing. I hate myself but it was about having something up in 30mn vs having something well-engineered. Fortunately, all the calculations and mathematical modeling made sense. I cross-referenced with a few other public calculators.&lt;/p&gt;
+
+&lt;p&gt;Many other teams presented a working mobile app. I found it amazing that they would be able to work and get an accurate model, as well as build an Android or an iOS app. I didn&amp;rsquo;t even have time to do some css. I remember a few years ago teams would struggle even to get a single web app working. What&amp;rsquo;s up with that!&lt;/p&gt;
+
+&lt;p&gt;If you are interested (holla or tweet at @heri), I can put this online as a service.&lt;/p&gt;
+
+&lt;h2 id=&#34;monday-16-sep-future&#34;&gt;Monday 16 Sep - Future&lt;/h2&gt;
+
+&lt;p&gt;What&amp;rsquo;s next? To make this usable, the service needs to be tied to various data providers:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;MyFitnessPal logs your food. If I can connect to their API, I can associate each ingredient to their carbon footprint&lt;/li&gt;
+&lt;li&gt;I would need to find a trusted service that logs your car trips and your flights, plus the type of car driven. This needs research&lt;/li&gt;
+&lt;li&gt;There are popular fitness trackers such as Fitbit, Garmin or Google Fit that logs your bike and walking trips. This can be integrated and show your carbon intensity (or lack thereof)&lt;/li&gt;
+&lt;li&gt;It looks like due to privacy reasons, there is no public API for Smart Homes. I could be wrong, but there is no way for example to list what are your smart appliances and when they run with Alexa Home, or the Google/Apple equivalent&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Using these data providers would be a much more seamless experience for potential users, since they get immediate results, and potentially immediate recommendations.&lt;/p&gt;
+
+&lt;p&gt;I would love also to sit down with a climate change scientist to validate calculations. Plus good design people and marketing. Damn, that sounds like a team &amp;hellip; I&amp;rsquo;ll share this on social networks and see where it goes.&lt;/p&gt;
+
+&lt;p&gt;Thanks to the team at &lt;a href=&#34;https://launchlab.ai&#34;&gt;MTLNewTech&lt;/a&gt; and &lt;a href=&#34;https://launchlab.ai&#34;&gt;AI Launch Lab&lt;/a&gt; who have organized the hackathon. I know from first hand how much dedication it takes to create such an event spanning several days. The food was delicious, coffee was plenty and there was a good diversity of attendees. A special holla to Ilias Benjeloun who gave his 120% and came the whole 3 days, even though he got a cold towards the end.&lt;/p&gt;
 </description>
     </item>
     
@@ -378,6 +543,160 @@
     </item>
     
     <item>
+      <title>Starting a marketplace - Finding inspiration in the Pillars of The Earth</title>
+      <link>http://studiozenkai.com/post/marketplace-platform/</link>
+      <pubDate>Mon, 09 May 2016 15:35:26 EDT</pubDate>
+      
+      <guid>http://studiozenkai.com/post/marketplace-platform/</guid>
+      <description>
+
+&lt;blockquote&gt;
+&lt;p&gt;Note : This on-going article will be updated and extended regularly. Make sure to come back!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Their multiplication of AirBnb, Kickstarter and Uber clones in recent years have encouraged entrepreneurs to launch their own marketplaces.&lt;/p&gt;
+
+&lt;p&gt;In one hand, you entice merchants selling their products &amp;amp; services and on the other hand, you encourage visitors to come and buy.&lt;/p&gt;
+
+&lt;p&gt;It is one of the most difficult ventures.&lt;/p&gt;
+
+&lt;p&gt;Merchants are hard to convince if there are no buyers, and vice-versa. It&amp;rsquo;s the definition of a chicken and egg problem.&lt;/p&gt;
+
+&lt;p&gt;What makes a marketplace successful?&lt;/p&gt;
+
+&lt;p&gt;Instead of dry guides that are hard inspiring and leaves nothing to the imagination, I like to compare with the nascent wool marketplace in Ken Follet&amp;rsquo;s excellent &amp;ldquo;The Pillars of the Earth&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://studiozenkai.com/images/earth.png&#34; alt=&#34;The Pillars of the Earth&#34; title=&#34;The Pillars of the Earth&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s a gripping epic set in the middle ages, filled with human tales, genius and evil. The wool marketplace thrives in the Pillars thanks to a combination of :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;routes,&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;relic,&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;city,&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;emissaries,&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;annual fair,&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;and good rules.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;routes&#34;&gt;Routes&lt;/h2&gt;
+
+&lt;p&gt;In the middle ages, marketplaces appeared at the intersection of trafficked routes: roads, bridges, rivers, ports.&lt;/p&gt;
+
+&lt;p&gt;A toll bridge forces merchants to wait. Soon, a few would decide to exchange goods while waiting for entrance.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://studiozenkai.com/images/toll.jpg&#34; alt=&#34;road toll&#34; title=&#34;road toll&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The more routes, the better for the marketplace. If there are a couple of roads, a port, a toll bridge and a city, then a marketplace would thrive.&lt;/p&gt;
+
+&lt;p&gt;Interestingly, if routes have fluidity, such as an intersection of well-paved roads, there would be hardly a marketplace. Congestion create opportunities to meet for merchants or buyers.&lt;/p&gt;
+
+&lt;p&gt;On the Internet, &amp;ldquo;routes&amp;rdquo; are the different paths internet visitors take during their journey.&lt;/p&gt;
+
+&lt;p&gt;As a marketplace owner, your role is to create those routes. Even better, you can &lt;strong&gt;position your marketplace at the intersection of existing and well-trafficked routes&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;In 2016, users go back and forth search engines, email, media sites and blogs, social media, eCommerce sites and more. Those are the main routes you need to position your marketplace on.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://studiozenkai.com/images/traffic_internet.jpg&#34; alt=&#34;routes internet 2016&#34; title=&#34;routes internet 2016&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can place yourself on the Google search route with Adwords. This is done by all established marketplaces such as eBay or Amazon, and should be studied. SEO work can further augment this route, but takes persistence and time.&lt;/p&gt;
+
+&lt;p&gt;As mentioned, it is important to create &lt;em&gt;&amp;ldquo;congestion&amp;rdquo;&lt;/em&gt; within this flow. Visitors will &amp;ldquo;accidentally&amp;rdquo; go through your products, before they go on their journey.&lt;/p&gt;
+
+&lt;p&gt;You can add in a Twitter route. For example, a triathlon marketplace can contact or advertise to the &lt;a href=&#34;https://twitter.com/worldtriathlon/followers?lang=en&#34;&gt;followers of the International Triathlon Union&lt;/a&gt;. This can be efficient if you can sort the twitter users based on their biography and their tweets, and communicate in a positive way.&lt;/p&gt;
+
+&lt;p&gt;In a similar way, Facebook offers advertising solutions, based on users profile.&lt;/p&gt;
+
+&lt;p&gt;Strategic placement in a trusted blog can bring visitors with good intent. It is possible your marketplace brings amazing value for the blog&amp;rsquo;s readers, such as a free resource or utility on your site. For example, a 10 pages guide on how to do glamour portraits on your photography marketplace can be linked from a photo blog. Those qualified and trusting visitors will be most likely to buy.&lt;/p&gt;
+
+&lt;h2 id=&#34;relic&#34;&gt;Relic&lt;/h2&gt;
+
+&lt;p&gt;In Ken Follet&amp;rsquo;s epic, a relic revered by Christians brings believers from far away. It&amp;rsquo;s a small piece, but it is unique and appeals to the power of imagination.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://studiozenkai.com/images/buzz_relic.png&#34; alt=&#34;relic&#34; title=&#34;relic&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This is worth thinking about.&lt;/p&gt;
+
+&lt;p&gt;I believe a marketplace will only thrive if &lt;strong&gt;there is something worth talking about&lt;/strong&gt;. It can be provocative, crazy, unique, or difficult to own/share.&lt;/p&gt;
+
+&lt;p&gt;If you are doing a copycat, there is hardly a reason for anyone to care.&lt;/p&gt;
+
+&lt;p&gt;Uber is a great example, by creating heated discussions in cities around the world. Even those who have never taken taxis before feel obliged to delve into the discussion.&lt;/p&gt;
+
+&lt;p&gt;Amazon often have crazy ideas, such as Dash Buttons that will deliver commodities at the touch of a button or drone deliveries. It does not matter if Amazon will do one day drone delivery. Yet, it fascinates press and bloggers, and gets Amazon in the headlines.&lt;/p&gt;
+
+&lt;p&gt;What is your saint relic?&lt;/p&gt;
+
+&lt;h2 id=&#34;fair&#34;&gt;Fair&lt;/h2&gt;
+
+&lt;p&gt;Routes and a relic will drive natural traffic.&lt;/p&gt;
+
+&lt;p&gt;But it is possible to boost growth.&lt;/p&gt;
+
+&lt;p&gt;In the &amp;ldquo;Pillars of the Earth&amp;rdquo;, an annual fair brings traders as far as Southern Europe and buyers from across the Channel.&lt;/p&gt;
+
+&lt;p&gt;The fair has selected merchants with amazing merchandise as well as rich buyers, squeezed into one week.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://studiozenkai.com/images/gargiulo.jpg&#34; alt=&#34;annual wool marketplace the pillars of the earth&#34; title=&#34;annual wool marketplace the pillars of the earth&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In online marketplaces, fairs can be &lt;strong&gt;special, time-limited promotions&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;One good example is Alibaba&amp;rsquo;s yearly single sales day, totaling $9.3 billions. The event is promoted heavily online and offline with creative marketing. Special discounts are arranged with top brands such as Xiaomi. And there are of course FREE shipping and lots of amazing specials. Alibaba advertises that stocks are sold out in minutes during the single day, therefore creating a rush effect where buyers try to get any good deal on their hands.&lt;/p&gt;
+
+&lt;p&gt;Can you do something similar?&lt;/p&gt;
+
+&lt;h2 id=&#34;emissaries&#34;&gt;Emissaries&lt;/h2&gt;
+
+&lt;p&gt;Emissaries are sent all over Europe prior the fair to guarantee the arrival of traders and buyers.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://studiozenkai.com/images/town-crier.jpg&#34; alt=&#34;Emissary announcing marketplace and fair&#34; title=&#34;Emissary announcing marketplace and fair&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In the same manner, you can work on a well coordinated PR push to make sure all media and blogs cover your event.&lt;/p&gt;
+
+&lt;p&gt;You can also target popular conferences such as CES, SXSW and events popular in your trade. These usually have journalists, youtubers and bloggers hungry for news. Make sure to grab the headlines!&lt;/p&gt;
+
+&lt;h2 id=&#34;good-rules&#34;&gt;Good rules&lt;/h2&gt;
+
+&lt;p&gt;All above are good for a marketplace. Yet without security and order, it is just a shiny place to rob buyers.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Trust and security are the foundations of a marketplace&lt;/strong&gt;. A marketplace would not be sustainable over the years without them.&lt;/p&gt;
+
+&lt;p&gt;Merchants need to be selected.&lt;/p&gt;
+
+&lt;p&gt;Only qualified products from merchants can be displayed.&lt;/p&gt;
+
+&lt;p&gt;Offenders risk heavy fines and there is a prompt response from the marketplace manager in case of misbehavior.&lt;/p&gt;
+
+&lt;p&gt;Merchants and products are presented cleanly and in a professional manner.&lt;/p&gt;
+
+&lt;p&gt;There is a general feeling of security in going around the marketplace, with third-party checks, transaction security, and walls demanding strict authentication before entering.&lt;/p&gt;
+
+&lt;p&gt;Moreover, the infrastructure is stable and tested regularly for any bugs or attacks.&lt;/p&gt;
+
+&lt;p&gt;These rules are a priority for the marketplace manager, before revenues and profit.&lt;/p&gt;
+
+&lt;h2 id=&#34;city&#34;&gt;City&lt;/h2&gt;
+
+&lt;p&gt;In &amp;ldquo;The Pillars of The Earth&amp;rdquo;, a city and a cathedral signifies the durability of a marketplace. It provides talent, a base of customers, different entities such as a Chamber of Commerce and more. A rich ecosystem is born around the marketplace.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://studiozenkai.com/images/medieval-towns.jpg&#34; alt=&#34;medieval town ecosystem&#34; title=&#34;medieval town ecosystem&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In a similar manner, &lt;strong&gt;a marketplace becomes bigger than itself when it makes room for small and big actors&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;APIs allow third-party entrepreneurs to provide automation, analytics and tools for merchants.&lt;/p&gt;
+
+&lt;p&gt;Integration of mailing or third-party services adds partners interested in your success.&lt;/p&gt;
+
+&lt;p&gt;Side-projects can create consistent and regular traffic. You can provide free budgeting tools or free project planners. You can provide free guides hosted on the marketplace. These are all the &amp;ldquo;sweet&amp;rdquo; stuff making your marketplace much more interesting to visit.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Why my next laptop won&#39;t be an Apple</title>
       <link>http://studiozenkai.com/post/laptop-machine-learning/</link>
       <pubDate>Wed, 04 May 2016 15:35:26 EDT</pubDate>
@@ -504,6 +823,108 @@
 &lt;h3 id=&#34;notes&#34;&gt;Notes&lt;/h3&gt;
 
 &lt;p&gt;[1] &lt;a href=&#34;https://www.linkedin.com/grp/post/3078126-274143486&#34;&gt;Depending on your motherboard&lt;/a&gt;, you can be limited to 16GB of RAM. Make sure to check before expanding to 32 or 64GB&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>A test of patience</title>
+      <link>http://studiozenkai.com/post/patience-test-canada/</link>
+      <pubDate>Tue, 26 Apr 2016 07:35:26 EDT</pubDate>
+      
+      <guid>http://studiozenkai.com/post/patience-test-canada/</guid>
+      <description>
+
+&lt;blockquote&gt;
+&lt;p&gt;Author&amp;rsquo;s note : this article usually goes on &lt;a href=&#34;http://klaio.com/en/users/1/collections&#34;&gt;KLAIO&lt;/a&gt; with beautiful photographs but (1) I do not have photographs and (2) there are comments relevant to tech&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Like any other country, Canada has its share of contradictions.&lt;/p&gt;
+
+&lt;p&gt;It prides itself in having the lowest corruption in the world.&lt;/p&gt;
+
+&lt;p&gt;This is true in my experience. Federal workers are polite and helpful but they will not deviate in any case.&lt;/p&gt;
+
+&lt;p&gt;And most of the time, service is efficient and fast.&lt;/p&gt;
+
+&lt;p&gt;Yet there are times when it is horribly frustrating.&lt;/p&gt;
+
+&lt;p&gt;Waiting times in clinics and hospitals can be hours, if not days. Even an urgency can mean waiting for several hours.&lt;/p&gt;
+
+&lt;p&gt;The situation is hard to explain when half of the government&amp;rsquo;s budget goes into health care.&lt;/p&gt;
+
+&lt;p&gt;Another mystery is immigration. Applications carry the dreams of hopeful families and individuals throughout the world. They have paid a good sum of money and went to extra lengths to supply required papers and credentials.&lt;/p&gt;
+
+&lt;p&gt;But months will pass before they will hear a word from Immigration Canada. The envelope is opened with excitation, husbands and kids are called, and already a few are day dreaming about maple leaves and pictures with Canadian mounties. What a shock to read in the letter that Immigration Canada has opened the application.&lt;/p&gt;
+
+&lt;p&gt;The maple leaves dream darkens. Was the application lost and found by the post service? How does it take 3 months to open an envelope?&lt;/p&gt;
+
+&lt;p&gt;Little did they know that the vast majority take between 6 months and 2 years from applications to the final immigration visa.&lt;/p&gt;
+
+&lt;p&gt;In 2016, you can think of document digitizing, optical character recognition and powerful databases to process applications.&lt;/p&gt;
+
+&lt;p&gt;I imagine the main issues are verifying that individuals are who they claim to be (authentication), that they have clean backgrounds, and that said individuals will have a chance in a Canadian province.&lt;/p&gt;
+
+&lt;p&gt;It is fair to state Immigration Canada has massive archives of applications coming from all over the world. There should be also data on the results of analysis and the success of immigrants in Canada. A good machine learning system can correlate the cases [1], and then predict future applications.&lt;/p&gt;
+
+&lt;p&gt;Open envelope. Digitize documents. Get prediction from system. It should not take more than a few minutes.&lt;/p&gt;
+
+&lt;p&gt;A person with good human judgement can follow-up and can decide to &lt;em&gt;overturn&lt;/em&gt; the system&amp;rsquo;s prediction, if necessary.&lt;/p&gt;
+
+&lt;p&gt;This is done in airports to sort out good travellers and potential criminals.&lt;/p&gt;
+
+&lt;p&gt;But it seems Immigration Canada is still using a good old technology, namely eyes and hands.&lt;/p&gt;
+
+&lt;p&gt;But I digress. I did not mean to discuss technology but peaks of bureaucracy.&lt;/p&gt;
+
+&lt;p&gt;You will be reminded of the bureaucracy, once in a while, like the last time I went to the &amp;ldquo;Régie de l&amp;rsquo;Assurance Maladie&amp;rdquo;. This is where you ask for your RAMQ health insurance card.&lt;/p&gt;
+
+&lt;p&gt;Waiting at the RAMQ is torture for some.&lt;/p&gt;
+
+&lt;p&gt;I love it.&lt;/p&gt;
+
+&lt;p&gt;It is like being in an international airport and see diverse faces from all around the world.&lt;/p&gt;
+
+&lt;p&gt;I see a Chinese mother running after her young kid.&lt;/p&gt;
+
+&lt;p&gt;An arabic couple go through their papers.&lt;/p&gt;
+
+&lt;p&gt;A Russian girl was messenging her friends.&lt;/p&gt;
+
+&lt;p&gt;A group of French students were arguing about culture.&lt;/p&gt;
+
+&lt;p&gt;Two French-speaking africans were happy to meet again and speaking loudly.&lt;/p&gt;
+
+&lt;p&gt;Face after face, row after row, you think that for a moment, all humanity was in a Montréal building.&lt;/p&gt;
+
+&lt;p&gt;And this was everyone&amp;rsquo;s patience test.&lt;/p&gt;
+
+&lt;p&gt;Posters and high-definition screens taunt maximum waiting times of thirty minutes. Yes, you will get your RAMQ card in 10 business days! And you can email or phone if you are not happy.&lt;/p&gt;
+
+&lt;p&gt;I waited forty minutes. I smiled to the Romanian-born employee. Yes, it&amp;rsquo;s for a renewal. No, he does not know about ElectronicBox, my Internet Service Provider. No, I do not have other proof of residence with me.&lt;/p&gt;
+
+&lt;p&gt;I insisted. Finally, his coworkers confirmed it was indeed a &lt;em&gt;legit&lt;/em&gt; Internet provider.&lt;/p&gt;
+
+&lt;p&gt;They took a picture, and my adventure was finished for the day.&lt;/p&gt;
+
+&lt;p&gt;In Canadian provinces, a health card allows you to see a doctor or get medicine without paying full cost. Without it, you will have to fill form after form, and many services will simply be not available.&lt;/p&gt;
+
+&lt;p&gt;In my case, I went to the office in December.&lt;/p&gt;
+
+&lt;p&gt;Three months later, I received a letter asking for a proof of residence.&lt;/p&gt;
+
+&lt;p&gt;I do not know if there was a typo in the previous document or if the employee from Québec city did not know about ElectronicBox. Maybe it got lost? But I know that three months is rather long to open a file and realize a proof of residence cannot be accepted.&lt;/p&gt;
+
+&lt;p&gt;One would get angry about this. I don&amp;rsquo;t. Every country has its idiosyncrasies and this is just how Québec and Canada is [2]. You learn what matters (healthcare and taxes) and what doesn&amp;rsquo;t. Other countries will make a big deal about culture, or land ownership.&lt;/p&gt;
+
+&lt;p&gt;To each its own.&lt;/p&gt;
+
+&lt;p&gt;For me, I have sent since then an invoice from the electricity company. The company is owned by the government of Québec, and I guess they must have heard of it. It is now late March and I do hope I will get the card before I move out 1st of July.&lt;/p&gt;
+
+&lt;h3 id=&#34;notes&#34;&gt;Notes&lt;/h3&gt;
+
+&lt;p&gt;[1] See &lt;a href=&#34;http://studiozenkai.com/post/bots/&#34;&gt;previous post on bots&lt;/a&gt; to read about machine learning.&lt;/p&gt;
+
+&lt;p&gt;[2] Don&amp;rsquo;t mistake me, Canada and Québec are amazing countries. &lt;em&gt;Qui aîme bien chatie bien&lt;/em&gt;.&lt;/p&gt;
 </description>
     </item>
     

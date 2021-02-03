@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Studio Zenkai</title>
@@ -6,10 +6,30 @@
     <description>Recent content in Posts on Studio Zenkai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Sep 2019 15:30:20 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 02 Feb 2021 12:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://studiozenkai.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Starting an Airbnb vacation home</title>
+      <link>http://studiozenkai.com/post/airbnb-vacation-home/</link>
+      <pubDate>Tue, 02 Feb 2021 12:00:00 +0000</pubDate>
+      
+      <guid>http://studiozenkai.com/post/airbnb-vacation-home/</guid>
+      <description>One year ago, I decided to purchase a waterfront cottage. It would be in the Laurentians aka Quebec&amp;rsquo;s cottage country.
+In December and early January 2020, Twitter alerted me to the sanitary situation in China. It was clear it was coming this way. Since authorities didn&amp;rsquo;t seem to care, I thought it would be a complete disaster in North America, with the economy and infrastructure paralyzed. I also knew the stock market has been bullish for the past decade and bet it would crash.</description>
+    </item>
+    
+    <item>
+      <title>Dokomaps</title>
+      <link>http://studiozenkai.com/post/dokomaps/</link>
+      <pubDate>Fri, 01 Nov 2019 10:35:26 -0400</pubDate>
+      
+      <guid>http://studiozenkai.com/post/dokomaps/</guid>
+      <description>Aimable D. is a close friend since our engineering school days. Like me, he spent time in the corporate world. But he has also done multiple ventures, from eCommerce to corporate to consumer ventures.
+Now he is focused on dokomaps, along with Jules, who worked previously with him on other ventures. I am reviewing today Dokomaps to provide feedback, to showcase a good product, but also in the hope that Aimable reviews one of my current ventures, such as OutcomeReference :)</description>
+    </item>
     
     <item>
       <title>48 Hours Climate Change hackathon</title>
@@ -64,6 +84,19 @@ Code complexity Ruby&amp;rsquo;s simplicity and ease of use allows beginners and
     </item>
     
     <item>
+      <title>Starting a marketplace - Finding inspiration in the Pillars of The Earth</title>
+      <link>http://studiozenkai.com/post/marketplace-platform/</link>
+      <pubDate>Mon, 09 May 2016 15:35:26 -0400</pubDate>
+      
+      <guid>http://studiozenkai.com/post/marketplace-platform/</guid>
+      <description>Note : This on-going article will be updated and extended regularly. Make sure to come back!
+ Their multiplication of AirBnb, Kickstarter and Uber clones in recent years have encouraged entrepreneurs to launch their own marketplaces.
+In one hand, you entice merchants selling their products &amp;amp; services and on the other hand, you encourage visitors to come and buy.
+It is one of the most difficult ventures.
+Merchants are hard to convince if there are no buyers, and vice-versa.</description>
+    </item>
+    
+    <item>
       <title>Why my next laptop won&#39;t be an Apple</title>
       <link>http://studiozenkai.com/post/laptop-machine-learning/</link>
       <pubDate>Wed, 04 May 2016 15:35:26 -0400</pubDate>
@@ -71,7 +104,20 @@ Code complexity Ruby&amp;rsquo;s simplicity and ease of use allows beginners and
       <guid>http://studiozenkai.com/post/laptop-machine-learning/</guid>
       <description>Part I - Apple&amp;rsquo;s Craftmanship I have used the original macbook, the 13&amp;rdquo; MacBook Air, the 13&amp;rdquo; Macbook pro, and 15&amp;rdquo; Macbook pros.
 I loved the white plastic of the original macbook. It was better than any other computer I&amp;rsquo;ve used before, worked out of the box, and iMovie amazed me. Drag, drop, and five minutes later, you have a video.
-I thought this is what computing should be.</description>
+I thought this is what computing should be.
+When the hard drive died, I got a Macbook Air.</description>
+    </item>
+    
+    <item>
+      <title>A test of patience</title>
+      <link>http://studiozenkai.com/post/patience-test-canada/</link>
+      <pubDate>Tue, 26 Apr 2016 07:35:26 -0400</pubDate>
+      
+      <guid>http://studiozenkai.com/post/patience-test-canada/</guid>
+      <description>Author&amp;rsquo;s note : this article usually goes on KLAIO with beautiful photographs but (1) I do not have photographs and (2) there are comments relevant to tech
+ Like any other country, Canada has its share of contradictions.
+It prides itself in having the lowest corruption in the world.
+This is true in my experience. Federal workers are polite and helpful but they will not deviate in any case.</description>
     </item>
     
     <item>
@@ -103,11 +149,10 @@ I thought this is what computing should be.</description>
       <guid>http://studiozenkai.com/post/playbook/</guid>
       <description>Bonjour!
 Nous offrons une expertise technique pour un résultat de qualité dans le développement de plateformes transactionnelles, de financement, de médias:
- Étude et conception fonctionnelle et technique
- Développement de solutions front, middle ou back-office
- Développement d&amp;rsquo;applications iOS ou Android
- Conduite de projet sur les technologies Ruby, Javascript, Lua, et plateformes mobiles; utilisation de base de données MySQL, Postgresql, ou redis, mongodb, ElasticSearch, Solr
- Audit de code, de qualité et de performance des applications</description>
+  Étude et conception fonctionnelle et technique
+  Développement de solutions front, middle ou back-office
+  Développement d&amp;rsquo;applications iOS ou Android
+  Conduite de projet sur les technologies Ruby, Javascript, Lua, et plateformes mobiles; utilisation de base de données MySQL, Postgresql, ou redis, mongodb, ElasticSearch, Solr</description>
     </item>
     
     <item>

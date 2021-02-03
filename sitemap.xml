@@ -1,6 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://studiozenkai.com/post/</loc>
+    <lastmod>2021-02-02T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://studiozenkai.com/post/airbnb-vacation-home/</loc>
+    <lastmod>2021-02-02T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://studiozenkai.com/</loc>
+    <lastmod>2021-02-02T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://studiozenkai.com/post/dokomaps/</loc>
+    <lastmod>2019-11-01T10:35:26-04:00</lastmod>
+  </url>
   
   <url>
     <loc>http://studiozenkai.com/post/hackathon-challenge/</loc>
@@ -28,8 +48,18 @@
   </url>
   
   <url>
+    <loc>http://studiozenkai.com/post/marketplace-platform/</loc>
+    <lastmod>2016-05-09T15:35:26-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://studiozenkai.com/post/laptop-machine-learning/</loc>
     <lastmod>2016-05-04T15:35:26-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://studiozenkai.com/post/patience-test-canada/</loc>
+    <lastmod>2016-04-26T07:35:26-04:00</lastmod>
   </url>
   
   <url>
@@ -54,24 +84,10 @@
   
   <url>
     <loc>http://studiozenkai.com/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://studiozenkai.com/post/</loc>
-    <lastmod>2019-09-13T15:30:20-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://studiozenkai.com/</loc>
-    <lastmod>2019-09-13T15:30:20-04:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://studiozenkai.com/tags/</loc>
-    <priority>0</priority>
   </url>
   
 </urlset>

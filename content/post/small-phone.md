@@ -25,25 +25,17 @@ So for this Christmas, I will go against the grain to want less, not more.
 What I want:
 
 - 4 inch would be a good size to start with. I could forget in my pants pocket. I could put it in my runner shorts and go run for a couple of hours, without noticing the weight. 6 inches would not fit in those short shorts.
-
 - Make it waterproof, dust-proof and a minimum shock-proof so I don’t have a heart attack when a baby plays with it. 
-
 - Fingerprint sensor. Please, no face recognition. Showing my face doesn’t mean I want to unlock it.
-
 - Headphone jack
-
 - Large camera (1/2.3 to 1”) with computational photography.
-
 - Ideally, an expandable phone, such as being able to connect it to a raspberry pi.
 
 What I don’t want:
 
 - a phone made of glass or other luxury material. In the real world, a phone falls, is a toy for kids, is covered by sweat when you run, and bumped against coins and metal keys. And it not an object I am willing to replace by the latest trendy gizmo every 18 months.
-
 - a notch
-
 - a phone that costs $1000. 
-
 - an assistant that spies your browsing history, your location or your audio to serve ads. 
 
 All this somehow describes an iPhone 5S with an upgraded camera, with the durability of a Nokia 3310. I would get one. Wouldn't you? Let’s hope a product manager hears this somewhere.

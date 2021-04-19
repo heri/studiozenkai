@@ -29,13 +29,8 @@ Somewhere along the way, somebody at Microsoft got people working together and s
 Here are a few good things I would love to see to commit fully to Microsoft:
 
 - Rendering fonts and subpixels is sketchy compared to Apple, no matter the screen resolution. Is it possible to get one of your hardware designer to work on this?
-
 - I would love if Microsoft (or Apple) made fingerprint profiles. If I use my fingerprint, allow access to all apps and data. If it’s a kid’s fingerprint, disable the App Store, and allow Youtube for a limited time. If it’s not a recognized fingerprint, show a clean desktop, with the rest of the data encrypted. I see computing devices as tools. I can share a tool or a car with a family member, why can’t you do the same with computing devices?
-
 - A Linux Terminal. I would like to use shell scripts, docker in Windows, use ssh and any other tool I use in a Linux/Ubuntu machine. Please?
-
 - Forget about telemetry and offer complete privacy by default. We do not want devices that phones home or with back doors. If you treat us as pirates or irresponsible kids, we will become pirates and irresponsible kids. Please trust your users and we will trust you too.
-
 - I know you are working on a new browser. For the love of common sense, find a way to solve the GDPR, cookie popups, adtech and privacy abuses. Why can’t we have a browser setting “I accept/I do not accept cookies for all sites”? So it gets rids of all annoying popups. Why don’t we have the browser handle privacy? Browsers should be able to give websites a key to private data information, after a fingerprint confirmation. Once you are finished with a site, you could ask the browser to terminate access to the data.
-
 - Don’t annoy me with updates and questions. MacOS started asking constantly if it can update software and reboot. This interrupts my workflow and makes me think it is broken. If there is a critical update, and the core software needs to be updated, just do it, without interruption. If it is not a critical update, please give us an option “I will update my software manually” so we do not have to agree to a software update every week.

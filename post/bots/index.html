@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -17,8 +17,9 @@
     </script>
 </head>
 
-  <body>
-    <div id="scriptHeader">
+
+<body>
+  <div id="scriptHeader">
     <span class="mobile btn-mobile-menu">
             <i class="fa fa-bars btn-mobile-menu__icon"></i>
             <i class="fa fa-times btn-mobile-close__icon hidden"> </i>
@@ -124,118 +125,99 @@
     </header>
 </noscript>
 
-    <div class="content-wrapper">
-      <div class="content-wrapper__inner">
-        <div class="post">
-          <h1>Why bots are a thing now</h1>
-          <span class="post-date">Mon, Apr 18, 2016</span>
-          
-
-<p>Upon hearing about Facebook and Microsoft efforts to deploy bot platforms, a friend reacted:</p>
-
+  <div class="content-wrapper">
+    <div class="content-wrapper__inner">
+      <div class="post">
+        <h1>Why bots are a thing now</h1>
+        <span class="post-date">Mon, Apr 18, 2016</span>
+        <p>Upon hearing about Facebook and Microsoft efforts to deploy bot platforms, a friend reacted:</p>
 <blockquote>
 <p>So bots are a thing now? I programmed bots 20 years ago</p>
 </blockquote>
-
 <p>He is a successful technology entrepreneur and has developed systems on many platforms. I can understand him. There were tutorials in kids&rsquo; magazines on writing a &ldquo;Hello World&rdquo; bot on MS-DOS 20 years ago. More impressive were the Artificial Intelligence (A.I.) found in games like Warcraft 3 or Command &amp; Conquer. Friends would spend countless nights trying to beat the A.I. For everyone else, it would be the Clipper found in Microsoft Word. It had personality and would show tips.</p>
-
 <p>At that time, bots and A.I. were rule-based. &ldquo;If player produces infantry, produce infantry-killing robots&rdquo;. &ldquo;If user clicks print, show links on how to print&rdquo;. To get user satisfaction, you need to write rules covering all cases, as well as the exceptions. It is a creative and long but easy job.</p>
-
 <p>But Microsoft&rsquo;s clipper or video games AI showed their limits. <em>Apart from clear cases, bots could not process subtle situations</em>. Typing a wrong letter would leave the bot stuck for example. Using a different expression would not work. Creative players would find ways to beat the A.I. in ways unseen by video game designers.</p>
-
 <p>Twenty years later, bots and A.I. seem to be commercial hype by bored journalists, like 3D movies two years ago. You can reuse old code, add a few words like A.I or &ldquo;intelligent&rdquo; in a press release, and get coverage by gullible bloggers. Fast forward a few months and you get millions from investors.</p>
-
 <p>The example is not far-fetched. The majority of startups on Techcrunch do not have true technology innovation. Yet, there is true disruption. Here is why.</p>
-
 <h2 id="bots-in-a-mobile-world">Bots in a mobile world</h2>
-
 <p>In East Africa or Asia, there is prevalence of text as user interface. When the West worked on rich graphic interfaces with lush animation, text messages provides <a href="https://en.wikipedia.org/wiki/M-Pesa">mobile banking</a>, mobile communication and commerce elsewhere.</p>
-
 <p>Text messages are lightweight asynchronous. With each text, the other party can get more information and provide even better service. Ultimately, it is a transparent interface with the promise of better meaning and deeper relationship.</p>
-
 <p>Text messages is also the most convenient when you are on the go. Who has time to admire rich graphics when you are walking on a busy New York city sidewalk?</p>
-
 <p>Text messages allow you also to cut through all the decorum. Sign-up, confirm email, create profile, navigate, search, compare, view criterias, add to favorites, reserve, confirm, add shipping address, add credit card number, add billing address, confirm again. Who has patience for all that? The idea of using natural language instead of the artificial constructs of sites and apps is indeed more powerful. If rich media is more helpful, it is possible to send a link to a picture or a map.</p>
-
-<p><img src="/images/buttons.jpg" alt="Rich interfaces in text communication" title="[Rich interfaces in text communication]" /></p>
-
+<p><img src="/images/buttons.jpg" alt="Rich interfaces in text communication" title="[Rich interfaces in text communication]"></p>
 <p>Text messages is also the unifying interface, from the homeless person who is using an old Nokia, the executive with the Thinkpad to the hipster with an iPhone. It is accessible, from power users to disabled groups.</p>
-
 <p>Time is definitively ripe for text as the main interface.</p>
-
 <h2 id="advances-in-machine-learning">Advances in Machine Learning</h2>
-
 <p>In addition, research in machine learning [1] and especially <a href="https://en.wikipedia.org/wiki/Convolutional_neural_network">deep neural networks</a> promise better handling of user requests.</p>
-
 <p>Machine Learning feeds real-world data to an algorithm and correlate them with positive or negative outcomes. After testing, the algorithm is able to predict an outcome from new data.</p>
-
 <p>A simple case would be guessing the gender. A researcher would pick features such as weight and height, and can set aside data to test later if parameters are good. A good machine learning algorithm would associate a person with shorter height and lesser weight to female gender:</p>
-
-<p><img src="/images/rplot.png" alt="Gender weight height" title="[Gender weight height" /></p>
-
+<p><img src="/images/rplot.png" alt="Gender weight height" title="[Gender weight height"></p>
 <p><em>Using this machine learning concept in bots would provide something different from decades ago</em>. Previously, &ldquo;bots&rdquo; could only process discrete cases. In the case of gender search, a programmer would write rules. &ldquo;If height &lt; 65 and weight &lt; 150 pounds, then person is female&rdquo;. But what about a person who is tall and lightweight?  Machine learning can cover the continuity of cases and even try guessing &ldquo;out-of-bounds&rdquo; cases.</p>
-
 <p>Mathematically, machine learning is in essence solving an equation and doing a series of matrix multiplications and transpositions. It is known by researchers in universities and proved useful in industry such as signal processing or basic optical character recognition. However, it never had true commercial breakthrough.</p>
-
 <p>Until we had deep neural networks, also called deep learning.</p>
-
 <p>Deep neural networks, inspired by biological systems, puts multiple layers together and feeds forward data. A layer would process a sub-section of the data, send forward a tiny bit of information, and little by little, the system would &ldquo;get&rdquo; the bigger picture. Other deep neural networks correlate the sequence of data, making sense for example of word order in a sentence. The idea of deep neural networks was interesting but not deemed practical initially due to extreme cost of computation. A traditional machine learning algorithm already needs fast computers, so how can you find a computer able to process 10, 12, or 30 layers? Graphic Processing Unit cards, such as NVIDIA&rsquo;s, brought however realistic training times. A gaming laptop with Torch or caffe libraries can do successful image analysis, natural language processing or beat champions in the case of Google&rsquo;s AlphaGo.</p>
-
 <p>Crafting a successful a machine learning algorithm is not trivial. Deep neural networks are even more complex:</p>
-
 <ul>
-<li><p>There are libraries like TensorFlow which makes the job easier but it still takes a PhD or at least a Master of sciences to craft an innovative algorithm, with prerequisites in computer science and statistics.</p></li>
-
-<li><p>When we have amazing image and video processing, Natural Language Processing is still in its infancy. Lack of structured data is one of the issues.</p></li>
-
-<li><p>If deep neural networks can in theory compute any function, you need diverse, extensive, and well annotated data in a field where user requests are repetitive. This is seldom the case.</p></li>
-
-<li><p>It is impossible with current technology to process different requests, even with deep learning. For example, you cannot craft a bot good at pizza delivery requests that would also program your music playlist. This is the main reason Facebook is opening its Messenger Platform so third-parties can develop expertise in niches.</p></li>
-
-<li><p>Yet a machine learning project is not guaranteed success. You <em>have to accept potential failure</em>, when most people think you can get a technology project succeed by throwing money and time at it.</p></li>
+<li>
+<p>There are libraries like TensorFlow which makes the job easier but it still takes a PhD or at least a Master of sciences to craft an innovative algorithm, with prerequisites in computer science and statistics.</p>
+</li>
+<li>
+<p>When we have amazing image and video processing, Natural Language Processing is still in its infancy. Lack of structured data is one of the issues.</p>
+</li>
+<li>
+<p>If deep neural networks can in theory compute any function, you need diverse, extensive, and well annotated data in a field where user requests are repetitive. This is seldom the case.</p>
+</li>
+<li>
+<p>It is impossible with current technology to process different requests, even with deep learning. For example, you cannot craft a bot good at pizza delivery requests that would also program your music playlist. This is the main reason Facebook is opening its Messenger Platform so third-parties can develop expertise in niches.</p>
+</li>
+<li>
+<p>Yet a machine learning project is not guaranteed success. You <em>have to accept potential failure</em>, when most people think you can get a technology project succeed by throwing money and time at it.</p>
+</li>
 </ul>
-
 <p>For example, I can get the following with data pulled from Yelp. However it&rsquo;s as much work as developing a web app to get satisfying responses from the bot.</p>
-
-<p><img src="/images/italian.png" alt="Places recommendation" title="[Places recommendation]" /></p>
-
+<p><img src="/images/italian.png" alt="Places recommendation" title="[Places recommendation]"></p>
 <p>Yet, machine learning means a focus on &ldquo;hard&rdquo; science, and that&rsquo;s something I celebrate. It is also the promise of wider technology accessibility.</p>
-
 <h2 id="business-use-case">Business use case</h2>
-
 <p>If a convolutional neural network can beat go world champions, you can imagine simple and practical cases. With enough training data and smart feature selection, you could have:</p>
-
-<p><img src="/images/bot-dentist.jpg" alt="Dentist" title="[bot dentist]" /></p>
-
+<p><img src="/images/bot-dentist.jpg" alt="Dentist" title="[bot dentist]"></p>
 <p>This bot would check in an availability calendar, and provide triage for new customers. Success would depend on good tagging of customer interactions and offering good options that leaves little room for ambiguity.</p>
-
 <p>A human assistant would provide better service with good empathy, but that person would not be available at 3AM when the tooth hurts!</p>
-
 <p>In the same way, you could rent a car or an AirBnb. The bot can go into the database of products and match with availability calendars.</p>
-
 <p>If you <a href="https://github.com/heri/JuliaBot">add background processes</a>, you can also design bots searching for optimal prices and would alert users when prices go below a certain treshold. This is where you can imagine use cases not covered by mobile or web apps. Set reminders, check automatically on loved ones, work out project details with team members&hellip;</p>
-
 <p>The icing on the cake would be crafting messages that would be personal, emotional, friendly and at times more talkative to build rapport, and why not, have users enjoy the service [2]. Tools like <a href="https://smooch.io/">smooch.io</a> can help a seamless transition between bot replies and actual responses by a human, without customers knowing it.</p>
-
 <p>This is what I am currently researching. There is already a framework to process user requests and go into a calendar and a SQL database. The proof-of-concept can also access third-party REST APIs. If you have a database of customer communications annotated with appropriate responses, we can work together to see how bots can automate and increase customer outreach.</p>
-
 <h3 id="notes">Notes</h3>
-
 <p>[1] A good introduction to Machine Learning is Andrew Ng&rsquo;s course <a href="https://www.coursera.org/learn/machine-learning/home/info?source=phoenixCdp2016AbTest">https://www.coursera.org/learn/machine-learning/home/info?source=phoenixCdp2016AbTest</a></p>
-
 <p>[2] The movie &ldquo;Her&rdquo; portrays well a bot with good rapport. For practical examples, Microsoft is already offering a bot in China <a href="http://www.geekwire.com/2015/people-china-love-microsofts-xiaoice-virtual-companion-says-artificial-intelligence/">http://www.geekwire.com/2015/people-china-love-microsofts-xiaoice-virtual-companion-says-artificial-intelligence/</a></p>
 
-          <div class="sharing">
+        <div class="sharing">
 <p>© Heri Rakotomalala. All rights reserved. Powered by <a href="https://www.digitalocean.com/?refcode=ef57f6ccd2d8">Digital Ocean</a></p>
 
 <p>Heri Rakotomalala is an engineer working on small and innovative projects in Montréal. Originally from Madagascar, he has lived 7 years in East Africa, studied Engineering and made friends in France, built a community building in Esteli, Nicaragua and is taking pictures and coding in Montréal, Canada. This site cover technology work.</p>
 
 </div>
 
-        </div>
+
+        <div id="disqus_thread"></div>
+        <script>
+          
+
+          
+
+          (function () { 
+            var d = document, s = d.createElement('script');
+            s.src = 'https://studiozenkai.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+
       </div>
     </div>
+  </div>
 
-  </body>
-  
+</body>
+
+
 </html>

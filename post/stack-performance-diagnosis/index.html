@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -17,8 +17,9 @@
     </script>
 </head>
 
-  <body>
-    <div id="scriptHeader">
+
+<body>
+  <div id="scriptHeader">
     <span class="mobile btn-mobile-menu">
             <i class="fa fa-bars btn-mobile-menu__icon"></i>
             <i class="fa fa-times btn-mobile-close__icon hidden"> </i>
@@ -124,12 +125,12 @@
     </header>
 </noscript>
 
-    <div class="content-wrapper">
-      <div class="content-wrapper__inner">
-        <div class="post">
-          <h1>Troubleshooting a web application</h1>
-          <span class="post-date">Tue, Apr 13, 2021</span>
-          <p>How do you diagnose a slow web application? What about an unresponsive web application?</p>
+  <div class="content-wrapper">
+    <div class="content-wrapper__inner">
+      <div class="post">
+        <h1>Troubleshooting a web application</h1>
+        <span class="post-date">Tue, Apr 13, 2021</span>
+        <p>How do you diagnose a slow web application? What about an unresponsive web application?</p>
 <p>Those are questions I asked when interviewing recently developers. The questions are simple to understand yet complex to answer. Many applicants study data structures or various algorithms. Few  have a holistic view of web applications, due to lack of experience or because of niche specializations. They often work on a specific part of a web project, and have little appreciation of work done in back-end, front-end, devops or other areas.</p>
 <p>Here are a few answers I expected in case of a slow application.</p>
 <p>Monitoring tools is the first step. If there is no monitoring, then install or integrate one of the commercially available tools. Otherwise, it is like a doctor guessing what a patient has without doing any history, physical examination let alone blood work. Monitoring should output detailed information on past queries as well as exactly application stack trace. Be aware that certain monitoring tools do not log killed queries, such as gunicorn killing a worker if there is no response after 30 seconds.</p>
@@ -161,17 +162,34 @@
 <p>Fortunately, it is easy to write a bash script to automate checks for all the steps above and pintpoint issues. Additionally, most projects have a sysadmins who will take responsability for this. However, knowing how a web application works won&rsquo;t hurt you.</p>
 <p>I hope all the above makes sense and helps you next time you have these issues or get the question. Until then, happy programming!</p>
 
-          <div class="sharing">
+        <div class="sharing">
 <p>© Heri Rakotomalala. All rights reserved. Powered by <a href="https://www.digitalocean.com/?refcode=ef57f6ccd2d8">Digital Ocean</a></p>
 
 <p>Heri Rakotomalala is an engineer working on small and innovative projects in Montréal. Originally from Madagascar, he has lived 7 years in East Africa, studied Engineering and made friends in France, built a community building in Esteli, Nicaragua and is taking pictures and coding in Montréal, Canada. This site cover technology work.</p>
 
 </div>
 
-        </div>
+
+        <div id="disqus_thread"></div>
+        <script>
+          
+
+          
+
+          (function () { 
+            var d = document, s = d.createElement('script');
+            s.src = 'https://studiozenkai.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+
       </div>
     </div>
+  </div>
 
-  </body>
-  
+</body>
+
+
 </html>

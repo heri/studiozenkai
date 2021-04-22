@@ -26,7 +26,7 @@ It is obvious the climate emergency is going to practically change our short and
 
 As a private citizen, what can one do? If you haven't done yet, take steps to secure your future. Don't live in a water scarce zone or be in a country negatively impacted by climate change. You cannot also secure a future if your job and skills belong to an "industrial" age.
 
-What is also honourable and good is take personal steps to fight climate change. It can mean reducing your environmental footprint, by reducing consumption and support thriving nature. Grow trees, plants and veggies, produce your own energy, stop buying "stuff", minimize car trips & flights etc.
+What is also honourable and good is take personal steps to fight climate change. It can mean reducing your environmental footprint, by reducing consumption and why not, developing nature. Grow trees, plants and veggies, produce your own energy, stop buying "stuff", minimize car trips & flights etc.
 
 ![greenhouse photo](/images/greenhouse.jpg "[greenhouse photo]")
 Greenhouse Photo by [Zanda](https://unsplash.com/@zanda_photography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)

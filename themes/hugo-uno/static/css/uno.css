@@ -1865,7 +1865,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #3D4260; }
+  color: blue; }
   a:hover {
     color: #1f2231;
     -o-transition: .5s;

@@ -14,7 +14,7 @@ The origin of the disease was little discussed. It is clear for me though that h
 Deforestation Photo by [Dave Herring](https://unsplash.com/@daveherring?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
 
-Previous pandemics in Asia and others like Ebola in Africa tells us this is not a unique occurence. It is plausible another pandemic with high transmission rate will hit us in the future. It is also plausible we will not be able to discover an efficient vaccine. What then?
+Previous pandemics in Asia and others like Ebola in Africa tells us this is not a unique occurence. It is plausible another pandemic with high transmission rate will hit us in the short term. It is also plausible we will not be able to discover an efficient vaccine. What then?
 
 Climate change is not just mild heat discomfort in the summer. There were many factors at play, but one of the main origins of the civil war in Syria was drought. Farmers running out of water for their crops had no choice but emigrate to the cities, fuelling discontent and riots until civil war erupted. I can see the same scenario occur in Iraq, Sudan, Yemen, Tchad, and many other countries. Civilans will flee and then will find refugee in western countries, straining the infrastructure.
 
@@ -26,10 +26,10 @@ It is obvious the climate emergency is going to practically change our short and
 
 As a private citizen, what can one do? If you haven't done yet, take steps to secure your future. You cannot fight nature. Don't live in a water scarce zone or be in a country negatively impacted by climate change. You cannot also secure a future if your job and skills belong to an "industrial" age.
 
-What is also honourable and good is take personal steps to fight climate change. It can mean reducing your environmental footprint, by reducing consumption and why not, support nature. Grow trees, plants and veggies, produce your own energy, stop buying "stuff", minimize car trips & flights etc.
+What is also honourable and good is take personal steps to fight climate change. It can mean reducing your environmental footprint, by reducing consumption and support thriving nature. Grow trees, plants and veggies, produce your own energy, stop buying "stuff", minimize car trips & flights etc.
 
 ![greenhouse photo](/images/greenhouse.jpg "[greenhouse photo]")
-Greenhouse Photo by [Adrien Olichon](https://unsplash.com/@adrienolichon?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+Greenhouse Photo by [Zanda](https://unsplash.com/@zanda_photography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
 ![wind energy photo](/images/wind-energy.jpg "[wind energy photo]")
 Wind Farms Photo by [Karsten Würth](https://unsplash.com/@karsten_wuerth?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)

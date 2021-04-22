@@ -6,10 +6,31 @@
     <description>Recent content in Posts on Studio Zenkai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 Feb 2021 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 22 Apr 2021 09:35:26 -0400</lastBuildDate>
     
 	<atom:link href="http://studiozenkai.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Climate Change for you and me</title>
+      <link>http://studiozenkai.com/post/climate-change-you-me/</link>
+      <pubDate>Thu, 22 Apr 2021 09:35:26 -0400</pubDate>
+      
+      <guid>http://studiozenkai.com/post/climate-change-you-me/</guid>
+      <description>Today is Earth day and an excellent opportunity to reflect on human&amp;rsquo;s environmental impact.
+The pandemic hit countries like a truck and changed overnight our ways of working or interacting with others. Many lost their jobs, others went into depression or worse got infected with COVID-19.
+The origin of the disease was little discussed. It is clear for me though that human&amp;rsquo;s cancerous growth, especially deforestation, is linked to the pandemic.</description>
+    </item>
+    
+    <item>
+      <title>Troubleshooting a web application</title>
+      <link>http://studiozenkai.com/post/stack-performance-diagnosis/</link>
+      <pubDate>Tue, 13 Apr 2021 10:35:26 -0400</pubDate>
+      
+      <guid>http://studiozenkai.com/post/stack-performance-diagnosis/</guid>
+      <description>How do you diagnose a slow web application? What about an unresponsive web application?
+Those are questions I asked when interviewing recently developers. The questions are simple to understand yet complex to answer. Many applicants study data structures or various algorithms. Few have a holistic view of web applications, due to lack of experience or because of niche specializations. They often work on a specific part of a web project, and have little appreciation of work done in back-end, front-end, devops or other areas.</description>
+    </item>
     
     <item>
       <title>Starting an Airbnb vacation home</title>

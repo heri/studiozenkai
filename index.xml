@@ -6,15 +6,90 @@
     <language>en-us</language>
     
     
-    <updated>Tue, 02 Feb 2021 12:00:00 &#43;0000</updated>
+    <updated>Thu, 08 Apr 2021 10:35:26 EDT</updated>
     
     <item>
       <title>Posts</title>
       <link>http://studiozenkai.com/post/</link>
-      <pubDate>Tue, 02 Feb 2021 12:00:00 &#43;0000</pubDate>
+      <pubDate>Tue, 13 Apr 2021 10:35:26 EDT</pubDate>
       
       <guid>http://studiozenkai.com/post/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>How to Approach Data Engineering</title>
+      <link>http://studiozenkai.com/how-to-data-engineer/</link>
+      <pubDate>Thu, 08 Apr 2021 10:35:26 EDT</pubDate>
+      
+      <guid>http://studiozenkai.com/how-to-data-engineer/</guid>
+      <description>&lt;p&gt;First, what is a data engineer?&lt;/p&gt;
+&lt;p&gt;Data Engineer is the ability to process all kinds of data that the business needs and make them available in a digestible format for core business needs.&lt;/p&gt;
+&lt;p&gt;The data can come from plain files, open source or proprietary databases, excel sheets, external data available only via an API or it can even be written on pieces of paper.&lt;/p&gt;
+&lt;p&gt;Often the data is mismatched or using different data standards, and have to be standardized in the format that your business is using. You might also have to fill in the blanks.&lt;/p&gt;
+&lt;p&gt;All these are transformed using a function or a machine learning model into a dataset that can be easily consulted or displayed on a business dashboard. Vice presidents can see revenue trends. Marketing managers can extract customer segments willing to spend more. External partners can re-use the enhanced data made available under an API.&lt;/p&gt;
+&lt;p&gt;Since Artificial Intelligence (AI) became trendy, or should I say put on a pedestal in the tech world, Data Engineering quickly became a core piece key to deliver enough data to Data Scientists. If data cannot be imported easily into a dataframe, there is no machine learning model. In this way, Data Engineers can be seen as the bridge between AI and traditional software systems.&lt;/p&gt;
+&lt;p&gt;You could almost compare a data engineer to a chef who will use raw material and will transform them into a delicious dish that can be eaten. A little bit of magic, a lot of attention and hard work, and a few trusted tools :)&lt;/p&gt;
+&lt;p&gt;Now the goal of this article is not to write a guide on how to become a data engineer. There are multiple guides and courses that you find on the Internet. Rather, this article highlights what&amp;rsquo;s important for me in data engineering, and what&amp;rsquo;s not. Notice the &amp;ldquo;for me&amp;rdquo;. I focus on skills that multiply productivity or technologies that allow me to be a one-man wonder startup and deliver . Others will adopt technologies that are a better fit for teams, and there is nothing wrong with that. To each his own.&lt;/p&gt;
+&lt;p&gt;First, despite all the trends or what&amp;rsquo;s advertised in job listings, you do not have to learn a bunch of new technologies to do data engineering. I have developed a data pipeline that processes daily millions of electronic gaming machines sessions. I used Ruby on Rails and Sidekiq, stable open source technologies that existed ten years ago. Jobs run every minute and every day and output readily usable data. Many others will argue that such as setup would need instead Kafka, a data lake plus an autoscaling architecture, and so on. But my setup hasn&amp;rsquo;t had any issues. And since it&amp;rsquo;s written in Ruby, pretty much everyone in the team can easily update the jobs to respond to any business needs. We were also able to put it into production in record time. So my advice is : before jumping into courses or new github repos, look into libraries for your favorite language. Maybe you can make things work for you easily :)&lt;/p&gt;
+&lt;p&gt;Does that mean you don&amp;rsquo;t have to learn anything?&lt;/p&gt;
+&lt;p&gt;Actually, if you want to make a difference, there are few worth learning:&lt;/p&gt;
+&lt;p&gt;Being able to write detailed SQL requests with JOIN, GROUP, and other sql common operators allows you to retrieve quickly. Relying too much on an ORM will produce slow requests, inadequate data that have to be filtered and transformed. Other users will complain because you hog the data sources. Hint : if you have to iterate through rows, then you might have missed an opportunity to do a smart SELECT&lt;/p&gt;
+&lt;p&gt;Another library worth it is Python&amp;rsquo;s pandas, and more specifically dataframes. You can process and transform large amounts of data, and it easy to optimize performance, once the implementation works. There are also many other compatible Python packages that extends the usability, such as packages to connect to &amp;ldquo;exotic&amp;rdquo; sources of data.&lt;/p&gt;
+&lt;p&gt;Finally, knowing how to use docker and kubernetes allows you to scale easily. Setup once, never worry later about infrastructure. This coupled with pandas above can make you a one-man army that can chew effortlessly through petabytes of data.&lt;/p&gt;
+&lt;p&gt;My third advice is to be proactive on data quality. Far too often, data engineers sit back and only act when there are bugs or manager requests. Then, they have to investigate to discover there was a critical issue in the pipeline that started days ago. Ideally, you should have an eye on data inputs. See how data is distributed, the consistency, standard deviations, mean, min, max and trends. I often visualize graphically columns. It gives me insights on what is going on and I can foresee potential issues. Or it can also give you clues on how to label or categorize.&lt;/p&gt;
+&lt;p&gt;It is possible to use here the same tools in traditional web development : automated unit and integration testing, health metrics, monitoring and so on. Pick the ones that you already use, adapt them and get alerts for any non-standard deviation :)&lt;/p&gt;
+&lt;p&gt;If you do well at this step, you will soon have consistent quality data, which is critical for any small and large business. You will be able to deliver amazing graphs or an accurate machine learning model and have an edge on others.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Learning Python, from a Rubyist&#39;s perspective</title>
+      <link>http://studiozenkai.com/ruby-to-python/</link>
+      <pubDate>Mon, 08 Mar 2021 10:35:26 -0400</pubDate>
+      
+      <guid>http://studiozenkai.com/ruby-to-python/</guid>
+      <description>&lt;p&gt;before :  autonomous RC Car
+now : data engineering , ETLs, plus serving tensorflow models on a flask web api&lt;/p&gt;
+&lt;p&gt;common&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;intuitive&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;lots of libraries&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;hardware&lt;/li&gt;
+&lt;li&gt;dataframe, numpy&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;speed&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;compiled to C&lt;/li&gt;
+&lt;li&gt;gpu&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;going backwards.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;uncanny similarity. You can read it, and understand it. But then when you try to make it your own, it doesn&amp;rsquo;t work out because actually there&amp;rsquo;s something tiny that&amp;rsquo;s different.&lt;/li&gt;
+&lt;li&gt;having to write len(object)&lt;/li&gt;
+&lt;li&gt;no magic stuff. needs an explicit convert to dict , to list and so on&lt;/li&gt;
+&lt;li&gt;lots of poeople who are interested in the beauty of code
+&lt;ul&gt;
+&lt;li&gt;and then lots of people who copy and paste&lt;/li&gt;
+&lt;li&gt;also lots of people who are fascists and then criticize you for not following standards&lt;/li&gt;
+&lt;li&gt;so if this is building a house, this is the person who criticize you because you put 4 layers of paint instead of 3 but didn&amp;rsquo;t see that the house is crooked in itself&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;indenting? wtf are we back to high school?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So what&amp;rsquo;s the future?&lt;/p&gt;
+&lt;p&gt;Is Heri going to be a Python developer? or a Ruby developer&lt;/p&gt;
+&lt;p&gt;There&amp;rsquo;s something for sure : Deep learning, autonomous robots. And that is Pythin world. And only for that I would do more Python.&lt;/p&gt;
+&lt;p&gt;You &lt;em&gt;cannot&lt;/em&gt; forgot Ruby or Rails though. It&amp;rsquo;s still by far the fastest way to output a web2.0 application - think shopify, github. It&amp;rsquo;s a king for hackathons, small to mid-sized projects. I still code projects&lt;/p&gt;
+</description>
     </item>
     
   </channel>

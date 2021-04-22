@@ -5,3 +5,6 @@ twitter = "heri"
 github = "heri"
 email = "heri@studiozenkai.com"
 theme = "hugo-uno"
+[params]
+  author = "Heri"
+  description = "Studio Zenkai is dedicated to the craft of programming, hardware hacking, photography, machine learning and how to live sensibly."

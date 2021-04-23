@@ -24,7 +24,7 @@ Water scarcity is not just for "poor countries". It is a regular occurence in Ca
 
 It is obvious the climate emergency is going to practically change our short and long term future. The pandemic substantially increased the costs of basic goods such as food and housing. I expect price of land, water and energy to further increase in the next decade. Perhaps new security services will be needed.
 
-As a private citizen, what can one do? If you haven't done yet, take steps to secure your future. Don't live in a water scarce zone or be in a country negatively impacted by climate change. You cannot also secure a future if your job and skills belong to an "industrial" age.
+As a private citizen, what can one do? If you haven't done yet, take steps to secure your future. Don't live in a water scarce zone or be in a country negatively impacted by climate change. You cannot also secure a future if your job and skills belong to an "oils & plastics" age.
 
 What is also honourable and good is take personal steps to fight climate change. It can mean reducing your environmental footprint, by reducing consumption and why not, developing nature. Grow trees, plants and veggies, produce your own energy, stop buying "stuff", recycle & reuse, minimize car trips & flights etc.
 

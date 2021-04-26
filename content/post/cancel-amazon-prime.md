@@ -4,7 +4,7 @@ title = "Why I am cancelling Amazon Prime"
 
 +++
 
-I decided this morning to cancel my Amazon Prime membership. I used it for free prime delivery, and also for occasional prime videos, such as the [excellent Elementary](https://www.amazon.com/Elementary-Season-1/dp/B009IJJ5B4) series.
+I decided this morning to cancel my Amazon Prime membership. I used it for free prime delivery, and also for occasional prime videos, such as the [excellent Elementary](https://www.amazon.com/Elementary-Season-1/dp/B009IJJ5B4) series. It is also amazing to say "Alexa, play french songs" and discover pieces from Amazon Music you knew nothing about.
 
 I used to be a fan of the Amazon store. You could find rare items that were not sold anywhere else, at unbeatable prices. Reviews were genuine, and when an item had an average of 5-star, it only meant that it was an excellent product. I got items that allowed me to be more productive and more efficient, at lower prices. Physical stores such as Best Buy were only useful to help in the decision process.
 
@@ -13,6 +13,8 @@ In 2021, Amazon is unfortunately full of junk. The majority are cloned products 
 I understand this kind of convenience is interesting for special cases. If you are a single parent or if you have special needs, nothing beats shopping from your bed and having someone package and deliver for you. You save time to focus on kids, and don't have to deal with stairs, traffic or possibly rude service. You might even be claustrophobic or mall-phobic. In my case though, it falls in the definition of luxury.
 
 Another issue is the environmental footprint. I wrote recently about [the climate emergency](http://studiozenkai.com/post/climate-change-you-me/). You cannot be environmentally conscious and at the same time, make someone drive a van and waste boxes and plastic just for one gadget.
+
+![stacks of wasteful amazon boxes](/images/doorstep.jpg "[stacks of wasteful amazon boxes]")
 
 What are the alternatives?
 

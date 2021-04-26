@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Studio Zenkai</title>
-    <link>http://studiozenkai.com/post/</link>
+    <link>https://studiozenkai.com/post/</link>
     <description>Recent content in Posts on Studio Zenkai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 26 Apr 2021 06:00:00 -0400</lastBuildDate>
     
-	<atom:link href="http://studiozenkai.com/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://studiozenkai.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Why I am cancelling Amazon Prime</title>
-      <link>http://studiozenkai.com/post/cancel-amazon-prime/</link>
+      <link>https://studiozenkai.com/post/cancel-amazon-prime/</link>
       <pubDate>Mon, 26 Apr 2021 06:00:00 -0400</pubDate>
       
-      <guid>http://studiozenkai.com/post/cancel-amazon-prime/</guid>
-      <description>I decided this morning to cancel my Amazon Prime membership. I used it for free prime delivery, and also for occasional prime videos, such as the excellent Elementary series.
-I used to be a fan of the Amazon store. You could find rare items that were not sold anywhere else, at unbeatable prices. Reviews were genuine, and when an item had an average of 5-star, it only meant that it was an excellent product.</description>
+      <guid>https://studiozenkai.com/post/cancel-amazon-prime/</guid>
+      <description>I decided this morning to cancel my Amazon Prime membership. I used it for free prime delivery, and also for occasional prime videos, such as the excellent Elementary series. It is also amazing to say &amp;ldquo;Alexa, play french songs&amp;rdquo; and discover pieces from Amazon Music you knew nothing about.
+I used to be a fan of the Amazon store. You could find rare items that were not sold anywhere else, at unbeatable prices.</description>
     </item>
     
     <item>
       <title>What the Climate Change means for you and me</title>
-      <link>http://studiozenkai.com/post/climate-change-you-me/</link>
+      <link>https://studiozenkai.com/post/climate-change-you-me/</link>
       <pubDate>Thu, 22 Apr 2021 09:35:26 -0400</pubDate>
       
-      <guid>http://studiozenkai.com/post/climate-change-you-me/</guid>
+      <guid>https://studiozenkai.com/post/climate-change-you-me/</guid>
       <description>Today is Earth day and an excellent opportunity to reflect on human&amp;rsquo;s environmental impact.
 The pandemic hit countries like a truck and changed overnight our ways of working or interacting with others. Many lost their jobs, others went into depression or worse got infected with COVID-19.
 The origin of the disease was little discussed. It is clear for me though that human&amp;rsquo;s cancerous growth, especially deforestation, is linked to the pandemic.</description>
@@ -34,50 +34,50 @@ The origin of the disease was little discussed. It is clear for me though that h
     
     <item>
       <title>Troubleshooting a web application</title>
-      <link>http://studiozenkai.com/post/stack-performance-diagnosis/</link>
+      <link>https://studiozenkai.com/post/stack-performance-diagnosis/</link>
       <pubDate>Tue, 13 Apr 2021 10:35:26 -0400</pubDate>
       
-      <guid>http://studiozenkai.com/post/stack-performance-diagnosis/</guid>
+      <guid>https://studiozenkai.com/post/stack-performance-diagnosis/</guid>
       <description>How do you diagnose a slow web application? What about an unresponsive web application?
 Those are questions I asked when interviewing recently developers. The questions are simple to understand yet complex to answer. Many applicants study data structures or various algorithms. Few have a holistic view of web applications, due to lack of experience or because of niche specializations. They often work on a specific part of a web project, and have little appreciation of work done in back-end, front-end, devops or other areas.</description>
     </item>
     
     <item>
       <title>Starting an Airbnb vacation home</title>
-      <link>http://studiozenkai.com/post/airbnb-vacation-home/</link>
+      <link>https://studiozenkai.com/post/airbnb-vacation-home/</link>
       <pubDate>Tue, 02 Feb 2021 12:00:00 +0000</pubDate>
       
-      <guid>http://studiozenkai.com/post/airbnb-vacation-home/</guid>
+      <guid>https://studiozenkai.com/post/airbnb-vacation-home/</guid>
       <description>One year ago, I decided to purchase a waterfront cottage. It would be in the Laurentians aka Quebec&amp;rsquo;s cottage country.
 In December and early January 2020, Twitter alerted me to the sanitary situation in China. It was clear it was coming this way. Since authorities didn&amp;rsquo;t seem to care, I thought it would be a complete disaster in North America, with the economy and infrastructure paralyzed. I also knew the stock market has been bullish for the past decade and bet it would crash.</description>
     </item>
     
     <item>
       <title>Dokomaps</title>
-      <link>http://studiozenkai.com/post/dokomaps/</link>
+      <link>https://studiozenkai.com/post/dokomaps/</link>
       <pubDate>Fri, 01 Nov 2019 10:35:26 -0400</pubDate>
       
-      <guid>http://studiozenkai.com/post/dokomaps/</guid>
+      <guid>https://studiozenkai.com/post/dokomaps/</guid>
       <description>Aimable D. is a close friend since our engineering school days. Like me, he spent time in the corporate world. But he has also done multiple ventures, from eCommerce to corporate to consumer ventures.
 Now he is focused on dokomaps, along with Jules, who worked previously with him on other ventures. I am reviewing today Dokomaps to provide feedback, to showcase a good product, but also in the hope that Aimable reviews one of my current ventures, such as OutcomeReference :)</description>
     </item>
     
     <item>
       <title>48 Hours Climate Change hackathon</title>
-      <link>http://studiozenkai.com/post/hackathon-challenge/</link>
+      <link>https://studiozenkai.com/post/hackathon-challenge/</link>
       <pubDate>Fri, 13 Sep 2019 15:30:20 -0400</pubDate>
       
-      <guid>http://studiozenkai.com/post/hackathon-challenge/</guid>
+      <guid>https://studiozenkai.com/post/hackathon-challenge/</guid>
       <description>I am participating this weekend in the AI Climate Change Hackathon, and I will jot down here my notes and progress. Here is the event pitch:
 &amp;ldquo;Join us along with the other talented and diverse participants, supported by leading mentors in their fields who will come together to collaborate to attempt to address climate change and its impacts on communities and ecosystems. We hope to begin to achieve real positive impact in 48 hours using AI.</description>
     </item>
     
     <item>
       <title>Building an autonomous RC car</title>
-      <link>http://studiozenkai.com/post/autonomous-rc-car/</link>
+      <link>https://studiozenkai.com/post/autonomous-rc-car/</link>
       <pubDate>Tue, 26 Feb 2019 12:00:00 +0000</pubDate>
       
-      <guid>http://studiozenkai.com/post/autonomous-rc-car/</guid>
+      <guid>https://studiozenkai.com/post/autonomous-rc-car/</guid>
       <description>This is a hands-on article that encourages you to experiment and see what works on the ground.
 Shameless Promotion: If you are in Montréal, I (@heri) do a meetup where people interested in computer vision, AI, robotics work on autonomous cars. Please drop by!
 Why a RC car? Like developing an application, my recommendation is to build first a Minimum Viable Product (MVP). Then iterate it quickly from there towards a version that works for you.</description>
@@ -85,10 +85,10 @@ Why a RC car? Like developing an application, my recommendation is to build firs
     
     <item>
       <title>All I want for Christmas is a small phone</title>
-      <link>http://studiozenkai.com/post/small-phone/</link>
+      <link>https://studiozenkai.com/post/small-phone/</link>
       <pubDate>Mon, 10 Dec 2018 12:00:00 +0000</pubDate>
       
-      <guid>http://studiozenkai.com/post/small-phone/</guid>
+      <guid>https://studiozenkai.com/post/small-phone/</guid>
       <description>I got an iPhone 6S Plus a few years ago. I was impressed by the screen, the biggest I’ve had. Look! I can use it as a tablet. Watch videos everywhere, or showcase my latest work at a tech meetup.
 The dreams shattered in many pieces. I was biking happily, the phone was sticking out of my pocket and crashed to the ground.
 I bike a lot, hike, run around hilly tracks and never cracked a screen before the iPhone 6S Plus.</description>
@@ -96,30 +96,30 @@ I bike a lot, hike, run around hilly tracks and never cracked a screen before th
     
     <item>
       <title>Looking again at Microsoft</title>
-      <link>http://studiozenkai.com/post/microsoft/</link>
+      <link>https://studiozenkai.com/post/microsoft/</link>
       <pubDate>Wed, 05 Dec 2018 12:00:00 +0000</pubDate>
       
-      <guid>http://studiozenkai.com/post/microsoft/</guid>
+      <guid>https://studiozenkai.com/post/microsoft/</guid>
       <description>The natural cycle of companies is to innovate. The flame dies down, then it fights again to innovate.
 Microsoft is one of those. Win 3.1 was revolutionary, and so was Win 95. With Win 3.1, you could point and click to start programs. With Windows 95, you could install games with a nice GUI instead of typing arduous commands in MS-DOS. No more failures at the video setup or having to find a driver file for your sound card.</description>
     </item>
     
     <item>
       <title>Ruby Performance checklist</title>
-      <link>http://studiozenkai.com/post/ruby-performance-checklist/</link>
+      <link>https://studiozenkai.com/post/ruby-performance-checklist/</link>
       <pubDate>Mon, 08 May 2017 10:35:26 -0400</pubDate>
       
-      <guid>http://studiozenkai.com/post/ruby-performance-checklist/</guid>
+      <guid>https://studiozenkai.com/post/ruby-performance-checklist/</guid>
       <description>I shipped many applications, using a variety of frameworks, through my current 1 year challenge or startups. Ruby issues include low performance, such as servers needing more RAM, not able to sustain large traffic, or slow rendering. Since this is a recurring issue, here is a checklist to help developers get their Ruby app faster:
 Code complexity Ruby&amp;rsquo;s simplicity and ease of use allows beginners and experienced developers alike to ship features in record time.</description>
     </item>
     
     <item>
       <title>Starting a marketplace - Finding inspiration in the Pillars of The Earth</title>
-      <link>http://studiozenkai.com/post/marketplace-platform/</link>
+      <link>https://studiozenkai.com/post/marketplace-platform/</link>
       <pubDate>Mon, 09 May 2016 15:35:26 -0400</pubDate>
       
-      <guid>http://studiozenkai.com/post/marketplace-platform/</guid>
+      <guid>https://studiozenkai.com/post/marketplace-platform/</guid>
       <description>Note : This on-going article will be updated and extended regularly. Make sure to come back!
  Their multiplication of AirBnb, Kickstarter and Uber clones in recent years have encouraged entrepreneurs to launch their own marketplaces.
 In one hand, you entice merchants selling their products &amp;amp; services and on the other hand, you encourage visitors to come and buy.
@@ -129,10 +129,10 @@ Merchants are hard to convince if there are no buyers, and vice-versa.</descript
     
     <item>
       <title>Why my next laptop won&#39;t be an Apple</title>
-      <link>http://studiozenkai.com/post/laptop-machine-learning/</link>
+      <link>https://studiozenkai.com/post/laptop-machine-learning/</link>
       <pubDate>Wed, 04 May 2016 15:35:26 -0400</pubDate>
       
-      <guid>http://studiozenkai.com/post/laptop-machine-learning/</guid>
+      <guid>https://studiozenkai.com/post/laptop-machine-learning/</guid>
       <description>Part I - Apple&amp;rsquo;s Craftmanship I have used the original macbook, the 13&amp;rdquo; MacBook Air, the 13&amp;rdquo; Macbook pro, and 15&amp;rdquo; Macbook pros.
 I loved the white plastic of the original macbook. It was better than any other computer I&amp;rsquo;ve used before, worked out of the box, and iMovie amazed me. Drag, drop, and five minutes later, you have a video.
 I thought this is what computing should be.
@@ -141,10 +141,10 @@ When the hard drive died, I got a Macbook Air.</description>
     
     <item>
       <title>A test of patience</title>
-      <link>http://studiozenkai.com/post/patience-test-canada/</link>
+      <link>https://studiozenkai.com/post/patience-test-canada/</link>
       <pubDate>Tue, 26 Apr 2016 07:35:26 -0400</pubDate>
       
-      <guid>http://studiozenkai.com/post/patience-test-canada/</guid>
+      <guid>https://studiozenkai.com/post/patience-test-canada/</guid>
       <description>Author&amp;rsquo;s note : this article usually goes on KLAIO with beautiful photographs but (1) I do not have photographs and (2) there are comments relevant to tech
  Like any other country, Canada has its share of contradictions.
 It prides itself in having the lowest corruption in the world.
@@ -153,10 +153,10 @@ This is true in my experience. Federal workers are polite and helpful but they w
     
     <item>
       <title>Why bots are a thing now</title>
-      <link>http://studiozenkai.com/post/bots/</link>
+      <link>https://studiozenkai.com/post/bots/</link>
       <pubDate>Mon, 18 Apr 2016 10:35:26 -0400</pubDate>
       
-      <guid>http://studiozenkai.com/post/bots/</guid>
+      <guid>https://studiozenkai.com/post/bots/</guid>
       <description>Upon hearing about Facebook and Microsoft efforts to deploy bot platforms, a friend reacted:
  So bots are a thing now? I programmed bots 20 years ago
  He is a successful technology entrepreneur and has developed systems on many platforms. I can understand him. There were tutorials in kids&amp;rsquo; magazines on writing a &amp;ldquo;Hello World&amp;rdquo; bot on MS-DOS 20 years ago. More impressive were the Artificial Intelligence (A.I.) found in games like Warcraft 3 or Command &amp;amp; Conquer.</description>
@@ -164,20 +164,20 @@ This is true in my experience. Federal workers are polite and helpful but they w
     
     <item>
       <title>Becoming a self-taught programmer</title>
-      <link>http://studiozenkai.com/post/programming/</link>
+      <link>https://studiozenkai.com/post/programming/</link>
       <pubDate>Sun, 17 Apr 2016 12:55:51 -0400</pubDate>
       
-      <guid>http://studiozenkai.com/post/programming/</guid>
+      <guid>https://studiozenkai.com/post/programming/</guid>
       <description>In six months I have shipped many apps, as an entrepreneur or as a freelancer. I have also contributed to open source projects and advised other projects. Yet I’m educated as an electrical engineer, not as a software engineer and consider myself largely self-taught in the area of programming.
  Jeff Atwood : Geeks went from being social outsiders, outcasts, and rejects to.. part of the 1% power structure, with all that implies.</description>
     </item>
     
     <item>
       <title>Playbook</title>
-      <link>http://studiozenkai.com/post/playbook/</link>
+      <link>https://studiozenkai.com/post/playbook/</link>
       <pubDate>Fri, 15 Jan 2016 12:22:27 -0400</pubDate>
       
-      <guid>http://studiozenkai.com/post/playbook/</guid>
+      <guid>https://studiozenkai.com/post/playbook/</guid>
       <description>Bonjour!
 Nous offrons une expertise technique pour un résultat de qualité dans le développement de plateformes transactionnelles, de financement, de médias:
   Étude et conception fonctionnelle et technique
@@ -188,10 +188,10 @@ Nous offrons une expertise technique pour un résultat de qualité dans le déve
     
     <item>
       <title>Cuda Cores Ranking for Machine learning</title>
-      <link>http://studiozenkai.com/post/cuda/</link>
+      <link>https://studiozenkai.com/post/cuda/</link>
       <pubDate>Sun, 11 Oct 2015 10:35:26 -0400</pubDate>
       
-      <guid>http://studiozenkai.com/post/cuda/</guid>
+      <guid>https://studiozenkai.com/post/cuda/</guid>
       <description>NVIDIA graphic cards can be used to accelerate scientific computing, neural networks, video games and occasionally bitcoin computing.
 Video editing and post-production also benefit greatly from NVIDIA cards with Adobe&amp;rsquo;s Mercury Engine or BMD&amp;rsquo;s Davinci resolve.
 In the case of scientific computing, performance is directly proportional to the number of cuda cores. As long as cpu speed is &amp;gt; 2GHz and you have as much RAM as you have GPU RAM, you are all good.</description>

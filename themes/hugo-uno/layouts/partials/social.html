@@ -2,7 +2,7 @@
     <ul class="navigation">
         <!-- Twitter -->
         <li class="navigation__item">
-            <a href="https://twitter.com/heri" title="@heri on Twitter"> <i class='fa fa-twitter'></i> <span
+            <a href="https://twitter.com/heri" title="@heri on Twitter" rel="me"> <i class='fa fa-twitter'></i> <span
                     class="label">Twitter</span> </a>
         </li> {{ if .Site.Params.bitbucket }}
         <!-- Bitbucket -->
@@ -13,7 +13,7 @@
         </li> {{ end }}
         <!-- github -->
         <li class="navigation__item">
-            <a href="https://github.com/heri" title="heri on github" rel="me"> <i class='fa fa-github'></i> <span
+            <a href="https://github.com/heri" title="heri on github" rel="me authn"> <i class='fa fa-github'></i> <span
                     class="label">Github</span> </a>
         </li> {{ if .Site.Params.flickr }}
         <!-- Flickr -->
@@ -24,7 +24,7 @@
         </li> {{ end }}
         <!-- Medium -->
         <li class="navigation__item">
-            <a href="https://medium.com/@heri" title="Medium"> <i class='fa fa-medium'></i> <span
+            <a href="https://medium.com/@heri" title="Medium" rel="nofollow"> <i class='fa fa-medium'></i> <span
                     class="label">Medium</span> </a>
         </li>
         <!-- Email -->

@@ -1,0 +1,37 @@
++++
+date = "2021-03-08T10:35:26-04:00"
+title = "Learning Python, from a Rubyist's perspective"
+draft = true
++++
+
+before :  autonomous RC Car
+now : data engineering , ETLs, plus serving tensorflow models on a flask web api
+
+common
+- intuitive
+
+- lots of libraries
+    - hardware
+    - dataframe, numpy
+- speed
+    - compiled to C
+    - gpu
+
+going backwards. 
+
+- uncanny similarity. You can read it, and understand it. But then when you try to make it your own, it doesn't work out because actually there's something tiny that's different. 
+- having to write len(object)
+- no magic stuff. needs an explicit convert to dict , to list and so on
+- lots of poeople who are interested in the beauty of code
+    - and then lots of people who copy and paste
+    - also lots of people who are fascists and then criticize you for not following standards
+    - so if this is building a house, this is the person who criticize you because you put 4 layers of paint instead of 3 but didn't see that the house is crooked in itself
+- indenting? wtf are we back to high school?
+
+So what's the future?
+
+Is Heri going to be a Python developer? or a Ruby developer
+
+There's something for sure : Deep learning, autonomous robots. And that is Pythin world. And only for that I would do more Python.
+
+You *cannot* forgot Ruby or Rails though. It's still by far the fastest way to output a web2.0 application - think shopify, github. It's a king for hackathons, small to mid-sized projects. I still code projects

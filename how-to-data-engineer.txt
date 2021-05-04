@@ -1,0 +1,40 @@
++++
+date = "2021-04-08T10:35:26-04:00"
+title = "How to Approach Data Engineering"
+draft = true
++++
+
+First, what is a data engineer?
+
+Data Engineer is the ability to process all kinds of data that the business needs and make them available in a digestible format for core business needs.
+
+The data can come from plain files, open source or proprietary databases, excel sheets, external data available only via an API or it can even be written on pieces of paper.
+
+Often the data is mismatched or using different data standards, and have to be standardized in the format that your business is using. You might also have to fill in the blanks.
+
+All these are transformed using a function or a machine learning model into a dataset that can be easily consulted or displayed on a business dashboard. Vice presidents can see revenue trends. Marketing managers can extract customer segments willing to spend more. External partners can re-use the enhanced data made available under an API.
+
+Since Artificial Intelligence (AI) became trendy, or should I say put on a pedestal in the tech world, Data Engineering quickly became a core piece key to deliver enough data to Data Scientists. If data cannot be imported easily into a dataframe, there is no machine learning model. In this way, Data Engineers can be seen as the bridge between AI and traditional software systems.
+
+You could almost compare a data engineer to a chef who will use raw material and will transform them into a delicious dish that can be eaten. A little bit of magic, a lot of attention and hard work, and a few trusted tools :)
+
+Now the goal of this article is not to write a guide on how to become a data engineer. There are multiple guides and courses that you find on the Internet. Rather, this article highlights what's important for me in data engineering, and what's not. Notice the "for me". I focus on skills that multiply productivity or technologies that allow me to be a one-man wonder startup and deliver . Others will adopt technologies that are a better fit for teams, and there is nothing wrong with that. To each his own.
+
+First, despite all the trends or what's advertised in job listings, you do not have to learn a bunch of new technologies to do data engineering. I have developed a data pipeline that processes daily millions of electronic gaming machines sessions. I used Ruby on Rails and Sidekiq, stable open source technologies that existed ten years ago. Jobs run every minute and every day and output readily usable data. Many others will argue that such as setup would need instead Kafka, a data lake plus an autoscaling architecture, and so on. But my setup hasn't had any issues. And since it's written in Ruby, pretty much everyone in the team can easily update the jobs to respond to any business needs. We were also able to put it into production in record time. So my advice is : before jumping into courses or new github repos, look into libraries for your favorite language. Maybe you can make things work for you easily :)
+
+Does that mean you don't have to learn anything?
+
+Actually, if you want to make a difference, there are few worth learning:
+
+Being able to write detailed SQL requests with JOIN, GROUP, and other sql common operators allows you to retrieve quickly. Relying too much on an ORM will produce slow requests, inadequate data that have to be filtered and transformed. Other users will complain because you hog the data sources. Hint : if you have to iterate through rows, then you might have missed an opportunity to do a smart SELECT
+
+Another library worth it is Python's pandas, and more specifically dataframes. You can process and transform large amounts of data, and it easy to optimize performance, once the implementation works. There are also many other compatible Python packages that extends the usability, such as packages to connect to "exotic" sources of data.
+
+Finally, knowing how to use docker and kubernetes allows you to scale easily. Setup once, never worry later about infrastructure. This coupled with pandas above can make you a one-man army that can chew effortlessly through petabytes of data.
+
+My third advice is to be proactive on data quality. Far too often, data engineers sit back and only act when there are bugs or manager requests. Then, they have to investigate to discover there was a critical issue in the pipeline that started days ago. Ideally, you should have an eye on data inputs. See how data is distributed, the consistency, standard deviations, mean, min, max and trends. I often visualize graphically columns. It gives me insights on what is going on and I can foresee potential issues. Or it can also give you clues on how to label or categorize.
+
+It is possible to use here the same tools in traditional web development : automated unit and integration testing, health metrics, monitoring and so on. Pick the ones that you already use, adapt them and get alerts for any non-standard deviation :)
+
+If you do well at this step, you will soon have consistent quality data, which is critical for any small and large business. You will be able to deliver amazing graphs or an accurate machine learning model and have an edge on others.
+

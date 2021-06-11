@@ -10,7 +10,17 @@
     
 	<atom:link href="https://studiozenkai.com/post/index.xml" rel="self" type="application/rss+xml" />
     
-    
+    <item>
+      <title>How I Remote Work</title>
+      <link>https://studiozenkai.com/post/remote-work/</link>
+      <pubDate>Thu, 10 Jun 2021 06:00:00 -0400</pubDate>
+      
+      <guid>https://studiozenkai.com/post/remote-work/</guid>
+      <description>In Canada, as well as many countries, Covid-19 infections is exponentially decreasing.
+We are on the verge of getting our old life back, from going to restaurants or to the cinemas, and why not have a celebratory drink with friends.
+Before moving on, I would like to share how I remote work, one of the main traits of the Covid-19 pandemic. I hope this helps other remote workers, and encourage developers and companies to adopt it on a permanent basis.</description>
+    </item>
+
     <item>
       <title>Why I am cancelling Amazon Prime</title>
       <link>https://studiozenkai.com/post/cancel-amazon-prime/</link>
@@ -115,19 +125,6 @@ Code complexity Ruby&amp;rsquo;s simplicity and ease of use allows beginners and
     </item>
     
     <item>
-      <title>Starting a marketplace - Finding inspiration in the Pillars of The Earth</title>
-      <link>https://studiozenkai.com/post/marketplace-platform/</link>
-      <pubDate>Mon, 09 May 2016 15:35:26 -0400</pubDate>
-      
-      <guid>https://studiozenkai.com/post/marketplace-platform/</guid>
-      <description>Note : This on-going article will be updated and extended regularly. Make sure to come back!
- Their multiplication of AirBnb, Kickstarter and Uber clones in recent years have encouraged entrepreneurs to launch their own marketplaces.
-In one hand, you entice merchants selling their products &amp;amp; services and on the other hand, you encourage visitors to come and buy.
-It is one of the most difficult ventures.
-Merchants are hard to convince if there are no buyers, and vice-versa.</description>
-    </item>
-    
-    <item>
       <title>Why my next laptop won&#39;t be an Apple</title>
       <link>https://studiozenkai.com/post/laptop-machine-learning/</link>
       <pubDate>Wed, 04 May 2016 15:35:26 -0400</pubDate>
@@ -138,18 +135,7 @@ I loved the white plastic of the original macbook. It was better than any other 
 I thought this is what computing should be.
 When the hard drive died, I got a Macbook Air.</description>
     </item>
-    
-    <item>
-      <title>A test of patience</title>
-      <link>https://studiozenkai.com/post/patience-test-canada/</link>
-      <pubDate>Tue, 26 Apr 2016 07:35:26 -0400</pubDate>
-      
-      <guid>https://studiozenkai.com/post/patience-test-canada/</guid>
-      <description>Author&amp;rsquo;s note : this article usually goes on KLAIO with beautiful photographs but (1) I do not have photographs and (2) there are comments relevant to tech
- Like any other country, Canada has its share of contradictions.
-It prides itself in having the lowest corruption in the world.
-This is true in my experience. Federal workers are polite and helpful but they will not deviate in any case.</description>
-    </item>
+
     
     <item>
       <title>Why bots are a thing now</title>

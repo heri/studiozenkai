@@ -24,10 +24,14 @@ See if it works:
 
 Now you should be able to run docker, docker-compose, build, tag and run images!
 
-Compared to Docker Desktop, you have to manually setup port forwarding once you build and run an image, such as:
+Note 1 : Compared to Docker Desktop, you have to manually setup port forwarding once you build and run an image, such as:
 
 > vboxmanage controlvm default natpf1 "nameformapping,tcp,,3000,,3000"
 
 This makes puma available on localhost:3000
+
+Note 2 : If you reboot your machine or if it goes into sleep, docker-machine can stop. Run it again with:
+
+> docker-machine start default
 
 Let me know how it works for you!

@@ -181,12 +181,17 @@
                     <p>docker run hello-world</p>
                 </blockquote>
                 <p>Now you should be able to run docker, docker-compose, build, tag and run images!</p>
-                <p>Compared to Docker Desktop, you have to manually setup port forwarding once you build and run an
-                    image, such as:</p>
+                <p>Note 1 : Compared to Docker Desktop, you have to manually setup port forwarding once you build and
+                    run an image, such as:</p>
                 <blockquote>
                     <p>vboxmanage controlvm default natpf1 &ldquo;nameformapping,tcp,,3000,,3000&rdquo;</p>
                 </blockquote>
                 <p>This makes puma available on localhost:3000</p>
+                <p>Note 2 : If you reboot your machine or if it goes into sleep, docker-machine can stop. Run it again
+                    with:</p>
+                <blockquote>
+                    <p>docker-machine start default</p>
+                </blockquote>
                 <p>Let me know how it works for you!</p>
 
                 <div class="sharing">

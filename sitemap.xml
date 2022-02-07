@@ -1,19 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
+  
   <url>
-    <loc>https://studiozenkai.com/post/remote-work/</loc>
-    <lastmod>2021-06-10T06:00:00-04:00</lastmod>
-  </url>
-
-  <url>
-    <loc>https://studiozenkai.com/post/</loc>
-    <lastmod>2021-06-10T06:00:00-04:00</lastmod>
+    <loc>https://studiozenkai.com/post/thoughts-on-latest-science/</loc>
+    <lastmod>2022-02-06T10:35:26-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://studiozenkai.com/</loc>
+    <loc>https://studiozenkai.com/post/ruby-playbook/</loc>
+    <lastmod>2022-02-01T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://studiozenkai.com/post/docker-desktop-replacement/</loc>
+    <lastmod>2021-09-01T18:35:26-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://studiozenkai.com/post/remote-work/</loc>
     <lastmod>2021-06-10T06:00:00-04:00</lastmod>
   </url>
   
@@ -104,10 +109,24 @@
   
   <url>
     <loc>https://studiozenkai.com/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://studiozenkai.com/post/</loc>
+    <lastmod>2022-02-06T10:35:26-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://studiozenkai.com/</loc>
+    <lastmod>2022-02-06T10:35:26-04:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://studiozenkai.com/tags/</loc>
+    <priority>0</priority>
   </url>
   
 </urlset>

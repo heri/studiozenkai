@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Studio Zenkai</title>
@@ -6,9 +6,40 @@
     <description>Recent content in Posts on Studio Zenkai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 26 Apr 2021 06:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 06 Feb 2022 10:35:26 -0400</lastBuildDate>
     
 	<atom:link href="https://studiozenkai.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Latest Science Is Not Necessarily Good For You</title>
+      <link>https://studiozenkai.com/post/thoughts-on-latest-science/</link>
+      <pubDate>Sun, 06 Feb 2022 10:35:26 -0400</pubDate>
+      
+      <guid>https://studiozenkai.com/post/thoughts-on-latest-science/</guid>
+      <description>A convoy of truckers gathered in Canada&amp;rsquo;s federal capital last week. They protested vaccine mandates but rode on a general wave of discontentment against lockdown, inflation and more.
+Many right-leaning Canadians value their &amp;ldquo;freedom&amp;rdquo; to do what they want, above general public health. They state that they should build immunity naturally and let covid19 run its course. This is on top of belief that distrust anything from government &amp;amp; institutions.</description>
+    </item>
+    
+    <item>
+      <title>Ruby Playbook</title>
+      <link>https://studiozenkai.com/post/ruby-playbook/</link>
+      <pubDate>Tue, 01 Feb 2022 12:00:00 +0000</pubDate>
+      
+      <guid>https://studiozenkai.com/post/ruby-playbook/</guid>
+      <description>I was introduced to the idea of playbook, which is basically a recipe to win a case. It can be in a team sports situation, such as how to score in American football in a given situation. It can be used by a salesperson, such as how to win a commercial contract.
+I imagined what would be my Ruby Engineering playbook:
+ Focus on hard projects that move the needle in the long-term, or alternatively easy wins (less than a day to implement+deploy) Do not reinvent the wheel.</description>
+    </item>
+    
+    <item>
+      <title>Docker Desktop command line alternative</title>
+      <link>https://studiozenkai.com/post/docker-desktop-replacement/</link>
+      <pubDate>Wed, 01 Sep 2021 18:35:26 -0400</pubDate>
+      
+      <guid>https://studiozenkai.com/post/docker-desktop-replacement/</guid>
+      <description>Docker Desktop is one of the de facto tool present on macos developer machines, along with other utilities such as git or homebrew. Contrary to apps such as VS Code, it not an app you interact with everyday but more a background tool running constantly during application development and deployment. It runs in fact the virtual machine that allows you to run docker on Windows or Mac as if you were on Linux, albeit with a little bit more resources.</description>
+    </item>
     
     <item>
       <title>How I Remote Work</title>
@@ -20,7 +51,7 @@
 We are on the verge of getting our old life back, from going to restaurants or to the cinemas, and why not have a celebratory drink with friends.
 Before moving on, I would like to share how I remote work, one of the main traits of the Covid-19 pandemic. I hope this helps other remote workers, and encourage developers and companies to adopt it on a permanent basis.</description>
     </item>
-
+    
     <item>
       <title>Why I am cancelling Amazon Prime</title>
       <link>https://studiozenkai.com/post/cancel-amazon-prime/</link>
@@ -125,6 +156,19 @@ Code complexity Ruby&amp;rsquo;s simplicity and ease of use allows beginners and
     </item>
     
     <item>
+      <title>Starting a marketplace - Finding inspiration in the Pillars of The Earth</title>
+      <link>https://studiozenkai.com/post/marketplace-platform/</link>
+      <pubDate>Mon, 09 May 2016 15:35:26 -0400</pubDate>
+      
+      <guid>https://studiozenkai.com/post/marketplace-platform/</guid>
+      <description>Note : This on-going article will be updated and extended regularly. Make sure to come back!
+ Their multiplication of AirBnb, Kickstarter and Uber clones in recent years have encouraged entrepreneurs to launch their own marketplaces.
+In one hand, you entice merchants selling their products &amp;amp; services and on the other hand, you encourage visitors to come and buy.
+It is one of the most difficult ventures.
+Merchants are hard to convince if there are no buyers, and vice-versa.</description>
+    </item>
+    
+    <item>
       <title>Why my next laptop won&#39;t be an Apple</title>
       <link>https://studiozenkai.com/post/laptop-machine-learning/</link>
       <pubDate>Wed, 04 May 2016 15:35:26 -0400</pubDate>
@@ -132,10 +176,20 @@ Code complexity Ruby&amp;rsquo;s simplicity and ease of use allows beginners and
       <guid>https://studiozenkai.com/post/laptop-machine-learning/</guid>
       <description>Part I - Apple&amp;rsquo;s Craftmanship I have used the original macbook, the 13&amp;rdquo; MacBook Air, the 13&amp;rdquo; Macbook pro, and 15&amp;rdquo; Macbook pros.
 I loved the white plastic of the original macbook. It was better than any other computer I&amp;rsquo;ve used before, worked out of the box, and iMovie amazed me. Drag, drop, and five minutes later, you have a video.
-I thought this is what computing should be.
-When the hard drive died, I got a Macbook Air.</description>
+I thought this is what computing should be.</description>
     </item>
-
+    
+    <item>
+      <title>A test of patience</title>
+      <link>https://studiozenkai.com/post/patience-test-canada/</link>
+      <pubDate>Tue, 26 Apr 2016 07:35:26 -0400</pubDate>
+      
+      <guid>https://studiozenkai.com/post/patience-test-canada/</guid>
+      <description>Author&amp;rsquo;s note : this article usually goes on KLAIO with beautiful photographs but (1) I do not have photographs and (2) there are comments relevant to tech
+ Like any other country, Canada has its share of contradictions.
+It prides itself in having the lowest corruption in the world.
+This is true in my experience. Federal workers are polite and helpful but they will not deviate in any case.</description>
+    </item>
     
     <item>
       <title>Why bots are a thing now</title>
@@ -166,10 +220,11 @@ When the hard drive died, I got a Macbook Air.</description>
       <guid>https://studiozenkai.com/post/playbook/</guid>
       <description>Bonjour!
 Nous offrons une expertise technique pour un résultat de qualité dans le développement de plateformes transactionnelles, de financement, de médias:
-  Étude et conception fonctionnelle et technique
-  Développement de solutions front, middle ou back-office
-  Développement d&amp;rsquo;applications iOS ou Android
-  Conduite de projet sur les technologies Ruby, Javascript, Lua, et plateformes mobiles; utilisation de base de données MySQL, Postgresql, ou redis, mongodb, ElasticSearch, Solr</description>
+ Étude et conception fonctionnelle et technique
+ Développement de solutions front, middle ou back-office
+ Développement d&amp;rsquo;applications iOS ou Android
+ Conduite de projet sur les technologies Ruby, Javascript, Lua, et plateformes mobiles; utilisation de base de données MySQL, Postgresql, ou redis, mongodb, ElasticSearch, Solr
+ Audit de code, de qualité et de performance des applications</description>
     </item>
     
     <item>

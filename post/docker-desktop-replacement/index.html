@@ -3,227 +3,199 @@
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <title> Docker Desktop command line alternative &middot; Studio Zenkai </title>
-
+    
     <link rel="stylesheet" type="text/css" href="https://studiozenkai.com/css/uno.css" />
     <link rel="stylesheet" type="text/css" href="https://studiozenkai.com/css/lightGallery.css" />
-
+    
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
     <link rel="shortcut icon" href="/favicon.ico">
-
+    
     <link rel="webmention" href="https://webmention.io/studiozenkai.com/webmention" />
     <link rel="pingback" href="https://webmention.io/studiozenkai.com/xmlrpc" />
-
+    
     <script src="https://studiozenkai.com/js/jquery.min.js"></script>
     <script src="https://studiozenkai.com/js/main.min.js">
     </script>
 </head>
 
 <body>
-    <div id="scriptHeader">
-        <span class="mobile btn-mobile-menu">
+  <div id="scriptHeader">
+    <span class="mobile btn-mobile-menu">
             <i class="fa fa-bars btn-mobile-menu__icon"></i>
             <i class="fa fa-times btn-mobile-close__icon hidden"> </i>
-        </span>
-        <header class="
+    </span>
+    <header class="
         
             panel-cover panel-cover--collapsed
-        ">
-            <div class="panel-main">
-                <div class="panel-main__inner panel-inverted">
-                    <div class="panel-main__content">
-                        <h1 class="panel-cover__title panel-title">
-                            <a href="https://studiozenkai.com/" title="link to homepage for Studio Zenkai">Studio
-                                Zenkai</a>
-                        </h1>
-                        <hr class="panel-cover__divider" />
-                        <p class="panel-cover__description">Bold and Clear, without excess • Kaizen 改善 • With Purpose
-                        </p>
-                        <hr class="panel-cover__divider panel-cover__divider--secondary" />
-                        <p>Studio Zenkai is dedicated to the craft of programming, hardware hacking, photography,
-                            machine learning and how to live sensibly. </p>
-                        <hr class="panel-cover__divider panel-cover__divider--secondary" />
-                        <div class="navigation-wrapper">
-                            <nav class="cover-navigation cover-navigation--primary">
-                                <ul class="navigation">
-                                    <li class="navigation__item"><a href="https://studiozenkai.com/post"
-                                            title="link to Studio Zenkai blog" class="blog-button">Articles</a> </li>
-
-
-                                </ul>
-                            </nav>
-                            <nav class="cover-navigation navigation--social">
-                                <ul class="navigation">
-
-                                    <li class="navigation__item">
-                                        <a href="https://twitter.com/heri" title="@heri on Twitter" rel="me"> <i
-                                                class='fa fa-twitter'></i> <span class="label">Twitter</span> </a>
-                                    </li>
-
-                                    <li class="navigation__item">
-                                        <a href="https://github.com/heri" title="heri on github" rel="me authn"> <i
-                                                class='fa fa-github'></i> <span class="label">Github</span> </a>
-                                    </li>
-
-                                    <li class="navigation__item">
-                                        <a href="https://medium.com/@heri" title="Medium" rel="nofollow"> <i
-                                                class='fa fa-medium'></i> <span class="label">Medium</span> </a>
-                                    </li>
-
-                                    <li class="navigation__item">
-                                        <a href="mailto:heri@studiozenkai.com" title="Email"> <i
-                                                class='fa fa-envelope-o'></i> <span class="label">Email</span> </a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel-cover--overlay"></div>
-            </div>
-        </header>
-    </div>
-    <noscript>
-        <style>
-            #scriptHeader {
-                display: none;
-            }
-
-            .navigation-wrapper {
-                display: block;
-                top: 0;
-            }
-        </style>
-
-        <header class="panel-cover panel-cover--collapsed" style="background-image: url()">
-            <div class="panel-main">
-                <div class="panel-main__inner panel-inverted">
-                    <div class="panel-main__content">
-                        <h1 class="panel-cover__title panel-title">
-                            <a href="https://studiozenkai.com/" title="link to homepage for Studio Zenkai">Studio
-                                Zenkai</a>
-                        </h1>
-                        <hr class="panel-cover__divider" />
-                        <p class="panel-cover__description"> Studio Zenkai is dedicated to the craft of programming,
-                            hardware hacking, photography, machine learning and how to live sensibly. </p>
-                        <hr class="panel-cover__divider panel-cover__divider--secondary" />
-                        <div class="navigation-wrapper">
-                            <nav class="cover-navigation cover-navigation--primary">
-                                <ul class="navigation">
-                                    <li class="navigation__item"><a href="https://studiozenkai.com/#blog"
-                                            title="link to Studio Zenkai blog" class="blog-button">Blog</a> </li></br>
-
-
-                                </ul>
-                            </nav>
-                            <nav class="cover-navigation navigation--social">
-                                <ul class="navigation">
-
-                                    <li class="navigation__item">
-                                        <a href="https://twitter.com/heri" title="@heri on Twitter" rel="me"> <i
-                                                class='fa fa-twitter'></i> <span class="label">Twitter</span> </a>
-                                    </li>
-
-                                    <li class="navigation__item">
-                                        <a href="https://github.com/heri" title="heri on github" rel="me authn"> <i
-                                                class='fa fa-github'></i> <span class="label">Github</span> </a>
-                                    </li>
-
-                                    <li class="navigation__item">
-                                        <a href="https://medium.com/@heri" title="Medium" rel="nofollow"> <i
-                                                class='fa fa-medium'></i> <span class="label">Medium</span> </a>
-                                    </li>
-
-                                    <li class="navigation__item">
-                                        <a href="mailto:heri@studiozenkai.com" title="Email"> <i
-                                                class='fa fa-envelope-o'></i> <span class="label">Email</span> </a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel-cover--overlay"></div>
-            </div>
-        </header>
-    </noscript>
-
-    <div class="content-wrapper">
-        <div class="content-wrapper__inner">
-            <div class="post">
-                <h1>Docker Desktop command line alternative</h1>
-                <span class="post-date">Wed, Sep 1, 2021</span>
-                <p>Docker Desktop is one of the de facto tool present on macos developer machines, along with other
-                    utilities such as git or homebrew. Contrary to apps such as VS Code, it not an app you interact with
-                    everyday but more a background tool running constantly during application development and
-                    deployment. It runs in fact the virtual machine that allows you to run docker on Windows or Mac as
-                    if you were on Linux, albeit with a little bit more resources.</p>
-                <p>Many users will need to look for alternatives with the recent announcement that it will now be a paid
-                    subscription for medium to large companies. On MacOS, I use docker-machine to run docker from
-                    Terminal.</p>
-                <blockquote>
-                    <p>brew install &ndash;cask docker virtualbox</p>
-                </blockquote>
-                <p>You might need to authorize this in MacOS preferences</p>
-                <blockquote>
-                    <p>brew install docker-machine</p>
-                </blockquote>
-                <p>I setup docker-machine with more memory &amp; CPU, since I work on large Ruby and Python/tensorflow
-                    projects. Codebases with a small footprint can use the default virtualbox settings.</p>
-                <blockquote>
-                    <p>docker-machine create -d virtualbox &ndash;virtualbox-memory=4096 &ndash;virtualbox-cpu-count=2
-                        &ndash;virtualbox-disk-size=10000 default</p>
-                </blockquote>
-                <p>See if it works:</p>
-                <blockquote>
-                    <p>docker run hello-world</p>
-                </blockquote>
-                <p>Now you should be able to run docker, docker-compose, build, tag and run images!</p>
-                <p>Note 1 : Compared to Docker Desktop, you have to manually setup port forwarding once you build and
-                    run an image, such as:</p>
-                <blockquote>
-                    <p>vboxmanage controlvm default natpf1 &ldquo;nameformapping,tcp,,3000,,3000&rdquo;</p>
-                </blockquote>
-                <p>This makes puma available on localhost:3000</p>
-                <p>Note 2 : If you reboot your machine or if it goes into sleep, docker-machine can stop. Run it again
-                    with:</p>
-                <blockquote>
-                    <p>docker-machine start default</p>
-                </blockquote>
-                <p>Let me know how it works for you!</p>
-
-                <div class="sharing">
-                    <p>© Heri Rakotomalala. All rights reserved. Powered by <a
-                            href="https://www.digitalocean.com/?refcode=ef57f6ccd2d8">Digital Ocean</a></p>
-
-                    <p>Heri Rakotomalala is an engineer working on small and innovative projects in Montréal. Originally
-                        from Madagascar, he has lived 7 years in East Africa, studied Engineering and made friends in
-                        France, built a community building in Esteli, Nicaragua and is taking pictures and coding in
-                        Montréal, Canada. This site cover technology work.</p>
-
-                </div>
-
-
-                <div id="disqus_thread"></div>
-                <script>
-
-
-
-
-                    (function () {
-                        var d = document, s = d.createElement('script');
-                        s.src = 'https://studiozenkai.disqus.com/embed.js';
-                        s.setAttribute('data-timestamp', +new Date());
-                        (d.head || d.body).appendChild(s);
-                    })();
-                </script>
-                <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-
+        " >
+    <div class="panel-main">
+        <div class="panel-main__inner panel-inverted">
+            <div class="panel-main__content"> 
+                <h1 class="panel-cover__title panel-title">
+                    <a href="https://studiozenkai.com/"  title="link to homepage for Studio Zenkai">Studio Zenkai</a>
+                </h1>
+                <hr class="panel-cover__divider" />
+                <p class="panel-cover__description">Bold and Clear, without excess • Kaizen 改善 • With Purpose</p>
+                <hr class="panel-cover__divider panel-cover__divider--secondary" />
+                <p>Studio Zenkai is dedicated to the craft of programming, hardware hacking, photography, machine learning and how to live sensibly. </p>
+                <hr class="panel-cover__divider panel-cover__divider--secondary" />
+                <div class="navigation-wrapper">
+                    <nav class="cover-navigation cover-navigation--primary">
+                        <ul class="navigation">
+                            <li class="navigation__item"><a href="https://studiozenkai.com/post" title="link to Studio Zenkai blog" class="blog-button">Articles</a> </li>
+                            
+                            
+                       </ul>
+                    </nav> <nav class="cover-navigation navigation--social">
+    <ul class="navigation">
+        
+        <li class="navigation__item">
+            <a href="https://twitter.com/heri" title="@heri on Twitter" rel="me"> <i class='fa fa-twitter'></i> <span
+                    class="label">Twitter</span> </a>
+        </li> 
+        
+        <li class="navigation__item">
+            <a href="https://github.com/heri" title="heri on github" rel="me authn"> <i class='fa fa-github'></i> <span
+                    class="label">Github</span> </a>
+        </li> 
+        
+        <li class="navigation__item">
+            <a href="https://medium.com/@heri" title="Medium" rel="nofollow"> <i class='fa fa-medium'></i> <span
+                    class="label">Medium</span> </a>
+        </li>
+        
+        <li class="navigation__item">
+            <a href="mailto:heri@studiozenkai.com" title="Email"> <i class='fa fa-envelope-o'></i> <span
+                    class="label">Email</span> </a>
+        </li>
+    </ul>
+</nav> </div>
             </div>
         </div>
+        <div class="panel-cover--overlay"></div>
     </div>
+</header>
+</div>
+<noscript>
+    <style>
+        #scriptHeader {display:none;}
+        .navigation-wrapper{
+            display: block;
+            top: 0;
+        }
+    </style>
+
+    <header class="panel-cover panel-cover--collapsed" style="background-image: url()">
+        <div class="panel-main">
+            <div class="panel-main__inner panel-inverted">
+                <div class="panel-main__content"> 
+                    <h1 class="panel-cover__title panel-title">
+                        <a href="https://studiozenkai.com/"  title="link to homepage for Studio Zenkai">Studio Zenkai</a>
+                    </h1>
+                    <hr class="panel-cover__divider" />
+                    <p class="panel-cover__description">  Studio Zenkai is dedicated to the craft of programming, hardware hacking, photography, machine learning and how to live sensibly.  </p>
+                    <hr class="panel-cover__divider panel-cover__divider--secondary" />
+                    <div class="navigation-wrapper">
+                        <nav class="cover-navigation cover-navigation--primary">
+                            <ul class="navigation">
+                                <li class="navigation__item"><a href="https://studiozenkai.com/#blog" title="link to Studio Zenkai blog" class="blog-button">Blog</a> </li></br>
+                                
+                                
+                           </ul>
+                        </nav> <nav class="cover-navigation navigation--social">
+    <ul class="navigation">
+        
+        <li class="navigation__item">
+            <a href="https://twitter.com/heri" title="@heri on Twitter" rel="me"> <i class='fa fa-twitter'></i> <span
+                    class="label">Twitter</span> </a>
+        </li> 
+        
+        <li class="navigation__item">
+            <a href="https://github.com/heri" title="heri on github" rel="me authn"> <i class='fa fa-github'></i> <span
+                    class="label">Github</span> </a>
+        </li> 
+        
+        <li class="navigation__item">
+            <a href="https://medium.com/@heri" title="Medium" rel="nofollow"> <i class='fa fa-medium'></i> <span
+                    class="label">Medium</span> </a>
+        </li>
+        
+        <li class="navigation__item">
+            <a href="mailto:heri@studiozenkai.com" title="Email"> <i class='fa fa-envelope-o'></i> <span
+                    class="label">Email</span> </a>
+        </li>
+    </ul>
+</nav> </div>
+                </div>
+            </div>
+            <div class="panel-cover--overlay"></div>
+        </div>
+    </header>
+</noscript>
+
+  <div class="content-wrapper">
+    <div class="content-wrapper__inner">
+      <div class="post">
+        <h1>Docker Desktop command line alternative</h1>
+        <span class="post-date">Wed, Sep 1, 2021</span>
+        <p>Docker Desktop is one of the de facto tool present on macos developer machines, along with other utilities such as git or homebrew. Contrary to apps such as VS Code, it not an app you interact with everyday but more a background tool running constantly during application development and deployment. It runs in fact the virtual machine that allows you to run docker on Windows or Mac as if you were on Linux, albeit with a little bit more resources.</p>
+
+<p>Many users will need to look for alternatives with the recent announcement that it will now be a paid subscription for medium to large companies. On MacOS, I use docker-machine to run docker from Terminal.</p>
+
+<blockquote>
+<p>brew install &ndash;cask docker virtualbox</p>
+</blockquote>
+
+<p>You might need to authorize this in MacOS preferences</p>
+
+<blockquote>
+<p>brew install docker-machine</p>
+</blockquote>
+
+<p>I setup docker-machine with more memory &amp; CPU, since I work on large Ruby and Python/tensorflow projects. Codebases with a small footprint can use the default virtualbox settings.</p>
+
+<blockquote>
+<p>docker-machine create -d virtualbox &ndash;virtualbox-memory=4096 &ndash;virtualbox-cpu-count=2 &ndash;virtualbox-disk-size=10000 default</p>
+</blockquote>
+
+<p>See if it works:</p>
+
+<blockquote>
+<p>docker run hello-world</p>
+</blockquote>
+
+<p>Now you should be able to run docker, docker-compose, build, tag and run images!</p>
+
+<p>Note 1 : Compared to Docker Desktop, you have to manually setup port forwarding once you build and run an image, such as:</p>
+
+<blockquote>
+<p>vboxmanage controlvm default natpf1 &ldquo;nameformapping,tcp,,3000,,3000&rdquo;</p>
+</blockquote>
+
+<p>This makes puma available on localhost:3000</p>
+
+<p>Note 2 : If you reboot your machine or if it goes into sleep, docker-machine can stop. Run it again with:</p>
+
+<blockquote>
+<p>docker-machine start default</p>
+</blockquote>
+
+<p>Let me know how it works for you!</p>
+
+        <div class="sharing">
+<p>© Heri Rakotomalala. All rights reserved. Powered by <a href="https://www.digitalocean.com/?refcode=ef57f6ccd2d8">Digital Ocean</a></p>
+
+<p>Heri Rakotomalala is an engineer working on small and innovative projects in Montréal. Originally from Madagascar, he has lived 7 years in East Africa, studied Engineering and made friends in France, built a community building in Esteli, Nicaragua and is taking pictures and coding in Montréal, Canada. This site cover technology work.</p>
+
+</div>
+
+
+      </div>
+    </div>
+  </div>
 
 </body>
 

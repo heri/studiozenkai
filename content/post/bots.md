@@ -42,7 +42,7 @@ Machine Learning feeds real-world data to an algorithm and correlate them with p
 
 A simple case would be guessing the gender. A researcher would pick features such as weight and height, and can set aside data to test later if parameters are good. A good machine learning algorithm would associate a person with shorter height and lesser weight to female gender:
 
-![Gender weight height](/images/rplot.png "[Gender weight height")
+![Gender weight height](/images/rplot.png "[Gender weight height]")
 
 *Using this machine learning concept in bots would provide something different from decades ago*. Previously, "bots" could only process discrete cases. In the case of gender search, a programmer would write rules. "If height < 65 and weight < 150 pounds, then person is female". But what about a person who is tall and lightweight?  Machine learning can cover the continuity of cases and even try guessing "out-of-bounds" cases.
 

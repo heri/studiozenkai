@@ -13,8 +13,6 @@ Just in Québec, there are about 7000 programmer or developer positions that are
 
 And it’s not just in Québec. Go in Toronto, New York city or in California. It seems you can find a highly rewarding job as long as you know how to code.
 
-![Barack Obama Code](https://cdn-images-1.medium.com/max/2000/1*R5FJAuwICPzY3ByLnkgpCg.jpeg "[Barack Obama Code]")
-
 The trend has not gotten unnoticed. Smart people from all horizons are now learning and looking to land a job in the field.
 
 This guide is for those people in arts, marketing and many other fields who are now looking for the best way to learn how to code in six months. Since time is limited, it is focused on producing practical code instead of abstract topics such as data structures or compiling. I assume however that it is just the beginning of a journey and you will have time later on to pick on formal learning.
@@ -41,8 +39,6 @@ Currently, the best resources are not books but online resources.
 
 Without any background in programming, you can start with the free resource Code Academy. It’s important to follow each lesson and take your time.
 
-![CodeAcademy](https://cdn-images-1.medium.com/max/2000/1*6A2ZnlanQElatuc-pHzyXA.png "[Code Academy]")
-
 I love CodeAcademy’s interactive tools. You can try new code directly in the browserYour goal should be on building a simple static site (such as this) in 2 or 3 weeks after your codeacademy course. I recommend you put your own online resume, with a few pictures, and links to your work. Pick a code editor (take a look at Atom), a graphic program, and you have the tools to ship your first site.
 
 Up next are either [CodeSchool](http://CodeSchool.com), TeamTreeHouse or CodeAvengers. I especially like the guys at CodeSchool with their awesome service and amazing teachers, but others are also worth a look. At the end of the day, it’s important to choose one and stick to it. I would recommend at this point to pick one that has the best javascript course. Look at meteor or node-based frameworks.
@@ -61,16 +57,12 @@ Hackathons are a good experience. They are single day or whole weekend experienc
 
 If the timing is right and if your progress is fast, you can apply to go to Google summer of Code, especially if you have managed to develop one or two innovative projects in hackathons.
 
-![Hackathons](https://cdn-images-1.medium.com/max/2000/1*dh4aKkidVcYevooiZMvtVg.jpeg "[Hackathons]")
-
 You can also start your social programming “life” online. StackOverflow is a good place to start. When stuck on CodeSchool, you can either search the site (recommended) or ask a question and get answers from the community. A few will laugh at your lack of experience but it’s important to persist.
 
 Github is another major site. Start an account, browse repositories, try out frameworks, open issues and see if you can contribute. Many projects like Apache, node, Angular are also always looking for contributors.
 
 The more you contribute publicly to Github, the higher the chances to be recruited!
 
-
-![This is the account of a zealous although imaginary programmer.](https://cdn-images-1.medium.com/max/1600/1*npcLRTMDVW2qx6PMMGMxYg.png "[Github]")
 
 ## Internships
 

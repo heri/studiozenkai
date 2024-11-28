@@ -1,8 +1,11 @@
 +++
-date = "2023-08-27T12:00:00-00:00"
+date = "2024-08-27T12:00:00-00:00"
 title = "About Heri"
 
 +++
+
+
+![heri](/images/heri_small.jpg "heri")
 
 Key facts
 

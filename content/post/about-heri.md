@@ -16,9 +16,10 @@ Key facts
 * Started MontrealTechWatch.com, a technology blog covering tech and startups in Montréal, one of the key drivers of the local startup community. At its peak, the blog attracted 10k daily readers. Also organized Montréal's first ever hackathon (Blitzweekend), and then Montréal's first StartupWeekend at Business School HEC.
 * 2 photography exhibitions in Montréal, and as well as being the official photographer for Le Cypher X & Urban Science, one of Montréal's top hip-hop group, and many other local events.
 * Crowdfunded millions of dollars for Montréal artists and local projects with SeedingFactory. We made videos, worked on their social media, marketed, made friends. Also worked as VP of Marketing for MakeAChamp, a crowdfunding startup specialized in athletes
+* Membrer of artist collective Howl Arts! with the launch of several albums, books, graphic novels while being an active part of the Montréal underground art community
 * Lost father to cancer while I was still navigating Montréal. From this, I am probably more sensitive to healthcare and health issues than most
 * Senior/Lead/Staff Engineer for VC-backed startups such as Sonder or Klue, but also for global companies like Nasdaq or Decathlon. Additionally Software Consultant for many projects, from Airbnb/Uber clones to crypto trading platforms. I do not count the years coding anymore, but still get excited for new technologies or new patterns every now and then
-* Maintains and operates [a chalet on Airbnb](https://studiozenkai.com/post/airbnb-vacation-home/), deep in Québec countryside. I build docks and Adirondack chairs, chase away beavers and mice, and can tell you the minute differences between bedsheets from Costco or Ikea, or 13 reasons why Dawn is better.
+* Maintains and operates [a chalet on Airbnb](https://studiozenkai.com/post/airbnb-vacation-home/), deep in Québec countryside. I build docks and Adirondack chairs, chase away beavers and mice, and can tell you the minute differences between bedsheets from Costco or Ikea, or 7 reasons why Dawn is better.
 
 So as you can see, I am comfortable in deep Quebec or France countryside, in a hacking space or in a neighorhood hip hop event. But due to my origins and history, I am somehow allergic to alcohol (or at least at the level they are consumed in Western countries), debt and social norms
 

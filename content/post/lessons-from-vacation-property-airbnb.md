@@ -57,7 +57,7 @@ It takes 16 hours of hard work to get the dock, decks, piles out of the water. R
 
 All in all, my takeaways are:
 
-* Owning and operating a vacation property is not for everyone. You need to have expert skills in at least one of these areas: marketing/sales, photography, customer service, operations including maintenance and cleaning. You also need a business plan on how you plan to tackle major issues. If there is no more running water, how are you going to fix it? Same for bed bugs, mice, or a sick cleaning team.
+* Owning and operating a vacation property is not for everyone. You need to have expert skills in at least one of these areas: marketing/sales, photography, customer service, operations including maintenance and cleaning. You also need a business plan on how you plan to tackle major issues. If there is no more running water, how are you going to fix it? Same for a broken amenity, mice, or a sick cleaning team.
 * Make sure to buy a property with unique advantages, such as a ski-in, ski-out chalet, an exclusive water feature (waterfall, private lake), breathtaking view of the landscape, or unique architecture such as treehouse or a glass house. There are thousands of lakefront chalets, or properties with a spa, swimming pool or volleyball court, and you will have to compete fiercely if you get one of these, possibly driving prices down.
 * Better yet, develop a unique story behind your Airbnb. Vacation properties with a genesis story and a community fare better than your average run-of-the-mill vacation property.
 * Have a plan to cut down costs. You might clean yourself. You could market your own website and leverage social media. You could build a property made of stainless steel so even toddlers or party goers  cannot break anything. 

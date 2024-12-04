@@ -5,7 +5,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <title> Why I am cancelling Amazon Prime &middot; Studio Zenkai </title>
+    <title> Balancing Developer and Customer Happiness for Engineering Teams &middot; Studio Zenkai </title>
     
     <link rel="stylesheet" type="text/css" href="https://studiozenkai.com//css/uno.css" />
     <link rel="stylesheet" type="text/css" href="https://studiozenkai.com//css/lightGallery.css" />
@@ -155,20 +155,61 @@
   <div class="content-wrapper">
     <div class="content-wrapper__inner">
       <div class="post">
-        <h1>Why I am cancelling Amazon Prime</h1>
-        <span class="post-date">Mon, Apr 26, 2021</span>
-        <p>I decided this morning to cancel my Amazon Prime membership. I used it for free prime delivery, and also for occasional prime videos, such as the <a href="https://www.amazon.com/Elementary-Season-1/dp/B009IJJ5B4">excellent Elementary</a> series. It is also amazing to say &ldquo;Alexa, play french songs&rdquo; and discover pieces from Amazon Music you knew nothing about.</p>
-<p>I used to be a fan of the Amazon store. You could find rare items that were not sold anywhere else, at unbeatable prices. Reviews were genuine, and when an item had an average of 5-star, it only meant that it was an excellent product. I got items that allowed me to be more productive and more efficient, at lower prices. Physical stores such as Best Buy were only useful to help in the decision process.</p>
-<p>In 2021, Amazon is unfortunately full of junk. The majority are cloned products of shoddy craftsmanship with little regard for durability, and boosted by 5 star reviews from users who got the product for free. Amazon Basics provide a standard of some sort but the line is comparable to IKEA products : they do the job but they are only meant to last for a year. When you do find interesting items, prices can be a multiple of what you find locally. Currently the only benefit is convenience : one click purchase with someone delivering boxes at your door step in a day or so.</p>
-<p>I understand this kind of convenience is interesting for special cases. If you are a single parent or if you have special needs, nothing beats shopping from your bed and having someone package and deliver for you. You save time to focus on kids, and don&rsquo;t have to deal with stairs, traffic or possibly rude service. You might even be claustrophobic or mall-phobic. In my case though, it falls in the definition of luxury.</p>
-<p>Another issue is the environmental footprint. I wrote recently about <a href="http://studiozenkai.com/post/climate-change-you-me/">the climate emergency</a>. You cannot be environmentally conscious and at the same time, make someone drive a van and waste boxes and plastic just for one gadget.</p>
-<p><img src="/images/doorstep.jpg" alt="stacks of wasteful amazon boxes" title="[stacks of wasteful amazon boxes]"></p>
-<p>What are the alternatives?</p>
-<p>Currently my biggest use for Amazon is for home renovation, as <a href="http://studiozenkai.com/post/airbnb-vacation-home/">detailed in the Airbnb vacation home post</a>. Whenever there was a problem, a quick search would find a solution on Amazon and get it delivered right away. I&rsquo;ve now moved from Amazon to local retailers such as <a href="https://www.canac.ca">canac</a>. It is local home renovation chain, but without the costs of Home Depot. Issues are compiled, filtered. If issues are still listed after a week, I do one single canac run. Total costs are 2 to 3 times less than Amazon, and I also get to test and touch products.</p>
-<p>My second use for Amazon is for electronics, since I work in tech and also have projects such as <a href="http://studiozenkai.com/post/autonomous-rc-car/">autonomous robot cars</a>. Like canac, you can always find local retailers that offer comparable products at lower prices. I get items in &ldquo;bulk&rdquo; so I don&rsquo;t have to go buy it again later. I also get boards and chips that are general purpose, so they can be reused for multiple projects. For speciality items like Lidar or AI chips, if I cannot find a second hand one, I will of course have to order from the manufacturer.</p>
-<p>Gadgets are a special case. This is for example the phone holder for your car or bike that is waterproof and also does wireless charging or whatnot. Or it can be a USBa to USB-C cable that does X and Y at the same time. Or another kitchen tool that looks amazing &hellip; at least on paper. I would encourage you to check if you cannot find it locally, better yet make it yourself. Or what about not having it all?</p>
-<p>I had other use for Amazon Prime, such as clothing and others. For example, in November, I realize I am missing winter gear, so I would conveniently order a hat &amp; a couple of gloves on Amazon. I am now looking into &ldquo;buying for life&rdquo; items. Patagonia or Arc&rsquo;teryx provide durable products, with a lifetime guarantee. You can find similar brands for the kitchen, footwear and so on. Having lifetime products is certainly less sexy than having fashionable items every season, but I am afraid it is the way to lower our environmental footprint.</p>
-<p>Lastly, I will miss Prime Videos for the occasional quirky or highbrow video. There is more than enough though on Netflix and I hope it will leave me more time for more productive endeavours, or why not, just enjoy outdoors 😁</p>
+        <h1>Balancing Developer and Customer Happiness for Engineering Teams</h1>
+        <span class="post-date">Tue, Nov 12, 2024</span>
+        <p>Misalignment between engineering, product and business teams lead to delays, burnout and dissatisfied customers.</p>
+<p>There is Internet literature to help out but I have not seen a satisfying framework that makes sense for all parties.</p>
+<p>To address this, I use the <strong>Weighted Customer Happiness</strong> (WH) and the <strong>Customer-Developer Delivery Index</strong> (DI).</p>
+<p>This post explores what are these metrics and how different teams can actively use them for sustainable success.</p>
+<p><strong>Weighted Happinness (WH)</strong></p>
+<p>Customer happinness is key to a company, but not all customers are equal. By weighting satisfaction scores on customer value (eg customer lifetime value, customer engagement score), we ensure the metric reflect priorities:</p>
+\[
+\begin{aligned}
+Weighted Happinness &= \sum_{i=1}^{N}\frac{{S}_i×{W}_i}{N}
+\end{aligned}
+\]<p>where:</p>
+<ul>
+<li>S is the satisfaction score for a customer (eg NPS, CSAT)</li>
+<li>W weight based on customer importance (eg LTV, customer engagement, number of users)</li>
+<li>N number of customers</li>
+</ul>
+<p>For example, an account with 9,000 users will have 3 times more weight in this metric than another with 3,000 users.</p>
+<p>Everyone in the team should be laser focused on increasing this metric. Publish a dashboard. Add it to memos. Share it in Engineering all-hands.</p>
+<p>Weighted Happinness is usually measured in % (eg 82% average customer happinness), but another unit can be used, as long as everyone agrees.</p>
+<p><strong>Delivery Index (DI)</strong></p>
+<p>The Customer Developer Delivery index</p>
+\[
+\begin{aligned}
+Delivery Index &= \frac{F×WH}{O + A + C}
+\end{aligned}
+\]<p>whwere:</p>
+<ul>
+<li>F is <strong>Features Delivered</strong>. Many teams use story points using the Fibonacci sequence</li>
+<li>O is <strong>Work Hours Overtime</strong>. Overtime is here in its broad sense. In addition to regular overtime, this include time spent on rebases, time worked on re-opened tickets due to bugs or unclear requirements, production support tickets, and also meetings besides the ones defined in Agile or Scrum methodologies. Overtime relfects work-life balance. A minimal amount of overtime is good to keep things interesting, but past a certain threshold, you will have unhappy teams.</li>
+<li>A is <strong>Attrition rate</strong>. Like Overtime above, this is broad. It includes team members leaving to another department, medical leaves, or position changes. Why do we count team members changing departments or medical leaves? Because if they were truly happy, they would have found a way to keep working with their team</li>
+<li>C is <strong>cost</strong> or cost efficiency. A team can hire pricey consultants to boost F, or pay developers unreasonable amount of money to to reduce A. However the long term viability of the company dictates C be controlled and lowered as much as possible.</li>
+</ul>
+<p>The goal of a Head of Engineering or an executive is to increase the Delivery Index over time. How?</p>
+<p><strong>Features Delivered</strong></p>
+<p>This metric can be increased by providing better tooling and better infrastructure: Automated CI/CD, faster laptops and servers, use of <a href="https://studiozenkai.com/post/ai-will-take-your-job-eventually/">chatbots</a>, making sure <a href="https://studiozenkai.com/post/necessary-but-not-sufficient/">risky projects are properly refined</a>.</p>
+<p>Hiring great developers and better managers also work.</p>
+<p>Depending on the team, Quality (Q) could be part of F. Q represents the percentage of features meeting quality standards. Features with defects and customer-reported issues lower Q.</p>
+\[
+\begin{aligned}
+F &= {F}_deliveredontime x Q
+\end{aligned}
+\]<p><strong>Work Hours Overtime</strong></p>
+<p>Overtime can be decreased by making sure sprint planning and deadlines are realistic. A percentage of total time should always be allocated to tech debt reduction, and automation of repetitive tasks.</p>
+<p>This can be as simple as having a shared spreadsheet where devs log their overtime - so you get easily # hours overtime per dev per week</p>
+<p><strong>Weighted Happinness (WH)</strong></p>
+<p>It is critical that the head of engineering is engaged and identifies features critical to high-value customers. If there is a new feature planned, ask what is the feedback from the company&rsquo;s most important customers. Can you discuss with marketing how the new features relate to the pain point of each customer? Is it possible to develop features for more important customers instead?</p>
+<p>Make sure to balance feature development with bug and performance fixes that improves the life of your most engaged customers.</p>
+<p><strong>Team Attrition</strong></p>
+<p>This is collaborative work between human resources, management and business teams. It is important to have a regular pulse of developers. Monthly retrospectives help surface engineering issues such as tech debt, inadequate processes or collaboration issues.</p>
+<p>Of course, attrition also correlates to growth opportunities, financial as well as careers. If there are better career prospects in another team or if you pay a developer significanly less than other tech companies, then Atttrition will go up, regardless of F, O or Weighted Happinness.</p>
+<p>Attrition is usually represented by an annual percentage. If 1 dev leaves the company and you have 10 developer, then your attrition rate is 0.1 or 10% rate annually</p>
+<p><strong>Cost</strong></p>
+<p>The metric is normalized, based on past history or other teams.</p>
 
         <div class="sharing">
 <p>© Heri Rakotomalala. All rights reserved. Powered by <a href="https://www.digitalocean.com/?refcode=ef57f6ccd2d8">Digital Ocean</a></p>

@@ -1,5 +1,5 @@
 +++
-date = "2024-12-01T10:35:26-04:00"
+date = "2024-06-07T10:35:26-04:00"
 title = "AI will (probably) take your job (eventually)"
 
 +++

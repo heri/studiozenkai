@@ -1,5 +1,5 @@
 +++
-date = "2024-11-10T12:00:00-00:00"
+date = "2024-09-10T12:00:00-00:00"
 title = "Lessons from listing a vacation property on Airbnb"
 
 +++

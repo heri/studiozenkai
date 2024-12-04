@@ -1,5 +1,5 @@
 +++
-date = "2024-07-10T12:00:00-00:00"
+date = "2024-07-08T12:00:00-00:00"
 title = "Necessary but not sufficient"
 
 +++

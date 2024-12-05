@@ -59,7 +59,7 @@ Optionally, the team can track Quality (Q). Q represents the percentage of featu
 
  \[
 \begin{aligned}
-F &= Q x {F}_{delivered}
+F &= Q×{F}_{delivered}
 \end{aligned}
 \]
 
@@ -79,7 +79,7 @@ The result is then divided by Omax which is the maximum tolerable overtime.
 
  \[
 \begin{aligned}
-{O}_n &= \frac{O}{{O}_max}
+{O}_n &= \frac{O}{{O}_{max}}
 \end{aligned}
 \]
 

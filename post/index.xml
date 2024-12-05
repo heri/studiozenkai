@@ -9,6 +9,13 @@
     <lastBuildDate>Sun, 01 Dec 2024 10:35:26 -0400</lastBuildDate>
     <atom:link href="https://studiozenkai.com/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Balancing Customer Happiness, Developer Burden and Feature Delivery</title>
+      <link>https://studiozenkai.com/post/balancing-developer-happinness-and-customer-success/</link>
+      <pubDate>Tue, 12 Nov 2024 10:35:26 -0400</pubDate>
+      <guid>https://studiozenkai.com/post/balancing-developer-happinness-and-customer-success/</guid>
+      <description>&lt;p&gt;Your most valuable customer is frustrated because the features they need are delayed. Meanwhile, your engineering team is drowning in overtime, and attrition is climbing. How do you deliver value without burning out your team?&lt;/p&gt;&#xA;&lt;p&gt;To address this, I set up the &lt;strong&gt;Weighted Customer Happiness&lt;/strong&gt; (WH) and the &lt;strong&gt;Customer-Developer Delivery Index&lt;/strong&gt; (DI) - two metrics designed to balance customer priorities and developer well-being.&lt;/p&gt;&#xA;&lt;p&gt;This post explores what are these metrics and how different teams can actively use them for sustainable success.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>AI will (probably) take your job (eventually)</title>
       <link>https://studiozenkai.com/post/ai-will-take-your-job-eventually/</link>
       <pubDate>Sun, 01 Dec 2024 10:35:26 -0400</pubDate>

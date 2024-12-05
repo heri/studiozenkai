@@ -2,27 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://studiozenkai.com/post/ai-will-take-your-job-eventually/</loc>
-    <lastmod>2024-12-01T10:35:26-04:00</lastmod>
-  </url>
-  <url>
+    <loc>https://studiozenkai.com/post/</loc>
+    <lastmod>2024-12-14T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://studiozenkai.com/</loc>
+    <lastmod>2024-12-14T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://studiozenkai.com/post/balancing-developer-happinness-and-customer-success/</loc>
+    <lastmod>2024-11-12T10:35:26-04:00</lastmod>
+  </url><url>
     <loc>https://studiozenkai.com/post/lessons-from-vacation-property-airbnb/</loc>
-    <lastmod>2024-11-20T12:00:00+00:00</lastmod>
-  </url>
+    <lastmod>2024-09-10T12:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://studiozenkai.com/post/about-heri/</loc>
-    <lastmod>2024-08-27T12:00:00+00:00</lastmod>
-  </url>
-  <url>
+    <lastmod>2024-08-09T12:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://studiozenkai.com/post/necessary-but-not-sufficient/</loc>
-    <lastmod>2024-07-10T12:00:00+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://studiozenkai.com/post/about-heri/</loc>
-    <lastmod>2024-08-27T12:00:00+00:00</lastmod>
-  </url>
-  <url>
+    <lastmod>2024-07-08T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://studiozenkai.com/post/ai-will-take-your-job-eventually/</loc>
+    <lastmod>2024-06-07T10:35:26-04:00</lastmod>
+  </url><url>
     <loc>https://studiozenkai.com/post/levenshtein-rust/</loc>
-    <lastmod>2024-03-01T06:00:00-04:00</lastmod>
+    <lastmod>2024-03-04T06:00:00-04:00</lastmod>
+  </url><url>
+    <loc>https://studiozenkai.com/post/photography-and-the-secret-life-of-walter-mitty/</loc>
+    <lastmod>2024-02-03T07:35:26-04:00</lastmod>
   </url>
   <url>
     <loc>https://studiozenkai.com/post/embrace-vs-reject/</loc>

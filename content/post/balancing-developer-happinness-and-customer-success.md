@@ -15,7 +15,7 @@ Together, they help teams balance priorities and reach sustainable success.
 
 Not all customers are equal. Weighted Customer Happiness factors in customer importance when measuring satisfaction:
 
- \[
+\[
 \begin{aligned}
 WCH &= \sum_{i=1}^{N}\frac{{S}_i×{W}_i}{N}
 \end{aligned}
@@ -41,7 +41,7 @@ WCH alone is not enough. You also need happy developers doing what they do best.
 
  \[
 \begin{aligned}
-Customer Developer Delivery Index &= \frac{Delivery Performance}{Burden} &= \frac{F×WCH}{{O}_n + {A}_n + {C}_n}
+Customer Developer Delivery Index &= \frac{Delivery Performance}{Burden} &= \frac{F×WCH}{{O}_{normalized} + {A}_{normalized} + {C}_{normalized}}
 \end{aligned}
 \]
 
@@ -59,7 +59,7 @@ Optionally, the team can track Quality (Q). Q represents the percentage of featu
 
  \[
 \begin{aligned}
-F &= Q x {F}_delivered
+F &= Q x {F}_{delivered}
 \end{aligned}
 \]
 
@@ -103,7 +103,7 @@ Finally, Attrition correlates to Developer Happiness. Clear goals, autonomy and 
 
  \[
 \begin{aligned}
-{A}_n &= \frac{A}{{A}_max}
+{A}_n &= \frac{A}{{A}_{max}}
 \end{aligned}
 \]
 
@@ -115,7 +115,7 @@ The result is then divided by Amax which is the maximum tolerable attrition.
 
  \[
 \begin{aligned}
-{C}_n &= \frac{C}{{C}_ideal}
+{C}_n &= \frac{C}{{C}_{ideal}}
 \end{aligned}
 \]
 

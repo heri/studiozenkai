@@ -180,7 +180,7 @@ WCH &= \sum_{i=1}^{N}\frac{{S}_i×{W}_i}{N}
 <p>WCH alone is not enough. You also need happy developers doing what they do best. This is where CDDI comes in:</p>
 \[
 \begin{aligned}
-Customer Developer Delivery Index &= \frac{Delivery Performance}{Burden} &= \frac{F×WCH}{{O}_n + {A}_n + {C}_n}
+Customer Developer Delivery Index &= \frac{Delivery Performance}{Burden} &= \frac{F×WCH}{{O}_{normalized} + {A}_{normalized} + {C}_{normalized}}
 \end{aligned}
 \]<p>The goal is to increase CDDI over time.</p>
 <p><strong>Breaking down CDDI metrics</strong></p>
@@ -190,7 +190,7 @@ Customer Developer Delivery Index &= \frac{Delivery Performance}{Burden} &= \fra
 <p>Optionally, the team can track Quality (Q). Q represents the percentage of features meeting quality standards. Features with defects and customer-reported issues lower Q. Other teams take into account industry metrics.</p>
 \[
 \begin{aligned}
-F &= Q x {F}_delivered
+F &= Q x {F}_{delivered}
 \end{aligned}
 \]<p>For example, in a fintech company like NASDAQ, security and privacy are paramount, so even if a team manages to have a high output but a feature has glaring security issues, then F would be equal to 0.</p>
 <p>In another project, I worked on a crypto trading platform. One of its revenues stream is to find the best possible trade for its users and other platforms, as soon as possible. So Q was reflected in platform performance.</p>
@@ -214,14 +214,14 @@ F &= Q x {F}_delivered
 <p>Finally, Attrition correlates to Developer Happiness. Clear goals, autonomy and technical growth increase Developer Happiness, thus decreasing Attrition, while at the same increasing Delivery Performance.</p>
 \[
 \begin{aligned}
-{A}_n &= \frac{A}{{A}_max}
+{A}_n &= \frac{A}{{A}_{max}}
 \end{aligned}
 \]<p>Attrition is usually represented by an annual percentage. If a developer leaves the company and you have 10 developers, then your attrition rate is 0.1 or 10% rate annually.</p>
 <p>The result is then divided by Amax which is the maximum tolerable attrition.</p>
 <p><em><strong>Cost (C)</strong></em></p>
 \[
 \begin{aligned}
-{C}_n &= \frac{C}{{C}_ideal}
+{C}_n &= \frac{C}{{C}_{ideal}}
 \end{aligned}
 \]<p>Cost is hard and soft compensation, consultation fees, hardware and services costs, as well end of the year party, travel etc.</p>
 <p>Once you get the total, then divide by Cideal which is the ideal cost</p>

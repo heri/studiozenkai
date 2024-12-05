@@ -157,76 +157,74 @@
       <div class="post">
         <h1>Balancing Customer Happiness, Developer Burden and Feature Delivery</h1>
         <span class="post-date">Tue, Nov 12, 2024</span>
-        <p>Your most valuable customer is frustrated because the features they need are delayed. Meanwhile, your engineering team is drowning in overtime, and attrition is climbing. How do you deliver value without burning out your team?</p>
-<p>To address this, I set up the <strong>Weighted Customer Happiness</strong> (WH) and the <strong>Customer-Developer Delivery Index</strong> (DI) - two metrics designed to balance customer priorities and developer well-being.</p>
-<p>This post explores what are these metrics and how different teams can actively use them for sustainable success.</p>
+        <p>Your most valuable customer is frustrated because features are late. Meanwhile, your engineering team is drowning in overtime, and attrition is climbing. How do you keep customers happy without burning out your team?</p>
+<p>To tackle this, I designed the <strong>Weighted Customer Happiness</strong> (WH) and the <strong>Customer-Developer Delivery Index</strong> (DI) - two metrics designed to balance customer priorities and developer well-being.</p>
+<p>Together, they help teams balance priorities and reach sustainable success.</p>
 <p><strong>Weighted Customer Happiness (WCH)</strong></p>
-<p>WCH is key to a company, but not all customers are equal. By weighting satisfaction scores on customer value, we ensure the metric reflect priorities:</p>
+<p>Not all customers are equal. Weighted Customer Happiness factors in customer importance when measuring satisfaction:</p>
 \[
 \begin{aligned}
 WCH &= \sum_{i=1}^{N}\frac{{S}_i×{W}_i}{N}
 \end{aligned}
-\]<p>where:</p>
+\]<p>Where:</p>
 <ul>
-<li>S is the satisfaction score for a customer (eg NPS, CSAT)</li>
-<li>W weight based on customer importance (eg customer lifetime value, customer engagement, number of users per account)</li>
-<li>N number of customers</li>
+<li>S: satisfaction score for a customer (e.g., NPS, CSAT)</li>
+<li>W: weight based on customer importance (e.g., customer lifetime value, customer engagement, user count)</li>
+<li>N: total customers</li>
 </ul>
-<p>Everyone in the team should be laser focused on increasing this metric. Publish a dashboard. Add it to memos. Share it in Engineering all-hands.</p>
-<p>Weighted Customer Happiness is usually measured in %, but another unit can be used, as long as everyone agrees.</p>
-<p>To illustrate, in a B2B SaaS company, we had Dell as the biggest customers with 90,000 users, a third of all total users. Dell was a customer for years, and used the service extensively across sales, marketing departments and business units. During a sprint, we realized analytics provided to Dell were incorrect, and knowing their importance to the customer, engineering was all hands to solve the issue, regardless of what developers were working on. Because if Dell was unhappy, the WCH would crash.</p>
+<p>Teams should focus relentlessly on WCH. Share it widely. Discuss it at all-hands meetings. Make it part of the culture.</p>
+<p>For example, at a B2B SaaS company, we prioritized fixing an analytics issue for Dell, which accounted for one-third of all users. Ignoring Dell would have tanked our WCH—and possibly the business.</p>
 <p>This example with Dell is extreme and companies generally have a more balanced distribution, but this demonstrates why a weighted metric makes sense.</p>
-<p>It is critical that the head of engineering is engaged and identifies features critical to high-value customers. If there is a new feature planned, ask what is the feedback from the company&rsquo;s most important customers. Can you discuss with marketing how the new features relate to the pain point of each customer? Is it possible to invest in bug and performance fixes that improves the life of your most engaged customers instead?</p>
+<p>It is critical that the head of engineering is engaged and identifies features critical to high-value customers. If there is a new feature planned, ask what is the feedback from the company&rsquo;s most important customers, and how it relates to their point. Is it possible to invest in bug and performance fixes that improves the life of your most engaged customers instead?</p>
 <p><strong>Customer/Developer Delivery Index (CDDI)</strong></p>
-<p>The Customer/Developer Delivery index, or in short CDDI:</p>
+<p>WCH alone is not enough. You also need happy developers doing what they do best. This is where CDDI comes in:</p>
 \[
 \begin{aligned}
 Customer Developer Delivery Index &= \frac{Delivery Performance}{Burden} &= \frac{F×WCH}{{O}_n + {A}_n + {C}_n}
 \end{aligned}
-\]<p>where:</p>
+\]<p><strong>Breaking down CDDI metrics</strong></p>
 <ul>
-<li>F is <strong>Features Delivered on Time</strong>. Many teams use story points using the Fibonacci sequence</li>
-<li>On is <strong>Work Hours Overtime</strong>. Overtime is here in its broad sense. In its simplest form, it is the number of extra hours spent developing features, beyond the previously agreed time. Additionally, it also includes time spent on rebases, re-opened tickets due to bugs or unclear requirements, production support tickets, and also meetings besides the ones defined in Agile or Scrum methodologies. Overtime reflects work-life balance. A bit of overtime keeps things interesting, but past a certain threshold, you have unhappy teams.</li>
-<li>An is related to <strong>Attrition</strong>. Like Overtime above, this is broad. In addition to layoffs or resignations, it also includes team members leaving to another department, medical leaves, or position changes. Why do we count team members changing departments or leaves? Because if they were truly happy, they would keep working with their team. Keep in mind attrition disturb established processes.</li>
+<li>F is <strong>Features Delivered on Time</strong>, optionally adjusted for Quality Q if desired</li>
+<li>On is <strong>Work Hours Overtime</strong>.</li>
+<li>An is related to <strong>Attrition</strong>.</li>
 <li>Cn represents <strong>cost</strong> or cost efficiency. A team can hire pricey consultants to boost F, or pay developers unreasonable amount of money to to reduce A. However the long term viability of the company dictates C be controlled and lowered as much as possible.</li>
 </ul>
 <p>The goal is to increase CDDI over time.</p>
-<p>It is possible for a team to focus temporarily on Delivery Performance. You can push developers and increase their burden to get a feature released before a deadline. To decrease burden, managers can also choose to voluntarily decrease Delivery Performance. But both cases are not wise long-term. There is a trade-off, and ideally, the experience Head of Engineering knows how to increase Delivery Performance while at the same time decreasing Burden.</p>
-<p><strong>Features Delivered on Time</strong></p>
-<p>Great developers and managers increase F.</p>
-<p>A big contributor is making sure <a href="https://studiozenkai.com/post/necessary-but-not-sufficient/">risky epics are properly refined</a>.</p>
-<p>Furthermore, better tooling and infrastructure help: Automated CI/CD, faster laptops and servers, <a href="https://studiozenkai.com/post/ai-will-take-your-job-eventually/">use of A.I.</a>, great work environment etc.</p>
-<p>Optionally, the team can measure Software Quality (Q). Q represents the percentage of features meeting quality standards. Features with defects and customer-reported issues lower Q. Other teams take into account industry metrics.</p>
-<p>For example, in a company like NASDAQ, security and privacy are paramount, so even if a team manages to have a high output but the feature has glaring security issues, then F would be equal to 0.</p>
-<p>In another project, I worked in a crypto trading platform. One of its revenues stream is to find the best possible trade for its users and other platforms, quick. So Performance was measured.</p>
+<p><em><strong>Features Delivered on Time (F)</strong></em></p>
+<p><a href="https://studiozenkai.com/post/necessary-but-not-sufficient/">Strong refinement processes</a> increases F.</p>
+<p>Better tooling and infrastructure help: automated CI/CD, powerful laptops and servers, <a href="https://studiozenkai.com/post/ai-will-take-your-job-eventually/">use of A.I.</a>, great work environment etc.</p>
+<p>Optionally, the team can track Quality (Q). Q represents the percentage of features meeting quality standards. Features with defects and customer-reported issues lower Q. Other teams take into account industry metrics.</p>
+<p>For example, in a fintech company like NASDAQ, security and privacy are paramount, so even if a team manages to have a high output but if a feature has glaring security issues, then F would be equal to 0.</p>
+<p>In another project, I worked on a crypto trading platform. One of its revenuesstream is to find the best possible trade for its users and other platforms, quick. So Performance was measured to get Q.</p>
 <p>Those are examples. You will find a SaaS company using other metrics, such as user-friendliness or click-through rates.</p>
 \[
 \begin{aligned}
 F &= Q x {F}_delivered
 \end{aligned}
-\]<p><strong>Work Hours Overtime</strong></p>
+\]<p><em><strong>Work Hours Overtime (W)</strong></em></p>
+<p>Overtime is in its broad sense. In its simplest form, it is the number of extra hours spent developing features, beyond previously agreed time. It also includes time spent on rebases, re-opened tickets due to bugs or unclear requirements, production support tickets, and also meetings spent on revisiting requirements.</p>
+<p>Overtime can be decreased by making sure sprint planning and deadlines are realistic, and making sure time spent on features and overtime is accurately logged.</p>
+<p>The result is then divided by Omax which is the maximum tolerable overtime.</p>
 \[
 \begin{aligned}
 {O}_n &= \frac{O}{{O}_max}
 \end{aligned}
-\]<p>Overtime can be decreased by making sure sprint planning and deadlines are realistic.</p>
-<p>A percentage of total time should always be allocated to tech debt reduction, and automation of repetitive tasks.</p>
-<p>Log time spent on features and time spent on any other work</p>
-<p>The result is then divided by Omax which is the maximum tolerable overtime</p>
-<p>If we take the example of a sprint where F=30 points, developers could spend 2 or 3 hours going back and forth with product and designers, because of requirements gap. If the deployement pipeline is not optimal, the team can also spend 4+ hours rebasing. I have also seen examples where developers have to wait hours for a pipeline to run, or &ldquo;babysit&rdquo; their Pull Request in order to get a review app for QA. Other times, it can be hours setting up clusters and resource groups.</p>
-<p>As mentioned before, a minimum of Overtime is good. You do want to be able to question Product so once shipped, we do not re-open the ticket. We do want the best (automated) infrastructure. It&rsquo;s when the hours add up, and when the developers spent more time on these tasks than developing that you get negative impacts.</p>
-<p>In a previous project, when we noticed overtime spiked and attrition followed, our team revised planning processes. Within 3 months, we reduced attrition from 20% to 5%, while maintaining a Weighted Customer Happiness score of 90%.</p>
-<p><strong>Team Attrition</strong></p>
+\]<p>Overtime reflects work-life balance. A bit of overtime keeps things interesting, but past a certain threshold, you have unhappy teams.</p>
+<p>A good example of &ldquo;good overtime&rdquo; is time spent automating CI/CD or setting up better infrastructure.</p>
+<p>I do not mind spending a couple of days writing a Pulumi script so instead of yml files, the team would have infrastructure as code. This increases time productivity, and lets them focus on development later.</p>
+<p>When requirements are not complete, and an edge case is discovered in production, the team has to re-open the ticket, work on a fix, and get it to QA. The whole process can take 5 to 10 more time than making sure that all edge cases are accounted for in refinment. Overtime increases, developer satisfation decreases.</p>
+<p><em><strong>Team Attrition (A)</strong></em></p>
+<p>Like Overtime above, this is broad. In addition to layoffs or resignations, it also includes team members leaving to another department, medical leaves, or position changes. Why do we count team members changing departments or leaves? Because these are disruptive.</p>
+<p>Managing Attrition is collaborative work between everyeone. It is important to have a regular pulse of developers through surveys and retrospectives to surface issues.</p>
+<p>Attrition is also related to growth opportunities, financial as well as careers. If there are better career prospects elswhere, then Atttrition will go up, regardless of F, O or WCH.</p>
+<p>Finally, Attrition correlates to Developer Happiness. Clear goals, autonomy and technical growth increase Developer Happiness, thus decreasing Attrition, while at the same increasing Delivery Performance.</p>
 \[
 \begin{aligned}
 {A}_n &= \frac{A}{{A}_max}
 \end{aligned}
-\]<p>Managing Attrition is collaborative work between human resources, management and developers. It is important to have a regular pulse of developers. Monthly retrospectives help surface issues such as tech debt, inadequate processes, collaboration or even people issues.</p>
-<p>Attrition is also related to growth opportunities, financial as well as careers. If there are better career prospects elswhere, then Atttrition will go up, regardless of F, O or WCH.</p>
-<p>Finally, Attrition correlates to Developer Happiness. Clear goals, autonomy and technical growth increase Developer Happiness, thus decreasing Attrition, while at the same increasing Delivery Performance.</p>
-<p>Attrition is usually represented by an annual percentage. If a developer leaves the company and you have 10 developers, then your attrition rate is 0.1 or 10% rate annually.</p>
-<p>The result is then divided by Amax which is the maximum tolerable attrition</p>
-<p><strong>Cost</strong></p>
+\]<p>Attrition is usually represented by an annual percentage. If a developer leaves the company and you have 10 developers, then your attrition rate is 0.1 or 10% rate annually.</p>
+<p>The result is then divided by Amax which is the maximum tolerable attrition.</p>
+<p><em><strong>Cost (C)</strong></em></p>
 \[
 \begin{aligned}
 {C}_n &= \frac{C}{{C}_ideal}
@@ -234,6 +232,12 @@ F &= Q x {F}_delivered
 \]<p>Cost can be developer pay, consultation fees, hardware and services costs.</p>
 <p>Once you get the total, then divide by Cideal which is the ideal cost</p>
 <p>Start tracking WCH and CDDI today. Experiment, measure, and share your results!</p>
+<p><strong>Trade-offs</strong></p>
+<p>It is possible for a team to focus temporarily on Delivery Performance. You can increase developer burden to get a feature released before a deadline. You can also spend more time reducing burnout. But both cases are unstainable. There is a trade-off, and a good Head of Engineering knows how to increase Delivery Performance while at the same time decreasing Burden.</p>
+<p><strong>Why It Matters</strong></p>
+<p>In one project, we noticed a spike in overtime and attrition. By revisiting our processes, we reduced attrition from 20% to 5% while maintaining a WCH of 90%. The metrics worked because they showed us where to focus.</p>
+<p>Start tracking WCH and CDDI today. Experiment. Refine. Share your results.</p>
+<p>And remember: The happiest customers are loyal. But the happiest developers stick around longer — and don’t dream of deleting your app after hours.</p>
 
         <div class="sharing">
 <p>© Heri Rakotomalala. All rights reserved. Powered by <a href="https://www.digitalocean.com/?refcode=ef57f6ccd2d8">Digital Ocean</a></p>

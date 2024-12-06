@@ -23,7 +23,7 @@ It is in this spirit that I started the nobuy challenge. Following periods of ex
 
 ![Heri's nobuy challenge](https://i.imgur.com/cOQTEk0.jpg) "[Heri's nobuy challenge]")
 
-I started the challenge on January 1st, 2023, and I will continue until February 28th 2023.  I will not buy any experiences, such as travel, concerts, movies, services such as haircut or anything else. I will not buy any technology, tools, clothes, furniture, toys, books or anything else. I will not buy any gifts, such as birthday presents. I will not buy food apart from essentials, so this will exclude alcohol, snacks, sauces etc. If I wanted to buy something, I would need to either postpone, cancel, repair, make it msyelf or borrow it.
+I started the challenge on January 1st, 2023, and I will continue until February 28th 2023. Not gifts. Not gadgets. Not snacks or sauces. Nothing I didn’t truly need. If I wanted something, I’d have to wait, fix what I had, or go without.
 
 Needless to say, I am tempted many times a day to break the challenge. Here are interesting things that happened so far:
 
@@ -33,4 +33,10 @@ Needless to say, I am tempted many times a day to break the challenge. Here are 
 * I have a kid's birthday end of the month. Previously, I would buy what's best either at the local toy store or from Amazon. Here I would need to be creative and provide instead a memorable experience, such as a trip to the zoo, or a big scavenger hunt at the local park. Buying a birthday cake would be a nice touch, but I can make it myself 😁
 * I have upcoming business/work expenses. I do not know yet how I am going to handle this. The business/work activities cannot be postponed or cancelled.
 
-Note : the idea here is not to be cheap or count how much money you saved, but to be mindful of your consumption. I am in a position where I never look what's in my bank account, but I am sensible to the idea that I am filling my life with crap. Looking forward to see how this goes!
+This challenge isn’t about being cheap. It’s not about saving money or being clever. It’s about breaking free.
+
+I don’t know where this will end. Maybe I’ll fail. Maybe I’ll buy something stupid tomorrow. But for now, I’m learning.
+
+And you know what? If fasting makes me a monk, then no-buy makes me a rebel. A rebel against the idea that more is better. Because sometimes, less is just enough.
+
+Besides, isn’t it better to leave the junk for the Kardashians?

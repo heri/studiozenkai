@@ -1,6 +1,6 @@
 +++
 date = "2023-03-12T10:35:26-04:00"
-title = "The Little Things Matter"
+title = "Little Math Routines"
 
 +++
 

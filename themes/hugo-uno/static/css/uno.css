@@ -42,9 +42,47 @@ q:before, q:after {
   content: '';
   content: none; }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    overflow-x: auto;
+    word-break: keep-all;
+}
+
+thead {
+  display: table-header-group;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+  border-color: inherit;
+}
+
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+  border-color: inherit;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  unicode-bidi: isolate;
+  border-color: inherit;
+}
+
+.post-content table th, .post-content table:not(.highlighttable,.highlight table,.gist .highlight) td {
+  min-width: 80px;
+  padding: 8px 5px;
+  line-height: 1.5;
+  border-bottom: 1px solid var(--border);
+}
+
+td {
+  display: table-cell;
+  vertical-align: inherit;
+  unicode-bidi: isolate;
+}
 
 body {
   width: 100%;

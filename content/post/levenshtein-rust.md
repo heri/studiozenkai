@@ -6,7 +6,7 @@ title = "Levenshtein Rust gem"
 
 Given [my Github profile](https://github.com/heri) and [published articles](https://studiozenkai.com/post/), it is clear my favorite programming language is Ruby, an elegant and concise language that brings results, fast.
 
-Raw performance is not Ruby's strengths. It is easy to add loops and O(n2) issues, memory leaks are not rare, so CPU and RAM are quickly hogged.
+Raw performance is not Ruby's strengths. It is easy to add loops and O(n²) issues, memory leaks are not rare, so CPU and RAM are quickly hogged.
 
 It is important in your team to raise the bar and make everyone understand the team has a limited budget. Inspect every line carefully, ask why new variables are introduced, and if something simpler is possible. The saying is a cliché but worth here : With great power comes great responsability.
 

@@ -12,7 +12,7 @@ During the pandemic, it was always occupied, except for a few spots in fall or s
 
 In theory, $70k to $100k annual revenues means you could pay back the mortgage in a few years, so you will have a property generating "free" cash flow, as well as a waterfront property that friends & family could enjoy and have life memories. Doesn't that sound amazing? Maybe one could buy a couple of vacation properties, retire early, and work 4 hours weekly doing some property mainteance and responding messages from wealthy customers.
 
-That was the theory. I have been operating the property for the 4 years, even from far away such as the other side of the world, and have hosted 300+ families. The theory clashes with reality:
+That was the theory. I have been operating the property for the 4 years, even thousands of kilometres away, and have hosted 300+ families. The theory clashes with reality:
 
 * Operating a vacation property means a hard commitment. It is not a hobby, or a low-end job where you can call in sick. It is your responsibility to address issues as soon as possible, answer messages professionally even from disrespectful patrons, and go onsite at least once monthly. The only way out is selling the property, but until then, you have to consider this like taking care of a baby
 * There is constant property damage and theft from groups. Because I am not onsite between two groups, and also there are too many amenities, it is almost impossible to know who broke or stole something. The first times, I filed claims, and had one group left a 1-star review painting me as an irresponsible host, or had Airbnb stating I had to eat the costs. You can filter groups and make sure you host respectful families, but ultimately, you can expect having to continuously repair and replace amenities, from plumbing to electricity to furniture and decoration. Sometimes, I have a local handyman do this, but most of the time, I did all myself.
@@ -22,7 +22,7 @@ That was the theory. I have been operating the property for the 4 years, even fr
 * Airbnb provides leads, but ideally you would want a base of loyal customers or at least a website that brings in customers regularly. I know marketing professionals who bought vacation properties and approached this as a marketing job and use the latest tactics with good success, but alas, I do not have time nor the expertise to do that.
 * Constant fight with nature. The waterfront is eroding away, and every year, I chase away mice, wasps, beavers, and all sorts of wildlife. Every season has its own issues, flooding in spring, lawn and plants upkeep in summer, snowplowing in winter etc.
 
-The latest issue is that the middle class in Canada and North America is being squeezed. In many ways, the chalet is an escape for upper middle class and middle class families and couples to forget about their problems and enjoy some time off. They can do that if they save a few hundreds dollars every month. Trade tariffs and generous government benefits kickstarted inflation, interest rates went up, and now the average North American have their grocery bill, rent or cost of services higher than their earnings. This means the vacation property has been sitting empty and not expecting anyone yet for the winter season. With more trade tariffs planned, inflation will go up again. However I think this is only temporary and the situation should improve past 2025, with investing in a short-term rental chalet one of the best decisions.
+The latest issue is that the middle class in Canada and North America is being squeezed. In many ways, the chalet is an escape for upper middle class and middle class families and couples to forget about their problems and enjoy some time off. They can do that if they save a few hundreds dollars every month. Trade tariffs and generous government benefits kickstarted inflation, interest rates went up, and now the average North American have their grocery bill, rent or cost of services higher than their earnings. This means the occupancy rate is at an all-times low and not expecting to improve any time soon.
 
 
 ![Canadian Log cabin in the Quebec laurentians](/images/01_chalet.jpeg "Canadian Log cabin in the Quebec laurentians.")
@@ -43,14 +43,8 @@ Everyone learns how to do stuff
 ![Deers, turkeys, beavers just outside](/images/06_chalet.jpeg "Deers, turkeys, beavers just outside")
 Deers, turkeys, beavers just outside
 
-![Enjoying sun and fresh air](/images/07_chalet.jpeg "Enjoying sun and fresh air")
-Enjoying sun and fresh air
-
 ![Marshmallow fun](/images/08_chalet.jpeg "Marshmallow fun")
 Marshmallow fun
-
-![It takes 16 hours of hard work to get the dock, decks, piles out of the water. Real Blood & sweat](/images/09_chalet.jpeg "It takes 16 hours of hard work to get the dock, decks, piles out of the water. Real Blood & sweat")
-It takes 16 hours of hard work to get the dock, decks, piles out of the water. Real Blood & sweat
 
 ![Paddling, swimming, and beach time](/images/10_chalet.jpeg "Paddling, swimming, and beach time")
 "Paddling, swimming, and beach time
@@ -82,7 +76,7 @@ R = N × OR × AR
 Where:
 
 * N is number of rentable nights per year (365 - maintenance days). You want maintenance days to be as low as possible, but not as much as lowering the customer experience. Start at 15 days reserved for upkeep and work your way down.
-* OR is average Occupancy Rate. It is 0.8 and higher for outstanding chalets
+* OR is average Occupancy Rate. It was 0.8 during the pandemic but can be as low as 0.2 in low season (spring/fall)
 * AR is Average Nightly rate, $250 in low season and up to $700 in high season
 
 Variables affecting revenue:
@@ -114,7 +108,7 @@ Where:
 
 * Owning and operating a vacation property is not for everyone. You need to have expert skills in at least one of these areas: marketing/sales, photography, customer service, operations including maintenance and cleaning. You also need a business plan on how you plan to tackle major issues. If there is no more running water, how are you going to fix it? Same for a broken amenity, mice, or a sick cleaning team.
 * Make sure to buy a property with unique advantages, such as a ski-in, ski-out chalet, an exclusive water feature (waterfall, private lake), breathtaking view of the landscape, or unique architecture such as treehouse or a glass house. There are thousands of lakefront chalets, or properties with a spa, swimming pool or volleyball court, and you will have to compete fiercely if you get one of these, possibly driving prices down.
-* Better yet, develop a unique story behind your Airbnb. Vacation properties with a genesis story and a community fare better than your average run-of-the-mill vacation property.
+* Better yet, develop a unique story behind your Airbnb. Vacation properties with a genesis story and a community fare better than your average run-of-the-mill vacation property. Having a community with shared values also lowers thefts, maintenance costs, marketing costs, cancellations in exchange for more time engaging the community through articles, media, events etc.
 * Have a plan to cut down costs. You might clean yourself. You could market your own website and leverage social media. You could build a property made of stainless steel so even toddlers or party goers  cannot break anything. 
 * Have a plan to cut down on maintenance. In summer, I absolutely need to go to the property every 20 days otherwise there will dozens of broken amenities. The more amenities you have, the more maintenance is needed. Think hard how you can go around this.
 

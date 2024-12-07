@@ -110,6 +110,14 @@
     }
 
   }
+  body.homepage .navigation-wrapper {
+    display: block; 
+    position: static;
+    width: auto; 
+    padding: 0; 
+    background: transparent;
+    border-bottom: none; 
+}
 
     .navigation-wrapper {
       display: none;

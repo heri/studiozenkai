@@ -17,6 +17,24 @@ This is not the case for staff engineers, the next step. In other industries suc
 
 So it is critical for staff engineers to sit down and make plans. Can we list risks? Are there unknowns? What are our margins? If there are unknowns, what is the contigency plan if the main plain fails? Do we want to allocate all the team's resources to the main project or hedge by having someone work on the backup plan? Experience can help answer a few of these. Often, answers comes from within the company. Stakeholders will tell what is best for them and point out threats. Even junior views are appreciated -- their fresh minds or naïveté can help re-evaluate the challenge.
 
+**Model**
+
+For me, this represents the balance between technical expertise, human-centric skills, and foresight:
+ \[
+\begin{aligned}
+E = T × (1 + H × F)
+\end{aligned}
+\]
+
+Where:
+
+* E: Effectiveness as a Lead Engineer. Your ability to lead and deliver complex projects
+* T: Technical ExpertiseT. The depth and breadth of your technical skills and knowledge, which are necessary but insufficient alone. For a junion or senior engineer, E = T
+* H: Human Skills. Ability to resolve conflicts, understand human motivations and team dynamics. This depends on personal history, experience, motivation but also on company culture.
+* F: Strategic foresight. Your ability to foresee risks, plan contegencies, and align diverse parties towards a shared goal. This comes from experience, from working on difficult projects, and also working with the company.
+
+**The Process As A Video Game Quest**
+
 When mentoring other engineers, I sometimes use the metaphor of US Congress(wo)men and their constituents. You go door-to-door, and gather feedback from constituents to understand their need. Another metaphor I use is from adventure games such as Mass Effect or The Witcher 3. In these games, you have sub-quests. You navigate complex dialog trees, initating communication with different people, choosing trade-offs, even sometimes taking to cryptic NPCs (Non-Playing-Characters) for hints. You build relationships with NPCs (your crew), earning trust and alignement across departments and companies. You don't mind going through complex dialog trees and grinding for gear because you know it will allow you to finish the level and the game.
 
 In a typical project, NPCs can be product managers, paying or free users, coworkers, or even far off teams like legal or marketing. Ask questions like: Why? Why are we doing this? What do we want to get out of it? Why do you propose we do it this way? What are priorities?

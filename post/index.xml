@@ -16,10 +16,10 @@
       <description>&lt;p&gt;Your most valuable customer is frustrated because features are late. Meanwhile, your engineering team is drowning in overtime, and attrition is climbing. How do you keep customers happy without burning out your team?&lt;/p&gt;&#xA;&lt;p&gt;To tackle this, I designed the &lt;strong&gt;Weighted Customer Happiness&lt;/strong&gt; (WH) and the &lt;strong&gt;Customer-Developer Delivery Index&lt;/strong&gt; (DI) - two metrics designed to balance customer priorities and developer well-being.&lt;/p&gt;&#xA;&lt;p&gt;Together, they help teams balance priorities and reach sustainable success.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Lessons from listing a vacation property on Airbnb</title>
-      <link>https://studiozenkai.com/post/lessons-from-vacation-property-airbnb/</link>
+      <title>Airbnb Hosting: The Good, The Bad and The Profitable</title>
+      <link>https://studiozenkai.com/post/airbnb-the-good-the-bad-the-profitable/</link>
       <pubDate>Fri, 11 Oct 2024 12:00:00 +0000</pubDate>
-      <guid>https://studiozenkai.com/post/lessons-from-vacation-property-airbnb/</guid>
+      <guid>https://studiozenkai.com/post/airbnb-the-good-the-bad-the-profitable/</guid>
       <description>&lt;p&gt;During the pandemic, I bought &lt;a href=&#34;https://studiozenkai.com/post/airbnb-vacation-home/&#34;&gt;a vacation property in the Laurentians&lt;/a&gt;, as an escape for the family but also for short-term rental on Airbnb.&lt;/p&gt;&#xA;&lt;p&gt;The chalet (&lt;a href=&#34;https://auchaletrouge.com&#34;&gt;official website&lt;/a&gt;) is waterfront on 2 acres, has the typical log home look that many vacationers look for, and while being secluded in nature, has many modern amenities such as a spa, fully furnished kitchen, 4K TV with hi-speed Internet, indoor &amp;amp; outdoor fire pits, a high-end aluminium &amp;amp; cedar dock with boats, and so on.&lt;/p&gt;</description>
     </item>
     <item>
@@ -55,7 +55,7 @@
       <link>https://studiozenkai.com/post/levenshtein-rust/</link>
       <pubDate>Mon, 04 Mar 2024 06:00:00 -0400</pubDate>
       <guid>https://studiozenkai.com/post/levenshtein-rust/</guid>
-      <description>&lt;p&gt;Given &lt;a href=&#34;https://github.com/heri&#34;&gt;my Github profile&lt;/a&gt; and &lt;a href=&#34;https://studiozenkai.com/post/&#34;&gt;published articles&lt;/a&gt;, it is clear my favorite programming language is Ruby, an elegant and concise language that brings results, fast.&lt;/p&gt;&#xA;&lt;p&gt;Raw performance is not Ruby&amp;rsquo;s strengths. It is easy to add loops and O(n2) issues, memory leaks are not rare, so CPU and RAM are quickly hogged.&lt;/p&gt;&#xA;&lt;p&gt;It is important in your team to raise the bar and make everyone understand the team has a limited budget. Inspect every line carefully, ask why new variables are introduced, and if something simpler is possible. The saying is a cliché but worth here : With great power comes great responsability.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Given &lt;a href=&#34;https://github.com/heri&#34;&gt;my Github profile&lt;/a&gt; and &lt;a href=&#34;https://studiozenkai.com/post/&#34;&gt;published articles&lt;/a&gt;, it is clear my favorite programming language is Ruby, an elegant and concise language that brings results, fast.&lt;/p&gt;&#xA;&lt;p&gt;Raw performance is not Ruby&amp;rsquo;s strengths. It is easy to add loops and O(n²) issues, memory leaks are not rare, so CPU and RAM are quickly hogged.&lt;/p&gt;&#xA;&lt;p&gt;It is important in your team to raise the bar and make everyone understand the team has a limited budget. Inspect every line carefully, ask why new variables are introduced, and if something simpler is possible. The saying is a cliché but worth here : With great power comes great responsability.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Photography and The Secret Life Of Walter Mitty</title>
@@ -69,7 +69,7 @@
       <link>https://studiozenkai.com/post/typescript-for-ruby-developers/</link>
       <pubDate>Tue, 02 Jan 2024 12:00:00 +0000</pubDate>
       <guid>https://studiozenkai.com/post/typescript-for-ruby-developers/</guid>
-      <description>&lt;p&gt;Ruby is poetry. In comparison, Typescript feels like a technical manual. As a Ruby developer, you may look at Typescript and think, &lt;em&gt;Why trade elegance for rules?&lt;/em&gt; That&amp;rsquo;s a fair question. But here&amp;rsquo;s the thing: Those rules can save your skin when you need something big, fast and complex.&lt;/p&gt;&#xA;&lt;p&gt;Typescript won&amp;rsquo;t replace Ruby. Instead, it&amp;rsquo;s like learning a second language &amp;ndash; it opens you new doors and makes you also appreciate your first languageng.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Ruby is poetry. In comparison, Typescript feels like a technical manual. As a Ruby developer, you may look at Typescript and think, &lt;em&gt;Why trade elegance for rules?&lt;/em&gt; That&amp;rsquo;s a fair question. But here&amp;rsquo;s the thing: Those rules can save your skin when you need something big, fast and complex.&lt;/p&gt;&#xA;&lt;p&gt;Typescript won&amp;rsquo;t replace Ruby. Instead, it&amp;rsquo;s like learning a second language &amp;ndash; it opens you new doors and makes you also appreciate your first language.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Embrace vs Reject</title>

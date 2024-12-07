@@ -29,4 +29,11 @@ Every photo tells a story. Sean's photos aren't jus timages. The missing "Negati
 
 Photography is a gateway for adventure, from secluded parts of Québec to Montréal's underground [hacking groups](https://studiozenkai.com/post/foulab-hackerspace/) or [hip-hop scene](https://www.flickr.com/search/?sort=date-taken-desc&safe_search=1&tags=LECYPHER&user_id=57949003%40N00&view_all=1). In the movie, Sean’s lifestyle represents the spirit of exploration. He goes to remote and dangerous locations to capture the world’s beauty. This inspires Walter to leave his mundane office life and step into the unknown.
 
+
+![Portrait](/images/portrait_01.jpg "Portrait Purple")
+
+![Portrait](/images/portrait_02.jpg "Portrait Outside")
+
+![Portrait](/images/portrait_03.jpg "Portrait Eyes")
+
 That's why I spend too much on cameras.  That’s why I spend time framing a shot. Some people buy fast cars. Others watch football. And yes, if I ever meet a snow leopard, I’ll take the damn photo.

@@ -2695,6 +2695,8 @@ nav {
     margin-top: 5px;
     margin-left: 0; } }
 @media all and (max-width: 960px) {
+  .btn-mobile-menu {
+    display: block; }
 
   .panel-main {
     display: table;

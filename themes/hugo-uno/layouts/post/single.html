@@ -8,8 +8,9 @@
         <h1>{{ .Title }}</h1>
         <span class="post-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
         {{ .Content }}
+        <div class="post-tags">{{ range (.GetTerms "tags") }}<a href="{{ .Permalink }}" >{{ .LinkTitle }}</a>        {{ end}}</div>
         {{ partial "sharing.html" . }}
-
+        {{ partial "comments.html" .}}
       </div>
     </div>
   </div>

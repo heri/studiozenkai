@@ -46,7 +46,7 @@
 // ------------------------------
 
 @media all and (max-width: 960px) {
-
+  body:not(.homepage) {
   .btn-mobile-menu {
     display: block;
   }
@@ -177,7 +177,7 @@
       width: 100%;
       margin: 0 0 .4em 0;
     }
-
+  }
 }
 
 // ------------------------------

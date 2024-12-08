@@ -11,13 +11,21 @@
     <link rel="stylesheet" type="text/css" href="https://studiozenkai.com/css/lightGallery.css" />
     
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
-    <link rel="shortcut icon" href="/favicon.ico">
     
     <link rel="webmention" href="https://webmention.io/studiozenkai.com/webmention" />
     <link rel="pingback" href="https://webmention.io/studiozenkai.com/xmlrpc" />
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://studiozenkai.com/js/main.min.js">
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <script>
+      MathJax = {
+        tex: {
+          displayMath: [['\\[', '\\]'], ['$$', '$$']],  
+          inlineMath: [['\\(', '\\)']]                  
+        }
+      };
     </script>
 </head>
     <body>
@@ -26,7 +34,12 @@
             <i class="fa fa-bars btn-mobile-menu__icon"></i>
             <i class="fa fa-times btn-mobile-close__icon hidden"> </i>
     </span>
-    <header class="panel-cover panel-cover--collapsed" >
+    <header class="
+        
+        
+                panel-cover
+        
+        " >
     <div class="panel-main">
         <div class="panel-main__inner panel-inverted">
             <div class="panel-main__content"> 
@@ -49,15 +62,14 @@
     <ul class="navigation">
         
         <li class="navigation__item">
-            <a href="https://twitter.com/heri" title="@heri on Twitter" rel="me"> <i class='fa fa-twitter'></i> <span
+            <a href="https://twitter.com/heri" title="@heri on Twitter" rel="me nofollow"> <i class='fa fa-twitter'></i> <span
                     class="label">Twitter</span> </a>
         </li> 
         
         <li class="navigation__item">
             <a href="https://github.com/heri" title="heri on github" rel="me authn"> <i class='fa fa-github'></i> <span
                     class="label">Github</span> </a>
-        </li> 
-
+        </li>    
         <li class="navigation__item">
             <a href="https://www.instagram.com/heri_rakotomalala/" rel="nofollow" title="Heri on Instagram"><i class="fa fa-instagram"></i><span
                 class="label">Instagram</span></a>
@@ -97,7 +109,7 @@
                         <a href="https://studiozenkai.com/"  title="link to homepage for Studio Zenkai">Studio Zenkai</a>
                     </h1>
                     <hr class="panel-cover__divider" />
-                    <p class="panel-cover__description">  Studio Zenkai is dedicated to the craft of programming, hardware hacking, photography and how to live sensibly. <a href="https://studiozenkai.com/post/about-heri/">About me</a>  </p>
+                    <p class="panel-cover__description">  Studio Zenkai is dedicated to the craft of programming, hardware hacking, photography and how to live sensibly. [About me](https://studiozenkai.com/post/about-heri/)  </p>
                     <hr class="panel-cover__divider panel-cover__divider--secondary" />
                     <div class="navigation-wrapper">
                         <nav class="cover-navigation cover-navigation--primary">
@@ -110,14 +122,18 @@
     <ul class="navigation">
         
         <li class="navigation__item">
-            <a href="https://twitter.com/heri" title="@heri on Twitter" rel="me"> <i class='fa fa-twitter'></i> <span
+            <a href="https://twitter.com/heri" title="@heri on Twitter" rel="me nofollow"> <i class='fa fa-twitter'></i> <span
                     class="label">Twitter</span> </a>
         </li> 
         
         <li class="navigation__item">
             <a href="https://github.com/heri" title="heri on github" rel="me authn"> <i class='fa fa-github'></i> <span
                     class="label">Github</span> </a>
-        </li> 
+        </li>    
+        <li class="navigation__item">
+            <a href="https://www.instagram.com/heri_rakotomalala/" rel="nofollow" title="Heri on Instagram"><i class="fa fa-instagram"></i><span
+                class="label">Instagram</span></a>
+        </li>
         
         <li class="navigation__item">
             <a href="https://medium.com/@heri" title="Medium" rel="nofollow"> <i class='fa fa-medium'></i> <span
@@ -142,11 +158,6 @@
                 
                 <h2>2024</h2>
                 <ul id="list">
-                    
-                    <li>
-                        <a href="https://studiozenkai.com/post/balancing-developer-happinness-and-customer-success/">Balancing Customer Happiness, Developer Burden and Feature Delivery </a>
-                        <div class="meta">Tue, Nov 12, 2024</div>
-                    </li>
                     
                     <li>
                         <a href="https://studiozenkai.com/post/airbnb-the-good-the-bad-the-profitable/">Airbnb Hosting: The Good, The Bad and The Profitable </a>

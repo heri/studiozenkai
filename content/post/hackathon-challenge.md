@@ -1,7 +1,7 @@
 +++
 date = "2019-09-13T15:30:20-04:00"
 title = "48 Hours Climate Change hackathon"
-
+tags = ['personal', 'software']
 +++
 
 I am participating this weekend in the AI Climate Change [Hackathon](https://www.facebook.com/events/443903349789312/), and I will jot down here my notes and progress. Here is the event pitch:

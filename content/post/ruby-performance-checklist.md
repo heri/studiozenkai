@@ -1,7 +1,7 @@
 +++
 date = "2017-05-08T10:35:26-04:00"
 title = "Ruby Performance checklist"
-
+tags = ['software', 'ruby']
 +++
 
 I shipped many applications, using a variety of frameworks, through [my current 1 year challenge](http://studiozenkai.com/challenge/) or startups. Ruby issues include low performance, such as servers needing more RAM, not able to sustain large traffic, or slow rendering. Since this is a recurring issue, here is a checklist to help developers get their Ruby app faster:

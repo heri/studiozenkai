@@ -1,7 +1,7 @@
 +++
 date = "2024-06-07T10:35:26-04:00"
 title = "AI will (probably) take your job (eventually)"
-
+tags = ['career', 'software', 'AI']
 +++
 
 I am a fan of AI and [machine learning](https://studiozenkai.com/post/autonomous-rc-car/), well [before](https://studiozenkai.com/post/cuda/) it was trending on CNBC or spamming your Facebook feed.

@@ -2384,6 +2384,11 @@ hr {
   color:#aaa;
   font-size: 0.9em;
  }
+ .post .post-tags {
+  display: block;
+  margin: 1em 0;
+  font-size: 0.9em
+ }
 .post p {
   margin-top: 1em;
   line-height: 33.18px; }
@@ -2695,6 +2700,7 @@ nav {
     margin-top: 5px;
     margin-left: 0; } }
 @media all and (max-width: 960px) {
+  body:not(.homepage) {
   .btn-mobile-menu {
     display: block; }
 
@@ -2782,7 +2788,9 @@ nav {
 
   .navigation__item {
     width: 100%;
-    margin: 0 0 .4em 0; } }
+    margin: 0 0 .4em 0; } 
+  }
+}
 @media all and (max-width: 340px) {
   .panel-main__inner {
     padding: 0 5%; }

@@ -1,7 +1,7 @@
 +++
 date = "2022-02-01T12:00:00-00:00"
 title = "Ruby Playbook"
-
+tags = ['software', 'ruby']
 +++
 
 I was introduced to the idea of playbook, which is basically a recipe to win a case. It can be in a team sports situation, such as how to score in American football in a given situation. It can be used by a salesperson, such as how to win a commercial contract.

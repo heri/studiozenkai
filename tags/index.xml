@@ -4,11 +4,100 @@
     <title>Tags on Studio Zenkai</title>
     <link>https://studiozenkai.com/tags/</link>
     <description>Recent content in Tags on Studio Zenkai</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    
-	<atom:link href="https://studiozenkai.com/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 11 Oct 2024 12:00:00 +0000</lastBuildDate>
+    <atom:link href="https://studiozenkai.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Airbnb</title>
+      <link>https://studiozenkai.com/tags/airbnb/</link>
+      <pubDate>Fri, 11 Oct 2024 12:00:00 +0000</pubDate>
+      <guid>https://studiozenkai.com/tags/airbnb/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Entrepreneurship</title>
+      <link>https://studiozenkai.com/tags/entrepreneurship/</link>
+      <pubDate>Fri, 11 Oct 2024 12:00:00 +0000</pubDate>
+      <guid>https://studiozenkai.com/tags/entrepreneurship/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Career</title>
+      <link>https://studiozenkai.com/tags/career/</link>
+      <pubDate>Tue, 10 Sep 2024 12:00:00 +0000</pubDate>
+      <guid>https://studiozenkai.com/tags/career/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Montréal</title>
+      <link>https://studiozenkai.com/tags/montr%C3%A9al/</link>
+      <pubDate>Tue, 10 Sep 2024 12:00:00 +0000</pubDate>
+      <guid>https://studiozenkai.com/tags/montr%C3%A9al/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Personal</title>
+      <link>https://studiozenkai.com/tags/personal/</link>
+      <pubDate>Tue, 10 Sep 2024 12:00:00 +0000</pubDate>
+      <guid>https://studiozenkai.com/tags/personal/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Photography</title>
+      <link>https://studiozenkai.com/tags/photography/</link>
+      <pubDate>Tue, 10 Sep 2024 12:00:00 +0000</pubDate>
+      <guid>https://studiozenkai.com/tags/photography/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Software</title>
+      <link>https://studiozenkai.com/tags/software/</link>
+      <pubDate>Tue, 10 Sep 2024 12:00:00 +0000</pubDate>
+      <guid>https://studiozenkai.com/tags/software/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Health</title>
+      <link>https://studiozenkai.com/tags/health/</link>
+      <pubDate>Fri, 09 Aug 2024 12:00:00 +0000</pubDate>
+      <guid>https://studiozenkai.com/tags/health/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AI</title>
+      <link>https://studiozenkai.com/tags/ai/</link>
+      <pubDate>Fri, 07 Jun 2024 10:35:26 -0400</pubDate>
+      <guid>https://studiozenkai.com/tags/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ruby</title>
+      <link>https://studiozenkai.com/tags/ruby/</link>
+      <pubDate>Mon, 04 Mar 2024 06:00:00 -0400</pubDate>
+      <guid>https://studiozenkai.com/tags/ruby/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rust</title>
+      <link>https://studiozenkai.com/tags/rust/</link>
+      <pubDate>Mon, 04 Mar 2024 06:00:00 -0400</pubDate>
+      <guid>https://studiozenkai.com/tags/rust/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Typescript</title>
+      <link>https://studiozenkai.com/tags/typescript/</link>
+      <pubDate>Tue, 02 Jan 2024 12:00:00 +0000</pubDate>
+      <guid>https://studiozenkai.com/tags/typescript/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Art</title>
+      <link>https://studiozenkai.com/tags/art/</link>
+      <pubDate>Fri, 18 Mar 2022 12:00:00 +0000</pubDate>
+      <guid>https://studiozenkai.com/tags/art/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

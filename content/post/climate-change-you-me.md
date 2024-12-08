@@ -1,7 +1,7 @@
 +++
 date = "2021-04-22T09:35:26-04:00"
 title = "What the Climate Change means for you and me"
-
+tags = 'personal'
 +++
 
 Today is Earth day and an excellent opportunity to reflect on human's environmental impact.

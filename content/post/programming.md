@@ -2,7 +2,7 @@
 date = "2016-04-17T12:55:51-04:00"
 draft = false
 title = "Becoming a self-taught programmer"
-
+tags = ['software', 'career']
 +++
 
 In six months I have shipped many apps, as an entrepreneur or as a freelancer. I have also contributed to open source projects and advised other projects. Yet I’m educated as an electrical engineer, not as a software engineer and consider myself largely self-taught in the area of programming.

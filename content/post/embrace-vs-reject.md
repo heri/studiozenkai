@@ -1,7 +1,7 @@
 +++
 date = "2023-09-02T12:00:00-00:00"
 title = "Embrace vs Reject"
-
+tags = ['montréal', 'career']
 +++
 
 When living in society, we constantly have to make choices: accept a job, buy a house, buy a car and so on.

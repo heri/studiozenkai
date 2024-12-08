@@ -1,7 +1,7 @@
 +++
 date = "2024-02-03T07:35:26-04:00"
 title = "Photography and The Secret Life Of Walter Mitty"
-
+tags = 'photography'
 +++
 
 ![Montréal by Heri](/images/montreal.jpg "Montréal by Heri")

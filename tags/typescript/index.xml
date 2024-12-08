@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Typescript on Studio Zenkai</title>
+    <link>https://studiozenkai.com/tags/typescript/</link>
+    <description>Recent content in Typescript on Studio Zenkai</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 02 Jan 2024 12:00:00 +0000</lastBuildDate>
+    <atom:link href="https://studiozenkai.com/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Typescript for Ruby developers</title>
+      <link>https://studiozenkai.com/post/typescript-for-ruby-developers/</link>
+      <pubDate>Tue, 02 Jan 2024 12:00:00 +0000</pubDate>
+      <guid>https://studiozenkai.com/post/typescript-for-ruby-developers/</guid>
+      <description>&lt;p&gt;Ruby is poetry. In comparison, Typescript feels like a technical manual. As a Ruby developer, you may look at Typescript and think, &lt;em&gt;Why trade elegance for rules?&lt;/em&gt; That&amp;rsquo;s a fair question. But here&amp;rsquo;s the thing: Those rules can save your skin when you need something big, fast and complex.&lt;/p&gt;&#xA;&lt;p&gt;Typescript won&amp;rsquo;t replace Ruby. Instead, it&amp;rsquo;s like learning a second language &amp;ndash; it opens you new doors and makes you also appreciate your first language.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Troubleshooting a web application</title>
+      <link>https://studiozenkai.com/post/stack-performance-diagnosis/</link>
+      <pubDate>Tue, 13 Apr 2021 10:35:26 -0400</pubDate>
+      <guid>https://studiozenkai.com/post/stack-performance-diagnosis/</guid>
+      <description>&lt;p&gt;How do you diagnose a slow web application? What about an unresponsive web application?&lt;/p&gt;&#xA;&lt;p&gt;Those are questions I asked when interviewing recently developers. The questions are simple to understand yet complex to answer. Many applicants study data structures or various algorithms. Few  have a holistic view of web applications, due to lack of experience or because of niche specializations. They often work on a specific part of a web project, and have little appreciation of work done in back-end, front-end, devops or other areas.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

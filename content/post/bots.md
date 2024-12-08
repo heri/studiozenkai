@@ -1,7 +1,7 @@
 +++
 date = "2016-04-18T10:35:26-04:00"
 title = "Why bots are a thing now"
-
+tags = ['software', 'career', 'AI']
 +++
 
 Upon hearing about Facebook and Microsoft efforts to deploy bot platforms, a friend reacted:

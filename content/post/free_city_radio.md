@@ -1,7 +1,7 @@
 +++
 date = "2022-03-18T12:00:00-00:00"
 title = "Free City Radio"
-
+tags = ['art', 'photography', 'montréal']
 +++
 
 

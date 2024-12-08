@@ -2384,6 +2384,11 @@ hr {
   color:#aaa;
   font-size: 0.9em;
  }
+ .post .post-tags {
+  display: block;
+  margin: 1em 0;
+  font-size: 0.9em
+ }
 .post p {
   margin-top: 1em;
   line-height: 33.18px; }

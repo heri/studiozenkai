@@ -167,5 +167,5 @@ sass --watch assets/scss:assets/css
 To minify the css files use the following command in the assets folder
 
 ```bash
-curl -X POST -s --data-urlencode 'input@css/uno.css' http://cssminifier.com/raw > css/uno.min.css
+curl -X POST -s --data-urlencode 'input@css/uno.css' https://cssminifier.com/raw > css/uno.min.css
 ```

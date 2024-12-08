@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Software on Studio Zenkai</title>
+    <link>https://studiozenkai.com/tags/software/</link>
+    <description>Recent content in Software on Studio Zenkai</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Sep 2024 12:00:00 +0000</lastBuildDate>
+    <atom:link href="https://studiozenkai.com/tags/software/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About Heri</title>
+      <link>https://studiozenkai.com/post/about-heri/</link>
+      <pubDate>Tue, 10 Sep 2024 12:00:00 +0000</pubDate>
+      <guid>https://studiozenkai.com/post/about-heri/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://studiozenkai.com/images/heri_small.jpg&#34; alt=&#34;heri&#34; title=&#34;heri&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Key facts&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Born in one of the world&amp;rsquo;s poorest countries, Madagascar. I get the &amp;ldquo;scarcity&amp;rdquo; mindset from this, but also memories of beautiful white sandy beaches&lt;/li&gt;&#xA;&lt;li&gt;Spent teenage years in Nairobi, Kenya, a regional center in East Africa. From having to learn English to meeting people from all over the world, I learnt diversity and its benefits. Diversity makes us richer and more resilient, making us more sensitive to forces we did not know and might otherwise overwhelm us&lt;/li&gt;&#xA;&lt;li&gt;Went through &amp;ldquo;Classes Préparatoires Aux Grandes Écoles&amp;rdquo; and Engineering school in France. Like the Concorde plane, TGV, Grandes Écoles is one of France&amp;rsquo;s highest achievements, mixing excellence, hard work and elitism&lt;/li&gt;&#xA;&lt;li&gt;Played with the Internet early on, with &lt;a href=&#34;https://emoticons.free.fr&#34;&gt;Emoticons.free.fr&lt;/a&gt; and &lt;a href=&#34;https://evry.depeches.free.fr&#34;&gt;evry.depeches.free.fr&lt;/a&gt;. One was hilarious photoshopped pictures of me, while the other was my adventures as a foreigner, with non-politically correct comments about the French. Both drew early attention. This taught me the power of the Internet and technology.&lt;/li&gt;&#xA;&lt;li&gt;Started MontrealTechWatch.com, a technology blog covering tech and startups in Montréal, one of the key drivers of the local startup community. At its peak, the blog attracted 10k daily readers. Also organized Montréal&amp;rsquo;s first ever hackathon (Blitzweekend), and then Montréal&amp;rsquo;s first StartupWeekend at Business School HEC.&lt;/li&gt;&#xA;&lt;li&gt;2 &lt;a href=&#34;https://studiozenkai.com/post/photography-and-the-secret-life-of-walter-mitty/&#34;&gt;photography&lt;/a&gt; exhibitions in Montréal, and as well as being the official photographer for Le Cypher X &amp;amp; Urban Science, one of Montréal&amp;rsquo;s top hip-hop group, and many other local events.&lt;/li&gt;&#xA;&lt;li&gt;Crowdfunded millions of dollars for Montréal artists and local projects with SeedingFactory. We made videos, worked on their social media, marketed, made friends. Also worked as VP of Marketing for MakeAChamp, a crowdfunding startup specialized in athletes&lt;/li&gt;&#xA;&lt;li&gt;Membrer of artist collective Howl Arts! with the launch of several albums, books, graphic novels while being an active part of the Montréal underground art community&lt;/li&gt;&#xA;&lt;li&gt;Lost father to cancer while I was still navigating Montréal. From this, I am probably more sensitive to healthcare and health issues than most&lt;/li&gt;&#xA;&lt;li&gt;Senior/Lead/Staff Engineer for VC-backed startups such as Sonder or Klue, but also for global companies like Nasdaq or Decathlon. Additionally Software Consultant for many projects, from Airbnb/Uber clones to crypto trading platforms. I do not count the years coding anymore, but still get excited for new technologies or new patterns every now and then&lt;/li&gt;&#xA;&lt;li&gt;Maintains and operates &lt;a href=&#34;https://studiozenkai.com/post/airbnb-vacation-home/&#34;&gt;a chalet on Airbnb&lt;/a&gt;, deep in Québec countryside. I build docks and Adirondack chairs, chase away beavers and mice, and can tell you the minute differences between bedsheets from Costco or Ikea, or 7 reasons why Dawn is better.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;So as you can see, I am comfortable in deep Quebec or France countryside, in a hacking space or in a neighorhood hip hop event. But due to my origins and history, I am somehow allergic to alcohol (or at least at the level they are consumed in Western countries), debt and social norms&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Necessary but not sufficient</title>
+      <link>https://studiozenkai.com/post/necessary-but-not-sufficient/</link>
+      <pubDate>Mon, 08 Jul 2024 12:00:00 +0000</pubDate>
+      <guid>https://studiozenkai.com/post/necessary-but-not-sufficient/</guid>
+      <description>&lt;p&gt;The progression of software engineers is like this:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;em&gt;Junior&lt;/em&gt; You have theoritical knowledge of software but most of it is obscure for you. The focus here is on learning a framework, learning how development processes work, and delivering code that works. You are not yet able to fully develop applications but can handle minor tasks.&lt;/li&gt;&#xA;&lt;li&gt;&lt;em&gt;Senior&lt;/em&gt; You have launched a few applications and can autonomously complete 95% of tasks. You are not battle-tested ready yet, but can resolve most urgent issues. You are also able to onboard junior developers.&lt;/li&gt;&#xA;&lt;li&gt;&lt;em&gt;Staff / Lead Engineer&lt;/em&gt; Like a compass, you are able to set a direction for the engineering team and navigate complex challenges, often involving product teams and other departments. You can tell horror stories &amp;ndash; about the time the prod database was lost, or when the team had to spent shipping a hotfix on Friday 7pm for a rare but critical issue.&lt;/li&gt;&#xA;&lt;li&gt;&lt;em&gt;Executive position&lt;/em&gt; You contribute to achieving key business milestones for the company. Most of your time is spent meeting, hiring, managing i.e maximizing producitvity. And then there&amp;rsquo;s the odd monthly code contribution.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;For Juniors and Seniors, the key to success is technical expertise. Common work issues is resolved by whoever has the fastest or most secure implementation. Numbers and hard facts dominate decision-making. This is where you understand tech expertise is necessary.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AI will (probably) take your job (eventually)</title>
+      <link>https://studiozenkai.com/post/ai-will-take-your-job-eventually/</link>
+      <pubDate>Fri, 07 Jun 2024 10:35:26 -0400</pubDate>
+      <guid>https://studiozenkai.com/post/ai-will-take-your-job-eventually/</guid>
+      <description>&lt;p&gt;I am a fan of AI and &lt;a href=&#34;https://studiozenkai.com/post/autonomous-rc-car/&#34;&gt;machine learning&lt;/a&gt;, well &lt;a href=&#34;https://studiozenkai.com/post/cuda/&#34;&gt;before&lt;/a&gt; it was trending on CNBC or spamming your Facebook feed.&lt;/p&gt;&#xA;&lt;p&gt;The exponential progress in the past few years means everyone can find cues to complex questions in a few seconds, where you would previously need to ask experts or pay a professional to do it for you.&lt;/p&gt;&#xA;&lt;p&gt;Note that I wrote &amp;ldquo;cues&amp;rdquo; above, not &amp;ldquo;answers&amp;rdquo;. In its current state, the best of AI bots will NOT give you an answer that fully fits your case. You need judgement to assess if it makes sense, and also have a process or methodology on how to have a satisfying and precise answer through follow-up questions.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Levenshtein Rust gem</title>
+      <link>https://studiozenkai.com/post/levenshtein-rust/</link>
+      <pubDate>Mon, 04 Mar 2024 06:00:00 -0400</pubDate>
+      <guid>https://studiozenkai.com/post/levenshtein-rust/</guid>
+      <description>&lt;p&gt;Given &lt;a href=&#34;https://github.com/heri&#34;&gt;my Github profile&lt;/a&gt; and &lt;a href=&#34;https://studiozenkai.com/post/&#34;&gt;published articles&lt;/a&gt;, it is clear my favorite programming language is Ruby, an elegant and concise language that brings results, fast.&lt;/p&gt;&#xA;&lt;p&gt;Raw performance is not Ruby&amp;rsquo;s strengths. It is easy to add loops and O(n²) issues, memory leaks are not rare, so CPU and RAM are quickly hogged.&lt;/p&gt;&#xA;&lt;p&gt;It is important in your team to raise the bar and make everyone understand the team has a limited budget. Inspect every line carefully, ask why new variables are introduced, and if something simpler is possible. The saying is a cliché but worth here : With great power comes great responsability.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Typescript for Ruby developers</title>
+      <link>https://studiozenkai.com/post/typescript-for-ruby-developers/</link>
+      <pubDate>Tue, 02 Jan 2024 12:00:00 +0000</pubDate>
+      <guid>https://studiozenkai.com/post/typescript-for-ruby-developers/</guid>
+      <description>&lt;p&gt;Ruby is poetry. In comparison, Typescript feels like a technical manual. As a Ruby developer, you may look at Typescript and think, &lt;em&gt;Why trade elegance for rules?&lt;/em&gt; That&amp;rsquo;s a fair question. But here&amp;rsquo;s the thing: Those rules can save your skin when you need something big, fast and complex.&lt;/p&gt;&#xA;&lt;p&gt;Typescript won&amp;rsquo;t replace Ruby. Instead, it&amp;rsquo;s like learning a second language &amp;ndash; it opens you new doors and makes you also appreciate your first language.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Little Math Routines</title>
+      <link>https://studiozenkai.com/post/the-little-things-matter/</link>
+      <pubDate>Sun, 12 Mar 2023 10:35:26 -0400</pubDate>
+      <guid>https://studiozenkai.com/post/the-little-things-matter/</guid>
+      <description>&lt;p&gt;Programmers are attracted to big challenges, perhaps comparing themselves to Ed Hillary and Tenzig Norgay ascending Mount Everest. It brings prestige inside and outside the company, and opens them new doors.&lt;/p&gt;&#xA;&lt;p&gt;While big challenges are worth it, and I encourage everyone to go outside of their comfort zone regularly, little things also matter. It is easy to overlook small calculations, variable naming, or quick queries, assuming that these will make little differences and it is not worth the (potential) conflict with the code author.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Foulab : Montreal’s creative space for hardware makers</title>
+      <link>https://studiozenkai.com/post/foulab-hackerspace/</link>
+      <pubDate>Mon, 07 Mar 2022 12:00:00 +0000</pubDate>
+      <guid>https://studiozenkai.com/post/foulab-hackerspace/</guid>
+      <description>&lt;p&gt;Foulab is a space for hardware makers, with the idea that any smart individual can imagine and create new innovative electronics.&lt;/p&gt;&#xA;&lt;p&gt;A few metro stations away from downtown Montreal, Foulab is located in an industrial building, the kind you would expect to see hosting a rave party.&#xA;Before coming to Foulab, you’ll see a studio for artists:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://farm3.staticflickr.com/2854/12206121575_3d02a513c8_b.jpg&#34; alt=&#34;FOULAB IS AT THE INTERSECTION OF GEEKINESS, ART, HACKING, AND MAKER MOVEMENT.&#34; title=&#34;FOULAB IS AT THE INTERSECTION OF GEEKINESS, ART, HACKING, AND MAKER MOVEMENT.&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ruby Playbook</title>
+      <link>https://studiozenkai.com/post/ruby-playbook/</link>
+      <pubDate>Tue, 01 Feb 2022 12:00:00 +0000</pubDate>
+      <guid>https://studiozenkai.com/post/ruby-playbook/</guid>
+      <description>&lt;p&gt;I was introduced to the idea of playbook, which is basically a recipe to win a case. It can be in a team sports situation, such as how to score in American football in a given situation. It can be used by a salesperson, such as how to win a commercial contract.&lt;/p&gt;&#xA;&lt;p&gt;I imagined what would be my Ruby Engineering playbook:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Focus on hard projects that move the needle in the long-term, or alternatively easy wins (less than a day to implement+deploy)&lt;/li&gt;&#xA;&lt;li&gt;Do not reinvent the wheel. Research different approaches before trying to come up with your design. Reuse when possible&lt;/li&gt;&#xA;&lt;li&gt;When faced with a big block, divide, then conquer or delegate or delay. Divide means tackling the blocker in manageable chunks. The second means that I should either solve it myself, have another service solve it, or delay processing.&lt;/li&gt;&#xA;&lt;li&gt;When implementing, remove as much as possible. Introduce only what&amp;rsquo;s needed to make it work, as if keystrokes were a limited resource, and copy/paste did not exist. Succinctness is underrated !&lt;/li&gt;&#xA;&lt;li&gt;Faced with loops, arrays or iterations, have a log(n) or faster implementation, as if you had a CPU from last century&lt;/li&gt;&#xA;&lt;li&gt;You should be able to explain your design or algorithm orally to another person, without them able to see any code&lt;/li&gt;&#xA;&lt;li&gt;Do not create side-effects in other people&amp;rsquo;s work. Assume future maintainers won&amp;rsquo;t be smart so make your implementation idiot-proof&lt;/li&gt;&#xA;&lt;li&gt;Before committing, ask if it is the best you can commit&lt;/li&gt;&#xA;&lt;li&gt;Increase test cooverage&lt;/li&gt;&#xA;&lt;li&gt;Always run linting / test suite before commit&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Note : this is a WIP&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Docker Desktop command line alternative</title>
+      <link>https://studiozenkai.com/post/docker-desktop-replacement/</link>
+      <pubDate>Wed, 01 Sep 2021 18:35:26 -0400</pubDate>
+      <guid>https://studiozenkai.com/post/docker-desktop-replacement/</guid>
+      <description>&lt;p&gt;Docker Desktop is one of the de facto tool present on macos developer machines, along with other utilities such as git or homebrew. Contrary to apps such as VS Code, it not an app you interact with everyday but more a background tool running constantly during application development and deployment. It runs in fact the virtual machine that allows you to run docker on Windows or Mac as if you were on Linux, albeit with a little bit more resources.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Troubleshooting a web application</title>
+      <link>https://studiozenkai.com/post/stack-performance-diagnosis/</link>
+      <pubDate>Tue, 13 Apr 2021 10:35:26 -0400</pubDate>
+      <guid>https://studiozenkai.com/post/stack-performance-diagnosis/</guid>
+      <description>&lt;p&gt;How do you diagnose a slow web application? What about an unresponsive web application?&lt;/p&gt;&#xA;&lt;p&gt;Those are questions I asked when interviewing recently developers. The questions are simple to understand yet complex to answer. Many applicants study data structures or various algorithms. Few  have a holistic view of web applications, due to lack of experience or because of niche specializations. They often work on a specific part of a web project, and have little appreciation of work done in back-end, front-end, devops or other areas.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Dokomaps</title>
+      <link>https://studiozenkai.com/post/dokomaps/</link>
+      <pubDate>Fri, 01 Nov 2019 10:35:26 -0400</pubDate>
+      <guid>https://studiozenkai.com/post/dokomaps/</guid>
+      <description>&lt;p&gt;Aimable D. is a close friend since our engineering school days. Like me, he spent time in the corporate world. But he has also done multiple ventures, from eCommerce to corporate to consumer ventures.&lt;/p&gt;&#xA;&lt;p&gt;Now he is focused on &lt;a href=&#34;http://dokomaps.com&#34;&gt;dokomaps&lt;/a&gt;, along with Jules, who worked previously with him on other &lt;a href=&#34;http://mobayilo.com&#34;&gt;ventures&lt;/a&gt;. I am reviewing today Dokomaps to provide feedback, to showcase a good product, but also in the hope that Aimable reviews one of my current ventures, such as &lt;a href=&#34;http://outcomereference.com&#34;&gt;OutcomeReference&lt;/a&gt; :)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>48 Hours Climate Change hackathon</title>
+      <link>https://studiozenkai.com/post/hackathon-challenge/</link>
+      <pubDate>Fri, 13 Sep 2019 15:30:20 -0400</pubDate>
+      <guid>https://studiozenkai.com/post/hackathon-challenge/</guid>
+      <description>&lt;p&gt;I am participating this weekend in the AI Climate Change &lt;a href=&#34;https://www.facebook.com/events/443903349789312/&#34;&gt;Hackathon&lt;/a&gt;, and I will jot down here my notes and progress. Here is the event pitch:&lt;/p&gt;&#xA;&lt;p&gt;&amp;ldquo;Join us along with the other talented and diverse participants, supported by leading mentors in their fields who will come together to collaborate to attempt to address climate change and its impacts on communities and ecosystems. We hope to begin to achieve real positive impact in 48 hours using AI. We are also announcing 4 AI challenges: Plant Village Challenge, Extreme Weather Prediction, Climate-Related Risk Assessment, and Predict the Weather in Montréal.&amp;rdquo;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Building an autonomous RC car</title>
+      <link>https://studiozenkai.com/post/autonomous-rc-car/</link>
+      <pubDate>Tue, 26 Feb 2019 12:00:00 +0000</pubDate>
+      <guid>https://studiozenkai.com/post/autonomous-rc-car/</guid>
+      <description>&lt;p&gt;This is a hands-on article that encourages you to experiment and see what works on the ground.&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Shameless Promotion&lt;/em&gt;: If you are in Montréal, I (&lt;a href=&#34;https://twitter.com/heri&#34;&gt;@heri&lt;/a&gt;) do a meetup where people interested in computer vision, AI, robotics work on &lt;a href=&#34;https://www.meetup.com/DIY-Robocars-Montreal-Meetup-Autonomous-cars-race&#34;&gt;autonomous cars&lt;/a&gt;. Please drop by!&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-a-rc-car&#34;&gt;Why a RC car?&lt;/h2&gt;&#xA;&lt;p&gt;Like developing an application, my recommendation is to build first a &lt;em&gt;Minimum Viable Product&lt;/em&gt; (MVP). Then iterate it quickly from there towards a version that works for you.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Looking again at Microsoft</title>
+      <link>https://studiozenkai.com/post/microsoft/</link>
+      <pubDate>Wed, 05 Dec 2018 12:00:00 +0000</pubDate>
+      <guid>https://studiozenkai.com/post/microsoft/</guid>
+      <description>&lt;p&gt;The natural cycle of companies is to innovate. The flame dies down, then it fights again to innovate.&lt;/p&gt;&#xA;&lt;p&gt;Microsoft is one of those. Win 3.1 was revolutionary, and so was Win 95. With Win 3.1, you could point and click to start programs. With Windows 95, you could install games with a nice GUI instead of typing arduous commands in MS-DOS. No more failures at the video setup or having to find a driver file for your sound card.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ruby Performance checklist</title>
+      <link>https://studiozenkai.com/post/ruby-performance-checklist/</link>
+      <pubDate>Mon, 08 May 2017 10:35:26 -0400</pubDate>
+      <guid>https://studiozenkai.com/post/ruby-performance-checklist/</guid>
+      <description>&lt;p&gt;I shipped many applications, using a variety of frameworks, through &lt;a href=&#34;http://studiozenkai.com/challenge/&#34;&gt;my current 1 year challenge&lt;/a&gt; or startups. Ruby issues include low performance, such as servers needing more RAM, not able to sustain large traffic, or slow rendering. Since this is a recurring issue, here is a checklist to help developers get their Ruby app faster:&lt;/p&gt;&#xA;&lt;h2 id=&#34;code-complexity&#34;&gt;Code complexity&lt;/h2&gt;&#xA;&lt;p&gt;Ruby&amp;rsquo;s simplicity and ease of use allows beginners and experienced developers alike to ship features in record time. Good for business, otherwise bad for code quality. For instance, many :&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Why my next laptop won&#39;t be an Apple</title>
+      <link>https://studiozenkai.com/post/laptop-machine-learning/</link>
+      <pubDate>Wed, 04 May 2016 15:35:26 -0400</pubDate>
+      <guid>https://studiozenkai.com/post/laptop-machine-learning/</guid>
+      <description>&lt;h2 id=&#34;part-i---apples-craftmanship&#34;&gt;Part I - Apple&amp;rsquo;s Craftmanship&lt;/h2&gt;&#xA;&lt;p&gt;I have used the original macbook, the 13&amp;quot; MacBook Air, the 13&amp;quot; Macbook pro, and 15&amp;quot; Macbook pros.&lt;/p&gt;&#xA;&lt;p&gt;I loved the white plastic of the original macbook. It was better than any other computer I&amp;rsquo;ve used before, worked out of the box, and iMovie amazed me. Drag, drop, and five minutes later, you have a video.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://studiozenkai.com/images/macbook_white.jpg&#34; alt=&#34;macbook white&#34; title=&#34;[macbook white]&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;I thought this is what computing should be.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Why bots are a thing now</title>
+      <link>https://studiozenkai.com/post/bots/</link>
+      <pubDate>Mon, 18 Apr 2016 10:35:26 -0400</pubDate>
+      <guid>https://studiozenkai.com/post/bots/</guid>
+      <description>&lt;p&gt;Upon hearing about Facebook and Microsoft efforts to deploy bot platforms, a friend reacted:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;So bots are a thing now? I programmed bots 20 years ago&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;He is a successful technology entrepreneur and has developed systems on many platforms. I can understand him. There were tutorials in kids&amp;rsquo; magazines on writing a &amp;ldquo;Hello World&amp;rdquo; bot on MS-DOS 20 years ago. More impressive were the Artificial Intelligence (A.I.) found in games like Warcraft 3 or Command &amp;amp; Conquer. Friends would spend countless nights trying to beat the A.I. For everyone else, it would be the Clipper found in Microsoft Word. It had personality and would show tips.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Becoming a self-taught programmer</title>
+      <link>https://studiozenkai.com/post/programming/</link>
+      <pubDate>Sun, 17 Apr 2016 12:55:51 -0400</pubDate>
+      <guid>https://studiozenkai.com/post/programming/</guid>
+      <description>&lt;p&gt;In six months I have shipped many apps, as an entrepreneur or as a freelancer. I have also contributed to open source projects and advised other projects. Yet I’m educated as an electrical engineer, not as a software engineer and consider myself largely self-taught in the area of programming.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Jeff Atwood : Geeks went from being social outsiders, outcasts, and rejects to.. part of the 1% power structure, with all that implies. Hard to adapt.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Playbook</title>
+      <link>https://studiozenkai.com/post/playbook/</link>
+      <pubDate>Fri, 15 Jan 2016 12:22:27 -0400</pubDate>
+      <guid>https://studiozenkai.com/post/playbook/</guid>
+      <description>&lt;p&gt;Bonjour!&lt;/p&gt;&#xA;&lt;p&gt;Nous offrons &lt;em&gt;une expertise technique pour un résultat de qualité&lt;/em&gt; dans le développement de plateformes transactionnelles, de financement, de médias:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Étude et conception fonctionnelle et technique&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Développement de solutions front, middle ou back-office&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Développement d&amp;rsquo;applications iOS ou Android&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Conduite de projet sur les technologies Ruby, Javascript, Lua, et plateformes mobiles; utilisation de base de données MySQL, Postgresql, ou redis, mongodb, ElasticSearch, Solr&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Audit de code, de qualité et de performance des applications&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cuda Cores Ranking for Machine learning</title>
+      <link>https://studiozenkai.com/post/cuda/</link>
+      <pubDate>Sun, 11 Oct 2015 10:35:26 -0400</pubDate>
+      <guid>https://studiozenkai.com/post/cuda/</guid>
+      <description>&lt;p&gt;NVIDIA graphic cards can be used to accelerate &lt;a href=&#34;https://developer.nvidia.com/gpu-accelerated-libraries&#34;&gt;scientific computing&lt;/a&gt;, &lt;a href=&#34;https://developer.nvidia.com/cudnn&#34;&gt;neural networks&lt;/a&gt;, video games and occasionally bitcoin computing.&lt;/p&gt;&#xA;&lt;p&gt;Video editing and post-production also benefit greatly from NVIDIA cards with Adobe&amp;rsquo;s Mercury Engine or BMD&amp;rsquo;s Davinci resolve.&lt;/p&gt;&#xA;&lt;p&gt;In the case of scientific computing, performance is directly proportional to the number of cuda cores. As long as cpu speed is &amp;gt; 2GHz and you have as much RAM as you have GPU RAM, you are all good.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

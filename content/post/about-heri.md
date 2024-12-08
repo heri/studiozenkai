@@ -1,7 +1,7 @@
 +++
 date = "2024-09-10T12:00:00-00:00"
 title = "About Heri"
-
+tags = ['personal', 'montréal', 'career', 'software', 'photography']
 +++
 
 

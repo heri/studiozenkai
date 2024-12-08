@@ -1,7 +1,7 @@
 +++
 date = "2015-10-11T10:35:26-04:00"
 title = "Cuda Cores Ranking for Machine learning"
-
+tags = ['software', 'AI']
 +++
 
 NVIDIA graphic cards can be used to accelerate [scientific computing](https://developer.nvidia.com/gpu-accelerated-libraries), [neural networks](https://developer.nvidia.com/cudnn), video games and occasionally bitcoin computing.

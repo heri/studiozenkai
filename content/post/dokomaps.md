@@ -1,6 +1,7 @@
 +++
 date = "2019-11-01T10:35:26-04:00"
 title = "Dokomaps"
+tags = 'software'
 
 +++
 

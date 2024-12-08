@@ -1,6 +1,7 @@
 +++
 date = "2024-01-02T12:00:00-00:00"
 title = "Typescript for Ruby developers"
+tags = ['software', 'ruby', 'typescript']
 +++
 
 Ruby is poetry. In comparison, Typescript feels like a technical manual. As a Ruby developer, you may look at Typescript and think, *Why trade elegance for rules?* That's a fair question. But here's the thing: Those rules can save your skin when you need something big, fast and complex.

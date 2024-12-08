@@ -1,7 +1,7 @@
 +++
 date = "2018-12-05T12:00:00-00:00"
 title = "Looking again at Microsoft"
-
+tags = ['personal', 'software']
 +++
 
 The natural cycle of companies is to innovate. The flame dies down, then it fights again to innovate.

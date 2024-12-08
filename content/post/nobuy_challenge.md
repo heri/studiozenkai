@@ -1,7 +1,7 @@
 +++
 date = "2023-01-10T10:35:26-04:00"
 title = "The NoBuy Challenge"
-
+tags = 'health'
 +++
 
 Not only intermittent fasting is a good way to manage your weight, it is only one of the rare ways to potentially increase longevity. Numerous studies have shown that fasting can help prevent cancer, heart disease, diabetes, neurodegeneration and improve immunity. 

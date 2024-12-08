@@ -1,7 +1,7 @@
 +++
 date = "2024-03-04T06:00:00-04:00"
 title = "Levenshtein Rust gem"
-
+tags = ['software', 'ruby', 'rust']
 +++
 
 Given [my Github profile](https://github.com/heri) and [published articles](https://studiozenkai.com/post/), it is clear my favorite programming language is Ruby, an elegant and concise language that brings results, fast.

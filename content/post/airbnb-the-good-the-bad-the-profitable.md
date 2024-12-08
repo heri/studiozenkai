@@ -1,7 +1,7 @@
 +++
 date = "2024-10-11T12:00:00-00:00"
 title = "Airbnb Hosting: The Good, The Bad and The Profitable"
-
+tags = ['airbnb', 'entrepreneurship', 'personal']
 +++
 
 During the pandemic, I bought [a vacation property in the Laurentians](https://studiozenkai.com/post/airbnb-vacation-home/), as an escape for the family but also for short-term rental on Airbnb.
@@ -108,7 +108,7 @@ Where:
 
 * Owning and operating a vacation property is not for everyone. You need to have expert skills in at least one of these areas: marketing/sales, photography, customer service, operations including maintenance and cleaning. You also need a business plan on how you plan to tackle major issues. If there is no more running water, how are you going to fix it? Same for a broken amenity, mice, or a sick cleaning team.
 * Make sure to buy a property with unique advantages, such as a ski-in, ski-out chalet, an exclusive water feature (waterfall, private lake), breathtaking view of the landscape, or unique architecture such as treehouse or a glass house. There are thousands of lakefront chalets, or properties with a spa, swimming pool or volleyball court, and you will have to compete fiercely if you get one of these, possibly driving prices down.
-* Better yet, develop a unique story behind your Airbnb. Vacation properties with a genesis story and a community fare better than your average run-of-the-mill vacation property. Having a community with shared values also lowers thefts, maintenance costs, marketing costs, cancellations in exchange for more time engaging the community through articles, media, events etc.
+* Better yet, develop a unique story behind your Airbnb. Vacation properties with a genesis story and a community fare better than your average run-of-the-mill vacation property. Having a community with shared values also lowers thefts, maintenance and marketing costs, cancellations in exchange for time building the community through articles, media, events etc.
 * Have a plan to cut down costs. You might clean yourself. You could market your own website and leverage social media. You could build a property made of stainless steel so even toddlers or party goers  cannot break anything. 
 * Have a plan to cut down on maintenance. In summer, I absolutely need to go to the property every 20 days otherwise there will dozens of broken amenities. The more amenities you have, the more maintenance is needed. Think hard how you can go around this.
 

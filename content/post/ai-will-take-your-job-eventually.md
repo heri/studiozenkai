@@ -8,6 +8,8 @@ I am a fan of AI and [machine learning](https://studiozenkai.com/post/autonomous
 
 The exponential progress in the past few years means everyone can find cues to complex questions in a few seconds, where you would previously need to ask experts or pay a professional to do it for you.
 
+<!--more-->
+
 Note that I wrote "cues" above, not "answers". In its current state, the best of AI bots will NOT give you an answer that fully fits your case. You need judgement to assess if it makes sense, and also have a process or methodology on how to have a satisfying and precise answer through follow-up questions.
 
 In my case, I like to use chatGPT/Claude/llama3/mistral to write unit tests, or when I need to work on a new project. I do not have time to read half-finished documentation or cryptic artifacts and chatGPT will give me a rough implementation that I can finish.

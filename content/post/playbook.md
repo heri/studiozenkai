@@ -9,7 +9,7 @@ tags = ['entrepreneurship', 'software', 'ruby', 'performance']
 Bonjour!
 
 Nous offrons _une expertise technique pour un résultat de qualité_ dans le développement de plateformes transactionnelles, de financement, de médias:
-
+<!--more-->
 * Étude et conception fonctionnelle et technique
 
 * Développement de solutions front, middle ou back-office

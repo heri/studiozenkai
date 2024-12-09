@@ -7,6 +7,9 @@ tags = ['software', 'montréal', 'art']
 Foulab is a space for hardware makers, with the idea that any smart individual can imagine and create new innovative electronics.
 
 A few metro stations away from downtown Montreal, Foulab is located in an industrial building, the kind you would expect to see hosting a rave party.
+
+<!--more-->
+
 Before coming to Foulab, you’ll see a studio for artists:
 
 ![FOULAB IS AT THE INTERSECTION OF GEEKINESS, ART, HACKING, AND MAKER MOVEMENT.](http://farm3.staticflickr.com/2854/12206121575_3d02a513c8_b.jpg "FOULAB IS AT THE INTERSECTION OF GEEKINESS, ART, HACKING, AND MAKER MOVEMENT.")

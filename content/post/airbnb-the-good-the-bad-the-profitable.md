@@ -8,6 +8,8 @@ During the pandemic, I bought [a vacation property in the Laurentians](https://s
 
 The chalet ([official website](https://auchaletrouge.com)) is waterfront on 2 acres, has the typical log home look that many vacationers look for, and while being secluded in nature, has many modern amenities such as a spa, fully furnished kitchen, 4K TV with hi-speed Internet, indoor & outdoor fire pits, a high-end aluminium & cedar dock with boats, and so on.
 
+<!--more-->
+
 During the pandemic, it was always occupied, except for a few spots in fall or spring, and made between $70k and $100k yearly. Why not an exact number? This is due to missed opportunities, refunds, but I also had friends coming over who instead of paying contributed to the property's upkeep or amenities.
 
 In theory, $70k to $100k annual revenues means you could pay back the mortgage in a few years, so you will have a property generating "free" cash flow, as well as a waterfront property that friends & family could enjoy and have life memories. Doesn't that sound amazing? Maybe one could buy a couple of vacation properties, retire early, and work 4 hours weekly doing some property mainteance and responding messages from wealthy customers.

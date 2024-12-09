@@ -10,7 +10,7 @@ tags = ['health', 'montréal', 'photography']
 Like any other country, Canada has its share of contradictions.
 
 It prides itself in having the lowest corruption in the world.
-
+<!--more-->
 This is true in my experience. Federal workers are polite and helpful but they will not deviate in any case.
 
 And most of the time, service is efficient and fast.

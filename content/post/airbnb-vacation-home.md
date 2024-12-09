@@ -8,6 +8,8 @@ One year ago, I decided to purchase a waterfront cottage. It would be in the Lau
 
 In December and early January 2020, Twitter alerted me to the sanitary situation in China. It was clear it was coming this way. Since authorities didn't seem to care, I thought it would be a complete disaster in North America, with the economy and infrastructure paralyzed. I also knew the stock market has been bullish for the past decade and bet it would crash. So let's flee the incoming apocalypse, I thought.
 
+<!--more-->
+
 A cabin (aka "chalet") hours away from any major city would be a safe haven against panic. It would be also a great way to park liquid assets against any hyperinflation or stock market crash. I also thought that if there was no pandemic, I could turn it into an vacation home that could be offered for weeks or weekends on platforms such as airbnb of vrbo. It is also a personal dream to have a waterfront chalet and be able to share it with friends & family.
 
 This is not an easy decision. It is easier to follow your 9 to 5 job or organize the vacation in the Dominican Republic. And to prepare the future, financial managers would tell you to put money in RRSPs and in life insurance. In contrast, putting this into place required:

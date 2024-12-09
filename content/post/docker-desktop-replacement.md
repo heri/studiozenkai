@@ -6,6 +6,8 @@ tags = ['software', 'ruby']
 
 Docker Desktop is one of the de facto tool present on macos developer machines, along with other utilities such as git or homebrew. Contrary to apps such as VS Code, it not an app you interact with everyday but more a background tool running constantly during application development and deployment. It runs in fact the virtual machine that allows you to run docker on Windows or Mac as if you were on Linux, albeit with a little bit more resources.
 
+<!--more-->
+
 Many users will need to look for alternatives with the recent announcement that it will now be a paid subscription for medium to large companies. On MacOS, I use docker-machine to run docker from Terminal.
 
 > brew install --cask docker virtualbox

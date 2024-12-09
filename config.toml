@@ -18,6 +18,7 @@ theme = "hugo-uno"
           inline = [['\(', '\)']]
 
 [params]
-  author = "Heri"
-  description = "Studio Zenkai is dedicated to the craft of programming, hardware hacking, photography and how to live sensibly."
+  author = "Heri Rakotomalala"
+  Subtitle = "Software, photography, and sustainability articles by Heri"
+  description = "Studio Zenkai is dedicated to the craft of programming, photography and living sustainably."
   math = true

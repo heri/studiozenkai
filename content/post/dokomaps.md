@@ -7,6 +7,8 @@ tags = 'software'
 
 Aimable D. is a close friend since our engineering school days. Like me, he spent time in the corporate world. But he has also done multiple ventures, from eCommerce to corporate to consumer ventures.
 
+<!--more-->
+
 Now he is focused on [dokomaps](http://dokomaps.com), along with Jules, who worked previously with him on other [ventures](http://mobayilo.com). I am reviewing today Dokomaps to provide feedback, to showcase a good product, but also in the hope that Aimable reviews one of my current ventures, such as [OutcomeReference](http://outcomereference.com) :)
 
 ## The Pitch

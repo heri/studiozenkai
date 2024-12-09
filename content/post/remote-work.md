@@ -7,7 +7,7 @@ tags = ['career', 'health', 'python', 'ruby', 'sustainable']
 In Canada, as well as many countries, Covid-19 infections is exponentially decreasing.
 
 We are on the verge of getting our old life back, from going to restaurants or to the cinemas, and why not have a celebratory drink with friends.
-
+<!--more-->
 Before moving on, I would like to share how I remote work, one of the main traits of the Covid-19 pandemic. I hope this helps other remote workers, and encourage developers and companies to adopt it on a permanent basis.
 
 I am not by all means the most productive person. To the contrary. In February 2021, when it got grim, I spent much of my time watching Netflix and eating snacks, and got nothing done. That was not pretty. However during the pandemic, I also learnt Python and setup data pipelines that serves AI models in 21 countries. I learnt Kubernetes and how to scale it on GCP. I designed & developed a complete CI/CD system with automated E2E tests and healthchecks. I consulted as a Ruby Senior engineer with various companies. In parallel, I closed a real estate deal as a short term rental business, and learnt how to [deliver a 5 star customer service](https://www.airbnb.ca/rooms/38450385?preview_for_ml=true). All this within a busy personal & family life where nothing was sacrificed. So I consider myself organized & productive as a remote worker.

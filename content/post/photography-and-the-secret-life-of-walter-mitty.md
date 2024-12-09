@@ -9,8 +9,8 @@ Montréal by Heri, Canon EOS-M, 22m @ f2.2
 
 One of my favorite movies is *The Secret Life of Walter Mitty* by Ben Stiller.
 
-The movie is about life. It is also abut photography.
-
+The movie is about life. It is also about photography.
+<!--more-->
 Why do you take pictures? Many ask me the question.
 
 The question is hard to answer. Like asking "Why do you breathe?". Fortunately, this movie brings some answers

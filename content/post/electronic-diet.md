@@ -1,5 +1,5 @@
 +++
-date = "2024-12-14T12:00:00-00:00"
+date = "2025-01-02T12:00:00-00:00"
 title = "Electronic Diet"
 tags = ['health', 'sustainable']
 +++
@@ -7,6 +7,8 @@ tags = ['health', 'sustainable']
 Towards the end of ["About Heri"](https://studiozenkai.com/post/about-heri/), I wrote about regular exercise.
 
 Not jut for the body, for the mind too. Exercise is not just swweating or lifting weights. It's challenging yourself. Your whole body or mind screams "stop!" but somehow, you find the motivation to continue to the next hour. Then it continues.
+
+<!--more-->
 
 You win when you push past the point where others quit.
 

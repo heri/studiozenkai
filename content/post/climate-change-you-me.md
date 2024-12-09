@@ -8,6 +8,8 @@ Today is Earth day and an excellent opportunity to reflect on human's environmen
 
 The pandemic hit countries like a truck and changed overnight our ways of working or interacting with others. Many lost their jobs, others went into depression or worse got infected with COVID-19.
 
+<!--more-->
+
 The origin of the disease was little discussed. It is clear for me though that human's [cancerous growth, especially deforestation](https://www.inverse.com/science/deforestation-disease-outbreak-study), is linked to the pandemic. As humans develop further and encroach into nature, it gets into contact with new pathogens. Wildlife is disturbed, cycles are broken and as a result, diseases find new ways to propagate. Thus COVID-19 is directly linked to climate change.
 
 ![deforestation photo](/images/deforestation.jpg "[deforestation photo")

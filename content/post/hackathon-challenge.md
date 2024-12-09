@@ -6,6 +6,8 @@ tags = ['personal', 'software', 'health', 'montréal', 'sustainable']
 
 I am participating this weekend in the AI Climate Change [Hackathon](https://www.facebook.com/events/443903349789312/), and I will jot down here my notes and progress. Here is the event pitch:
 
+<!--more-->
+
 "Join us along with the other talented and diverse participants, supported by leading mentors in their fields who will come together to collaborate to attempt to address climate change and its impacts on communities and ecosystems. We hope to begin to achieve real positive impact in 48 hours using AI. We are also announcing 4 AI challenges: Plant Village Challenge, Extreme Weather Prediction, Climate-Related Risk Assessment, and Predict the Weather in Montréal."
 
 This sounds like a recipe to attract ecologists, students, and dreamers alike. It tells very little about technologies, specific goals and metrics, or  datasets, which are key in AI.

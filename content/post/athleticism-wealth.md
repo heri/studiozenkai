@@ -9,6 +9,8 @@ In a Malagasy primary school, we stood in rows with wooden rifles. Straight, lef
 
 This North Korean-esque drill was physical education, or what passed for it. The real focus for the school was academic results, the kind you could test on paper.
 
+<!--more-->
+
 Later, I remember swimming and other activities like running in the street. We did not have any direction so these did not go anywhere.
 
 Another continent later, I was in a western school. It was a shock to see that sports was a "real" class, and even more to see other students with amazing athletic abilities. At least that's what I thought.

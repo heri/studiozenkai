@@ -7,7 +7,7 @@ title = "All I want for Christmas is a small phone"
 I got an iPhone 6S Plus a few years ago. I was impressed by the screen, the biggest I’ve had. Look! I can use it as a tablet. Watch videos everywhere, or showcase my latest work at a tech meetup.
 
 The dreams shattered in many pieces. I was biking happily, the phone was sticking out of my pocket and crashed to the ground.
-
+<!--more-->
 I bike a lot, hike, run around hilly tracks and never cracked a screen before the iPhone 6S Plus. Previous phones could fit in a normal pocket. In an instant, I realized why large screen phones did not work for me.
 
 Since the iPhone 6S Plus, electronics manufacturers seems to compete against each other in size. More screen real estate, more cameras.

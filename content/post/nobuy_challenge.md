@@ -5,7 +5,7 @@ tags = ['health', 'sustainable']
 +++
 
 Not only intermittent fasting is a good way to manage your weight, it is only one of the rare ways to potentially increase longevity. Numerous studies have shown that fasting can help prevent cancer, heart disease, diabetes, neurodegeneration and improve immunity. 
-
+<!--more-->
 *  Valter D. Longo, Maira Di Tano, Mark P. Mattson & Novella Guidi. Intermittent and periodic fasting, longevit and disease. [Link](https://www.nature.com/articles/s43587-020-00013-3)
 * Levine, M. E. et al. Low protein intake is associated with a major reduction in IGF-1, cancer, and overall mortality in the 65 and younger but not older population. [Link](https://pubmed.ncbi.nlm.nih.gov/24606898/)
 * Brandhorst, S. et al. A periodic diet that mimics fasting promotes multi-system regeneration, enhanced cognitive performance, and healthspan. [Link](https://pubmed.ncbi.nlm.nih.gov/26094889/)

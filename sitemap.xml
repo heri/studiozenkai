@@ -1,204 +1,166 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://studiozenkai.com/post/</loc>
     <lastmod>2024-12-14T12:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://studiozenkai.com/</loc>
     <lastmod>2024-12-14T12:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://studiozenkai.com/post/balancing-developer-happinness-and-customer-success/</loc>
-    <lastmod>2024-11-12T10:35:26-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://studiozenkai.com/tags/airbnb/</loc>
+    <lastmod>2024-10-11T12:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://studiozenkai.com/post/airbnb-the-good-the-bad-the-profitable/</loc>
     <lastmod>2024-10-11T12:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://studiozenkai.com/tags/entrepreneurship/</loc>
+    <lastmod>2024-10-11T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://studiozenkai.com/tags/montr%C3%A9al/</loc>
+    <lastmod>2024-10-11T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://studiozenkai.com/tags/personal/</loc>
+    <lastmod>2024-10-11T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://studiozenkai.com/tags/photography/</loc>
+    <lastmod>2024-10-11T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://studiozenkai.com/tags/sustainable/</loc>
+    <lastmod>2024-10-11T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://studiozenkai.com/tags/</loc>
+    <lastmod>2024-10-11T12:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://studiozenkai.com/post/about-heri/</loc>
     <lastmod>2024-09-10T12:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://studiozenkai.com/tags/art/</loc>
+    <lastmod>2024-09-10T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://studiozenkai.com/tags/career/</loc>
+    <lastmod>2024-09-10T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://studiozenkai.com/tags/software/</loc>
+    <lastmod>2024-09-10T12:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://studiozenkai.com/post/athleticism-wealth/</loc>
     <lastmod>2024-08-09T12:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://studiozenkai.com/tags/health/</loc>
+    <lastmod>2024-08-09T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://studiozenkai.com/tags/performance/</loc>
+    <lastmod>2024-08-09T12:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://studiozenkai.com/post/necessary-but-not-sufficient/</loc>
     <lastmod>2024-07-08T12:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://studiozenkai.com/tags/security/</loc>
+    <lastmod>2024-07-08T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://studiozenkai.com/tags/ai/</loc>
+    <lastmod>2024-06-07T10:35:26-04:00</lastmod>
+  </url><url>
     <loc>https://studiozenkai.com/post/ai-will-take-your-job-eventually/</loc>
     <lastmod>2024-06-07T10:35:26-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://studiozenkai.com/post/levenshtein-rust/</loc>
     <lastmod>2024-03-04T06:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://studiozenkai.com/tags/ruby/</loc>
+    <lastmod>2024-03-04T06:00:00-04:00</lastmod>
+  </url><url>
+    <loc>https://studiozenkai.com/tags/rust/</loc>
+    <lastmod>2024-03-04T06:00:00-04:00</lastmod>
+  </url><url>
     <loc>https://studiozenkai.com/post/photography-and-the-secret-life-of-walter-mitty/</loc>
     <lastmod>2024-02-03T07:35:26-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://studiozenkai.com/tags/typescript/</loc>
+    <lastmod>2024-01-02T12:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://studiozenkai.com/post/typescript-for-ruby-developers/</loc>
     <lastmod>2024-01-02T12:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://studiozenkai.com/post/embrace-vs-reject/</loc>
     <lastmod>2023-09-02T12:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://studiozenkai.com/post/the-little-things-matter/</loc>
     <lastmod>2023-03-12T10:35:26-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://studiozenkai.com/post/nobuy_challenge/</loc>
     <lastmod>2023-01-10T10:35:26-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://studiozenkai.com/post/crossing_st_viateur/</loc>
     <lastmod>2022-04-15T12:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://studiozenkai.com/post/free_city_radio/</loc>
     <lastmod>2022-03-18T12:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://studiozenkai.com/post/foulab-hackerspace/</loc>
     <lastmod>2022-03-07T12:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://studiozenkai.com/post/thoughts-on-latest-science/</loc>
     <lastmod>2022-02-06T10:35:26-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://studiozenkai.com/post/ruby-playbook/</loc>
     <lastmod>2022-02-01T12:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://studiozenkai.com/post/docker-desktop-replacement/</loc>
     <lastmod>2021-09-01T18:35:26-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://studiozenkai.com/post/remote-work/</loc>
     <lastmod>2021-06-10T06:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://studiozenkai.com/tags/python/</loc>
+    <lastmod>2021-06-10T06:00:00-04:00</lastmod>
+  </url><url>
     <loc>https://studiozenkai.com/post/cancel-amazon-prime/</loc>
     <lastmod>2021-04-26T06:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://studiozenkai.com/post/climate-change-you-me/</loc>
     <lastmod>2021-04-22T09:35:26-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://studiozenkai.com/post/stack-performance-diagnosis/</loc>
     <lastmod>2021-04-13T10:35:26-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://studiozenkai.com/post/airbnb-vacation-home/</loc>
     <lastmod>2021-02-02T12:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://studiozenkai.com/post/dokomaps/</loc>
     <lastmod>2019-11-01T10:35:26-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://studiozenkai.com/post/hackathon-challenge/</loc>
     <lastmod>2019-09-13T15:30:20-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://studiozenkai.com/post/autonomous-rc-car/</loc>
     <lastmod>2019-02-26T12:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://studiozenkai.com/post/small-phone/</loc>
     <lastmod>2018-12-10T12:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://studiozenkai.com/post/microsoft/</loc>
     <lastmod>2018-12-05T12:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://studiozenkai.com/post/ruby-performance-checklist/</loc>
     <lastmod>2017-05-08T10:35:26-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://studiozenkai.com/post/marketplace-platform/</loc>
-    <lastmod>2016-05-09T15:35:26-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://studiozenkai.com/post/laptop-machine-learning/</loc>
     <lastmod>2016-05-04T15:35:26-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://studiozenkai.com/post/patience-test-canada/</loc>
-    <lastmod>2016-04-26T07:35:26-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://studiozenkai.com/post/bots/</loc>
     <lastmod>2016-04-18T10:35:26-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://studiozenkai.com/post/programming/</loc>
     <lastmod>2016-04-17T12:55:51-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://studiozenkai.com/post/playbook/</loc>
     <lastmod>2016-01-15T12:22:27-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://studiozenkai.com/post/cuda/</loc>
     <lastmod>2015-10-11T10:35:26-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://studiozenkai.com/categories/</loc>
-    <priority>0</priority>
   </url>
-  
-  <url>
-    <loc>https://studiozenkai.com/tags/</loc>
-    <priority>0</priority>
-  </url>
-  
 </urlset>

@@ -8,6 +8,8 @@ Upon hearing about Facebook and Microsoft efforts to deploy bot platforms, a fri
 
 > So bots are a thing now? I programmed bots 20 years ago
 
+<!--more-->
+
 He is a successful technology entrepreneur and has developed systems on many platforms. I can understand him. There were tutorials in kids' magazines on writing a "Hello World" bot on MS-DOS 20 years ago. More impressive were the Artificial Intelligence (A.I.) found in games like Warcraft 3 or Command & Conquer. Friends would spend countless nights trying to beat the A.I. For everyone else, it would be the Clipper found in Microsoft Word. It had personality and would show tips.
 
 At that time, bots and A.I. were rule-based. "If player produces infantry, produce infantry-killing robots". "If user clicks print, show links on how to print". To get user satisfaction, you need to write rules covering all cases, as well as the exceptions. It is a creative and long but easy job.

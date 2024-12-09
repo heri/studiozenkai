@@ -8,6 +8,8 @@ When living in society, we constantly have to make choices: accept a job, buy a 
 
 There are many ways to make those choices, from personal preferences, constraints, opportunity vs cost and many others. To me, there is another way to decide: how you embrace society or how you reject it.
 
+<!--more-->
+
 I live in North America, well known for its vast spaces, individualism, personal & economic freedom, opposition to strong governments, consumerism, and so on. Here, there is a belief that one can do whatever they want to succeed, as long as they do not hurt others. Entrepreneurs who work hard and take risks are celebrated. If you are not happy with your job, you quit and find a better one. Contrary to Europe, the government does not provide a safety net, is less involved in healthcare, and overall regulates less the market.
 
 In such a society, you can succeed if you work extra long hours, have several side hustles, get advantage of the financial system by borrowing money from banks and investors, and also get a smart accountant and lawyer. You will then be able to buy the latest pickup truck, go to Disneyland every year, send kids to Harvard, and perhaps one day make headlines in the local paper. This is fully embracing the system. Embracing works best if the system endures, if there are no major events (such as a pandemic or a stock market crash), and if you know shortcuts to make your way to the top.

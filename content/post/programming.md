@@ -6,7 +6,7 @@ tags = ['software', 'career', 'performance']
 +++
 
 In six months I have shipped many apps, as an entrepreneur or as a freelancer. I have also contributed to open source projects and advised other projects. Yet I’m educated as an electrical engineer, not as a software engineer and consider myself largely self-taught in the area of programming.
-
+<!--more-->
 > Jeff Atwood : Geeks went from being social outsiders, outcasts, and rejects to.. part of the 1% power structure, with all that implies. Hard to adapt.
 
 Just in Québec, there are about 7000 programmer or developer positions that are not filled every month. As a result, small and big companies are fighting to get the attention of programmers.

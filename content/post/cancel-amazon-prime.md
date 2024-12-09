@@ -6,6 +6,8 @@ tags = 'sustainable'
 
 I decided this morning to cancel my Amazon Prime membership. I used it for free prime delivery, and also for occasional prime videos, such as the [excellent Elementary](https://www.amazon.com/Elementary-Season-1/dp/B009IJJ5B4) series. It is also amazing to say "Alexa, play french songs" and discover pieces from Amazon Music you knew nothing about.
 
+<!--more-->
+
 I used to be a fan of the Amazon store. You could find rare items that were not sold anywhere else, at unbeatable prices. Reviews were genuine, and when an item had an average of 5-star, it only meant that it was an excellent product. I got items that allowed me to be more productive and more efficient, at lower prices. Physical stores such as Best Buy were only useful to help in the decision process.
 
 In 2021, Amazon is unfortunately full of junk. The majority are cloned products of shoddy craftsmanship with little regard for durability, and boosted by 5 star reviews from users who got the product for free. Amazon Basics provide a standard of some sort but the line is comparable to IKEA products : they do the job but they are only meant to last for a year. When you do find interesting items, prices can be a multiple of what you find locally. Currently the only benefit is convenience : one click purchase with someone delivering boxes at your door step in a day or so.

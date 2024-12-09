@@ -8,6 +8,8 @@ NVIDIA graphic cards can be used to accelerate [scientific computing](https://de
 
 Video editing and post-production also benefit greatly from NVIDIA cards with Adobe's Mercury Engine or BMD's Davinci resolve.
 
+<!--more-->
+
 In the case of scientific computing, performance is directly proportional to the number of cuda cores. As long as cpu speed is > 2GHz and you have as much RAM as you have GPU RAM, you are all good.
 
 As such, this lists current top 10 laptops that have a good price vs cuda cores # ratio.

@@ -9,6 +9,8 @@ tags = 'security'
 
 Their multiplication of AirBnb, Kickstarter and Uber clones in recent years have encouraged entrepreneurs to launch their own marketplaces.
 
+<!--more-->
+
 In one hand, you entice merchants selling their products & services and on the other hand, you encourage visitors to come and buy.
 
 It is one of the most difficult ventures.

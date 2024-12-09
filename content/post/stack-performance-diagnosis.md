@@ -7,7 +7,7 @@ tags = ['software', 'ruby', 'python', 'rust', 'performance']
 How do you diagnose a slow web application? What about an unresponsive web application?
 
 Those are questions I asked when interviewing recently developers. The questions are simple to understand yet complex to answer. Many applicants study data structures or various algorithms. Few  have a holistic view of web applications, due to lack of experience or because of niche specializations. They often work on a specific part of a web project, and have little appreciation of work done in back-end, front-end, devops or other areas.
-
+<!--more-->
 Here are a few answers I expected in case of a slow application.
 
 Monitoring tools is the first step. If there is no monitoring, then install or integrate one of the commercially available tools. Otherwise, it is like a doctor guessing what a patient has without doing any history, physical examination let alone blood work. Monitoring should output detailed information on past queries as well as exactly application stack trace. Be aware that certain monitoring tools do not log killed queries, such as gunicorn killing a worker if there is no response after 30 seconds.

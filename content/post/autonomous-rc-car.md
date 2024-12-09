@@ -8,6 +8,8 @@ This is a hands-on article that encourages you to experiment and see what works 
 
 *Shameless Promotion*: If you are in Montréal, I ([@heri](https://twitter.com/heri)) do a meetup where people interested in computer vision, AI, robotics work on [autonomous cars](https://www.meetup.com/DIY-Robocars-Montreal-Meetup-Autonomous-cars-race). Please drop by!
 
+<!--more-->
+
 ## Why a RC car?
 
 Like developing an application, my recommendation is to build first a *Minimum Viable Product* (MVP). Then iterate it quickly from there towards a version that works for you.

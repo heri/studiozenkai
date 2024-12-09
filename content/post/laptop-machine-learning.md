@@ -10,6 +10,8 @@ I have used the original macbook, the 13" MacBook Air, the 13" Macbook pro, and 
 
 I loved the white plastic of the original macbook. It was better than any other computer I've used before, worked out of the box, and iMovie amazed me. Drag, drop, and five minutes later, you have a video.
 
+<!--more-->
+
 ![macbook white](/images/macbook_white.jpg "[macbook white]")
 
 I thought this is what computing should be.

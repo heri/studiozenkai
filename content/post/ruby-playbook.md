@@ -5,7 +5,7 @@ tags = ['software', 'ruby']
 +++
 
 I was introduced to the idea of playbook, which is basically a recipe to win a case. It can be in a team sports situation, such as how to score in American football in a given situation. It can be used by a salesperson, such as how to win a commercial contract.
-
+<!--more-->
 I imagined what would be my Ruby Engineering playbook:
 
 * Focus on hard projects that move the needle in the long-term, or alternatively easy wins (less than a day to implement+deploy)

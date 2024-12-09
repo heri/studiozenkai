@@ -5,7 +5,7 @@ tags = ['software', 'ruby', 'rust', 'performance']
 +++
 
 I shipped many applications, using a variety of frameworks, through [my current 1 year challenge](http://studiozenkai.com/challenge/) or startups. Ruby issues include low performance, such as servers needing more RAM, not able to sustain large traffic, or slow rendering. Since this is a recurring issue, here is a checklist to help developers get their Ruby app faster:
-
+<!--more-->
 ## Code complexity
 
 Ruby's simplicity and ease of use allows beginners and experienced developers alike to ship features in record time. Good for business, otherwise bad for code quality. For instance, many :

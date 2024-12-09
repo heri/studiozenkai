@@ -9,6 +9,8 @@ A weekly radio show airing every wednesday morning on CKUT 90.3fm montréal, Fre
 
 ![free city radio](/images/howl_radio_01.jpg)
 
+<!--more-->
+
 Sameer Zuberi is a board member of the Québec section of the Canadian Muslim Lawyers Association & also holding a law degree from UQAM | Université du Québec à Montréal, Sameer outlined intersectional perspectives on struggles against both overt & systemic racism in Québec, as a original signatory to the Les #Moustiques open letter to protest anti-Black racism in this society & specifically against the ongoing presence / racist defence of Blackface by some ICI Radio-Canada media personalities
 
 

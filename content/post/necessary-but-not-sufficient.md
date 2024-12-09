@@ -6,7 +6,7 @@ tags = ['career', 'software', 'security', 'performance']
 +++
 
 The progression of software engineers is like this:
-
+<!--more-->
 * *Junior* You have theoritical knowledge of software but most of it is obscure for you. The focus here is on learning a framework, learning how development processes work, and delivering code that works. You are not yet able to fully develop applications but can handle minor tasks.
 * *Senior* You have launched a few applications and can autonomously complete 95% of tasks. You are not battle-tested ready yet, but can resolve most urgent issues. You are also able to onboard junior developers.
 * *Staff / Lead Engineer* Like a compass, you are able to set a direction for the engineering team and navigate complex challenges, often involving product teams and other departments. You can tell horror stories -- about the time the prod database was lost, or when the team had to spent shipping a hotfix on Friday 7pm for a rare but critical issue.

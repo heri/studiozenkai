@@ -22,5 +22,19 @@
       <guid>https://studiozenkai.com/post/the-little-things-matter/</guid>
       <description>&lt;p&gt;Programmers are attracted to big challenges, perhaps comparing themselves to Ed Hillary and Tenzig Norgay ascending Mount Everest. It brings prestige inside and outside the company, and opens them new doors.&lt;/p&gt;&#xA;&lt;p&gt;While big challenges are worth it, and I encourage everyone to go outside of their comfort zone regularly, little things also matter. It is easy to overlook small calculations, variable naming, or quick queries, assuming that these will make little differences and it is not worth the (potential) conflict with the code author.&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>Troubleshooting a web application</title>
+      <link>https://studiozenkai.com/post/stack-performance-diagnosis/</link>
+      <pubDate>Tue, 13 Apr 2021 10:35:26 -0400</pubDate>
+      <guid>https://studiozenkai.com/post/stack-performance-diagnosis/</guid>
+      <description>&lt;p&gt;How do you diagnose a slow web application? What about an unresponsive web application?&lt;/p&gt;&#xA;&lt;p&gt;Those are questions I asked when interviewing recently developers. The questions are simple to understand yet complex to answer. Many applicants study data structures or various algorithms. Few  have a holistic view of web applications, due to lack of experience or because of niche specializations. They often work on a specific part of a web project, and have little appreciation of work done in back-end, front-end, devops or other areas.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ruby Performance checklist</title>
+      <link>https://studiozenkai.com/post/ruby-performance-checklist/</link>
+      <pubDate>Mon, 08 May 2017 10:35:26 -0400</pubDate>
+      <guid>https://studiozenkai.com/post/ruby-performance-checklist/</guid>
+      <description>&lt;p&gt;I shipped many applications, using a variety of frameworks, through &lt;a href=&#34;http://studiozenkai.com/challenge/&#34;&gt;my current 1 year challenge&lt;/a&gt; or startups. Ruby issues include low performance, such as servers needing more RAM, not able to sustain large traffic, or slow rendering. Since this is a recurring issue, here is a checklist to help developers get their Ruby app faster:&lt;/p&gt;&#xA;&lt;h2 id=&#34;code-complexity&#34;&gt;Code complexity&lt;/h2&gt;&#xA;&lt;p&gt;Ruby&amp;rsquo;s simplicity and ease of use allows beginners and experienced developers alike to ship features in record time. Good for business, otherwise bad for code quality. For instance, many :&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

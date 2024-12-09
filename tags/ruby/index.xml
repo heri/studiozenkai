@@ -37,6 +37,20 @@
       <description>&lt;p&gt;I was introduced to the idea of playbook, which is basically a recipe to win a case. It can be in a team sports situation, such as how to score in American football in a given situation. It can be used by a salesperson, such as how to win a commercial contract.&lt;/p&gt;&#xA;&lt;p&gt;I imagined what would be my Ruby Engineering playbook:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Focus on hard projects that move the needle in the long-term, or alternatively easy wins (less than a day to implement+deploy)&lt;/li&gt;&#xA;&lt;li&gt;Do not reinvent the wheel. Research different approaches before trying to come up with your design. Reuse when possible&lt;/li&gt;&#xA;&lt;li&gt;When faced with a big block, divide, then conquer or delegate or delay. Divide means tackling the blocker in manageable chunks. The second means that I should either solve it myself, have another service solve it, or delay processing.&lt;/li&gt;&#xA;&lt;li&gt;When implementing, remove as much as possible. Introduce only what&amp;rsquo;s needed to make it work, as if keystrokes were a limited resource, and copy/paste did not exist. Succinctness is underrated !&lt;/li&gt;&#xA;&lt;li&gt;Faced with loops, arrays or iterations, have a log(n) or faster implementation, as if you had a CPU from last century&lt;/li&gt;&#xA;&lt;li&gt;You should be able to explain your design or algorithm orally to another person, without them able to see any code&lt;/li&gt;&#xA;&lt;li&gt;Do not create side-effects in other people&amp;rsquo;s work. Assume future maintainers won&amp;rsquo;t be smart so make your implementation idiot-proof&lt;/li&gt;&#xA;&lt;li&gt;Before committing, ask if it is the best you can commit&lt;/li&gt;&#xA;&lt;li&gt;Increase test cooverage&lt;/li&gt;&#xA;&lt;li&gt;Always run linting / test suite before commit&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Note : this is a WIP&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Docker Desktop command line alternative</title>
+      <link>https://studiozenkai.com/post/docker-desktop-replacement/</link>
+      <pubDate>Wed, 01 Sep 2021 18:35:26 -0400</pubDate>
+      <guid>https://studiozenkai.com/post/docker-desktop-replacement/</guid>
+      <description>&lt;p&gt;Docker Desktop is one of the de facto tool present on macos developer machines, along with other utilities such as git or homebrew. Contrary to apps such as VS Code, it not an app you interact with everyday but more a background tool running constantly during application development and deployment. It runs in fact the virtual machine that allows you to run docker on Windows or Mac as if you were on Linux, albeit with a little bit more resources.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How I Remote Work</title>
+      <link>https://studiozenkai.com/post/remote-work/</link>
+      <pubDate>Thu, 10 Jun 2021 06:00:00 -0400</pubDate>
+      <guid>https://studiozenkai.com/post/remote-work/</guid>
+      <description>&lt;p&gt;In Canada, as well as many countries, Covid-19 infections is exponentially decreasing.&lt;/p&gt;&#xA;&lt;p&gt;We are on the verge of getting our old life back, from going to restaurants or to the cinemas, and why not have a celebratory drink with friends.&lt;/p&gt;&#xA;&lt;p&gt;Before moving on, I would like to share how I remote work, one of the main traits of the Covid-19 pandemic. I hope this helps other remote workers, and encourage developers and companies to adopt it on a permanent basis.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Troubleshooting a web application</title>
       <link>https://studiozenkai.com/post/stack-performance-diagnosis/</link>
       <pubDate>Tue, 13 Apr 2021 10:35:26 -0400</pubDate>
@@ -44,11 +58,25 @@
       <description>&lt;p&gt;How do you diagnose a slow web application? What about an unresponsive web application?&lt;/p&gt;&#xA;&lt;p&gt;Those are questions I asked when interviewing recently developers. The questions are simple to understand yet complex to answer. Many applicants study data structures or various algorithms. Few  have a holistic view of web applications, due to lack of experience or because of niche specializations. They often work on a specific part of a web project, and have little appreciation of work done in back-end, front-end, devops or other areas.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Looking again at Microsoft</title>
+      <link>https://studiozenkai.com/post/microsoft/</link>
+      <pubDate>Wed, 05 Dec 2018 12:00:00 +0000</pubDate>
+      <guid>https://studiozenkai.com/post/microsoft/</guid>
+      <description>&lt;p&gt;The natural cycle of companies is to innovate. The flame dies down, then it fights again to innovate.&lt;/p&gt;&#xA;&lt;p&gt;Microsoft is one of those. Win 3.1 was revolutionary, and so was Win 95. With Win 3.1, you could point and click to start programs. With Windows 95, you could install games with a nice GUI instead of typing arduous commands in MS-DOS. No more failures at the video setup or having to find a driver file for your sound card.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Ruby Performance checklist</title>
       <link>https://studiozenkai.com/post/ruby-performance-checklist/</link>
       <pubDate>Mon, 08 May 2017 10:35:26 -0400</pubDate>
       <guid>https://studiozenkai.com/post/ruby-performance-checklist/</guid>
       <description>&lt;p&gt;I shipped many applications, using a variety of frameworks, through &lt;a href=&#34;http://studiozenkai.com/challenge/&#34;&gt;my current 1 year challenge&lt;/a&gt; or startups. Ruby issues include low performance, such as servers needing more RAM, not able to sustain large traffic, or slow rendering. Since this is a recurring issue, here is a checklist to help developers get their Ruby app faster:&lt;/p&gt;&#xA;&lt;h2 id=&#34;code-complexity&#34;&gt;Code complexity&lt;/h2&gt;&#xA;&lt;p&gt;Ruby&amp;rsquo;s simplicity and ease of use allows beginners and experienced developers alike to ship features in record time. Good for business, otherwise bad for code quality. For instance, many :&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Playbook</title>
+      <link>https://studiozenkai.com/post/playbook/</link>
+      <pubDate>Fri, 15 Jan 2016 12:22:27 -0400</pubDate>
+      <guid>https://studiozenkai.com/post/playbook/</guid>
+      <description>&lt;p&gt;Bonjour!&lt;/p&gt;&#xA;&lt;p&gt;Nous offrons &lt;em&gt;une expertise technique pour un résultat de qualité&lt;/em&gt; dans le développement de plateformes transactionnelles, de financement, de médias:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Étude et conception fonctionnelle et technique&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Développement de solutions front, middle ou back-office&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Développement d&amp;rsquo;applications iOS ou Android&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Conduite de projet sur les technologies Ruby, Javascript, Lua, et plateformes mobiles; utilisation de base de données MySQL, Postgresql, ou redis, mongodb, ElasticSearch, Solr&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Audit de code, de qualité et de performance des applications&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

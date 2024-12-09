@@ -11,6 +11,8 @@ From West to East, Mile-End gathers French Québecois, Orthodox Jews, young arti
 
 The blue 80 bus stopped at St-Viateur Street.
 
+<!--more-->
+
 In front, a Hasidic mother stepped down, along with five children.
 
 The trolley with two babies is huge.

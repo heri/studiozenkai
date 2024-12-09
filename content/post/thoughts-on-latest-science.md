@@ -7,7 +7,7 @@ tags = ['health', 'sustainable']
 ![truckers](/images/truckers.jpeg)
 
 A convoy of truckers gathered in Canada's federal capital last week. They protested vaccine mandates but rode on a wave of discontentment against lockdown, inflation and more.
-
+<!--more-->
 Many right-leaning Canadians value their "freedom" to do what they want, above general public health. They state that they will build immunity naturally and let covid19 run its course. This is on top of a belief that distrust anything from government & institutions.
 
 On the other side, locals in Ottawa or Toronto label them as selfish, anti-science rednecks. Let's get vaccinated, two, three or more times, they say, and be done with the pandemic.

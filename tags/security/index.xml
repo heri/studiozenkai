@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Security on Studio Zenkai</title>
+    <link>https://studiozenkai.com/tags/security/</link>
+    <description>Recent content in Security on Studio Zenkai</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 08 Jul 2024 12:00:00 +0000</lastBuildDate>
+    <atom:link href="https://studiozenkai.com/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Necessary but not sufficient</title>
+      <link>https://studiozenkai.com/post/necessary-but-not-sufficient/</link>
+      <pubDate>Mon, 08 Jul 2024 12:00:00 +0000</pubDate>
+      <guid>https://studiozenkai.com/post/necessary-but-not-sufficient/</guid>
+      <description>&lt;p&gt;The progression of software engineers is like this:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;em&gt;Junior&lt;/em&gt; You have theoritical knowledge of software but most of it is obscure for you. The focus here is on learning a framework, learning how development processes work, and delivering code that works. You are not yet able to fully develop applications but can handle minor tasks.&lt;/li&gt;&#xA;&lt;li&gt;&lt;em&gt;Senior&lt;/em&gt; You have launched a few applications and can autonomously complete 95% of tasks. You are not battle-tested ready yet, but can resolve most urgent issues. You are also able to onboard junior developers.&lt;/li&gt;&#xA;&lt;li&gt;&lt;em&gt;Staff / Lead Engineer&lt;/em&gt; Like a compass, you are able to set a direction for the engineering team and navigate complex challenges, often involving product teams and other departments. You can tell horror stories &amp;ndash; about the time the prod database was lost, or when the team had to spent shipping a hotfix on Friday 7pm for a rare but critical issue.&lt;/li&gt;&#xA;&lt;li&gt;&lt;em&gt;Executive position&lt;/em&gt; You contribute to achieving key business milestones for the company. Most of your time is spent meeting, hiring, managing i.e maximizing producitvity. And then there&amp;rsquo;s the odd monthly code contribution.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;For Juniors and Seniors, the key to success is technical expertise. Common work issues is resolved by whoever has the fastest or most secure implementation. Numbers and hard facts dominate decision-making. This is where you understand tech expertise is necessary.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>What the Climate Change means for you and me</title>
+      <link>https://studiozenkai.com/post/climate-change-you-me/</link>
+      <pubDate>Thu, 22 Apr 2021 09:35:26 -0400</pubDate>
+      <guid>https://studiozenkai.com/post/climate-change-you-me/</guid>
+      <description>&lt;p&gt;Today is Earth day and an excellent opportunity to reflect on human&amp;rsquo;s environmental impact.&lt;/p&gt;&#xA;&lt;p&gt;The pandemic hit countries like a truck and changed overnight our ways of working or interacting with others. Many lost their jobs, others went into depression or worse got infected with COVID-19.&lt;/p&gt;&#xA;&lt;p&gt;The origin of the disease was little discussed. It is clear for me though that human&amp;rsquo;s &lt;a href=&#34;https://www.inverse.com/science/deforestation-disease-outbreak-study&#34;&gt;cancerous growth, especially deforestation&lt;/a&gt;, is linked to the pandemic. As humans develop further and encroach into nature, it gets into contact with new pathogens. Wildlife is disturbed, cycles are broken and as a result, diseases find new ways to propagate. Thus COVID-19 is directly linked to climate change.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

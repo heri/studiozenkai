@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Studio Zenkai</title>
+    <link>https://studiozenkai.com/tags/python/</link>
+    <description>Recent content in Python on Studio Zenkai</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 10 Jun 2021 06:00:00 -0400</lastBuildDate>
+    <atom:link href="https://studiozenkai.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How I Remote Work</title>
+      <link>https://studiozenkai.com/post/remote-work/</link>
+      <pubDate>Thu, 10 Jun 2021 06:00:00 -0400</pubDate>
+      <guid>https://studiozenkai.com/post/remote-work/</guid>
+      <description>&lt;p&gt;In Canada, as well as many countries, Covid-19 infections is exponentially decreasing.&lt;/p&gt;&#xA;&lt;p&gt;We are on the verge of getting our old life back, from going to restaurants or to the cinemas, and why not have a celebratory drink with friends.&lt;/p&gt;&#xA;&lt;p&gt;Before moving on, I would like to share how I remote work, one of the main traits of the Covid-19 pandemic. I hope this helps other remote workers, and encourage developers and companies to adopt it on a permanent basis.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Troubleshooting a web application</title>
+      <link>https://studiozenkai.com/post/stack-performance-diagnosis/</link>
+      <pubDate>Tue, 13 Apr 2021 10:35:26 -0400</pubDate>
+      <guid>https://studiozenkai.com/post/stack-performance-diagnosis/</guid>
+      <description>&lt;p&gt;How do you diagnose a slow web application? What about an unresponsive web application?&lt;/p&gt;&#xA;&lt;p&gt;Those are questions I asked when interviewing recently developers. The questions are simple to understand yet complex to answer. Many applicants study data structures or various algorithms. Few  have a holistic view of web applications, due to lack of experience or because of niche specializations. They often work on a specific part of a web project, and have little appreciation of work done in back-end, front-end, devops or other areas.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Building an autonomous RC car</title>
+      <link>https://studiozenkai.com/post/autonomous-rc-car/</link>
+      <pubDate>Tue, 26 Feb 2019 12:00:00 +0000</pubDate>
+      <guid>https://studiozenkai.com/post/autonomous-rc-car/</guid>
+      <description>&lt;p&gt;This is a hands-on article that encourages you to experiment and see what works on the ground.&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Shameless Promotion&lt;/em&gt;: If you are in Montréal, I (&lt;a href=&#34;https://twitter.com/heri&#34;&gt;@heri&lt;/a&gt;) do a meetup where people interested in computer vision, AI, robotics work on &lt;a href=&#34;https://www.meetup.com/DIY-Robocars-Montreal-Meetup-Autonomous-cars-race&#34;&gt;autonomous cars&lt;/a&gt;. Please drop by!&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-a-rc-car&#34;&gt;Why a RC car?&lt;/h2&gt;&#xA;&lt;p&gt;Like developing an application, my recommendation is to build first a &lt;em&gt;Minimum Viable Product&lt;/em&gt; (MVP). Then iterate it quickly from there towards a version that works for you.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

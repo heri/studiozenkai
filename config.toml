@@ -19,5 +19,5 @@ theme = "hugo-uno"
 
 [params]
   author = "Heri"
-  description = "Studio Zenkai is dedicated to the craft of programming, hardware hacking, photography and how to live sensibly. <a href="https://studiozenkai.com/post/about-heri/">About me</a>"
+  description = "Studio Zenkai is dedicated to the craft of programming, hardware hacking, photography and how to live sensibly."
   math = true

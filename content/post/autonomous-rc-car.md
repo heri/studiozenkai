@@ -1,7 +1,7 @@
 +++
 date = "2019-02-26T12:00:00-00:00"
 title = "Building an autonomous RC car"
-tags = ['software', 'AI']
+tags = ['software', 'AI', 'python', 'montréal']
 +++
 
 This is a hands-on article that encourages you to experiment and see what works on the ground.

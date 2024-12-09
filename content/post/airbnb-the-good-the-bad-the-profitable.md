@@ -1,7 +1,7 @@
 +++
 date = "2024-10-11T12:00:00-00:00"
 title = "Airbnb Hosting: The Good, The Bad and The Profitable"
-tags = ['airbnb', 'entrepreneurship', 'personal']
+tags = ['airbnb', 'entrepreneurship', 'personal', 'montréal', 'photography', 'sustainable']
 +++
 
 During the pandemic, I bought [a vacation property in the Laurentians](https://studiozenkai.com/post/airbnb-vacation-home/), as an escape for the family but also for short-term rental on Airbnb.

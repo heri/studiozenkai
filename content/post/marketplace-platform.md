@@ -2,7 +2,7 @@
 date = "2016-05-09T15:35:26-04:00"
 draft = true
 title = "Starting a marketplace - Finding inspiration in the Pillars of The Earth"
-
+tags = 'security'
 +++
 
 > Note : This on-going article will be updated and extended regularly. Make sure to come back!

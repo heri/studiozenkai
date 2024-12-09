@@ -2,7 +2,7 @@
 date = "2016-01-15T12:22:27-04:00"
 draft = false
 title = "Playbook"
-tags = ['entrepreneurship', 'software']
+tags = ['entrepreneurship', 'software', 'ruby', 'performance']
 
 +++
 

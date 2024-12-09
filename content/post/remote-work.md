@@ -1,7 +1,7 @@
 +++
 date = "2021-06-10T06:00:00-04:00"
 title = "How I Remote Work"
-tags = ['career', 'health']
+tags = ['career', 'health', 'python', 'ruby', 'sustainable']
 +++
 
 In Canada, as well as many countries, Covid-19 infections is exponentially decreasing.

@@ -1,7 +1,7 @@
 +++
 date = "2016-05-04T15:35:26-04:00"
 title = "Why my next laptop won't be an Apple"
-tags = ['software', 'personal', 'AI']
+tags = ['software', 'personal', 'AI', 'photography', 'performance']
 +++
 
 ## Part I - Apple's Craftmanship

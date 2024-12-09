@@ -1,7 +1,7 @@
 +++
 date = "2021-04-26T06:00:00-04:00"
 title = "Why I am cancelling Amazon Prime"
-
+tags = 'sustainable'
 +++
 
 I decided this morning to cancel my Amazon Prime membership. I used it for free prime delivery, and also for occasional prime videos, such as the [excellent Elementary](https://www.amazon.com/Elementary-Season-1/dp/B009IJJ5B4) series. It is also amazing to say "Alexa, play french songs" and discover pieces from Amazon Music you knew nothing about.

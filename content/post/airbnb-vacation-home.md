@@ -1,7 +1,7 @@
 +++
 date = "2021-02-02T12:00:00-00:00"
 title = "Starting an Airbnb vacation home"
-tags = ['airbnb', 'entrepreneurship']
+tags = ['airbnb', 'entrepreneurship', 'montréal']
 +++
 
 One year ago, I decided to purchase a waterfront cottage. It would be in the Laurentians aka Quebec's cottage country.

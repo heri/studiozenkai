@@ -1,7 +1,7 @@
 +++
 date = "2021-04-13T10:35:26-04:00"
 title = "Troubleshooting a web application"
-tags = ['software', 'ruby', 'typescript']
+tags = ['software', 'ruby', 'python', 'rust', 'performance']
 +++
 
 How do you diagnose a slow web application? What about an unresponsive web application?

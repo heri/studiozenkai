@@ -1,7 +1,7 @@
 +++
 date = "2024-07-08T12:00:00-00:00"
 title = "Necessary but not sufficient"
-tags = ['career', 'software']
+tags = ['career', 'software', 'security', 'performance']
 
 +++
 

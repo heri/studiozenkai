@@ -1,7 +1,7 @@
 +++
 date = "2023-03-12T10:35:26-04:00"
 title = "Little Math Routines"
-tags = ['software', 'ruby', 'rust']
+tags = ['software', 'ruby', 'rust', 'performance']
 +++
 
 Programmers are attracted to big challenges, perhaps comparing themselves to Ed Hillary and Tenzig Norgay ascending Mount Everest. It brings prestige inside and outside the company, and opens them new doors.

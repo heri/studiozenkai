@@ -1,7 +1,7 @@
 +++
 date = "2024-08-09T12:00:00-00:00"
 title = "Athleticism & Country Wealth"
-tags = ['personal', 'health']
+tags = ['personal', 'health', 'performance']
 +++
 
 

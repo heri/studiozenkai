@@ -1,7 +1,7 @@
 +++
 date = "2022-03-07T12:00:00-00:00"
 title = "Foulab : Montreal’s creative space for hardware makers"
-tags = ['software', 'montréal']
+tags = ['software', 'montréal', 'art']
 +++
 
 Foulab is a space for hardware makers, with the idea that any smart individual can imagine and create new innovative electronics.

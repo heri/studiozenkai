@@ -1,7 +1,7 @@
 +++
 date = "2022-02-06T10:35:26-04:00"
 title = "Latest Science Is Not Necessarily Good For You"
-
+tags = ['health', 'sustainable']
 +++
 
 ![truckers](/images/truckers.jpeg)

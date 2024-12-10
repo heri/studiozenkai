@@ -13,35 +13,35 @@
       <link>https://studiozenkai.com/post/ai-will-take-your-job-eventually/</link>
       <pubDate>Fri, 07 Jun 2024 10:35:26 -0400</pubDate>
       <guid>https://studiozenkai.com/post/ai-will-take-your-job-eventually/</guid>
-      <description>&lt;p&gt;I am a fan of AI and &lt;a href=&#34;https://studiozenkai.com/post/autonomous-rc-car/&#34;&gt;machine learning&lt;/a&gt;, well &lt;a href=&#34;https://studiozenkai.com/post/cuda/&#34;&gt;before&lt;/a&gt; it was trending on CNBC or spamming your Facebook feed.&lt;/p&gt;&#xA;&lt;p&gt;The exponential progress in the past few years means everyone can find cues to complex questions in a few seconds, where you would previously need to ask experts or pay a professional to do it for you.&lt;/p&gt;&#xA;&lt;p&gt;Note that I wrote &amp;ldquo;cues&amp;rdquo; above, not &amp;ldquo;answers&amp;rdquo;. In its current state, the best of AI bots will NOT give you an answer that fully fits your case. You need judgement to assess if it makes sense, and also have a process or methodology on how to have a satisfying and precise answer through follow-up questions.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I am a fan of AI and &lt;a href=&#34;https://studiozenkai.com/post/autonomous-rc-car/&#34;&gt;machine learning&lt;/a&gt;, well &lt;a href=&#34;https://studiozenkai.com/post/cuda/&#34;&gt;before&lt;/a&gt; it was trending on CNBC or spamming your Facebook feed.&lt;/p&gt;&#xA;&lt;p&gt;The exponential progress in the past few years means everyone can find cues to complex questions in a few seconds, where you would previously need to ask experts or pay a professional to do it for you.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Building an autonomous RC car</title>
       <link>https://studiozenkai.com/post/autonomous-rc-car/</link>
       <pubDate>Tue, 26 Feb 2019 12:00:00 +0000</pubDate>
       <guid>https://studiozenkai.com/post/autonomous-rc-car/</guid>
-      <description>&lt;p&gt;This is a hands-on article that encourages you to experiment and see what works on the ground.&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Shameless Promotion&lt;/em&gt;: If you are in Montréal, I (&lt;a href=&#34;https://twitter.com/heri&#34;&gt;@heri&lt;/a&gt;) do a meetup where people interested in computer vision, AI, robotics work on &lt;a href=&#34;https://www.meetup.com/DIY-Robocars-Montreal-Meetup-Autonomous-cars-race&#34;&gt;autonomous cars&lt;/a&gt;. Please drop by!&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-a-rc-car&#34;&gt;Why a RC car?&lt;/h2&gt;&#xA;&lt;p&gt;Like developing an application, my recommendation is to build first a &lt;em&gt;Minimum Viable Product&lt;/em&gt; (MVP). Then iterate it quickly from there towards a version that works for you.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This is a hands-on article that encourages you to experiment and see what works on the ground.&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Shameless Promotion&lt;/em&gt;: If you are in Montréal, I (&lt;a href=&#34;https://twitter.com/heri&#34;&gt;@heri&lt;/a&gt;) do a meetup where people interested in computer vision, AI, robotics work on &lt;a href=&#34;https://www.meetup.com/DIY-Robocars-Montreal-Meetup-Autonomous-cars-race&#34;&gt;autonomous cars&lt;/a&gt;. Please drop by!&lt;/p&gt;</description>
     </item>
     <item>
       <title>Why my next laptop won&#39;t be an Apple</title>
       <link>https://studiozenkai.com/post/laptop-machine-learning/</link>
       <pubDate>Wed, 04 May 2016 15:35:26 -0400</pubDate>
       <guid>https://studiozenkai.com/post/laptop-machine-learning/</guid>
-      <description>&lt;h2 id=&#34;part-i---apples-craftmanship&#34;&gt;Part I - Apple&amp;rsquo;s Craftmanship&lt;/h2&gt;&#xA;&lt;p&gt;I have used the original macbook, the 13&amp;quot; MacBook Air, the 13&amp;quot; Macbook pro, and 15&amp;quot; Macbook pros.&lt;/p&gt;&#xA;&lt;p&gt;I loved the white plastic of the original macbook. It was better than any other computer I&amp;rsquo;ve used before, worked out of the box, and iMovie amazed me. Drag, drop, and five minutes later, you have a video.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://studiozenkai.com/images/macbook_white.jpg&#34; alt=&#34;macbook white&#34; title=&#34;[macbook white]&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;I thought this is what computing should be.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;part-i---apples-craftmanship&#34;&gt;Part I - Apple&amp;rsquo;s Craftmanship&lt;/h2&gt;&#xA;&lt;p&gt;I have used the original macbook, the 13&amp;quot; MacBook Air, the 13&amp;quot; Macbook pro, and 15&amp;quot; Macbook pros.&lt;/p&gt;&#xA;&lt;p&gt;I loved the white plastic of the original macbook. It was better than any other computer I&amp;rsquo;ve used before, worked out of the box, and iMovie amazed me. Drag, drop, and five minutes later, you have a video.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Why bots are a thing now</title>
       <link>https://studiozenkai.com/post/bots/</link>
       <pubDate>Mon, 18 Apr 2016 10:35:26 -0400</pubDate>
       <guid>https://studiozenkai.com/post/bots/</guid>
-      <description>&lt;p&gt;Upon hearing about Facebook and Microsoft efforts to deploy bot platforms, a friend reacted:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;So bots are a thing now? I programmed bots 20 years ago&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;He is a successful technology entrepreneur and has developed systems on many platforms. I can understand him. There were tutorials in kids&amp;rsquo; magazines on writing a &amp;ldquo;Hello World&amp;rdquo; bot on MS-DOS 20 years ago. More impressive were the Artificial Intelligence (A.I.) found in games like Warcraft 3 or Command &amp;amp; Conquer. Friends would spend countless nights trying to beat the A.I. For everyone else, it would be the Clipper found in Microsoft Word. It had personality and would show tips.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Upon hearing about Facebook and Microsoft efforts to deploy bot platforms, a friend reacted:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;So bots are a thing now? I programmed bots 20 years ago&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
     </item>
     <item>
       <title>Cuda Cores Ranking for Machine learning</title>
       <link>https://studiozenkai.com/post/cuda/</link>
       <pubDate>Sun, 11 Oct 2015 10:35:26 -0400</pubDate>
       <guid>https://studiozenkai.com/post/cuda/</guid>
-      <description>&lt;p&gt;NVIDIA graphic cards can be used to accelerate &lt;a href=&#34;https://developer.nvidia.com/gpu-accelerated-libraries&#34;&gt;scientific computing&lt;/a&gt;, &lt;a href=&#34;https://developer.nvidia.com/cudnn&#34;&gt;neural networks&lt;/a&gt;, video games and occasionally bitcoin computing.&lt;/p&gt;&#xA;&lt;p&gt;Video editing and post-production also benefit greatly from NVIDIA cards with Adobe&amp;rsquo;s Mercury Engine or BMD&amp;rsquo;s Davinci resolve.&lt;/p&gt;&#xA;&lt;p&gt;In the case of scientific computing, performance is directly proportional to the number of cuda cores. As long as cpu speed is &amp;gt; 2GHz and you have as much RAM as you have GPU RAM, you are all good.&lt;/p&gt;</description>
+      <description>&lt;p&gt;NVIDIA graphic cards can be used to accelerate &lt;a href=&#34;https://developer.nvidia.com/gpu-accelerated-libraries&#34;&gt;scientific computing&lt;/a&gt;, &lt;a href=&#34;https://developer.nvidia.com/cudnn&#34;&gt;neural networks&lt;/a&gt;, video games and occasionally bitcoin computing.&lt;/p&gt;&#xA;&lt;p&gt;Video editing and post-production also benefit greatly from NVIDIA cards with Adobe&amp;rsquo;s Mercury Engine or BMD&amp;rsquo;s Davinci resolve.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

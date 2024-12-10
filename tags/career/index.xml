@@ -6,8 +6,15 @@
     <description>Recent content in Career on Studio Zenkai</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Sep 2024 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 12 Nov 2024 12:00:00 +0000</lastBuildDate>
     <atom:link href="https://studiozenkai.com/tags/career/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Balancing Customer Happiness, Developer Burden and Feature Delivery</title>
+      <link>https://studiozenkai.com/post/balancing-developer-happinness-and-customer-success/</link>
+      <pubDate>Tue, 12 Nov 2024 12:00:00 +0000</pubDate>
+      <guid>https://studiozenkai.com/post/balancing-developer-happinness-and-customer-success/</guid>
+      <description>&lt;p&gt;Your most valuable customer is frustrated because features are late. Meanwhile, your engineering team is drowning in overtime, and attrition is climbing. How do you keep customers happy without burning out your team?&lt;/p&gt;&#xA;&lt;p&gt;To tackle this, I designed the &lt;strong&gt;Weighted Customer Happiness&lt;/strong&gt; (WCH) and the &lt;strong&gt;Customer-Developer Delivery Index&lt;/strong&gt; (CDDI) — two metrics designed to balance customer priorities and developer well-being.&lt;/p&gt;&#xA;&lt;p&gt;Together, they help teams balance priorities and reach sustainable success.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>About Heri</title>
       <link>https://studiozenkai.com/post/about-heri/</link>
@@ -20,42 +27,42 @@
       <link>https://studiozenkai.com/post/necessary-but-not-sufficient/</link>
       <pubDate>Mon, 08 Jul 2024 12:00:00 +0000</pubDate>
       <guid>https://studiozenkai.com/post/necessary-but-not-sufficient/</guid>
-      <description>&lt;p&gt;The progression of software engineers is like this:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;em&gt;Junior&lt;/em&gt; You have theoritical knowledge of software but most of it is obscure for you. The focus here is on learning a framework, learning how development processes work, and delivering code that works. You are not yet able to fully develop applications but can handle minor tasks.&lt;/li&gt;&#xA;&lt;li&gt;&lt;em&gt;Senior&lt;/em&gt; You have launched a few applications and can autonomously complete 95% of tasks. You are not battle-tested ready yet, but can resolve most urgent issues. You are also able to onboard junior developers.&lt;/li&gt;&#xA;&lt;li&gt;&lt;em&gt;Staff / Lead Engineer&lt;/em&gt; Like a compass, you are able to set a direction for the engineering team and navigate complex challenges, often involving product teams and other departments. You can tell horror stories &amp;ndash; about the time the prod database was lost, or when the team had to spent shipping a hotfix on Friday 7pm for a rare but critical issue.&lt;/li&gt;&#xA;&lt;li&gt;&lt;em&gt;Executive position&lt;/em&gt; You contribute to achieving key business milestones for the company. Most of your time is spent meeting, hiring, managing i.e maximizing producitvity. And then there&amp;rsquo;s the odd monthly code contribution.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;For Juniors and Seniors, the key to success is technical expertise. Common work issues is resolved by whoever has the fastest or most secure implementation. Numbers and hard facts dominate decision-making. This is where you understand tech expertise is necessary.&lt;/p&gt;</description>
+      <description>&lt;p&gt;The progression of software engineers is like this:&lt;/p&gt;</description>
     </item>
     <item>
       <title>AI will (probably) take your job (eventually)</title>
       <link>https://studiozenkai.com/post/ai-will-take-your-job-eventually/</link>
       <pubDate>Fri, 07 Jun 2024 10:35:26 -0400</pubDate>
       <guid>https://studiozenkai.com/post/ai-will-take-your-job-eventually/</guid>
-      <description>&lt;p&gt;I am a fan of AI and &lt;a href=&#34;https://studiozenkai.com/post/autonomous-rc-car/&#34;&gt;machine learning&lt;/a&gt;, well &lt;a href=&#34;https://studiozenkai.com/post/cuda/&#34;&gt;before&lt;/a&gt; it was trending on CNBC or spamming your Facebook feed.&lt;/p&gt;&#xA;&lt;p&gt;The exponential progress in the past few years means everyone can find cues to complex questions in a few seconds, where you would previously need to ask experts or pay a professional to do it for you.&lt;/p&gt;&#xA;&lt;p&gt;Note that I wrote &amp;ldquo;cues&amp;rdquo; above, not &amp;ldquo;answers&amp;rdquo;. In its current state, the best of AI bots will NOT give you an answer that fully fits your case. You need judgement to assess if it makes sense, and also have a process or methodology on how to have a satisfying and precise answer through follow-up questions.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I am a fan of AI and &lt;a href=&#34;https://studiozenkai.com/post/autonomous-rc-car/&#34;&gt;machine learning&lt;/a&gt;, well &lt;a href=&#34;https://studiozenkai.com/post/cuda/&#34;&gt;before&lt;/a&gt; it was trending on CNBC or spamming your Facebook feed.&lt;/p&gt;&#xA;&lt;p&gt;The exponential progress in the past few years means everyone can find cues to complex questions in a few seconds, where you would previously need to ask experts or pay a professional to do it for you.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Embrace vs Reject</title>
       <link>https://studiozenkai.com/post/embrace-vs-reject/</link>
       <pubDate>Sat, 02 Sep 2023 12:00:00 +0000</pubDate>
       <guid>https://studiozenkai.com/post/embrace-vs-reject/</guid>
-      <description>&lt;p&gt;When living in society, we constantly have to make choices: accept a job, buy a house, buy a car and so on.&lt;/p&gt;&#xA;&lt;p&gt;There are many ways to make those choices, from personal preferences, constraints, opportunity vs cost and many others. To me, there is another way to decide: how you embrace society or how you reject it.&lt;/p&gt;&#xA;&lt;p&gt;I live in North America, well known for its vast spaces, individualism, personal &amp;amp; economic freedom, opposition to strong governments, consumerism, and so on. Here, there is a belief that one can do whatever they want to succeed, as long as they do not hurt others. Entrepreneurs who work hard and take risks are celebrated. If you are not happy with your job, you quit and find a better one. Contrary to Europe, the government does not provide a safety net, is less involved in healthcare, and overall regulates less the market.&lt;/p&gt;</description>
+      <description>&lt;p&gt;When living in society, we constantly have to make choices: accept a job, buy a house, buy a car and so on.&lt;/p&gt;&#xA;&lt;p&gt;There are many ways to make those choices, from personal preferences, constraints, opportunity vs cost and many others. To me, there is another way to decide: how you embrace society or how you reject it.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How I Remote Work</title>
       <link>https://studiozenkai.com/post/remote-work/</link>
       <pubDate>Thu, 10 Jun 2021 06:00:00 -0400</pubDate>
       <guid>https://studiozenkai.com/post/remote-work/</guid>
-      <description>&lt;p&gt;In Canada, as well as many countries, Covid-19 infections is exponentially decreasing.&lt;/p&gt;&#xA;&lt;p&gt;We are on the verge of getting our old life back, from going to restaurants or to the cinemas, and why not have a celebratory drink with friends.&lt;/p&gt;&#xA;&lt;p&gt;Before moving on, I would like to share how I remote work, one of the main traits of the Covid-19 pandemic. I hope this helps other remote workers, and encourage developers and companies to adopt it on a permanent basis.&lt;/p&gt;</description>
+      <description>&lt;p&gt;In Canada, as well as many countries, Covid-19 infections is exponentially decreasing.&lt;/p&gt;&#xA;&lt;p&gt;We are on the verge of getting our old life back, from going to restaurants or to the cinemas, and why not have a celebratory drink with friends.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Why bots are a thing now</title>
       <link>https://studiozenkai.com/post/bots/</link>
       <pubDate>Mon, 18 Apr 2016 10:35:26 -0400</pubDate>
       <guid>https://studiozenkai.com/post/bots/</guid>
-      <description>&lt;p&gt;Upon hearing about Facebook and Microsoft efforts to deploy bot platforms, a friend reacted:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;So bots are a thing now? I programmed bots 20 years ago&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;He is a successful technology entrepreneur and has developed systems on many platforms. I can understand him. There were tutorials in kids&amp;rsquo; magazines on writing a &amp;ldquo;Hello World&amp;rdquo; bot on MS-DOS 20 years ago. More impressive were the Artificial Intelligence (A.I.) found in games like Warcraft 3 or Command &amp;amp; Conquer. Friends would spend countless nights trying to beat the A.I. For everyone else, it would be the Clipper found in Microsoft Word. It had personality and would show tips.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Upon hearing about Facebook and Microsoft efforts to deploy bot platforms, a friend reacted:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;So bots are a thing now? I programmed bots 20 years ago&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
     </item>
     <item>
       <title>Becoming a self-taught programmer</title>
       <link>https://studiozenkai.com/post/programming/</link>
       <pubDate>Sun, 17 Apr 2016 12:55:51 -0400</pubDate>
       <guid>https://studiozenkai.com/post/programming/</guid>
-      <description>&lt;p&gt;In six months I have shipped many apps, as an entrepreneur or as a freelancer. I have also contributed to open source projects and advised other projects. Yet I’m educated as an electrical engineer, not as a software engineer and consider myself largely self-taught in the area of programming.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Jeff Atwood : Geeks went from being social outsiders, outcasts, and rejects to.. part of the 1% power structure, with all that implies. Hard to adapt.&lt;/p&gt;</description>
+      <description>&lt;p&gt;In six months I have shipped many apps, as an entrepreneur or as a freelancer. I have also contributed to open source projects and advised other projects. Yet I’m educated as an electrical engineer, not as a software engineer and consider myself largely self-taught in the area of programming.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

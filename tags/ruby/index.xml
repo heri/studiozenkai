@@ -13,14 +13,14 @@
       <link>https://studiozenkai.com/post/levenshtein-rust/</link>
       <pubDate>Mon, 04 Mar 2024 06:00:00 -0400</pubDate>
       <guid>https://studiozenkai.com/post/levenshtein-rust/</guid>
-      <description>&lt;p&gt;Given &lt;a href=&#34;https://github.com/heri&#34;&gt;my Github profile&lt;/a&gt; and &lt;a href=&#34;https://studiozenkai.com/post/&#34;&gt;published articles&lt;/a&gt;, it is clear my favorite programming language is Ruby, an elegant and concise language that brings results, fast.&lt;/p&gt;&#xA;&lt;p&gt;Raw performance is not Ruby&amp;rsquo;s strengths. It is easy to add loops and O(n²) issues, memory leaks are not rare, so CPU and RAM are quickly hogged.&lt;/p&gt;&#xA;&lt;p&gt;It is important in your team to raise the bar and make everyone understand the team has a limited budget. Inspect every line carefully, ask why new variables are introduced, and if something simpler is possible. The saying is a cliché but worth here : With great power comes great responsability.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Given &lt;a href=&#34;https://github.com/heri&#34;&gt;my Github profile&lt;/a&gt; and &lt;a href=&#34;https://studiozenkai.com/post/&#34;&gt;published articles&lt;/a&gt;, it is clear my favorite programming language is Ruby, an elegant and concise language that brings results, fast.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Typescript for Ruby developers</title>
       <link>https://studiozenkai.com/post/typescript-for-ruby-developers/</link>
       <pubDate>Tue, 02 Jan 2024 12:00:00 +0000</pubDate>
       <guid>https://studiozenkai.com/post/typescript-for-ruby-developers/</guid>
-      <description>&lt;p&gt;Ruby is poetry. In comparison, Typescript feels like a technical manual. As a Ruby developer, you may look at Typescript and think, &lt;em&gt;Why trade elegance for rules?&lt;/em&gt; That&amp;rsquo;s a fair question. But here&amp;rsquo;s the thing: Those rules can save your skin when you need something big, fast and complex.&lt;/p&gt;&#xA;&lt;p&gt;Typescript won&amp;rsquo;t replace Ruby. Instead, it&amp;rsquo;s like learning a second language &amp;ndash; it opens you new doors and makes you also appreciate your first language.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Ruby is poetry. In comparison, Typescript feels like a technical manual. As a Ruby developer, you may look at Typescript and think, &lt;em&gt;Why trade elegance for rules?&lt;/em&gt; That&amp;rsquo;s a fair question. But here&amp;rsquo;s the thing: Those rules can save your skin when you need something big, fast and complex.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Little Math Routines</title>
@@ -34,7 +34,7 @@
       <link>https://studiozenkai.com/post/ruby-playbook/</link>
       <pubDate>Tue, 01 Feb 2022 12:00:00 +0000</pubDate>
       <guid>https://studiozenkai.com/post/ruby-playbook/</guid>
-      <description>&lt;p&gt;I was introduced to the idea of playbook, which is basically a recipe to win a case. It can be in a team sports situation, such as how to score in American football in a given situation. It can be used by a salesperson, such as how to win a commercial contract.&lt;/p&gt;&#xA;&lt;p&gt;I imagined what would be my Ruby Engineering playbook:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Focus on hard projects that move the needle in the long-term, or alternatively easy wins (less than a day to implement+deploy)&lt;/li&gt;&#xA;&lt;li&gt;Do not reinvent the wheel. Research different approaches before trying to come up with your design. Reuse when possible&lt;/li&gt;&#xA;&lt;li&gt;When faced with a big block, divide, then conquer or delegate or delay. Divide means tackling the blocker in manageable chunks. The second means that I should either solve it myself, have another service solve it, or delay processing.&lt;/li&gt;&#xA;&lt;li&gt;When implementing, remove as much as possible. Introduce only what&amp;rsquo;s needed to make it work, as if keystrokes were a limited resource, and copy/paste did not exist. Succinctness is underrated !&lt;/li&gt;&#xA;&lt;li&gt;Faced with loops, arrays or iterations, have a log(n) or faster implementation, as if you had a CPU from last century&lt;/li&gt;&#xA;&lt;li&gt;You should be able to explain your design or algorithm orally to another person, without them able to see any code&lt;/li&gt;&#xA;&lt;li&gt;Do not create side-effects in other people&amp;rsquo;s work. Assume future maintainers won&amp;rsquo;t be smart so make your implementation idiot-proof&lt;/li&gt;&#xA;&lt;li&gt;Before committing, ask if it is the best you can commit&lt;/li&gt;&#xA;&lt;li&gt;Increase test cooverage&lt;/li&gt;&#xA;&lt;li&gt;Always run linting / test suite before commit&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Note : this is a WIP&lt;/p&gt;</description>
+      <description>&lt;p&gt;I was introduced to the idea of playbook, which is basically a recipe to win a case. It can be in a team sports situation, such as how to score in American football in a given situation. It can be used by a salesperson, such as how to win a commercial contract.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Docker Desktop command line alternative</title>
@@ -48,7 +48,7 @@
       <link>https://studiozenkai.com/post/remote-work/</link>
       <pubDate>Thu, 10 Jun 2021 06:00:00 -0400</pubDate>
       <guid>https://studiozenkai.com/post/remote-work/</guid>
-      <description>&lt;p&gt;In Canada, as well as many countries, Covid-19 infections is exponentially decreasing.&lt;/p&gt;&#xA;&lt;p&gt;We are on the verge of getting our old life back, from going to restaurants or to the cinemas, and why not have a celebratory drink with friends.&lt;/p&gt;&#xA;&lt;p&gt;Before moving on, I would like to share how I remote work, one of the main traits of the Covid-19 pandemic. I hope this helps other remote workers, and encourage developers and companies to adopt it on a permanent basis.&lt;/p&gt;</description>
+      <description>&lt;p&gt;In Canada, as well as many countries, Covid-19 infections is exponentially decreasing.&lt;/p&gt;&#xA;&lt;p&gt;We are on the verge of getting our old life back, from going to restaurants or to the cinemas, and why not have a celebratory drink with friends.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Troubleshooting a web application</title>
@@ -69,14 +69,14 @@
       <link>https://studiozenkai.com/post/ruby-performance-checklist/</link>
       <pubDate>Mon, 08 May 2017 10:35:26 -0400</pubDate>
       <guid>https://studiozenkai.com/post/ruby-performance-checklist/</guid>
-      <description>&lt;p&gt;I shipped many applications, using a variety of frameworks, through &lt;a href=&#34;http://studiozenkai.com/challenge/&#34;&gt;my current 1 year challenge&lt;/a&gt; or startups. Ruby issues include low performance, such as servers needing more RAM, not able to sustain large traffic, or slow rendering. Since this is a recurring issue, here is a checklist to help developers get their Ruby app faster:&lt;/p&gt;&#xA;&lt;h2 id=&#34;code-complexity&#34;&gt;Code complexity&lt;/h2&gt;&#xA;&lt;p&gt;Ruby&amp;rsquo;s simplicity and ease of use allows beginners and experienced developers alike to ship features in record time. Good for business, otherwise bad for code quality. For instance, many :&lt;/p&gt;</description>
+      <description>&lt;p&gt;I shipped many applications, using a variety of frameworks, through &lt;a href=&#34;http://studiozenkai.com/challenge/&#34;&gt;my current 1 year challenge&lt;/a&gt; or startups. Ruby issues include low performance, such as servers needing more RAM, not able to sustain large traffic, or slow rendering. Since this is a recurring issue, here is a checklist to help developers get their Ruby app faster:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Playbook</title>
       <link>https://studiozenkai.com/post/playbook/</link>
       <pubDate>Fri, 15 Jan 2016 12:22:27 -0400</pubDate>
       <guid>https://studiozenkai.com/post/playbook/</guid>
-      <description>&lt;p&gt;Bonjour!&lt;/p&gt;&#xA;&lt;p&gt;Nous offrons &lt;em&gt;une expertise technique pour un résultat de qualité&lt;/em&gt; dans le développement de plateformes transactionnelles, de financement, de médias:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Étude et conception fonctionnelle et technique&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Développement de solutions front, middle ou back-office&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Développement d&amp;rsquo;applications iOS ou Android&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Conduite de projet sur les technologies Ruby, Javascript, Lua, et plateformes mobiles; utilisation de base de données MySQL, Postgresql, ou redis, mongodb, ElasticSearch, Solr&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Audit de code, de qualité et de performance des applications&lt;/p&gt;</description>
+      <description>&lt;p&gt;Bonjour!&lt;/p&gt;&#xA;&lt;p&gt;Nous offrons &lt;em&gt;une expertise technique pour un résultat de qualité&lt;/em&gt; dans le développement de plateformes transactionnelles, de financement, de médias:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

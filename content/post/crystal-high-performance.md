@@ -1,35 +1,99 @@
 +++
 date = "2024-05-06T10:35:26-04:00"
-title = "Crystal and Kemal: Blazing Performance for Rails Developers"
+title = "Kemal: Performance for Rails Developers"
 tags = ['software', 'performance', 'ruby']
 +++
 
-Ruby is charming. It’s elegant, expressive, and gets the job done—most of the time. But throw in high traffic, and suddenly your graceful app feels like a clunky mule dragging a cart uphill. Enter Crystal and Kemal: a duo that resembles Ruby’s syntax but sprints like C. It’s a setup that promises speed, simplicity, and a dash of thrill.
+Ruby is elegant, expressive, and gets the job done—most of the time. But for high traffic, your monolith feels like a mule dragging a cart uphill. Enter Crystal and the micro framework Kemal: a duo similar to Ruby’s syntax but has C-like performance. It’s a choice that promises speed, simplicity, and a dash of thrill.
 
-## Ruby's faster twin
+## Crystal - Ruby, but compiled
 
-Crystal doesn’t just borrow Ruby’s look; it improves on it. Think of Crystal as Ruby after a hardcode gym membership and a strict diet. Here’s why:
+[Crystal](https://crystal-lang.org) borrows from Ruby syntax, and sometimes even improves on it. Its biggest difference is that any code needs to be compiled.  Think of Crystal as Ruby after a mean bootcamp and a strict diet. Here’s why:
 
 - **Ruby-like Syntax**: If you love Ruby, you'll feel right at home with Crystal.
 - **Static Typing**: Mistakes? Caught at compile time.
 - **Compiled Language**: Being compiled means Crystal moves fast—like a rocket.
 - **Concurrency**: Spinning up fibers to handle multiple tasks is not just possible; it’s easy.
 
+Let's consider a simple example where we calculate the Fibonacci sequence. In Ruby:
+```ruby
+  def fibonacci(n)
+    return n if n <= 1
+    fibonacci(n - 1) + fibonacci(n - 2)
+  end
+  
+  start_time = Time.now
+  puts fibonacci(40)
+  end_time = Time.now
+  puts "Time taken: #{end_time - start_time} seconds"
+```
+
+The Fibonacci algorithm is a CPU bound task and interpreted languages like Ruby are penalized for such tasks. In Crystal:
+
+```crystal
+  def fibonacci(n : Int32) : Int32
+    return n if n <= 1
+    fibonacci(n - 1) + fibonacci(n - 2)
+  end
+  
+  start_time = Time.local
+  puts fibonacci(40)
+  end_time = Time.local
+  puts "Time taken: #{end_time - start_time} seconds"
+```
+
+As you can see, the Ruby and Crystal syntax are similar, with minor differences such as compulsory type annotations (`n: Int32` and `: Int32` for return type).
+
+To run ruby
+```sh
+  studiozenkai heri > ruby fibonacci.rb
+  102334155
+  Time taken: 13.695118 seconds
+```
+
+To run the Crystal equivalent:
+
+```sh
+  studiozenkai heri > crystal build fibonacci.cr --release
+```
+
+If you had type or algoritmic issues here, then your mistakes will be caught here. For example, if you had the reflex to use `Time.now`, then the compiler would ouput
+
+```sh
+Showing last frame. Use --error-trace for full trace.
+
+In fibonacci.cr:6:21
+
+ 6 | start_time = Time.now
+                       ^--
+Error: undefined method 'now' for Time.class
+```
+
+Let's run the crystal binary
+
+```sh
+  studiozenkai heri > ./fibonacci
+  102334155
+  Time taken: 00:00:00.715647000 seconds
+```
+
+In this simple example, crystal is ~19 times faster! For larger datasets, the performance gap will increase.
+
 ## What is Kemal?
 
-Kemal is a lightning-fast web framework for Crystal, inspired by Sinatra. It is designed to be simple and minimalistic, with even better performance
+[Kemal](https://kemalcr.com) is a micro web framework for Crystal, inspired by Sinatra. It is designed to be simple and minimalistic
 
-- **Performance**: Kemal is designed for pure performance.
+- **Performance**: Like Crystal, Kemal is designed for lightning fast performance.
 - **Minimalism**:  No fluff, just essentials. 
 - **Familiarity**: If you've used Sinatra or other similar frameworks, you'll find Kemal's API very familiar.
 
 ## Profiling
 
-I have used Crystal to optimize bottlenecks in a complex system. For these, the specifications were stable and the inputs/outputs well known. However, the Rails endpoint slowed down our overall numbers. We decide to move one bottleneck to a crystal/kemal microservice.
+I have used Crystal to optimize bottlenecks in a complex system. For these, the specifications were stable and the inputs/outputs well known. However, the Rails endpoint slowed down our overall numbers. We decide to move one bottleneck to a Lemal microservice.
 
 I have [open sourced a crystal app on Github](https://github.com/heri/crystal_pure_api) which is almost identical to our implementation, except tests, endpoints and fields queried.
 
-To make the case, we used Crystal's built-in tools for profiling your code. Here's how you can profile a Kemal application:
+To make the case, we profile the endpoint with our existing database and typical inputs. Even if you do not have the same data, you can preview here how profile a Kemal application:
 
 1. **Install Crystal and Benchmarking tools**: Follow the [installation guide](https://crystal-lang.org/install/) to set up Crystal on your machine. On Mac, the easiest is:
    ```sh
@@ -38,14 +102,14 @@ To make the case, we used Crystal's built-in tools for profiling your code. Here
    brew install wrk
    ```
 
-2. **Setup the app**:
+2. **Setup**:
    ```sh
    git clone git@github.com:heri/crystal_pure_api.git
    cd crystal_pure_api
    shards install
    ```
 
-4. **Setup the db**
+4. **Create a table**
    ```sh
    psql -U postgres
    CREATE DATABASE profiling;

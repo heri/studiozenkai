@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Studio Zenkai</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 Oct 2024 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 12 Nov 2024 12:00:00 +0000</lastBuildDate>
     <atom:link href="https://studiozenkai.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Balancing Customer Happiness, Developer Burden and Feature Delivery</title>
+      <link>https://studiozenkai.com/post/balancing-developer-happinness-and-customer-success/</link>
+      <pubDate>Tue, 12 Nov 2024 12:00:00 +0000</pubDate>
+      <guid>https://studiozenkai.com/post/balancing-developer-happinness-and-customer-success/</guid>
+      <description>&lt;p&gt;Your most valuable customer is frustrated because features are late. Meanwhile, your engineering team is drowning in overtime, and attrition is climbing. How do you keep customers happy without burning out your team?&lt;/p&gt;&#xA;&lt;p&gt;To tackle this, I designed the &lt;strong&gt;Weighted Customer Happiness&lt;/strong&gt; (WCH) and the &lt;strong&gt;Customer-Developer Delivery Index&lt;/strong&gt; (CDDI) — two metrics designed to balance customer priorities and developer well-being.&lt;/p&gt;&#xA;&lt;p&gt;Together, they help teams balance priorities and reach sustainable success.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Airbnb Hosting: The Good, The Bad and The Profitable</title>
       <link>https://studiozenkai.com/post/airbnb-the-good-the-bad-the-profitable/</link>
@@ -44,18 +51,18 @@
       <description>&lt;p&gt;I am a fan of AI and &lt;a href=&#34;https://studiozenkai.com/post/autonomous-rc-car/&#34;&gt;machine learning&lt;/a&gt;, well &lt;a href=&#34;https://studiozenkai.com/post/cuda/&#34;&gt;before&lt;/a&gt; it was trending on CNBC or spamming your Facebook feed.&lt;/p&gt;&#xA;&lt;p&gt;The exponential progress in the past few years means everyone can find cues to complex questions in a few seconds, where you would previously need to ask experts or pay a professional to do it for you.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Crystal and Kemal: Blazing Performance for Rails Developers</title>
+      <title>Kemal: Performance for Rails Developers</title>
       <link>https://studiozenkai.com/post/crystal-high-performance/</link>
       <pubDate>Mon, 06 May 2024 10:35:26 -0400</pubDate>
       <guid>https://studiozenkai.com/post/crystal-high-performance/</guid>
-      <description>&lt;p&gt;Ruby is charming. It’s elegant, expressive, and gets the job done—most of the time. But throw in high traffic, and suddenly your graceful app feels like a clunky mule dragging a cart uphill. Enter Crystal and Kemal: a duo that resembles Ruby’s syntax but sprints like C. It’s a setup that promises speed, simplicity, and a dash of thrill.&lt;/p&gt;&#xA;&lt;h2 id=&#34;rubys-faster-twin&#34;&gt;Ruby&amp;rsquo;s faster twin&lt;/h2&gt;&#xA;&lt;p&gt;Crystal doesn’t just borrow Ruby’s look; it improves on it. Think of Crystal as Ruby after a hardcode gym membership and a strict diet. Here’s why:&lt;/p&gt;</description>
+      <description>&lt;p&gt;Ruby is elegant, expressive, and gets the job done—most of the time. But for high traffic, your monolith feels like a mule dragging a cart uphill. Enter Crystal and the micro framework Kemal: a duo similar to Ruby’s syntax but has C-like performance. It’s a choice that promises speed, simplicity, and a dash of thrill.&lt;/p&gt;&#xA;&lt;h2 id=&#34;crystal---ruby-but-compiled&#34;&gt;Crystal - Ruby, but compiled&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://crystal-lang.org&#34;&gt;Crystal&lt;/a&gt; borrows from Ruby syntax, and sometimes even improves on it. Its biggest difference is that any code needs to be compiled.  Think of Crystal as Ruby after a mean bootcamp and a strict diet. Here’s why:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Decathlon, the people&#39;s gear</title>
       <link>https://studiozenkai.com/post/decathlon-the-people-gear/</link>
       <pubDate>Fri, 05 Apr 2024 12:00:00 +0000</pubDate>
       <guid>https://studiozenkai.com/post/decathlon-the-people-gear/</guid>
-      <description>&lt;p&gt;There is a sports store called Decathlon. My kids call it &amp;ldquo;the blue store&amp;rdquo;. Maybe you&amp;rsquo;ve heard of it. If you have a family or even just a pair of feet, you should go there. It is not for gold medalists. Or for Everest climbers. But it&amp;rsquo;s for the rest of us &amp;ndash; the folks who want to move, to play and try something new without emptying the bank.&lt;/p&gt;&#xA;&lt;p&gt;Decathlon makes &amp;ldquo;good enough&amp;rdquo; sports gear. The kind you grab when you are not trying to hit records, or just break a sweat. What they offer is designed and tested in house. Proven materials, solid construction with minimal waste, built to withstand rowdy kids. Personally, I&amp;rsquo;ve never seen a Decathlon product survive multiple accidents. Can&amp;rsquo;t say the same for shinier brands that cost multiple more.&lt;/p&gt;</description>
+      <description>&lt;p&gt;There is a sports store called Decathlon. My kids call it &amp;ldquo;the blue store&amp;rdquo;. Maybe you&amp;rsquo;ve heard of it. If you have a family or even just a pair of feet, you should go there. It is not for gold medalists. Or for Everest climbers. But it&amp;rsquo;s for the rest of us &amp;ndash; the folks who want to move, to play and try something new without emptying the bank.&lt;/p&gt;&#xA;&lt;p&gt;Decathlon makes &amp;ldquo;good enough&amp;rdquo; sports gear. The kind you grab when you are not trying to hit records, or just break a sweat. What they offer is designed and tested in house. Proven materials, solid construction with minimal waste, built to withstand rowdy kids. Personally, I&amp;rsquo;ve seen Decathlon products survive multiple accidents. Can&amp;rsquo;t say the same for shinier brands that cost multiple more.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Levenshtein Rust gem</title>

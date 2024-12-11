@@ -5,11 +5,11 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <title> Crystal and Kemal: Blazing Performance for Rails Developers &middot; Software, photography, and sustainability articles by Heri </title>
+    <title> Kemal: Performance for Rails Developers &middot; Software, photography, and sustainability articles by Heri </title>
     
-      <meta name="description" content="Ruby is charming. It’s elegant, expressive, and gets the job done—most of the time. But throw in high traffic, and suddenly your graceful app feels like a clunky mule dragging a cart uphill. Enter Crystal and Kemal: a duo that resembles Ruby’s syntax but sprints like C. It’s a setup that promises speed, simplicity, and a dash of thrill.
-Ruby&rsquo;s faster twin
-Crystal doesn’t just borrow Ruby’s look; it improves on it. Think of Crystal as Ruby after a hardcode gym membership and a strict diet. Here’s why:">
+      <meta name="description" content="Ruby is elegant, expressive, and gets the job done—most of the time. But for high traffic, your monolith feels like a mule dragging a cart uphill. Enter Crystal and the micro framework Kemal: a duo similar to Ruby’s syntax but has C-like performance. It’s a choice that promises speed, simplicity, and a dash of thrill.
+Crystal - Ruby, but compiled
+Crystal borrows from Ruby syntax, and sometimes even improves on it. Its biggest difference is that any code needs to be compiled.  Think of Crystal as Ruby after a mean bootcamp and a strict diet. Here’s why:">
     
     
     <link rel="stylesheet" type="text/css" href="https://studiozenkai.com/css/uno.css" />
@@ -160,28 +160,68 @@ Crystal doesn’t just borrow Ruby’s look; it improves on it. Think of Crystal
   <div class="content-wrapper">
     <div class="content-wrapper__inner">
       <div class="post">
-        <h1>Crystal and Kemal: Blazing Performance for Rails Developers</h1>
+        <h1>Kemal: Performance for Rails Developers</h1>
         <span class="post-date">Mon, May 6, 2024</span>
-        <p>Ruby is charming. It’s elegant, expressive, and gets the job done—most of the time. But throw in high traffic, and suddenly your graceful app feels like a clunky mule dragging a cart uphill. Enter Crystal and Kemal: a duo that resembles Ruby’s syntax but sprints like C. It’s a setup that promises speed, simplicity, and a dash of thrill.</p>
-<h2 id="rubys-faster-twin">Ruby&rsquo;s faster twin</h2>
-<p>Crystal doesn’t just borrow Ruby’s look; it improves on it. Think of Crystal as Ruby after a hardcode gym membership and a strict diet. Here’s why:</p>
+        <p>Ruby is elegant, expressive, and gets the job done—most of the time. But for high traffic, your monolith feels like a mule dragging a cart uphill. Enter Crystal and the micro framework Kemal: a duo similar to Ruby’s syntax but has C-like performance. It’s a choice that promises speed, simplicity, and a dash of thrill.</p>
+<h2 id="crystal---ruby-but-compiled">Crystal - Ruby, but compiled</h2>
+<p><a href="https://crystal-lang.org">Crystal</a> borrows from Ruby syntax, and sometimes even improves on it. Its biggest difference is that any code needs to be compiled.  Think of Crystal as Ruby after a mean bootcamp and a strict diet. Here’s why:</p>
 <ul>
 <li><strong>Ruby-like Syntax</strong>: If you love Ruby, you&rsquo;ll feel right at home with Crystal.</li>
 <li><strong>Static Typing</strong>: Mistakes? Caught at compile time.</li>
 <li><strong>Compiled Language</strong>: Being compiled means Crystal moves fast—like a rocket.</li>
 <li><strong>Concurrency</strong>: Spinning up fibers to handle multiple tasks is not just possible; it’s easy.</li>
 </ul>
+<p>Let&rsquo;s consider a simple example where we calculate the Fibonacci sequence. In Ruby:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">fibonacci</span>(n)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> n <span style="color:#66d9ef">if</span> n <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    fibonacci(n <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">+</span> fibonacci(n <span style="color:#f92672">-</span> <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  start_time <span style="color:#f92672">=</span> <span style="color:#66d9ef">Time</span><span style="color:#f92672">.</span>now
+</span></span><span style="display:flex;"><span>  puts fibonacci(<span style="color:#ae81ff">40</span>)
+</span></span><span style="display:flex;"><span>  end_time <span style="color:#f92672">=</span> <span style="color:#66d9ef">Time</span><span style="color:#f92672">.</span>now
+</span></span><span style="display:flex;"><span>  puts <span style="color:#e6db74">&#34;Time taken: </span><span style="color:#e6db74">#{</span>end_time <span style="color:#f92672">-</span> start_time<span style="color:#e6db74">}</span><span style="color:#e6db74"> seconds&#34;</span>
+</span></span></code></pre></div><p>The Fibonacci algorithm is a CPU bound task and interpreted languages like Ruby are penalized for such tasks. In Crystal:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-crystal" data-lang="crystal"><span style="display:flex;"><span>  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">fibonacci</span>(n : Int32) : Int32
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> n <span style="color:#66d9ef">if</span> n <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    fibonacci(n <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">+</span> fibonacci(n <span style="color:#f92672">-</span> <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  start_time <span style="color:#f92672">=</span> Time<span style="color:#f92672">.</span>local
+</span></span><span style="display:flex;"><span>  puts fibonacci(<span style="color:#ae81ff">40</span>)
+</span></span><span style="display:flex;"><span>  end_time <span style="color:#f92672">=</span> Time<span style="color:#f92672">.</span>local
+</span></span><span style="display:flex;"><span>  puts <span style="color:#e6db74">&#34;Time taken: </span><span style="color:#e6db74">#{</span>end_time <span style="color:#f92672">-</span> start_time<span style="color:#e6db74">}</span><span style="color:#e6db74"> seconds&#34;</span>
+</span></span></code></pre></div><p>As you can see, the Ruby and Crystal syntax are similar, with minor differences such as compulsory type annotations (<code>n: Int32</code> and <code>: Int32</code> for return type).</p>
+<p>To run ruby</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>  studiozenkai heri &gt; ruby fibonacci.rb
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">102334155</span>
+</span></span><span style="display:flex;"><span>  Time taken: 13.695118 seconds
+</span></span></code></pre></div><p>To run the Crystal equivalent:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>  studiozenkai heri &gt; crystal build fibonacci.cr --release
+</span></span></code></pre></div><p>If you had type or algoritmic issues here, then your mistakes will be caught here. For example, if you had the reflex to use <code>Time.now</code>, then the compiler would ouput</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>Showing last frame. Use --error-trace <span style="color:#66d9ef">for</span> full trace.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>In fibonacci.cr:6:21
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">6</span> | start_time <span style="color:#f92672">=</span> Time.now
+</span></span><span style="display:flex;"><span>                       ^--
+</span></span><span style="display:flex;"><span>Error: undefined method <span style="color:#e6db74">&#39;now&#39;</span> <span style="color:#66d9ef">for</span> Time.class
+</span></span></code></pre></div><p>Let&rsquo;s run the crystal binary</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>  studiozenkai heri &gt; ./fibonacci
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">102334155</span>
+</span></span><span style="display:flex;"><span>  Time taken: 00:00:00.715647000 seconds
+</span></span></code></pre></div><p>In this simple example, crystal is ~19 times faster! For larger datasets, the performance gap will increase.</p>
 <h2 id="what-is-kemal">What is Kemal?</h2>
-<p>Kemal is a lightning-fast web framework for Crystal, inspired by Sinatra. It is designed to be simple and minimalistic, with even better performance</p>
+<p><a href="https://kemalcr.com">Kemal</a> is a micro web framework for Crystal, inspired by Sinatra. It is designed to be simple and minimalistic</p>
 <ul>
-<li><strong>Performance</strong>: Kemal is designed for pure performance.</li>
+<li><strong>Performance</strong>: Like Crystal, Kemal is designed for lightning fast performance.</li>
 <li><strong>Minimalism</strong>:  No fluff, just essentials.</li>
 <li><strong>Familiarity</strong>: If you&rsquo;ve used Sinatra or other similar frameworks, you&rsquo;ll find Kemal&rsquo;s API very familiar.</li>
 </ul>
 <h2 id="profiling">Profiling</h2>
-<p>I have used Crystal to optimize bottlenecks in a complex system. For these, the specifications were stable and the inputs/outputs well known. However, the Rails endpoint slowed down our overall numbers. We decide to move one bottleneck to a crystal/kemal microservice.</p>
+<p>I have used Crystal to optimize bottlenecks in a complex system. For these, the specifications were stable and the inputs/outputs well known. However, the Rails endpoint slowed down our overall numbers. We decide to move one bottleneck to a Lemal microservice.</p>
 <p>I have <a href="https://github.com/heri/crystal_pure_api">open sourced a crystal app on Github</a> which is almost identical to our implementation, except tests, endpoints and fields queried.</p>
-<p>To make the case, we used Crystal&rsquo;s built-in tools for profiling your code. Here&rsquo;s how you can profile a Kemal application:</p>
+<p>To make the case, we profile the endpoint with our existing database and typical inputs. Even if you do not have the same data, you can preview here how profile a Kemal application:</p>
 <ol>
 <li>
 <p><strong>Install Crystal and Benchmarking tools</strong>: Follow the <a href="https://crystal-lang.org/install/">installation guide</a> to set up Crystal on your machine. On Mac, the easiest is:</p>
@@ -190,13 +230,13 @@ Crystal doesn’t just borrow Ruby’s look; it improves on it. Think of Crystal
 </span></span><span style="display:flex;"><span>brew install wrk
 </span></span></code></pre></div></li>
 <li>
-<p><strong>Setup the app</strong>:</p>
+<p><strong>Setup</strong>:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git clone git@github.com:heri/crystal_pure_api.git
 </span></span><span style="display:flex;"><span>cd crystal_pure_api
 </span></span><span style="display:flex;"><span>shards install
 </span></span></code></pre></div></li>
 <li>
-<p><strong>Setup the db</strong></p>
+<p><strong>Create a table</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>psql -U postgres
 </span></span><span style="display:flex;"><span>CREATE DATABASE profiling;
 </span></span><span style="display:flex;"><span><span style="color:#ae81ff">\c</span> profiling

@@ -23,6 +23,13 @@
       <description>&lt;p&gt;The progression of software engineers is like this:&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Crystal and Kemal: Blazing Performance for Rails Developers</title>
+      <link>https://studiozenkai.com/post/crystal-high-performance/</link>
+      <pubDate>Mon, 06 May 2024 10:35:26 -0400</pubDate>
+      <guid>https://studiozenkai.com/post/crystal-high-performance/</guid>
+      <description>&lt;p&gt;Ruby is charming. It’s elegant, expressive, and gets the job done—most of the time. But throw in high traffic, and suddenly your graceful app feels like a clunky mule dragging a cart uphill. Enter Crystal and Kemal: a duo that resembles Ruby’s syntax but sprints like C. It’s a setup that promises speed, simplicity, and a dash of thrill.&lt;/p&gt;&#xA;&lt;h2 id=&#34;rubys-faster-twin&#34;&gt;Ruby&amp;rsquo;s faster twin&lt;/h2&gt;&#xA;&lt;p&gt;Crystal doesn’t just borrow Ruby’s look; it improves on it. Think of Crystal as Ruby after a hardcode gym membership and a strict diet. Here’s why:&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Levenshtein Rust gem</title>
       <link>https://studiozenkai.com/post/levenshtein-rust/</link>
       <pubDate>Mon, 04 Mar 2024 06:00:00 -0400</pubDate>

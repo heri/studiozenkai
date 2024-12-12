@@ -135,4 +135,15 @@ To make the case, we profile the endpoint with our existing database and typical
 
 We analyzed results and compared performance to our Ruby on Rails app. With the same postgres db, we measured ~225 rps (requests per second) for Kemal and ~5 rps for Rails, which makes our Kemal microservice 45 times faster!
 
-Do you have to rewrite your monolith overnight? No, Crystal and Kemal are only here to fill in the gaps Rails can’t. They’re lean, mean, and unapologetically fast. As for Rails? Well, it might still have its uses — just not where speed and concurrency matter most.
+## Crystal/Kemal vs TypeScript
+
+[TypeScript](https://studiozenkai.com/post/typescript-for-ruby-developers/) is also a good choice when considering performance. So why would a team choose Crystal?
+
+* *Performance* Being a compiled language, Crystal offers near C-like performance. While TypeScript adds static typing, it still runs on V8 engine, which is slower compared to compiled languages
+* *Syntax* It might take weeks or even months before a Ruby developer becomes comfortable with TypeScript, where it might just be days for Crystal
+* *Concurrency* Crytal has built-in support for fiber. TypeScript has async and promises, but these can be complex to manage in practice
+* *Ecosystem* TypeScript clearly wins with a vast ecosystem. But if you have a simple use case and do not expect integrations with third-parties or complex types, Kemal and its simplicity is a better choice
+
+Crystal/Kemal is ideal for real-time systems, CPU-bound tasks. TypeScript is better suited when you consider libraries and future ecosystem integration.
+
+Do you have to rewrite your monolith overnight? No, Crystal (and TypeScript) are only here to fill in the gaps Rails can’t. They’re lean, mean, and unapologetically fast. As for Rails? Well, it might still have its uses — just not where speed and concurrency matter most.

@@ -37,11 +37,11 @@
       <description>&lt;p&gt;I am a fan of AI and &lt;a href=&#34;https://studiozenkai.com/post/autonomous-rc-car/&#34;&gt;machine learning&lt;/a&gt;, well &lt;a href=&#34;https://studiozenkai.com/post/cuda/&#34;&gt;before&lt;/a&gt; it was trending on CNBC or spamming your Facebook feed.&lt;/p&gt;&#xA;&lt;p&gt;The exponential progress in the past few years means everyone can find cues to complex questions in a few seconds, where you would previously need to ask experts or pay a professional to do it for you.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Crystal and Kemal: Blazing Performance for Rails Developers</title>
+      <title>Kemal: Performance for Rails Developers</title>
       <link>https://studiozenkai.com/post/crystal-high-performance/</link>
       <pubDate>Mon, 06 May 2024 10:35:26 -0400</pubDate>
       <guid>https://studiozenkai.com/post/crystal-high-performance/</guid>
-      <description>&lt;p&gt;Ruby is charming. It’s elegant, expressive, and gets the job done—most of the time. But throw in high traffic, and suddenly your graceful app feels like a clunky mule dragging a cart uphill. Enter Crystal and Kemal: a duo that resembles Ruby’s syntax but sprints like C. It’s a setup that promises speed, simplicity, and a dash of thrill.&lt;/p&gt;&#xA;&lt;h2 id=&#34;rubys-faster-twin&#34;&gt;Ruby&amp;rsquo;s faster twin&lt;/h2&gt;&#xA;&lt;p&gt;Crystal doesn’t just borrow Ruby’s look; it improves on it. Think of Crystal as Ruby after a hardcode gym membership and a strict diet. Here’s why:&lt;/p&gt;</description>
+      <description>&lt;p&gt;Ruby is elegant, expressive, and gets the job done—most of the time. But for high traffic, your monolith feels like a mule dragging a cart uphill. Enter Crystal and the micro framework Kemal: a duo similar to Ruby’s syntax but has C-like performance. It’s a choice that promises speed, simplicity, and a dash of thrill.&lt;/p&gt;&#xA;&lt;h2 id=&#34;crystal---ruby-but-compiled&#34;&gt;Crystal - Ruby, but compiled&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://crystal-lang.org&#34;&gt;Crystal&lt;/a&gt; borrows from Ruby syntax, and sometimes even improves on it. Its biggest difference is that any code needs to be compiled.  Think of Crystal as Ruby after a mean bootcamp and a strict diet. Here’s why:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Levenshtein Rust gem</title>
@@ -51,11 +51,11 @@
       <description>&lt;p&gt;Given &lt;a href=&#34;https://github.com/heri&#34;&gt;my Github profile&lt;/a&gt; and &lt;a href=&#34;https://studiozenkai.com/post/&#34;&gt;published articles&lt;/a&gt;, it is clear my favorite programming language is Ruby, an elegant and concise language that brings results, fast.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Typescript for Ruby developers</title>
+      <title>TypeScript for Ruby developers</title>
       <link>https://studiozenkai.com/post/typescript-for-ruby-developers/</link>
       <pubDate>Tue, 02 Jan 2024 12:00:00 +0000</pubDate>
       <guid>https://studiozenkai.com/post/typescript-for-ruby-developers/</guid>
-      <description>&lt;p&gt;Ruby is poetry. In comparison, Typescript feels like a technical manual. As a Ruby developer, you may look at Typescript and think, &lt;em&gt;Why trade elegance for rules?&lt;/em&gt; That&amp;rsquo;s a fair question. But here&amp;rsquo;s the thing: Those rules can save your skin when you need something big, fast and complex.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Ruby is poetry. In comparison, TypeScript feels like a technical manual. As a Ruby developer, you may look at TypeScript and think, &lt;em&gt;Why trade elegance for rules?&lt;/em&gt; That&amp;rsquo;s a fair question. But here&amp;rsquo;s the thing: Those rules can save your skin when you need something big, fast and complex.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Little Math Routines</title>

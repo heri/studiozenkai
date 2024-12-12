@@ -9,11 +9,11 @@
     <lastBuildDate>Tue, 02 Jan 2024 12:00:00 +0000</lastBuildDate>
     <atom:link href="https://studiozenkai.com/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Typescript for Ruby developers</title>
+      <title>TypeScript for Ruby developers</title>
       <link>https://studiozenkai.com/post/typescript-for-ruby-developers/</link>
       <pubDate>Tue, 02 Jan 2024 12:00:00 +0000</pubDate>
       <guid>https://studiozenkai.com/post/typescript-for-ruby-developers/</guid>
-      <description>&lt;p&gt;Ruby is poetry. In comparison, Typescript feels like a technical manual. As a Ruby developer, you may look at Typescript and think, &lt;em&gt;Why trade elegance for rules?&lt;/em&gt; That&amp;rsquo;s a fair question. But here&amp;rsquo;s the thing: Those rules can save your skin when you need something big, fast and complex.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Ruby is poetry. In comparison, TypeScript feels like a technical manual. As a Ruby developer, you may look at TypeScript and think, &lt;em&gt;Why trade elegance for rules?&lt;/em&gt; That&amp;rsquo;s a fair question. But here&amp;rsquo;s the thing: Those rules can save your skin when you need something big, fast and complex.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

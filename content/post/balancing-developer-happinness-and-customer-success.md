@@ -6,6 +6,8 @@ tags = ['software', 'career']
 
 Your most valuable customer is frustrated because features are late. Meanwhile, your engineering team is drowning in overtime, and attrition is climbing. How do you keep customers happy without burning out your team?
 
+I have already written about the [value of an Engineering Manager](/post/understanding-engineering-managers/i), for a single. But what happens for a whole organization?
+
 To tackle this, I designed the **Weighted Customer Happiness** (WCH) and the **Customer-Developer Delivery Index** (CDDI) — two metrics designed to balance customer priorities and developer well-being.
 
 Together, they help teams balance priorities and reach sustainable success.

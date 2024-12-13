@@ -53,7 +53,7 @@ Marshmallow fun
 
 **Bonus Modelization**
 
-Regular readers know I like mathematic equations. This time, it is simple:
+Regular readers know mathematics to understand what is at play. This time, it is simple:
 
  \[
 \begin{aligned}
@@ -114,4 +114,4 @@ Where:
 * Have a plan to cut down costs. You might clean yourself. You could market your own website and leverage social media. You could build a property made of stainless steel so even toddlers or party goers  cannot break anything. 
 * Have a plan to cut down on maintenance. In summer, I absolutely need to go to the property every 20 days otherwise there will dozens of broken amenities. The more amenities you have, the more maintenance is needed. Think hard how you can go around this.
 
-It does sound a lot like work now, and I would not recommend it to most people. You need a family and a job that allows it. You need to be able to get your hands dirty, when needed. You need to have a good financial blanket in case it dries out and you have to pay expenses out of pocket for six months. Was it worth it though? Totally! As you can see from the pictures, me & my family enjoyed it and have priceless memories and life learnings that cannot be duplicated, and that goes above everything.
+It does sound a lot like work now, and I would not recommend it to most people. You need a family and a job that allows it. You will get your hands dirty. If needed, you need to be able to pay expenses out of pocket for six months. Was it worth it though? Totally! As you can see from the pictures, me & my family enjoyed it and have priceless memories and life learnings that cannot be duplicated, and that goes above everything.

@@ -5,8 +5,10 @@ tags = ['software', 'ruby', 'typescript', 'performance']
 +++
 
 Ruby is poetry. In comparison, TypeScript feels like a technical manual. As a Ruby developer, you may look at TypeScript and think, *Why trade elegance for rules?* That's a fair question. But here's the thing: Those rules can save your skin when you need something big, fast and complex.
+
 <!--more-->
-TypeScript won't replace Ruby. Instead, it's like learning a second language -- it opens you new doors and makes you also appreciate your first language.
+
+TypeScript won't replace Ruby. Instead, it's like learning a second language -- it opens new doors and makes you also appreciate your first language.
 
 **No more memory issues**
 

@@ -57,7 +57,7 @@ To run the Crystal equivalent:
   studiozenkai heri > crystal build fibonacci.cr --release
 ```
 
-If you had type or algoritmic issues here, then your mistakes will be caught here. For example, if you had the reflex to use `Time.now`, then the compiler would ouput
+If you had type or algorithmic issues here, then your mistakes will be caught here. For example, if you had the reflex to use `Time.now`, then the compiler would output
 
 ```sh
 Showing last frame. Use --error-trace for full trace.
@@ -89,7 +89,7 @@ In this simple example, crystal is ~19 times faster! For larger datasets, the pe
 
 ## Profiling
 
-I have used Crystal to optimize bottlenecks in a complex system. For these, the specifications were stable and the inputs/outputs well known. However, the Rails endpoint slowed down our overall numbers. We decide to move one bottleneck to a Lemal microservice.
+I have used Crystal to optimize bottlenecks in a complex system. For these, the specifications were stable and the inputs/outputs well known. However, the Rails endpoint slowed down our overall numbers. We decide to move one bottleneck to a Kemal microservice.
 
 I have [open sourced a crystal app on Github](https://github.com/heri/crystal_pure_api) which is almost identical to our implementation, except tests, endpoints and fields queried.
 
@@ -109,11 +109,11 @@ To make the case, we profile the endpoint with our existing database and typical
    shards install
    ```
 
-4. **Create a table**
+3. **Create a table**
    ```sh
    psql -U postgres
    CREATE DATABASE profiling;
-   \c profiling
+   USE profiling;
    CREATE TABLE users (
    id SERIAL PRIMARY KEY,
    firstName VARCHAR(255)
@@ -126,14 +126,14 @@ To make the case, we profile the endpoint with our existing database and typical
    KEMAL_PORT=3000 ./main
    ```
 
-4. **Profile**:
+5. **Profile**:
     In another tab
 
    ```sh
    wrk -t12 -c400 -d30s http://localhost:3000/users
    ```
 
-We analyzed results and compared performance to our Ruby on Rails app. With the same postgres db, we measured ~225 rps (requests per second) for Kemal and ~5 rps for Rails, which makes our Kemal microservice 45 times faster!
+We analyzed results and compared performance to our Ruby on Rails app. With the same PostgreSQL db, we measured ~225 rps (requests per second) for Kemal and ~5 rps for Rails, which makes our Kemal microservice 45 times faster!
 
 ## Crystal/Kemal vs TypeScript
 

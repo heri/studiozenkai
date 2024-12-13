@@ -46,9 +46,7 @@ CDDI = \frac{\text{Delivery Performance}}{\text{Burden}} = \frac{F \times WCH}{O
 
 The goal is to increase CDDI over time.
 
-### Breaking down CDDI metrics
-
-#### **Features Delivered on Time (F)**
+### **Features Delivered on Time (F)**
 
 [Strong refinement processes](https://studiozenkai.com/post/necessary-but-not-sufficient/) increase **F**. Better tooling and infrastructure help: automated CI/CD, powerful laptops and servers, [use of AI](https://studiozenkai.com/post/ai-will-take-your-job-eventually/), great work environments, etc.
 
@@ -63,7 +61,7 @@ For example:
 - On a crypto trading platform, **Q** reflected platform performance due to its focus on finding the best trades as quickly as possible.
 - SaaS companies might use other metrics for **Q**, such as click-through rates.
 
-#### **Work Hours Overtime (O)**
+### **Work Hours Overtime (O)**
 
 Overtime refers to the extra hours spent developing features beyond the agreed time. It also includes:
 - Time spent on rebases
@@ -86,7 +84,7 @@ I do not mind spending a couple of days writing a Pulumi script so instead of k8
 
 When requirements are not complete and an edge case is discovered in production, the team has to re-open the ticket, work on a fix, and get it to QA. The whole process can take 5 to 10 more time than making sure that all edge cases are accounted for in refinement. O increases, developer satisfation decreases.
 
-#### **Team Attrition (A)**
+### **Team Attrition (A)**
 
 Like Overtime above, this is broad. In addition to layoffs or resignations, it also includes team members leaving to another department, medical leaves, or position changes. Why do we count internal moves? Because like resignations, these are disruptive.
 
@@ -102,7 +100,7 @@ Attrition is usually represented by an annual percentage. If a developer leaves 
 
 The result is then divided by Amax which is the maximum tolerable attrition.
 
-#### **Cost (C)**
+### **Cost (C)**
 
 Cost includes hard and soft compensation, consultation fees, hardware, services, and perks.
 

@@ -20,6 +20,6 @@ Third form of exercise is what I call ["financial diet"](https://studiozenkai.co
 
 In January, I will a fourth form of exercise: electronic diet. No devices except for work. No Netflix. No YouTube. No online payments. No scrolling the endless scroll. I will go outside more, [read more books](https://studiozenkai.com/post/habits-2025/), and play more games with the kids. [Move more](https://studiozenkai.com/post/habits-2025/). Think more. Write more. Breaking free from the array of electronic devices controlling our physical and mental life. 
 
-It’s not about rejecting the modern world. It’s about proving I can live without it if I choose.
+It’s not about rejecting the modern world. It’s about proving I can live without it if I choose. It is also building resilience. Because what you have today might be absent tomorrow, temporarily or permanently, and you don't want to be caught like a deer in headlights.
 
-I know most people will see this as cruel, unusual and stupid. Isn't that like starving a junkie?
+I know though people will see all this as meaningless, unusual and stupid. Isn't it like starving a junkie?

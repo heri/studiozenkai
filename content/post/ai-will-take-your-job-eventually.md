@@ -25,7 +25,7 @@ Will knowledge companies exist without workers? Unlikely. A factory still needs 
 How would one prevent their job from taking their job? Here are a few cues:
 
 * From time to time, make sure to also work on difficult projects, where dates, constraints, resources, architectures have unknowns and require interpersonal skills to solve.
-* Use AI bots in your daily work, and make sure to know exactly their strengths and weaknesses. Volunteer to show how to use them with management.
+* Use AI bots in your daily work, and make sure to know exactly their strengths and weaknesses. Volunteer to trial them with [Engineering Managers](https://studiozenkai.com/post/understanding-engineering-managers/).
 * Review what your company is doing. Can the work by outsourced easily to a firm in India or Eastern Europe? Is work repetitive? If the answer is "Yes" to those questions, then the value added by your company is low and so is your job. Change the company.
 * Invest in skills and abilities that only humans can do. ChatGPT cannot give answers about brand new technologies that were released after its training cutoff time, nor can it work with technologies that are not public. So being an expert on a private library will be a great asset. Additionally, chatGPT cannot intuitively understand team dynamics or physically implement solutions in the real world.
 

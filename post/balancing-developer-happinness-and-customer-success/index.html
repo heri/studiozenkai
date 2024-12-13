@@ -8,8 +8,8 @@
     <title> Balancing Customer Happiness, Developer Burden and Feature Delivery &middot; Software, photography, and sustainability articles by Heri </title>
     
       <meta name="description" content="Your most valuable customer is frustrated because features are late. Meanwhile, your engineering team is drowning in overtime, and attrition is climbing. How do you keep customers happy without burning out your team?
-To tackle this, I designed the Weighted Customer Happiness (WCH) and the Customer-Developer Delivery Index (CDDI) — two metrics designed to balance customer priorities and developer well-being.
-Together, they help teams balance priorities and reach sustainable success.">
+I have already written about the value of an Engineering Manager, for a single. But what happens for a whole organization?
+To tackle this, I designed the Weighted Customer Happiness (WCH) and the Customer-Developer Delivery Index (CDDI) — two metrics designed to balance customer priorities and developer well-being.">
     
     
     <link rel="stylesheet" type="text/css" href="https://studiozenkai.com/css/uno.css" />
@@ -69,6 +69,12 @@ Together, they help teams balance priorities and reach sustainable success.">
             <a href="https://twitter.com/heri" title="@heri on Twitter" rel="me nofollow"> <i class='fa fa-twitter'></i> <span
                     class="label">Twitter</span> </a>
         </li> 
+        
+        <li class="navigation__item">
+            <a href="https://www.linkedin.com/in/madmedia"
+                title="Heri on linkedin"> <i class='fa fa-linkedin'></i> <span
+                    class="label">LinkedIn</span> </a>
+        </li>
         
         <li class="navigation__item">
             <a href="https://github.com/heri" title="heri on github" rel="me authn"> <i class='fa fa-github'></i> <span
@@ -131,6 +137,12 @@ Together, they help teams balance priorities and reach sustainable success.">
         </li> 
         
         <li class="navigation__item">
+            <a href="https://www.linkedin.com/in/madmedia"
+                title="Heri on linkedin"> <i class='fa fa-linkedin'></i> <span
+                    class="label">LinkedIn</span> </a>
+        </li>
+        
+        <li class="navigation__item">
             <a href="https://github.com/heri" title="heri on github" rel="me authn"> <i class='fa fa-github'></i> <span
                     class="label">Github</span> </a>
         </li>    
@@ -163,6 +175,7 @@ Together, they help teams balance priorities and reach sustainable success.">
         <h1>Balancing Customer Happiness, Developer Burden and Feature Delivery</h1>
         <span class="post-date">Tue, Nov 12, 2024</span>
         <p>Your most valuable customer is frustrated because features are late. Meanwhile, your engineering team is drowning in overtime, and attrition is climbing. How do you keep customers happy without burning out your team?</p>
+<p>I have already written about the <a href="/post/understanding-engineering-managers/i">value of an Engineering Manager</a>, for a single. But what happens for a whole organization?</p>
 <p>To tackle this, I designed the <strong>Weighted Customer Happiness</strong> (WCH) and the <strong>Customer-Developer Delivery Index</strong> (CDDI) — two metrics designed to balance customer priorities and developer well-being.</p>
 <p>Together, they help teams balance priorities and reach sustainable success.</p>
 <h2 id="weighted-customer-happiness-wch">Weighted Customer Happiness (WCH)</h2>
@@ -189,8 +202,7 @@ WCH = \sum_{i=1}^{N}\frac{S_i \times W_i}{N}
 \[
 CDDI = \frac{\text{Delivery Performance}}{\text{Burden}} = \frac{F \times WCH}{O_{\text{normalized}} + A_{\text{normalized}} + C_{\text{normalized}}}
 \]<p>The goal is to increase CDDI over time.</p>
-<h3 id="breaking-down-cddi-metrics">Breaking down CDDI metrics</h3>
-<h4 id="features-delivered-on-time-f"><strong>Features Delivered on Time (F)</strong></h4>
+<h3 id="features-delivered-on-time-f"><strong>Features Delivered on Time (F)</strong></h3>
 <p><a href="https://studiozenkai.com/post/necessary-but-not-sufficient/">Strong refinement processes</a> increase <strong>F</strong>. Better tooling and infrastructure help: automated CI/CD, powerful laptops and servers, <a href="https://studiozenkai.com/post/ai-will-take-your-job-eventually/">use of AI</a>, great work environments, etc.</p>
 <p>Optionally, the team can track <strong>Quality (Q)</strong>. <strong>Q</strong> represents the percentage of features meeting quality standards. Features with defects and customer-reported issues lower <strong>Q</strong>.</p>
 \[
@@ -201,7 +213,7 @@ F = Q \times F_{\text{delivered}}
 <li>On a crypto trading platform, <strong>Q</strong> reflected platform performance due to its focus on finding the best trades as quickly as possible.</li>
 <li>SaaS companies might use other metrics for <strong>Q</strong>, such as click-through rates.</li>
 </ul>
-<h4 id="work-hours-overtime-o"><strong>Work Hours Overtime (O)</strong></h4>
+<h3 id="work-hours-overtime-o"><strong>Work Hours Overtime (O)</strong></h3>
 <p>Overtime refers to the extra hours spent developing features beyond the agreed time. It also includes:</p>
 <ul>
 <li>Time spent on rebases</li>
@@ -216,7 +228,7 @@ O_{\text{normalized}} = \frac{O}{O_{\text{max}}}
 <p>A good example of “interesting overtime” is time spent automating CI/CD or setting up better infrastructure.</p>
 <p>I do not mind spending a couple of days writing a Pulumi script so instead of k8s commands, the team would leverage infrastructure as code. This increases team productivity, and lets them focus on development.</p>
 <p>When requirements are not complete and an edge case is discovered in production, the team has to re-open the ticket, work on a fix, and get it to QA. The whole process can take 5 to 10 more time than making sure that all edge cases are accounted for in refinement. O increases, developer satisfation decreases.</p>
-<h4 id="team-attrition-a"><strong>Team Attrition (A)</strong></h4>
+<h3 id="team-attrition-a"><strong>Team Attrition (A)</strong></h3>
 <p>Like Overtime above, this is broad. In addition to layoffs or resignations, it also includes team members leaving to another department, medical leaves, or position changes. Why do we count internal moves? Because like resignations, these are disruptive.</p>
 <p>Attrition is also related to growth opportunities, financial as well as careers. If there are better career prospects elswhere, then Atttrition will go up, regardless of F, O or WCH.</p>
 <p>Attrition impacts team morale and productivity. Developer happiness (clear goals, autonomy, and technical growth) reduces attrition.</p>
@@ -224,7 +236,7 @@ O_{\text{normalized}} = \frac{O}{O_{\text{max}}}
 A_{\text{normalized}} = \frac{A}{A_{\text{max}}}
 \]<p>Attrition is usually represented by an annual percentage. If a developer leaves the company and you have 10 developers, then your attrition rate is 0.1 or 10% rate annually.</p>
 <p>The result is then divided by Amax which is the maximum tolerable attrition.</p>
-<h4 id="cost-c"><strong>Cost (C)</strong></h4>
+<h3 id="cost-c"><strong>Cost (C)</strong></h3>
 <p>Cost includes hard and soft compensation, consultation fees, hardware, services, and perks.</p>
 \[
 C_{\text{normalized}} = \frac{C}{C_{\text{ideal}}}

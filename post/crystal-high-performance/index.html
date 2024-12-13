@@ -71,6 +71,12 @@ Crystal borrows from Ruby syntax, and sometimes even improves on it. Its biggest
         </li> 
         
         <li class="navigation__item">
+            <a href="https://www.linkedin.com/in/madmedia"
+                title="Heri on linkedin"> <i class='fa fa-linkedin'></i> <span
+                    class="label">LinkedIn</span> </a>
+        </li>
+        
+        <li class="navigation__item">
             <a href="https://github.com/heri" title="heri on github" rel="me authn"> <i class='fa fa-github'></i> <span
                     class="label">Github</span> </a>
         </li>    
@@ -129,6 +135,12 @@ Crystal borrows from Ruby syntax, and sometimes even improves on it. Its biggest
             <a href="https://twitter.com/heri" title="@heri on Twitter" rel="me nofollow"> <i class='fa fa-twitter'></i> <span
                     class="label">Twitter</span> </a>
         </li> 
+        
+        <li class="navigation__item">
+            <a href="https://www.linkedin.com/in/madmedia"
+                title="Heri on linkedin"> <i class='fa fa-linkedin'></i> <span
+                    class="label">LinkedIn</span> </a>
+        </li>
         
         <li class="navigation__item">
             <a href="https://github.com/heri" title="heri on github" rel="me authn"> <i class='fa fa-github'></i> <span
@@ -198,7 +210,7 @@ Crystal borrows from Ruby syntax, and sometimes even improves on it. Its biggest
 </span></span><span style="display:flex;"><span>  Time taken: 13.695118 seconds
 </span></span></code></pre></div><p>To run the Crystal equivalent:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>  studiozenkai heri &gt; crystal build fibonacci.cr --release
-</span></span></code></pre></div><p>If you had type or algoritmic issues here, then your mistakes will be caught here. For example, if you had the reflex to use <code>Time.now</code>, then the compiler would ouput</p>
+</span></span></code></pre></div><p>If you had type or algorithmic issues here, then your mistakes will be caught here. For example, if you had the reflex to use <code>Time.now</code>, then the compiler would output</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>Showing last frame. Use --error-trace <span style="color:#66d9ef">for</span> full trace.
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>In fibonacci.cr:6:21
@@ -219,7 +231,7 @@ Crystal borrows from Ruby syntax, and sometimes even improves on it. Its biggest
 <li><strong>Familiarity</strong>: If you&rsquo;ve used Sinatra or other similar frameworks, you&rsquo;ll find Kemal&rsquo;s API very familiar.</li>
 </ul>
 <h2 id="profiling">Profiling</h2>
-<p>I have used Crystal to optimize bottlenecks in a complex system. For these, the specifications were stable and the inputs/outputs well known. However, the Rails endpoint slowed down our overall numbers. We decide to move one bottleneck to a Lemal microservice.</p>
+<p>I have used Crystal to optimize bottlenecks in a complex system. For these, the specifications were stable and the inputs/outputs well known. However, the Rails endpoint slowed down our overall numbers. We decide to move one bottleneck to a Kemal microservice.</p>
 <p>I have <a href="https://github.com/heri/crystal_pure_api">open sourced a crystal app on Github</a> which is almost identical to our implementation, except tests, endpoints and fields queried.</p>
 <p>To make the case, we profile the endpoint with our existing database and typical inputs. Even if you do not have the same data, you can preview here how profile a Kemal application:</p>
 <ol>
@@ -239,7 +251,7 @@ Crystal borrows from Ruby syntax, and sometimes even improves on it. Its biggest
 <p><strong>Create a table</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>psql -U postgres
 </span></span><span style="display:flex;"><span>CREATE DATABASE profiling;
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">\c</span> profiling
+</span></span><span style="display:flex;"><span>USE profiling;
 </span></span><span style="display:flex;"><span>CREATE TABLE users <span style="color:#f92672">(</span>
 </span></span><span style="display:flex;"><span>id SERIAL PRIMARY KEY,
 </span></span><span style="display:flex;"><span>firstName VARCHAR<span style="color:#f92672">(</span>255<span style="color:#f92672">)</span>
@@ -256,7 +268,7 @@ In another tab</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>wrk -t12 -c400 -d30s http://localhost:3000/users
 </span></span></code></pre></div></li>
 </ol>
-<p>We analyzed results and compared performance to our Ruby on Rails app. With the same postgres db, we measured ~225 rps (requests per second) for Kemal and ~5 rps for Rails, which makes our Kemal microservice 45 times faster!</p>
+<p>We analyzed results and compared performance to our Ruby on Rails app. With the same PostgreSQL db, we measured ~225 rps (requests per second) for Kemal and ~5 rps for Rails, which makes our Kemal microservice 45 times faster!</p>
 <h2 id="crystalkemal-vs-typescript">Crystal/Kemal vs TypeScript</h2>
 <p><a href="https://studiozenkai.com/post/typescript-for-ruby-developers/">TypeScript</a> is also a good choice when considering performance. So why would a team choose Crystal?</p>
 <ul>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Open Redirects in Rails &middot; Software, photography, and sustainability articles by Heri </title>
+    
+      <meta name="description" content="Ruby On Rails makes things easy. Sometimes, too easy. That’s the problem with redirect_to params[:url].">
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://studiozenkai.com/css/uno.css" />
+    <link rel="stylesheet" type="text/css" href="https://studiozenkai.com/css/lightGallery.css" />
+    
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    
+    <link rel="webmention" href="https://webmention.io/studiozenkai.com/webmention" />
+    <link rel="pingback" href="https://webmention.io/studiozenkai.com/xmlrpc" />
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://studiozenkai.com/js/main.min.js">
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <script>
+      MathJax = {
+        tex: {
+          displayMath: [['\\[', '\\]'], ['$$', '$$']],  
+          inlineMath: [['\\(', '\\)']]                  
+        }
+      };
+    </script>
+</head>
+
+<body>
+  <div id="scriptHeader">
+    <span class="mobile btn-mobile-menu">
+            <i class="fa fa-bars btn-mobile-menu__icon"></i>
+            <i class="fa fa-times btn-mobile-close__icon hidden"> </i>
+    </span>
+    <header class="
+        
+            panel-cover panel-cover--collapsed
+        " >
+    <div class="panel-main">
+        <div class="panel-main__inner panel-inverted">
+            <div class="panel-main__content"> 
+                <h1 class="panel-cover__title panel-title">
+                    <a href="https://studiozenkai.com/"  title="link to homepage for Heri Rakotomalala">Studio Zenkai</a>
+                </h1>
+                <hr class="panel-cover__divider" />
+                <p class="panel-cover__description">Bold and Clear, without excess • Kaizen 改善 • With Purpose</p>
+                <hr class="panel-cover__divider panel-cover__divider--secondary" />
+                <p>Studio Zenkai is dedicated to the craft of programming, photography and living sustainably. <a href="https://studiozenkai.com/post/about-heri/">About me</a>  </p>
+                <hr class="panel-cover__divider panel-cover__divider--secondary" />
+                <div class="navigation-wrapper">
+                    <nav class="cover-navigation cover-navigation--primary">
+                        <ul class="navigation">
+                            <li class="navigation__item"><a href="https://studiozenkai.com/post" title="link to Studio Zenkai blog" class="blog-button">Articles</a> </li>
+                            
+                            
+                       </ul>
+                    </nav> <nav class="cover-navigation navigation--social">
+    <ul class="navigation">
+        
+        <li class="navigation__item">
+            <a href="https://twitter.com/heri" title="@heri on Twitter" rel="me nofollow"> <i class='fa fa-twitter'></i> <span
+                    class="label">Twitter</span> </a>
+        </li> 
+        
+        <li class="navigation__item">
+            <a href="https://www.linkedin.com/in/madmedia"
+                title="Heri on linkedin"> <i class='fa fa-linkedin'></i> <span
+                    class="label">LinkedIn</span> </a>
+        </li>
+        
+        <li class="navigation__item">
+            <a href="https://github.com/heri" title="heri on github" rel="me authn"> <i class='fa fa-github'></i> <span
+                    class="label">Github</span> </a>
+        </li>    
+        <li class="navigation__item">
+            <a href="https://www.instagram.com/heri_rakotomalala/" rel="nofollow" title="Heri on Instagram"><i class="fa fa-instagram"></i><span
+                class="label">Instagram</span></a>
+        </li>
+        
+        <li class="navigation__item">
+            <a href="https://medium.com/@heri" title="Medium" rel="nofollow"> <i class='fa fa-medium'></i> <span
+                    class="label">Medium</span> </a>
+        </li>
+        
+        <li class="navigation__item">
+            <a href="mailto:heri@studiozenkai.com" title="Email"> <i class='fa fa-envelope-o'></i> <span
+                    class="label">Email</span> </a>
+        </li>
+    </ul>
+</nav> </div>
+            </div>
+        </div>
+        <div class="panel-cover--overlay"></div>
+    </div>
+</header>
+</div>
+<noscript>
+    <style>
+        #scriptHeader {display:none;}
+        .navigation-wrapper{
+            display: block;
+            top: 0;
+        }
+    </style>
+
+    <header class="panel-cover panel-cover--collapsed" style="background-image: url()">
+        <div class="panel-main">
+            <div class="panel-main__inner panel-inverted">
+                <div class="panel-main__content"> 
+                    <h1 class="panel-cover__title panel-title">
+                        <a href="https://studiozenkai.com/"  title="link to homepage for Heri Rakotomalala">Studio Zenkai</a>
+                    </h1>
+                    <hr class="panel-cover__divider" />
+                    <p class="panel-cover__description">  Studio Zenkai is dedicated to the craft of programming, photography and living sustainably.  </p>
+                    <hr class="panel-cover__divider panel-cover__divider--secondary" />
+                    <div class="navigation-wrapper">
+                        <nav class="cover-navigation cover-navigation--primary">
+                            <ul class="navigation">
+                                <li class="navigation__item"><a href="https://studiozenkai.com/#blog" title="link to Studio Zenkai blog" class="blog-button">Blog</a> </li></br>
+                                
+                                
+                           </ul>
+                        </nav> <nav class="cover-navigation navigation--social">
+    <ul class="navigation">
+        
+        <li class="navigation__item">
+            <a href="https://twitter.com/heri" title="@heri on Twitter" rel="me nofollow"> <i class='fa fa-twitter'></i> <span
+                    class="label">Twitter</span> </a>
+        </li> 
+        
+        <li class="navigation__item">
+            <a href="https://www.linkedin.com/in/madmedia"
+                title="Heri on linkedin"> <i class='fa fa-linkedin'></i> <span
+                    class="label">LinkedIn</span> </a>
+        </li>
+        
+        <li class="navigation__item">
+            <a href="https://github.com/heri" title="heri on github" rel="me authn"> <i class='fa fa-github'></i> <span
+                    class="label">Github</span> </a>
+        </li>    
+        <li class="navigation__item">
+            <a href="https://www.instagram.com/heri_rakotomalala/" rel="nofollow" title="Heri on Instagram"><i class="fa fa-instagram"></i><span
+                class="label">Instagram</span></a>
+        </li>
+        
+        <li class="navigation__item">
+            <a href="https://medium.com/@heri" title="Medium" rel="nofollow"> <i class='fa fa-medium'></i> <span
+                    class="label">Medium</span> </a>
+        </li>
+        
+        <li class="navigation__item">
+            <a href="mailto:heri@studiozenkai.com" title="Email"> <i class='fa fa-envelope-o'></i> <span
+                    class="label">Email</span> </a>
+        </li>
+    </ul>
+</nav> </div>
+                </div>
+            </div>
+            <div class="panel-cover--overlay"></div>
+        </div>
+    </header>
+</noscript>
+
+  <div class="content-wrapper">
+    <div class="content-wrapper__inner">
+      <div class="post">
+        <h1>Open Redirects in Rails</h1>
+        <span class="post-date">Fri, Aug 4, 2023</span>
+        <p>Ruby On Rails makes things easy. Sometimes, too easy. That’s the problem with <code>redirect_to params[:url]</code>.</p>
+<p>Let’s say you want to send them somewhere. You write this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">one_method</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">#</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># do stuff here</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">#</span>
+</span></span><span style="display:flex;"><span>  redirect_to params<span style="color:#f92672">[</span><span style="color:#e6db74">:url</span><span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>It passes tests. Your team is happy. The users are happy.</p>
+<h2 id="the-problem">The Problem</h2>
+<p>Imagine this: an attacker sends your user a link. The link looks legit. But it’s this:</p>
+<pre tabindex="0"><code>https://yourapp.com/one_method?url=https://attacker-site.com
+</code></pre><p>The user clicks. Your app sends them straight to the attacker’s site. Now, anything is possible. The attacker steals data. Phishes credentials. All because of your redirect_to.</p>
+<p>This is an open redirect vulnerability.</p>
+<h2 id="a-simple-fix">A Simple Fix</h2>
+<p>The fix is easy. Validate user input:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">one_method</span>
+</span></span><span style="display:flex;"><span>  safe_urls <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;https://trusted-site.com&#34;</span>, <span style="color:#e6db74">&#34;https://another-safe-site.com&#34;</span><span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>  url <span style="color:#f92672">=</span> params<span style="color:#f92672">[</span><span style="color:#e6db74">:url</span><span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> safe_urls<span style="color:#f92672">.</span>include?(url)
+</span></span><span style="display:flex;"><span>    redirect_to url
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># consider logging the invalid url here</span>
+</span></span><span style="display:flex;"><span>    redirect_to root_path, <span style="color:#e6db74">alert</span>: <span style="color:#e6db74">&#34;Invalid URL&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>Now, the user gets an alert.</p>
+<p>You can also lookup the host:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>require <span style="color:#e6db74">&#39;uri&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># can be set in config file or environment variavbles</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ALLOWED_HOSTS</span> <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;trusted-site.com&#34;</span>, <span style="color:#e6db74">&#34;another-safe-site.com&#34;</span><span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">one_method</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  url <span style="color:#f92672">=</span> params<span style="color:#f92672">[</span><span style="color:#e6db74">:url</span><span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  uri <span style="color:#f92672">=</span> <span style="color:#66d9ef">URI</span><span style="color:#f92672">.</span>parse(url)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">ALLOWED_HOSTS</span><span style="color:#f92672">.</span>include?(uri<span style="color:#f92672">.</span>host)
+</span></span><span style="display:flex;"><span>    redirect_to url
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># consider logging url here</span>
+</span></span><span style="display:flex;"><span>    redirect_to root_path, <span style="color:#e6db74">alert</span>: <span style="color:#e6db74">&#34;Invalid URL&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">rescue</span> <span style="color:#66d9ef">URI</span><span style="color:#f92672">::</span><span style="color:#66d9ef">InvalidURIError</span>
+</span></span><span style="display:flex;"><span>  redirect_to root_path, <span style="color:#e6db74">alert</span>: <span style="color:#e6db74">&#34;Invalid URL&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>Another way to avoid the pitfall is Rails&rsquo; <code>url_for</code> </p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">go_somewhere</span>
+</span></span><span style="display:flex;"><span>  url <span style="color:#f92672">=</span> params<span style="color:#f92672">[</span><span style="color:#e6db74">:url</span><span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">begin</span>
+</span></span><span style="display:flex;"><span>    redirect_to url_for(url)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">rescue</span> <span style="color:#66d9ef">ArgumentError</span>
+</span></span><span style="display:flex;"><span>    redirect_to root_path, <span style="color:#e6db74">alert</span>: <span style="color:#e6db74">&#34;Invalid URL&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>This catches common errors</p>
+<p>Open redirects is small thing. But it is still a thing, that even Senior Developers miss. Don&rsquo;t leave it to chance. </p>
+<p>Remember: if your app redirects users straight to a phishing site, it’s like inviting Loki to handle customer support—chaos is guaranteed, and no one’s getting their data back.</p>
+        <div class="post-tags"><a href="https://studiozenkai.com/tags/software/" >Software</a>        <a href="https://studiozenkai.com/tags/ruby/" >Ruby</a>        <a href="https://studiozenkai.com/tags/security/" >Security</a>        </div>
+        <div class="sharing">
+<p>© Heri Rakotomalala. All rights reserved. Powered by <a href="https://www.digitalocean.com/?refcode=ef57f6ccd2d8">Digital Ocean</a> and <a href="https://github.com/heri">Github</a></p>
+
+<p>Heri Rakotomalala is an engineer working on small and innovative projects in Montréal. Originally from Madagascar, he has lived 7 years in East Africa, studied Engineering and made friends in France, built a community center in Esteli, Nicaragua and is taking pictures and coding in Montréal, Canada. This site cover technology work. Read <a href="https://studiozenkai.com/post/about-heri/">more about Heri</a></p>
+
+</div>
+
+        
+
+
+      </div>
+    </div>
+  </div>
+
+</body>
+
+
+</html>

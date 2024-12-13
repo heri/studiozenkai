@@ -30,6 +30,13 @@
       <description>&lt;p&gt;Ruby is poetry. In comparison, TypeScript feels like a technical manual. As a Ruby developer, you may look at TypeScript and think, &lt;em&gt;Why trade elegance for rules?&lt;/em&gt; That&amp;rsquo;s a fair question. But here&amp;rsquo;s the thing: Those rules can save your skin when you need something big, fast and complex.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Open Redirects in Rails</title>
+      <link>https://studiozenkai.com/post/rails-redirect-to-security/</link>
+      <pubDate>Fri, 04 Aug 2023 12:00:00 +0000</pubDate>
+      <guid>https://studiozenkai.com/post/rails-redirect-to-security/</guid>
+      <description>&lt;p&gt;Ruby On Rails makes things easy. Sometimes, too easy. That’s the problem with &lt;code&gt;redirect_to params[:url]&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Little Math Routines</title>
       <link>https://studiozenkai.com/post/the-little-things-matter/</link>
       <pubDate>Sun, 12 Mar 2023 10:35:26 -0400</pubDate>
@@ -37,11 +44,11 @@
       <description>&lt;p&gt;Programmers are attracted to big challenges, perhaps comparing themselves to Ed Hillary and Tenzig Norgay ascending Mount Everest. It brings prestige inside and outside the company, and opens them new doors.&lt;/p&gt;&#xA;&lt;p&gt;While big challenges are worth it, and I encourage everyone to go outside of their comfort zone regularly, little things also matter. It is easy to overlook small calculations, variable naming, or quick queries, assuming that these will make little differences and it is not worth the (potential) conflict with the code author.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Ruby Playbook</title>
-      <link>https://studiozenkai.com/post/ruby-playbook/</link>
-      <pubDate>Tue, 01 Feb 2022 12:00:00 +0000</pubDate>
-      <guid>https://studiozenkai.com/post/ruby-playbook/</guid>
-      <description>&lt;p&gt;I was introduced to the idea of playbook, which is basically a recipe to win a case. It can be in a team sports situation, such as how to score in American football in a given situation. It can be used by a salesperson, such as how to win a commercial contract.&lt;/p&gt;</description>
+      <title>eval : a security catastrope in waiting</title>
+      <link>https://studiozenkai.com/post/eval-security-catastrophe/</link>
+      <pubDate>Tue, 13 Sep 2022 12:00:00 +0000</pubDate>
+      <guid>https://studiozenkai.com/post/eval-security-catastrophe/</guid>
+      <description>&lt;p&gt;eval is one of Ruby&amp;rsquo;s most powerful methods. It’s also one of its most dangerous. When you use eval, you’re telling Ruby to treat a string as code and execute it. This opens the door to flexibility — but also to catastrophe.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Docker Desktop command line alternative</title>

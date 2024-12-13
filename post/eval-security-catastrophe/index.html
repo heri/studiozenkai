@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> eval : a security catastrope in waiting &middot; Software, photography, and sustainability articles by Heri </title>
+    
+      <meta name="description" content="eval is one of Ruby&rsquo;s most powerful methods. It’s also one of its most dangerous. When you use eval, you’re telling Ruby to treat a string as code and execute it. This opens the door to flexibility — but also to catastrophe.">
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://studiozenkai.com/css/uno.css" />
+    <link rel="stylesheet" type="text/css" href="https://studiozenkai.com/css/lightGallery.css" />
+    
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    
+    <link rel="webmention" href="https://webmention.io/studiozenkai.com/webmention" />
+    <link rel="pingback" href="https://webmention.io/studiozenkai.com/xmlrpc" />
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://studiozenkai.com/js/main.min.js">
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <script>
+      MathJax = {
+        tex: {
+          displayMath: [['\\[', '\\]'], ['$$', '$$']],  
+          inlineMath: [['\\(', '\\)']]                  
+        }
+      };
+    </script>
+</head>
+
+<body>
+  <div id="scriptHeader">
+    <span class="mobile btn-mobile-menu">
+            <i class="fa fa-bars btn-mobile-menu__icon"></i>
+            <i class="fa fa-times btn-mobile-close__icon hidden"> </i>
+    </span>
+    <header class="
+        
+            panel-cover panel-cover--collapsed
+        " >
+    <div class="panel-main">
+        <div class="panel-main__inner panel-inverted">
+            <div class="panel-main__content"> 
+                <h1 class="panel-cover__title panel-title">
+                    <a href="https://studiozenkai.com/"  title="link to homepage for Heri Rakotomalala">Studio Zenkai</a>
+                </h1>
+                <hr class="panel-cover__divider" />
+                <p class="panel-cover__description">Bold and Clear, without excess • Kaizen 改善 • With Purpose</p>
+                <hr class="panel-cover__divider panel-cover__divider--secondary" />
+                <p>Studio Zenkai is dedicated to the craft of programming, photography and living sustainably. <a href="https://studiozenkai.com/post/about-heri/">About me</a>  </p>
+                <hr class="panel-cover__divider panel-cover__divider--secondary" />
+                <div class="navigation-wrapper">
+                    <nav class="cover-navigation cover-navigation--primary">
+                        <ul class="navigation">
+                            <li class="navigation__item"><a href="https://studiozenkai.com/post" title="link to Studio Zenkai blog" class="blog-button">Articles</a> </li>
+                            
+                            
+                       </ul>
+                    </nav> <nav class="cover-navigation navigation--social">
+    <ul class="navigation">
+        
+        <li class="navigation__item">
+            <a href="https://twitter.com/heri" title="@heri on Twitter" rel="me nofollow"> <i class='fa fa-twitter'></i> <span
+                    class="label">Twitter</span> </a>
+        </li> 
+        
+        <li class="navigation__item">
+            <a href="https://www.linkedin.com/in/madmedia"
+                title="Heri on linkedin"> <i class='fa fa-linkedin'></i> <span
+                    class="label">LinkedIn</span> </a>
+        </li>
+        
+        <li class="navigation__item">
+            <a href="https://github.com/heri" title="heri on github" rel="me authn"> <i class='fa fa-github'></i> <span
+                    class="label">Github</span> </a>
+        </li>    
+        <li class="navigation__item">
+            <a href="https://www.instagram.com/heri_rakotomalala/" rel="nofollow" title="Heri on Instagram"><i class="fa fa-instagram"></i><span
+                class="label">Instagram</span></a>
+        </li>
+        
+        <li class="navigation__item">
+            <a href="https://medium.com/@heri" title="Medium" rel="nofollow"> <i class='fa fa-medium'></i> <span
+                    class="label">Medium</span> </a>
+        </li>
+        
+        <li class="navigation__item">
+            <a href="mailto:heri@studiozenkai.com" title="Email"> <i class='fa fa-envelope-o'></i> <span
+                    class="label">Email</span> </a>
+        </li>
+    </ul>
+</nav> </div>
+            </div>
+        </div>
+        <div class="panel-cover--overlay"></div>
+    </div>
+</header>
+</div>
+<noscript>
+    <style>
+        #scriptHeader {display:none;}
+        .navigation-wrapper{
+            display: block;
+            top: 0;
+        }
+    </style>
+
+    <header class="panel-cover panel-cover--collapsed" style="background-image: url()">
+        <div class="panel-main">
+            <div class="panel-main__inner panel-inverted">
+                <div class="panel-main__content"> 
+                    <h1 class="panel-cover__title panel-title">
+                        <a href="https://studiozenkai.com/"  title="link to homepage for Heri Rakotomalala">Studio Zenkai</a>
+                    </h1>
+                    <hr class="panel-cover__divider" />
+                    <p class="panel-cover__description">  Studio Zenkai is dedicated to the craft of programming, photography and living sustainably.  </p>
+                    <hr class="panel-cover__divider panel-cover__divider--secondary" />
+                    <div class="navigation-wrapper">
+                        <nav class="cover-navigation cover-navigation--primary">
+                            <ul class="navigation">
+                                <li class="navigation__item"><a href="https://studiozenkai.com/#blog" title="link to Studio Zenkai blog" class="blog-button">Blog</a> </li></br>
+                                
+                                
+                           </ul>
+                        </nav> <nav class="cover-navigation navigation--social">
+    <ul class="navigation">
+        
+        <li class="navigation__item">
+            <a href="https://twitter.com/heri" title="@heri on Twitter" rel="me nofollow"> <i class='fa fa-twitter'></i> <span
+                    class="label">Twitter</span> </a>
+        </li> 
+        
+        <li class="navigation__item">
+            <a href="https://www.linkedin.com/in/madmedia"
+                title="Heri on linkedin"> <i class='fa fa-linkedin'></i> <span
+                    class="label">LinkedIn</span> </a>
+        </li>
+        
+        <li class="navigation__item">
+            <a href="https://github.com/heri" title="heri on github" rel="me authn"> <i class='fa fa-github'></i> <span
+                    class="label">Github</span> </a>
+        </li>    
+        <li class="navigation__item">
+            <a href="https://www.instagram.com/heri_rakotomalala/" rel="nofollow" title="Heri on Instagram"><i class="fa fa-instagram"></i><span
+                class="label">Instagram</span></a>
+        </li>
+        
+        <li class="navigation__item">
+            <a href="https://medium.com/@heri" title="Medium" rel="nofollow"> <i class='fa fa-medium'></i> <span
+                    class="label">Medium</span> </a>
+        </li>
+        
+        <li class="navigation__item">
+            <a href="mailto:heri@studiozenkai.com" title="Email"> <i class='fa fa-envelope-o'></i> <span
+                    class="label">Email</span> </a>
+        </li>
+    </ul>
+</nav> </div>
+                </div>
+            </div>
+            <div class="panel-cover--overlay"></div>
+        </div>
+    </header>
+</noscript>
+
+  <div class="content-wrapper">
+    <div class="content-wrapper__inner">
+      <div class="post">
+        <h1>eval : a security catastrope in waiting</h1>
+        <span class="post-date">Tue, Sep 13, 2022</span>
+        <p>eval is one of Ruby&rsquo;s most powerful methods. It’s also one of its most dangerous. When you use eval, you’re telling Ruby to treat a string as code and execute it. This opens the door to flexibility — but also to catastrophe.</p>
+<p>In Rails, you might find eval used in controllers, views, or even models. Sometimes, teams reach for it to solve challenging business requests in what is deemed &ldquo;a simple way&rdquo;. Let’s explore why this is dangerous and how to prevent it.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">execute_dynamic</span>
+</span></span><span style="display:flex;"><span>  command <span style="color:#f92672">=</span> params<span style="color:#f92672">[</span><span style="color:#e6db74">:command</span><span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>  eval(command)  <span style="color:#75715e"># Executes whatever the user provides</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>A team can add <code>eval</code> for:</p>
+<ul>
+<li>Dynamic Behavior: Business Teams tell developers they have a technical background after their coding crash course and want views to behave dynamically, e.g. to output dynamic reports. They present it often as a win-win scenario, where business get powerful features, and developers ship with less time.</li>
+<li>Quick Prototyping: Developers might reach for eval during a rush, intending to &ldquo;clean it up later.&rdquo;</li>
+<li>Lack of Awareness: Some may not fully understand the risks or inherit legacy codebases that already use eval.</li>
+</ul>
+<h2 id="the-dangers-of-eval">The Dangers of eval</h2>
+<ol>
+<li>Code Injection</li>
+</ol>
+<p>When you use eval, you’re effectively letting attackers run arbitrary code. Imagine this input:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>params<span style="color:#f92672">[</span><span style="color:#e6db74">:command</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;rm -rf /&#34;</span>
+</span></span></code></pre></div><p>A bit cliché, but you see the issue. This destroys all data. Other commands compromise servers, or expose sensitive information.</p>
+<ol start="2">
+<li>Performance Issues</li>
+</ol>
+<p>eval slows your application because it forces Ruby to recompile code at runtime. Overuse cripple performance.</p>
+<ol start="3">
+<li>Hard-to-Debug Code</li>
+</ol>
+<p>Code that relies on eval is harder to read, test, and debug. A nightmare for future maintainers!</p>
+<h2 id="how-do-you-avoid-eval">How do you avoid eval?</h2>
+<p>You can refactor to use safer, more explicit alternatives:</p>
+<p>Instead of this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">execute_dynamic</span>
+</span></span><span style="display:flex;"><span>  eval(params<span style="color:#f92672">[</span><span style="color:#e6db74">:command</span><span style="color:#f92672">]</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>Do this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">execute_dynamic</span>
+</span></span><span style="display:flex;"><span>  commands <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;hello&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#f92672">-&gt;</span> { puts <span style="color:#e6db74">&#39;Hello, world!&#39;</span> },
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;goodbye&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#f92672">-&gt;</span> { puts <span style="color:#e6db74">&#39;Goodbye, world!&#39;</span> }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  command <span style="color:#f92672">=</span> commands<span style="color:#f92672">[</span>params<span style="color:#f92672">[</span><span style="color:#e6db74">:command</span><span style="color:#f92672">]]</span>
+</span></span><span style="display:flex;"><span>  command<span style="color:#f92672">.</span>call <span style="color:#66d9ef">if</span> command
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>If you absolutely must process user input, sanitize it is an option:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">safe_eval</span>(expression)
+</span></span><span style="display:flex;"><span>  safe_methods <span style="color:#f92672">=</span> <span style="color:#e6db74">%w[+ - * /]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">raise</span> <span style="color:#e6db74">&#34;Unsafe expression&#34;</span> <span style="color:#66d9ef">unless</span> expression<span style="color:#f92672">.</span>match?(<span style="color:#e6db74">/^[0-9</span><span style="color:#e6db74">#{</span>safe_methods<span style="color:#f92672">.</span>join<span style="color:#e6db74">}</span><span style="color:#e6db74">]+$/</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  eval(expression)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>This limits the kind of input users can provide.</p>
+<p>Personally, I also find dynamic templates <a href="https://shopify.github.io/liquid/">such as a Liquid</a> a great compromise. Liquid can do string, array and number transformation, supports operators/conditions and iterations. Liquid will NOT execute a command, call a library or query the db, but that is the point. All you have to do is put a system for business people to edit or upload liquid templates.</p>
+<p>When done, enable strong RuboCop rules to prevent eval from sneaking back into your repo:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#75715e"># .rubocop.yml</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Lint</span><span style="color:#f92672">/</span><span style="color:#e6db74">Eval</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">Enabled</span>: <span style="color:#66d9ef">true</span>
+</span></span></code></pre></div><p>Your CI pipeline will then flag any future use of eval.</p>
+<p>But it is not just eval. Make sure to establish a culture of strong security reviews. Add security scanners.</p>
+<p>Ad don&rsquo;t forget, eval is like giving your app a loaded gun. It might do the job, but it’s far too easy to shoot yourself — or worse, your users !</p>
+        <div class="post-tags"><a href="https://studiozenkai.com/tags/software/" >Software</a>        <a href="https://studiozenkai.com/tags/ruby/" >Ruby</a>        <a href="https://studiozenkai.com/tags/security/" >Security</a>        </div>
+        <div class="sharing">
+<p>© Heri Rakotomalala. All rights reserved. Powered by <a href="https://www.digitalocean.com/?refcode=ef57f6ccd2d8">Digital Ocean</a> and <a href="https://github.com/heri">Github</a></p>
+
+<p>Heri Rakotomalala is an engineer working on small and innovative projects in Montréal. Originally from Madagascar, he has lived 7 years in East Africa, studied Engineering and made friends in France, built a community center in Esteli, Nicaragua and is taking pictures and coding in Montréal, Canada. This site cover technology work. Read <a href="https://studiozenkai.com/post/about-heri/">more about Heri</a></p>
+
+</div>
+
+        
+
+
+      </div>
+    </div>
+  </div>
+
+</body>
+
+
+</html>

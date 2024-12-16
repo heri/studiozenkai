@@ -187,7 +187,7 @@ end
 
 ## 10. **Remove Sensitive Data from Logs**
 
-Log files are typically not as well secured as db, yet they might contain sensitive data. You might have a team member who made prod logs viewable by Kibana and thought it was secured because he is using an IP Address.
+Log files are typically not as well secured as db, yet they might contain sensitive data. You might have a team member who made sent logs to Kibana ES and made them viewable without requiring credentials (ie security by obsfucation)
 
 ```ruby
 # in config/application.rb:
@@ -201,7 +201,7 @@ No more passwords in log files!
 
 *Bonust* Monitoring and alerts are not only for devops! Tools like Sentry, DataDog or New Relic allows you to detect unusual patterns such as excessive failed updates. As soon as an application is live, make sure to set these up.
 
-## Final Secoured Endpoint:
+## Final Secured Endpoint:
 
 ```ruby
 

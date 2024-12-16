@@ -3,72 +3,83 @@ title = "Chalet Party"
 tags = ['chalet', 'personal']
 +++
 
-On quitte la ville, bye bye le béton,  
-Passé les banlieues, les montagnes, le vallon.  
-Dans le fond du rang, le chemin nous appelle,  
-Le chalet nous attend, c’est là qu’on rit, c’est là qu’on s’rapproche.  
+On quitte la ville, bye le béton  
+(Béton!)  
+Les montagnes nous appellent, au fond du vallon  
+(Chalet!)  
+Le voisin arrive, pelle dans la main  
+“On ouvre le vin, allez viens!”  
+(Viens!)
 
 ![chalet pelle](/images/1_chalet_party.jpeg)
 
-Le voisin débarque, une pelle dans la main,  
-“On dégage ça vite, pis on ouvre le vin!”  
-On blague, on chante, on perd pas une seconde,  
-À midi, c’est raclette, tout le monde!  
-
 [Refrain]  
-Ohé ohé, dans l’bois, loin d’la ville!  
-On s’amuse comme des fous, dans la neige, tranquille.  
-Ohé ohé, c’est l’bonheur garanti,  
-Fondue, raclette, marshmallows et mélodie!
+Ohé ohé, loin d’la ville!  
+On s’amuse dans la neige, tranquille.  
+Ohé ohé, viens danser,  
+Fondue, raclette, marshmallows grillés! 
 
 ![chalet foret](/images/2_chalet_party.jpeg)
 
-On s’habille chaud, on s’pousse dans la forêt,  
-Pieds dans la neige, pas un bruit, juste la paix.  
-Les arbres tout blancs, la nature en folie,  
-Mais après une heure, on est gelés, c’est fini!  
+On sort dehors, pieds dans la neige  
+(Neige!)  
+Les arbres blancs, on suit leur cortège  
+(Silence...)  
+Une heure plus tard, on gèle de partout  
+(Courons!)  
+Retour au feu, fromage partout!  
+(Partout!)  
 
 ![chalet neige gelé](/images/3_chalet_party.jpeg)
 ![chalet fondue tartiflette](/images/4_chalet_party.jpeg)
 
-On rentre au chalet, le feu déjà allumé,  
-Des montagnes de fromage, des bouteilles bien sabrées.  
-La musique embarque, pis tout l’monde se met à danser,  
-Ce soir, c’est une fête qu’on va jamais oublier.
+Le soir arrive, la musique démarre  
+(Démarre!)  
+Les verres se lèvent, on oublie l’hiver  
+(Santé!)  
+Le bois craque, les rires éclatent  
+(Craque!)  
+Une fête qu’on oubliera pas!  
+(Pas!)
+
 
 ![chalet marshmallows](/images/5_chalet_party.jpeg)
 
 
 [Refrain]  
-Ohé ohé, dans l’bois, loin d’la ville!  
-On s’amuse comme des fous, dans la neige, tranquille.  
-Ohé ohé, c’est l’bonheur garanti,  
-Fondue, raclette, marshmallows et mélodie!
+Ohé ohé, loin d’la ville!  
+On s’amuse dans la neige, tranquille.  
+Ohé ohé, viens danser,  
+Fondue, raclette, marshmallows grillés! 
 
 ![chalet gauffres](/images/6_chalet_party.jpeg)
 ![chalet sapin](/images/7_chalet_party.jpeg)
 
-Le lendemain, des gaufres à la crème fouettée,  
-Café spécial qui réchauffe la matinée.  
-Midi arrive, BBQ à moins vingt,  
-Saucisses et vin blanc, c’est l’fun, ça s’éteint pas!
+Le matin gaufres, crème fouettée  
+(Fouettée!)  
+Le café spécial, parfait pour la journée  
+(Journée!)  
+À midi, BBQ sous le froid  
+(Moins vingt!)  
+Saucisses et vin blanc, c’est comme ça!  
+(Ça!)
 
 ![chalet bbq](/images/8_chalet_party.jpeg)
 ![chalet spa](/images/9_chalet_party.jpeg)
 
-En courant tout nus, on saute dans le spa,  
-38 degrés, des bulles, des éclats.  
-On rit, on hurle, on profite du moment,  
-C’est l’paradis québécois, pis c’est bien évident!
+Le spa nous attend, c’est le paradis  
+(Paradis!)  
+Des bulles, des rires, des amis!  
+(Rires!)  
+On plonge, on chante, on vit l’instant  
+(Vivons!)  
+Québec en hiver, c’est grand!  
+(Grand!)
 
-Ohé ohé, dans l’bois, loin d’la ville!  
-On s’amuse comme des fous, dans la neige, tranquille.  
-Ohé ohé, c’est l’bonheur garanti,  
-Fondue, raclette, marshmallows et mélodie!  
+Ohé ohé, loin d’la ville!  
+On s’amuse dans la neige, tranquille.  
+Ohé ohé, viens danser,  
+Fondue, raclette, marshmallows grillés! 
 
-![chalet spa](/images/10_chalet_party.jpeg)
 
-Sur le chemin du retour, les chevreuils dansent,  
-On leur dit bye bye, pis “À la prochaine chance!”  
-Le chalet nous appelle déjà pour l’hiver,  
-Avec nos amis, on y vivra encore l’enfer.  
+![chalet deer](/images/10_chalet_party.jpeg)

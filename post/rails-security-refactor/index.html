@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Securing a Rails endpoint &middot; Software, photography, and sustainability articles by Heri </title>
+    
+      <meta name="description" content="Here is a typical Rails endpoint:
+
+def update_user
+  user = User.find_by(id: params[:id])
+  
+  if user.update(params[:user])
+    render json: { success: true, message: &#34;User updated successfully&#34; }
+  else
+    render json: { success: false, errors: user.errors.full_messages }, status: :unprocessable_entity
+  end
+end
+Readable, simple, error handling. But insecure. What can we do?
+1. Strong Parameters
+The endpoint allows mass assignement a User record.
+Safe attributes prevents this by explicity enumerating attributes that can be safely updated.
+def update_user
+  user = User.find_by(id: params[:id])
+  
+  if user.update(user_params)
+    render json: { success: true, message: &#34;User updated successfully&#34; }
+  else
+    render json: { success: false, errors: user.errors.full_messages }, status: :unprocessable_entity
+  end
+end
+
+def user_params
+  params.require(:user).permit(:name, :email, :password)
+end
+Imagine a field titled salary or super_secret_fees, that are computed from work hours and company algorithms. Without safe attributes, the current endpoint can set a much higher salary!">
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://studiozenkai.com/css/uno.css" />
+    <link rel="stylesheet" type="text/css" href="https://studiozenkai.com/css/lightGallery.css" />
+    
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    
+    <link rel="webmention" href="https://webmention.io/studiozenkai.com/webmention" />
+    <link rel="pingback" href="https://webmention.io/studiozenkai.com/xmlrpc" />
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://studiozenkai.com/js/main.min.js">
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <script>
+      MathJax = {
+        tex: {
+          displayMath: [['\\[', '\\]'], ['$$', '$$']],  
+          inlineMath: [['\\(', '\\)']]                  
+        }
+      };
+    </script>
+</head>
+
+<body>
+  <div id="scriptHeader">
+    <span class="mobile btn-mobile-menu">
+            <i class="fa fa-bars btn-mobile-menu__icon"></i>
+            <i class="fa fa-times btn-mobile-close__icon hidden"> </i>
+    </span>
+    <header class="
+        
+            panel-cover panel-cover--collapsed
+        " >
+    <div class="panel-main">
+        <div class="panel-main__inner panel-inverted">
+            <div class="panel-main__content"> 
+                <h1 class="panel-cover__title panel-title">
+                    <a href="https://studiozenkai.com/"  title="link to homepage for Heri Rakotomalala">Studio Zenkai</a>
+                </h1>
+                <hr class="panel-cover__divider" />
+                <p class="panel-cover__description">Bold and Clear, without excess • Kaizen 改善 • With Purpose</p>
+                <hr class="panel-cover__divider panel-cover__divider--secondary" />
+                <p>Studio Zenkai is dedicated to the craft of programming, photography and living sustainably. <a href="https://studiozenkai.com/post/about-heri/">About me</a>  </p>
+                <hr class="panel-cover__divider panel-cover__divider--secondary" />
+                <div class="navigation-wrapper">
+                    <nav class="cover-navigation cover-navigation--primary">
+                        <ul class="navigation">
+                            <li class="navigation__item"><a href="https://studiozenkai.com/post" title="link to Studio Zenkai blog" class="blog-button">Articles</a> </li>
+                            
+                            
+                       </ul>
+                    </nav> <nav class="cover-navigation navigation--social">
+    <ul class="navigation">
+        
+        <li class="navigation__item">
+            <a href="https://twitter.com/heri" title="@heri on Twitter" rel="me nofollow"> <i class='fa fa-twitter'></i> <span
+                    class="label">Twitter</span> </a>
+        </li> 
+        
+        <li class="navigation__item">
+            <a href="https://www.linkedin.com/in/madmedia"
+                title="Heri on linkedin"> <i class='fa fa-linkedin'></i> <span
+                    class="label">LinkedIn</span> </a>
+        </li>
+        
+        <li class="navigation__item">
+            <a href="https://github.com/heri" title="heri on github" rel="me authn"> <i class='fa fa-github'></i> <span
+                    class="label">Github</span> </a>
+        </li>    
+        <li class="navigation__item">
+            <a href="https://www.instagram.com/heri_rakotomalala/" rel="nofollow" title="Heri on Instagram"><i class="fa fa-instagram"></i><span
+                class="label">Instagram</span></a>
+        </li>
+        
+        <li class="navigation__item">
+            <a href="https://medium.com/@heri" title="Medium" rel="nofollow"> <i class='fa fa-medium'></i> <span
+                    class="label">Medium</span> </a>
+        </li>
+        
+        <li class="navigation__item">
+            <a href="mailto:heri@studiozenkai.com" title="Email"> <i class='fa fa-envelope-o'></i> <span
+                    class="label">Email</span> </a>
+        </li>
+    </ul>
+</nav> </div>
+            </div>
+        </div>
+        <div class="panel-cover--overlay"></div>
+    </div>
+</header>
+</div>
+<noscript>
+    <style>
+        #scriptHeader {display:none;}
+        .navigation-wrapper{
+            display: block;
+            top: 0;
+        }
+    </style>
+
+    <header class="panel-cover panel-cover--collapsed" style="background-image: url()">
+        <div class="panel-main">
+            <div class="panel-main__inner panel-inverted">
+                <div class="panel-main__content"> 
+                    <h1 class="panel-cover__title panel-title">
+                        <a href="https://studiozenkai.com/"  title="link to homepage for Heri Rakotomalala">Studio Zenkai</a>
+                    </h1>
+                    <hr class="panel-cover__divider" />
+                    <p class="panel-cover__description">  Studio Zenkai is dedicated to the craft of programming, photography and living sustainably.  </p>
+                    <hr class="panel-cover__divider panel-cover__divider--secondary" />
+                    <div class="navigation-wrapper">
+                        <nav class="cover-navigation cover-navigation--primary">
+                            <ul class="navigation">
+                                <li class="navigation__item"><a href="https://studiozenkai.com/#blog" title="link to Studio Zenkai blog" class="blog-button">Blog</a> </li></br>
+                                
+                                
+                           </ul>
+                        </nav> <nav class="cover-navigation navigation--social">
+    <ul class="navigation">
+        
+        <li class="navigation__item">
+            <a href="https://twitter.com/heri" title="@heri on Twitter" rel="me nofollow"> <i class='fa fa-twitter'></i> <span
+                    class="label">Twitter</span> </a>
+        </li> 
+        
+        <li class="navigation__item">
+            <a href="https://www.linkedin.com/in/madmedia"
+                title="Heri on linkedin"> <i class='fa fa-linkedin'></i> <span
+                    class="label">LinkedIn</span> </a>
+        </li>
+        
+        <li class="navigation__item">
+            <a href="https://github.com/heri" title="heri on github" rel="me authn"> <i class='fa fa-github'></i> <span
+                    class="label">Github</span> </a>
+        </li>    
+        <li class="navigation__item">
+            <a href="https://www.instagram.com/heri_rakotomalala/" rel="nofollow" title="Heri on Instagram"><i class="fa fa-instagram"></i><span
+                class="label">Instagram</span></a>
+        </li>
+        
+        <li class="navigation__item">
+            <a href="https://medium.com/@heri" title="Medium" rel="nofollow"> <i class='fa fa-medium'></i> <span
+                    class="label">Medium</span> </a>
+        </li>
+        
+        <li class="navigation__item">
+            <a href="mailto:heri@studiozenkai.com" title="Email"> <i class='fa fa-envelope-o'></i> <span
+                    class="label">Email</span> </a>
+        </li>
+    </ul>
+</nav> </div>
+                </div>
+            </div>
+            <div class="panel-cover--overlay"></div>
+        </div>
+    </header>
+</noscript>
+
+  <div class="content-wrapper">
+    <div class="content-wrapper__inner">
+      <div class="post">
+        <h1>Securing a Rails endpoint</h1>
+        <span class="post-date">Fri, Oct 6, 2023</span>
+        <p>Here is a typical Rails endpoint:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">update_user</span>
+</span></span><span style="display:flex;"><span>  user <span style="color:#f92672">=</span> <span style="color:#66d9ef">User</span><span style="color:#f92672">.</span>find_by(id: params<span style="color:#f92672">[</span><span style="color:#e6db74">:id</span><span style="color:#f92672">]</span>)
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> user<span style="color:#f92672">.</span>update(params<span style="color:#f92672">[</span><span style="color:#e6db74">:user</span><span style="color:#f92672">]</span>)
+</span></span><span style="display:flex;"><span>    render <span style="color:#e6db74">json</span>: { <span style="color:#e6db74">success</span>: <span style="color:#66d9ef">true</span>, <span style="color:#e6db74">message</span>: <span style="color:#e6db74">&#34;User updated successfully&#34;</span> }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>    render <span style="color:#e6db74">json</span>: { <span style="color:#e6db74">success</span>: <span style="color:#66d9ef">false</span>, <span style="color:#e6db74">errors</span>: user<span style="color:#f92672">.</span>errors<span style="color:#f92672">.</span>full_messages }, <span style="color:#e6db74">status</span>: <span style="color:#e6db74">:unprocessable_entity</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>Readable, simple, error handling. But insecure. What can we do?</p>
+<h2 id="1-strong-parameters">1. <strong>Strong Parameters</strong></h2>
+<p>The endpoint allows mass assignement a User record.</p>
+<p>Safe attributes prevents this by explicity enumerating attributes that can be safely updated.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">update_user</span>
+</span></span><span style="display:flex;"><span>  user <span style="color:#f92672">=</span> <span style="color:#66d9ef">User</span><span style="color:#f92672">.</span>find_by(id: params<span style="color:#f92672">[</span><span style="color:#e6db74">:id</span><span style="color:#f92672">]</span>)
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> user<span style="color:#f92672">.</span>update(user_params)
+</span></span><span style="display:flex;"><span>    render <span style="color:#e6db74">json</span>: { <span style="color:#e6db74">success</span>: <span style="color:#66d9ef">true</span>, <span style="color:#e6db74">message</span>: <span style="color:#e6db74">&#34;User updated successfully&#34;</span> }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>    render <span style="color:#e6db74">json</span>: { <span style="color:#e6db74">success</span>: <span style="color:#66d9ef">false</span>, <span style="color:#e6db74">errors</span>: user<span style="color:#f92672">.</span>errors<span style="color:#f92672">.</span>full_messages }, <span style="color:#e6db74">status</span>: <span style="color:#e6db74">:unprocessable_entity</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">user_params</span>
+</span></span><span style="display:flex;"><span>  params<span style="color:#f92672">.</span>require(<span style="color:#e6db74">:user</span>)<span style="color:#f92672">.</span>permit(<span style="color:#e6db74">:name</span>, <span style="color:#e6db74">:email</span>, <span style="color:#e6db74">:password</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>Imagine a field titled <code>salary</code> or <code>super_secret_fees</code>, that are computed from work hours and company algorithms. Without safe attributes, the current endpoint can set a much higher salary!</p>
+<h2 id="2-authenticate-the-user">2. <strong>Authenticate the User</strong></h2>
+<p>The endpoint lacks user authentication. Any endpoint that change or delete database records must require some form of secure authentication</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#75715e">#   Ensures the user is logged in and valid.</span>
+</span></span><span style="display:flex;"><span>before_action <span style="color:#e6db74">:authenticate_user!</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">update_user</span>
+</span></span><span style="display:flex;"><span>  user <span style="color:#f92672">=</span> current_user
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> user<span style="color:#f92672">.</span>update(user_params)
+</span></span><span style="display:flex;"><span>    render <span style="color:#e6db74">json</span>: { <span style="color:#e6db74">success</span>: <span style="color:#66d9ef">true</span>, <span style="color:#e6db74">message</span>: <span style="color:#e6db74">&#34;User updated successfully&#34;</span> }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>    render <span style="color:#e6db74">json</span>: { <span style="color:#e6db74">success</span>: <span style="color:#66d9ef">false</span>, <span style="color:#e6db74">errors</span>: user<span style="color:#f92672">.</span>errors<span style="color:#f92672">.</span>full_messages }, <span style="color:#e6db74">status</span>: <span style="color:#e6db74">:unprocessable_entity</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>Without authentication, a script can iterate to change all user records.</p>
+<h2 id="3-authorize-the-action">3. <strong>Authorize the Action</strong></h2>
+<p>The user might be authentified, but it could be a user without the required role or authorization.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">update_user</span>
+</span></span><span style="display:flex;"><span>  user <span style="color:#f92672">=</span> current_user
+</span></span><span style="display:flex;"><span>  authorize user
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> user<span style="color:#f92672">.</span>update(user_params)
+</span></span><span style="display:flex;"><span>    render <span style="color:#e6db74">json</span>: { <span style="color:#e6db74">success</span>: <span style="color:#66d9ef">true</span>, <span style="color:#e6db74">message</span>: <span style="color:#e6db74">&#34;User updated successfully&#34;</span> }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>    render <span style="color:#e6db74">json</span>: { <span style="color:#e6db74">success</span>: <span style="color:#66d9ef">false</span>, <span style="color:#e6db74">errors</span>: user<span style="color:#f92672">.</span>errors<span style="color:#f92672">.</span>full_messages }, <span style="color:#e6db74">status</span>: <span style="color:#e6db74">:unprocessable_entity</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>In this case, the user data should be editable by its owner, the current user. In other cases, you can also allow admins or account manager to administrate data, while still making sure policies are followed</p>
+<h2 id="4-add-input-validation">4. <strong>Add Input Validation</strong></h2>
+<p>The user might bypass the form and send in incorrect input to crash your application, have access to the db, ie look for epxloits.</p>
+<p>Inputs should be validated before passing them on</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">user_params</span>
+</span></span><span style="display:flex;"><span>  params<span style="color:#f92672">.</span>require(<span style="color:#e6db74">:user</span>)<span style="color:#f92672">.</span>permit(<span style="color:#e6db74">:name</span>, <span style="color:#e6db74">:email</span>, <span style="color:#e6db74">:password</span>)<span style="color:#f92672">.</span>tap <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>whitelisted<span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">raise</span> <span style="color:#66d9ef">ArgumentError</span>, <span style="color:#e6db74">&#34;Invalid name&#34;</span> <span style="color:#66d9ef">unless</span> whitelisted<span style="color:#f92672">[</span><span style="color:#e6db74">:name</span><span style="color:#f92672">].</span>match?(<span style="color:#e6db74">/\A[a-zA-Z]+\z/</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>An alternative to above is to use ActiveRecord validation, if the team also expects to update records through jobs or services.</p>
+<h2 id="5-implement-rate-limiting">5. <strong>Implement Rate Limiting</strong></h2>
+<p>Brute force attacks are performed so your server or your database stop providing its service or leak sensitive information.</p>
+<p>For example, if your service provides an essential service to the country&rsquo;s citizen, a state-actor can brute force endpoints so normal users cannot use the service, thereby disrupting essential services.</p>
+<p>A gem like Rack::Attack prevents brute force or abuse.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#75715e"># in config/initializers/rack_attack.rb</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Rack</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Attack</span><span style="color:#f92672">.</span>throttle(<span style="color:#e6db74">&#34;requests by IP&#34;</span>, <span style="color:#e6db74">limit</span>: <span style="color:#ae81ff">5</span>, <span style="color:#e6db74">period</span>: <span style="color:#ae81ff">1</span><span style="color:#f92672">.</span>minute) <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>req<span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span>  req<span style="color:#f92672">.</span>ip <span style="color:#66d9ef">if</span> req<span style="color:#f92672">.</span>path <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;/users/update&#34;</span> <span style="color:#f92672">&amp;&amp;</span> req<span style="color:#f92672">.</span>post?
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>It is also possible to throttle requests by user, or other parts of the request header. If this is an issue, you can also add dedicated rate limiters in front your system.</p>
+<h2 id="6-sanitize-inputs">6. <strong>Sanitize Inputs</strong></h2>
+<p>In addition to input validation above, you can take steps so queries do not make the application fail, regardless of user inputs</p>
+<p>Converting inputs to string such as below make sure the database doesn&rsquo;t throw an exception.</p>
+<p>Also using <code>find_by</code> will let Rails fail gracefully</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">update_user</span>
+</span></span><span style="display:flex;"><span>  user <span style="color:#f92672">=</span> <span style="color:#66d9ef">User</span><span style="color:#f92672">.</span>find_by(id: params<span style="color:#f92672">[</span><span style="color:#e6db74">:id</span><span style="color:#f92672">].</span>to_i)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> user<span style="color:#f92672">.</span>update(user_params)
+</span></span><span style="display:flex;"><span>    render <span style="color:#e6db74">json</span>: { <span style="color:#e6db74">success</span>: <span style="color:#66d9ef">true</span>, <span style="color:#e6db74">message</span>: <span style="color:#e6db74">&#34;User updated successfully&#34;</span> }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>    render <span style="color:#e6db74">json</span>: { <span style="color:#e6db74">success</span>: <span style="color:#66d9ef">false</span>, <span style="color:#e6db74">errors</span>: user<span style="color:#f92672">.</span>errors<span style="color:#f92672">.</span>full_messages }, <span style="color:#e6db74">status</span>: <span style="color:#e6db74">:unprocessable_entity</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><h2 id="7-restricting-verbiose-outputs">7. <strong>Restricting verbiose outputs</strong></h2>
+<p><code>user.errors.full_messages</code> will tell users about business and data rules.</p>
+<p>For example, it migth show all password rules, address requirements, invalid hostnames and more.</p>
+<p>Send filtered error messages to prevent hackers knowing the limits of your system.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">update_user</span>
+</span></span><span style="display:flex;"><span>  user <span style="color:#f92672">=</span> <span style="color:#66d9ef">User</span><span style="color:#f92672">.</span>find_by(id: params<span style="color:#f92672">[</span><span style="color:#e6db74">:id</span><span style="color:#f92672">].</span>to_i)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> user<span style="color:#f92672">.</span>update(user_params)
+</span></span><span style="display:flex;"><span>    render <span style="color:#e6db74">json</span>: { <span style="color:#e6db74">success</span>: <span style="color:#66d9ef">true</span>, <span style="color:#e6db74">message</span>: <span style="color:#e6db74">&#34;User updated successfully&#34;</span> }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>    render <span style="color:#e6db74">json</span>: { <span style="color:#e6db74">success</span>: <span style="color:#66d9ef">false</span>, <span style="color:#e6db74">errors</span>: user<span style="color:#f92672">.</span>errors<span style="color:#f92672">.</span>map(<span style="color:#f92672">&amp;</span><span style="color:#e6db74">:code</span>)<span style="color:#f92672">.</span>map(<span style="color:#f92672">&amp;</span><span style="color:#e6db74">:codebook_to_en</span>) }, <span style="color:#e6db74">status</span>: <span style="color:#e6db74">:unprocessable_entity</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>Here, a codebook will translate Rails errors to human-readable messages, while making sure system details are not communicated.</p>
+<h2 id="8-implement-csrf-protection">8. <strong>Implement CSRF Protection</strong></h2>
+<p>Ensure CSRF tokens are verified for API requests.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#75715e"># in ApplicationController</span>
+</span></span><span style="display:flex;"><span>before_action <span style="color:#e6db74">:verify_authenticity_token</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Alternatively, for APIs:</span>
+</span></span><span style="display:flex;"><span>before_action <span style="color:#e6db74">:verify_authenticity_token</span>, <span style="color:#66d9ef">unless</span>: <span style="color:#f92672">-&gt;</span> { request<span style="color:#f92672">.</span>format<span style="color:#f92672">.</span>json? }
+</span></span></code></pre></div><h2 id="9-enforce-https">9. <strong>Enforce HTTPS</strong></h2>
+<p>non-HTTPS requests are not secure and should be rejected</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#75715e"># in ApplicationController</span>
+</span></span><span style="display:flex;"><span>before_action <span style="color:#e6db74">:ensure_secure_connection</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">ensure_secure_connection</span>
+</span></span><span style="display:flex;"><span>  redirect_to <span style="color:#e6db74">protocol</span>: <span style="color:#e6db74">&#34;https://&#34;</span>, <span style="color:#e6db74">status</span>: <span style="color:#e6db74">:moved_permanently</span> <span style="color:#66d9ef">unless</span> request<span style="color:#f92672">.</span>ssl?
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><h2 id="10-remove-sensitive-data-from-logs">10. <strong>Remove Sensitive Data from Logs</strong></h2>
+<p>Log files are typically not as well secured as db, yet they might contain sensitive data. You might have a team member who made prod logs viewable by Kibana and thought it was secured because he is using an IP Address.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#75715e"># in config/application.rb:</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Rack</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Attack</span><span style="color:#f92672">.</span>throttle(<span style="color:#e6db74">&#34;requests by IP&#34;</span>, <span style="color:#e6db74">limit</span>: <span style="color:#ae81ff">5</span>, <span style="color:#e6db74">period</span>: <span style="color:#ae81ff">1</span><span style="color:#f92672">.</span>minute) <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>req<span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span>  req<span style="color:#f92672">.</span>ip <span style="color:#66d9ef">if</span> req<span style="color:#f92672">.</span>path <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;/users/update&#34;</span> <span style="color:#f92672">&amp;&amp;</span> req<span style="color:#f92672">.</span>post?
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Rails</span><span style="color:#f92672">.</span>application<span style="color:#f92672">.</span>config<span style="color:#f92672">.</span>filter_parameters <span style="color:#f92672">+=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">:password</span>, <span style="color:#e6db74">:credit_card</span><span style="color:#f92672">]</span>
+</span></span></code></pre></div><p>No more passwords in log files!</p>
+<p><em>Bonust</em> Monitoring and alerts are not only for devops! Tools like Sentry, DataDog or New Relic allows you to detect unusual patterns such as excessive failed updates. As soon as an application is live, make sure to set these up.</p>
+<h2 id="final-secoured-endpoint">Final Secoured Endpoint:</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># in config/application.rb:</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Rails</span><span style="color:#f92672">.</span>application<span style="color:#f92672">.</span>config<span style="color:#f92672">.</span>filter_parameters <span style="color:#f92672">+=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">:password</span>, <span style="color:#e6db74">:credit_card</span><span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>before_action <span style="color:#e6db74">:verify_authenticity_token</span>
+</span></span><span style="display:flex;"><span>before_action <span style="color:#e6db74">:authenticate_user!</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">update_user</span>
+</span></span><span style="display:flex;"><span>  user <span style="color:#f92672">=</span> <span style="color:#66d9ef">User</span><span style="color:#f92672">.</span>find_by(id: params<span style="color:#f92672">[</span><span style="color:#e6db74">:id</span><span style="color:#f92672">].</span>to_i)
+</span></span><span style="display:flex;"><span>  authorize user
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> user<span style="color:#f92672">.</span>update(user_params)
+</span></span><span style="display:flex;"><span>    render <span style="color:#e6db74">json</span>: { <span style="color:#e6db74">success</span>: <span style="color:#66d9ef">true</span>, <span style="color:#e6db74">message</span>: <span style="color:#e6db74">&#34;User updated successfully&#34;</span> }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>    render <span style="color:#e6db74">json</span>: { <span style="color:#e6db74">success</span>: <span style="color:#66d9ef">false</span>, <span style="color:#e6db74">errors</span>: user<span style="color:#f92672">.</span>errors<span style="color:#f92672">.</span>map(<span style="color:#f92672">&amp;</span><span style="color:#e6db74">:code</span>)<span style="color:#f92672">.</span>map(<span style="color:#f92672">&amp;</span><span style="color:#e6db74">:codebook_to_en</span>) }, <span style="color:#e6db74">status</span>: <span style="color:#e6db74">:unprocessable_entity</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">user_params</span>
+</span></span><span style="display:flex;"><span>  params<span style="color:#f92672">.</span>require(<span style="color:#e6db74">:user</span>)<span style="color:#f92672">.</span>permit(<span style="color:#e6db74">:name</span>, <span style="color:#e6db74">:email</span>, <span style="color:#e6db74">:password</span>) <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>whitelisted<span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">raise</span> <span style="color:#66d9ef">ArgumentError</span>, <span style="color:#e6db74">&#34;Invalid name&#34;</span> <span style="color:#66d9ef">unless</span> whitelisted<span style="color:#f92672">[</span><span style="color:#e6db74">:name</span><span style="color:#f92672">].</span>match?(<span style="color:#e6db74">/\A[a-zA-Z]+\z/</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div>
+        <div class="post-tags"><a href="https://studiozenkai.com/tags/software/" >Software</a>        <a href="https://studiozenkai.com/tags/ruby/" >Ruby</a>        <a href="https://studiozenkai.com/tags/security/" >Security</a>        </div>
+        <div class="sharing">
+<p>© Heri Rakotomalala. All rights reserved. Powered by <a href="https://www.digitalocean.com/?refcode=ef57f6ccd2d8">Digital Ocean</a> and <a href="https://github.com/heri">Github</a></p>
+
+<p>Heri Rakotomalala is an engineer working on small and innovative projects in Montréal. Originally from Madagascar, he has lived 7 years in East Africa, studied Engineering and made friends in France, built a community center in Esteli, Nicaragua and is taking pictures and coding in Montréal, Canada. This site cover technology work. Read <a href="https://studiozenkai.com/post/about-heri/">more about Heri</a></p>
+
+</div>
+
+        
+
+
+      </div>
+    </div>
+  </div>
+
+</body>
+
+
+</html>

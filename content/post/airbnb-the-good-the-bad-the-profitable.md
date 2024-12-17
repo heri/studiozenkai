@@ -4,7 +4,7 @@ title = "Airbnb Hosting: The Good, The Bad and The Profitable"
 tags = ['airbnb', 'entrepreneurship', 'personal', 'montréal', 'photography', 'sustainable']
 +++
 
-During the pandemic, I bought [a vacation property in the Laurentians](https://studiozenkai.com/post/airbnb-vacation-home/), as an escape for the family but also for short-term rental on Airbnb.
+During the pandemic, I bought [a vacation property in the Laurentians](https://studiozenkai.com/post/airbnb-vacation-home/) for short-term rental on Airbnb and for [priceless family moments](https://studiozenkai.com/post/chalet-life/)
 
 The chalet ([official website](https://auchaletrouge.com)) is waterfront on 2 acres, has the typical log home look that many vacationers look for, and while being secluded in nature, has many modern amenities such as a spa, fully furnished kitchen, 4K TV with hi-speed Internet, indoor & outdoor fire pits, a high-end aluminium & cedar dock with boats, and so on.
 
@@ -114,4 +114,4 @@ Where:
 * Have a plan to cut down costs. You might clean yourself. You could market your own website and leverage social media. You could build a property made of stainless steel so even toddlers or party goers  cannot break anything. 
 * Have a plan to cut down on maintenance. In summer, I absolutely need to go to the property every 20 days otherwise there will dozens of broken amenities. The more amenities you have, the more maintenance is needed. Think hard how you can go around this.
 
-It does sound a lot like work now, and I would not recommend it to most people. You need a family and a job that allows it. You will get your hands dirty. If needed, you need to be able to pay expenses out of pocket for six months. Was it worth it though? Totally! As you can see from the pictures, me & my family enjoyed it and have priceless memories and life learnings that cannot be duplicated, and that goes above everything.
+It does sound a lot like work now, and I would not recommend it to most people. You need a family and a job that allows it. You will get your hands dirty. If needed, you need to be able to pay expenses out of pocket for six months. Was it worth it though? Totally! As you can see from the pictures here or [here](https://studiozenkai.com/post/chalet-life/), me & my family enjoyed it and have priceless memories and life learnings that cannot be duplicated, and that goes above everything.

@@ -195,18 +195,23 @@
 <p>Fetching all products can be expensive if the database is large. Let&rsquo;s reduce the number of records fetched at once.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">index</span>
 </span></span><span style="display:flex;"><span>  @products <span style="color:#f92672">=</span> <span style="color:#66d9ef">Product</span><span style="color:#f92672">.</span>page(params<span style="color:#f92672">[</span><span style="color:#e6db74">:page</span><span style="color:#f92672">]</span>)<span style="color:#f92672">.</span>per(<span style="color:#ae81ff">20</span>)
-</span></span><span style="display:flex;"><span>  render <span style="color:#e6db74">json</span>: @products
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">...</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
 </span></span></code></pre></div><p>It is set at 20 in this example, but it can be a parameter or a different value, based on customer needs.</p>
 <h2 id="2-preload-associations">2. <strong>Preload Associations</strong></h2>
 <p>Eager load reviews and categories reduce queries. Calculating <code>average_rating</code> for each product causes N+1 queries. Mapping categories for each product adds additional N+1 queries.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">index</span>
 </span></span><span style="display:flex;"><span>  @products <span style="color:#f92672">=</span> <span style="color:#66d9ef">Product</span><span style="color:#f92672">.</span>includes(<span style="color:#e6db74">:reviews</span>, <span style="color:#e6db74">:categories</span>)<span style="color:#f92672">.</span>page(params<span style="color:#f92672">[</span><span style="color:#e6db74">:page</span><span style="color:#f92672">]</span>)<span style="color:#f92672">.</span>per(<span style="color:#ae81ff">20</span>)
-</span></span><span style="display:flex;"><span>  render <span style="color:#e6db74">json</span>: @products
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">...</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
-</span></span></code></pre></div><p>Now it is down to three database queries.</p>
-<h2 id="3-database-calculations">3. <strong>Database Calculations</strong></h2>
-<p>Whatever Ruby uses for calculating averages, database level calculation will be faster. There is no type casting, no formatting etc.</p>
+</span></span></code></pre></div><p>No more N+1 queries</p>
+<h2 id="3-indexing">3. <strong>Indexing</strong></h2>
+<p>If you haven&rsquo;t already, make sure to add indexes on joined or searched columns</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#75715e"># db/migrate/add_indexes_to_reviews_and_categories.rb</span>
+</span></span><span style="display:flex;"><span>add_index <span style="color:#e6db74">:reviews</span>, <span style="color:#e6db74">:product_id</span>
+</span></span><span style="display:flex;"><span>add_index <span style="color:#e6db74">:categories_products</span>, <span style="color:#f92672">[</span><span style="color:#e6db74">:category_id</span>, <span style="color:#e6db74">:product_id</span><span style="color:#f92672">]</span>
+</span></span></code></pre></div><h2 id="4-database-calculations">4. <strong>Database Calculations</strong></h2>
+<p>Whatever Ruby uses for calculating averages, database level calculation will be faster. There is no type casting, no formatting, no N loops etc.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">index</span>
 </span></span><span style="display:flex;"><span>  @products <span style="color:#f92672">=</span> <span style="color:#66d9ef">Product</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">.</span>select(<span style="color:#e6db74">&#34;products.*, AVG(reviews.rating) as average_rating&#34;</span>)
@@ -215,30 +220,63 @@
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">.</span>includes(<span style="color:#e6db74">:categories</span>)
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">.</span>page(params<span style="color:#f92672">[</span><span style="color:#e6db74">:page</span><span style="color:#f92672">]</span>)<span style="color:#f92672">.</span>per(<span style="color:#ae81ff">20</span>)
 </span></span><span style="display:flex;"><span>  
-</span></span><span style="display:flex;"><span>  render <span style="color:#e6db74">json</span>: @products<span style="color:#f92672">.</span>as_json(methods: <span style="color:#e6db74">:average_rating</span>)
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
-</span></span></code></pre></div><h2 id="4-custom-serializer">4. <strong>Custom Serializer</strong></h2>
-<p>There is inefficient JSON rendering due to multiple transformations.</p>
-<p>Let&rsquo;s use serializers for optimized JSON rendering.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">index</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">...</span>
-</span></span><span style="display:flex;"><span>  render <span style="color:#e6db74">json</span>: <span style="color:#66d9ef">ProductSerializer</span><span style="color:#f92672">.</span>new(@products)<span style="color:#f92672">.</span>serializable_hash
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>Many miss db calculations. Any Rails developer know about <code>count</code> which translates into <code>COUNT(*)</code>, but did you know databases also do <code>average</code>, <code>sum</code>, <code>maximum</code>, <code>minimum</code>?</p>
+<h2 id="5-selective-queries">5. <strong>Selective Queries</strong></h2>
+<p>Tables are often bloated with binary jsons, dozens of columns, and even binaries. Select only needed columns!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">index</span>
+</span></span><span style="display:flex;"><span>  @products <span style="color:#f92672">=</span> <span style="color:#66d9ef">Product</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">.</span>select(<span style="color:#e6db74">&#34;products.id, products.name, AVG(reviews.rating) as average_rating&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">.</span>joins(<span style="color:#e6db74">:reviews</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">.</span>group(<span style="color:#e6db74">&#34;products.id&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">.</span>includes(<span style="color:#e6db74">:categories</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">.</span>page(params<span style="color:#f92672">[</span><span style="color:#e6db74">:page</span><span style="color:#f92672">]</span>)<span style="color:#f92672">.</span>per(<span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><h2 id="6-batch-queries-for-associations">6. <strong>Batch Queries for Associations</strong></h2>
+<p>We can write more efficient queries for associations</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">index</span>
+</span></span><span style="display:flex;"><span>  @products <span style="color:#f92672">=</span> <span style="color:#75715e"># load products</span>
+</span></span><span style="display:flex;"><span>  product_ids <span style="color:#f92672">=</span> @products<span style="color:#f92672">.</span>pluck(<span style="color:#e6db74">:id</span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># app/serializers/product_serializer.rb</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ProductSerializer</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">include</span> <span style="color:#66d9ef">JSONAPI</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Serializer</span>
-</span></span><span style="display:flex;"><span>  attributes <span style="color:#e6db74">:id</span>, <span style="color:#e6db74">:name</span>, <span style="color:#e6db74">:average_rating</span>
+</span></span><span style="display:flex;"><span>  average_ratings <span style="color:#f92672">=</span> <span style="color:#66d9ef">Review</span><span style="color:#f92672">.</span>where(<span style="color:#e6db74">product_id</span>: product_ids)<span style="color:#f92672">.</span>group(<span style="color:#e6db74">:product_id</span>)<span style="color:#f92672">.</span>average(<span style="color:#e6db74">:rating</span>)
+</span></span><span style="display:flex;"><span>  categories <span style="color:#f92672">=</span> <span style="color:#66d9ef">Category</span><span style="color:#f92672">.</span>joins(<span style="color:#e6db74">:products</span>)<span style="color:#f92672">.</span>where(<span style="color:#e6db74">products</span>: { id: product_ids })<span style="color:#f92672">.</span>group_by(<span style="color:#f92672">&amp;</span><span style="color:#e6db74">:product_id</span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  attribute <span style="color:#e6db74">:categories</span> <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>product<span style="color:#f92672">|</span>
-</span></span><span style="display:flex;"><span>    product<span style="color:#f92672">.</span>categories<span style="color:#f92672">.</span>map(<span style="color:#f92672">&amp;</span><span style="color:#e6db74">:name</span>)
+</span></span><span style="display:flex;"><span>  render <span style="color:#e6db74">json</span>: @products<span style="color:#f92672">.</span>map <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>product<span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      id: product<span style="color:#f92672">.</span>id,
+</span></span><span style="display:flex;"><span>      name: product<span style="color:#f92672">.</span>name,
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">average_rating</span>: average_ratings<span style="color:#f92672">[</span>product<span style="color:#f92672">.</span>id<span style="color:#f92672">]</span> <span style="color:#f92672">||</span> <span style="color:#ae81ff">0</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">categories</span>: categories<span style="color:#f92672">[</span>product<span style="color:#f92672">.</span>id<span style="color:#f92672">]&amp;.</span>map(<span style="color:#f92672">&amp;</span><span style="color:#e6db74">:name</span>) <span style="color:#f92672">||</span> <span style="color:#f92672">[]</span>
+</span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
-</span></span></code></pre></div><p>There is the added benefit of having <code>ProductSerializer</code> which can be easily re-used</p>
-<h2 id="5-cache-results">5. <strong>Cache Results</strong></h2>
+</span></span></code></pre></div><h2 id="5-asynchronous-queries">5. <strong>Asynchronous Queries</strong></h2>
+<p>Asynchronous queries in Rails 7.0 are executed in a background queries. If you have multiple expensive database queries, the application doesn&rsquo;t have to wait for one query to finish before starting another</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">index</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># the queries below will be processed in parallel </span>
+</span></span><span style="display:flex;"><span>  @products <span style="color:#f92672">=</span> <span style="color:#66d9ef">Product</span><span style="color:#f92672">.</span>load_async<span style="color:#f92672">.</span>page(params<span style="color:#f92672">[</span><span style="color:#e6db74">:page</span><span style="color:#f92672">]</span>)<span style="color:#f92672">.</span>per(<span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>  product_ids <span style="color:#f92672">=</span> @products<span style="color:#f92672">.</span>pluck(<span style="color:#e6db74">:id</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  average_ratings <span style="color:#f92672">=</span> <span style="color:#66d9ef">Review</span><span style="color:#f92672">.</span>load_async<span style="color:#f92672">.</span>where(<span style="color:#e6db74">product_id</span>: product_ids)<span style="color:#f92672">.</span>group(<span style="color:#e6db74">:product_id</span>)<span style="color:#f92672">.</span>average(<span style="color:#e6db74">:rating</span>)
+</span></span><span style="display:flex;"><span>  categories <span style="color:#f92672">=</span> <span style="color:#66d9ef">Category</span><span style="color:#f92672">.</span>load_async<span style="color:#f92672">.</span>joins(<span style="color:#e6db74">:products</span>)<span style="color:#f92672">.</span>where(<span style="color:#e6db74">products</span>: { id: product_ids })<span style="color:#f92672">.</span>group_by(<span style="color:#f92672">&amp;</span><span style="color:#e6db74">:product_id</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  render <span style="color:#e6db74">json</span>: @products<span style="color:#f92672">.</span>map <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>product<span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      id: product<span style="color:#f92672">.</span>id,
+</span></span><span style="display:flex;"><span>      name: product<span style="color:#f92672">.</span>name,
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">average_rating</span>: average_ratings<span style="color:#f92672">[</span>product<span style="color:#f92672">.</span>id<span style="color:#f92672">]</span> <span style="color:#f92672">||</span> <span style="color:#ae81ff">0</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">categories</span>: categories<span style="color:#f92672">[</span>product<span style="color:#f92672">.</span>id<span style="color:#f92672">]&amp;.</span>map(<span style="color:#f92672">&amp;</span><span style="color:#e6db74">:name</span>) <span style="color:#f92672">||</span> <span style="color:#f92672">[]</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p><code>load_async</code> requires <code>config.active_record.async_query_executor</code> to <a href="https://guides.rubyonrails.org/v7.0/configuring.html#config-active-record-async-query-executor">be set</a></p>
+<h2 id="9-cache-results">9. <strong>Cache Results</strong></h2>
 <p>For frequently accessed rows, we can cache average rating and category data for products.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">index</span>
-</span></span><span style="display:flex;"><span>  @products <span style="color:#f92672">=</span> <span style="color:#66d9ef">Product</span><span style="color:#f92672">.</span>includes(<span style="color:#e6db74">:categories</span>)<span style="color:#f92672">.</span>page(params<span style="color:#f92672">[</span><span style="color:#e6db74">:page</span><span style="color:#f92672">]</span>)<span style="color:#f92672">.</span>per(<span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>  @products <span style="color:#f92672">=</span> <span style="color:#75715e"># Product load</span>
 </span></span><span style="display:flex;"><span>  render <span style="color:#e6db74">json</span>: @products<span style="color:#f92672">.</span>map { <span style="color:#f92672">|</span>p<span style="color:#f92672">|</span> p<span style="color:#f92672">.</span>cached_attributes }
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
 </span></span><span style="display:flex;"><span>
@@ -255,26 +293,9 @@
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
-</span></span></code></pre></div><h2 id="6-batch-queries-for-associations">6. <strong>Batch Queries for Associations</strong></h2>
-<p>We can write more efficient queries for associations</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">index</span>
-</span></span><span style="display:flex;"><span>  @products <span style="color:#f92672">=</span> <span style="color:#66d9ef">Product</span><span style="color:#f92672">.</span>page(params<span style="color:#f92672">[</span><span style="color:#e6db74">:page</span><span style="color:#f92672">]</span>)<span style="color:#f92672">.</span>per(<span style="color:#ae81ff">20</span>)
-</span></span><span style="display:flex;"><span>  product_ids <span style="color:#f92672">=</span> @products<span style="color:#f92672">.</span>pluck(<span style="color:#e6db74">:id</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  average_ratings <span style="color:#f92672">=</span> <span style="color:#66d9ef">Review</span><span style="color:#f92672">.</span>where(<span style="color:#e6db74">product_id</span>: product_ids)<span style="color:#f92672">.</span>group(<span style="color:#e6db74">:product_id</span>)<span style="color:#f92672">.</span>average(<span style="color:#e6db74">:rating</span>)
-</span></span><span style="display:flex;"><span>  categories <span style="color:#f92672">=</span> <span style="color:#66d9ef">Category</span><span style="color:#f92672">.</span>joins(<span style="color:#e6db74">:products</span>)<span style="color:#f92672">.</span>where(<span style="color:#e6db74">products</span>: { id: product_ids })<span style="color:#f92672">.</span>group_by(<span style="color:#f92672">&amp;</span><span style="color:#e6db74">:product_id</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  render <span style="color:#e6db74">json</span>: @products<span style="color:#f92672">.</span>map <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>product<span style="color:#f92672">|</span>
-</span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>      id: product<span style="color:#f92672">.</span>id,
-</span></span><span style="display:flex;"><span>      name: product<span style="color:#f92672">.</span>name,
-</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">average_rating</span>: average_ratings<span style="color:#f92672">[</span>product<span style="color:#f92672">.</span>id<span style="color:#f92672">]</span> <span style="color:#f92672">||</span> <span style="color:#ae81ff">0</span>,
-</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">categories</span>: categories<span style="color:#f92672">[</span>product<span style="color:#f92672">.</span>id<span style="color:#f92672">]&amp;.</span>map(<span style="color:#f92672">&amp;</span><span style="color:#e6db74">:name</span>) <span style="color:#f92672">||</span> <span style="color:#f92672">[]</span>
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
-</span></span></code></pre></div><h2 id="7-background-processing-for-heavy-calculations">7. <strong>Background Processing for Heavy Calculations</strong></h2>
+</span></span></code></pre></div><h2 id="10-background-processing">10. <strong>Background Processing</strong></h2>
 <p>Average is easy. In real-world applications, we have to calculate fees, totals, and metrics that are far from trivial. Calculations can be precomputed and stored.</p>
+<p>Background processing also works for large datasets.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Product</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">ApplicationRecord</span>
 </span></span><span style="display:flex;"><span>  after_save <span style="color:#e6db74">:update_average_rating</span>
 </span></span><span style="display:flex;"><span>
@@ -283,11 +304,6 @@
 </span></span><span style="display:flex;"><span>    save!
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
-</span></span></code></pre></div><h2 id="8-indexing">8. <strong>Indexing</strong></h2>
-<p>If you haven&rsquo;t already, make sure to add indexes on joined or searched columns</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#75715e"># db/migrate/add_indexes_to_reviews_and_categories.rb</span>
-</span></span><span style="display:flex;"><span>add_index <span style="color:#e6db74">:reviews</span>, <span style="color:#e6db74">:product_id</span>
-</span></span><span style="display:flex;"><span>add_index <span style="color:#e6db74">:categories_products</span>, <span style="color:#f92672">[</span><span style="color:#e6db74">:category_id</span>, <span style="color:#e6db74">:product_id</span><span style="color:#f92672">]</span>
 </span></span></code></pre></div><h2 id="bonus">Bonus</h2>
 <p>Depending on your use case, aggregation logic can be offloaded to an external API. That external API could run on a mean, blazing fast stack (such as <a href="https://studiozenkai.com/post/crystal-high-performance/">Crystal</a> or <a href="https://studiozenkai.com/tags/rust/">Rust</a>), or can be allocated more powerful hardware.</p>
 <p>Make sure to profile performance. An external API will add networking time so you can end with worse response times.</p>

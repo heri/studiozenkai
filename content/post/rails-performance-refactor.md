@@ -29,7 +29,7 @@ end
 
 It is readable, easy to maintain, uses Rails's native functions such as `average`.
 
-Let's do an exercise together to see how we can improve its performance. The exercise assumes you have monitoring and logging and you judged this endpoint worth optimizing.
+Let's do an exercise together to see how we can improve its performance. The exercise assumes you have monitoring and logging, you judged this endpoint worth optimizing, and CPU/RAM and networking are already optimized.
 
 ## 1. **Pagination**
 
@@ -37,7 +37,7 @@ Fetching all products can be expensive if the database is large. Let's reduce th
 ```ruby
 def index
   @products = Product.page(params[:page]).per(20)
-  render json: @products
+  ...
 end
 ```
 It is set at 20 in this example, but it can be a parameter or a different value, based on customer needs.
@@ -48,14 +48,26 @@ Eager load reviews and categories reduce queries. Calculating `average_rating` f
 ```ruby
 def index
   @products = Product.includes(:reviews, :categories).page(params[:page]).per(20)
-  render json: @products
+  ...
 end
 ```
-Now it is down to three database queries.
+No more N+1 queries
 
-## 3. **Database Calculations**
 
-Whatever Ruby uses for calculating averages, database level calculation will be faster. There is no type casting, no formatting etc.
+## 3. **Indexing**
+
+If you haven't already, make sure to add indexes on joined or searched columns
+
+```ruby
+# db/migrate/add_indexes_to_reviews_and_categories.rb
+add_index :reviews, :product_id
+add_index :categories_products, [:category_id, :product_id]
+```
+
+
+## 4. **Database Calculations**
+
+Whatever Ruby uses for calculating averages, database level calculation will be faster. There is no type casting, no formatting, no N loops etc.
 
 ```ruby
 def index
@@ -66,40 +78,85 @@ def index
     .includes(:categories)
     .page(params[:page]).per(20)
   
-  render json: @products.as_json(methods: :average_rating)
+  ...
 end
 ```
 
-## 4. **Custom Serializer**
+Many miss db calculations. Any Rails developer know about `count` which translates into `COUNT(*)`, but did you know databases also do `average`, `sum`, `maximum`, `minimum`?
 
-There is inefficient JSON rendering due to multiple transformations.
+## 5. **Selective Queries**
 
-Let's use serializers for optimized JSON rendering.
+Tables are often bloated with binary jsons, dozens of columns, and even binaries. Select only needed columns!
+
 ```ruby
 def index
+  @products = Product
+    .select("products.id, products.name, AVG(reviews.rating) as average_rating")
+    .joins(:reviews)
+    .group("products.id")
+    .includes(:categories)
+    .page(params[:page]).per(20)
+  
   ...
-  render json: ProductSerializer.new(@products).serializable_hash
 end
+```
 
-# app/serializers/product_serializer.rb
-class ProductSerializer
-  include JSONAPI::Serializer
-  attributes :id, :name, :average_rating
 
-  attribute :categories do |product|
-    product.categories.map(&:name)
+## 6. **Batch Queries for Associations**
+
+We can write more efficient queries for associations
+
+```ruby
+def index
+  @products = # load products
+  product_ids = @products.pluck(:id)
+
+  average_ratings = Review.where(product_id: product_ids).group(:product_id).average(:rating)
+  categories = Category.joins(:products).where(products: { id: product_ids }).group_by(&:product_id)
+
+  render json: @products.map do |product|
+    {
+      id: product.id,
+      name: product.name,
+      average_rating: average_ratings[product.id] || 0,
+      categories: categories[product.id]&.map(&:name) || []
+    }
   end
 end
 ```
 
-There is the added benefit of having `ProductSerializer` which can be easily re-used
+## 5. **Asynchronous Queries**
 
-## 5. **Cache Results**
+Asynchronous queries in Rails 7.0 are executed in a background queries. If you have multiple expensive database queries, the application doesn't have to wait for one query to finish before starting another
+
+```ruby
+def index
+  # the queries below will be processed in parallel 
+  @products = Product.load_async.page(params[:page]).per(20)
+  product_ids = @products.pluck(:id)
+
+  average_ratings = Review.load_async.where(product_id: product_ids).group(:product_id).average(:rating)
+  categories = Category.load_async.joins(:products).where(products: { id: product_ids }).group_by(&:product_id)
+
+  render json: @products.map do |product|
+    {
+      id: product.id,
+      name: product.name,
+      average_rating: average_ratings[product.id] || 0,
+      categories: categories[product.id]&.map(&:name) || []
+    }
+  end
+end
+```
+
+`load_async` requires `config.active_record.async_query_executor` to [be set](https://guides.rubyonrails.org/v7.0/configuring.html#config-active-record-async-query-executor)
+
+## 9. **Cache Results**
 For frequently accessed rows, we can cache average rating and category data for products.
 
 ```ruby
 def index
-  @products = Product.includes(:categories).page(params[:page]).per(20)
+  @products = # Product load
   render json: @products.map { |p| p.cached_attributes }
 end
 
@@ -118,32 +175,11 @@ class Product < ApplicationRecord
 end
 ```
 
-## 6. **Batch Queries for Associations**
-
-We can write more efficient queries for associations
-
-```ruby
-def index
-  @products = Product.page(params[:page]).per(20)
-  product_ids = @products.pluck(:id)
-
-  average_ratings = Review.where(product_id: product_ids).group(:product_id).average(:rating)
-  categories = Category.joins(:products).where(products: { id: product_ids }).group_by(&:product_id)
-
-  render json: @products.map do |product|
-    {
-      id: product.id,
-      name: product.name,
-      average_rating: average_ratings[product.id] || 0,
-      categories: categories[product.id]&.map(&:name) || []
-    }
-  end
-end
-```
-
-## 7. **Background Processing for Heavy Calculations**
+## 10. **Background Processing**
 
 Average is easy. In real-world applications, we have to calculate fees, totals, and metrics that are far from trivial. Calculations can be precomputed and stored.
+
+Background processing also works for large datasets.
 
 ```ruby
 class Product < ApplicationRecord
@@ -154,16 +190,6 @@ class Product < ApplicationRecord
     save!
   end
 end
-```
-
-## 8. **Indexing**
-
-If you haven't already, make sure to add indexes on joined or searched columns
-
-```ruby
-# db/migrate/add_indexes_to_reviews_and_categories.rb
-add_index :reviews, :product_id
-add_index :categories_products, [:category_id, :product_id]
 ```
 
 ## Bonus

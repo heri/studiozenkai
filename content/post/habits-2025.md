@@ -8,7 +8,7 @@ tags = ['sustainable', 'personal', 'software', 'health']
 
 * *Having fun with programming* again. I went from having fun in hackathons and working on one-off creative concepts to write boring pull requests for huge organizations. Day to day involve politics, outdated processes and blasé coworkers. If this can't be changed, fine. I will make my own. Silly projects, odd concepts — whatever makes me smile.
 * *Find Community* . Years ago, it was abuzz with community, either entrepreneurshop, montréal or arts. The pandemic came shut it all down. We stayed inside and forgot what it meant to belong. I want to bring it back. Does it mean hosting events? Or online connections? 🤷 We'll see
-* *Fix, Make, and Grow -- sustainably* I started tinkering at [the chalet](https://studiozenkai.com/post/airbnb-vacation-home/), messing with tools. Then real repairs. Now I want to make things. Grow things. Build with my hand. Like programming, *it should be fun, not feel like work*
+* *Fix, Make, and Grow -- sustainably* I started tinkering at [the chalet](https://studiozenkai.com/post/airbnb-vacation-home/), messing with tools. Then real repairs. Now I want to make things. Grow things. Build with my hand. Like programming, *it should be [fun](https://studiozenkai.com/post/chalet-life/), not feel like work*
 * *Read again* When I was a teenager, I read a book every two days. Fast forward, the Internet captivated me and my mind became a hummingbird. I want to loose myself again in stories, ideas and thick, dusty books.
 
 Are these smart? A reader will tell me these are not measurable. I will respond sometimes you have to let go and go where the heart goes. Not everything should be measurable, specific or time-bound. 

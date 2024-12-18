@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Rails Performance exercise &middot; Software, photography, and sustainability articles by Heri </title>
+    
+      <meta name="description" content="Here is a typical Rails endpoint:">
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://studiozenkai.com/css/uno.css" />
+    <link rel="stylesheet" type="text/css" href="https://studiozenkai.com/css/lightGallery.css" />
+    
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    
+    <link rel="webmention" href="https://webmention.io/studiozenkai.com/webmention" />
+    <link rel="pingback" href="https://webmention.io/studiozenkai.com/xmlrpc" />
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://studiozenkai.com/js/main.min.js">
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <script>
+      MathJax = {
+        tex: {
+          displayMath: [['\\[', '\\]'], ['$$', '$$']],  
+          inlineMath: [['\\(', '\\)']]                  
+        }
+      };
+    </script>
+</head>
+
+<body>
+  <div id="scriptHeader">
+    <span class="mobile btn-mobile-menu">
+            <i class="fa fa-bars btn-mobile-menu__icon"></i>
+            <i class="fa fa-times btn-mobile-close__icon hidden"> </i>
+    </span>
+    <header class="
+        
+            panel-cover panel-cover--collapsed
+        " >
+    <div class="panel-main">
+        <div class="panel-main__inner panel-inverted">
+            <div class="panel-main__content"> 
+                <h1 class="panel-cover__title panel-title">
+                    <a href="https://studiozenkai.com/"  title="link to homepage for Heri Rakotomalala">Studio Zenkai</a>
+                </h1>
+                <hr class="panel-cover__divider" />
+                <p class="panel-cover__description">Bold and Clear, without excess • Kaizen 改善 • With Purpose</p>
+                <hr class="panel-cover__divider panel-cover__divider--secondary" />
+                <p>Studio Zenkai is dedicated to the craft of programming, photography and living sustainably. <a href="https://studiozenkai.com/post/about-heri/">About me</a>  </p>
+                <hr class="panel-cover__divider panel-cover__divider--secondary" />
+                <div class="navigation-wrapper">
+                    <nav class="cover-navigation cover-navigation--primary">
+                        <ul class="navigation">
+                            <li class="navigation__item"><a href="https://studiozenkai.com/post" title="link to Studio Zenkai blog" class="blog-button">Articles</a> </li>
+                            
+                            
+                       </ul>
+                    </nav> <nav class="cover-navigation navigation--social">
+    <ul class="navigation">
+        
+        <li class="navigation__item">
+            <a href="https://twitter.com/heri" title="@heri on Twitter" rel="me nofollow"> <i class='fa fa-twitter'></i> <span
+                    class="label">Twitter</span> </a>
+        </li> 
+        
+        <li class="navigation__item">
+            <a href="https://www.linkedin.com/in/madmedia"
+                title="Heri on linkedin"> <i class='fa fa-linkedin'></i> <span
+                    class="label">LinkedIn</span> </a>
+        </li>
+        
+        <li class="navigation__item">
+            <a href="https://github.com/heri" title="heri on github" rel="me authn"> <i class='fa fa-github'></i> <span
+                    class="label">Github</span> </a>
+        </li>    
+        <li class="navigation__item">
+            <a href="https://www.instagram.com/heri_rakotomalala/" rel="nofollow" title="Heri on Instagram"><i class="fa fa-instagram"></i><span
+                class="label">Instagram</span></a>
+        </li>
+        
+        <li class="navigation__item">
+            <a href="https://medium.com/@heri" title="Medium" rel="nofollow"> <i class='fa fa-medium'></i> <span
+                    class="label">Medium</span> </a>
+        </li>
+        
+        <li class="navigation__item">
+            <a href="mailto:heri@studiozenkai.com" title="Email"> <i class='fa fa-envelope-o'></i> <span
+                    class="label">Email</span> </a>
+        </li>
+    </ul>
+</nav> </div>
+            </div>
+        </div>
+        <div class="panel-cover--overlay"></div>
+    </div>
+</header>
+</div>
+<noscript>
+    <style>
+        #scriptHeader {display:none;}
+        .navigation-wrapper{
+            display: block;
+            top: 0;
+        }
+    </style>
+
+    <header class="panel-cover panel-cover--collapsed" style="background-image: url()">
+        <div class="panel-main">
+            <div class="panel-main__inner panel-inverted">
+                <div class="panel-main__content"> 
+                    <h1 class="panel-cover__title panel-title">
+                        <a href="https://studiozenkai.com/"  title="link to homepage for Heri Rakotomalala">Studio Zenkai</a>
+                    </h1>
+                    <hr class="panel-cover__divider" />
+                    <p class="panel-cover__description">  Studio Zenkai is dedicated to the craft of programming, photography and living sustainably.  </p>
+                    <hr class="panel-cover__divider panel-cover__divider--secondary" />
+                    <div class="navigation-wrapper">
+                        <nav class="cover-navigation cover-navigation--primary">
+                            <ul class="navigation">
+                                <li class="navigation__item"><a href="https://studiozenkai.com/#blog" title="link to Studio Zenkai blog" class="blog-button">Blog</a> </li></br>
+                                
+                                
+                           </ul>
+                        </nav> <nav class="cover-navigation navigation--social">
+    <ul class="navigation">
+        
+        <li class="navigation__item">
+            <a href="https://twitter.com/heri" title="@heri on Twitter" rel="me nofollow"> <i class='fa fa-twitter'></i> <span
+                    class="label">Twitter</span> </a>
+        </li> 
+        
+        <li class="navigation__item">
+            <a href="https://www.linkedin.com/in/madmedia"
+                title="Heri on linkedin"> <i class='fa fa-linkedin'></i> <span
+                    class="label">LinkedIn</span> </a>
+        </li>
+        
+        <li class="navigation__item">
+            <a href="https://github.com/heri" title="heri on github" rel="me authn"> <i class='fa fa-github'></i> <span
+                    class="label">Github</span> </a>
+        </li>    
+        <li class="navigation__item">
+            <a href="https://www.instagram.com/heri_rakotomalala/" rel="nofollow" title="Heri on Instagram"><i class="fa fa-instagram"></i><span
+                class="label">Instagram</span></a>
+        </li>
+        
+        <li class="navigation__item">
+            <a href="https://medium.com/@heri" title="Medium" rel="nofollow"> <i class='fa fa-medium'></i> <span
+                    class="label">Medium</span> </a>
+        </li>
+        
+        <li class="navigation__item">
+            <a href="mailto:heri@studiozenkai.com" title="Email"> <i class='fa fa-envelope-o'></i> <span
+                    class="label">Email</span> </a>
+        </li>
+    </ul>
+</nav> </div>
+                </div>
+            </div>
+            <div class="panel-cover--overlay"></div>
+        </div>
+    </header>
+</noscript>
+
+  <div class="content-wrapper">
+    <div class="content-wrapper__inner">
+      <div class="post">
+        <h1>Rails Performance exercise</h1>
+        <span class="post-date">Thu, Oct 6, 2022</span>
+        <p>Here is a typical Rails endpoint:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ProductsController</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">ApplicationController</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">index</span>
+</span></span><span style="display:flex;"><span>    @products <span style="color:#f92672">=</span> <span style="color:#66d9ef">Product</span><span style="color:#f92672">.</span>all
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    @products <span style="color:#f92672">=</span> @products<span style="color:#f92672">.</span>map <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>product<span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span>      {
+</span></span><span style="display:flex;"><span>        id: product<span style="color:#f92672">.</span>id,
+</span></span><span style="display:flex;"><span>        name: product<span style="color:#f92672">.</span>name,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">average_rating</span>: product<span style="color:#f92672">.</span>reviews<span style="color:#f92672">.</span>average(<span style="color:#e6db74">:rating</span>),
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">categories</span>: product<span style="color:#f92672">.</span>categories<span style="color:#f92672">.</span>map(<span style="color:#f92672">&amp;</span><span style="color:#e6db74">:name</span>)
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    render <span style="color:#e6db74">json</span>: @products
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>It is readable, easy to maintain, uses Rails&rsquo;s native functions such as <code>average</code>.</p>
+<p>Let&rsquo;s do an exercise together to see how we can improve its performance. The exercise assumes you have monitoring and logging and you judged this endpoint worth optimizing.</p>
+<h2 id="1-pagination">1. <strong>Pagination</strong></h2>
+<p>Fetching all products can be expensive if the database is large. Let&rsquo;s reduce the number of records fetched at once.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">index</span>
+</span></span><span style="display:flex;"><span>  @products <span style="color:#f92672">=</span> <span style="color:#66d9ef">Product</span><span style="color:#f92672">.</span>page(params<span style="color:#f92672">[</span><span style="color:#e6db74">:page</span><span style="color:#f92672">]</span>)<span style="color:#f92672">.</span>per(<span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>  render <span style="color:#e6db74">json</span>: @products
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>It is set at 20 in this example, but it can be a parameter or a different value, based on customer needs.</p>
+<h2 id="2-preload-associations">2. <strong>Preload Associations</strong></h2>
+<p>Eager load reviews and categories reduce queries. Calculating <code>average_rating</code> for each product causes N+1 queries. Mapping categories for each product adds additional N+1 queries.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">index</span>
+</span></span><span style="display:flex;"><span>  @products <span style="color:#f92672">=</span> <span style="color:#66d9ef">Product</span><span style="color:#f92672">.</span>includes(<span style="color:#e6db74">:reviews</span>, <span style="color:#e6db74">:categories</span>)<span style="color:#f92672">.</span>page(params<span style="color:#f92672">[</span><span style="color:#e6db74">:page</span><span style="color:#f92672">]</span>)<span style="color:#f92672">.</span>per(<span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>  render <span style="color:#e6db74">json</span>: @products
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>Now it is down to three database queries.</p>
+<h2 id="3-database-calculations">3. <strong>Database Calculations</strong></h2>
+<p>Whatever Ruby uses for calculating averages, database level calculation will be faster. There is no type casting, no formatting etc.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">index</span>
+</span></span><span style="display:flex;"><span>  @products <span style="color:#f92672">=</span> <span style="color:#66d9ef">Product</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">.</span>select(<span style="color:#e6db74">&#34;products.*, AVG(reviews.rating) as average_rating&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">.</span>joins(<span style="color:#e6db74">:reviews</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">.</span>group(<span style="color:#e6db74">&#34;products.id&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">.</span>includes(<span style="color:#e6db74">:categories</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">.</span>page(params<span style="color:#f92672">[</span><span style="color:#e6db74">:page</span><span style="color:#f92672">]</span>)<span style="color:#f92672">.</span>per(<span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  render <span style="color:#e6db74">json</span>: @products<span style="color:#f92672">.</span>as_json(methods: <span style="color:#e6db74">:average_rating</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><h2 id="4-custom-serializer">4. <strong>Custom Serializer</strong></h2>
+<p>There is inefficient JSON rendering due to multiple transformations.</p>
+<p>Let&rsquo;s use serializers for optimized JSON rendering.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">index</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>  render <span style="color:#e6db74">json</span>: <span style="color:#66d9ef">ProductSerializer</span><span style="color:#f92672">.</span>new(@products)<span style="color:#f92672">.</span>serializable_hash
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># app/serializers/product_serializer.rb</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ProductSerializer</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">include</span> <span style="color:#66d9ef">JSONAPI</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Serializer</span>
+</span></span><span style="display:flex;"><span>  attributes <span style="color:#e6db74">:id</span>, <span style="color:#e6db74">:name</span>, <span style="color:#e6db74">:average_rating</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  attribute <span style="color:#e6db74">:categories</span> <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>product<span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span>    product<span style="color:#f92672">.</span>categories<span style="color:#f92672">.</span>map(<span style="color:#f92672">&amp;</span><span style="color:#e6db74">:name</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>There is the added benefit of having <code>ProductSerializer</code> which can be easily re-used</p>
+<h2 id="5-cache-results">5. <strong>Cache Results</strong></h2>
+<p>For frequently accessed rows, we can cache average rating and category data for products.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">index</span>
+</span></span><span style="display:flex;"><span>  @products <span style="color:#f92672">=</span> <span style="color:#66d9ef">Product</span><span style="color:#f92672">.</span>includes(<span style="color:#e6db74">:categories</span>)<span style="color:#f92672">.</span>page(params<span style="color:#f92672">[</span><span style="color:#e6db74">:page</span><span style="color:#f92672">]</span>)<span style="color:#f92672">.</span>per(<span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>  render <span style="color:#e6db74">json</span>: @products<span style="color:#f92672">.</span>map { <span style="color:#f92672">|</span>p<span style="color:#f92672">|</span> p<span style="color:#f92672">.</span>cached_attributes }
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># app/models/product.rb</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Product</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">ApplicationRecord</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">cached_attributes</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Rails</span><span style="color:#f92672">.</span>cache<span style="color:#f92672">.</span>fetch(<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;product&#34;</span>, id, <span style="color:#e6db74">&#34;cached_attributes&#34;</span><span style="color:#f92672">]</span>, <span style="color:#e6db74">expires_in</span>: <span style="color:#ae81ff">12</span><span style="color:#f92672">.</span>hours) <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>      {
+</span></span><span style="display:flex;"><span>        id: id,
+</span></span><span style="display:flex;"><span>        name: name,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">average_rating</span>: reviews<span style="color:#f92672">.</span>average(<span style="color:#e6db74">:rating</span>),
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">categories</span>: categories<span style="color:#f92672">.</span>map(<span style="color:#f92672">&amp;</span><span style="color:#e6db74">:name</span>)
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><h2 id="6-batch-queries-for-associations">6. <strong>Batch Queries for Associations</strong></h2>
+<p>We can write more efficient queries for associations</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">index</span>
+</span></span><span style="display:flex;"><span>  @products <span style="color:#f92672">=</span> <span style="color:#66d9ef">Product</span><span style="color:#f92672">.</span>page(params<span style="color:#f92672">[</span><span style="color:#e6db74">:page</span><span style="color:#f92672">]</span>)<span style="color:#f92672">.</span>per(<span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>  product_ids <span style="color:#f92672">=</span> @products<span style="color:#f92672">.</span>pluck(<span style="color:#e6db74">:id</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  average_ratings <span style="color:#f92672">=</span> <span style="color:#66d9ef">Review</span><span style="color:#f92672">.</span>where(<span style="color:#e6db74">product_id</span>: product_ids)<span style="color:#f92672">.</span>group(<span style="color:#e6db74">:product_id</span>)<span style="color:#f92672">.</span>average(<span style="color:#e6db74">:rating</span>)
+</span></span><span style="display:flex;"><span>  categories <span style="color:#f92672">=</span> <span style="color:#66d9ef">Category</span><span style="color:#f92672">.</span>joins(<span style="color:#e6db74">:products</span>)<span style="color:#f92672">.</span>where(<span style="color:#e6db74">products</span>: { id: product_ids })<span style="color:#f92672">.</span>group_by(<span style="color:#f92672">&amp;</span><span style="color:#e6db74">:product_id</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  render <span style="color:#e6db74">json</span>: @products<span style="color:#f92672">.</span>map <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>product<span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      id: product<span style="color:#f92672">.</span>id,
+</span></span><span style="display:flex;"><span>      name: product<span style="color:#f92672">.</span>name,
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">average_rating</span>: average_ratings<span style="color:#f92672">[</span>product<span style="color:#f92672">.</span>id<span style="color:#f92672">]</span> <span style="color:#f92672">||</span> <span style="color:#ae81ff">0</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">categories</span>: categories<span style="color:#f92672">[</span>product<span style="color:#f92672">.</span>id<span style="color:#f92672">]&amp;.</span>map(<span style="color:#f92672">&amp;</span><span style="color:#e6db74">:name</span>) <span style="color:#f92672">||</span> <span style="color:#f92672">[]</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><h2 id="7-background-processing-for-heavy-calculations">7. <strong>Background Processing for Heavy Calculations</strong></h2>
+<p>Average is easy. In real-world applications, we have to calculate fees, totals, and metrics that are far from trivial. Calculations can be precomputed and stored.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Product</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">ApplicationRecord</span>
+</span></span><span style="display:flex;"><span>  after_save <span style="color:#e6db74">:update_average_rating</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">update_average_rating</span>
+</span></span><span style="display:flex;"><span>    self<span style="color:#f92672">.</span>average_rating <span style="color:#f92672">=</span> reviews<span style="color:#f92672">.</span>average(<span style="color:#e6db74">:rating</span>)
+</span></span><span style="display:flex;"><span>    save!
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><h2 id="8-indexing">8. <strong>Indexing</strong></h2>
+<p>If you haven&rsquo;t already, make sure to add indexes on joined or searched columns</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#75715e"># db/migrate/add_indexes_to_reviews_and_categories.rb</span>
+</span></span><span style="display:flex;"><span>add_index <span style="color:#e6db74">:reviews</span>, <span style="color:#e6db74">:product_id</span>
+</span></span><span style="display:flex;"><span>add_index <span style="color:#e6db74">:categories_products</span>, <span style="color:#f92672">[</span><span style="color:#e6db74">:category_id</span>, <span style="color:#e6db74">:product_id</span><span style="color:#f92672">]</span>
+</span></span></code></pre></div><h2 id="bonus">Bonus</h2>
+<p>Depending on your use case, aggregation logic can be offloaded to an external API. That external API could run on a mean, blazing fast stack (such as <a href="https://studiozenkai.com/post/crystal-high-performance/">Crystal</a> or <a href="https://studiozenkai.com/tags/rust/">Rust</a>), or can be allocated more powerful hardware.</p>
+<p>Make sure to profile performance. An external API will add networking time so you can end with worse response times.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#75715e"># Offload aggregation logic to an external API gateway.</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">index</span>
+</span></span><span style="display:flex;"><span>  render <span style="color:#e6db74">json</span>: <span style="color:#66d9ef">ExternalProductService</span><span style="color:#f92672">.</span>fetch_products(<span style="color:#e6db74">page</span>: params<span style="color:#f92672">[</span><span style="color:#e6db74">:page</span><span style="color:#f92672">]</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>Another option is to replace the REST endpoint withh a GraphQL API for selective querying.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Types</span><span style="color:#f92672">::</span><span style="color:#66d9ef">ProductType</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">Types</span><span style="color:#f92672">::</span><span style="color:#66d9ef">BaseObject</span>
+</span></span><span style="display:flex;"><span>  field <span style="color:#e6db74">:id</span>, <span style="color:#66d9ef">ID</span>, <span style="color:#e6db74">null</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>  field <span style="color:#e6db74">:name</span>, String, <span style="color:#e6db74">null</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>  field <span style="color:#e6db74">:average_rating</span>, Float, <span style="color:#e6db74">null</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  field <span style="color:#e6db74">:categories</span>, <span style="color:#f92672">[</span>String<span style="color:#f92672">]</span>, <span style="color:#e6db74">null</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Resolvers</span><span style="color:#f92672">::</span><span style="color:#66d9ef">ProductsResolver</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">page</span>: <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">per_page</span>: <span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Product</span><span style="color:#f92672">.</span>includes(<span style="color:#e6db74">:reviews</span>, <span style="color:#e6db74">:categories</span>)<span style="color:#f92672">.</span>page(page)<span style="color:#f92672">.</span>per(per_page)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>Like the external API gateway above, there are pros and cons with GraphQL. Many teams were wooed by the new tech only to backtrack when they see the maintenace costs and added complexity.</p>
+        <div class="post-tags"><a href="https://studiozenkai.com/tags/software/" >Software</a>        <a href="https://studiozenkai.com/tags/ruby/" >Ruby</a>        <a href="https://studiozenkai.com/tags/performance/" >Performance</a>        </div>
+        <div class="sharing">
+<p>© Heri Rakotomalala. All rights reserved. Powered by <a href="https://www.digitalocean.com/?refcode=ef57f6ccd2d8">Digital Ocean</a> and <a href="https://github.com/heri">Github</a></p>
+
+<p>Heri Rakotomalala is an engineer working on small and innovative projects in Montréal. Originally from Madagascar, he has lived 7 years in East Africa, studied Engineering and made friends in France, built a community center in Esteli, Nicaragua and is taking pictures and coding in Montréal, Canada. This site cover technology work. Read <a href="https://studiozenkai.com/post/about-heri/">more about Heri</a></p>
+
+</div>
+
+        
+
+
+      </div>
+    </div>
+  </div>
+
+</body>
+
+
+</html>

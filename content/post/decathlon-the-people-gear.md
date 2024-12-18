@@ -18,7 +18,7 @@ A few Decathlon products I used over the years:
 * [Merino wool 900 base layer](https://www.decathlon.ca/en/p/8650947/mens-ski-base-layer-top-bl-900-navy-blue#/?queryID=21c010c954fc1fffc46da5644b54ecde) top and bottom. Looks good. Can be itchy but cheaper and warmer than Smartwool's
 
 ![winter sledding](/images/sled-decathlon.jpg)
-Having fund with kids with [Decathlon Snow Sled](https://www.decathlon.ca/en/p/8553500/tray-sled-trilugik-green)
+Having fun with kids with [Decathlon Snow Sled](https://www.decathlon.ca/en/p/8553500/tray-sled-trilugik-green)
 
 All these don't promise you will conquer the world. They promise you will have what you need to start and stick with a sport. And for most people, that's what they really need.
 

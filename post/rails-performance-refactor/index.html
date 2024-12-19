@@ -190,7 +190,7 @@
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
 </span></span></code></pre></div><p>It is readable, easy to maintain, uses Rails&rsquo;s native functions such as <code>average</code>.</p>
-<p>Let&rsquo;s do an exercise together to see how we can improve its performance. The exercise assumes you have monitoring and logging and you judged this endpoint worth optimizing.</p>
+<p>Let&rsquo;s do an exercise together to see how we can improve its performance. The exercise assumes you have monitoring and logging, you judged this endpoint worth optimizing, and CPU/RAM and networking are already optimized.</p>
 <h2 id="1-pagination">1. <strong>Pagination</strong></h2>
 <p>Fetching all products can be expensive if the database is large. Let&rsquo;s reduce the number of records fetched at once.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">index</span>

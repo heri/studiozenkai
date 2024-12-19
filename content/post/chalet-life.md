@@ -11,6 +11,8 @@ Le voisin arrive, pelle dans la main
 “On ouvre le vin, allez viens!”  
 (Viens!)
 
+{{< audio src="/audio/chalet-party.mp3" class="chalet party" >}}
+
 ![chalet pelle](/images/1_chalet_party.jpeg)
 
 [Refrain]  

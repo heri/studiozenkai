@@ -30,7 +30,7 @@ The latest issue is that the middle class in Canada and North America is being s
 ![Canadian Log cabin in the Quebec laurentians](/images/01_chalet.jpeg "Canadian Log cabin in the Quebec laurentians.")
 Your Typical canadian Log cabin in the Quebec laurentians
 
-![Nature rules. The water erodes 2 feet of land every year so major work $$ is needed](/images/02_chalet.jpeg "Nature rules. The water erodes 2 feet of land every year so major work $$ is needed")
+![Nature rules. The water erodes 2 feet of land every year so major work is needed](/images/02_chalet.jpeg "Nature rules. The water erodes 2 feet of land every year so major work is needed")
 Nature rules. The water erodes 2 feet of land every year so major work $$ is needed
 
 ![The chalet is a nice escape from busy city life](/images/03_chalet.jpeg "The chalet is a nice escape from busy city life")

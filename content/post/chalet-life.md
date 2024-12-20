@@ -9,10 +9,11 @@ On quitte la ville, bye le béton
 (Béton!)  
 Les montagnes appellent, à Rivière-Rouge, allons!  
 (Rouge!)  
-Le voisin arrive, pelle dans la main  
-"Bienvenue chez Heri, allez viens!"  
-(Viens!)  
+Le voisin débarque, une pelle dans la main,  
+“Bienvenue chez Heri, allez viens!”  
 
+On blague, on chante, on perd pas une seconde,  
+À midi, c’est raclette, tout le monde! 
 
 ![chalet pelle](/images/1_chalet_party.jpeg)
 
@@ -27,7 +28,7 @@ Fondue, raclette, marshmallows grillés!
 On sort dehors, pieds dans la neige  
 (Neige!)  
 Les arbres blancs, Rivière-Rouge nous protège  
-(Silence…)  
+...
 ![chalet neige gelé](/images/3_chalet_party.jpeg)  
 
 Une heure plus tard, on gèle de partout  
@@ -43,18 +44,12 @@ Fondue, raclette, marshmallows grillés!
 
 ![chalet fondue tartiflette](/images/4_chalet_party.jpeg)
 
-Le soir tombe, la musique démarre  
-(Démarre!)  
-Chez Heri et sa gang, l’hiver s’égare!  
-(Santé!)  
-Le bois craque, les rires éclatent  
-(Craque!)  
-Des moments gravés, ça, c’est l’impact!  
-(Impact!)  
-
+On rentre au chalet, le feu déjà allumé,  
+Des montagnes de fromage, des bouteilles bien sabrées.  
+La musique embarque, pis tout l’monde se met à danser,    
+Ce soir, c’est une fête qu’on va jamais oublier.  
 
 ![chalet marshmallows](/images/5_chalet_party.jpeg)
-
 
 [Refrain]  
 Ohé ohé, Au Chalet Rouge!  
@@ -62,9 +57,7 @@ On rit, on danse, y’a pas d’refuge!
 Ohé ohé, viens t’amuser,  
 Fondue, raclette, marshmallows grillés!  
 
-
 ![chalet gauffres](/images/6_chalet_party.jpeg)
-
 
 Le matin gaufres, crème fouettée  
 (Fouettée!) . 
@@ -77,7 +70,6 @@ Saucisses, vin blanc – Rivière-Rouge, c’est comme ça!
 (Ça!)  
 
 ![chalet bbq](/images/8_chalet_party.jpeg)
-
 
 Le spa nous attend, des bulles de paradis  
 (Paradis!)  
@@ -94,7 +86,6 @@ Ohé ohé, Au Chalet Rouge!
 On rit, on danse, y’a pas d’refuge!  
 Ohé ohé, viens t’amuser,  
 Fondue, raclette, marshmallows grillés!  
-
 
 ![chalet deer](/images/10_chalet_party.jpeg)
 

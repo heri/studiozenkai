@@ -7,35 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <title> Securing a Rails endpoint &middot; Software, photography, and sustainability articles by Heri </title>
     
-      <meta name="description" content="Here is a typical Rails endpoint:
-
-def update_user
-  user = User.find_by(id: params[:id])
-  
-  if user.update(params[:user])
-    render json: { success: true, message: &#34;User updated successfully&#34; }
-  else
-    render json: { success: false, errors: user.errors.full_messages }, status: :unprocessable_entity
-  end
-end
-Readable, simple, error handling. But insecure. What can we do?
-1. Strong Parameters
-The endpoint allows mass assignement a User record.
-Safe attributes prevents this by explicity enumerating attributes that can be safely updated.
-def update_user
-  user = User.find_by(id: params[:id])
-  
-  if user.update(user_params)
-    render json: { success: true, message: &#34;User updated successfully&#34; }
-  else
-    render json: { success: false, errors: user.errors.full_messages }, status: :unprocessable_entity
-  end
-end
-
-def user_params
-  params.require(:user).permit(:name, :email, :password)
-end
-Imagine a field titled salary or super_secret_fees, that are computed from work hours and company algorithms. Without safe attributes, the current endpoint can set a much higher salary!">
+      <meta name="description" content="Here is a typical Rails endpoint:">
     
     
     <link rel="stylesheet" type="text/css" href="https://studiozenkai.com/css/uno.css" />
@@ -318,7 +290,7 @@ Imagine a field titled salary or super_secret_fees, that are computed from work 
 </span></span><span style="display:flex;"><span>  redirect_to <span style="color:#e6db74">protocol</span>: <span style="color:#e6db74">&#34;https://&#34;</span>, <span style="color:#e6db74">status</span>: <span style="color:#e6db74">:moved_permanently</span> <span style="color:#66d9ef">unless</span> request<span style="color:#f92672">.</span>ssl?
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
 </span></span></code></pre></div><h2 id="10-remove-sensitive-data-from-logs">10. <strong>Remove Sensitive Data from Logs</strong></h2>
-<p>Log files are typically not as well secured as db, yet they might contain sensitive data. You might have a team member who made prod logs viewable by Kibana and thought it was secured because he is using an IP Address.</p>
+<p>Log files are typically not as well secured as db, yet they might contain sensitive data. You might have a team member who made sent logs to Kibana ES and made them viewable without requiring credentials (ie security by obsfucation)</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#75715e"># in config/application.rb:</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">Rack</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Attack</span><span style="color:#f92672">.</span>throttle(<span style="color:#e6db74">&#34;requests by IP&#34;</span>, <span style="color:#e6db74">limit</span>: <span style="color:#ae81ff">5</span>, <span style="color:#e6db74">period</span>: <span style="color:#ae81ff">1</span><span style="color:#f92672">.</span>minute) <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>req<span style="color:#f92672">|</span>
 </span></span><span style="display:flex;"><span>  req<span style="color:#f92672">.</span>ip <span style="color:#66d9ef">if</span> req<span style="color:#f92672">.</span>path <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;/users/update&#34;</span> <span style="color:#f92672">&amp;&amp;</span> req<span style="color:#f92672">.</span>post?
@@ -327,7 +299,7 @@ Imagine a field titled salary or super_secret_fees, that are computed from work 
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">Rails</span><span style="color:#f92672">.</span>application<span style="color:#f92672">.</span>config<span style="color:#f92672">.</span>filter_parameters <span style="color:#f92672">+=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">:password</span>, <span style="color:#e6db74">:credit_card</span><span style="color:#f92672">]</span>
 </span></span></code></pre></div><p>No more passwords in log files!</p>
 <p><em>Bonust</em> Monitoring and alerts are not only for devops! Tools like Sentry, DataDog or New Relic allows you to detect unusual patterns such as excessive failed updates. As soon as an application is live, make sure to set these up.</p>
-<h2 id="final-secoured-endpoint">Final Secoured Endpoint:</h2>
+<h2 id="final-secured-endpoint">Final Secured Endpoint:</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># in config/application.rb:</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">Rails</span><span style="color:#f92672">.</span>application<span style="color:#f92672">.</span>config<span style="color:#f92672">.</span>filter_parameters <span style="color:#f92672">+=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">:password</span>, <span style="color:#e6db74">:credit_card</span><span style="color:#f92672">]</span>

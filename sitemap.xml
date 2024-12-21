@@ -35,9 +35,6 @@
     <loc>https://studiozenkai.com/tags/airbnb/</loc>
     <lastmod>2024-10-11T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://studiozenkai.com/post/airbnb-the-good-the-bad-the-profitable/</loc>
-    <lastmod>2024-10-11T12:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://studiozenkai.com/tags/entrepreneurship/</loc>
     <lastmod>2024-10-11T12:00:00+00:00</lastmod>
   </url><url>
@@ -45,6 +42,9 @@
     <lastmod>2024-10-11T12:00:00+00:00</lastmod>
   </url><url>
     <loc>https://studiozenkai.com/tags/photography/</loc>
+    <lastmod>2024-10-11T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://studiozenkai.com/post/airbnb-the-good-the-bad-the-profitable/</loc>
     <lastmod>2024-10-11T12:00:00+00:00</lastmod>
   </url><url>
     <loc>https://studiozenkai.com/post/about-heri/</loc>
@@ -101,6 +101,9 @@
     <loc>https://studiozenkai.com/post/understanding-engineering-managers/</loc>
     <lastmod>2023-11-08T06:00:00-04:00</lastmod>
   </url><url>
+    <loc>https://studiozenkai.com/post/rails-security-refactor/</loc>
+    <lastmod>2023-10-06T12:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://studiozenkai.com/post/embrace-vs-reject/</loc>
     <lastmod>2023-09-02T12:00:00+00:00</lastmod>
   </url><url>
@@ -112,6 +115,9 @@
   </url><url>
     <loc>https://studiozenkai.com/post/nobuy_challenge/</loc>
     <lastmod>2023-01-10T10:35:26-04:00</lastmod>
+  </url><url>
+    <loc>https://studiozenkai.com/post/rails-performance-refactor/</loc>
+    <lastmod>2022-10-06T12:00:00+00:00</lastmod>
   </url><url>
     <loc>https://studiozenkai.com/post/eval-security-catastrophe/</loc>
     <lastmod>2022-09-13T12:00:00+00:00</lastmod>
@@ -167,6 +173,9 @@
     <loc>https://studiozenkai.com/post/ruby-performance-checklist/</loc>
     <lastmod>2017-05-08T10:35:26-04:00</lastmod>
   </url><url>
+    <loc>https://studiozenkai.com/post/marketplace-platform/</loc>
+    <lastmod>2016-05-09T15:35:26-04:00</lastmod>
+  </url><url>
     <loc>https://studiozenkai.com/post/laptop-machine-learning/</loc>
     <lastmod>2016-05-04T15:35:26-04:00</lastmod>
   </url><url>
@@ -183,5 +192,9 @@
     <lastmod>2015-10-11T10:35:26-04:00</lastmod>
   </url><url>
     <loc>https://studiozenkai.com/categories/</loc>
+  </url><url>
+    <loc>https://studiozenkai.com/tags/chalet/</loc>
+  </url><url>
+    <loc>https://studiozenkai.com/post/chalet-life/</loc>
   </url>
 </urlset>

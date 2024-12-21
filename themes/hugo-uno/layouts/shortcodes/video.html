@@ -12,34 +12,10 @@
 {{ $static := false -}}
 {{ $type := false -}}
 
-{{ if and $src (fileExists (path.Join "/static" $src)) -}}
-  {{ $static = true -}}
-  {{ $src = relURL $src -}}
-{{ else if $src -}}
-  {{ $src = strings.TrimLeft "/" $src -}}
-  {{ with resources.Get $src -}}
-    {{ $resource = . -}}
-  {{ end -}}
-  {{ with .Page.Resources.Get $src -}}
-    {{ $resource = . -}}
-  {{ end -}}
-{{ end -}}
 
 {{ if $resource -}}
   {{ $src = $resource.RelPermalink -}}
   {{ $type = $resource.MediaType -}}
-{{ end -}}
-
-{{ if and $poster (fileExists (path.Join "/static" $poster)) -}}
-  {{ $poster = relURL $poster -}}
-{{ else if $poster -}}
-  {{ $poster = strings.TrimLeft "/" $poster -}}
-  {{ with resources.Get $poster -}}
-    {{ $posterres = . -}}
-  {{ end -}}
-  {{ with .Page.Resources.Get $poster -}}
-    {{ $posterres = . -}}
-  {{ end -}}
 {{ end -}}
 
 {{ if $posterres -}}
@@ -51,15 +27,14 @@
   {{ end -}}
 {{ end -}}
 
-{{ if not $src -}}
-{{ warnf "%s shortcode number %d in \"content/%s\" is missing the \"src\" attribute." .Name .Ordinal .Page.File.Path -}}
-{{ else if not (or $static $resource) -}}
-{{ warnf "%s shortcode number %d in \"content/%s\" has an error in the \"src\" attribute." .Name .Ordinal .Page.File.Path -}}
-{{ end -}}
 
 <figure class="video{{ with $class }} {{ . }}{{ end }}">
 <video controls preload="{{ $preload }}" {{ with $width }}width="{{ . }}"{{ end }} {{ with $poster }}poster="{{ . }}"{{ end }} {{ with $autoplay }}autoplay="{{ . }}"{{ end }} {{ with $loop }}loop="{{ . }}"{{ end }}>
 <source src="{{ $src }}" {{ with $type }}type="{{ . }}"{{ end }}>
+<p>
+  Your browser doesn't support HTML video. Here is a
+  <a href="{{ $src }}" download="{{ $src }}">link to the video</a> instead.
+</p>
 </video>
 {{ with $caption -}}
 <figcaption>{{ . | markdownify }}</figcaption>

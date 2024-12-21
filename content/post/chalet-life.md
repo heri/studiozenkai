@@ -1,9 +1,10 @@
 +++
 title = "Chalet Party"
+subtitle = "ft Raphaël + Léo"
 tags = ['chalet', 'personal']
 +++
 
-{{< video src="/audio/au-chalet-rouge.mp4" class="au chalet rouge" >}}
+{{< video src="/media/au-chalet-rouge.mp4" caption="au chalet rouge" >}}
 
 On quitte la ville, bye le béton  
 (Béton!)  

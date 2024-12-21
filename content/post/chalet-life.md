@@ -2,6 +2,7 @@
 title = "Chalet Party"
 subtitle = "ft Raphaël + Léo"
 tags = ['chalet', 'personal']
+section = "media"
 +++
 
 {{< video src="/media/au-chalet-rouge.mp4" caption="au chalet rouge" >}}
@@ -94,3 +95,9 @@ Sur le chemin du retour, les chevreuils s’élancent
 On leur dit "Bye bye," pis "À la prochaine chance!"  
 Au Chalet Rouge, on reviendra l’hiver  
 Avec Heri et sa gang, c’est toujours l’enfer!  
+
+
+## Bonus
+
+
+{{< video src="/media/au-chalet-summer-edition.mp4" caption="au chalet rouge summer edition" >}}

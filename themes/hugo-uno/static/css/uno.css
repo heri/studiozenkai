@@ -2807,3 +2807,63 @@ nav {
     margin-bottom: .4em; } }
 
 /*# sourceMappingURL=uno.css.map */
+
+/* General table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.3em;
+  font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 21px;
+}
+
+/* Table header styling */
+table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  padding: 10px;
+  text-align: left;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Table body styling */
+table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Alternating row colors */
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Hover effect for rows */
+table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Responsive table */
+@media screen and (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  table tr {
+    margin-bottom: 1em;
+  }
+  table th, table td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+  table th::before, table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 10px;
+    font-weight: bold;
+    text-align: left;
+  }
+}

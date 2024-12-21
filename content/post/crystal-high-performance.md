@@ -137,13 +137,22 @@ We analyzed results and compared performance to our Ruby on Rails app. With the 
 
 ## Crystal/Kemal vs TypeScript
 
-[TypeScript](https://studiozenkai.com/post/typescript-for-ruby-developers/) is also a good choice when considering performance. So why would a team choose Crystal?
+[TypeScript](https://studiozenkai.com/post/typescript-for-ruby-developers/) is also a good choice when considering performance. [Rust](https://studiozenkai.com/tags/rust/) has even better performance. So how do you compare?
 
-* *Performance* Being a compiled language, Crystal offers near C-like performance. While TypeScript adds static typing, it still runs on V8 engine, which is slower compared to compiled languages
-* *Syntax* It might take weeks or even months before a Ruby developer becomes comfortable with TypeScript, where it might just be days for Crystal
-* *Concurrency* Crytal has built-in support for fiber. TypeScript has async and promises, but these can be complex to manage in practice
-* *Ecosystem* TypeScript clearly wins with a vast ecosystem. But if you have a simple use case and do not expect integrations with third-parties or complex types, Kemal and its simplicity is a better choice
+| Feature       | Ruby on Rails                          | Crystal                              | Rust                                 | TypeScript                          |
+|----------------------|--------------------------------------------|--------------------------------------|--------------------------------------|-------------------------------------|
+| **Performance**      | Moderate                                   | High       | Very High (close to C)           | Moderate to High (depends on V8)    |
+| **Syntax**           | Elegant, expressive               | Ruby-like, static typing, compiled   | Strict, low-level, memory safe       | JavaScript with static typing      |
+| **Concurrency**      | Limited                     | Built-in fibers                      | Excellent (async/await, threads)     | Good (async, promises)        |
+| **Ecosystem**        | Many libraries and gems            | Growing, fewer libraries             | Growing, strong systems programming  | Vast, npm ecosystem                 |
+| **Ease of Learning** | Easy to moderate                           | Easy for Ruby developers             | Steep                 | Easy for JS developers      |
+| **Use Cases**        | Web apps, prototyping              | High-performance web services        | Systems, performance-critical tasks | Web development, front-end and back-end |
+| **Error Handling**   | Runtime errors                             | Compile-time errors                  | Compile-time errors, strict handling | Compile-time errors                 |
+| **Memory Management**| Garbage collected                          | Garbage collected                    | Ownership model, no garbage collector| Garbage collected (V8 engine)       |
+| **Community Support**| Large, active                              | Smaller, growing                     | Medium                        | Large, active                       |
+| **Deployment**       | Easy                        | Easy to moderate (binaries)                      | Moderate (binaries, more setup)      | Easy           |
+| **Tooling**          | Excellent          | Essentials (Shards, Kemal)                 | Good (Cargo, Clippy, etc.)      | Excellent|
 
-Crystal/Kemal is ideal for real-time systems, CPU-bound tasks. TypeScript is better suited when you consider libraries and future ecosystem integration.
+Crystal and Rust make sense for small, focused services requiring excellent performance. Ruby and Typescript are better for web applications aimed at a diversity of users. 
 
 Do you have to rewrite your monolith overnight? No, Crystal (and TypeScript) are only here to fill in the gaps Rails can’t. They’re lean, mean, and unapologetically fast. As for Rails? Well, it might still have its uses — just not where speed and concurrency matter most.

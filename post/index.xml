@@ -268,6 +268,13 @@
       <description>&lt;p&gt;I shipped many applications, using a variety of frameworks, through &lt;a href=&#34;http://studiozenkai.com/challenge/&#34;&gt;my current 1 year challenge&lt;/a&gt; or startups. Ruby issues include low performance, such as servers needing more RAM, not able to sustain large traffic, or slow rendering. Since this is a recurring issue, here is a checklist to help developers get their Ruby app faster:&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Starting a marketplace - Finding inspiration in the Pillars of The Earth</title>
+      <link>https://studiozenkai.com/post/marketplace-platform/</link>
+      <pubDate>Mon, 09 May 2016 15:35:26 -0400</pubDate>
+      <guid>https://studiozenkai.com/post/marketplace-platform/</guid>
+      <description>&lt;p&gt;Their multiplication of AirBnb, Kickstarter and Uber clones in recent years have encouraged entrepreneurs to launch their own marketplaces.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Why my next laptop won&#39;t be an Apple</title>
       <link>https://studiozenkai.com/post/laptop-machine-learning/</link>
       <pubDate>Wed, 04 May 2016 15:35:26 -0400</pubDate>
@@ -307,7 +314,7 @@
       <link>https://studiozenkai.com/post/chalet-life/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://studiozenkai.com/post/chalet-life/</guid>
-      <description>&lt;figure class=&#34;video au chalet rouge&#34;&gt;&#xA;&lt;video controls preload=&#34;metadata&#34;    &gt;&#xA;&lt;source src=&#34;audio/au-chalet-rouge.mp4&#34; &gt;&#xA;&lt;/video&gt;&#xA;&lt;/figure&gt;&#xA;&lt;p&gt;On quitte la ville, bye le béton&lt;br&gt;&#xA;(Béton!)&lt;br&gt;&#xA;Les montagnes appellent, à Rivière-Rouge, allons!&lt;br&gt;&#xA;(Rouge!)&lt;br&gt;&#xA;Le voisin débarque, une pelle dans la main,&lt;br&gt;&#xA;“Bienvenue chez Heri, allez viens!”&lt;/p&gt;&#xA;&lt;p&gt;On blague, on chante, on perd pas une seconde,&lt;br&gt;&#xA;À midi, c’est raclette, tout le monde!&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://studiozenkai.com/images/1_chalet_party.jpeg&#34; alt=&#34;chalet pelle&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;[Refrain]&lt;br&gt;&#xA;Ohé ohé, Au Chalet Rouge!&lt;br&gt;&#xA;On rit, on danse, y’a pas d’refuge!&lt;br&gt;&#xA;Ohé ohé, viens t’amuser,&lt;br&gt;&#xA;Fondue, raclette, marshmallows grillés!&lt;/p&gt;</description>
+      <description>&lt;figure class=&#34;video&#34;&gt;&#xA;&lt;video controls preload=&#34;metadata&#34;    &gt;&#xA;&lt;source src=&#34;https://studiozenkai.com/media/au-chalet-rouge.mp4&#34; &gt;&#xA;&lt;p&gt;&#xA;  Your browser doesn&#39;t support HTML video. Here is a&#xA;  &lt;a href=&#34;https://studiozenkai.com/media/au-chalet-rouge.mp4&#34; download=&#34;/media/au-chalet-rouge.mp4&#34;&gt;link to the video&lt;/a&gt; instead.&#xA;&lt;/p&gt;&#xA;&lt;/video&gt;&#xA;&lt;figcaption&gt;au chalet rouge&lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&lt;p&gt;On quitte la ville, bye le béton&lt;br&gt;&#xA;(Béton!)&lt;br&gt;&#xA;Les montagnes appellent, à Rivière-Rouge, allons!&lt;br&gt;&#xA;(Rouge!)&lt;br&gt;&#xA;Le voisin débarque, une pelle dans la main,&lt;br&gt;&#xA;“Bienvenue chez Heri, allez viens!”&lt;/p&gt;&#xA;&lt;p&gt;On blague, on chante, on perd pas une seconde,&lt;br&gt;&#xA;À midi, c’est raclette, tout le monde!&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://studiozenkai.com/images/1_chalet_party.jpeg&#34; alt=&#34;chalet pelle&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;[Refrain]&lt;br&gt;&#xA;Ohé ohé, Au Chalet Rouge!&lt;br&gt;&#xA;On rit, on danse, y’a pas d’refuge!&lt;br&gt;&#xA;Ohé ohé, viens t’amuser,&lt;br&gt;&#xA;Fondue, raclette, marshmallows grillés!&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

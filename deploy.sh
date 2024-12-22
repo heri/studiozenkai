@@ -32,6 +32,6 @@ fi
 # Commit and push changes
 git commit -m "$commit_message"
 
-git push origin master
+git push
 
 echo "Deployment complete!"

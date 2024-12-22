@@ -135,7 +135,7 @@ To make the case, we profile the endpoint with our existing database and typical
 
 We analyzed results and compared performance to our Ruby on Rails app. With the same PostgreSQL db, we measured ~225 rps (requests per second) for Kemal and ~5 rps for Rails, which makes our Kemal microservice 45 times faster!
 
-## Crystal/Kemal vs TypeScript
+## Choosing Crystal/Kemal
 
 [TypeScript](https://studiozenkai.com/post/typescript-for-ruby-developers/) is also a good choice when considering performance. [Rust](https://studiozenkai.com/tags/rust/) has even better performance. So how do you compare?
 

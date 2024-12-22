@@ -76,10 +76,6 @@ Ruby has good developer tooling, but it is clear that TypeScript has heavyweight
 
 **In Short**
 
-For me, Ruby is a love letter to developers. TypeScript is a pre-nup: it ensures everyone knows the rules before committing. They’re different, but both have their place.
-
-For Front-end work, Performance-critical work, TypeScript is a better choice.
-
-For web back-ends, small elegant scripts, Ruby still makes sense, as demonstrated by Shopify and Github.
+For me, Ruby is a love letter to developers. TypeScript is a pre-nup: it ensures everyone knows the rules before committing. They’re different, but both have their place. I have [a more elaborate comparison table](https://studiozenkai.com/post/crystal-high-performance/#crystalkemal-vs-typescript) you can study.
 
 And hey, if you still hate TypeScript after trying it, at least it’s not Python.

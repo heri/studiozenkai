@@ -9,13 +9,12 @@ TARGET_DIR="/Volumes/T7 Shield/work/studiozenkai"
 # Copy contents of public directory to target directory
 rsync -av --exclude='/index.html' "$SOURCE_DIR"/ "$TARGET_DIR"/
 
-# Copy index.xml file
+# index.xml from /post is better than the main one
 cp "$SOURCE_DIR"/post/index.xml "$TARGET_DIR"/
 
-# Optionally remove the public directory after copying
-# rm -rf $SOURCE_DIR
+rm -rf $SOURCE_DIR
 
-git add post/* tags/* content/* themes/* index.html index.xml deploy.sh config.toml
+git add post/* tags/* content/* themes/* categories/* css/* index.html index.xml deploy.sh config.toml
 
 read -p "Enter commit message: " commit_message
 

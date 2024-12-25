@@ -8,7 +8,7 @@
         <h1>{{ .Title }}</h1>
         <span class="post-date">{{ if .Date }}{{ .Date.Format "Mon, Jan 2, 2006" }}{{ else if .Params.subtitle }}{{ .Params.subtitle }}{{ end }}</span>
         {{ .Content }}
-        <div class="post-tags">{{ range (.GetTerms "tags") }}<a href="{{ .Permalink }}" >{{ .LinkTitle }}</a>        {{ end}}</div>
+        <div class="post-tags">In {{ range (.GetTerms "tags") }}<a href="{{ .Permalink }}" >{{ .LinkTitle }}</a>        {{ end}}</div>
         {{ partial "sharing.html" . }}
         {{ partial "comments.html" .}}
       </div>

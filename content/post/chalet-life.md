@@ -96,8 +96,3 @@ On leur dit "Bye bye," pis "À la prochaine chance!"
 Au Chalet Rouge, on reviendra l’hiver  
 Avec Heri et sa gang, c’est toujours l’enfer!  
 
-
-## Bonus
-
-
-{{< video src="/media/au-chalet-summer-edition.mp4" caption="au chalet rouge summer edition" >}}

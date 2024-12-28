@@ -93,6 +93,13 @@
       <description>&lt;p&gt;Programmers are attracted to big challenges, perhaps comparing themselves to Ed Hillary and Tenzig Norgay ascending Mount Everest. It brings prestige inside and outside the company, and opens them new doors.&lt;/p&gt;&#xA;&lt;p&gt;While big challenges are worth it, and I encourage everyone to go outside of their comfort zone regularly, little things also matter. It is easy to overlook small calculations, variable naming, or quick queries, assuming that these will make little differences and it is not worth the (potential) conflict with the code author.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Engineer Career Traps</title>
+      <link>https://studiozenkai.com/post/battles-that-matter/</link>
+      <pubDate>Tue, 14 Feb 2023 12:00:00 +0000</pubDate>
+      <guid>https://studiozenkai.com/post/battles-that-matter/</guid>
+      <description>&lt;p&gt;When I mentor other engineers, soft skills are the trickiest. Hard skills such as &lt;a href=&#34;https://studiozenkai.com/tags/performance/&#34;&gt;performance&lt;/a&gt; or &lt;a href=&#34;https://studiozenkai.com/tags/security/&#34;&gt;security&lt;/a&gt; are most sought after, while situations requiring soft skills are overlooked.&lt;/p&gt;&#xA;&lt;p&gt;Here are situations that are avoided, but should not be!&lt;/p&gt;&#xA;&lt;h2 id=&#34;fighting-battles-that-matter&#34;&gt;Fighting Battles that matter&lt;/h2&gt;&#xA;&lt;p&gt;As a software engineer, there are moments that define your career. Maybe the codebase reeks. Maybe the team is overworked. Maybe there are security gaps. Someone says, &amp;ldquo;It&amp;rsquo;s fine&amp;rdquo;. Everyone, except you, nods because it is easier.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Rails Performance exercise</title>
       <link>https://studiozenkai.com/post/rails-performance-refactor/</link>
       <pubDate>Thu, 06 Oct 2022 12:00:00 +0000</pubDate>

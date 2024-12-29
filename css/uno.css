@@ -2884,6 +2884,6 @@ table tr:hover {
 
 #sharing li {
   display: inline-block;
-    margin: 0 1px 0 0;
-    line-height: 1em;
+  margin: 0 1px 1em 0;
+  line-height: 1em;
 }

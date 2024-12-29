@@ -222,8 +222,7 @@
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
 </span></span></code></pre></div><p>In this case, the user data should be editable by its owner, the current user. In other cases, you can also allow admins or account manager to administrate data, while still making sure policies are followed</p>
 <h2 id="4-add-input-validation">4. <strong>Add Input Validation</strong></h2>
-<p>The user might bypass the form and send in incorrect input to crash your application, have access to the db, ie look for epxloits.</p>
-<p>Inputs should be validated before passing them on</p>
+<p>The user might bypass the form and send in incorrect input. Inputs should be validated before passing them on:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">user_params</span>
 </span></span><span style="display:flex;"><span>  params<span style="color:#f92672">.</span>require(<span style="color:#e6db74">:user</span>)<span style="color:#f92672">.</span>permit(<span style="color:#e6db74">:name</span>, <span style="color:#e6db74">:email</span>, <span style="color:#e6db74">:password</span>)<span style="color:#f92672">.</span>tap <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>whitelisted<span style="color:#f92672">|</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">raise</span> <span style="color:#66d9ef">ArgumentError</span>, <span style="color:#e6db74">&#34;Invalid name&#34;</span> <span style="color:#66d9ef">unless</span> whitelisted<span style="color:#f92672">[</span><span style="color:#e6db74">:name</span><span style="color:#f92672">].</span>match?(<span style="color:#e6db74">/\A[a-zA-Z]+\z/</span>)
@@ -240,7 +239,7 @@
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
 </span></span></code></pre></div><p>It is also possible to throttle requests by user, or other parts of the request header. If this is an issue, you can also add dedicated rate limiters in front your system.</p>
 <h2 id="6-sanitize-inputs">6. <strong>Sanitize Inputs</strong></h2>
-<p>In addition to input validation above, you can take steps so queries do not make the application fail, regardless of user inputs</p>
+<p>In addition to input validation above, you can take steps so queries do not crash the application or the database, and exploit the weakness.</p>
 <p>Converting inputs to string such as below make sure the database doesn&rsquo;t throw an exception.</p>
 <p>Also using <code>find_by</code> will let Rails fail gracefully</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">update_user</span>
@@ -284,16 +283,16 @@
 </span></span></code></pre></div><h2 id="10-remove-sensitive-data-from-logs">10. <strong>Remove Sensitive Data from Logs</strong></h2>
 <p>Log files are typically not as well secured as db, yet they might contain sensitive data. You might have a team member who made sent logs to Kibana ES and made them viewable without requiring credentials (ie security by obsfucation)</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#75715e"># in config/application.rb:</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Rack</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Attack</span><span style="color:#f92672">.</span>throttle(<span style="color:#e6db74">&#34;requests by IP&#34;</span>, <span style="color:#e6db74">limit</span>: <span style="color:#ae81ff">5</span>, <span style="color:#e6db74">period</span>: <span style="color:#ae81ff">1</span><span style="color:#f92672">.</span>minute) <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>req<span style="color:#f92672">|</span>
-</span></span><span style="display:flex;"><span>  req<span style="color:#f92672">.</span>ip <span style="color:#66d9ef">if</span> req<span style="color:#f92672">.</span>path <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;/users/update&#34;</span> <span style="color:#f92672">&amp;&amp;</span> req<span style="color:#f92672">.</span>post?
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
-</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">Rails</span><span style="color:#f92672">.</span>application<span style="color:#f92672">.</span>config<span style="color:#f92672">.</span>filter_parameters <span style="color:#f92672">+=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">:password</span>, <span style="color:#e6db74">:credit_card</span><span style="color:#f92672">]</span>
 </span></span></code></pre></div><p>No more passwords in log files!</p>
 <p><em>Bonust</em> Monitoring and alerts are not only for devops! Tools like Sentry, DataDog or New Relic allows you to detect unusual patterns such as excessive failed updates. As soon as an application is live, make sure to set these up.</p>
 <h2 id="final-secured-endpoint">Final Secured Endpoint:</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># in config/application.rb:</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Rack</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Attack</span><span style="color:#f92672">.</span>throttle(<span style="color:#e6db74">&#34;requests by IP&#34;</span>, <span style="color:#e6db74">limit</span>: <span style="color:#ae81ff">5</span>, <span style="color:#e6db74">period</span>: <span style="color:#ae81ff">1</span><span style="color:#f92672">.</span>minute) <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>req<span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span>  req<span style="color:#f92672">.</span>ip <span style="color:#66d9ef">if</span> req<span style="color:#f92672">.</span>path <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;/users/update&#34;</span> <span style="color:#f92672">&amp;&amp;</span> req<span style="color:#f92672">.</span>post?
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">Rails</span><span style="color:#f92672">.</span>application<span style="color:#f92672">.</span>config<span style="color:#f92672">.</span>filter_parameters <span style="color:#f92672">+=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">:password</span>, <span style="color:#e6db74">:credit_card</span><span style="color:#f92672">]</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>

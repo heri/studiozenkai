@@ -88,9 +88,7 @@ In this case, the user data should be editable by its owner, the current user. I
 
 ## 4. **Add Input Validation**
 
-The user might bypass the form and send in incorrect input to crash your application, have access to the db, ie look for epxloits.
-
-Inputs should be validated before passing them on
+The user might bypass the form and send in incorrect input. Inputs should be validated before passing them on:
 
 ```ruby
 def user_params
@@ -120,7 +118,7 @@ It is also possible to throttle requests by user, or other parts of the request 
 
 ## 6. **Sanitize Inputs**
 
-In addition to input validation above, you can take steps so queries do not make the application fail, regardless of user inputs
+In addition to input validation above, you can take steps so queries do not crash the application or the database, and exploit the weakness.
 
 Converting inputs to string such as below make sure the database doesn't throw an exception.
 
@@ -191,10 +189,6 @@ Log files are typically not as well secured as db, yet they might contain sensit
 
 ```ruby
 # in config/application.rb:
-Rack::Attack.throttle("requests by IP", limit: 5, period: 1.minute) do |req|
-  req.ip if req.path == "/users/update" && req.post?
-end
-
 Rails.application.config.filter_parameters += [:password, :credit_card]
 ```
 No more passwords in log files!
@@ -206,6 +200,10 @@ No more passwords in log files!
 ```ruby
 
 # in config/application.rb:
+Rack::Attack.throttle("requests by IP", limit: 5, period: 1.minute) do |req|
+  req.ip if req.path == "/users/update" && req.post?
+end
+
 Rails.application.config.filter_parameters += [:password, :credit_card]
 
 

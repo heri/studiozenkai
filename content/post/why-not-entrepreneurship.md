@@ -16,7 +16,7 @@ I do not see the thrill or the motivation.
 
 I do not need more money. What would all-nights bring? Another million owed to investors? A "congrats" in hacker news? None of that feels worth it. I've done my time. I know it is possible
 
-I have two sons. One is seven, the other four. They are young and wild, full of questions and mischfief. A thousand reasons to smile. But leave them for a time, and they turn bad, like the the sad plant you forgot to water. They need a parent who is present, not one who is chasing who knows what.
+I have two sons. One is six, the other four. They are young and wild, full of questions and mischfief. A thousand reasons to smile. But leave them for a time, and they turn bad, like the the sad plant you forgot to water. They need a parent who is present, not one who is chasing who knows what.
 
 Also, people think being an entrepreneur means freedom. It doesn’t. You always have bosses. If your board or investors aren’t your bosses, then your users are. They’re always there, demanding, expecting improvements. Having a random full-time job means I don’t have to give it 100% every single day. I can take two days off. Do nothing. As a founder, you don’t get that luxury.
 

@@ -14,7 +14,7 @@ It is important in your team to raise the bar and make everyone understand the t
 
 Fortunately, for key points in your application, it is possible to use other programming languages known for their raw performance.
 
-In a recent project, I had to calculate the distance between different words and find the closest. The Ruby implementation was benchmarked and worked well in development but took more than 30 seconds with the staging data.
+In a recent project, I had to calculate the distance between different words from PDF documents and find the closest. The Ruby implementation was benchmarked and worked well in development but took more than 30 seconds with the staging data.
 
 We considered Elastic Search as well other services, but these were deemed too complex and added too many constraints for the project.
 

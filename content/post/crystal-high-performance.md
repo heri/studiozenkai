@@ -149,7 +149,7 @@ We analyzed results and compared performance to our Ruby on Rails app. With the 
 | **Use Cases**        | Web apps, prototyping              | High-performance web services        | Systems, performance-critical tasks | Web development, front-end and back-end |
 | **Error Handling**   | Runtime errors                             | Compile-time errors                  | Compile-time errors, strict handling | Compile-time errors                 |
 | **Memory Management**| Garbage collected                          | Garbage collected                    | Ownership model, no garbage collector| Garbage collected (V8 engine)       |
-| **Community Support**| Large, active                              | Smaller, growing                     | Medium                        | Large, active                       |
+| **Community Support**| Large, active                              | Small, growing                     | Medium                        | Large, active                       |
 | **Deployment**       | Easy                        | Easy to moderate (binaries)                      | Moderate (binaries, more setup)      | Easy           |
 | **Tooling**          | Excellent          | Essentials (Shards, Kemal)                 | Good (Cargo, Clippy, etc.)      | Excellent|
 

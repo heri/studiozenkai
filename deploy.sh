@@ -14,7 +14,7 @@ cp "$SOURCE_DIR"/post/index.xml "$TARGET_DIR"/
 
 rm -rf $SOURCE_DIR
 
-git add post/* tags/* content/* themes/* categories/* css/* index.html index.xml deploy.sh config.toml
+git add post/* tags/* content/* themes/* categories/* css/* images/* index.html index.xml deploy.sh config.toml
 
 read -p "Enter commit message: " commit_message
 

@@ -194,9 +194,9 @@ end
 
 ## Bonus
 
-Depending on your use case, aggregation logic can be offloaded to an external API. That external API could run on a mean, blazing fast stack (such as [Crystal](https://studiozenkai.com/post/crystal-high-performance/) or [Rust](https://studiozenkai.com/tags/rust/)), or can be allocated more powerful hardware.
+Depending on your use case, aggregation logic can be offloaded to an external API. That external API could run on a mean, blazing fast stack (such as [Crystal](https://studiozenkai.com/post/crystal-high-performance/) or [Rust](https://studiozenkai.com/tags/rust/)), or can be allocated more powerful hardware. I have a [more elaborate comparison table on this](https://studiozenkai.com/post/crystal-high-performance/#crystalkemal-vs-typescript).
 
-Make sure to profile performance. An external API will add networking time so you can end with worse response times.
+If you really want to move to an external service, make sure to profile performance. An external API will add networking time so you can end up with worse response times.
 
 ```ruby
 # Offload aggregation logic to an external API gateway.

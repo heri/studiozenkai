@@ -297,8 +297,8 @@
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
 </span></span></code></pre></div><h2 id="bonus">Bonus</h2>
-<p>Depending on your use case, aggregation logic can be offloaded to an external API. That external API could run on a mean, blazing fast stack (such as <a href="https://studiozenkai.com/post/crystal-high-performance/">Crystal</a> or <a href="https://studiozenkai.com/tags/rust/">Rust</a>), or can be allocated more powerful hardware.</p>
-<p>Make sure to profile performance. An external API will add networking time so you can end with worse response times.</p>
+<p>Depending on your use case, aggregation logic can be offloaded to an external API. That external API could run on a mean, blazing fast stack (such as <a href="https://studiozenkai.com/post/crystal-high-performance/">Crystal</a> or <a href="https://studiozenkai.com/tags/rust/">Rust</a>), or can be allocated more powerful hardware. I have a <a href="https://studiozenkai.com/post/crystal-high-performance/#crystalkemal-vs-typescript">more elaborate comparison table on this</a>.</p>
+<p>If you really want to move to an external service, make sure to profile performance. An external API will add networking time so you can end up with worse response times.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#75715e"># Offload aggregation logic to an external API gateway.</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">index</span>
 </span></span><span style="display:flex;"><span>  render <span style="color:#e6db74">json</span>: <span style="color:#66d9ef">ExternalProductService</span><span style="color:#f92672">.</span>fetch_products(<span style="color:#e6db74">page</span>: params<span style="color:#f92672">[</span><span style="color:#e6db74">:page</span><span style="color:#f92672">]</span>)
@@ -341,7 +341,7 @@
 
 <div class="sharing">
 
-    <p>© Heri Rakotomalala. All rights reserved. Powered by <a href="https://www.digitalocean.com/?refcode=ef57f6ccd2d8">Digital Ocean</a> and <a href="https://github.com/heri">Github</a></p>
+    <p>© Heri Rakotomalala. All rights reserved. Powered by <a href="https://www.digitalocean.com/?refcode=ef57f6ccd2d8">Digital Ocean</a>, <a href="https://gohugo.io" rel="nofollow">Hugo</a> and and <a href="https://github.com/heri" rel="nofollow">Github</a></p>
 
 <p>Heri Rakotomalala is an engineer working on small and innovative projects in Montréal. Originally from Madagascar, he has lived 7 years in East Africa, studied Engineering and made friends in France, built a community center in Esteli, Nicaragua and is taking pictures and coding in Montréal, Canada. Read <a href="https://studiozenkai.com/post/about-heri/">more about Heri</a></p>
 

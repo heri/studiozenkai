@@ -1,33 +1,33 @@
 +++
 date = "2024-10-11T12:00:00-00:00"
-title = "The Good, The Bad and The Profitable : my lessons with Airbnb"
+title = "The Good, The Bad and The Profitable : The lessons from my Airbnb adventyre"
 tags = ['airbnb', 'entrepreneurship', 'personal', 'montréal', 'photography', 'sustainable']
 +++
 
-*TLDR*: What started as an exciting adventure in short-term rentals turned into a crash course in entrepreneurship, resilience, and family bonding.
+During the pandemic, with optimism running high, I bought [a vacation property in the Laurentians](https://studiozenkai.com/post/airbnb-vacation-home/). It was meant to serve two purposes: generate income through short-term rentals and create [priceless family memories](https://studiozenkai.com/post/chalet-life/)
 
-During the pandemic, I bought [a vacation property in the Laurentians](https://studiozenkai.com/post/airbnb-vacation-home/) for short-term rental on Airbnb and for [priceless family moments](https://studiozenkai.com/post/chalet-life/)
+The chalet ([official website](https://auchaletrouge.com)) has everything one could hope for: a picturesque waterfront location, a cozy log-cabin aesthetic, and modern amenities like a spa, 4K TV, and high-speed internet. For a time, the plan seemed flawless. The property generated $70k–$100k annually, covering the mortgage and allowing me to dream of scaling this venture into a sustainable, lucrative lifestyle.
 
-The chalet ([official website](https://auchaletrouge.com)) is waterfront on 2 acres, has the typical log home look that many vacationers look for, and while being secluded in nature, has many modern amenities such as a spa, fully furnished kitchen, 4K TV with hi-speed Internet, indoor & outdoor fire pits, a high-end aluminium & cedar dock with boats, and so on.
+But dreams have a way of colliding with reality.
 
 <!--more-->
 
-During the pandemic, it was always occupied, except for a few spots in fall or spring, and made between $70k and $100k yearly. Why not an exact number? This is due to missed opportunities, refunds, but I also had friends coming over who instead of paying contributed to the property's upkeep or amenities.
+# The Reality check
 
-In theory, $70k to $100k annual revenues means you could pay back the mortgage in a few years, so you will have a property generating "free" cash flow, as well as a waterfront property that friends & family could enjoy and have life memories. Doesn't that sound amazing? Maybe one could buy a couple of vacation properties, retire early, and work 4 hours weekly doing some property mainteance and responding to sporadic messages from wealthy customers.
+After four years and over 300 families hosted, I’ve learned that the glamorous vision of Airbnb ownership is a far cry from its demanding reality. Here’s what they don’t tell you:
 
-That was the seductive, albeit slightly flawed, theory. I have operated the property for four years, and have hosted 300+ families. The theory clashes with reality:
+* **An Unyielding Commitment** Owning a vacation property is not a side hustle; it’s a full-time responsibility. Issues arise without warning, from burst pipes to irate guests, and must be resolved promptly. There’s no "calling in sick" or pausing the operation.
+* **The Silent Sabotage of Wear and Tear** Each guest leaves a mark, some visible, others discovered weeks later. Damaged furniture, stolen amenities, plumbing nightmares—claims processes rarely provide justice. Every season, repairs and replacements demand time and money.
+* **The Financial Squeeze** What looks like a $70k revenue stream on paper dwindles when expenses are tallied: cleaning fees, renovations, property taxes, insurance, and an endless parade of consumables. Then there’s the rising tide of municipal fees and Airbnb’s hefty cut.
+* **Logistical Hurdles** Travel to and from the property, especially with growing family commitments, adds to the strain. What began as a refreshing retreat now feels like a grueling commute through relentless traffic and construction zones on the A15
+* **Automation Myths** From smart locks to dynamic pricing tools, technology promises ease but rarely delivers autonomy. Guests demand human attention, and maintenance always requires a personal touch.
+* **Marketing Demands** Building a brand beyond Airbnb is vital but exhausting. Glamorous photoshoots, social media campaigns, and website optimization compete with the daily grind. And in hospitality, even the best product isn’t enough—perception is everything.
+* **Nature’s Relentless Battle** Wildlife invasions, erosion of the waterfront, and the constant march of seasons each bring their own set of challenges. Nature doesn’t pause, and neither can you.
 
-* Operating a vacation property means a hard commitment. It is not a hobby, or a low-end job where you can call in sick. It is your responsibility to address issues as soon as possible, answer messages professionally even from disrespectful patrons, and go onsite at least once monthly. The only way out is selling the property, but until then, you have to consider this like taking care of a baby. What made it work for me was avoiding seeing this as a chore, but as a privileged escape that gives me balance, away from city life and job responsabilities.
-* There is constant property damage and theft from groups. Because I am not onsite between two groups, and also there are too many amenities, it is almost impossible to know who broke or stole something. The first times, I filed claims, and had one group left a 1-star review painting me as an irresponsible host, or had Airbnb stating I had to eat the costs. You can expect having to continuously repair and replace amenities, from plumbing to electricity to furniture and decoration. For me, I like to establish quickly a personal relationship and make sure the group is aware of the rules. So I thank them for the interest, but I also express firmly that rules are meant to be followed.
-* Managing costs is a constant challenge, but it taught me resourcefulness and adaptability. From the $70k to $100k, a large percentage go to the cleaning team, handy man, property renovations (roof, plumbing, septic tank etc). Airbnb takes a large cut as well. Then there is an endless list of tools, propane gas, firewood, tons of cleaning supplies from Costco, dozens of towels and bed sheets, permits, fees, insurance. In the past few years, municipalities caught on the Airbnb craze and many saw it as an easy way to make money, doubling or tripling taxes for short-term rental properties. After adding all costs, you end up with little positive cash flow. Forget about getting rich quick! I did not put a lot of effort in minimizing costs but if you have a will, it is certainly possible.
-* Travel times add up. The first few years, it was fun to have a secluded property to go to. The views are picturesque, the highways are well maintained, and it was always a welcomed break from the city life. 5 years later, Montreal now has constant traffic jams even at night, there is constant road construction, and we also have weekend activities for the kids.
-* It is hard to automate. I was thinking that with the right tools and continuous improvements, it could almost run by itself. It does not work like that. Workers have to be closely monitored, customers want high-end timely service, attention to detail is important. Neverthless, tools like Nest, camreas, smart heaters and sensors, Pricelabs for dynamic pricing, Intuit for accounting helped automated boring tasks.
-* Airbnb provides leads, but ideally you would want a base of loyal customers or at least a website that brings in customers regularly. I have [a website](https://auchaletrouge.com) but still need to develop the online base.
-* Either made up or genuine, there is a real need for marketing. I have an [engineering background](https://studiozenkai.com/tags/software/) and like most engineers, like to believe it's enough to build the best product and customers will naturally come. This might work occassionally in software, but not in hospitality. So you have to take glamour pictures for social media, use hashtags and emojis, be sensitive to dates, elaborate marketing campaigns. 
-* Constant fight with nature. The waterfront is eroding away, and every year, I chase away mice, wasps, beavers, and all sorts of wildlife. Every season has its own issues, flooding in spring, lawn and plants upkeep in summer, snowplowing in winter etc. This is something you either hate or love. 9 times out of 10, I love it 😁
+## The Economic Storm Cloud gather
+Adding to these operational woes is the broader economic climate. Inflation and rising interest rates are squeezing the very middle-class families this chalet was designed to serve. Occupancy rates have plummeted, and marketing campaigns alone won’t solve the problem.
 
-The latest issue is that the middle class in Canada and North America is being squeezed. In many ways, the chalet is an escape for upper middle class and middle class families and couples to forget about their problems and enjoy some time off. They can do that if they save a few hundreds dollars every month. Inflation, rising interest rates, and economic pressures have left middle-class families struggling, affecting occupancy rates.
+
 
 ![Canadian Log cabin in the Quebec laurentians](/images/01_chalet.jpeg "Canadian Log cabin in the Quebec laurentians.")
 Your Typical canadian Log cabin in the Quebec laurentians
@@ -53,23 +53,18 @@ Marshmallow fun
 ![Paddling, swimming, and beach time](/images/10_chalet.jpeg "Paddling, swimming, and beach time")
 "Paddling, swimming, and beach time
 
-**Bonus Modelization**
+## A Turning Point Awaits
 
-Regular readers know mathematics to understand what is at play. This time, it is simple:
+The chalet sits quiet now, blanketed in stillness that feels like defeat. The bookings trickle in, barely enough to keep the lights on. Most would see the writing on the wall, cut your losses, call your real estate agent, and walk away.
 
- \[
-\begin{aligned}
-P = R - C
-\end{aligned}
-\]
+For for those unwilling to quit, there's a different path -- one paved with sweat and resolve. It's not easy, reinvention is never is. There's no guarantee of success, only the certainty of effort, sweat and risk. Bold ideas must meet tireless work. A re-imagined stay. A sharper story. A spark to reignite something worth sharing, and maybe learn a lesson or two in the process.
 
-Where:
+It's not for everyone. I am not even sure if it is for me. But then again, easy rarely writes the stories that matters.
 
-* P is yearly Profit
-* R is total yearly revenue
-* C is total yearly costs
+<hr/>
 
-**Revenue Optimization**
+**Bonus : How Does Airbnb Revenue R Work?**
+
 
  \[
 \begin{aligned}
@@ -94,26 +89,3 @@ Variables affecting revenue:
 * Marketing: Direct marketing, Social Media Leverage or repeat customers reducing dependence on Airbnb's algorithm. 
 * Pricing Strategy: Dynamic pricing, discounts, per person pricing, additional services. For example, if you have 3 bedrooms but if a group only need 2 beds, you can close the third bedroom and reduce total cost.
 * Seasonality: High demand in summer/winter vs. off-season occupancy.
-
-**Cost Optimization**
-
- \[
-\begin{aligned}
-C = F + V
-\end{aligned}
-\]
-
-Where:
-
-* F is fixed costs (mortgage ~$24k/y, property taxes ~$5k/y, insurance ~$3k/y, permits $1k/y)
-* V is variable costs (cleaning fees ($180+tx), utilities ~$3k/y, maintenance $10k/y including renovations, consumable $4k to 6k/y, Airbnb fees, online services)
-
-**Final Takeaways**
-
-* Owning and operating a vacation property is not for everyone. You need to have expert skills in at least one of these areas: marketing/sales, photography, customer service, operations including maintenance and cleaning. You also need a business plan on how you plan to tackle major issues. If there is no more running water, how are you going to fix it? Same for a broken amenity, mice, or a sick cleaning team.
-* Make sure to buy a property with unique advantages, such as a ski-in, ski-out chalet, an exclusive water feature (waterfall, private lake), breathtaking view of the landscape, or unique architecture such as treehouse or a glass house. There are thousands of lakefront chalets, or properties with a spa, swimming pool or volleyball court, and you will have to compete fiercely if you get one of these, possibly driving prices down.
-* Better yet, develop a unique story behind your Airbnb. Vacation properties with a genesis story and a community fare better than your average run-of-the-mill vacation property. Having a community with shared values also lowers thefts, maintenance and marketing costs, cancellations in exchange for time building the community through articles, media, events etc. I have started producing media and sharing [what we do at the Chalet](https://studiozenkai.com/post/chalet-life/). Let's see how it goes in 2025
-* Have a plan to cut down costs. You might clean yourself. You could market your own website and leverage social media. You could build a property made of stainless steel so even toddlers or party goers  cannot break anything. 
-* Have a plan to cut down on maintenance. In summer, I absolutely need to go to the property every 20 days otherwise there will dozens of broken amenities. The more amenities you have, the more maintenance is needed. Think hard how you can go around this.
-
-Despite the challenges, this adventure has been nothing short of transformative. Hosting over 300 families, learning countless skills, and creating [irreplaceable memories with my family](https://studiozenkai.com/post/chalet-life/) has made it all worthwhile. If you're ready for an adventure that tests and rewards you in equal measure, hosting a vacation property might just be for you!

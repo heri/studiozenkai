@@ -1,7 +1,7 @@
 +++
 date = "2024-10-11T12:00:00-00:00"
 title = "The Good, The Bad and The Profitable : The lessons from my Airbnb adventyre"
-tags = ['airbnb', 'entrepreneurship', 'personal', 'montréal', 'photography', 'sustainable']
+tags = ['airbnb', 'entrepreneurship', 'personal']
 +++
 
 During the pandemic, with optimism running high, I bought [a vacation property in the Laurentians](https://studiozenkai.com/post/airbnb-vacation-home/). It was meant to serve two purposes: generate income through short-term rentals and create [priceless family memories](https://studiozenkai.com/post/chalet-life/)
@@ -46,7 +46,7 @@ After four years and over 300 families hosted, I’ve learned that the glamorous
 * **Marketing Demands** Building a brand beyond Airbnb is vital but exhausting. Glamorous photoshoots, social media campaigns, and website optimization compete with the daily grind. And in hospitality, even the best product isn’t enough—perception is everything.
 * **Nature’s Relentless Battle** Wildlife invasions, erosion of the waterfront, and the constant march of seasons each bring their own set of challenges. Nature doesn’t pause, and neither can you.
 
-# The Economic Storm gather
+# The Storm gather
 Adding to these operational woes is the broader economic climate. Inflation and rising interest rates are squeezing the very middle-class families this chalet was designed to serve. Occupancy rates have plummeted, and marketing campaigns alone won’t solve the problem.
 
 The chalet sits quiet now, blanketed in stillness that feels like defeat. The bookings trickle in, barely enough to keep the lights on. Most would see the writing on the wall, cut losses, call the real estate agent, and walk away.
@@ -55,31 +55,3 @@ For for those unwilling to quit, there's a different path -- one paved with swea
 
 It's not for everyone. I am not even sure if it is for me. But then again, easy rarely writes the stories that matters.
 
-<hr/>
-
-**Bonus : How Does Airbnb Revenue Work?**
-
-
- \[
-\begin{aligned}
-R = N × OR × AR
-\end{aligned}
-\]
-
-Where:
-
-* N is number of rentable nights per year (365 - maintenance days). You want maintenance days to be as low as possible, but not as much as lowering the customer experience. Start at 15 days reserved for upkeep and work your way down.
-* OR is average Occupancy Rate. It was 0.8 during the pandemic but can be as low as 0.2 in low season (spring/fall)
-* AR is Average Nightly rate, $250 in low season and up to $700 in high season
-
-Variables affecting revenue:
-
-* Size: number of bedrooms and bathrooms is directly proportional to R
-* Unicity: Revenue is divided if there are other properties with the same features
-* Recency: Properties with modern amenities and design have higher revenues
-* Presentation: Naming, Photography, Graphic Design, Copywriting should be done professionally.
-* Location: Proximity to a high-volume tourism center boost revenues. This can be are a ski resort, a national park, a lake or a popular travel destination. The closer, the better.
-* Amenities: Features like a hot tub, dock, bbq or boats increase AR.
-* Marketing: Direct marketing, Social Media Leverage or repeat customers reducing dependence on Airbnb's algorithm. 
-* Pricing Strategy: Dynamic pricing, discounts, per person pricing, additional services. For example, if you have 3 bedrooms but if a group only need 2 beds, you can close the third bedroom and reduce total cost.
-* Seasonality: High demand in summer/winter vs. off-season occupancy.

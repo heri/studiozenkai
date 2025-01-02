@@ -3,27 +3,30 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://studiozenkai.com/post/</loc>
-    <lastmod>2025-01-02T12:00:00+00:00</lastmod>
+    <lastmod>2026-10-11T12:00:00+00:00</lastmod>
   </url><url>
     <loc>https://studiozenkai.com/</loc>
+    <lastmod>2026-10-11T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://studiozenkai.com/post/electronic-diet/</loc>
+    <lastmod>2025-01-02T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://studiozenkai.com/tags/health/</loc>
+    <lastmod>2025-01-02T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://studiozenkai.com/tags/sustainable/</loc>
+    <lastmod>2025-01-02T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://studiozenkai.com/tags/</loc>
     <lastmod>2025-01-02T12:00:00+00:00</lastmod>
   </url><url>
     <loc>https://studiozenkai.com/post/habits-2025/</loc>
-    <lastmod>2024-12-13T02:35:26-04:00</lastmod>
-  </url><url>
-    <loc>https://studiozenkai.com/tags/health/</loc>
     <lastmod>2024-12-13T02:35:26-04:00</lastmod>
   </url><url>
     <loc>https://studiozenkai.com/tags/personal/</loc>
     <lastmod>2024-12-13T02:35:26-04:00</lastmod>
   </url><url>
     <loc>https://studiozenkai.com/tags/software/</loc>
-    <lastmod>2024-12-13T02:35:26-04:00</lastmod>
-  </url><url>
-    <loc>https://studiozenkai.com/tags/sustainable/</loc>
-    <lastmod>2024-12-13T02:35:26-04:00</lastmod>
-  </url><url>
-    <loc>https://studiozenkai.com/tags/</loc>
     <lastmod>2024-12-13T02:35:26-04:00</lastmod>
   </url><url>
     <loc>https://studiozenkai.com/post/balancing-developer-happinness-and-customer-success/</loc>
@@ -38,12 +41,6 @@
     <loc>https://studiozenkai.com/tags/entrepreneurship/</loc>
     <lastmod>2024-10-11T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://studiozenkai.com/tags/montr%C3%A9al/</loc>
-    <lastmod>2024-10-11T12:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://studiozenkai.com/tags/photography/</loc>
-    <lastmod>2024-10-11T12:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://studiozenkai.com/post/airbnb-the-good-the-bad-the-profitable/</loc>
     <lastmod>2024-10-11T12:00:00+00:00</lastmod>
   </url><url>
@@ -51,6 +48,12 @@
     <lastmod>2024-09-10T12:00:00+00:00</lastmod>
   </url><url>
     <loc>https://studiozenkai.com/tags/art/</loc>
+    <lastmod>2024-09-10T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://studiozenkai.com/tags/montr%C3%A9al/</loc>
+    <lastmod>2024-09-10T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://studiozenkai.com/tags/photography/</loc>
     <lastmod>2024-09-10T12:00:00+00:00</lastmod>
   </url><url>
     <loc>https://studiozenkai.com/post/athleticism-wealth/</loc>

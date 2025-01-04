@@ -1,6 +1,6 @@
 +++
 date = "2024-10-11T12:00:00-00:00"
-title = "The Good, The Bad and The Profitable : The lessons from my Airbnb adventyre"
+title = "The Airbnb Reality Check"
 tags = ['airbnb', 'entrepreneurship', 'personal']
 +++
 
@@ -32,8 +32,6 @@ Marshmallow fun
 Paddling, swimming, and beach time
 
 But dreams have a way of colliding with reality.
-
-# The Reality check
 
 After four years and over 300 families hosted, I’ve learned that the glamorous vision of Airbnb ownership is a far cry from its demanding reality. Here’s what they don’t tell you:
 

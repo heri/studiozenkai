@@ -8,7 +8,6 @@ During the pandemic, with optimism running high, I bought [a vacation property i
 
 The chalet ([official website](https://auchaletrouge.com)) has everything one could hope for: a picturesque waterfront location, a cozy log-cabin aesthetic, and modern amenities like a spa, 4K TV, and high-speed internet. For a time, the plan seemed flawless. The property generated $70k–$100k annually, covering the mortgage and allowing me to dream of scaling this venture into a sustainable, lucrative lifestyle.
 
-
 <!--more-->
 
 ![Canadian Log cabin in the Quebec laurentians](/images/01_chalet.jpeg "Canadian Log cabin in the Quebec laurentians.")
@@ -46,7 +45,6 @@ After four years and over 300 families hosted, I’ve learned that the glamorous
 * **Marketing Demands** Building a brand beyond Airbnb is vital but exhausting. Glamorous photoshoots, social media campaigns, and website optimization compete with the daily grind. And in hospitality, even the best product isn’t enough—perception is everything.
 * **Nature’s Relentless Battle** Wildlife invasions, erosion of the waterfront, and the constant march of seasons each bring their own set of challenges. Nature doesn’t pause, and neither can you.
 
-# The Storm gather
 Adding to these operational woes is the broader economic climate. Inflation and rising interest rates are squeezing the very middle-class families this chalet was designed to serve. Occupancy rates have plummeted, and marketing campaigns alone won’t solve the problem.
 
 The chalet sits quiet now, blanketed in stillness that feels like defeat. The bookings trickle in, barely enough to keep the lights on. Most would see the writing on the wall, cut losses, call the real estate agent, and walk away.
@@ -54,4 +52,3 @@ The chalet sits quiet now, blanketed in stillness that feels like defeat. The bo
 For for those unwilling to quit, there's a different path -- one paved with sweat and resolve. It's not easy, reinvention is never is. There's no guarantee of success, only the certainty of effort, sweat and risk. Bold ideas must meet tireless work. A re-imagined stay. A sharper story. A spark to reignite something worth sharing, and maybe learn a lesson or two in the process.
 
 It's not for everyone. I am not even sure if it is for me. But then again, easy rarely writes the stories that matters.
-

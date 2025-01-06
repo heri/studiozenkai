@@ -2868,6 +2868,10 @@ table tr:hover {
   }
 }
 
+#sharing {
+  line-height: 1.5em;
+}
+
 #sharing ul {
   margin: 1.5em 0 0 0;
 }

@@ -7,7 +7,7 @@ tags = ['personal', 'montréal', 'career', 'software', 'photography', 'art']
 
 ![heri](/images/heri_small.jpg "heri")
 
-Key facts
+Key facts:
 
 * Born in one of the world's poorest countries, Madagascar. I get the "scarcity" mindset from this, but also memories of beautiful white sandy beaches
 * Spent teenage years in Nairobi, Kenya, a regional center in East Africa. From having to learn English to meeting people from all over the world, I learnt diversity and its benefits. Diversity makes us richer and more resilient, making us more sensitive to forces we did not know and might otherwise overwhelm us
@@ -21,9 +21,9 @@ Key facts
 * Senior/Lead/Staff Engineer for VC-backed startups such as Sonder, Klue, but also for global companies like Nasdaq or Decathlon. Additionally Software Consultant for many projects, from Airbnb/Uber clones to crypto trading platforms. I do not count the years coding anymore, but still get excited for new technologies or new patterns every now and then
 * Maintains and operates [a chalet on Airbnb](https://studiozenkai.com/post/airbnb-vacation-home/), deep in Québec countryside. I build docks and Adirondack chairs, chase away beavers and mice, [have fun with the kids](https://studiozenkai.com/post/chalet-life/) and can tell you the minute differences between bedsheets from Costco or Ikea, or 7 reasons why Dawn is better.
 
-So as you can see, I am comfortable in deep Quebec or France countryside, in a hacking space or in a neighorhood hip hop event. But due to my history, I am somehow allergic to alcohol (or at least at the level they are consumed in Western countries), debt and social norms
+So as you can see, I am comfortable in deep Quebec or France countryside, in a hacking space or in a neighorhood hip hop event. But due to my history, I am somehow allergic to alcohol (or at least at the level they are consumed in Western countries), debt and social norms.
 
-Key lessons from life
+Key lessons from life:
 
 * Hard work pays off, both financially and mentally. Do something consistenly for a few years, and you will be on top of 99% of other people. You don't have to and should not work like a mad dog, but regularly choosing to do your boring homework while others are watching Netflix will pay off on the long term. If you have to "keep" only one lesson from me, this would be it.
 * Best memories come from simple ideas, where you "just do it", based on simple needs and simple solutions. **If you think something makes sense, and can't come up with solid reasons why you shouldn't do it in 5 minutes, just do it, now**. Do no wait for days or weeks dreaming about it or trying to perfect "the" idea.

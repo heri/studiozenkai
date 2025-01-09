@@ -90,7 +90,7 @@
       <link>https://studiozenkai.com/post/ruby-to-python/</link>
       <pubDate>Sat, 08 Jun 2019 10:35:26 -0400</pubDate>
       <guid>https://studiozenkai.com/post/ruby-to-python/</guid>
-      <description>&lt;p&gt;Python is not so different from Ruby. Both languages feel intuitive, like an old tool in your hand. They speak in simple words, and their libraries reach far and wide. But for a Rubyist, Python is also a little strange, like walking backward on a familiar road.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-familiar&#34;&gt;The Familiar&lt;/h2&gt;&#xA;&lt;p&gt;Python has wide libraries. For hardware, for dataframes, for GPUs. It’s fast too, compiled to C, with the option to run on GPUs. You can do things in Python that feel impossible in Ruby, like building an autonomous car or serving a TensorFlow model in a Flask API.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Python is not so different from Ruby. Both languages feel intuitive, like an old tool in your hand. They speak in simple words, and their libraries reach far and wide. But for a Rubyist, Python is also a little strange, like walking backward on a familiar road.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-familiar&#34;&gt;The Familiar&lt;/h2&gt;&#xA;&lt;p&gt;Python has wide libraries. For hardware, for dataframes, for GPUs. It’s fast too, compiled to C, with the option to &lt;a href=&#34;https://studiozenkai.com/post/cuda/&#34;&gt;run on GPUs&lt;/a&gt;. You can do things in Python that feel impossible in Ruby, like &lt;a href=&#34;https://studiozenkai.com/post/autonomous-rc-car/&#34;&gt;building an autonomous car&lt;/a&gt; or serving a TensorFlow model in a Flask API.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Looking again at Microsoft</title>

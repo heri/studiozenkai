@@ -10,7 +10,7 @@
         {{ .Content }}
         <div class="post-tags">In {{ range (.GetTerms "tags") }}<a href="{{ .Permalink }}" >{{ .LinkTitle }}</a>        {{ end}}</div>
         {{ partial "sharing.html" . }}
-        {{ partial "comments.html" .}}
+        
       </div>
     </div>
   </div>

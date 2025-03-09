@@ -1,5 +1,5 @@
 +++
-date = "2024-02-03T06:00:00-05:00"
+date = "2025-02-03T06:00:00-05:00"
 title = "Tariffs as a test: Will We Stand Up or Step Back?"
 tags = 'montréal, entrepreneurship, sustainable, canada'
 +++

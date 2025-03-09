@@ -20,7 +20,7 @@ In 2019, he unveiled the Cybertruck, the ultimate vehicle to colonize Mars.
 
 In 2023, he launched Starship. A silver rocket taller than the Statue of Liberty. He said Mars needed a technocracy. There were be no nations. Only engineers.
 
-In 2025, Elon had DOGE, a handful of engineers, rule over the federal government. 
+In 2025, Elon had DOGE, a handful of engineers and technicians, rule over the federal government. 
 
 In 1952, von Braun wrote: “Mars is governed by professionals—engineers, scientists.” The book said the Martian leader was called the Elon.
 

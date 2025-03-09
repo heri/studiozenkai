@@ -2,7 +2,7 @@
 date = "2016-04-26T07:35:26-04:00"
 draft = true
 title = "A test of patience"
-tags = ['health', 'montréal', 'photography']
+tags = ['health', 'montréal', 'photography', 'canada']
 +++
 
 > Author's note : this article usually goes on [KLAIO](http://klaio.com/en/users/1/collections) with beautiful photographs but (1) I do not have photographs and (2) there are comments relevant to tech

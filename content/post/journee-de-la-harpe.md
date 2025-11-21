@@ -28,16 +28,19 @@ I skip to a tuning class. Even I, non-harpist, found it captivating: humidity tr
 ![Master tuner at work](/images/harp_IMG_4309.jpeg "Tools, stories, and the patience of a watchmaker")
 ![Master tuner explaining resonance](/images/harp_IMG_4321.jpeg "A lesson in how wood breathes and why that matters")
 
-Competitions gave a rhytm to the day. A young competitor who traveled kilometers stepped on stage with zero margin for error. Nearby, parents — logistics managers, cheerleaders, financial backers and more. All of those years of quiet grind for a five-minute performance.
+Competitions gave a rhytm to the day. A young competitor who traveled kilometers stepped on stage with zero margin for error.
 
 ![Focused competitor from far away](/images/harp_IMG_4332.jpeg "Seven minutes to justify years of work")
+
+Nearby, parents — logistics managers, cheerleaders, financial backers and more. All of those years of quiet grind for a five-minute performance.
+
 ![Parents, the invisible scaffolding](/images/harp_IMG_4336.jpeg "The other side of the stage light")
 
 What I didn’t expect: Paraguayan-style harp music. It’s danceable, percussive, equal parts celebration and invitation. I could imagine this set headlining a wedding or taking over a night market.
 
 ![Paraguayan-style harp demo](/images/harp_IMG_4442.jpeg "My favorite surprise: harp you can dance to")
 
-The day wasn’t only about sound. Artisans filled a small market, showing strings, tools, new instrumets you can tap into, and more. Community felt tangible.
+The day wasn’t only about sound. Artisans filled a small market, showing strings, tools, new instruments you can tap into, and more. Community felt tangible.
 
 ![Artisans’ corner and community tables](/images/harp_IMG_4954.jpeg "Makers, fixers, and the heartbeat of this scene")
 

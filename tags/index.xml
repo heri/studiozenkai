@@ -155,5 +155,12 @@
       <guid>https://studiozenkai.com/tags/chalet/</guid>
       <description></description>
     </item>
+    <item>
+      <title>Music</title>
+      <link>https://studiozenkai.com/tags/music/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://studiozenkai.com/tags/music/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

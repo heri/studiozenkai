@@ -1,5 +1,5 @@
 +++
-date = "2025-30-10T12:00:00-05:00"
+date = "2025-10-30T12:00:00-05:00"
 title = "La Journée de la Harpe : Montréal, cordes tendues vers 2025"
 tags = ['photography', 'music', 'montréal']
 +++

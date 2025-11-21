@@ -6,8 +6,15 @@
     <description>Recent content in Software on Studio Zenkai</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Dec 2024 02:35:26 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 13 Nov 2025 12:00:00 +0000</lastBuildDate>
     <atom:link href="https://studiozenkai.com/tags/software/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rails, Legacy DBs and the 80ms timeout: the MAVEN sidecar</title>
+      <link>https://studiozenkai.com/post/maven-fastify-ruby/</link>
+      <pubDate>Thu, 13 Nov 2025 12:00:00 +0000</pubDate>
+      <guid>https://studiozenkai.com/post/maven-fastify-ruby/</guid>
+      <description>&lt;p&gt;Given my Github profile and published articles, it is clear my favorite programming language is Ruby. It is elegant, concise, and allows teams to ship features fast.&lt;/p&gt;&#xA;&lt;p&gt;But Ruby on Rails has a specific philosophy regarding databases: it assumes it owns the connection. A thread checks out a connection, holds it while doing processing data, and releases it when the request is done.&lt;/p&gt;&#xA;&lt;p&gt;In 99% of cases, this is fine. But in a recent project, we faced a legacy MS SQL database (Wigos) that did not share this philosophy.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>4 Habits to pick up in 2025</title>
       <link>https://studiozenkai.com/post/habits-2025/</link>

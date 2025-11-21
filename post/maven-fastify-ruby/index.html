@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Rails, Legacy DBs and the 80ms timeout: the MAVEN sidecar &middot; Software, photography, and sustainability articles by Heri </title>
+    
+      <meta name="description" content="Given my Github profile and published articles, it is clear my favorite programming language is Ruby. It is elegant, concise, and allows teams to ship features fast.
+But Ruby on Rails has a specific philosophy regarding databases: it assumes it owns the connection. A thread checks out a connection, holds it while doing processing data, and releases it when the request is done.
+In 99% of cases, this is fine. But in a recent project, we faced a legacy MS SQL database (Wigos) that did not share this philosophy.">
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://studiozenkai.com/css/uno.css" />
+    <link rel="stylesheet" type="text/css" href="https://studiozenkai.com/css/lightGallery.css" />
+    
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    
+    <link rel="webmention" href="https://webmention.io/studiozenkai.com/webmention" />
+    <link rel="pingback" href="https://webmention.io/studiozenkai.com/xmlrpc" />
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://studiozenkai.com/js/main.min.js">
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <script>
+      MathJax = {
+        tex: {
+          displayMath: [['\\[', '\\]'], ['$$', '$$']],  
+          inlineMath: [['\\(', '\\)']]                  
+        }
+      };
+    </script>
+</head>
+
+<body>
+  <div id="scriptHeader">
+    <span class="mobile btn-mobile-menu">
+            <i class="fa fa-bars btn-mobile-menu__icon"></i>
+            <i class="fa fa-times btn-mobile-close__icon hidden"> </i>
+    </span>
+    <header class="
+        
+            panel-cover panel-cover--collapsed
+        " >
+    <div class="panel-main">
+        <div class="panel-main__inner panel-inverted">
+            <div class="panel-main__content"> 
+                <h1 class="panel-cover__title panel-title">
+                    <a href="https://studiozenkai.com/"  title="link to homepage for Heri Rakotomalala">Studio Zenkai</a>
+                </h1>
+                <hr class="panel-cover__divider" />
+                <p class="panel-cover__description">Bold and Clear, without excess • Kaizen 改善 • With Purpose</p>
+                <hr class="panel-cover__divider panel-cover__divider--secondary" />
+                <p>Studio Zenkai is dedicated to the craft of programming, photography and living sustainably. <a href="https://studiozenkai.com/post/about-heri/">About me →</a>  </p>
+                <hr class="panel-cover__divider panel-cover__divider--secondary" />
+                <div class="navigation-wrapper">
+                    <nav class="cover-navigation cover-navigation--primary">
+                        <ul class="navigation">
+                            <li class="navigation__item"><a href="https://studiozenkai.com/post" title="link to Studio Zenkai blog" class="blog-button">Articles</a> </li>
+                            
+                            
+                       </ul>
+                    </nav> <nav class="cover-navigation navigation--social">
+    <ul class="navigation">
+        
+        <li class="navigation__item">
+            <a href="https://twitter.com/heri" title="@heri on Twitter" rel="me nofollow"> <i class='fa fa-twitter'></i> <span
+                    class="label">Twitter</span> </a>
+        </li> 
+        
+        <li class="navigation__item">
+            <a href="https://www.linkedin.com/in/madmedia"
+                title="Heri on linkedin" rel="nofollow"> <i class='fa fa-linkedin'></i> <span
+                    class="label">LinkedIn</span> </a>
+        </li>
+        
+        <li class="navigation__item">
+            <a href="https://github.com/heri" title="heri on github" rel="me authn nofollow"> <i class='fa fa-github'></i> <span
+                    class="label">Github</span> </a>
+        </li>    
+        <li class="navigation__item">
+            <a href="https://www.instagram.com/heri_rakotomalala/" rel="nofollow" title="Heri on Instagram"><i class="fa fa-instagram"></i><span
+                class="label">Instagram</span></a>
+        </li>
+        </li>
+        
+        <li class="navigation__item">
+            <a href="mailto:heri@studiozenkai.com" title="Email" rel="nofollow"> <i class='fa fa-envelope-o'></i> <span
+                    class="label">Email</span> </a>
+        </li>
+    </ul>
+</nav> </div>
+            </div>
+        </div>
+        <div class="panel-cover--overlay"></div>
+    </div>
+</header>
+</div>
+<noscript>
+    <style>
+        #scriptHeader {display:none;}
+        .navigation-wrapper{
+            display: block;
+            top: 0;
+        }
+    </style>
+
+    <header class="panel-cover panel-cover--collapsed" style="background-image: url()">
+        <div class="panel-main">
+            <div class="panel-main__inner panel-inverted">
+                <div class="panel-main__content"> 
+                    <h1 class="panel-cover__title panel-title">
+                        <a href="https://studiozenkai.com/"  title="link to homepage for Heri Rakotomalala">Studio Zenkai</a>
+                    </h1>
+                    <hr class="panel-cover__divider" />
+                    <p class="panel-cover__description">  Studio Zenkai is dedicated to the craft of programming, photography and living sustainably.  </p>
+                    <hr class="panel-cover__divider panel-cover__divider--secondary" />
+                    <div class="navigation-wrapper">
+                        <nav class="cover-navigation cover-navigation--primary">
+                            <ul class="navigation">
+                                <li class="navigation__item"><a href="https://studiozenkai.com/#blog" title="link to Studio Zenkai blog" class="blog-button">Blog</a> </li></br>
+                                
+                                
+                           </ul>
+                        </nav> <nav class="cover-navigation navigation--social">
+    <ul class="navigation">
+        
+        <li class="navigation__item">
+            <a href="https://twitter.com/heri" title="@heri on Twitter" rel="me nofollow"> <i class='fa fa-twitter'></i> <span
+                    class="label">Twitter</span> </a>
+        </li> 
+        
+        <li class="navigation__item">
+            <a href="https://www.linkedin.com/in/madmedia"
+                title="Heri on linkedin" rel="nofollow"> <i class='fa fa-linkedin'></i> <span
+                    class="label">LinkedIn</span> </a>
+        </li>
+        
+        <li class="navigation__item">
+            <a href="https://github.com/heri" title="heri on github" rel="me authn nofollow"> <i class='fa fa-github'></i> <span
+                    class="label">Github</span> </a>
+        </li>    
+        <li class="navigation__item">
+            <a href="https://www.instagram.com/heri_rakotomalala/" rel="nofollow" title="Heri on Instagram"><i class="fa fa-instagram"></i><span
+                class="label">Instagram</span></a>
+        </li>
+        </li>
+        
+        <li class="navigation__item">
+            <a href="mailto:heri@studiozenkai.com" title="Email" rel="nofollow"> <i class='fa fa-envelope-o'></i> <span
+                    class="label">Email</span> </a>
+        </li>
+    </ul>
+</nav> </div>
+                </div>
+            </div>
+            <div class="panel-cover--overlay"></div>
+        </div>
+    </header>
+</noscript>
+
+  <div class="content-wrapper">
+    <div class="content-wrapper__inner">
+      <div class="post">
+        <h1>Rails, Legacy DBs and the 80ms timeout: the MAVEN sidecar</h1>
+        <span class="post-date">Thu, Nov 13, 2025</span>
+        <p>Given my Github profile and published articles, it is clear my favorite programming language is Ruby. It is elegant, concise, and allows teams to ship features fast.</p>
+<p>But Ruby on Rails has a specific philosophy regarding databases: it assumes it owns the connection. A thread checks out a connection, holds it while doing processing data, and releases it when the request is done.</p>
+<p>In 99% of cases, this is fine. But in a recent project, we faced a legacy MS SQL database (Wigos) that did not share this philosophy.</p>
+<p>This database supports a high-transaction floor with 1100+ machines generating sessions every second. To survive, it enforces extremely aggressive timeouts. If a connection is idle for more than 80ms, the server kills it.</p>
+<p>Our Rails background workers were failing constantly. We saw logs full of <code>TinyTds::Error: DBPROCESS is dead</code>.</p>
+<p>The root cause was simple: Rails checked out a connection, get initial records, performed a slow calculation or an external API call, and then tried to use the database again to get complimentary data. By then, the database had already hung up.</p>
+<p>We needed a solution that decoupled our application logic from the database&rsquo;s strict rules.</p>
+<h2 id="the-false-starts">The False Starts</h2>
+<p>It is important to not jump immediately to writing new code. We looked at infrastructure solutions first.</p>
+<ol>
+<li>
+<p><em>Aggressive caching</em>: Caching key data helped the platform for a short amount of time, preventing a complete breakdown. However even copious amount of Redis caching, the errors were still visible from the customer side.</p>
+</li>
+<li>
+<p><em>Fine-tuning database connections</em>: We fine-tuned database connection parameters until we found out it was cutting us around 80-100ms. From there, we fine-tuned timeouts, threads, made a system to retry and verify connections, and more. But like above, it was a short term solution that did not address the root cause and still created code red calls frequently.</p>
+</li>
+<li>
+<p><em>Replication (Master/Slave)</em>: We considered setting up a read-replica where we controlled the timeout settings. However, the database is 4TB. Our sysadmin rightly pointed out that initializing and maintaining a 4TB replica for a few specific queries was using a sledgehammer to crack a nut. This could be a viable long-term solution, but not the one needed <em>now</em>.</p>
+</li>
+<li>
+<p><em>ETL/Data Warehousing</em>: We considered dumping data into a warehouse. But oa customer needs to see their recent data, not from 12 hours ago.</p>
+</li>
+<li>
+<p><em>Denormalizing</em>: Half of the queries were for key customer metrics, such as balance and stats. We introduced a few additional tables and columns and sidekiq jobs to fill them, but again, it did not address the need for real-time data, and there too many metrics to make this the only solution.</p>
+</li>
+</ol>
+<p>We needed a surgical approach.</p>
+<h1 id="the-solution-the-sidecar-proxy">The Solution: The &ldquo;Sidecar&rdquo; Proxy</h1>
+<p>We decided to build a microservice. Its only job is to act as a relay.</p>
+<p>We named it <em>MAVEN</em>, named after the Mars orbiter that relays signals from rovers back to Earth.</p>
+<p>We chose Node.js (TypeScript) with <code>Fastify</code> and <code>Knex</code>.</p>
+<p>Why Node? Because of its non-blocking I/O model. Unlike Rails, Node doesn&rsquo;t block a thread while waiting. It checks out a connection, executes the query, and immediately releases the connection back to the pool—all within milliseconds. It never holds the connection &ldquo;hostage&rdquo; while doing other work.</p>
+<h1 id="the-implementation-and-the-errors">The Implementation (and The Errors)</h1>
+<p>I want junior developers to learn from this: building a service is rarely a straight line. We hit obstacles that looked like bugs but were actually lessons in how different systems talk to each other.</p>
+<h2 id="lesson-1-the-types-mismatch">Lesson 1: The Types Mismatch</h2>
+<p>Our first endpoint simply queried a customer&rsquo;s reward points. In the database, the ID is a <code>bigint</code>.</p>
+<p>When we ran the query in Node, the math was wrong. For example, JavaScript&rsquo;s <code>Number</code> type cannot safely hold a 64-bit integer. To prevent precision loss, the MS SQL driver returns <code>bigint</code> and <code>money</code> types as <code>String</code>s, not Numbers.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-TypeScript" data-lang="TypeScript"><span style="display:flex;"><span><span style="color:#75715e">// bucket.cbu_customer_id comes back as &#34;37084728&#34; (String)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">accountData</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">result</span>.<span style="color:#66d9ef">get</span>(<span style="color:#a6e22e">bucket</span>.<span style="color:#a6e22e">cbu_customer_id</span>); <span style="color:#75715e">// Returns undefined
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// The Fix:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">accountId</span> <span style="color:#f92672">=</span> parseInt(<span style="color:#a6e22e">bucket</span>.<span style="color:#a6e22e">cbu_customer_id</span>, <span style="color:#ae81ff">10</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">accountData</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">result</span>.<span style="color:#66d9ef">get</span>(<span style="color:#a6e22e">accountId</span>);
+</span></span></code></pre></div><p>Above is just a simplified examples, but we ran into similar issues with binaries and streams.</p>
+<p>Takeaway: Never assume types match across languages. Always inspect the raw driver output.</p>
+<h2 id="lesson-2-the-knex-aggregate-error">Lesson 2: The Knex Aggregate Error</h2>
+<p>We needed to sum up &ldquo;hidden comps&rdquo;. We wrote what looked like valid Knex code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-TypeScript" data-lang="TypeScript"><span style="display:flex;"><span>.<span style="color:#a6e22e">sum</span>(<span style="color:#e6db74">&#39;am_sub_amount as value&#39;</span>)
+</span></span></code></pre></div><p>The application crashed with <code>EREQUEST 195: 'sum' is not a recognized built-in function name</code>. This was confusing. SUM is definitely a SQL function.</p>
+<p>The issue was how Knex compiles SQL. It was trying to wrap the alias inside the function, generating invalid SQL like <code>SUM([col] as [value])</code>.</p>
+<p>TypeScript</p>
+<pre tabindex="0"><code class="language-//" data-lang="//">.sum({ value: &#39;am_sub_amount&#39; })
+</code></pre><p>Takeaway: When using an abstraction layer (ORM or Query Builder), you must understand the SQL it generates underneath.</p>
+<h1 id="performance-the-denominator-effect">Performance: The Denominator Effect</h1>
+<p>Once MAVEN was deployed, we ran benchmarks. The results were confusing at first.</p>
+<ul>
+<li>DB Time: 17ms</li>
+<li>Total Request Time: 108ms</li>
+<li>Overhead: 500%</li>
+</ul>
+<p>A 500% overhead looks disastrous. Was Fastify really slow? Should we have used Rust?</p>
+<p>No. We were benchmarking from outside the data center. The 90ms difference was simply the time it took the packets to travel over the VPN.</p>
+<p>When we bashed into the container and ran curl locally:</p>
+<ul>
+<li>DB Time: 16ms</li>
+<li>Total Request time: 2ms</li>
+</ul>
+<p>The framework overhead was effectively zero. The Node.js service was checking out connections, querying, and replying faster than a monitor can draw a single frame.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>Ruby on Rails is still the mothership. It handles the complex business logic, the user interface, and the API integration.</p>
+<p>But for this specific task—talking to a hostile, high-performance database—Node.js was the right tool. It solved the 80ms timeout problem not by configuring the database, but by respecting its architecture.</p>
+<p>You don&rsquo;t have to rewrite your monolith. You just need to know when to delegate.</p>
+<p>For those interested in the technical details, the source code for the connection pooling strategy and the type handling logic is available here.</p>
+        <div class="post-tags">In <a href="https://studiozenkai.com/tags/personal/" >Personal</a>        <a href="https://studiozenkai.com/tags/software/" >Software</a>        <a href="https://studiozenkai.com/tags/ruby/" >Ruby</a>        </div>
+        
+
+<h4>Comments:</h4>
+<div id="cusdis_thread" data-host="https://cusdis.com" data-app-id="a1e70db0-2a82-4a64-a04e-97b8ee967105"
+  data-page-id="c260485b1ec790d674b982e10d6d5c46" data-page-url="https://studiozenkai.com/post/maven-fastify-ruby/" data-page-title="Rails, Legacy DBs and the 80ms timeout: the MAVEN sidecar"></div>
+<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+
+
+
+
+
+
+<div id="sharing">
+    Like what you read ? Take a moment to like or share the post so others can read it too: 
+    <ul>
+        <li>
+            <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fstudiozenkai.com%2fpost%2fmaven-fastify-ruby%2f" class="facebook"
+                aria-label="share on Facebook" rel="nofollow">
+                <i class="fa fa-facebook"></i>
+            </a>
+        </li>
+        <li>
+            <a href="http://twitter.com/share?url=https%3a%2f%2fstudiozenkai.com%2fpost%2fmaven-fastify-ruby%2f&text=Rails%2c%20Legacy%20DBs%20and%20the%2080ms%20timeout%3a%20the%20MAVEN%20sidecar&via="
+                class="twitter" aria-label="share on Twitter" rel="nofollow">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        <li>
+            <a href="mailto:?subject=Check%20out%20Rails%2c%20Legacy%20DBs%20and%20the%2080ms%20timeout%3a%20the%20MAVEN%20sidecar.&body= Read more at https%3a%2f%2fstudiozenkai.com%2fpost%2fmaven-fastify-ruby%2f"
+                class="twitter" aria-label="share on Email" rel="nofollow">
+                <i class="fa fa-envelope-o"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+<div class="sharing">
+
+    <p>© Heri Rakotomalala. All rights reserved. Powered by <a
+            href="https://www.digitalocean.com/?refcode=ef57f6ccd2d8">Digital Ocean</a>, <a href="https://gohugo.io"
+            rel="nofollow">Hugo</a> and and <a href="https://github.com/heri" rel="nofollow">Github</a></p>
+
+    <p>Heri Rakotomalala is an engineer working on small and innovative projects in Montréal. Originally from
+        Madagascar, he has lived 7 years in East Africa, studied Engineering and made friends in France, built a
+        community center in Esteli and is busy coding and taking care of kids in Montréal. This site covers spontaneous
+        thoughts, small and big projects as well as interests. Read <a
+            href="https://studiozenkai.com/post/about-heri/">more about Heri</a></p>
+
+</div>
+        
+      </div>
+    </div>
+  </div>
+
+</body>
+
+
+</html>

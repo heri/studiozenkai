@@ -25,7 +25,7 @@ coord2 = [34.0522, -118.2437] # Los Angeles
 distance = math.haversine_distance(coord1, coord2)
 puts "The distance between NYC and LA is #{distance.round(2)} km"
 ```
-Rust's trigonometric calculations use `std::f64` and are highly optimized. Using `Little Math Routines` is 2 to 5x faster, depending on the number of coordinate paris being processed.
+Rust's trigonometric calculations use `std::f64` and are highly optimized. Using `Little Math Routines` is 2 to 5x faster, depending on the number of coordinate pairs being processed.
 
 Or for linear regression:
 ```Ruby {class="my-class" id="rb-codeblock" lineNos=inline tabWidth=2}

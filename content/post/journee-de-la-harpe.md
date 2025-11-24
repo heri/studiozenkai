@@ -6,7 +6,7 @@ tags = ['photography', 'music', 'montréal']
 
 Geraldine Jippé's quiet passion has been harps for years. 
 
-On my side, I always pictured harps as props for elves or Celtic postcards — beautiful, fragile, distant. Then I got invited into [La Journée de la Harpe](https://societedesharpistesdemontreal.square.site/la-journee-de-la-harpe), organized by the Société des harpistes de Montréal, and asked me to be the official photographer. The building felt like an airport terminal for strings: people arriving from Toronto, from the States, from far southern towns, all to gather around wood and tension.
+On my side, I always pictured harps as props for elves or Celtic postcards — beautiful, fragile, distant. Then I got invited into [La Journée de la Harpe](https://societedesharpistesdemontreal.square.site/la-journee-de-la-harpe), organized by the Société des harpistes de Montréal, where she asked me to be the official photographer. The building felt like an airport terminal for strings: people arriving from Toronto, from the States, from far southern towns, all to gather around wood and tension.
 
 <!--more-->
 

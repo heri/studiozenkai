@@ -1,5 +1,5 @@
 +++
-date = "2025-11-13T12:00:00-00:00"
+date = "2025-11-03T12:00:00-00:00"
 title = "Rails, Legacy DBs and the 80ms timeout: the MAVEN sidecar"
 tags = ['personal', 'software', 'ruby']
 +++

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Good Software is Boring and High Leverage &middot; Software, photography, and sustainability articles by Heri </title>
+    
+      <meta name="description" content="Ask a junior developer what makes software &ldquo;good&rdquo;, and you’ll hear about Clean Code, SOLID principles, or perhaps 100% test coverage. Ask a hacker, and they might point to a clever one-liner or an obscure algorithm.
+But when you are working in a team, various managers, product owners, and business priorities — the definition shifts. We aren&rsquo;t just writing code; we are managing complexity and delivering value.
+There are many metrics for quality, but after working with 6&#43; development teams, in public and private companies, two criteria have risen to the top of my list: predictability and Leverage.">
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://studiozenkai.com/css/uno.css" />
+    <link rel="stylesheet" type="text/css" href="https://studiozenkai.com/css/lightGallery.css" />
+    
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    
+    <link rel="webmention" href="https://webmention.io/studiozenkai.com/webmention" />
+    <link rel="pingback" href="https://webmention.io/studiozenkai.com/xmlrpc" />
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://studiozenkai.com/js/main.min.js">
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <script>
+      MathJax = {
+        tex: {
+          displayMath: [['\\[', '\\]'], ['$$', '$$']],  
+          inlineMath: [['\\(', '\\)']]                  
+        }
+      };
+    </script>
+</head>
+
+<body>
+  <div id="scriptHeader">
+    <span class="mobile btn-mobile-menu">
+            <i class="fa fa-bars btn-mobile-menu__icon"></i>
+            <i class="fa fa-times btn-mobile-close__icon hidden"> </i>
+    </span>
+    <header class="
+        
+            panel-cover panel-cover--collapsed
+        " >
+    <div class="panel-main">
+        <div class="panel-main__inner panel-inverted">
+            <div class="panel-main__content"> 
+                <h1 class="panel-cover__title panel-title">
+                    <a href="https://studiozenkai.com/"  title="link to homepage for Heri Rakotomalala">Studio Zenkai</a>
+                </h1>
+                <hr class="panel-cover__divider" />
+                <p class="panel-cover__description">Bold and Clear, without excess • Kaizen 改善 • With Purpose</p>
+                <hr class="panel-cover__divider panel-cover__divider--secondary" />
+                <p>Studio Zenkai is dedicated to the craft of programming, photography and living sustainably. <a href="https://studiozenkai.com/post/about-heri/">About me →</a>  </p>
+                <hr class="panel-cover__divider panel-cover__divider--secondary" />
+                <div class="navigation-wrapper">
+                    <nav class="cover-navigation cover-navigation--primary">
+                        <ul class="navigation">
+                            <li class="navigation__item"><a href="https://studiozenkai.com/post" title="link to Studio Zenkai blog" class="blog-button">Articles</a> </li>
+                            
+                            
+                       </ul>
+                    </nav> <nav class="cover-navigation navigation--social">
+    <ul class="navigation">
+        
+        <li class="navigation__item">
+            <a href="https://twitter.com/heri" title="@heri on Twitter" rel="me nofollow"> <i class='fa fa-twitter'></i> <span
+                    class="label">Twitter</span> </a>
+        </li> 
+        
+        <li class="navigation__item">
+            <a href="https://www.linkedin.com/in/madmedia"
+                title="Heri on linkedin" rel="nofollow"> <i class='fa fa-linkedin'></i> <span
+                    class="label">LinkedIn</span> </a>
+        </li>
+        
+        <li class="navigation__item">
+            <a href="https://github.com/heri" title="heri on github" rel="me authn nofollow"> <i class='fa fa-github'></i> <span
+                    class="label">Github</span> </a>
+        </li>    
+        <li class="navigation__item">
+            <a href="https://www.instagram.com/heri_rakotomalala/" rel="nofollow" title="Heri on Instagram"><i class="fa fa-instagram"></i><span
+                class="label">Instagram</span></a>
+        </li>
+        </li>
+        
+        <li class="navigation__item">
+            <a href="mailto:heri@studiozenkai.com" title="Email" rel="nofollow"> <i class='fa fa-envelope-o'></i> <span
+                    class="label">Email</span> </a>
+        </li>
+    </ul>
+</nav> </div>
+            </div>
+        </div>
+        <div class="panel-cover--overlay"></div>
+    </div>
+</header>
+</div>
+<noscript>
+    <style>
+        #scriptHeader {display:none;}
+        .navigation-wrapper{
+            display: block;
+            top: 0;
+        }
+    </style>
+
+    <header class="panel-cover panel-cover--collapsed" style="background-image: url()">
+        <div class="panel-main">
+            <div class="panel-main__inner panel-inverted">
+                <div class="panel-main__content"> 
+                    <h1 class="panel-cover__title panel-title">
+                        <a href="https://studiozenkai.com/"  title="link to homepage for Heri Rakotomalala">Studio Zenkai</a>
+                    </h1>
+                    <hr class="panel-cover__divider" />
+                    <p class="panel-cover__description">  Studio Zenkai is dedicated to the craft of programming, photography and living sustainably.  </p>
+                    <hr class="panel-cover__divider panel-cover__divider--secondary" />
+                    <div class="navigation-wrapper">
+                        <nav class="cover-navigation cover-navigation--primary">
+                            <ul class="navigation">
+                                <li class="navigation__item"><a href="https://studiozenkai.com/#blog" title="link to Studio Zenkai blog" class="blog-button">Blog</a> </li></br>
+                                
+                                
+                           </ul>
+                        </nav> <nav class="cover-navigation navigation--social">
+    <ul class="navigation">
+        
+        <li class="navigation__item">
+            <a href="https://twitter.com/heri" title="@heri on Twitter" rel="me nofollow"> <i class='fa fa-twitter'></i> <span
+                    class="label">Twitter</span> </a>
+        </li> 
+        
+        <li class="navigation__item">
+            <a href="https://www.linkedin.com/in/madmedia"
+                title="Heri on linkedin" rel="nofollow"> <i class='fa fa-linkedin'></i> <span
+                    class="label">LinkedIn</span> </a>
+        </li>
+        
+        <li class="navigation__item">
+            <a href="https://github.com/heri" title="heri on github" rel="me authn nofollow"> <i class='fa fa-github'></i> <span
+                    class="label">Github</span> </a>
+        </li>    
+        <li class="navigation__item">
+            <a href="https://www.instagram.com/heri_rakotomalala/" rel="nofollow" title="Heri on Instagram"><i class="fa fa-instagram"></i><span
+                class="label">Instagram</span></a>
+        </li>
+        </li>
+        
+        <li class="navigation__item">
+            <a href="mailto:heri@studiozenkai.com" title="Email" rel="nofollow"> <i class='fa fa-envelope-o'></i> <span
+                    class="label">Email</span> </a>
+        </li>
+    </ul>
+</nav> </div>
+                </div>
+            </div>
+            <div class="panel-cover--overlay"></div>
+        </div>
+    </header>
+</noscript>
+
+  <div class="content-wrapper">
+    <div class="content-wrapper__inner">
+      <div class="post">
+        <h1>Good Software is Boring and High Leverage</h1>
+        <span class="post-date">Thu, Nov 21, 2024</span>
+        <p>Ask a junior developer what makes software &ldquo;good&rdquo;, and you’ll hear about Clean Code, SOLID principles, or perhaps 100% test coverage. Ask a hacker, and they might point to a clever one-liner or an obscure algorithm.</p>
+<p>But when you are working in a team, various managers, product owners, and business priorities — the definition shifts. We aren&rsquo;t just writing code; we are managing complexity and delivering value.</p>
+<p>There are many metrics for quality, but after working with 6+ development teams, in public and private companies, two criteria have risen to the top of my list: <strong>predictability</strong> and <strong>Leverage</strong>.</p>
+<h2 id="1-predictability-the-boring-argument">1. Predictability (The &ldquo;Boring&rdquo; Argument)</h2>
+<p>Good software is boring.</p>
+<p>&ldquo;Exciting&rdquo; software is great for hackathons. In production, &ldquo;exciting&rdquo; means waking up at 3 AM because a complex microservice mesh deadlocked. &ldquo;Exciting&rdquo; means a new hire taking three months to understand the deployment pipeline, and similar time to understand the edge cases.</p>
+<p>In a team context, a team cannot innovate if they are constantly firefighting. Good software uses established patterns rather than reinventing the wheel, making debugging predictable for everyone.</p>
+<h3 id="the-console-app-test">The Console App Test</h3>
+<p>I recently built a C# integration for Sage 50. The tech stack is about as uncool as it gets: a Console Application running on a Windows Server.</p>
+<p>But it is <strong>predictable</strong>.</p>
+<p>We didn&rsquo;t try to wrap the Sage SDK in a dockerized microservice running on Kubernetes. We acknowledged the constraints of the environment and built a robust logging system instead.</p>
+<p>We spent hours fixing a <code>TestLogger</code> in our CI pipeline, not because we love writing test mocks, but to ensure that when the build fails, it tells us <em>exactly</em> why.</p>
+<p>Likewise, we logged all interactions and steps in a log file, even if it would seem redundant for the end-user.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#75715e">// Good software isn&#39;t always clever. It&#39;s explicit.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// We handle file locking and environment constraints explicitly so </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// the next developer doesn&#39;t have to guess why the log file crashed.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ConsoleLogger</span> : IDisposable
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> ConsoleLogger(<span style="color:#66d9ef">bool</span> isTest)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (isTest) { _logWriter = <span style="color:#66d9ef">null</span>; <span style="color:#66d9ef">return</span>; }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Predictable file naming for easy debugging</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">string</span> timeStamp = DateTime.Now.ToString(<span style="color:#e6db74">&#34;yyyy_MM_dd_HHmmss&#34;</span>);
+</span></span><span style="display:flex;"><span>        _logFileName = <span style="color:#e6db74">$&#34;run_{timeStamp}.txt&#34;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// ...</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>If this application crashes, the logs tell the story. If we need to deploy, we copy an .exe. It is boring. It is predictable. And because of that, it requires almost zero maintenance from the rest of the team.</p>
+<h2 id="2-leverage-the-roi-argument">2. Leverage (The ROI Argument)</h2>
+<p>Code is a liability. Functionality is an asset.</p>
+<p>Great developers understand that their job isn&rsquo;t to write lines of code; it is to solve business problems with the minimum amount of technical debt possible. This is Leverage.</p>
+<p>In a team of 7, there is always a temptation for &ldquo;Resume Driven Development&rdquo; — using a complex new technology because it looks good on a CV, not because the project needs it. Good software pushes back against this.</p>
+<h3 id="the-45-accountant-multiplier">The 4.5 Accountant Multiplier</h3>
+<p>The C# application I mentioned didn&rsquo;t use AI, Blockchain, or Serverless Edge Functions. It parsed Excel files and poked them into a legacy database.</p>
+<p>During the development, we stumbled into naming issues, where account names had typos.</p>
+<p>Many developers would push for AI here, or introduce a service that fixes the typos.</p>
+<p>We did not do that, because one, results would not be predictible. Two, it introduces a liability that very few can maintain. But the most important reason is that it did not resolve a problem that end-users deemed critical.</p>
+<p>All in all, our boring code automated the workload of 4.5 full-time accountants.</p>
+<p>That is extreme leverage.</p>
+<p>Good software is measured by the ratio of Effort Invested to Value Created.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Approach</th>
+          <th>Complexity</th>
+          <th>Value Created</th>
+          <th>Verdict</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Manual Entry</td>
+          <td>Low (Human)</td>
+          <td>&ldquo;Negative (Slow, error-prone)&rdquo;</td>
+          <td>Bad</td>
+      </tr>
+      <tr>
+          <td>Over-Engineered SaaS</td>
+          <td>High (Microservices)</td>
+          <td>High (Eventually)</td>
+          <td>Risky</td>
+      </tr>
+      <tr>
+          <td>Boring Console App</td>
+          <td>Low (Simple C#)</td>
+          <td>High (Immediate)</td>
+          <td>Good Software</td>
+      </tr>
+  </tbody>
+</table>
+<p>When we implemented our CI/CD pipeline, we stripped out the expensive security scanning steps because the project is in Alpha and runs in a secure, isolated environment. We didn&rsquo;t pay $30/month for a badge we didn&rsquo;t need. We focused purely on what delivered value: Building, Testing, and Packaging.</p>
+<pre tabindex="0"><code># Simple, high-leverage CI/CD
+  package_build:
+    if: github.event_name == &#39;push&#39; &amp;&amp; github.ref == &#39;refs/heads/main&#39;
+    runs-on: windows-latest
+    needs: [build_and_test] 
+
+    steps:
+      - name: 4. Restore and Build Solution (for x86)
+        run: |
+          nuget restore $env:SOLUTION_FILE
+          msbuild &#34;${env:PROJECT_NAME}\${env:PROJECT_NAME}.csproj&#34; /p:Configuration=Release /p:Platform=x86
+</code></pre><h2 id="summary">Summary</h2>
+<p>There are many other qualities that make software &ldquo;good&rdquo;—readability, performance, security. But as I look at the software that has survived the longest and provided the most value in my career, it usually shares these two traits.</p>
+<p>It is Predictable: It doesn&rsquo;t surprise you.</p>
+<p>It has Leverage: It solves a massive problem with a modest solution.</p>
+<p>As engineers, we should strive to be &ldquo;Force Multipliers&rdquo; who write &ldquo;Boring Code.&rdquo; Your product manager will thank you, your team will thank you, and the accountants will definitely thank you.</p>
+
+        <div class="post-tags">In <a href="https://studiozenkai.com/tags/software/" >Software</a>        <a href="https://studiozenkai.com/tags/engineering/" >Engineering</a>        <a href="https://studiozenkai.com/tags/pragmatism/" >Pragmatism</a>        <a href="https://studiozenkai.com/tags/roi/" >Roi</a>        </div>
+        
+
+<h4>Comments:</h4>
+<div id="cusdis_thread" data-host="https://cusdis.com" data-app-id="a1e70db0-2a82-4a64-a04e-97b8ee967105"
+  data-page-id="9fdb10dc43932993c119e45fba8df34f" data-page-url="https://studiozenkai.com/post/good-software-is-reliable-and-predictible/" data-page-title="Good Software is Boring and High Leverage"></div>
+<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+
+
+
+
+
+
+<div id="sharing">
+    Like what you read ? Take a moment to like or share the post so others can read it too: 
+    <ul>
+        <li>
+            <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fstudiozenkai.com%2fpost%2fgood-software-is-reliable-and-predictible%2f" class="facebook"
+                aria-label="share on Facebook" rel="nofollow">
+                <i class="fa fa-facebook"></i>
+            </a>
+        </li>
+        <li>
+            <a href="http://twitter.com/share?url=https%3a%2f%2fstudiozenkai.com%2fpost%2fgood-software-is-reliable-and-predictible%2f&text=Good%20Software%20is%20Boring%20and%20High%20Leverage&via="
+                class="twitter" aria-label="share on Twitter" rel="nofollow">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        <li>
+            <a href="mailto:?subject=Check%20out%20Good%20Software%20is%20Boring%20and%20High%20Leverage.&body= Read more at https%3a%2f%2fstudiozenkai.com%2fpost%2fgood-software-is-reliable-and-predictible%2f"
+                class="twitter" aria-label="share on Email" rel="nofollow">
+                <i class="fa fa-envelope-o"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+<div class="sharing">
+
+    <p>© Heri Rakotomalala. All rights reserved. Powered by <a
+            href="https://www.digitalocean.com/?refcode=ef57f6ccd2d8">Digital Ocean</a>, <a href="https://gohugo.io"
+            rel="nofollow">Hugo</a> and and <a href="https://github.com/heri" rel="nofollow">Github</a></p>
+
+    <p>Heri Rakotomalala is an engineer working on small and innovative projects in Montréal. Originally from
+        Madagascar, he has lived 7 years in East Africa, studied Engineering and made friends in France, built a
+        community center in Esteli and is busy coding and taking care of kids in Montréal. This site covers spontaneous
+        thoughts, small and big projects as well as interests. Read <a
+            href="https://studiozenkai.com/post/about-heri/">more about Heri</a></p>
+
+</div>
+        
+      </div>
+    </div>
+  </div>
+
+</body>
+
+
+</html>

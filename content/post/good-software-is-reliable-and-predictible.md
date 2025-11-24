@@ -1,5 +1,5 @@
 +++
-date = "2024-11-21T02:00:00-04:00"
+date = "2025-11-23T02:00:00-04:00"
 title = "Good Software is Boring and High Leverage"
 tags = ['software', 'engineering', 'pragmatism', 'roi']
 +++

@@ -9,7 +9,7 @@
     
       <meta name="description" content="Ask a junior developer what makes software &ldquo;good&rdquo;, and you’ll hear about Clean Code, SOLID principles, or perhaps 100% test coverage. Ask a hacker, and they might point to a clever one-liner or an obscure algorithm.
 But when you are working in a team, various managers, product owners, and business priorities — the definition shifts. We aren&rsquo;t just writing code; we are managing complexity and delivering value.
-There are many metrics for quality, but after working with 6&#43; development teams, in public and private companies, two criteria have risen to the top of my list: predictability and Leverage.">
+There are many metrics for quality, but after working with 6&#43; development teams, in public and private companies, two criteria have risen to the top of my list: Predictability and Leverage.">
     
     
     <link rel="stylesheet" type="text/css" href="https://studiozenkai.com/css/uno.css" />
@@ -168,17 +168,17 @@ There are many metrics for quality, but after working with 6&#43; development te
         <span class="post-date">Sun, Nov 23, 2025</span>
         <p>Ask a junior developer what makes software &ldquo;good&rdquo;, and you’ll hear about Clean Code, SOLID principles, or perhaps 100% test coverage. Ask a hacker, and they might point to a clever one-liner or an obscure algorithm.</p>
 <p>But when you are working in a team, various managers, product owners, and business priorities — the definition shifts. We aren&rsquo;t just writing code; we are managing complexity and delivering value.</p>
-<p>There are many metrics for quality, but after working with 6+ development teams, in public and private companies, two criteria have risen to the top of my list: <strong>predictability</strong> and <strong>Leverage</strong>.</p>
+<p>There are many metrics for quality, but after working with 6+ development teams, in public and private companies, two criteria have risen to the top of my list: <strong>Predictability</strong> and <strong>Leverage</strong>.</p>
 <h2 id="1-predictability-the-boring-argument">1. Predictability (The &ldquo;Boring&rdquo; Argument)</h2>
 <p>Good software is boring.</p>
-<p>&ldquo;Exciting&rdquo; software is great for hackathons. In production, &ldquo;exciting&rdquo; means waking up at 3 AM because a complex microservice mesh deadlocked. &ldquo;Exciting&rdquo; means a new hire taking three months to understand the deployment pipeline, and similar time to understand the edge cases.</p>
+<p>&ldquo;Exciting&rdquo; software is great for hackathons. In production, &ldquo;exciting&rdquo; means waking up at 3 AM because a complex microservice mesh deadlocked. &ldquo;Exciting&rdquo; means a new hire taking three months to understand the deployment pipeline, and similar time to understand why there is a powerful-yet-brittle service to cache reports.</p>
 <p>In a team context, a team cannot innovate if they are constantly firefighting. Good software uses established patterns rather than reinventing the wheel, making debugging predictable for everyone.</p>
 <h3 id="the-console-app-test">The Console App Test</h3>
-<p>I recently built a C# integration for Sage 50. The tech stack is about as uncool as it gets: a Console Application running on a Windows Server.</p>
+<p>I recently built a C# integration for Sage 50. The tech stack is about as uncool as it gets: a Console Application running on Windows.</p>
 <p>But it is <strong>predictable</strong>.</p>
 <p>We didn&rsquo;t try to wrap the Sage SDK in a dockerized microservice running on Kubernetes. We acknowledged the constraints of the environment and built a robust logging system instead.</p>
 <p>We spent hours fixing a <code>TestLogger</code> in our CI pipeline, not because we love writing test mocks, but to ensure that when the build fails, it tells us <em>exactly</em> why.</p>
-<p>Likewise, we logged all interactions and steps in a log file, even if it would seem redundant for the end-user.</p>
+<p>Likewise, we logged all interactions and steps in a log file, even if it seems redundant for the end-user.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#75715e">// Good software isn&#39;t always clever. It&#39;s explicit.</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// We handle file locking and environment constraints explicitly so </span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// the next developer doesn&#39;t have to guess why the log file crashed.</span>
@@ -195,16 +195,18 @@ There are many metrics for quality, but after working with 6&#43; development te
 </span></span><span style="display:flex;"><span>        <span style="color:#75715e">// ...</span>
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>If this application crashes, the logs tell the story. If we need to deploy, we copy an .exe. It is boring. It is predictable. And because of that, it requires almost zero maintenance from the rest of the team.</p>
+</span></span></code></pre></div><p>One user commented our application is like an utility, like Docker or homebrew. For many junior developers, this would not be good enough and they will try to spice things up. Here though, I found the comment positive. Docker or homebrew are reliable and do exactly what they are expected to do, not more, not less.</p>
+<p>And if this application crashes, the logs tell the story. If we need to deploy, we copy an .exe. It is boring. It is predictable. And because of that, it requires almost zero maintenance from the rest of the team.</p>
 <h2 id="2-leverage-the-roi-argument">2. Leverage (The ROI Argument)</h2>
 <p>Code is a liability. Functionality is an asset.</p>
 <p>Great developers understand that their job isn&rsquo;t to write lines of code; it is to solve business problems with the minimum amount of technical debt possible. This is Leverage.</p>
 <p>In a team of 7, there is always a temptation for &ldquo;Resume Driven Development&rdquo; — using a complex new technology because it looks good on a CV, not because the project needs it. Good software pushes back against this.</p>
 <h3 id="the-45-accountant-multiplier">The 4.5 Accountant Multiplier</h3>
 <p>The C# application I mentioned didn&rsquo;t use AI, Blockchain, or Serverless Edge Functions. It parsed Excel files and poked them into a legacy database.</p>
-<p>During the development, we stumbled into naming issues, where account names had typos.</p>
+<p>During the development, we stumbled into naming issues, where account names had typos. For example, a supplier&rsquo;s name would be parsed as &ldquo;Supplier ABC.&rdquo; while it was registered as &ldquo;Supplier A.B.C.&rdquo; in Sage 50.</p>
 <p>Many developers would push for AI here, or introduce a service that fixes the typos.</p>
 <p>We did not do that, because one, results would not be predictible. Two, it introduces a liability that very few can maintain. But the most important reason is that it did not resolve a problem that end-users deemed critical.</p>
+<p>The focus instead was turned into solving critical pain points.</p>
 <p>All in all, our boring code automated the workload of 4.5 full-time accountants.</p>
 <p>That is extreme leverage.</p>
 <p>Good software is measured by the ratio of Effort Invested to Value Created.</p>
@@ -239,21 +241,10 @@ There are many metrics for quality, but after working with 6&#43; development te
   </tbody>
 </table>
 <p>When we implemented our CI/CD pipeline, we stripped out the expensive security scanning steps because the project is in Alpha and runs in a secure, isolated environment. We didn&rsquo;t pay $30/month for a badge we didn&rsquo;t need. We focused purely on what delivered value: Building, Testing, and Packaging.</p>
-<pre tabindex="0"><code># Simple, high-leverage CI/CD
-  package_build:
-    if: github.event_name == &#39;push&#39; &amp;&amp; github.ref == &#39;refs/heads/main&#39;
-    runs-on: windows-latest
-    needs: [build_and_test] 
-
-    steps:
-      - name: 4. Restore and Build Solution (for x86)
-        run: |
-          nuget restore $env:SOLUTION_FILE
-          msbuild &#34;${env:PROJECT_NAME}\${env:PROJECT_NAME}.csproj&#34; /p:Configuration=Release /p:Platform=x86
-</code></pre><h2 id="summary">Summary</h2>
+<h2 id="summary">Summary</h2>
 <p>There are many other qualities that make software &ldquo;good&rdquo;—readability, performance, security. But as I look at the software that has survived the longest and provided the most value in my career, it usually shares these two traits.</p>
-<p>It is Predictable: It doesn&rsquo;t surprise you.</p>
-<p>It has Leverage: It solves a massive problem with a modest solution.</p>
+<p>It is <em>Predictable</em>: It doesn&rsquo;t surprise you.</p>
+<p>It has <em>Leverage</em>: It solves a massive problem with a modest solution.</p>
 <p>As engineers, we should strive to be &ldquo;Force Multipliers&rdquo; who write &ldquo;Boring Code.&rdquo; Your product manager will thank you, your team will thank you, and the accountants will definitely thank you.</p>
 
         <div class="post-tags">In <a href="https://studiozenkai.com/tags/software/" >Software</a>        <a href="https://studiozenkai.com/tags/engineering/" >Engineering</a>        <a href="https://studiozenkai.com/tags/pragmatism/" >Pragmatism</a>        <a href="https://studiozenkai.com/tags/roi/" >Roi</a>        </div>

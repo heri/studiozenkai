@@ -4,7 +4,9 @@ title = "Stepping out of the Unix Shell: Automating Sage 50 with C#"
 tags = ['software', 'csharp', 'dotnet', 'automation']
 +++
 
-I live in the terminal. My ecosystem is Unix, my language is Ruby, and my framework is Rails. So, when a project appeared that required building a Windows console application in C# to talk to a legacy desktop accounting software, my instinct was to run.
+I live in the terminal. My ecosystem is Unix, my language is Ruby, and my framework is Rails. So, when a project appeared that required building a Windows console application in C# to talk to a legacy desktop accounting software, I was speechless and bewildered.
+
+Like asking a Canadian to cut queues.
 
 But the business case was undeniable. We had a team of 4 to 5 junior accountants spending their entire weeks manually keying invoices into Sage 50. It was error-prone, expensive, and frankly, soul-crushing work.
 
@@ -19,7 +21,7 @@ In Ruby, you might process a list of invoices like this:
 ```ruby
 invoices.each do |inv|
   puts "Processing #{inv[:number]}"
-  Sage.post(inv) # This method effectively doesn't exist
+  Sage.post(inv)
 end
 ```
 
@@ -40,7 +42,7 @@ foreach (var inv in invoices)
 }
 ```
 
-The learning curve wasn't the syntax—C# is remarkably elegant—it was the *environment*. I had to trade `rbenv` and `vim`/`vscode` on Mac for Visual Studio on a Windows Server.
+The learning curve wasn't the syntax — C# is not in-elegant — it was the *environment*. I had to trade `rbenv` and `vim`/`vscode` on Mac for Visual Studio on a Windows machine.
 
 # The Beast: Sage 50 SDK
 Web developers are spoiled by REST APIs. We send a JSON payload, get a 200 OK, and move on.
@@ -54,7 +56,7 @@ This project was successful, but it is not without architectural debt. If you ar
 
 * *Dependency Hell*: The SDK versions must match the installed Sage 50 version exactly. If the accountants update their software, your application breaks immediately.
 * *The "Bus Factor"*: In a shop of Rails developers, I am now the sole maintainer of this .NET codebase.
-* *Deployment*: There is no capistrano deploy or Docker container here. This runs on a physical Windows box. Deployment involves copying .exe files and managing Windows Task Scheduler.
+* *Deployment*: There is no CI/CD deploy or Docker container here. This runs on a physical Windows box. Deployment involves copying .exe and dll files.
 * *Single Threaded*: The SDK often blocks. You cannot easily spin up 50 threads to ingest data in parallel like you would with Sidekiq.
 
 # Highlights and ROI

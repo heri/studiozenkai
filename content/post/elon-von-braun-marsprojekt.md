@@ -10,6 +10,8 @@ In 1948, a Nazi engineer named Wernher von Braun wrote a book. Marsprojekt. It w
 
 In 1971, a boy was born in Pretoria. His father named him Elon. The father had read von Braun’s book. He liked the name.
 
+<!--more-->
+
 The boy grew. He left Africa. He built companies.
 
 In 2002, he founded SpaceX. To reach Mars. 

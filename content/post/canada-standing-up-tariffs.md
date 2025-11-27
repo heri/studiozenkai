@@ -9,6 +9,8 @@ The 25% tariffs on Canada aren’t just a tax on goods. They’re a test. A test
 
 Economic experts warn these tariffs will hurt. Unemployment could rise. Growth could stall. Young graduates might face fewer opportunities. It’s the same playbook Trump used on China during his first term — a blunt instrument meant to force compliance through brute strength.
 
+<!--more-->
+
 But here’s the thing: Canada isn’t China. And this isn’t just about economics. It’s about identity.
 
 For too long, Canada has leaned on the U.S. like a best friend who never says no. We treated American companies like our own, and they did the same. But that era is over. The tariffs are a wake-up call.

@@ -6,6 +6,8 @@ tags = ['sustainable', 'personal', 'software', 'health']
 
 2024 is wrapping up. The days are short, and the year feels spent. I’ve decided on four habits for 2025. Simple things, but they matter:
 
+<!--more-->
+
 * *Having fun with programming* again. I went from having fun in hackathons and working on one-off creative concepts to write boring pull requests for huge organizations. Day to day involve politics, outdated processes and blasé coworkers. If this can't be changed, fine. I will make my own. Silly projects, odd concepts — whatever makes me smile.
 * *Find Community* . Years ago, it was abuzz with community, either entrepreneurshop, montréal or arts. The pandemic came shut it all down. We stayed inside and forgot what it meant to belong. I want to bring it back. Does it mean hosting events? Or online connections? 🤷 We'll see
 * *Fix, Make, and Grow -- sustainably* I started tinkering at [the chalet](https://studiozenkai.com/post/airbnb-vacation-home/), messing with tools. Then real repairs. Now I want to make things. Grow things. Build with my hand. Like programming, *it should be [fun](https://studiozenkai.com/post/chalet-life/), not feel like work*

@@ -8,6 +8,8 @@ I live in the terminal. My ecosystem is Unix, my language is Ruby, and my framew
 
 Like asking a Canadian to cut queues.
 
+<!--more-->
+
 But the business case was undeniable. We had a team of 4 to 5 junior accountants spending their entire weeks manually keying invoices into Sage 50. It was error-prone, expensive, and frankly, soul-crushing work.
 
 The solution wasn't a shiny new SaaS. It was a rugged C# console application to bridge our modern data pipelines with the proprietary Sage 50 SDK.

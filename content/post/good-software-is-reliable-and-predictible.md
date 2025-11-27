@@ -8,6 +8,8 @@ Ask a junior developer what makes software "good", and you’ll hear about Clean
 
 But when you are working in a team, various managers, product owners, and business priorities — the definition shifts. We aren't just writing code; we are managing complexity and delivering value.
 
+<!--more-->
+
 There are many metrics for quality, but after working with 6+ development teams, in public and private companies, two criteria have risen to the top of my list: **Predictability** and **Leverage**.
 
 ## 1. Predictability (The "Boring" Argument)

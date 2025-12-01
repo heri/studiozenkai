@@ -180,13 +180,13 @@ In 99% of cases, this is fine. But in a recent project, we faced a legacy MS SQL
 <p><em>Aggressive caching</em>: Caching key data helped the platform for a short amount of time, preventing a complete breakdown. However even copious amount of Redis caching, the errors were still visible from the customer side.</p>
 </li>
 <li>
-<p><em>Fine-tuning database connections</em>: We fine-tuned database connection parameters until we found out it was cutting us around 80-100ms. From there, we fine-tuned timeouts, threads, made a system to retry and verify connections, and more. But like above, it was a short term solution that did not address the root cause and still created code red calls frequently.</p>
+<p><em>Fine-tuning database connections</em>: We fine-tuned database connection parameters until we found out it was cutting us around 80-100ms. From there, we fine-tuned timeouts, threads, made a system to retry and verify connections, and more. But like above, it was a short term solution that did not address the root cause and still created all-hands-on-deck calls frequently.</p>
 </li>
 <li>
 <p><em>Replication (Master/Slave)</em>: We considered setting up a read-replica where we controlled the timeout settings. However, the database is 4TB. Our sysadmin rightly pointed out that initializing and maintaining a 4TB replica for a few specific queries was using a sledgehammer to crack a nut. This could be a viable long-term solution, but not the one needed <em>now</em>.</p>
 </li>
 <li>
-<p><em>ETL/Data Warehousing</em>: We considered dumping data into a warehouse. But oa customer needs to see their recent data, not from 12 hours ago.</p>
+<p><em>ETL/Data Warehousing</em>: We considered dumping data into a warehouse. But clients needs to see their recent data, not from 12 hours ago.</p>
 </li>
 <li>
 <p><em>Denormalizing</em>: Half of the queries were for key customer metrics, such as balance and stats. We introduced a few additional tables and columns and sidekiq jobs to fill them, but again, it did not address the need for real-time data, and there too many metrics to make this the only solution.</p>
@@ -199,7 +199,7 @@ In 99% of cases, this is fine. But in a recent project, we faced a legacy MS SQL
 <p>We chose Node.js (TypeScript) with <code>Fastify</code> and <code>Knex</code>.</p>
 <p>Why Node? Because of its non-blocking I/O model. Unlike Rails, Node doesn&rsquo;t block a thread while waiting. It checks out a connection, executes the query, and immediately releases the connection back to the pool—all within milliseconds. It never holds the connection &ldquo;hostage&rdquo; while doing other work.</p>
 <h1 id="the-implementation-and-the-errors">The Implementation (and The Errors)</h1>
-<p>I want junior developers to learn from this: building a service is rarely a straight line. We hit obstacles that looked like bugs but were actually lessons in how different systems talk to each other.</p>
+<p>Building a service is rarely a straight line. We hit obstacles that looked like bugs but were actually lessons in how different systems talk to each other.</p>
 <h2 id="lesson-1-the-types-mismatch">Lesson 1: The Types Mismatch</h2>
 <p>Our first endpoint simply queried a customer&rsquo;s reward points. In the database, the ID is a <code>bigint</code>.</p>
 <p>When we ran the query in Node, the math was wrong. For example, JavaScript&rsquo;s <code>Number</code> type cannot safely hold a 64-bit integer. To prevent precision loss, the MS SQL driver returns <code>bigint</code> and <code>money</code> types as <code>String</code>s, not Numbers.</p>
@@ -226,7 +226,7 @@ In 99% of cases, this is fine. But in a recent project, we faced a legacy MS SQL
 <li>Total Request Time: 108ms</li>
 <li>Overhead: 500%</li>
 </ul>
-<p>A 500% overhead looks disastrous. Was Fastify really slow? Should we have used Rust?</p>
+<p>A 500% overhead looks disastrous. Was <code>Fastify</code> really slow? Should we have used Rust?</p>
 <p>No. We were benchmarking from outside the data center. The 90ms difference was simply the time it took the packets to travel over the VPN.</p>
 <p>When we bashed into the container and ran curl locally:</p>
 <ul>
@@ -237,7 +237,7 @@ In 99% of cases, this is fine. But in a recent project, we faced a legacy MS SQL
 <h1 id="conclusion">Conclusion</h1>
 <p>Ruby on Rails is still the mothership. It handles the complex business logic, the user interface, and the API integration.</p>
 <p>But for this specific task—talking to a hostile, high-performance database—Node.js was the right tool. It solved the 80ms timeout problem not by configuring the database, but by respecting its architecture.</p>
-<p>You don&rsquo;t have to rewrite your monolith. You just need to know when to delegate.</p>
+<p>You don&rsquo;t have to rewrite your monolith. You just need to know when to <em>delegate</em>.</p>
 <p>For those interested in the technical details, the source code for the connection pooling strategy and the type handling logic is available here.</p>
         <div class="post-tags">In <a href="https://studiozenkai.com/tags/personal/" >Personal</a>        <a href="https://studiozenkai.com/tags/software/" >Software</a>        <a href="https://studiozenkai.com/tags/ruby/" >Ruby</a>        </div>
         

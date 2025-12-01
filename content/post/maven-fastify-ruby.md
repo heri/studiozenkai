@@ -26,11 +26,11 @@ It is important to not jump immediately to writing new code. We looked at infras
 
 1. *Aggressive caching*: Caching key data helped the platform for a short amount of time, preventing a complete breakdown. However even copious amount of Redis caching, the errors were still visible from the customer side.
 
-2. *Fine-tuning database connections*: We fine-tuned database connection parameters until we found out it was cutting us around 80-100ms. From there, we fine-tuned timeouts, threads, made a system to retry and verify connections, and more. But like above, it was a short term solution that did not address the root cause and still created code red calls frequently.
+2. *Fine-tuning database connections*: We fine-tuned database connection parameters until we found out it was cutting us around 80-100ms. From there, we fine-tuned timeouts, threads, made a system to retry and verify connections, and more. But like above, it was a short term solution that did not address the root cause and still created all-hands-on-deck calls frequently.
 
 3. *Replication (Master/Slave)*: We considered setting up a read-replica where we controlled the timeout settings. However, the database is 4TB. Our sysadmin rightly pointed out that initializing and maintaining a 4TB replica for a few specific queries was using a sledgehammer to crack a nut. This could be a viable long-term solution, but not the one needed *now*.
 
-4. *ETL/Data Warehousing*: We considered dumping data into a warehouse. But oa customer needs to see their recent data, not from 12 hours ago.
+4. *ETL/Data Warehousing*: We considered dumping data into a warehouse. But clients needs to see their recent data, not from 12 hours ago.
 
 5. *Denormalizing*: Half of the queries were for key customer metrics, such as balance and stats. We introduced a few additional tables and columns and sidekiq jobs to fill them, but again, it did not address the need for real-time data, and there too many metrics to make this the only solution.
 
@@ -48,7 +48,7 @@ Why Node? Because of its non-blocking I/O model. Unlike Rails, Node doesn't bloc
 
 # The Implementation (and The Errors)
 
-I want junior developers to learn from this: building a service is rarely a straight line. We hit obstacles that looked like bugs but were actually lessons in how different systems talk to each other.
+Building a service is rarely a straight line. We hit obstacles that looked like bugs but were actually lessons in how different systems talk to each other.
 
 ## Lesson 1: The Types Mismatch
 
@@ -94,7 +94,7 @@ Once MAVEN was deployed, we ran benchmarks. The results were confusing at first.
 * Total Request Time: 108ms
 * Overhead: 500%
 
-A 500% overhead looks disastrous. Was Fastify really slow? Should we have used Rust?
+A 500% overhead looks disastrous. Was `Fastify` really slow? Should we have used Rust?
 
 No. We were benchmarking from outside the data center. The 90ms difference was simply the time it took the packets to travel over the VPN.
 
@@ -111,6 +111,6 @@ Ruby on Rails is still the mothership. It handles the complex business logic, th
 
 But for this specific task—talking to a hostile, high-performance database—Node.js was the right tool. It solved the 80ms timeout problem not by configuring the database, but by respecting its architecture.
 
-You don't have to rewrite your monolith. You just need to know when to delegate.
+You don't have to rewrite your monolith. You just need to know when to *delegate*.
 
 For those interested in the technical details, the source code for the connection pooling strategy and the type handling logic is available here.

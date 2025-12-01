@@ -6,7 +6,7 @@ tags = ['photography', 'music', 'montréal']
 
 Geraldine Jippé's quiet passion has been harps for years. 
 
-On my side, I always pictured harps as props for elves or Celtic postcards — beautiful, fragile, distant. Then I got invited into [La Journée de la Harpe](https://societedesharpistesdemontreal.square.site/la-journee-de-la-harpe), organized by the Société des harpistes de Montréal, where she asked me to be the official photographer. The building felt like an airport terminal for strings: people arriving from Toronto, from the States, from far southern towns, all to gather around wood and tension.
+On my side, I always pictured harps as props for elves or Celtic postcards: beautiful, fragile, distant. Then I got invited into [La Journée de la Harpe](https://societedesharpistesdemontreal.square.site/la-journee-de-la-harpe), organized by the Société des harpistes de Montréal, where she asked me to be the official photographer. The building felt like an airport terminal for strings: people arriving from Toronto, from the States, from far southern towns, all to gather around wood and tension.
 
 <!--more-->
 
@@ -14,7 +14,7 @@ The day opened with a deep-dive workshop tracing the instrument’s path from an
 
 ![Portrait from the morning history workshop](/images/harp_IMG_4297.jpeg "A morning workshop on the harp’s lineage, from early frames to high tech columns")
 
-After, every harp on display was fair game.
+After, every harp on display was available for anyone to try.
 
 ![Everyone trying every harp](/images/harp_IMG_4406.jpeg "Post-workshop playground: visit, listen, touch, repeat")
 ![Lines to touch the strings](/images/harp_IMG_4396.jpeg "Curious hands, respectful awe, constant buzz")
@@ -32,7 +32,7 @@ Competitions gave a rhytm to the day. A young competitor who traveled kilometers
 
 ![Focused competitor from far away](/images/harp_IMG_4332.jpeg "Seven minutes to justify years of work")
 
-Nearby, parents — logistics managers, cheerleaders, financial backers and more. All of those years of quiet grind for a five-minute performance.
+Nearby, parents: logistics managers, cheerleaders, financial backers and more. All of those years of quiet grind for a five-minute performance.
 
 ![Parents, the invisible scaffolding](/images/harp_IMG_4336.jpeg "The other side of the stage light")
 
@@ -44,13 +44,13 @@ The day wasn’t only about sound. Artisans filled a small market, showing strin
 
 ![Artisans’ corner and community tables](/images/harp_IMG_4954.jpeg "Makers, fixers, and the heartbeat of this scene")
 
-A new laureate walked away with a prize, applause, and maybe a future. She represents a generation that doesn’t see harps as relics.
+A young laureate walked away with a prize, applause, and maybe a future. She represents a generation that doesn’t see harps as relics.
 
 ![New generation taking the spotlight](/images/harp_IMG_4594.jpeg "A young winner; the harp is safe in new hands")
 
-The head judge — part of the elder generation — then led a workshop, passing down techniques.
+The head judge, part of the elder generation, then led a workshop, passing down techniques.
 
 ![Workshop by the head judge](/images/harp_IMG_4950.jpeg "Technique clinic from someone who has seen the instrument evolve")
 ![Traditional tunes by a master](/images/harp_IMG_4934.jpeg "The older generation giving back, one phrase at a time")
 
-Walking out, I realized the harp isn’t a museum piece. It’s a living technology carried by volunteers, tuners, judges, parents, and dreamers like Geraldine
+Walking out, I realized the harp isn’t a museum piece. It’s a living technology carried by volunteers, tuners, judges, parents, and dreamers like Géraldine.

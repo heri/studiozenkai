@@ -1,0 +1,63 @@
+{
+    "label": "✨ New Cases",
+    "version": 1,
+    "case_cards": [
+      {
+        "id": "rc1",
+        "title": "Flying is better than breathing underwater",
+        "description": "Debate whether the ability to fly beats the ability to breathe underwater in every meaningful way.",
+        "difficulty": "EASY",
+        "icon": "🦅",
+        "focus": "Superpowers"
+      },
+      {
+        "id": "rc2",
+        "title": "Having a pet dragon is better than a robot",
+        "description": "Argue whether a living, fire-breathing companion beats a tireless mechanical servant.",
+        "difficulty": "EASY",
+        "icon": "🐉",
+        "focus": "Companions"
+      },
+      {
+        "id": "rc3",
+        "title": "Hide & Seek is the best game at recess",
+        "description": "Make the case that Hide & Seek outclasses every other recess game in fun, fairness, and creativity.",
+        "difficulty": "EASY",
+        "icon": "🙈",
+        "focus": "Games"
+      },
+      {
+        "id": "rc4",
+        "title": "It'd be better to be an elephant than a whale",
+        "description": "Argue the merits of life as an elephant versus life as a whale — size, habitat, society, and all.",
+        "difficulty": "MEDIUM",
+        "icon": "🐘",
+        "focus": "Animals"
+      },
+      {
+        "id": "rc5",
+        "title": "A home without rules is better than a home with rules",
+        "description": "Debate whether total freedom at home leads to a better life than structure and clear expectations.",
+        "difficulty": "MEDIUM",
+        "icon": "🏠",
+        "focus": "Society"
+      },
+      {
+        "id": "rc6",
+        "title": "Cake is a better dessert than ice cream",
+        "description": "Settle the eternal dessert debate: celebrate the case for cake over cold, creamy ice cream.",
+        "difficulty": "EASY",
+        "icon": "🎂",
+        "focus": "Food"
+      },
+      {
+        "id": "rc7",
+        "title": "It is cooler to live in an underwater city than a space station",
+        "description": "Argue whether an ocean city or an orbital space station is the superior futuristic home.",
+        "difficulty": "HARD",
+        "icon": "🌊",
+        "focus": "Future"
+      }
+    ]
+  }
+  

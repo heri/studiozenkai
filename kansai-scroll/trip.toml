@@ -1,12 +1,13 @@
 title = "A Kansai Scroll"
-subtitle = "Osaka · Kyoto · Nara · Kyoto — August 2024"
+subtitle = "Osaka · Kyoto · Nara · Tokyo — June 2026"
 seal = "関西"
-intro = "The family, four phones, and one plan that did not survive the first morning. Unroll to the right. Tap any card to turn it over: the feeling first, the facts behind."
+intro = "The family, four cities, and one plan that did not survive the first morning. Unroll to the right. Tap any card to see more."
 end_seal = "結"
 end_title = "To be continued"
-end_note = "Six cards of perhaps two hundred. The rest of the scroll is being written."
+end_note = "{count} cards of perhaps one hundred. The rest of the scroll is being written."
 
 [cities]
 Osaka = "大阪"
 Kyoto = "京都"
 Nara  = "奈良"
+Tokyo = "東京"

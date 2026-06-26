@@ -1,0 +1,717 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Kansai Scroll</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700;800&family=Newsreader:ital,opsz,wght@0,16..72,300;0,16..72,400;0,16..72,500;1,16..72,300;1,16..72,400&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>:root{
+  --sumi:#1c1b17;
+  --indigo-1:#102a44;
+  --indigo-2:#27537b;
+  --indigo-3:#5d8bb0;
+  --haze:#9fb9cf;
+  --washi:#ece0c4;
+  --washi-2:#f5ecd6;
+  --washi-edge:#d8c9a6;
+  --vermilion:#b23a2e;
+  --vermilion-deep:#86271d;
+  --gold:#a9842f;
+  --sage:#6f8a5f;
+  --ink-soft:#39362c;
+  --mincho:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;
+  --serif:"Newsreader",Georgia,"Hiragino Mincho ProN",serif;
+  --mono:"Spline Sans Mono",ui-monospace,Menlo,monospace;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--indigo-1);color:var(--sumi);
+  font-family:var(--serif);-webkit-font-smoothing:antialiased}
+body{overflow:hidden}
+
+#track{height:100vh;height:100dvh;overflow-x:auto;overflow-y:hidden;white-space:nowrap;
+  display:flex;align-items:stretch;scroll-behavior:smooth;scrollbar-width:none;
+  background:linear-gradient(180deg,var(--indigo-1) 0%,var(--indigo-2) 52%,
+    var(--haze) 74%,#cdd9d0 86%,#bcae8c 100%)}
+#track::-webkit-scrollbar{display:none}
+
+.scene{position:relative;display:inline-flex;align-items:center;flex:0 0 auto;
+  padding:0 clamp(28px,6vw,110px);min-width:max-content}
+.mountains{position:absolute;left:0;right:0;bottom:0;height:34%;z-index:0;pointer-events:none}
+.mountains svg{width:100%;height:100%}
+.mt-far{fill:#3f6486;opacity:.55}.mt-near{fill:#2c4f72;opacity:.7}
+.cards{position:relative;z-index:2;display:flex;align-items:center;
+  gap:clamp(26px,4vw,64px);padding:8vh 0}
+
+.mist{position:relative;flex:0 0 auto;width:clamp(180px,18vw,340px);align-self:stretch;
+  display:flex;align-items:center;justify-content:center}
+.kasumi{position:absolute;inset:0;width:100%;height:100%}
+.kasumi rect{fill:var(--washi)}
+.mist-label{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;
+  gap:.5rem;padding:18px 14px;border-radius:50%;
+  background:radial-gradient(closest-side,rgba(236,224,196,.96),rgba(236,224,196,.55) 70%,rgba(236,224,196,0))}
+.ml-jp{font-family:var(--mincho);font-weight:800;font-size:clamp(34px,5vw,62px);
+  color:var(--vermilion-deep);writing-mode:vertical-rl;letter-spacing:.12em}
+.ml-en{font-family:var(--mono);font-size:11px;letter-spacing:.42em;color:var(--ink-soft);
+  text-transform:uppercase;writing-mode:vertical-rl}
+
+.card{position:relative;flex:0 0 auto;cursor:pointer;outline:none;white-space:normal;
+  box-shadow:0 28px 60px -28px rgba(8,18,30,.7),0 4px 14px -6px rgba(8,18,30,.5)}
+.card.port{width:clamp(280px,26vw,360px);height:clamp(420px,62vh,560px)}
+.card.land{width:clamp(380px,40vw,560px);height:clamp(300px,46vh,420px)}
+.card-inner{position:relative;width:100%;height:100%;perspective:1600px}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;
+  border-radius:2px;overflow:hidden;will-change:transform;
+  transition:transform .85s cubic-bezier(.4,.05,.2,1),visibility 0s}
+.card.flipped .front{transform:rotateY(-180deg);visibility:hidden;
+  transition:transform .85s cubic-bezier(.4,.05,.2,1),visibility 0s .425s}
+.card.flipped .back{transform:rotateY(0deg);visibility:visible;
+  transition:transform .85s cubic-bezier(.4,.05,.2,1),visibility 0s}
+
+.front{background:#0c1722;border:1px solid rgba(255,255,255,.10)}
+.photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.front::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(8,14,22,0) 38%,rgba(8,14,22,.18) 56%,rgba(8,14,22,.86) 100%)}
+.no-photo{background:radial-gradient(120% 80% at 30% 0%,var(--indigo-2),var(--indigo-1))}
+.cartouche{position:absolute;top:14px;right:14px;z-index:3;background:var(--vermilion);
+  padding:12px 9px 14px;box-shadow:0 6px 16px -8px rgba(0,0,0,.6)}
+.cart-jp{font-family:var(--mincho);font-weight:700;color:var(--washi-2);font-size:18px;
+  writing-mode:vertical-rl;letter-spacing:.16em;line-height:1.1}
+.front-foot{position:absolute;left:0;right:0;bottom:0;z-index:3;padding:20px 22px 24px}
+.title{margin:0 0 .5rem;font-family:var(--mincho);font-weight:700;color:var(--washi-2);
+  font-size:clamp(21px,2.4vw,27px);line-height:1.18}
+.feeling{margin:0;font-family:var(--serif);font-style:italic;font-weight:300;
+  color:rgba(245,236,214,.94);font-size:clamp(14px,1.45vw,16.5px);line-height:1.5;
+  max-width:42ch;text-wrap:pretty}
+.seal{position:absolute;bottom:16px;right:16px;z-index:4;width:34px;height:34px;border-radius:50%;
+  border:1.5px solid rgba(245,236,214,.8);color:rgba(245,236,214,.92);background:rgba(178,58,46,.72);
+  display:flex;align-items:center;justify-content:center;font-family:var(--mincho);font-size:15px;
+  box-shadow:0 2px 8px rgba(0,0,0,.35);transition:transform .3s,background .3s}
+.card:hover .seal,.card:focus-visible .seal{transform:scale(1.12);background:var(--vermilion)}
+.hanko{position:absolute;top:14px;left:14px;z-index:3;background:rgba(178,58,46,.68);
+  padding:8px 7px 10px;box-shadow:0 4px 12px -6px rgba(0,0,0,.55)}
+.hanko-jp{font-family:var(--mincho);font-weight:700;color:var(--washi-2);font-size:15px;
+  writing-mode:vertical-rl;letter-spacing:.16em;line-height:1.1;display:block}
+
+.back{transform:rotateY(180deg);visibility:hidden;
+  transition:transform .85s cubic-bezier(.4,.05,.2,1),visibility 0s .425s;
+  border:1px solid var(--washi-edge);padding:clamp(22px,2.4vw,30px);display:flex;flex-direction:column;
+  background:radial-gradient(120% 80% at 20% 0%,var(--washi-2),var(--washi) 60%,var(--washi-edge) 100%)}
+.back::before{content:"";position:absolute;inset:10px;border:1px solid rgba(134,39,29,.28);pointer-events:none}
+.back-head{display:flex;align-items:baseline;gap:12px;border-bottom:2px solid var(--vermilion-deep);
+  padding-bottom:10px;margin-bottom:14px}
+.back-cart{font-family:var(--mincho);font-weight:700;color:var(--vermilion-deep);font-size:18px;flex:0 0 auto}
+.back-title{margin:0;font-family:var(--mincho);font-weight:500;color:var(--sumi);
+  font-size:clamp(17px,1.8vw,21px);line-height:1.2}
+.desc{margin:0 0 auto;font-family:var(--serif);font-weight:400;color:var(--ink-soft);
+  font-size:clamp(13.5px,1.4vw,15.5px);line-height:1.62;text-wrap:pretty;overflow:auto}
+.meta{margin-top:18px;border-top:1px solid rgba(134,39,29,.3);padding-top:12px;display:grid;gap:7px}
+.m-row{display:grid;grid-template-columns:5.2em 1fr;gap:10px;align-items:baseline}
+.m-k{font-family:var(--mono);font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.m-v{font-family:var(--mono);font-size:12px;color:var(--sumi);line-height:1.35}
+.dots{color:var(--vermilion);letter-spacing:.06em}
+.seal-back{border-color:var(--vermilion-deep);color:var(--vermilion-deep);background:transparent}
+
+.plate{align-items:center}
+.frontis{position:relative;z-index:2;max-width:min(78vw,440px);text-align:center;white-space:normal;
+  color:var(--washi-2);padding:0 8px}
+.fr-rule{height:1px;background:linear-gradient(90deg,transparent,rgba(245,236,214,.5),transparent);margin:18px 0}
+.fr-cart{display:inline-block;background:var(--vermilion);color:var(--washi-2);font-family:var(--mincho);
+  font-weight:800;font-size:30px;padding:14px 12px;writing-mode:vertical-rl;letter-spacing:.2em;margin-bottom:8px}
+.end-cart{background:var(--vermilion-deep)}
+.fr-title{font-family:var(--mincho);font-weight:800;font-size:clamp(34px,5vw,58px);margin:.2em 0;
+  line-height:1.05;color:var(--washi-2)}
+.fr-sub{font-family:var(--mono);font-size:12px;letter-spacing:.34em;text-transform:uppercase;
+  color:var(--haze);margin:.4em 0 1.4em}
+.fr-note{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(15px,1.6vw,17px);
+  line-height:1.6;color:rgba(245,236,214,.88);text-wrap:pretty}
+
+#rail{position:fixed;left:0;right:0;bottom:0;z-index:40;height:56px;display:flex;align-items:center;
+  gap:18px;padding:0 22px;background:linear-gradient(180deg,rgba(16,42,68,0),rgba(12,23,34,.78));
+  backdrop-filter:blur(3px)}
+#rail .seg{position:relative;display:flex;align-items:center;gap:8px;background:none;border:none;
+  cursor:pointer;font-family:var(--mono);font-size:11px;letter-spacing:.28em;text-transform:uppercase;
+  color:rgba(245,236,214,.55);padding:6px 2px;transition:color .3s}
+#rail .seg .jp{font-family:var(--mincho);font-size:15px;letter-spacing:.1em}
+#rail .seg:hover,#rail .seg.active{color:var(--washi-2)}
+#rail .seg.active::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--vermilion)}
+#bar{position:fixed;left:0;bottom:56px;height:2px;background:var(--vermilion);z-index:41;width:0;transition:width .12s linear}
+.nav{position:fixed;top:50%;transform:translateY(-50%);z-index:42;width:46px;height:46px;border-radius:50%;
+  border:1px solid rgba(245,236,214,.32);background:rgba(12,23,34,.5);color:var(--washi-2);font-size:20px;
+  cursor:pointer;backdrop-filter:blur(3px);transition:background .25s}
+.nav:hover{background:rgba(178,58,46,.7)}
+#prev{left:16px}#next{right:16px}
+.hint{position:fixed;top:18px;left:50%;transform:translateX(-50%);z-index:42;font-family:var(--mono);
+  font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:rgba(245,236,214,.7);
+  background:rgba(12,23,34,.5);padding:8px 16px;border:1px solid rgba(245,236,214,.18);
+  transition:opacity .6s;pointer-events:none}
+
+@media (max-width:680px){
+  .nav{display:none}
+  .card.port{width:78vw;height:64vh}.card.land{width:84vw;height:52vh}
+  #rail{gap:10px;padding:0 12px}#rail .seg{letter-spacing:.16em;font-size:10px}
+  .hint{font-size:10px;letter-spacing:.18em}
+}
+@media (prefers-reduced-motion:reduce){
+  #track{scroll-behavior:auto}.card-inner{transition:none}
+}
+</style>
+</head>
+<body>
+<div class="hint" id="hint">Scroll →&nbsp;&nbsp;·&nbsp;&nbsp;Tap a card to turn it</div>
+<div id="track">
+  <section class="scene plate">
+    <div class="frontis">
+      <div class="fr-rule"></div>
+      <div class="fr-cart"><span>関西</span></div>
+      <h1 class="fr-title">A Kansai Scroll</h1>
+      <p class="fr-sub">Osaka · Kyoto · Nara · Tokyo — June 2026</p>
+      <p class="fr-note">The family, four cities, and one plan that did not survive the first morning. Unroll to the right. Tap any card to see more.</p>
+      <div class="fr-rule"></div>
+    </div>
+  </section>
+
+    <div class="mist" aria-hidden="false">
+      <svg class="kasumi" viewBox="0 0 600 900" preserveAspectRatio="xMidYMid slice"><g><rect x="30" y="70" width="360" height="50" rx="25" opacity="1.0"/><rect x="190" y="150" width="380" height="46" rx="23" opacity="0.82"/><rect x="0" y="244" width="300" height="50" rx="25" opacity="0.9"/><rect x="150" y="330" width="330" height="44" rx="22" opacity="0.7"/><rect x="70" y="560" width="320" height="44" rx="22" opacity="0.7"/><rect x="210" y="648" width="350" height="50" rx="25" opacity="0.9"/><rect x="20" y="742" width="300" height="46" rx="23" opacity="0.82"/><rect x="160" y="826" width="360" height="50" rx="25" opacity="1.0"/></g></svg>
+      <div class="mist-label"><span class="ml-jp">大阪</span><span class="ml-en">Osaka</span></div>
+    </div>
+<section class="scene" data-city="Osaka" data-jp="大阪">
+    <div class="mountains" aria-hidden="true">
+      <svg viewBox="0 0 1400 300" preserveAspectRatio="none">
+        <path class="mt-far"  d="M0,300 L0,150 Q180,60 360,130 Q560,210 760,120 Q980,40 1180,140 Q1300,180 1400,140 L1400,300 Z"/>
+        <path class="mt-near" d="M0,300 L0,210 Q220,150 420,205 Q640,250 840,195 Q1060,150 1260,210 Q1340,235 1400,215 L1400,300 Z"/>
+      </svg>
+    </div><div class="cards">
+    <article class="card port" tabindex="0" aria-label="The Room Where Everything Was Life-Size. Tap to turn the card.">
+      <div class="card-inner">
+        <div class="face front">
+          <img class="photo" src="assets/01-nintendo-0.jpg" width="1200" height="1600" loading="lazy" alt="The Room Where Everything Was Life-Size">
+          <div class="hanko"><span class="hanko-jp">遊</span></div>
+          <div class="cartouche"><span class="cart-jp">任天堂・大阪</span></div>
+          <div class="front-foot"><h2 class="title">The Room Where Everything Was Life-Size</h2><p class="feeling">Twenty years of pixels, suddenly at eye level. Neither of them spoke for a full ten seconds. That is the most concentrated silence this family has ever produced.</p></div>
+          <div class="seal" aria-hidden="true">裏</div>
+        </div>
+        <div class="face back">
+          <div class="back-head"><span class="back-cart">任天堂・大阪</span><h3 class="back-title">The Room Where Everything Was Life-Size</h3></div>
+          <p class="desc">Nintendo Osaka at Grand Front Osaka is Japan&#x27;s first full-scale Nintendo flagship store. The entrance opens onto a floor of characters rendered at human height: a Piranha Plant taller than both boys, a Mario universe in three dimensions that refuses to be modest. We had reserved timed-entry slots a month in advance. Worth every click.</p>
+          <div class="meta"><div class="m-row"><span class="m-k">date</span><span class="m-v">2026 · 06 · 19</span></div><div class="m-row"><span class="m-k">hours</span><span class="m-v">10:20 – 11:50</span></div><div class="m-row"><span class="m-k">place</span><span class="m-v">Nintendo Osaka, Grand Front Osaka</span></div><div class="m-row"><span class="m-k">transit</span><span class="m-v">JR Osaka Station, North Exit</span></div><div class="m-row"><span class="m-k">fun</span><span class="m-v">🎮 <span class="dots">●●●●○</span></span></div></div>
+          <div class="seal seal-back" aria-hidden="true">表</div>
+        </div>
+      </div>
+    </article>
+    <article class="card port" tabindex="0" aria-label="The City Below the Glass. Tap to turn the card.">
+      <div class="card-inner">
+        <div class="face front">
+          <img class="photo" src="assets/02-osaka-0.jpg" width="1200" height="1600" loading="lazy" alt="The City Below the Glass">
+          <div class="hanko"><span class="hanko-jp">雅</span></div>
+          <div class="cartouche"><span class="cart-jp">大阪眺望</span></div>
+          <div class="front-foot"><h2 class="title">The City Below the Glass</h2><p class="feeling">He pressed both hands against the window and looked down at Osaka for a long time. Then he made a peace sign. Scale registered; instinct took over.</p></div>
+          <div class="seal" aria-hidden="true">裏</div>
+        </div>
+        <div class="face back">
+          <div class="back-head"><span class="back-cart">大阪眺望</span><h3 class="back-title">The City Below the Glass</h3></div>
+          <p class="desc">Looking down at Osaka from the upper floors of the DoubleTree by Hilton, Tenmabashi, with Japan&#x27;s second city spread out in every direction, the Okawa river cutting a long arc through it. From up here the city reveals its real scale: not a collection of named neighborhoods but an unbroken field of buildings and bridges that simply continues to the horizon.</p>
+          <div class="meta"><div class="m-row"><span class="m-k">date</span><span class="m-v">2026 · 06 · 20</span></div><div class="m-row"><span class="m-k">hours</span><span class="m-v">06:20 – 09:50</span></div><div class="m-row"><span class="m-k">place</span><span class="m-v">DoubleTree by Hilton Osaka, Tenmabashi</span></div><div class="m-row"><span class="m-k">transit</span><span class="m-v">T Tanimachi Line → Temmabashi Station</span></div><div class="m-row"><span class="m-k">wonder</span><span class="m-v">⛩️ <span class="dots">●●○○○</span></span></div></div>
+          <div class="seal seal-back" aria-hidden="true">表</div>
+        </div>
+      </div>
+    </article>
+    <article class="card port" tabindex="0" aria-label="The kids Who Stood Before Four Hundred Years. Tap to turn the card.">
+      <div class="card-inner">
+        <div class="face front">
+          <img class="photo" src="assets/03-castle-0.jpg" width="1200" height="1600" loading="lazy" alt="The kids Who Stood Before Four Hundred Years">
+          <div class="hanko"><span class="hanko-jp">雅</span></div>
+          <div class="cartouche"><span class="cart-jp">大阪城</span></div>
+          <div class="front-foot"><h2 class="title">The kids Who Stood Before Four Hundred Years</h2><p class="feeling">The walls are two stories of solid granite and the moat is wide enough to be a small lake. They asked who won. The answer is long.</p></div>
+          <div class="seal" aria-hidden="true">裏</div>
+        </div>
+        <div class="face back">
+          <div class="back-head"><span class="back-cart">大阪城</span><h3 class="back-title">The kids Who Stood Before Four Hundred Years</h3></div>
+          <p class="desc">Osaka Castle was raised by Toyotomi Hideyoshi in 1583 as a monument to reunification, burned and rebuilt after the Siege of Osaka in 1615, and stands today in a 1931 concrete reconstruction with a museum inside the keep. Hideyoshi unified the country, won every battle of his lifetime, and then died. The castle fell six months later. The boys found this outcome unsatisfying.</p>
+          <div class="meta"><div class="m-row"><span class="m-k">date</span><span class="m-v">2026 · 06 · 20</span></div><div class="m-row"><span class="m-k">hours</span><span class="m-v">10:00 – 12:00</span></div><div class="m-row"><span class="m-k">place</span><span class="m-v">Osaka Castle</span></div><div class="m-row"><span class="m-k">transit</span><span class="m-v">T Tanimachi Line → Temmabashi Station</span></div><div class="m-row"><span class="m-k">wonder</span><span class="m-v">⛩️ <span class="dots">●●●●○</span></span></div></div>
+          <div class="seal seal-back" aria-hidden="true">表</div>
+        </div>
+      </div>
+    </article>
+    <article class="card port" tabindex="0" aria-label="Two Heads, One Castle. Tap to turn the card.">
+      <div class="card-inner">
+        <div class="face front">
+          <img class="photo" src="assets/03b-osaka-castle-tower-0.jpg" width="1200" height="1600" loading="lazy" alt="Two Heads, One Castle">
+          <div class="hanko"><span class="hanko-jp">雅</span></div>
+          <div class="cartouche"><span class="cart-jp">天守閣</span></div>
+          <div class="front-foot"><h2 class="title">Two Heads, One Castle</h2><p class="feeling">They stood in front of something built to demonstrate power, and the demonstration worked. They were very impressed. So, quietly, were we.</p></div>
+          <div class="seal" aria-hidden="true">裏</div>
+        </div>
+        <div class="face back">
+          <div class="back-head"><span class="back-cart">天守閣</span><h3 class="back-title">Two Heads, One Castle</h3></div>
+          <p class="desc">The tenshu, the main keep of Osaka Castle, rises five tiers above a base of massive ishigaki granite stones, its white plaster walls finished with gold-leaf tiger and crane ornaments on a black ground. At 58 metres it was the tallest structure in Japan when it was built. Standing at its base and looking up, that claim is easy to believe.</p>
+          <div class="meta"><div class="m-row"><span class="m-k">date</span><span class="m-v">2026 · 06 · 20</span></div><div class="m-row"><span class="m-k">hours</span><span class="m-v">10:45 – 11:15</span></div><div class="m-row"><span class="m-k">place</span><span class="m-v">Osaka Castle</span></div><div class="m-row"><span class="m-k">transit</span><span class="m-v">T Tanimachi Line → Temmabashi Station</span></div><div class="m-row"><span class="m-k">wonder</span><span class="m-v">⛩️ <span class="dots">●●●●○</span></span></div></div>
+          <div class="seal seal-back" aria-hidden="true">表</div>
+        </div>
+      </div>
+    </article>
+    <article class="card port" tabindex="0" aria-label="The Case of the First Panel. Tap to turn the card.">
+      <div class="card-inner">
+        <div class="face front">
+          <img class="photo" src="assets/04-manga-0.jpg" width="1200" height="1600" loading="lazy" alt="The Case of the First Panel">
+          <div class="hanko"><span class="hanko-jp">遊</span></div>
+          <div class="cartouche"><span class="cart-jp">名探偵コナン</span></div>
+          <div class="front-foot"><h2 class="title">The Case of the First Panel</h2><p class="feeling">I had not planned to become interested in Detective Conan. The exhibition had a different plan. The boys have had opinions about manga ever since.</p></div>
+          <div class="seal" aria-hidden="true">裏</div>
+        </div>
+        <div class="face back">
+          <div class="back-head"><span class="back-cart">名探偵コナン</span><h3 class="back-title">The Case of the First Panel</h3></div>
+          <p class="desc">A Detective Conan × Osaka Castle special exhibition: Gosho Aoyama&#x27;s long-running mystery series re-dressed in Edo-period costume against a painted backdrop of the castle. For a family passing through, it was a door opened slightly, a glimpse into the manga universe that the boys spent the rest of the trip trying to push further open. The souvenir shop was not a help.</p>
+          <div class="meta"><div class="m-row"><span class="m-k">date</span><span class="m-v">2026 · 06 · 20</span></div><div class="m-row"><span class="m-k">hours</span><span class="m-v">12:00 – 13:00</span></div><div class="m-row"><span class="m-k">place</span><span class="m-v">Osaka Castle (Detective Conan × Osaka-jo Exhibition)</span></div><div class="m-row"><span class="m-k">transit</span><span class="m-v">T Tanimachi Line → Temmabashi Station</span></div><div class="m-row"><span class="m-k">fun</span><span class="m-v">🎮 <span class="dots">●●●○○</span></span></div></div>
+          <div class="seal seal-back" aria-hidden="true">表</div>
+        </div>
+      </div>
+    </article>
+    <article class="card port" tabindex="0" aria-label="A Spanish Table in Osaka. Tap to turn the card.">
+      <div class="card-inner">
+        <div class="face front">
+          <img class="photo" src="assets/05-restaurant-0.jpg" width="1200" height="1600" loading="lazy" alt="A Spanish Table in Osaka">
+          <div class="hanko"><span class="hanko-jp">食</span></div>
+          <div class="cartouche"><span class="cart-jp">誕生日の宴</span></div>
+          <div class="front-foot"><h2 class="title">A Spanish Table in Osaka</h2><p class="feeling">Aimable flew in for this. The menu was entirely in Japanese. The food arrived one beautiful plate at a time. We sang happy birthday badly and ate very well.</p></div>
+          <div class="seal" aria-hidden="true">裏</div>
+        </div>
+        <div class="face back">
+          <div class="back-head"><span class="back-cart">誕生日の宴</span><h3 class="back-title">A Spanish Table in Osaka</h3></div>
+          <p class="desc">IÑAKI is a Spanish restaurant at the top of an Osaka building, intimate and precise, with a tasting menu delivered in the Japanese style: each course alone, with full attention. Aimable had come with his daughter to join us for the weekend; we ordered by pointing, celebrated the occasion properly, and stayed longer than planned.</p>
+          <div class="meta"><div class="m-row"><span class="m-k">date</span><span class="m-v">2026 · 06 · 20</span></div><div class="m-row"><span class="m-k">hours</span><span class="m-v">13:00 – 14:15</span></div><div class="m-row"><span class="m-k">place</span><span class="m-v">IÑAKI (イナキ), Osaka</span></div><div class="m-row"><span class="m-k">transit</span><span class="m-v">T Tanimachi Line → Tanimachi 4-Chome Station</span></div><div class="m-row"><span class="m-k">taste</span><span class="m-v">🍜 <span class="dots">●●●●●</span></span></div></div>
+          <div class="seal seal-back" aria-hidden="true">表</div>
+        </div>
+      </div>
+    </article>
+    <article class="card port" tabindex="0" aria-label="Rainy Hours with Several Thousand Bricks. Tap to turn the card.">
+      <div class="card-inner">
+        <div class="face front">
+          <img class="photo" src="assets/06-legoland-0.jpg" width="1200" height="1600" loading="lazy" alt="Rainy Hours with Several Thousand Bricks">
+          <div class="hanko"><span class="hanko-jp">遊</span></div>
+          <div class="cartouche"><span class="cart-jp">レゴランド</span></div>
+          <div class="front-foot"><h2 class="title">Rainy Hours with Several Thousand Bricks</h2><p class="feeling">It had rained all afternoon. Our feet hurt. Neither boy noticed. Lego is Lego in any weather.</p></div>
+          <div class="seal" aria-hidden="true">裏</div>
+        </div>
+        <div class="face back">
+          <div class="back-head"><span class="back-cart">レゴランド</span><h3 class="back-title">Rainy Hours with Several Thousand Bricks</h3></div>
+          <p class="desc">Legoland Discovery Center Osaka proved exactly what a wet afternoon called for. The rain arrived after lunch and refused to leave; inside, it was all primary colors, instruction sheets, and the particular concentration that descends on children who have been given unlimited bricks. We did not rush.</p>
+          <div class="meta"><div class="m-row"><span class="m-k">date</span><span class="m-v">2026 · 06 · 20</span></div><div class="m-row"><span class="m-k">hours</span><span class="m-v">16:00 – 18:15</span></div><div class="m-row"><span class="m-k">place</span><span class="m-v">Legoland Discovery Center Osaka</span></div><div class="m-row"><span class="m-k">transit</span><span class="m-v">Osakako Station</span></div><div class="m-row"><span class="m-k">fun</span><span class="m-v">🎮 <span class="dots">●●●●○</span></span></div></div>
+          <div class="seal seal-back" aria-hidden="true">表</div>
+        </div>
+      </div>
+    </article>
+    <article class="card port" tabindex="0" aria-label="The Park That Does Not Apologize. Tap to turn the card.">
+      <div class="card-inner">
+        <div class="face front">
+          <img class="photo" src="assets/07-usj-0.jpg" width="1200" height="1600" loading="lazy" alt="The Park That Does Not Apologize">
+          <div class="hanko"><span class="hanko-jp">遊</span></div>
+          <div class="cartouche"><span class="cart-jp">ユニバーサル</span></div>
+          <div class="front-foot"><h2 class="title">The Park That Does Not Apologize</h2><p class="feeling">Space Fantasy: The Ride. Top three, no argument. We have been debating the rest of the list ever since.</p></div>
+          <div class="seal" aria-hidden="true">裏</div>
+        </div>
+        <div class="face back">
+          <div class="back-head"><span class="back-cart">ユニバーサル</span><h3 class="back-title">The Park That Does Not Apologize</h3></div>
+          <p class="desc">Universal Studios Japan takes its own world-building seriously. Every zone has its own architecture, its own sound design, its own smell at the gate. Every queue is part of the attraction. We rode everything the Express Pass allowed, in whatever order the boys successfully negotiated, starting before nine and finishing after four. Space Fantasy: The Ride was not close.</p>
+          <div class="meta"><div class="m-row"><span class="m-k">date</span><span class="m-v">2026 · 06 · 22</span></div><div class="m-row"><span class="m-k">hours</span><span class="m-v">06:00 – 16:15</span></div><div class="m-row"><span class="m-k">place</span><span class="m-v">Universal Studios Japan</span></div><div class="m-row"><span class="m-k">transit</span><span class="m-v">JR line → Universal-City Station</span></div><div class="m-row"><span class="m-k">fun</span><span class="m-v">🎮 <span class="dots">●●●●●</span></span></div></div>
+          <div class="seal seal-back" aria-hidden="true">表</div>
+        </div>
+      </div>
+    </article>
+    <article class="card port" tabindex="0" aria-label="Mario and Luigi, Finally. Tap to turn the card.">
+      <div class="card-inner">
+        <div class="face front">
+          <img class="photo" src="assets/08-mario-usj-0.jpg" width="1200" height="1600" loading="lazy" alt="Mario and Luigi, Finally">
+          <div class="hanko"><span class="hanko-jp">遊</span></div>
+          <div class="cartouche"><span class="cart-jp">マリオカート</span></div>
+          <div class="front-foot"><h2 class="title">Mario and Luigi, Finally</h2><p class="feeling">They wore the hats all day. Through every ride, every meal, every queue. No discussion. The hats stayed.</p></div>
+          <div class="seal" aria-hidden="true">裏</div>
+        </div>
+        <div class="face back">
+          <div class="back-head"><span class="back-cart">マリオカート</span><h3 class="back-title">Mario and Luigi, Finally</h3></div>
+          <p class="desc">Nintendo World at USJ: the Mario Kart: Koopa&#x27;s Challenge attraction, where an AR headset overlays digital enemies and power-ups onto a full-scale physical set of Bowser&#x27;s castle. The queue winds through the castle itself. The boys wore their Mario and Luigi hats from the moment the park opened. They collected stars. The adults fell significantly behind.</p>
+          <div class="meta"><div class="m-row"><span class="m-k">date</span><span class="m-v">2026 · 06 · 22</span></div><div class="m-row"><span class="m-k">hours</span><span class="m-v">09:00 – 10:15</span></div><div class="m-row"><span class="m-k">place</span><span class="m-v">Nintendo World, Universal Studios Japan</span></div><div class="m-row"><span class="m-k">transit</span><span class="m-v">JR line → Universal-City Station</span></div><div class="m-row"><span class="m-k">fun</span><span class="m-v">🎮 <span class="dots">●●●●●</span></span></div></div>
+          <div class="seal seal-back" aria-hidden="true">表</div>
+        </div>
+      </div>
+    </article>
+    <article class="card port" tabindex="0" aria-label="The One Who Would Not Say Goodbye. Tap to turn the card.">
+      <div class="card-inner">
+        <div class="face front">
+          <img class="photo" src="assets/09-minion-usj-0.jpg" width="1200" height="1600" loading="lazy" alt="The One Who Would Not Say Goodbye">
+          <div class="hanko"><span class="hanko-jp">遊</span></div>
+          <div class="cartouche"><span class="cart-jp">ミニオン</span></div>
+          <div class="front-foot"><h2 class="title">The One Who Would Not Say Goodbye</h2><p class="feeling">He found the Minion and held on. The Minion, to its credit, held on too. The whole family was there and nobody moved.</p></div>
+          <div class="seal" aria-hidden="true">裏</div>
+        </div>
+        <div class="face back">
+          <div class="back-head"><span class="back-cart">ミニオン</span><h3 class="back-title">The One Who Would Not Say Goodbye</h3></div>
+          <p class="desc">Late afternoon at USJ, still in their Mario and Luigi hats, the family encountered a Minion character mascot near the Despicable Me attraction. The younger boy locked eyes and did not look away. The Minion posed with complete professionalism. It was the last photograph of the day and somehow the best one.</p>
+          <div class="meta"><div class="m-row"><span class="m-k">date</span><span class="m-v">2026 · 06 · 22</span></div><div class="m-row"><span class="m-k">hours</span><span class="m-v">14:00 – 16:00</span></div><div class="m-row"><span class="m-k">place</span><span class="m-v">Minion Park, Universal Studios Japan</span></div><div class="m-row"><span class="m-k">transit</span><span class="m-v">JR line → Universal-City Station</span></div><div class="m-row"><span class="m-k">fun</span><span class="m-v">🎮 <span class="dots">●●●●○</span></span></div></div>
+          <div class="seal seal-back" aria-hidden="true">表</div>
+        </div>
+      </div>
+    </article></div></section>
+
+    <div class="mist" aria-hidden="false">
+      <svg class="kasumi" viewBox="0 0 600 900" preserveAspectRatio="xMidYMid slice"><g><rect x="30" y="70" width="360" height="50" rx="25" opacity="1.0"/><rect x="190" y="150" width="380" height="46" rx="23" opacity="0.82"/><rect x="0" y="244" width="300" height="50" rx="25" opacity="0.9"/><rect x="150" y="330" width="330" height="44" rx="22" opacity="0.7"/><rect x="70" y="560" width="320" height="44" rx="22" opacity="0.7"/><rect x="210" y="648" width="350" height="50" rx="25" opacity="0.9"/><rect x="20" y="742" width="300" height="46" rx="23" opacity="0.82"/><rect x="160" y="826" width="360" height="50" rx="25" opacity="1.0"/></g></svg>
+      <div class="mist-label"><span class="ml-jp">京都</span><span class="ml-en">Kyoto</span></div>
+    </div>
+<section class="scene" data-city="Kyoto" data-jp="京都">
+    <div class="mountains" aria-hidden="true">
+      <svg viewBox="0 0 1400 300" preserveAspectRatio="none">
+        <path class="mt-far"  d="M0,300 L0,150 Q180,60 360,130 Q560,210 760,120 Q980,40 1180,140 Q1300,180 1400,140 L1400,300 Z"/>
+        <path class="mt-near" d="M0,300 L0,210 Q220,150 420,205 Q640,250 840,195 Q1060,150 1260,210 Q1340,235 1400,215 L1400,300 Z"/>
+      </svg>
+    </div><div class="cards">
+    <article class="card port" tabindex="0" aria-label="After the Nightingale Floors. Tap to turn the card.">
+      <div class="card-inner">
+        <div class="face front">
+          <img class="photo" src="assets/10-nijo-ji-kyoto-0.jpg" width="1200" height="1600" loading="lazy" alt="After the Nightingale Floors">
+          <div class="hanko"><span class="hanko-jp">雅</span></div>
+          <div class="cartouche"><span class="cart-jp">二条城</span></div>
+          <div class="front-foot"><h2 class="title">After the Nightingale Floors</h2><p class="feeling">The boards sang under every step. The design made stealth impossible. Then, just outside, all of this stillness. The contrast is the whole point.</p></div>
+          <div class="seal" aria-hidden="true">裏</div>
+        </div>
+        <div class="face back">
+          <div class="back-head"><span class="back-cart">二条城</span><h3 class="back-title">After the Nightingale Floors</h3></div>
+          <p class="desc">Nijō Castle, built in 1603 as the Kyoto residence of Tokugawa Ieyasu, where shoguns received the daimyō and, on occasion, the emperor. The uguisu-bari corridors of the Ninomaru Palace chirp at every footfall, an architectural alarm against intruders. The garden beyond sits in complete silence. The children asked a hundred questions about the squeaking floors. I tried to imagine being the shogun, listening.</p>
+          <div class="meta"><div class="m-row"><span class="m-k">date</span><span class="m-v">2026 · 06 · 23</span></div><div class="m-row"><span class="m-k">hours</span><span class="m-v">09:00 – 11:00</span></div><div class="m-row"><span class="m-k">place</span><span class="m-v">Nijō Castle, Kyoto</span></div><div class="m-row"><span class="m-k">transit</span><span class="m-v">Karasuma/Tōzai Line → Nijōjō-mae Station</span></div><div class="m-row"><span class="m-k">wonder</span><span class="m-v">⛩️ <span class="dots">●●●●○</span></span></div></div>
+          <div class="seal seal-back" aria-hidden="true">表</div>
+        </div>
+      </div>
+    </article>
+    <article class="card port" tabindex="0" aria-label="The Lane That Makes You Walk Slowly. Tap to turn the card.">
+      <div class="card-inner">
+        <div class="face front">
+          <img class="photo" src="assets/12-gion-lane-0.jpg" width="1200" height="1600" loading="lazy" alt="The Lane That Makes You Walk Slowly">
+          <div class="hanko"><span class="hanko-jp">雅</span></div>
+          <div class="cartouche"><span class="cart-jp">祇園</span></div>
+          <div class="front-foot"><h2 class="title">The Lane That Makes You Walk Slowly</h2><p class="feeling">Something about these streets makes you lower your voice without being asked. Even the boys felt it.</p></div>
+          <div class="seal" aria-hidden="true">裏</div>
+        </div>
+        <div class="face back">
+          <div class="back-head"><span class="back-cart">祇園</span><h3 class="back-title">The Lane That Makes You Walk Slowly</h3></div>
+          <p class="desc">Gion, Kyoto&#x27;s most preserved district, where the stone-flagged lanes narrow until two people must negotiate the passing and the wooden machiya townhouses haven&#x27;t changed in two centuries. The ochaya teahouses still operate by introduction only; the paper lanterns are the same shade of orange they always were. We walked it in the afternoon, the boys a few steps ahead, and didn&#x27;t say much.</p>
+          <div class="meta"><div class="m-row"><span class="m-k">date</span><span class="m-v">2026 · 06 · 23</span></div><div class="m-row"><span class="m-k">hours</span><span class="m-v">13:00 – 15:00</span></div><div class="m-row"><span class="m-k">place</span><span class="m-v">Gion, Kyoto</span></div><div class="m-row"><span class="m-k">transit</span><span class="m-v">Keihan Line → Gion-Shijo Station</span></div><div class="m-row"><span class="m-k">wonder</span><span class="m-v">⛩️ <span class="dots">●●●●●</span></span></div></div>
+          <div class="seal seal-back" aria-hidden="true">表</div>
+        </div>
+      </div>
+    </article>
+    <article class="card port" tabindex="0" aria-label="A Moment on the Shirakawa Bridge. Tap to turn the card.">
+      <div class="card-inner">
+        <div class="face front">
+          <img class="photo" src="assets/11-gion-canal-0.jpg" width="1200" height="1600" loading="lazy" alt="A Moment on the Shirakawa Bridge">
+          <div class="hanko"><span class="hanko-jp">雅</span></div>
+          <div class="cartouche"><span class="cart-jp">白川</span></div>
+          <div class="front-foot"><h2 class="title">A Moment on the Shirakawa Bridge</h2><p class="feeling">The canal was narrow and the willow hadn&#x27;t moved. I took the photo because no one else was going to.</p></div>
+          <div class="seal" aria-hidden="true">裏</div>
+        </div>
+        <div class="face back">
+          <div class="back-head"><span class="back-cart">白川</span><h3 class="back-title">A Moment on the Shirakawa Bridge</h3></div>
+          <p class="desc">The Shirakawa is a slender canal running through the eastern edge of Gion, stone-banked, lined with old machiya townhouses that back right to the water&#x27;s edge, with weeping willows that trail into the current. In the afternoon, when the tour groups are elsewhere, the canal path goes nearly quiet. It looks, from certain angles, exactly like the woodblock prints.</p>
+          <div class="meta"><div class="m-row"><span class="m-k">date</span><span class="m-v">2026 · 06 · 23</span></div><div class="m-row"><span class="m-k">hours</span><span class="m-v">14:00 – 15:00</span></div><div class="m-row"><span class="m-k">place</span><span class="m-v">Shirakawa Canal, Gion, Kyoto</span></div><div class="m-row"><span class="m-k">transit</span><span class="m-v">Keihan Line → Gion-Shijo Station</span></div><div class="m-row"><span class="m-k">wonder</span><span class="m-v">⛩️ <span class="dots">●●●●●</span></span></div></div>
+          <div class="seal seal-back" aria-hidden="true">表</div>
+        </div>
+      </div>
+    </article></div></section>
+
+    <div class="mist" aria-hidden="false">
+      <svg class="kasumi" viewBox="0 0 600 900" preserveAspectRatio="xMidYMid slice"><g><rect x="30" y="70" width="360" height="50" rx="25" opacity="1.0"/><rect x="190" y="150" width="380" height="46" rx="23" opacity="0.82"/><rect x="0" y="244" width="300" height="50" rx="25" opacity="0.9"/><rect x="150" y="330" width="330" height="44" rx="22" opacity="0.7"/><rect x="70" y="560" width="320" height="44" rx="22" opacity="0.7"/><rect x="210" y="648" width="350" height="50" rx="25" opacity="0.9"/><rect x="20" y="742" width="300" height="46" rx="23" opacity="0.82"/><rect x="160" y="826" width="360" height="50" rx="25" opacity="1.0"/></g></svg>
+      <div class="mist-label"><span class="ml-jp">奈良</span><span class="ml-en">Nara</span></div>
+    </div>
+<section class="scene" data-city="Nara" data-jp="奈良">
+    <div class="mountains" aria-hidden="true">
+      <svg viewBox="0 0 1400 300" preserveAspectRatio="none">
+        <path class="mt-far"  d="M0,300 L0,150 Q180,60 360,130 Q560,210 760,120 Q980,40 1180,140 Q1300,180 1400,140 L1400,300 Z"/>
+        <path class="mt-near" d="M0,300 L0,210 Q220,150 420,205 Q640,250 840,195 Q1060,150 1260,210 Q1340,235 1400,215 L1400,300 Z"/>
+      </svg>
+    </div><div class="cards">
+    <article class="card port" tabindex="0" aria-label="The Deer at the Door of the World&#x27;s Largest Wooden Room. Tap to turn the card.">
+      <div class="card-inner">
+        <div class="face front">
+          <img class="photo" src="assets/15-todai-ji-nara-0.jpg" width="1200" height="1600" loading="lazy" alt="The Deer at the Door of the World&#x27;s Largest Wooden Room">
+          <div class="hanko"><span class="hanko-jp">雅</span></div>
+          <div class="cartouche"><span class="cart-jp">東大寺</span></div>
+          <div class="front-foot"><h2 class="title">The Deer at the Door of the World&#x27;s Largest Wooden Room</h2><p class="feeling">A deer walked through the great gate without breaking stride. We took about four steps and understood: this is their park. We are guests.</p></div>
+          <div class="seal" aria-hidden="true">裏</div>
+        </div>
+        <div class="face back">
+          <div class="back-head"><span class="back-cart">東大寺</span><h3 class="back-title">The Deer at the Door of the World&#x27;s Largest Wooden Room</h3></div>
+          <p class="desc">Tōdai-ji and Nara Park: the eighth-century temple that anchors Japan&#x27;s first permanent capital. The Nandaimon great gate is flanked by eight-metre Niō guardians; beyond it, the Daibutsuden houses the 15-metre Vairocana Buddha, the largest bronze statue in Japan. Approximately 1,200 sacred sika deer roam the park as designated national treasures. They are unhurried, untethered, and perfectly aware of what you are carrying.</p>
+          <div class="meta"><div class="m-row"><span class="m-k">date</span><span class="m-v">2026 · 06 · 24</span></div><div class="m-row"><span class="m-k">hours</span><span class="m-v">09:00 – 12:00</span></div><div class="m-row"><span class="m-k">place</span><span class="m-v">Tōdai-ji Temple, Nara</span></div><div class="m-row"><span class="m-k">transit</span><span class="m-v">Kintetsu Nara Line → Kintetsu Nara Station</span></div><div class="m-row"><span class="m-k">wonder</span><span class="m-v">⛩️ <span class="dots">●●●●●</span></span></div></div>
+          <div class="seal seal-back" aria-hidden="true">表</div>
+        </div>
+      </div>
+    </article>
+    <article class="card port" tabindex="0" aria-label="The Hole in the Pillar. Tap to turn the card.">
+      <div class="card-inner">
+        <div class="face front">
+          <img class="photo" src="assets/14-nara-pillar-0.jpg" width="1200" height="1600" loading="lazy" alt="The Hole in the Pillar">
+          <div class="hanko"><span class="hanko-jp">雅</span></div>
+          <div class="cartouche"><span class="cart-jp">大仏の鼻孔</span></div>
+          <div class="front-foot"><h2 class="title">The Hole in the Pillar</h2><p class="feeling">One of the wooden columns inside the Daibutsuden has a hole cut to the exact size of the Great Buddha&#x27;s nostril. Crawling through it is said to bring good fortune. He went first. He fit easily.</p></div>
+          <div class="seal" aria-hidden="true">裏</div>
+        </div>
+        <div class="face back">
+          <div class="back-head"><span class="back-cart">大仏の鼻孔</span><h3 class="back-title">The Hole in the Pillar</h3></div>
+          <p class="desc">Inside the Daibutsuden, the world&#x27;s largest wooden structure, one of the hall&#x27;s columns contains a rectangular opening at its base, dimensioned to match the nostril of the 15-metre Vairocana Buddha. The tradition holds that passing through it brings good fortune in the next life. Small children manage it without difficulty. Adults have been known to require assistance. The queue was mostly children.</p>
+          <div class="meta"><div class="m-row"><span class="m-k">date</span><span class="m-v">2026 · 06 · 24</span></div><div class="m-row"><span class="m-k">hours</span><span class="m-v">09:30 – 10:00</span></div><div class="m-row"><span class="m-k">place</span><span class="m-v">Tōdai-ji, Daibutsuden (Great Buddha Hall)</span></div><div class="m-row"><span class="m-k">transit</span><span class="m-v">Kintetsu Nara Line → Kintetsu Nara Station</span></div><div class="m-row"><span class="m-k">wonder</span><span class="m-v">⛩️ <span class="dots">●●●○○</span></span></div></div>
+          <div class="seal seal-back" aria-hidden="true">表</div>
+        </div>
+      </div>
+    </article>
+    <article class="card port" tabindex="0" aria-label="The Negotiations. Tap to turn the card.">
+      <div class="card-inner">
+        <div class="face front">
+          <img class="photo" src="assets/13-nara-deer-0.jpg" width="1200" height="1600" loading="lazy" alt="The Negotiations">
+          <div class="hanko"><span class="hanko-jp">遊</span></div>
+          <div class="cartouche"><span class="cart-jp">奈良の鹿</span></div>
+          <div class="front-foot"><h2 class="title">The Negotiations</h2><p class="feeling">We had senbei crackers. The deer knew. The terms were entirely the deer&#x27;s.</p></div>
+          <div class="seal" aria-hidden="true">裏</div>
+        </div>
+        <div class="face back">
+          <div class="back-head"><span class="back-cart">奈良の鹿</span><h3 class="back-title">The Negotiations</h3></div>
+          <p class="desc">The sacred sika deer of Nara Park are untethered, unhurried, and perfectly calibrated to the tourist experience after more than a thousand years of proximity. They have been trained over generations to bow in exchange for senbei crackers; they have also learned to nudge, headbutt, and shadow visitors with quiet insistence. The boys found every part of this excellent.</p>
+          <div class="meta"><div class="m-row"><span class="m-k">date</span><span class="m-v">2026 · 06 · 24</span></div><div class="m-row"><span class="m-k">hours</span><span class="m-v">10:30 – 11:00</span></div><div class="m-row"><span class="m-k">place</span><span class="m-v">Nara Park</span></div><div class="m-row"><span class="m-k">transit</span><span class="m-v">Kintetsu Nara Line → Kintetsu Nara Station</span></div><div class="m-row"><span class="m-k">fun</span><span class="m-v">🎮 <span class="dots">●●●●○</span></span></div></div>
+          <div class="seal seal-back" aria-hidden="true">表</div>
+        </div>
+      </div>
+    </article></div></section>
+
+    <div class="mist" aria-hidden="false">
+      <svg class="kasumi" viewBox="0 0 600 900" preserveAspectRatio="xMidYMid slice"><g><rect x="30" y="70" width="360" height="50" rx="25" opacity="1.0"/><rect x="190" y="150" width="380" height="46" rx="23" opacity="0.82"/><rect x="0" y="244" width="300" height="50" rx="25" opacity="0.9"/><rect x="150" y="330" width="330" height="44" rx="22" opacity="0.7"/><rect x="70" y="560" width="320" height="44" rx="22" opacity="0.7"/><rect x="210" y="648" width="350" height="50" rx="25" opacity="0.9"/><rect x="20" y="742" width="300" height="46" rx="23" opacity="0.82"/><rect x="160" y="826" width="360" height="50" rx="25" opacity="1.0"/></g></svg>
+      <div class="mist-label"><span class="ml-jp">京都</span><span class="ml-en">Kyoto</span></div>
+    </div>
+<section class="scene" data-city="Kyoto" data-jp="京都">
+    <div class="mountains" aria-hidden="true">
+      <svg viewBox="0 0 1400 300" preserveAspectRatio="none">
+        <path class="mt-far"  d="M0,300 L0,150 Q180,60 360,130 Q560,210 760,120 Q980,40 1180,140 Q1300,180 1400,140 L1400,300 Z"/>
+        <path class="mt-near" d="M0,300 L0,210 Q220,150 420,205 Q640,250 840,195 Q1060,150 1260,210 Q1340,235 1400,215 L1400,300 Z"/>
+      </svg>
+    </div><div class="cards">
+    <article class="card port" tabindex="0" aria-label="Ten Thousand Gates and No Summit. Tap to turn the card.">
+      <div class="card-inner">
+        <div class="face front">
+          <img class="photo" src="assets/16-fushimi-nari-0.jpg" width="1200" height="1600" loading="lazy" alt="Ten Thousand Gates and No Summit">
+          <div class="hanko"><span class="hanko-jp">雅</span></div>
+          <div class="cartouche"><span class="cart-jp">伏見稲荷</span></div>
+          <div class="front-foot"><h2 class="title">Ten Thousand Gates and No Summit</h2><p class="feeling">We never reached the top. We didn&#x27;t need to. The vermilion simply kept going, and so did we, until we didn&#x27;t.</p></div>
+          <div class="seal" aria-hidden="true">裏</div>
+        </div>
+        <div class="face back">
+          <div class="back-head"><span class="back-cart">伏見稲荷</span><h3 class="back-title">Ten Thousand Gates and No Summit</h3></div>
+          <p class="desc">Fushimi Inari Taisha and its senbon torii: thousands of vermilion gates winding up the mountain, each one donated, the donor&#x27;s name carved on the far side. The boys tried to read the columns of kanji the whole way up. The gates go on for four kilometres of mountain path; most visitors turn back at the first plateau, which is about right.</p>
+          <div class="meta"><div class="m-row"><span class="m-k">date</span><span class="m-v">2026 · 06 · 24</span></div><div class="m-row"><span class="m-k">hours</span><span class="m-v">14:30 – 15:30</span></div><div class="m-row"><span class="m-k">place</span><span class="m-v">Fushimi Inari Taisha, Kyoto</span></div><div class="m-row"><span class="m-k">transit</span><span class="m-v">JR Nara Line → Inari Station</span></div><div class="m-row"><span class="m-k">wonder</span><span class="m-v">⛩️ <span class="dots">●●●●●</span></span></div></div>
+          <div class="seal seal-back" aria-hidden="true">表</div>
+        </div>
+      </div>
+    </article>
+    <article class="card port" tabindex="0" aria-label="The Armour That Was Made for a Person. Tap to turn the card.">
+      <div class="card-inner">
+        <div class="face front">
+          <img class="photo" src="assets/17-samurai-0.jpg" width="1200" height="1600" loading="lazy" alt="The Armour That Was Made for a Person">
+          <div class="hanko"><span class="hanko-jp">雅</span></div>
+          <div class="cartouche"><span class="cart-jp">侍の間</span></div>
+          <div class="front-foot"><h2 class="title">The Armour That Was Made for a Person</h2><p class="feeling">The helmet was taller than the youngest. We stood in front of something designed to be worn into battle, not kept behind glass, and tried to imagine the person inside it.</p></div>
+          <div class="seal" aria-hidden="true">裏</div>
+        </div>
+        <div class="face back">
+          <div class="back-head"><span class="back-cart">侍の間</span><h3 class="back-title">The Armour That Was Made for a Person</h3></div>
+          <p class="desc">A museum of samurai armour and weapons, full sets displayed at human height, dramatically lit against dark backdrops, the gold lacework precise and unexpected. The boys held their hands behind their backs without being asked. Something about the armour demanded it. The placard noted the set was made for a specific person, for a specific campaign. That detail stayed with us longer than anything else.</p>
+          <div class="meta"><div class="m-row"><span class="m-k">date</span><span class="m-v">2026 · 06 · 25</span></div><div class="m-row"><span class="m-k">hours</span><span class="m-v">10:00 – 11:15</span></div><div class="m-row"><span class="m-k">place</span><span class="m-v">Kyoto Ninja &amp; Samurai Museum</span></div><div class="m-row"><span class="m-k">transit</span><span class="m-v">Karasuma Station</span></div><div class="m-row"><span class="m-k">wonder</span><span class="m-v">⛩️ <span class="dots">●●●●○</span></span></div></div>
+          <div class="seal seal-back" aria-hidden="true">表</div>
+        </div>
+      </div>
+    </article>
+    <article class="card port" tabindex="0" aria-label="The Art of Not Being Seen. Tap to turn the card.">
+      <div class="card-inner">
+        <div class="face front">
+          <img class="photo" src="assets/18-ninja-museum-0.jpg" width="1200" height="1600" loading="lazy" alt="The Art of Not Being Seen">
+          <div class="hanko"><span class="hanko-jp">遊</span></div>
+          <div class="cartouche"><span class="cart-jp">忍者の術</span></div>
+          <div class="front-foot"><h2 class="title">The Art of Not Being Seen</h2><p class="feeling">The guide explained that a ninja&#x27;s first skill was not combat, it was disappearing. The boys absorbed this and immediately applied it in the gift shop.</p></div>
+          <div class="seal" aria-hidden="true">裏</div>
+        </div>
+        <div class="face back">
+          <div class="back-head"><span class="back-cart">忍者の術</span><h3 class="back-title">The Art of Not Being Seen</h3></div>
+          <p class="desc">The Kyoto Ninja &amp; Samurai Museum&#x27;s second half belongs to the shinobi, the covert agents of feudal Japan. The displays cover concealment, communication, and movement through restricted spaces, with throwing stars behind glass and a reconstruction of a ninja&#x27;s hidden quarters. The costumed guides demonstrate techniques and invite participation. Everyone participated.</p>
+          <div class="meta"><div class="m-row"><span class="m-k">date</span><span class="m-v">2026 · 06 · 25</span></div><div class="m-row"><span class="m-k">hours</span><span class="m-v">10:00 – 11:15</span></div><div class="m-row"><span class="m-k">place</span><span class="m-v">Kyoto Ninja &amp; Samurai Museum</span></div><div class="m-row"><span class="m-k">transit</span><span class="m-v">Karasuma Station</span></div><div class="m-row"><span class="m-k">fun</span><span class="m-v">🎮 <span class="dots">●●●●●</span></span></div></div>
+          <div class="seal seal-back" aria-hidden="true">表</div>
+        </div>
+      </div>
+    </article>
+    <article class="card port" tabindex="0" aria-label="Two Daimyo, Briefly. Tap to turn the card.">
+      <div class="card-inner">
+        <div class="face front">
+          <img class="photo" src="assets/19-samurai-0.jpg" width="1200" height="1600" loading="lazy" alt="Two Daimyo, Briefly">
+          <div class="hanko"><span class="hanko-jp">遊</span></div>
+          <div class="cartouche"><span class="cart-jp">着物体験</span></div>
+          <div class="front-foot"><h2 class="title">Two Daimyo, Briefly</h2><p class="feeling">The elder fit the kimono. The younger posed with complete conviction regardless.</p></div>
+          <div class="seal" aria-hidden="true">裏</div>
+        </div>
+        <div class="face back">
+          <div class="back-head"><span class="back-cart">着物体験</span><h3 class="back-title">Two Daimyo, Briefly</h3></div>
+          <p class="desc">The traditional costume experience: visitors can dress in period garments, from elaborate court kimono to warrior haori jackets, and be photographed against the display. It takes longer than expected and produces photographs of unlikely dignity, immediately undermined by the modern trainers visible at the hem. The boys were entirely serious about the whole thing.</p>
+          <div class="meta"><div class="m-row"><span class="m-k">date</span><span class="m-v">2026 · 06 · 25</span></div><div class="m-row"><span class="m-k">hours</span><span class="m-v">10:00 – 11:15</span></div><div class="m-row"><span class="m-k">place</span><span class="m-v">Kyoto Ninja &amp; Samurai Museum</span></div><div class="m-row"><span class="m-k">transit</span><span class="m-v">Karasuma Station</span></div><div class="m-row"><span class="m-k">fun</span><span class="m-v">🎮 <span class="dots">●●●●○</span></span></div></div>
+          <div class="seal seal-back" aria-hidden="true">表</div>
+        </div>
+      </div>
+    </article>
+    <article class="card port" tabindex="0" aria-label="Row D and Row E, Seat Reserved. Tap to turn the card.">
+      <div class="card-inner">
+        <div class="face front">
+          <img class="photo" src="assets/21-shinkansen-0.jpg" width="1200" height="1600" loading="lazy" alt="Row D and Row E, Seat Reserved">
+          <div class="hanko"><span class="hanko-jp">力</span></div>
+          <div class="cartouche"><span class="cart-jp">新幹線</span></div>
+          <div class="front-foot"><h2 class="title">Row D and Row E, Seat Reserved</h2><p class="feeling">We had reserved the right side of the train specifically to see Mount Fuji. There was a typhoon. We saw cloud. The train was still the fastest thing we had ever been on and nobody complained.</p></div>
+          <div class="seal" aria-hidden="true">裏</div>
+        </div>
+        <div class="face back">
+          <div class="back-head"><span class="back-cart">新幹線</span><h3 class="back-title">Row D and Row E, Seat Reserved</h3></div>
+          <p class="desc">The Nozomi shinkansen covers the 513 kilometres between Kyoto and Tokyo in roughly two hours and fifteen minutes. At cruising speed the countryside moves in layers, near things a blur, far things a slow pan, the geometry of rice paddies and towns and then nothing but cloud. The boys pressed against the window for the whole journey. Fuji did not appear. The speed was enough.</p>
+          <div class="meta"><div class="m-row"><span class="m-k">date</span><span class="m-v">2026 · 06 · 25</span></div><div class="m-row"><span class="m-k">hours</span><span class="m-v">13:10 – 15:25</span></div><div class="m-row"><span class="m-k">place</span><span class="m-v">Nozomi Shinkansen, Kyoto → Tokyo</span></div><div class="m-row"><span class="m-k">transit</span><span class="m-v">JR Shinkansen → Kyoto Station</span></div><div class="m-row"><span class="m-k">intensity</span><span class="m-v">🌀 <span class="dots">●●●●○</span></span></div></div>
+          <div class="seal seal-back" aria-hidden="true">表</div>
+        </div>
+      </div>
+    </article></div></section>
+
+    <div class="mist" aria-hidden="false">
+      <svg class="kasumi" viewBox="0 0 600 900" preserveAspectRatio="xMidYMid slice"><g><rect x="30" y="70" width="360" height="50" rx="25" opacity="1.0"/><rect x="190" y="150" width="380" height="46" rx="23" opacity="0.82"/><rect x="0" y="244" width="300" height="50" rx="25" opacity="0.9"/><rect x="150" y="330" width="330" height="44" rx="22" opacity="0.7"/><rect x="70" y="560" width="320" height="44" rx="22" opacity="0.7"/><rect x="210" y="648" width="350" height="50" rx="25" opacity="0.9"/><rect x="20" y="742" width="300" height="46" rx="23" opacity="0.82"/><rect x="160" y="826" width="360" height="50" rx="25" opacity="1.0"/></g></svg>
+      <div class="mist-label"><span class="ml-jp">東京</span><span class="ml-en">Tokyo</span></div>
+    </div>
+<section class="scene" data-city="Tokyo" data-jp="東京">
+    <div class="mountains" aria-hidden="true">
+      <svg viewBox="0 0 1400 300" preserveAspectRatio="none">
+        <path class="mt-far"  d="M0,300 L0,150 Q180,60 360,130 Q560,210 760,120 Q980,40 1180,140 Q1300,180 1400,140 L1400,300 Z"/>
+        <path class="mt-near" d="M0,300 L0,210 Q220,150 420,205 Q640,250 840,195 Q1060,150 1260,210 Q1340,235 1400,215 L1400,300 Z"/>
+      </svg>
+    </div><div class="cards">
+    <article class="card port" tabindex="0" aria-label="The Fortune You Did Not Ask For. Tap to turn the card.">
+      <div class="card-inner">
+        <div class="face front">
+          <img class="photo" src="assets/20-tokyo-senjo-0.jpg" width="1200" height="1600" loading="lazy" alt="The Fortune You Did Not Ask For">
+          <div class="hanko"><span class="hanko-jp">雅</span></div>
+          <div class="cartouche"><span class="cart-jp">浅草寺</span></div>
+          <div class="front-foot"><h2 class="title">The Fortune You Did Not Ask For</h2><p class="feeling">You shake the tube, a stick falls out, you match the number, you unfold the paper. Bad fortune. You tie it to the wire rack and leave it there. This seems right.</p></div>
+          <div class="seal" aria-hidden="true">裏</div>
+        </div>
+        <div class="face back">
+          <div class="back-head"><span class="back-cart">浅草寺</span><h3 class="back-title">The Fortune You Did Not Ask For</h3></div>
+          <p class="desc">Sensō-ji in Asakusa is Tokyo&#x27;s oldest temple, founded in 628 AD, and the city&#x27;s most visited site. The Kaminarimon Thunder Gate opens onto the Nakamise-dōri shopping street; beyond it, the main hall where visitors draw omikuji fortune slips each day. A bad fortune tied to the rack is a bad fortune left behind. The boys drew mixed results. We left them all there, in the rain.</p>
+          <div class="meta"><div class="m-row"><span class="m-k">date</span><span class="m-v">2026 · 06 · 25</span></div><div class="m-row"><span class="m-k">hours</span><span class="m-v">17:00 – 18:30</span></div><div class="m-row"><span class="m-k">place</span><span class="m-v">Sensō-ji, Asakusa, Tokyo</span></div><div class="m-row"><span class="m-k">transit</span><span class="m-v">Tokyo Metro Ginza Line → Tawaramachi Station</span></div><div class="m-row"><span class="m-k">wonder</span><span class="m-v">⛩️ <span class="dots">●●●○○</span></span></div></div>
+          <div class="seal seal-back" aria-hidden="true">表</div>
+        </div>
+      </div>
+    </article>
+    <article class="card port" tabindex="0" aria-label="The Numbers You Shake Out. Tap to turn the card.">
+      <div class="card-inner">
+        <div class="face front">
+          <img class="photo" src="assets/22-senso-ji-fortune-0.jpg" width="1200" height="1600" loading="lazy" alt="The Numbers You Shake Out">
+          <div class="hanko"><span class="hanko-jp">雅</span></div>
+          <div class="cartouche"><span class="cart-jp">おみくじ</span></div>
+          <div class="front-foot"><h2 class="title">The Numbers You Shake Out</h2><p class="feeling">You shake the cylinder until a numbered stick falls out. You find the matching drawer. You unfold the paper. The crowd around you is doing the same thing, some faces pleased, some not. The rain makes the lanterns blur.</p></div>
+          <div class="seal" aria-hidden="true">裏</div>
+        </div>
+        <div class="face back">
+          <div class="back-head"><span class="back-cart">おみくじ</span><h3 class="back-title">The Numbers You Shake Out</h3></div>
+          <p class="desc">Omikuji at Sensō-ji: visitors shake a hexagonal wooden cylinder until a numbered bamboo stick emerges, then match the number to one of one hundred wooden drawers, each containing a fortune slip. Dai-kichi is great blessing. Dai-kyo is great curse. A bad result tied to the wire rack is a bad result left behind, its burden transferred to the temple. The temple, having stood since 628, can manage it.</p>
+          <div class="meta"><div class="m-row"><span class="m-k">date</span><span class="m-v">2026 · 06 · 25</span></div><div class="m-row"><span class="m-k">hours</span><span class="m-v">17:30 – 18:00</span></div><div class="m-row"><span class="m-k">place</span><span class="m-v">Sensō-ji, Asakusa, Tokyo</span></div><div class="m-row"><span class="m-k">transit</span><span class="m-v">Tokyo Metro Ginza Line → Tawaramachi Station</span></div><div class="m-row"><span class="m-k">wonder</span><span class="m-v">⛩️ <span class="dots">●●●●○</span></span></div></div>
+          <div class="seal seal-back" aria-hidden="true">表</div>
+        </div>
+      </div>
+    </article>
+    <article class="card port" tabindex="0" aria-label="The Merchant Who Ranked Last. Tap to turn the card.">
+      <div class="card-inner">
+        <div class="face front">
+          <img class="photo" src="assets/23-edo-museum-0.jpg" width="1200" height="1600" loading="lazy" alt="The Merchant Who Ranked Last">
+          <div class="hanko"><span class="hanko-jp">雅</span></div>
+          <div class="cartouche"><span class="cart-jp">江戸の暮らし</span></div>
+          <div class="front-foot"><h2 class="title">The Merchant Who Ranked Last</h2><p class="feeling">The living room doubled as the place where business was done. The merchant built his whole life in one room, and the Confucian order ranked him below the farmer, below the craftsman, just above nobody. He did not seem to mind. He was, by all evidence, doing fine.</p></div>
+          <div class="seal" aria-hidden="true">裏</div>
+        </div>
+        <div class="face back">
+          <div class="back-head"><span class="back-cart">江戸の暮らし</span><h3 class="back-title">The Merchant Who Ranked Last</h3></div>
+          <p class="desc">The Fukagawa Edo Museum reconstructs a section of the Fukagawa waterfront district as it existed around 1840, at 1:1 scale indoors. Tenement houses, a rice merchant, a boatman&#x27;s lodge with its low wooden ceiling and the tools of the river trade hung on the wall. In the Edo hierarchy, merchants ranked fourth in the Confucian order below samurai, farmer, and artisan, on the theory that they produced nothing themselves. The museums do not dwell on the irony that most of them grew rich anyway.</p>
+          <div class="meta"><div class="m-row"><span class="m-k">date</span><span class="m-v">2026 · 06 · 26</span></div><div class="m-row"><span class="m-k">hours</span><span class="m-v">10:00 – 11:30</span></div><div class="m-row"><span class="m-k">place</span><span class="m-v">Fukagawa Edo Museum, Tokyo</span></div><div class="m-row"><span class="m-k">transit</span><span class="m-v">Toei Oedo Line → Morishita Station</span></div><div class="m-row"><span class="m-k">wonder</span><span class="m-v">⛩️ <span class="dots">●●●●○</span></span></div></div>
+          <div class="seal seal-back" aria-hidden="true">表</div>
+        </div>
+      </div>
+    </article>
+    <article class="card port" tabindex="0" aria-label="Floor 31 Was Enough. Tap to turn the card.">
+      <div class="card-inner">
+        <div class="face front">
+          <img class="photo" src="assets/24-skytree-0.jpg" width="1200" height="1600" loading="lazy" alt="Floor 31 Was Enough">
+          <div class="hanko"><span class="hanko-jp">力</span></div>
+          <div class="cartouche"><span class="cart-jp">東京スカイツリー</span></div>
+          <div class="front-foot"><h2 class="title">Floor 31 Was Enough</h2><p class="feeling">The room moved. Not dramatically, not dangerously, just once, and everyone knew what it was. The announcement came quickly. They stopped us at floor 31. The typhoon had taken the view anyway. Floor 31 was enough.</p></div>
+          <div class="seal" aria-hidden="true">裏</div>
+        </div>
+        <div class="face back">
+          <div class="back-head"><span class="back-cart">東京スカイツリー</span><h3 class="back-title">Floor 31 Was Enough</h3></div>
+          <p class="desc">Tokyo Skytree at 634 metres is the tallest structure in Japan and the world&#x27;s second tallest tower. The observation deck sits at 450 metres on a clear day looking out across the Kanto plain. This was not a clear day: typhoon Shanshan had grounded the view in grey, and a seismic event during the visit brought the lifts to a halt at floor 31 per safety protocol. The tower sways by design. The earthquake was additional. The boys thought this was fine.</p>
+          <div class="meta"><div class="m-row"><span class="m-k">date</span><span class="m-v">2026 · 06 · 26</span></div><div class="m-row"><span class="m-k">hours</span><span class="m-v">13:00 – 14:00</span></div><div class="m-row"><span class="m-k">place</span><span class="m-v">Tokyo Skytree, Oshiage</span></div><div class="m-row"><span class="m-k">transit</span><span class="m-v">Tobu Skytree Line / Hanzōmon Line → Oshiage Station</span></div><div class="m-row"><span class="m-k">intensity</span><span class="m-v">🌀 <span class="dots">●●●●●</span></span></div></div>
+          <div class="seal seal-back" aria-hidden="true">表</div>
+        </div>
+      </div>
+    </article>
+    <article class="card port" tabindex="0" aria-label="Godzilla Was Indoors. Tap to turn the card.">
+      <div class="card-inner">
+        <div class="face front">
+          <img class="photo" src="assets/25-shibuya-0.jpg" width="1200" height="1600" loading="lazy" alt="Godzilla Was Indoors">
+          <div class="hanko"><span class="hanko-jp">力</span></div>
+          <div class="cartouche"><span class="cart-jp">渋谷</span></div>
+          <div class="front-foot"><h2 class="title">Godzilla Was Indoors</h2><p class="feeling">We went to check Montbell. We stayed for the cyber floor: Pokemon, Nintendo, Capcom, all in the same building, one escalator apart. Then Godzilla appeared, mid-mall, enormous, unbothered. Shibuya does not prepare you for Shibuya.</p></div>
+          <div class="seal" aria-hidden="true">裏</div>
+        </div>
+        <div class="face back">
+          <div class="back-head"><span class="back-cart">渋谷</span><h3 class="back-title">Godzilla Was Indoors</h3></div>
+          <p class="desc">Shibuya is where Japanese commercial culture compresses itself into the smallest possible space across the largest possible number of floors. The Scramble Crossing outside is the famous image; the buildings around it are the real phenomenon, stacked with specialist retail arranged by subject matter, each floor its own world. Montbell occupies the outdoor equipment floors. The gaming and anime floors above it form what might be described as a very efficient way to spend the afternoon. Godzilla stands near the entrance to one of the larger complexes, life-size, and nobody seems to think this requires an explanation.</p>
+          <div class="meta"><div class="m-row"><span class="m-k">date</span><span class="m-v">2026 · 06 · 26</span></div><div class="m-row"><span class="m-k">hours</span><span class="m-v">14:00 – 15:00</span></div><div class="m-row"><span class="m-k">place</span><span class="m-v">Shibuya, Tokyo</span></div><div class="m-row"><span class="m-k">transit</span><span class="m-v">JR Yamanote Line → Shibuya Station</span></div><div class="m-row"><span class="m-k">intensity</span><span class="m-v">🌀 <span class="dots">●●●●●</span></span></div></div>
+          <div class="seal seal-back" aria-hidden="true">表</div>
+        </div>
+      </div>
+    </article></div></section>
+
+  <section class="scene plate end">
+    <div class="frontis">
+      <div class="fr-cart end-cart"><span>結</span></div>
+      <h1 class="fr-title">To be continued</h1>
+      <p class="fr-note">26 cards of perhaps one hundred. The rest of the scroll is being written.</p>
+    </div>
+  </section></div>
+<div id="bar"></div>
+<nav id="rail" aria-label="Journey"></nav>
+<button class="nav" id="prev" aria-label="Back">‹</button>
+<button class="nav" id="next" aria-label="Forward">›</button>
+<script>
+const track=document.getElementById('track'),bar=document.getElementById('bar'),rail=document.getElementById('rail');
+track.addEventListener('wheel',e=>{if(Math.abs(e.deltaY)>Math.abs(e.deltaX)){track.scrollLeft+=e.deltaY;e.preventDefault();}},{passive:false});
+document.querySelectorAll('.card').forEach(c=>{const f=()=>c.classList.toggle('flipped');
+  c.addEventListener('click',f);
+  c.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();f();}});});
+const segScenes=[...document.querySelectorAll('.scene[data-city]:not(.plate)')];
+const segs=[];const seen={};
+segScenes.forEach(sc=>{const city=sc.dataset.city;seen[city]=(seen[city]||0)+1;
+  const jp=sc.dataset.jp||'';const en=seen[city]>1?city+' '+'Ⅰ Ⅱ Ⅲ Ⅳ'.split(' ')[seen[city]-1]:city;
+  const b=document.createElement('button');b.className='seg';b.innerHTML='<span class="jp">'+jp+'</span>'+en;
+  b.addEventListener('click',()=>track.scrollTo({left:sc.offsetLeft-60,behavior:'smooth'}));
+  rail.appendChild(b);segs.push({el:b,sc});});
+const stops=[...document.querySelectorAll('.scene,.mist')];
+function go(d){const x=track.scrollLeft+10;const pts=stops.map(s=>s.offsetLeft).sort((a,b)=>a-b);
+  let t=d>0?pts.find(p=>p>x+40):[...pts].reverse().find(p=>p<x-40);
+  if(t==null)t=d>0?track.scrollWidth:0;track.scrollTo({left:Math.max(0,t-60),behavior:'smooth'});}
+document.getElementById('next').onclick=()=>go(1);
+document.getElementById('prev').onclick=()=>go(-1);
+addEventListener('keydown',e=>{if(e.key==='ArrowRight')go(1);if(e.key==='ArrowLeft')go(-1);});
+function sync(){const m=track.scrollWidth-track.clientWidth;bar.style.width=(m>0?track.scrollLeft/m*100:0)+'%';
+  const x=track.scrollLeft+track.clientWidth*0.4;let a=0;segs.forEach((s,i)=>{if(s.sc.offsetLeft<=x)a=i;});
+  segs.forEach((s,i)=>s.el.classList.toggle('active',i===a));}
+track.addEventListener('scroll',sync,{passive:true});addEventListener('resize',sync);sync();
+let hid=false;const fade=()=>{if(hid)return;hid=true;const h=document.getElementById('hint');if(h){h.style.opacity=0;setTimeout(()=>h.remove(),700);}};
+track.addEventListener('scroll',fade,{passive:true});setTimeout(fade,6000);
+</script>
+</body>
+</html>

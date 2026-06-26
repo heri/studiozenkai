@@ -84,6 +84,14 @@ FONTS = {
 # Fallback Japanese city labels; override per-trip in trip.toml [cities].
 CITY_JP_DEFAULT = {"Osaka": "大阪", "Kyoto": "京都", "Nara": "奈良", "Tokyo": "東京"}
 
+# Category metadata: key -> (emoji, kanji stamp, rating label)
+CATEGORIES = {
+    "food":      ("🍜", "食", "taste"),
+    "heritage":  ("⛩️", "雅", "wonder"),
+    "play":      ("🎮", "遊", "fun"),
+    "intensity": ("🌀", "力", "intensity"),
+}
+
 
 # --------------------------------------------------------------------------- #
 # PARSING                                                                      #
@@ -224,14 +232,18 @@ body{overflow:hidden}
 .ml-en{font-family:var(--mono);font-size:11px;letter-spacing:.42em;color:var(--ink-soft);
   text-transform:uppercase;writing-mode:vertical-rl}
 
-.card{position:relative;flex:0 0 auto;perspective:1600px;cursor:pointer;outline:none;white-space:normal}
+.card{position:relative;flex:0 0 auto;cursor:pointer;outline:none;white-space:normal;
+  box-shadow:0 28px 60px -28px rgba(8,18,30,.7),0 4px 14px -6px rgba(8,18,30,.5)}
 .card.port{width:clamp(280px,26vw,360px);height:clamp(420px,62vh,560px)}
 .card.land{width:clamp(380px,40vw,560px);height:clamp(300px,46vh,420px)}
-.card-inner{position:relative;width:100%;height:100%;transform-style:preserve-3d;
-  transition:transform .85s cubic-bezier(.4,.05,.2,1);will-change:transform;
-  box-shadow:0 28px 60px -28px rgba(8,18,30,.7),0 4px 14px -6px rgba(8,18,30,.5)}
-.card.flipped .card-inner{transform:rotateY(180deg)}
-.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:2px;overflow:hidden}
+.card-inner{position:relative;width:100%;height:100%;perspective:1600px}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;
+  border-radius:2px;overflow:hidden;will-change:transform;
+  transition:transform .85s cubic-bezier(.4,.05,.2,1),visibility 0s}
+.card.flipped .front{transform:rotateY(-180deg);visibility:hidden;
+  transition:transform .85s cubic-bezier(.4,.05,.2,1),visibility 0s .425s}
+.card.flipped .back{transform:rotateY(0deg);visibility:visible;
+  transition:transform .85s cubic-bezier(.4,.05,.2,1),visibility 0s}
 
 .front{background:#0c1722;border:1px solid rgba(255,255,255,.10)}
 .photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
@@ -253,9 +265,14 @@ body{overflow:hidden}
   display:flex;align-items:center;justify-content:center;font-family:var(--mincho);font-size:15px;
   box-shadow:0 2px 8px rgba(0,0,0,.35);transition:transform .3s,background .3s}
 .card:hover .seal,.card:focus-visible .seal{transform:scale(1.12);background:var(--vermilion)}
+.hanko{position:absolute;top:14px;left:14px;z-index:3;background:rgba(178,58,46,.68);
+  padding:8px 7px 10px;box-shadow:0 4px 12px -6px rgba(0,0,0,.55)}
+.hanko-jp{font-family:var(--mincho);font-weight:700;color:var(--washi-2);font-size:15px;
+  writing-mode:vertical-rl;letter-spacing:.16em;line-height:1.1;display:block}
 
-.back{transform:rotateY(180deg);border:1px solid var(--washi-edge);
-  padding:clamp(22px,2.4vw,30px);display:flex;flex-direction:column;
+.back{transform:rotateY(180deg);visibility:hidden;
+  transition:transform .85s cubic-bezier(.4,.05,.2,1),visibility 0s .425s;
+  border:1px solid var(--washi-edge);padding:clamp(22px,2.4vw,30px);display:flex;flex-direction:column;
   background:radial-gradient(120% 80% at 20% 0%,var(--washi-2),var(--washi) 60%,var(--washi-edge) 100%)}
 .back::before{content:"";position:absolute;inset:10px;border:1px solid rgba(134,39,29,.28);pointer-events:none}
 .back-head{display:flex;align-items:baseline;gap:12px;border-bottom:2px solid var(--vermilion-deep);
@@ -269,6 +286,7 @@ body{overflow:hidden}
 .m-row{display:grid;grid-template-columns:5.2em 1fr;gap:10px;align-items:baseline}
 .m-k{font-family:var(--mono);font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
 .m-v{font-family:var(--mono);font-size:12px;color:var(--sumi);line-height:1.35}
+.dots{color:var(--vermilion);letter-spacing:.06em}
 .seal-back{border-color:var(--vermilion-deep);color:var(--vermilion-deep);background:transparent}
 
 .plate{align-items:center}
@@ -340,6 +358,22 @@ def render_card(a):
         photo = ""
         front_cls = "face front no-photo"
 
+    # Category stamp (front, top-left) and rating row (back, ledger)
+    cat_key = str(a.get("category", "")).lower()
+    cat_data = CATEGORIES.get(cat_key)
+    hanko_html = ""
+    rating_html = ""
+    if cat_data:
+        emoji, kanji, label = cat_data
+        hanko_html = '<div class="hanko"><span class="hanko-jp">%s</span></div>' % kanji
+        raw_rating = a.get("rating")
+        if raw_rating is not None:
+            filled = max(0, min(int(raw_rating), 5))
+            dots = "●" * filled + "○" * (5 - filled)
+            rating_html = ('<div class="m-row"><span class="m-k">%s</span>'
+                           '<span class="m-v">%s <span class="dots">%s</span></span></div>'
+                           % (label, emoji, dots))
+
     meta_pairs = [
         ("date", fmt_date(a.get("start"))),
         ("hours", fmt_hours(a.get("start"), a.get("end"))),
@@ -349,6 +383,7 @@ def render_card(a):
     meta_rows = "".join(
         '<div class="m-row"><span class="m-k">%s</span><span class="m-v">%s</span></div>' % (k, v)
         for k, v in meta_pairs if v)
+    meta_rows += rating_html
 
     feeling_html = '<p class="feeling">%s</p>' % feeling if feeling else ""
 
@@ -356,6 +391,7 @@ def render_card(a):
     <article class="card %s" tabindex="0" aria-label="%s. Tap to turn the card.">
       <div class="card-inner">
         <div class="%s">
+          %s
           %s
           <div class="cartouche"><span class="cart-jp">%s</span></div>
           <div class="front-foot"><h2 class="title">%s</h2>%s</div>
@@ -368,8 +404,9 @@ def render_card(a):
           <div class="seal seal-back" aria-hidden="true">表</div>
         </div>
       </div>
-    </article>""" % (orient, title, front_cls, photo, esc(cartouche), title,
-                     feeling_html, esc(cartouche), title, desc, meta_rows)
+    </article>""" % (orient, title, front_cls, photo, hanko_html,
+                     esc(cartouche), title, feeling_html,
+                     esc(cartouche), title, desc, meta_rows)
 
 
 KASUMI_RECTS = [
@@ -417,7 +454,8 @@ def render_frontis(trip):
                    esc(trip.get("subtitle", "")), esc(trip.get("intro", "")))
 
 
-def render_end(trip):
+def render_end(trip, count):
+    note = trip.get("end_note", "").format(count=count)
     return """
   <section class="scene plate end">
     <div class="frontis">
@@ -426,7 +464,7 @@ def render_end(trip):
       <p class="fr-note">%s</p>
     </div>
   </section>""" % (esc(trip.get("end_seal", "結")), esc(trip.get("end_title", "To be continued")),
-                   esc(trip.get("end_note", "")))
+                   esc(note))
 
 
 def render_page(trip, body):
@@ -535,7 +573,7 @@ def main():
             prev_city = city
         scene_cards.append(render_card(a))
     flush(prev_city)
-    parts.append(render_end(trip))
+    parts.append(render_end(trip, len(acts)))
 
     html_out = render_page(trip, "\n".join(parts))
     out_file = os.path.join(DIST, "index.html")

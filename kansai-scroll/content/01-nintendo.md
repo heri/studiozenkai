@@ -10,6 +10,6 @@ title = "The Room Where Everything Was Life-Size"
 place = "Nintendo Osaka, Grand Front Osaka"
 transit = "JR Osaka Station, North Exit"
 picture = "pictures/IMG_7785.JPG"
-personal = "Twenty years of pixels, suddenly at eye level. Neither of them spoke for a full ten seconds. That is the most concentrated silence this family has ever produced."
+personal = "Ten years of pixels, suddenly at eye level. Neither of them spoke for a full ten seconds. That is the most concentrated silence this family has ever produced."
 description = "Nintendo Osaka at Grand Front Osaka is Japan's first full-scale Nintendo flagship store. The entrance opens onto a floor of characters rendered at human height: a Piranha Plant taller than both boys, a Mario universe in three dimensions that refuses to be modest. We had reserved timed-entry slots a month in advance. Worth every click."
 +++

@@ -3,14 +3,14 @@
 build.py - generate "A Kansai Scroll" (a meisho-e horizontal handscroll travelogue)
 from a folder of TOML-front-matter activity files.
 
-    python build.py            # build into ./dist
-    python build.py --serve    # build, then serve ./dist at http://localhost:8000
+    python build.py            # build into ../kansai  (repo's deployed folder)
+    python build.py --serve    # build, then serve ../kansai at http://localhost:8000
 
 Layout it expects (all relative to this file):
     trip.toml          site-level config (title, intro, city JP names, end plate)
     content/*.md       one file per activity, TOML front-matter between +++ fences
     pictures/          source photos referenced by `picture` / `pictures`
-    -> dist/index.html + dist/assets/   (this is what you deploy to GitHub Pages)
+    -> ../kansai/index.html + ../kansai/assets/   (served at studiozenkai.com/kansai/)
 
 ACTIVITY SCHEMA (front-matter keys)
     required:  title, start, city
@@ -49,7 +49,7 @@ except Exception:
 ROOT = os.path.dirname(os.path.abspath(__file__))
 CONTENT_DIR = os.path.join(ROOT, "content")
 PICTURES_DIR = os.path.join(ROOT, "pictures")
-DIST = os.path.join(ROOT, "dist")
+DIST = os.path.join(ROOT, "..", "kansai")
 ASSETS = os.path.join(DIST, "assets")
 MAX_EDGE = 1600          # longest image edge in px (keeps GitHub Pages happy)
 JPEG_QUALITY = 82
@@ -358,7 +358,7 @@ def render_card(a):
     desc = esc(a.get("description")) or "<span class='muted'>—</span>"
 
     if hero:
-        photo = ('<img class="photo" src="%s" width="%d" height="%d" loading="lazy" '
+        photo = ('<img class="photo" data-src="%s" width="%d" height="%d" '
                  'alt="%s">') % (hero[0], hero[1], hero[2], title)
         front_cls = "face front"
     else:
@@ -530,6 +530,7 @@ function sync(){const m=track.scrollWidth-track.clientWidth;bar.style.width=(m>0
 track.addEventListener('scroll',sync,{passive:true});addEventListener('resize',sync);sync();
 let hid=false;const fade=()=>{if(hid)return;hid=true;const h=document.getElementById('hint');if(h){h.style.opacity=0;setTimeout(()=>h.remove(),700);}};
 track.addEventListener('scroll',fade,{passive:true});setTimeout(fade,6000);
+(function(){const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){const img=e.target;img.src=img.dataset.src;io.unobserve(img);}});},{root:track,rootMargin:'0px 800px 0px 400px',threshold:0});document.querySelectorAll('.photo[data-src]').forEach(img=>io.observe(img));})();
 """
 
 

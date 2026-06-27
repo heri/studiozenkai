@@ -2,12 +2,6 @@ baseurl = "https://studiozenkai.com"
 publishDir = "."
 languageCode = "en-us"
 title = "Studio Zenkai"
-twitter = "heri"
-github = "heri"
-flickr = "heri_quebec"
-facebook = "heri.rakotomalala"
-linkedin = "madmedia"
-email = "heri@studiozenkai.com"
 theme = "hugo-uno"
 
 
@@ -26,3 +20,9 @@ theme = "hugo-uno"
   description = "Studio Zenkai is dedicated to the craft of programming, photography and living sustainably."
   math = true
   cusdis = false
+  twitter = "heri"
+  github = "heri"
+  flickr = "heri_quebec"
+  facebook = "heri.rakotomalala"
+  linkedin = "madmedia"
+  email = "heri@studiozenkai.com"

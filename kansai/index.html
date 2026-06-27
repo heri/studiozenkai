@@ -142,6 +142,8 @@ body{overflow:hidden}
 #rail .seg .jp{font-family:var(--mincho);font-size:15px;letter-spacing:.1em}
 #rail .seg:hover,#rail .seg.active{color:var(--washi-2)}
 #rail .seg.active::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--vermilion)}
+.copy{margin-left:auto;font-family:var(--mono);font-size:9px;letter-spacing:.18em;
+  color:rgba(245,236,214,.28);white-space:nowrap;pointer-events:none}
 #bar{position:fixed;left:0;bottom:56px;height:2px;background:var(--vermilion);z-index:41;width:0;transition:width .12s linear}
 .nav{position:fixed;top:50%;transform:translateY(-50%);z-index:42;width:46px;height:46px;border-radius:50%;
   border:1px solid rgba(245,236,214,.32);background:rgba(12,23,34,.5);color:var(--washi-2);font-size:20px;
@@ -756,6 +758,7 @@ segScenes.forEach(sc=>{const city=sc.dataset.city;seen[city]=(seen[city]||0)+1;
   const b=document.createElement('button');b.className='seg';b.innerHTML='<span class="jp">'+jp+'</span>'+en;
   b.addEventListener('click',()=>track.scrollTo({left:sc.offsetLeft-60,behavior:'smooth'}));
   rail.appendChild(b);segs.push({el:b,sc});});
+const copy=document.createElement('span');copy.className='copy';copy.textContent='© Heri Rakotomalala';rail.appendChild(copy);
 const stops=[...document.querySelectorAll('.scene,.mist')];
 function go(d){const x=track.scrollLeft+10;const pts=stops.map(s=>s.offsetLeft).sort((a,b)=>a-b);
   let t=d>0?pts.find(p=>p>x+40):[...pts].reverse().find(p=>p<x-40);

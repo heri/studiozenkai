@@ -5,9 +5,10 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <title> Why I am not into entrepreneurship (anymore) &middot; Software, photography, and sustainability articles by Heri </title>
+    <title> Stepping out of the Unix Shell: Automating Sage 50 with C# &middot; Software, photography, and sustainability articles by Heri </title>
     
-      <meta name="description" content="There was a time where I spent unlimited time in Montréal tech entrepreneurship, from organizing startup weekends, working on MVPs, or crowdfunding the Notman House.">
+      <meta name="description" content="I live in the terminal. My ecosystem is Unix, my language is Ruby, and my framework is Rails. So, when a project appeared that required building a Windows console application in C# to talk to a legacy desktop accounting software, I was bewildered.
+Like asking a Canadian to cut queues.">
     
     
     <link rel="stylesheet" type="text/css" href="https://studiozenkai.com/css/uno.css" />
@@ -162,36 +163,104 @@
   <div class="content-wrapper">
     <div class="content-wrapper__inner">
       <div class="post">
-        <h1>Why I am not into entrepreneurship (anymore)</h1>
-        <span class="post-date">Tue, Dec 12, 2023</span>
-        <p>There was a time where I spent unlimited time in Montréal tech entrepreneurship, from organizing startup weekends, working on MVPs, or crowdfunding the Notman House.</p>
-<p>Those were intense years, some good, some bad. I had a few failed ventures, sold a few for what seemed to me a fortune at the time. But it is the past now.</p>
-<p>You might ask, &ldquo;Why don&rsquo;t you launch a tech startup?&rdquo;</p>
-<p>I do not see the thrill or the motivation.</p>
-<p>I do not need more money. What would all-nights bring? Another million owed to investors? A &ldquo;congrats&rdquo; in hacker news? None of that feels worth it. I&rsquo;ve done my time. I know it is possible</p>
-<p>I have two sons. One is six, the other four. They are young and wild, full of questions and mischfief. A thousand reasons to smile. But leave them for a time, and they turn bad, like the the sad plant you forgot to water. They need a parent who is present, not one who is chasing who knows what.</p>
-<p>Also, people think being an entrepreneur means freedom. It doesn’t. You always have bosses. If your board or investors aren’t your bosses, then your users are. They’re always there, demanding, expecting improvements. Having a random full-time job means I don’t have to give it 100% every single day. I can take two days off. Do nothing. As a founder, you don’t get that luxury.</p>
-<p>And then there’s culture mismatch. In North America, you get medals for making money and entrepreneurship. That&rsquo;s fine. In other countries, it’s family values. That&rsquo;s fine too, I understand that. In some places, it’s Culture (with capital C). Which is the absolute best? Who knows? 🤷 The truth is: what matters most is what makes you happy.</p>
-<p>But Heri, you say, don&rsquo;t you want to change the world? Make it better thanks to technology? That was my core reason to kickstart the Montréal tech community, a decade ago. If you look on LinkedIn or online communities, it is not about changing the world in 2023. People want to learn how to be an influencer, make a quick million, or be an entrepreneur just to add the title in LinkedIn or Insta. In 2023, finding a person who truly wants to make the world better is like finding a gold nugget in a coal mine.</p>
-<p>For me, freedom isn’t a title or a million dollars. Freedom is not having to answer the phone. And unless there is an catastrophe, there is no reason to change.</p>
-        <div class="post-tags">In <a href="https://studiozenkai.com/tags/personal/" >Personal</a>        <a href="https://studiozenkai.com/tags/career/" >Career</a>        <a href="https://studiozenkai.com/tags/entrepreneurship/" >Entrepreneurship</a>        </div>
+        <h1>Stepping out of the Unix Shell: Automating Sage 50 with C#</h1>
+        <span class="post-date">Fri, Dec 12, 2025</span>
+        <p>I live in the terminal. My ecosystem is Unix, my language is Ruby, and my framework is Rails. So, when a project appeared that required building a Windows console application in C# to talk to a legacy desktop accounting software, I was bewildered.</p>
+<p>Like asking a Canadian to cut queues.</p>
+<p>But the business case was undeniable. We had a whole team of junior accountants spending their week manually keying invoices into Sage 50. It was error-prone, expensive, and frankly, soul-crushing work.</p>
+<p>The solution wasn&rsquo;t a shiny new SaaS. It was a rugged C# console application to bridge our modern data pipelines with the proprietary Sage 50 SDK.</p>
+<h2 id="the-shift-rails-vs-c">The Shift: Rails vs. C#</h2>
+<p>Coming from a dynamic language like Ruby, C# feels rigid at first, similar to the transition to <a href="https://studiozenkai.com/post/typescript-for-ruby-developers/">TypeScript</a>. You trade magic for structure.</p>
+<p>In Ruby, you might process a list of invoices like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>invoices<span style="color:#f92672">.</span>each <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>inv<span style="color:#f92672">|</span>
+</span></span><span style="display:flex;"><span>  puts <span style="color:#e6db74">&#34;Processing </span><span style="color:#e6db74">#{</span>inv<span style="color:#f92672">[</span><span style="color:#e6db74">:number</span><span style="color:#f92672">]</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">Sage</span><span style="color:#f92672">.</span>post(inv)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>In C#, specifically when dealing with the Sage 50 SDK, you are dealing with COM objects, sessions, and types. It forces you to be explicit about what you are doing.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">foreach</span> (<span style="color:#66d9ef">var</span> inv <span style="color:#66d9ef">in</span> invoices) 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    Console.WriteLine(<span style="color:#e6db74">$&#34;Processing {inv.Number}&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// You must manage the session state explicitly</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (sageSession.IsLoggedIn) 
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> invoice = <span style="color:#66d9ef">new</span> PurchaseInvoice();
+</span></span><span style="display:flex;"><span>        invoice.Vendor = inv.VendorCode;
+</span></span><span style="display:flex;"><span>        invoice.Post();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The learning curve wasn&rsquo;t the syntax, it was the <em>environment</em>. I had to trade <code>rbenv</code> and <code>vim</code>/<code>vscode</code> on Mac for Visual Studio on a Windows machine.</p>
+<h1 id="the-beast-sage-50-sdk">The Beast: Sage 50 SDK</h1>
+<p>Web developers are spoiled by REST APIs. We send a JSON payload, get a 200 OK, and move on.</p>
+<p>The Sage 50 SDK is different. It is a set of DLLs that must be installed and registered on the machine. You don&rsquo;t &ldquo;call&rdquo; the API; you instantiate it inside your process.</p>
+<p>This means your application shares memory with the accounting logic. If you mess up a transaction, you don&rsquo;t get a 500 error; you might crash the application or lock the database.</p>
+<h1 id="risks-and-challenges">Risks and Challenges</h1>
+<p>This project was successful, but it is not without architectural debt. If you are a web developer tackling a legacy integration, here is what you need to know:</p>
+<ul>
+<li><em>Dependency Hell</em>: The SDK versions must match the installed Sage 50 version exactly. If the accountants update their software, your program breaks immediately.</li>
+<li><em>The &ldquo;Bus Factor&rdquo;</em>: In a shop of Rails developers, I am now the only maintainer of this .NET codebase.</li>
+<li><em>Deployment</em>: There is no CI/CD deploy or Docker container here. This runs on a physical Windows box. Deployment involves copying .exe and dll files.</li>
+<li><em>Single Threaded</em>: The SDK often blocks. You cannot easily spin up 50 threads to ingest data in parallel like you would with Sidekiq.</li>
+</ul>
+<h1 id="highlights-and-roi">Highlights and ROI</h1>
+<p>Despite the friction of leaving my comfort zone, the results were staggering.</p>
+<ol>
+<li>
+<p><em>Massive Cost Reduction</em> The primary win is human capital. We automated the workload of 4 full-time employees. Those junior accountants are now doing actual analysis instead of data entry.</p>
+</li>
+<li>
+<p><em>Type Safety &amp; Rust-like Confidence</em> Because C# is statically typed, I caught data mapping errors (strings vs decimals, null references) at compile time. It reminded me of my time with Rust: if it compiles, it usually works.</p>
+</li>
+<li>
+<p><em>Performance</em> We aren&rsquo;t talking about web scale here, but processing 1,000 invoices takes minutes via the Console App, compared to the days it took humans.</p>
+</li>
+</ol>
+<table>
+  <thead>
+      <tr>
+          <th>Metric</th>
+          <th>Manual Entry</th>
+          <th>C# Automation</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Throughput</td>
+          <td>~10 invoices/hour</td>
+          <td>~300 invoices/minute</td>
+      </tr>
+      <tr>
+          <td>Error Rate</td>
+          <td>3-5% (fat finger)</td>
+          <td>0% (validation logic)</td>
+      </tr>
+      <tr>
+          <td>Cost</td>
+          <td>$$$$ (Salaries)</td>
+          <td>included in fixed costs</td>
+      </tr>
+  </tbody>
+</table>
+<h1 id="conclusion">Conclusion</h1>
+<p>As developers, we often chase the &ldquo;cool&rdquo; stack—Kubernetes, Rust, Microservices. But sometimes, the most valuable code you can write is a boring Console Application running on a Windows Server in a closet.</p>
+<p>The accountants don&rsquo;t care that I didn&rsquo;t use Ruby. They care that they get to go home on time.</p>
+        <div class="post-tags">In <a href="https://studiozenkai.com/tags/software/" >Software</a>        <a href="https://studiozenkai.com/tags/csharp/" >Csharp</a>        <a href="https://studiozenkai.com/tags/dotnet/" >Dotnet</a>        <a href="https://studiozenkai.com/tags/automation/" >Automation</a>        </div>
         <div id="sharing">
     Like what you read ? Take a moment to like or share the post so others can read it too:
     <ul>
         <li>
-            <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fstudiozenkai.com%2fpost%2fwhy-not-entrepreneurship%2f" class="facebook"
+            <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fstudiozenkai.com%2fpost%2funix-shell-csharp%2f" class="facebook"
                 aria-label="share on Facebook" rel="nofollow">
                 <i class="fa fa-facebook"></i>
             </a>
         </li>
         <li>
-            <a href="http://twitter.com/share?url=https%3a%2f%2fstudiozenkai.com%2fpost%2fwhy-not-entrepreneurship%2f&text=Why%20I%20am%20not%20into%20entrepreneurship%20%28anymore%29&via="
+            <a href="http://twitter.com/share?url=https%3a%2f%2fstudiozenkai.com%2fpost%2funix-shell-csharp%2f&text=Stepping%20out%20of%20the%20Unix%20Shell%3a%20Automating%20Sage%2050%20with%20C%23&via="
                 class="twitter" aria-label="share on Twitter" rel="nofollow">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
         <li>
-            <a href="mailto:?subject=Check%20out%20Why%20I%20am%20not%20into%20entrepreneurship%20%28anymore%29.&body= Read more at https%3a%2f%2fstudiozenkai.com%2fpost%2fwhy-not-entrepreneurship%2f"
+            <a href="mailto:?subject=Check%20out%20Stepping%20out%20of%20the%20Unix%20Shell%3a%20Automating%20Sage%2050%20with%20C%23.&body= Read more at https%3a%2f%2fstudiozenkai.com%2fpost%2funix-shell-csharp%2f"
                 class="twitter" aria-label="share on Email" rel="nofollow">
                 <i class="fa fa-envelope-o"></i>
             </a>

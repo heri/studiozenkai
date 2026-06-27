@@ -1,4 +1,5 @@
 baseurl = "https://studiozenkai.com"
+publishDir = "."
 languageCode = "en-us"
 title = "Studio Zenkai"
 twitter = "heri"
@@ -24,4 +25,4 @@ theme = "hugo-uno"
   Subtitle = "Software, photography, and sustainability articles by Heri"
   description = "Studio Zenkai is dedicated to the craft of programming, photography and living sustainably."
   math = true
-  cusdis = true
+  cusdis = false

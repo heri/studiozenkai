@@ -5,6 +5,8 @@ intro = "The family, four cities, and one plan that did not survive the first mo
 end_seal = "結"
 end_title = "To be continued"
 end_note = "{count} cards of perhaps one hundred. The rest of the scroll is being written."
+end_link_url = "https://studiozenkai.com/post/japan-does-not-shout/"
+end_link_text = "Read the full reflection"
 
 [cities]
 Osaka = "大阪"

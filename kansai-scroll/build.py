@@ -302,6 +302,11 @@ body{overflow:hidden}
   color:var(--haze);margin:.4em 0 1.4em}
 .fr-note{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(15px,1.6vw,17px);
   line-height:1.6;color:rgba(245,236,214,.88);text-wrap:pretty}
+.end-link{display:inline-block;margin-top:18px;font-family:var(--mono);font-size:11px;
+  letter-spacing:.28em;text-transform:uppercase;color:var(--washi-2);
+  border-bottom:1px solid rgba(245,236,214,.4);padding-bottom:2px;text-decoration:none;
+  transition:color .25s,border-color .25s}
+.end-link:hover{color:var(--vermilion);border-color:var(--vermilion)}
 
 #rail{position:fixed;left:0;right:0;bottom:0;z-index:40;height:56px;display:flex;align-items:center;
   gap:18px;padding:0 22px;background:linear-gradient(180deg,rgba(16,42,68,0),rgba(12,23,34,.78));
@@ -456,15 +461,19 @@ def render_frontis(trip):
 
 def render_end(trip, count):
     note = trip.get("end_note", "").format(count=count)
+    link_url = trip.get("end_link_url", "")
+    link_text = trip.get("end_link_text", "Read the full story")
+    link_html = ('\n      <a class="end-link" href="%s">%s →</a>'
+                 % (esc(link_url), esc(link_text))) if link_url else ""
     return """
   <section class="scene plate end">
     <div class="frontis">
       <div class="fr-cart end-cart"><span>%s</span></div>
       <h1 class="fr-title">%s</h1>
-      <p class="fr-note">%s</p>
+      <p class="fr-note">%s</p>%s
     </div>
   </section>""" % (esc(trip.get("end_seal", "結")), esc(trip.get("end_title", "To be continued")),
-                   esc(note))
+                   esc(note), link_html)
 
 
 def render_page(trip, body):

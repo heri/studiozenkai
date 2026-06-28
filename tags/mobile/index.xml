@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mobile on Studio Zenkai</title>
+    <link>https://studiozenkai.com/tags/mobile/</link>
+    <description>Recent content in Mobile on Studio Zenkai</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 26 May 2026 08:00:00 -0400</lastBuildDate>
+    <atom:link href="https://studiozenkai.com/tags/mobile/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Numbers That Should Not Change After the Fact</title>
+      <link>https://studiozenkai.com/post/numbers-that-should-not-lie/</link>
+      <pubDate>Tue, 26 May 2026 08:00:00 -0400</pubDate>
+      <guid>https://studiozenkai.com/post/numbers-that-should-not-lie/</guid>
+      <description>&lt;p&gt;I have been building &lt;a href=&#34;https://mychallengecoin.app&#34;&gt;My Challenge Coin&lt;/a&gt;, a family achievement app where kids log challenges, earn coins, and track habits with their parents. I have been running it with my two kids for six weeks.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

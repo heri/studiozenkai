@@ -518,8 +518,8 @@ segScenes.forEach(sc=>{const city=sc.dataset.city;seen[city]=(seen[city]||0)+1;
   rail.appendChild(b);segs.push({el:b,sc});});
 const copy=document.createElement('span');copy.className='copy';copy.textContent='© Heri Rakotomalala';rail.appendChild(copy);
 const stops=[...document.querySelectorAll('.scene,.mist')];
-function go(d){const x=track.scrollLeft+10;const pts=stops.map(s=>s.offsetLeft).sort((a,b)=>a-b);
-  let t=d>0?pts.find(p=>p>x+40):[...pts].reverse().find(p=>p<x-40);
+function go(d){const cur=track.scrollLeft;const pts=stops.map(s=>s.offsetLeft).sort((a,b)=>a-b);
+  let t=d>0?pts.find(p=>p>cur+80):[...pts].reverse().find(p=>p<cur-20);
   if(t==null)t=d>0?track.scrollWidth:0;track.scrollTo({left:Math.max(0,t-60),behavior:'smooth'});}
 document.getElementById('next').onclick=()=>go(1);
 document.getElementById('prev').onclick=()=>go(-1);

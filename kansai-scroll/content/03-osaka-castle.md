@@ -11,5 +11,5 @@ place = "Osaka Castle"
 transit = "T Tanimachi Line → Temmabashi Station"
 picture = "pictures/IMG_7797.JPG"
 personal = "The walls are two stories of solid granite and the moat is wide enough to be a small lake. They asked who won. The answer is long."
-description = "Osaka Castle was raised by Toyotomi Hideyoshi in 1583 as a monument to reunification, burned and rebuilt after the Siege of Osaka in 1615, and stands today in a 1931 concrete reconstruction with a museum inside the keep. Hideyoshi unified the country, won every battle of his lifetime, and then died. The castle fell six months later. The boys found this outcome unsatisfying."
+description = "Osaka Castle was raised by Toyotomi Hideyoshi in 1583 as a monument to reunification, burned and rebuilt after the Siege of Osaka in 1615, and stands today in a 1931 concrete reconstruction with a museum inside the keep. Hideyoshi unified the country, won every battle of his lifetime, and then died. The castle fell seventeen years later, after a final six-month siege campaign. The boys found this outcome unsatisfying."
 +++

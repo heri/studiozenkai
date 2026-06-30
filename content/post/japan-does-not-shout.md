@@ -44,4 +44,8 @@ If kids can't play outside, and kids can't play in their room, where can they pl
 
 ---
 
-*The visual diary — 29 cards, one per place — is at [studiozenkai.com/kansai](https://studiozenkai.com/kansai/)*
+*The visual diary — 30 cards, one per place — is at [studiozenkai.com/kansai](https://studiozenkai.com/kansai/)*
+
+---
+
+*PS: The Japanese Disembarkation Card for Foreigners only requires the intended primary address, usually the very first hotel night. The form design is tight and misleadingly implies one needs to inventory your whole itinerary.*

@@ -6,8 +6,15 @@
     <description>Recent content in Airbnb on Studio Zenkai</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 Oct 2024 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2026 09:00:00 -0400</lastBuildDate>
     <atom:link href="https://studiozenkai.com/tags/airbnb/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Teaching an AI to Run My Chalet While I&#39;m at the Beach</title>
+      <link>https://studiozenkai.com/post/castoros-ai-butler-arthur/</link>
+      <pubDate>Tue, 21 Jul 2026 09:00:00 -0400</pubDate>
+      <guid>https://studiozenkai.com/post/castoros-ai-butler-arthur/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://castoros.app&#34;&gt;CastorOS&lt;/a&gt; is the platform I&amp;rsquo;ve been building to automate the boring, repetitive parts of running an Airbnb: door codes, thermostats, guest messages, the works. The big idea is simple: you should be able to go off-grid for a weekend, phone dead, no bars, and not worry that a guest is standing at your door with no idea how to get in.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>The Airbnb Reality Check</title>
       <link>https://studiozenkai.com/post/airbnb-the-good-the-bad-the-profitable/</link>

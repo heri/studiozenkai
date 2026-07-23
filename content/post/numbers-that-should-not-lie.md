@@ -2,6 +2,7 @@
 date = "2026-05-26T08:00:00-04:00"
 title = "Numbers That Should Not Change After the Fact"
 tags = ['software', 'rails', 'mobile', 'ios']
+draft = true
 +++
 
 I have been building [My Challenge Coin](https://mychallengecoin.app), a family achievement app where kids log challenges, earn coins, and track habits with their parents. I have been running it with my two kids for six weeks.

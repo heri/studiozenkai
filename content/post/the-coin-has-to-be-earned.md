@@ -2,7 +2,6 @@
 date = "2026-08-01T08:00:00-04:00"
 title = "The Coin Has to Be Earned"
 tags = ['personal', 'family', 'parenting', 'mychallengecoin']
-draft = true
 +++
 
 When I was a kid in Madagascar, physical education was standing in rows with wooden rifles. Straight, left, right, up, down. Shout. Repeat. Real achievement was rare, and when it happened, it happened without ceremony.
@@ -41,7 +40,7 @@ Above daily discipline sit challenges: discrete things that can be attempted, fa
 
 I will name it plainly because I think about it.
 
-A parent who downloads this app expecting a reward chart will be disappointed. The app does not hand things out. A kid who has not completed a challenge yet has an empty wall, and the empty wall is honest. Some kids will find that motivating. Others will not.
+A parent who downloads this app expecting a reward chart will be disappointed. The app does not hand things out. You have to put time and energy into it before it reap rewards. A kid who has not completed a challenge yet has an empty wall, and the empty wall is honest. Some kids will find that motivating. Others will not.
 
 I have been running it with my two kids for six weeks. So far, they like it. I have shown it to a couple of other parents and they responded well. But I know this is the easiest possible sample: my own kids, parents who are already friends. The harder question is whether a kid who struggles with discouragement can sit with an empty wall long enough to earn their first coin.
 
@@ -49,4 +48,4 @@ I do not know the answer yet. I will find out as more families use it.
 
 What I do know is that the empty wall is not a design flaw. It is the whole point. The coin means something because it was not given. That is the risk I decided to take, and I think it is the right one.
 
-[My Challenge Coin](https://mychallengecoin.app) is available on the App Store.
+[My Challenge Coin](https://mychallengecoin.app) is available on the [App Store](https://apps.apple.com/app/my-challenge-coin/id6748823048).

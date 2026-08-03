@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Family on Studio Zenkai</title>
-    <link>https://studiozenkai.com/tags/family/</link>
-    <description>Recent content in Family on Studio Zenkai</description>
+    <title>Parenting on Studio Zenkai</title>
+    <link>https://studiozenkai.com/tags/parenting/</link>
+    <description>Recent content in Parenting on Studio Zenkai</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 01 Aug 2026 08:00:00 -0400</lastBuildDate>
-    <atom:link href="https://studiozenkai.com/tags/family/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://studiozenkai.com/tags/parenting/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Coin Has to Be Earned</title>
       <link>https://studiozenkai.com/post/the-coin-has-to-be-earned/</link>
       <pubDate>Sat, 01 Aug 2026 08:00:00 -0400</pubDate>
       <guid>https://studiozenkai.com/post/the-coin-has-to-be-earned/</guid>
       <description>&lt;p&gt;When I was a kid in Madagascar, physical education was standing in rows with wooden rifles. Straight, left, right, up, down. Shout. Repeat. Real achievement was rare, and when it happened, it happened without ceremony.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Japan Does Not Shout</title>
-      <link>https://studiozenkai.com/post/japan-does-not-shout/</link>
-      <pubDate>Fri, 26 Jun 2026 08:00:00 -0400</pubDate>
-      <guid>https://studiozenkai.com/post/japan-does-not-shout/</guid>
-      <description>&lt;p&gt;In June 2026, we took our family through Osaka, Kyoto, Nara, and Tokyo. &lt;a href=&#34;https://studiozenkai.com/kansai/&#34;&gt;The visual diary is here.&lt;/a&gt; These are the notes behind the pictures.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

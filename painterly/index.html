@@ -1,0 +1,622 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Painterly field cards</title>
+<meta name="theme-color" content="#141c26">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Painterly">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ground:#141c26;      /* blue-black */
+  --wall:#1a2230;
+  --panel:#1e2835;
+  --line:#2e3a48;
+  --ink:#ece3cf;         /* lead white */
+  --ink-2:#a89e8a;
+  --gold:#caa04a;
+  --green:#4b7a5e;
+  --madder:#a8493c;
+  --display:"IM Fell English", Georgia, "Times New Roman", serif;
+  --text:"Alegreya Sans", "Gill Sans", "Segoe UI", system-ui, sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{height:100%;margin:0;background:var(--ground);color:var(--ink);font:400 17px/1.5 var(--text);-webkit-font-smoothing:antialiased;overflow:hidden}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
+.app{height:100%;display:grid;grid-template-rows:auto 1fr auto;max-width:560px;margin:0 auto}
+
+/* Header: the light of the day */
+.top{padding:10px 16px 8px}
+.top-row{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.status{font:italic 400 1.15rem/1.2 var(--display);color:var(--ink)}
+.status small{display:block;font:400 .85rem/1.3 var(--text);color:var(--ink-2);font-style:normal;margin-top:2px}
+.icon-btn{min-width:44px;height:44px;border-radius:22px;border:1px solid var(--line);padding:0 14px;font-size:.9rem;color:var(--ink-2);white-space:nowrap}
+.icon-btn[aria-pressed="true"]{border-color:var(--gold);color:var(--gold)}
+.daybar{position:relative;height:6px;border-radius:3px;background:#2a3544;margin:10px 0 4px;overflow:hidden}
+.daybar i{position:absolute;top:0;bottom:0}
+.daybar .day{background:#4a5566}
+.daybar .golden{background:var(--gold)}
+.daybar .blue{background:#4f6f9c}
+.daybar .now{width:2px;background:var(--ink);box-shadow:0 0 0 1px var(--ground)}
+.times{display:flex;flex-wrap:wrap;gap:2px 14px;font-size:.82rem;color:var(--ink-2)}
+.times b{font-weight:500;color:var(--ink)}
+.times .g::before,.times .bl::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;background:var(--gold);vertical-align:1px}
+.times .bl::before{background:#4f6f9c}
+.tabs{display:flex;gap:6px;margin-top:10px}
+.tab{flex:1;height:38px;border-radius:19px;color:var(--ink-2);font-size:.95rem}
+.tab[aria-selected="true"]{background:var(--panel);color:var(--ink)}
+
+/* Deck */
+.stage{position:relative;overflow:hidden;padding:4px 12px 0}
+.deck{position:relative;height:100%}
+.card{position:absolute;inset:0;background:var(--wall);border-radius:14px;overflow-y:auto;overscroll-behavior:contain;
+  -webkit-overflow-scrolling:touch;touch-action:pan-y;will-change:transform;box-shadow:0 18px 40px rgba(5,8,12,.55)}
+.card.under{transform:scale(.955) translateY(10px);filter:brightness(.7);pointer-events:none}
+.card.fling{transition:transform .32s ease-in, opacity .32s ease-in}
+.card.snap{transition:transform .22s ease-out}
+.stamp{position:sticky;top:14px;height:0;z-index:3;pointer-events:none}
+.stamp span{position:absolute;top:0;padding:4px 14px;border:2px solid;border-radius:6px;font:italic 1.6rem/1 var(--display);opacity:0;background:rgba(20,28,38,.6)}
+.stamp .keep{left:16px;color:#8fd0a8;border-color:#8fd0a8;transform:rotate(-8deg)}
+.stamp .skip{right:16px;color:#e3968a;border-color:#e3968a;transform:rotate(8deg)}
+
+.empty{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;gap:14px;color:var(--ink-2)}
+.empty h2{font:italic 400 1.7rem/1.2 var(--display);color:var(--ink);margin:0}
+.btn{height:46px;padding:0 22px;border-radius:23px;background:var(--panel);border:1px solid var(--line);color:var(--ink)}
+.btn.primary{background:var(--gold);border-color:var(--gold);color:#1a1409;font-weight:500}
+
+/* Card content */
+.plate{margin:0;padding:20px 22px 0;display:flex;flex-direction:column;align-items:center}
+.plate .frame{position:relative;width:100%;height:min(40vh,440px);display:flex;align-items:center;justify-content:center}
+.plate img{max-width:100%;max-height:100%;object-fit:contain;box-shadow:0 0 0 6px #2a2118,0 0 0 7px #6b5530,0 14px 30px rgba(0,0,0,.6);background:#2a2118}
+.plate .missing{position:absolute;inset:8% 10%;display:none;align-items:flex-end;padding:14px;border-radius:2px;color:rgba(236,227,207,.85);font-size:.85rem}
+.plate.no-img img{display:none}
+.plate.no-img .missing{display:flex}
+.plate figcaption{margin-top:16px;font-size:.82rem;color:var(--ink-2);text-align:center;line-height:1.35}
+.plate figcaption em{font-family:var(--display);font-size:.98rem;color:var(--ink)}
+
+.body{padding:18px 22px 36px}
+.title{font:italic 400 2.15rem/1.08 var(--display);margin:0;letter-spacing:.005em}
+.mood{margin:8px 0 0;color:var(--ink-2);font-size:1.02rem}
+.swatches{display:flex;margin-top:14px;height:14px;border-radius:2px;overflow:hidden;max-width:220px}
+.swatches span{flex:1}
+.glance{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin:18px 0 4px;padding:14px 16px;background:var(--panel);border-radius:10px;font-size:.95rem}
+.glance dt{color:var(--ink-2)}
+.glance dd{margin:0}
+
+.sec{margin-top:26px}
+.sec h3{font:italic 400 1.3rem/1.2 var(--display);color:var(--gold);margin:0 0 8px}
+.sec h4{font:500 .92rem/1.3 var(--text);color:var(--ink-2);margin:14px 0 6px}
+.sec p{margin:0 0 8px;max-width:62ch}
+.plain{margin:0;padding-left:1.1em}
+.plain li{margin:4px 0}
+.prompts{margin:6px 0 0;padding:0;list-style:none}
+.prompts li{font-family:var(--display);font-style:italic;font-size:1.08rem;padding:6px 0 6px 14px;border-left:2px solid var(--line);margin:4px 0}
+.steps{margin:0;padding-left:1.3em}
+.steps li{margin:6px 0;padding-left:4px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;margin:0}
+.kv dt{color:var(--ink-2)}
+.kv dd{margin:0}
+
+.checks{list-style:none;margin:0;padding:0}
+.checks li{border-top:1px solid var(--line)}
+.checks li:first-child{border-top:0}
+.checks label{display:flex;gap:12px;align-items:flex-start;padding:9px 0;cursor:pointer}
+.checks input{appearance:none;-webkit-appearance:none;flex:0 0 22px;height:22px;margin:1px 0 0;border:1.5px solid #5a6676;border-radius:4px;display:grid;place-content:center;background:transparent}
+.checks input::after{content:"";width:11px;height:6px;border:2px solid #1a1409;border-top:0;border-right:0;transform:rotate(-45deg) translate(1px,-1px);opacity:0}
+.checks input:checked{background:var(--gold);border-color:var(--gold)}
+.checks input:checked::after{opacity:1}
+.checks input:checked + span{color:var(--ink-2);text-decoration:line-through;text-decoration-color:rgba(168,158,138,.5)}
+.checks .k{color:var(--ink-2);margin-right:6px}
+.progress{font:400 .85rem var(--text);color:var(--ink-2);margin-left:8px;font-style:normal}
+.card-foot{margin-top:30px;display:flex;gap:10px;flex-wrap:wrap}
+
+/* Action bar */
+.actions{display:flex;justify-content:center;align-items:center;gap:18px;padding:12px 16px 14px}
+.act{width:64px;height:64px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font-size:.8rem;color:var(--ink-2)}
+.act svg{width:26px;height:26px}
+.act.skip{color:#e3968a;border-color:#5d3a37}
+.act.keep{color:#8fd0a8;border-color:#35594a}
+.act.undo{width:46px;height:46px}
+.act:disabled{opacity:.35}
+.hidden{display:none !important}
+
+/* Kept & all list */
+.list{height:100%;overflow-y:auto;padding:4px 16px 24px}
+.list h2{font:italic 400 1.35rem/1.2 var(--display);margin:18px 0 8px;color:var(--gold)}
+.list p.note{color:var(--ink-2);margin:0 0 8px;font-size:.95rem}
+.row{display:flex;gap:14px;align-items:center;width:100%;text-align:left;padding:10px 0;border-top:1px solid var(--line)}
+.row .thumb{flex:0 0 58px;height:58px;border-radius:4px;background:#2a2118 center/cover no-repeat}
+.row .t{font:italic 400 1.15rem/1.2 var(--display)}
+.row .s{font-size:.85rem;color:var(--ink-2)}
+.row .tag{margin-left:auto;font-size:.8rem;color:var(--gold)}
+
+/* Sheets */
+.scrim{position:fixed;inset:0;background:rgba(6,9,13,.6);z-index:10}
+.sheet{position:fixed;left:0;right:0;bottom:0;max-height:88%;overflow-y:auto;background:var(--panel);border-radius:18px 18px 0 0;z-index:11;
+  padding:18px 20px calc(24px + env(safe-area-inset-bottom,0px));max-width:560px;margin:0 auto}
+.sheet h2{font:italic 400 1.5rem/1.2 var(--display);margin:0 0 4px}
+.sheet .group{margin-top:18px}
+.sheet .group > span{display:block;color:var(--ink-2);font-size:.9rem;margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{height:38px;padding:0 16px;border-radius:19px;border:1px solid var(--line);color:var(--ink);font-size:.95rem}
+.chip[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:#1a1409}
+.sheet .foot{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.sheet .small{font-size:.88rem;color:var(--ink-2);margin:8px 0 0}
+
+.reader{position:fixed;inset:0;z-index:12;background:var(--ground);display:flex;flex-direction:column;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.reader .bar{display:flex;justify-content:space-between;align-items:center;padding:8px 12px}
+.reader .card{position:relative;inset:auto;flex:1;border-radius:0;box-shadow:none;max-width:560px;width:100%;margin:0 auto}
+
+@media (prefers-reduced-motion: reduce){
+  .card.fling,.card.snap{transition:none}
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div class="top-row">
+      <div class="status" id="status">Reading the light<small>&nbsp;</small></div>
+      <button class="icon-btn" id="openFilters" aria-haspopup="dialog">Conditions</button>
+    </div>
+    <div class="daybar" id="daybar" aria-hidden="true"></div>
+    <div class="times" id="times"></div>
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" id="tabDeck" aria-selected="true">Deck</button>
+      <button class="tab" role="tab" id="tabKept" aria-selected="false">Kept</button>
+    </div>
+  </header>
+
+  <main class="stage" id="stage">
+    <div class="deck" id="deck"></div>
+    <div class="list hidden" id="list"></div>
+  </main>
+
+  <footer class="actions" id="actions">
+    <button class="act undo" id="undo" aria-label="Undo last swipe" title="Undo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14 4 9l5-5"/><path d="M4 9h10a6 6 0 0 1 0 12h-3"/></svg>
+    </button>
+    <button class="act skip" id="skip" aria-label="Skip this card">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <button class="act keep" id="keep" aria-label="Keep this card for today">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17.5 19 7"/></svg>
+    </button>
+  </footer>
+</div>
+
+<script src="cards.js"></script>
+<script>
+(() => {
+"use strict";
+const CARDS = window.CARDS || [];
+const KEY = "painterly.v1";
+const HOME = { lat: 45.5017, lon: -73.5673, label: "Montréal" };
+const GROUPS = [
+  ["subject", "Who's in front of the camera", [["kids","Kids"],["adults","Adults"],["family","Family group"],["none","No people"]]],
+  ["light", "Light", [["golden","Golden hour"],["blue","Blue hour"],["day","Daytime"],["night","After dark"]]],
+  ["weather", "Weather", [["clear","Clear"],["overcast","Overcast"],["fog","Fog or mist"],["snow","Snow"],["storm","Storm clearing"]]],
+  ["season", "Season", [["spring","Spring"],["summer","Summer"],["autumn","Autumn"],["winter","Winter"]]]
+];
+
+/* ---------- state ---------- */
+function defaults(){ return { kept:[], skipped:[], history:[], checks:{}, filters:{subject:[],light:[],weather:[],season:[]}, matchNow:false, loc:null, img:{} }; }
+let S;
+try { S = Object.assign(defaults(), JSON.parse(localStorage.getItem(KEY) || "{}")); } catch(e){ S = defaults(); }
+function save(){ try { localStorage.setItem(KEY, JSON.stringify(S)); } catch(e){} }
+const byId = id => CARDS.find(c => c.id === id);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
+
+/* ---------- sun ---------- */
+const RAD = Math.PI/180;
+function sunAlt(date, lat, lon){
+  const d = date.getTime()/86400000 - 10957.5;             // days since J2000
+  const g = (357.529 + 0.98560028*d) * RAD;
+  const q = 280.459 + 0.98564736*d;
+  const L = (q + 1.915*Math.sin(g) + 0.020*Math.sin(2*g)) * RAD;
+  const e = (23.439 - 0.00000036*d) * RAD;
+  const ra = Math.atan2(Math.cos(e)*Math.sin(L), Math.cos(L));
+  const dec = Math.asin(Math.sin(e)*Math.sin(L));
+  const gmst = ((18.697374558 + 24.06570982441908*d) % 24) * 15 * RAD;
+  const H = gmst + lon*RAD - ra;
+  return Math.asin(Math.sin(lat*RAD)*Math.sin(dec) + Math.cos(lat*RAD)*Math.cos(dec)*Math.cos(H)) / RAD;
+}
+function phaseOf(alt){ return alt > 6 ? "day" : alt >= -4 ? "golden" : alt >= -8 ? "blue" : "night"; }
+function dayPlan(loc){
+  const start = new Date(); start.setHours(0,0,0,0);
+  const mins = []; for (let m = 0; m <= 1440; m += 2) mins.push([m, phaseOf(sunAlt(new Date(start.getTime()+m*60000), loc.lat, loc.lon))]);
+  const segs = []; let cur = null;
+  for (const [m,p] of mins){ if (!cur || cur.p !== p){ cur = {p, a:m, b:m}; segs.push(cur); } else cur.b = m; }
+  return { start, segs };
+}
+const fmt = new Intl.DateTimeFormat(undefined, { hour:"numeric", minute:"2-digit" });
+const tAt = (start, m) => fmt.format(new Date(start.getTime()+m*60000));
+function dur(ms){ const m = Math.round(ms/60000); return m < 60 ? `${m} min` : `${Math.floor(m/60)} h ${String(m%60).padStart(2,"0")}`; }
+
+let currentPhase = "day";
+function renderLight(){
+  const loc = S.loc || HOME;
+  const now = new Date();
+  const alt = sunAlt(now, loc.lat, loc.lon);
+  currentPhase = phaseOf(alt);
+  const { start, segs } = dayPlan(loc);
+  const nowM = (now - start)/60000;
+  const names = { golden:"Golden hour", blue:"Blue hour", day:"Daylight", night:"Night" };
+
+  // status line
+  let head = names[currentPhase] + " now";
+  let sub = "";
+  const next = segs.find(s => s.a > nowM && s.p === "golden");
+  const curSeg = segs.find(s => nowM >= s.a && nowM <= s.b);
+  if (currentPhase === "golden" || currentPhase === "blue") sub = `Ends in ${dur((curSeg.b - nowM)*60000)}`;
+  else if (next) sub = `Golden hour in ${dur((next.a - nowM)*60000)}`;
+  else sub = "Golden hour tomorrow morning";
+  document.getElementById("status").innerHTML = `${esc(head)}<small>${esc(sub)} in ${esc(loc.label)}</small>`;
+
+  // bar
+  const bar = document.getElementById("daybar");
+  bar.innerHTML = segs.filter(s => s.p !== "night").map(s =>
+    `<i class="${s.p}" style="left:${s.a/14.4}%;width:${Math.max(.4,(s.b-s.a)/14.4)}%"></i>`).join("")
+    + `<i class="now" style="left:${nowM/14.4}%"></i>`;
+
+  // times
+  const golds = segs.filter(s => s.p === "golden"), blues = segs.filter(s => s.p === "blue");
+  const parts = [];
+  const r = s => `<b>${tAt(start,s.a)}–${tAt(start,s.b)}</b>`;
+  if (golds[0]) parts.push(`<span class="g">Morning ${r(golds[0])}</span>`);
+  if (golds[1]) parts.push(`<span class="g">Evening ${r(golds[1])}</span>`);
+  if (blues[1]) parts.push(`<span class="bl">Blue ${r(blues[1])}</span>`);
+  document.getElementById("times").innerHTML = parts.join("");
+}
+
+/* ---------- paintings ---------- */
+let LOCAL = new Set();
+fetch("img/index.json").then(r => r.ok ? r.json() : []).then(ids => { LOCAL = new Set(ids); refreshImages(); }).catch(() => {});
+
+const pending = {};
+function paintingURL(c){
+  if (S.img[c.id]) return Promise.resolve(S.img[c.id]);
+  if (pending[c.id]) return pending[c.id];
+  pending[c.id] = (async () => {
+    for (const t of c.painting.wiki || []){
+      try {
+        const u = `https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*&redirects=1&prop=pageimages&piprop=thumbnail&pithumbsize=1400&titles=${encodeURIComponent(t)}`;
+        const j = await (await fetch(u)).json();
+        const p = Object.values(j.query?.pages || {})[0];
+        if (p?.thumbnail?.source){ S.img[c.id] = p.thumbnail.source; save(); return p.thumbnail.source; }
+      } catch(e){}
+    }
+    try {
+      const u = `https://commons.wikimedia.org/w/api.php?action=query&format=json&origin=*&generator=search&gsrnamespace=6&gsrlimit=1&gsrsearch=${encodeURIComponent(c.painting.commons + " filetype:bitmap")}&prop=imageinfo&iiprop=url&iiurlwidth=1400`;
+      const j = await (await fetch(u)).json();
+      const p = Object.values(j.query?.pages || {})[0];
+      const src = p?.imageinfo?.[0]?.thumburl;
+      if (src){ S.img[c.id] = src; save(); return src; }
+    } catch(e){}
+    return null;
+  })().finally(() => { delete pending[c.id]; });
+  return pending[c.id];
+}
+function loadImg(img, c){
+  const fig = img.closest(".plate, .row");
+  const fail = () => fig && fig.classList.add("no-img");
+  if (LOCAL.has(c.id)){ img.onerror = () => { img.onerror = null; remote(); }; img.src = `img/${c.id}.jpg`; return; }
+  remote();
+  function remote(){
+    paintingURL(c).then(url => {
+      if (!url) return fail();
+      img.onerror = () => { img.onerror = fail; delete S.img[c.id]; save(); paintingURL(c).then(u2 => u2 && u2 !== url ? img.src = u2 : fail()); };
+      img.src = url;
+    });
+  }
+}
+function refreshImages(){ document.querySelectorAll("img[data-card]").forEach(img => { const c = byId(img.dataset.card); if (c && !img.complete) loadImg(img, c); }); }
+
+/* ---------- card rendering ---------- */
+function checks(c, sec, items, fn){
+  const done = S.checks[c.id] || {};
+  return `<ul class="checks">${items.map((it,i) => {
+    const k = `${sec}:${i}`;
+    return `<li><label><input type="checkbox" data-card="${c.id}" data-key="${k}" ${done[k] ? "checked" : ""}><span>${fn ? fn(it) : esc(it)}</span></label></li>`;
+  }).join("")}</ul>`;
+}
+function progress(c){
+  const total = (c.wardrobe.length + c.props.length + c.kit.length + c.settings.length + c.breakers.length);
+  const n = Object.values(S.checks[c.id] || {}).filter(Boolean).length;
+  return n ? `${n} of ${total} checked` : "";
+}
+function cardHTML(c){
+  const p = c.painting;
+  const people = c.kind === "Portrait";
+  const grad = `linear-gradient(160deg, ${c.palette.join(",")})`;
+  return `
+  <div class="stamp" aria-hidden="true"><span class="keep">Keep</span><span class="skip">Skip</span></div>
+  <figure class="plate">
+    <div class="frame"><img data-card="${c.id}" alt="${esc(p.title)} by ${esc(p.artist)}" decoding="async">
+      <div class="missing" style="background:${grad}">Painting not loaded yet. It appears once you're online.</div></div>
+    <figcaption><em>${esc(p.title)}</em><br>${esc(p.artist)}, ${esc(p.year)}<br>${esc(p.museum)}</figcaption>
+  </figure>
+  <div class="body">
+    <h2 class="title">${esc(c.title)}</h2>
+    <p class="mood">${esc(c.mood)}</p>
+    <div class="swatches" title="Target palette">${c.palette.map(h => `<span style="background:${h}"></span>`).join("")}</div>
+    <dl class="glance">
+      <dt>When</dt><dd>${esc(c.glance.when)}</dd>
+      <dt>Lens</dt><dd>${esc(c.glance.lens)}</dd>
+      <dt>Start at</dt><dd>${esc(c.glance.exposure)}</dd>
+    </dl>
+
+    <section class="sec"><h3>What to take from the painting</h3><ul class="plain">${c.steal.map(s => `<li>${esc(s)}</li>`).join("")}</ul></section>
+
+    <section class="sec"><h3>When and where</h3><p>${esc(c.when)}</p><p>${esc(c.where)}</p></section>
+
+    <section class="sec"><h3>${people ? "Posing and direction" : "Composition"}</h3><p>${esc(c.direction.pose)}</p>
+      ${c.direction.prompts.length ? `<h4>${people ? "Say this" : "Look for"}</h4><ul class="prompts">${c.direction.prompts.map(s => `<li>${esc(s)}</li>`).join("")}</ul>` : ""}
+    </section>
+
+    ${c.wardrobe.length || c.props.length ? `<section class="sec"><h3>Wardrobe and props</h3>
+      ${c.wardrobe.length ? `<h4>Clothing</h4>${checks(c,"w",c.wardrobe)}` : ""}
+      ${c.props.length ? `<h4>Props</h4>${checks(c,"p",c.props)}` : ""}</section>` : ""}
+
+    <section class="sec"><h3>Light</h3>
+      <dl class="kv"><dt>Direction</dt><dd>${esc(c.light.direction)}</dd><dt>Ratio</dt><dd>${esc(c.light.ratio)}</dd></dl>
+      <p style="margin-top:8px">${esc(c.light.notes)}</p></section>
+
+    <section class="sec"><h3>Pack</h3>${checks(c,"k",c.kit)}</section>
+
+    <section class="sec"><h3>Camera</h3>${checks(c,"s",c.settings, ([k,v]) => `<span class="k">${esc(k)}</span>${esc(v)}`)}</section>
+
+    <section class="sec"><h3>Before you press the shutter</h3><p style="color:var(--ink-2)">Scan the frame for these.</p>${checks(c,"b",c.breakers)}</section>
+
+    <section class="sec"><h3>If the light doesn't cooperate</h3><p>${esc(c.fallback)}</p><p style="color:var(--ink-2)">${esc(c.duration)}</p></section>
+
+    <section class="sec"><h3>Afterwards</h3><ol class="steps">${c.post.map(s => `<li>${esc(s)}</li>`).join("")}</ol></section>
+
+    <div class="card-foot"><button class="btn" data-clear="${c.id}">Clear checkmarks</button><span class="progress" data-prog="${c.id}">${progress(c)}</span></div>
+  </div>`;
+}
+
+/* ---------- filtering ---------- */
+function matches(c){
+  for (const [g] of GROUPS){ const sel = S.filters[g]; if (sel.length && !sel.some(v => c.tags[g].includes(v))) return false; }
+  if (S.matchNow && !c.tags.light.includes(currentPhase)) return false;
+  return true;
+}
+const deckCards = () => CARDS.filter(c => !S.kept.includes(c.id) && !S.skipped.includes(c.id) && matches(c));
+const activeFilterCount = () => GROUPS.reduce((n,[g]) => n + S.filters[g].length, 0) + (S.matchNow ? 1 : 0);
+
+/* ---------- deck ---------- */
+const deckEl = document.getElementById("deck");
+function renderDeck(){
+  const cards = deckCards();
+  deckEl.innerHTML = "";
+  document.getElementById("undo").disabled = !S.history.length;
+  document.getElementById("skip").disabled = document.getElementById("keep").disabled = !cards.length;
+  if (!cards.length){
+    const filtered = activeFilterCount() > 0;
+    deckEl.innerHTML = `<div class="empty"><h2>${filtered ? "Nothing left for these conditions" : "You've been through the whole deck"}</h2>
+      <p>${S.kept.length ? `${S.kept.length} kept for today.` : "Nothing kept yet."} ${filtered ? "Loosen the conditions or start the deck again." : "Start again to see every card."}</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center">
+      ${S.kept.length ? `<button class="btn primary" data-go="kept">Open kept cards</button>` : ""}
+      <button class="btn" data-reset="deck">Start the deck again</button>
+      ${filtered ? `<button class="btn" data-open="filters">Change conditions</button>` : ""}</div></div>`;
+    return;
+  }
+  cards.slice(0,2).reverse().forEach((c, i, arr) => {
+    const el = document.createElement("article");
+    el.className = "card" + (i < arr.length-1 ? " under" : "");
+    el.dataset.id = c.id;
+    el.innerHTML = cardHTML(c);
+    deckEl.appendChild(el);
+    loadImg(el.querySelector("img"), c);
+  });
+  attachSwipe(deckEl.lastElementChild);
+}
+function decide(dir){
+  const top = deckEl.querySelector(".card:not(.under)");
+  if (!top) return;
+  const id = top.dataset.id;
+  const w = window.innerWidth;
+  top.classList.remove("snap"); top.classList.add("fling");
+  top.style.transform = `translateX(${dir === "keep" ? w*1.2 : -w*1.2}px) rotate(${dir === "keep" ? 18 : -18}deg)`;
+  top.style.opacity = "0";
+  (dir === "keep" ? S.kept : S.skipped).push(id);
+  S.history.push([dir, id]); if (S.history.length > 50) S.history.shift();
+  save(); updateTabs();
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  setTimeout(renderDeck, reduce ? 0 : 300);
+}
+function undo(){
+  const last = S.history.pop(); if (!last) return;
+  const [dir, id] = last;
+  const arr = dir === "keep" ? S.kept : S.skipped;
+  const i = arr.lastIndexOf(id); if (i > -1) arr.splice(i,1);
+  save(); updateTabs(); renderDeck();
+}
+function attachSwipe(el){
+  const keepS = el.querySelector(".stamp .keep"), skipS = el.querySelector(".stamp .skip");
+  let x0=0, y0=0, dx=0, mode=null, pid=null;
+  el.addEventListener("pointerdown", e => {
+    if (e.target.closest("button,label,input,a")) return;
+    x0 = e.clientX; y0 = e.clientY; dx = 0; mode = null; pid = e.pointerId;
+    el.classList.remove("snap");
+  });
+  el.addEventListener("pointermove", e => {
+    if (e.pointerId !== pid) return;
+    const mx = e.clientX - x0, my = e.clientY - y0;
+    if (!mode){
+      if (Math.abs(mx) > 10 && Math.abs(mx) > Math.abs(my)*1.2){ mode = "h"; el.setPointerCapture(pid); }
+      else if (Math.abs(my) > 10) mode = "v";
+    }
+    if (mode !== "h") return;
+    dx = mx;
+    el.style.transform = `translateX(${dx}px) rotate(${dx/22}deg)`;
+    const t = Math.min(1, Math.abs(dx)/110);
+    keepS.style.opacity = dx > 0 ? t : 0; skipS.style.opacity = dx < 0 ? t : 0;
+  });
+  const end = e => {
+    if (e.pointerId !== pid) return;
+    pid = null;
+    if (mode === "h" && Math.abs(dx) > 100) return decide(dx > 0 ? "keep" : "skip");
+    el.classList.add("snap"); el.style.transform = ""; keepS.style.opacity = skipS.style.opacity = 0;
+  };
+  el.addEventListener("pointerup", end);
+  el.addEventListener("pointercancel", end);
+}
+
+/* ---------- kept / all ---------- */
+const listEl = document.getElementById("list");
+function row(c, tag){
+  return `<button class="row" data-read="${c.id}"><span class="thumb" data-thumb="${c.id}" style="background-image:linear-gradient(160deg,${c.palette.join(",")})"></span>
+    <span><span class="t">${esc(c.title)}</span><br><span class="s">${esc(c.glance.when)}</span></span>${tag ? `<span class="tag">${tag}</span>` : ""}</button>`;
+}
+function renderList(){
+  const kept = S.kept.map(byId).filter(Boolean);
+  listEl.innerHTML = `
+    <h2>Kept for today</h2>
+    ${kept.length ? kept.map(c => row(c)).join("") : `<p class="note">Swipe right on a card in the deck to keep it here.</p>`}
+    <h2>Portraits</h2>${CARDS.filter(c => c.kind === "Portrait").map(c => row(c, S.kept.includes(c.id) ? "Kept" : "")).join("")}
+    <h2>Landscapes</h2>${CARDS.filter(c => c.kind === "Landscape").map(c => row(c, S.kept.includes(c.id) ? "Kept" : "")).join("")}
+    <div style="margin-top:20px;display:flex;gap:10px;flex-wrap:wrap">${kept.length ? `<button class="btn" data-reset="kept">Clear kept cards</button>` : ""}<button class="btn" data-reset="deck">Start the deck again</button></div>`;
+  listEl.querySelectorAll("[data-thumb]").forEach(t => {
+    const c = byId(t.dataset.thumb);
+    const go = u => { if (u) t.style.backgroundImage = `url("${u}")`; };
+    if (LOCAL.has(c.id)) go(`img/${c.id}.jpg`); else paintingURL(c).then(go);
+  });
+}
+function openReader(id){
+  const c = byId(id);
+  const wrap = document.createElement("div");
+  wrap.className = "reader"; wrap.setAttribute("role","dialog"); wrap.setAttribute("aria-label", c.title);
+  wrap.innerHTML = `<div class="bar"><button class="icon-btn" data-close>Close</button>
+    <button class="icon-btn" data-togglekeep="${id}">${S.kept.includes(id) ? "Remove from kept" : "Keep for today"}</button></div>
+    <article class="card">${cardHTML(c)}</article>`;
+  document.body.appendChild(wrap);
+  loadImg(wrap.querySelector("img"), c);
+  wrap.querySelector("[data-close]").focus();
+}
+
+/* ---------- tabs ---------- */
+let view = "deck";
+function updateTabs(){ document.getElementById("tabKept").textContent = S.kept.length ? `Kept (${S.kept.length})` : "Kept"; }
+function show(v){
+  view = v;
+  document.getElementById("tabDeck").setAttribute("aria-selected", v === "deck");
+  document.getElementById("tabKept").setAttribute("aria-selected", v === "kept");
+  deckEl.classList.toggle("hidden", v !== "deck");
+  listEl.classList.toggle("hidden", v !== "kept");
+  document.getElementById("actions").classList.toggle("hidden", v !== "deck");
+  v === "deck" ? renderDeck() : renderList();
+}
+
+/* ---------- conditions sheet ---------- */
+function openFilters(){
+  const scrim = document.createElement("div"); scrim.className = "scrim";
+  const sh = document.createElement("div"); sh.className = "sheet"; sh.setAttribute("role","dialog"); sh.setAttribute("aria-label","Conditions");
+  const draw = () => {
+    const loc = S.loc || HOME;
+    sh.innerHTML = `<h2>Conditions</h2>
+      <p class="small">Pick what you have right now. Cards that don't fit are hidden from the deck.</p>
+      <div class="group"><div class="chips"><button class="chip" data-now aria-pressed="${S.matchNow}">Match the light right now</button></div></div>
+      ${GROUPS.map(([g,label,opts]) => `<div class="group"><span>${label}</span><div class="chips">${opts.map(([v,t]) =>
+        `<button class="chip" data-g="${g}" data-v="${v}" aria-pressed="${S.filters[g].includes(v)}">${t}</button>`).join("")}</div></div>`).join("")}
+      <div class="foot"><button class="btn primary" data-done>Show ${deckCards().length} cards</button><button class="btn" data-clearf>Clear conditions</button></div>
+      <div class="group"><span>Sun times are for ${esc(loc.label)}</span><div class="chips"><button class="chip" data-loc>Use my location</button>${S.loc ? `<button class="chip" data-home>Back to Montréal</button>` : ""}</div></div>
+      <div class="group"><span>Offline</span><button class="btn" data-offline>Save all paintings for offline use</button><p class="small" data-offmsg>Do this once on Wi-Fi before a hike.</p></div>`;
+  };
+  draw();
+  const close = () => { scrim.remove(); sh.remove(); updateFilterBtn(); if (view === "deck") renderDeck(); };
+  scrim.onclick = close;
+  sh.onclick = async e => {
+    const b = e.target.closest("button"); if (!b) return;
+    if (b.dataset.g){ const a = S.filters[b.dataset.g], i = a.indexOf(b.dataset.v); i > -1 ? a.splice(i,1) : a.push(b.dataset.v); save(); draw(); }
+    else if (b.hasAttribute("data-now")){ S.matchNow = !S.matchNow; save(); draw(); }
+    else if (b.hasAttribute("data-clearf")){ S.filters = defaults().filters; S.matchNow = false; save(); draw(); }
+    else if (b.hasAttribute("data-done")) close();
+    else if (b.hasAttribute("data-home")){ S.loc = null; save(); renderLight(); draw(); }
+    else if (b.hasAttribute("data-loc")){
+      b.textContent = "Locating…";
+      navigator.geolocation?.getCurrentPosition(pos => { S.loc = { lat: pos.coords.latitude, lon: pos.coords.longitude, label: "your location" }; save(); renderLight(); draw(); },
+        () => { b.textContent = "Location unavailable. Check permissions."; }, { timeout: 10000, maximumAge: 600000 });
+    }
+    else if (b.hasAttribute("data-offline")){
+      const msg = sh.querySelector("[data-offmsg]"); b.disabled = true; let ok = 0;
+      for (const c of CARDS){
+        msg.textContent = `Saving ${ok+1} of ${CARDS.length}: ${c.painting.title}`;
+        try { const u = LOCAL.has(c.id) ? `img/${c.id}.jpg` : await paintingURL(c); if (u){ await fetch(u, { mode: u.startsWith("http") ? "no-cors" : "same-origin" }); ok++; } } catch(e){}
+      }
+      msg.textContent = ok === CARDS.length ? `All ${ok} paintings saved. The app works without signal now.` : `${ok} of ${CARDS.length} saved. Try again on a better connection.`;
+      b.disabled = false;
+    }
+  };
+  document.body.append(scrim, sh);
+  sh.querySelector("button").focus();
+}
+function updateFilterBtn(){
+  const n = activeFilterCount(), b = document.getElementById("openFilters");
+  b.textContent = n ? `Conditions (${n})` : "Conditions";
+  b.setAttribute("aria-pressed", n > 0);
+}
+
+/* ---------- global events ---------- */
+document.getElementById("tabDeck").onclick = () => show("deck");
+document.getElementById("tabKept").onclick = () => show("kept");
+document.getElementById("openFilters").onclick = openFilters;
+document.getElementById("skip").onclick = () => decide("skip");
+document.getElementById("keep").onclick = () => decide("keep");
+document.getElementById("undo").onclick = undo;
+
+document.addEventListener("change", e => {
+  const i = e.target; if (!i.matches("input[data-card]")) return;
+  const m = S.checks[i.dataset.card] = S.checks[i.dataset.card] || {};
+  if (i.checked) m[i.dataset.key] = true; else delete m[i.dataset.key];
+  save();
+  document.querySelectorAll(`[data-prog="${i.dataset.card}"]`).forEach(p => p.textContent = progress(byId(i.dataset.card)));
+});
+document.addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  if (b.dataset.clear){ delete S.checks[b.dataset.clear]; save();
+    document.querySelectorAll(`input[data-card="${b.dataset.clear}"]`).forEach(i => i.checked = false);
+    document.querySelectorAll(`[data-prog="${b.dataset.clear}"]`).forEach(p => p.textContent = ""); }
+  else if (b.dataset.reset === "deck"){ S.skipped = []; S.history = S.history.filter(h => h[0] === "keep"); save(); show("deck"); }
+  else if (b.dataset.reset === "kept"){ S.kept = []; S.history = S.history.filter(h => h[0] !== "keep"); save(); updateTabs(); renderList(); }
+  else if (b.dataset.go === "kept") show("kept");
+  else if (b.dataset.open === "filters") openFilters();
+  else if (b.dataset.read) openReader(b.dataset.read);
+  else if (b.hasAttribute("data-close")){ b.closest(".reader").remove(); if (view === "kept") renderList(); }
+  else if (b.dataset.togglekeep){
+    const id = b.dataset.togglekeep, i = S.kept.indexOf(id);
+    if (i > -1) S.kept.splice(i,1); else { S.kept.push(id); S.skipped = S.skipped.filter(x => x !== id); }
+    save(); updateTabs(); b.textContent = S.kept.includes(id) ? "Remove from kept" : "Keep for today";
+  }
+});
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape"){ const r = document.querySelector(".reader"); if (r){ r.remove(); if (view === "kept") renderList(); return; } document.querySelector(".scrim")?.click(); }
+  if (view !== "deck" || document.querySelector(".reader,.sheet")) return;
+  if (e.key === "ArrowRight") decide("keep");
+  if (e.key === "ArrowLeft") decide("skip");
+});
+
+renderLight(); setInterval(() => { const before = currentPhase; renderLight(); if (S.matchNow && before !== currentPhase && view === "deck") renderDeck(); }, 60000);
+updateTabs(); updateFilterBtn(); show("deck");
+
+if ("serviceWorker" in navigator && location.protocol !== "file:") navigator.serviceWorker.register("sw.js").catch(() => {});
+})();
+</script>
+</body>
+</html>

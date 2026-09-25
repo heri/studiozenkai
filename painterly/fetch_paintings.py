@@ -7,7 +7,7 @@ Then commit img/ and push. Standard library only, plus `node` to read cards.js.
 Cards with `images` get each entry saved to img/<file>. Older cards with a single
 `painting` are saved to img/<card-id>.jpg and listed in img/index.json.
 Existing files are kept; delete one to fetch it again.
-On macOS, downloads are resized to 1600 px and recompressed with `sips`.
+On macOS, downloads are resized to 1400 px and recompressed with `sips`.
 """
 import json, shutil, subprocess, sys, time, urllib.parse, urllib.request
 from pathlib import Path
@@ -61,7 +61,7 @@ def download(url, dest):
         with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=60) as r:
             dest.write_bytes(r.read())
     if shutil.which("sips"):
-        subprocess.run(["sips", "-Z", "1600", "-s", "format", "jpeg", "-s", "formatOptions", "80", str(dest)],
+        subprocess.run(["sips", "-Z", "1400", "-s", "format", "jpeg", "-s", "formatOptions", "72", str(dest)],
                        check=False, capture_output=True)
 
 cards = json.loads(subprocess.run(

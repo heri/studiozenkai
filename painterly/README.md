@@ -22,7 +22,7 @@ downloads what the cards name:
 
     python3 fetch_paintings.py
 
-It saves anything missing to `img/<card-id>/`, resized to 1600 px, and keeps what's
+It saves anything missing to `img/<card-id>/`, resized to 1400 px, and keeps what's
 already there. It needs `node` and `curl`. Look at new images before committing.
 
 A card can still use a single `painting` with a Wikipedia lookup instead of `images`;
@@ -35,7 +35,7 @@ in its "Posing and direction" section. The format is described at the top of `ca
 
 ## Offline
 
-Open "Conditions" and tap "Save all images for offline use" (about 30 MB) once on Wi-Fi. After that
+Open "Conditions" and tap "Save all images for offline use" (about 40 MB) once on Wi-Fi. After that
 the whole deck works without signal. Sun times are computed on the phone.
 
 ## Editing cards

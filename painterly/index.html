@@ -246,6 +246,7 @@ const CARDS = window.CARDS || [];
 const KEY = "painterly.v1";
 const HOME = { lat: 45.5017, lon: -73.5673, label: "Montréal" };
 const GROUPS = [
+  ["style", "Painting style", [["masters","Old masters"],["impressionism","Impressionism"],["pointillism","Pointillism"]]],
   ["subject", "Who's in front of the camera", [["kids","Kids"],["adults","Adults"],["family","Family group"],["none","No people"]]],
   ["place", "Where you are", [["water","By the water"],["street","City streets"],["farm","Farm and fields"],["hills","Hills and mountains"],["forest","Forest"],["garden","Garden or park"],["indoors","Indoors and doorways"]]],
   ["light", "Light", [["golden","Golden hour"],["blue","Blue hour"],["day","Daytime"],["night","After dark"]]],
@@ -254,7 +255,7 @@ const GROUPS = [
 ];
 
 /* ---------- state ---------- */
-function defaults(){ return { kept:[], skipped:[], history:[], checks:{}, filters:{subject:[],place:[],light:[],weather:[],season:[]}, matchNow:false, loc:null, img:{} }; }
+function defaults(){ return { kept:[], skipped:[], history:[], checks:{}, filters:{style:[],subject:[],place:[],light:[],weather:[],season:[]}, matchNow:false, loc:null, img:{} }; }
 let S;
 try { S = Object.assign(defaults(), JSON.parse(localStorage.getItem(KEY) || "{}")); } catch(e){ S = defaults(); }
 S.filters = Object.assign(defaults().filters, S.filters);   // groups added since the phone last saved
@@ -410,16 +411,28 @@ const PLAN_W = 360, PLAN_H = 290, PX = 180, PY = 150;
 const clockPt = (h, r) => { const a = h / 12 * 2 * Math.PI; return [PX + r * Math.sin(a), PY - r * Math.cos(a)]; };
 const planR = d => Math.min(118, 34 + 34 * Math.sqrt(d));   // schematic: near things spread out, far things pinned to the rim
 const f1 = n => Math.round(n * 10) / 10;
-function planLabel(x, y, h, text, gap = 20){
-  // Put the label outward from its icon, wrapped to two short lines, kept inside the drawing.
+const boxOf = (anchor, lx, ly, wide, tall) => {
+  const x0 = anchor === "start" ? lx : anchor === "end" ? lx - wide : lx - wide / 2;
+  return [x0, ly - 10, x0 + wide, ly + tall + 3];
+};
+const overlaps = (a, b) => a[0] < b[2] && b[0] < a[2] && a[1] < b[3] && b[1] < a[3];
+function planLabel(x, y, h, text, gap, taken){
+  // Wrap to short lines, then try beside the icon, above it and below it (outward side first),
+  // keeping the first spot that stays inside the drawing and clear of labels already placed.
   const words = String(text).split(" "), lines = [""];
   for (const w of words){ const l = lines[lines.length-1]; if (l && (l + " " + w).length > 14 && lines.length < 3) lines.push(w); else lines[lines.length-1] = l ? l + " " + w : w; }
   const s = Math.sin(h / 6 * Math.PI), co = Math.cos(h / 6 * Math.PI);
-  const anchor = s > .35 ? "start" : s < -.35 ? "end" : "middle";
-  const wide = Math.max(...lines.map(l => l.length)) * 6;
-  let lx = x + s * gap, ly = y - co * (gap + 2) - (co > .35 ? (lines.length - 1) * 13 : 0) + 4;
-  if (anchor === "end") lx = Math.max(lx, wide + 4); else if (anchor === "start") lx = Math.min(lx, PLAN_W - wide - 4);
-  else lx = Math.min(Math.max(lx, wide / 2 + 4), PLAN_W - wide / 2 - 4);
+  const wide = Math.max(...lines.map(l => l.length)) * 6, tall = (lines.length - 1) * 13;
+  const mid = Math.min(Math.max(x, wide / 2 + 4), PLAN_W - wide / 2 - 4);
+  const above = ["middle", mid, y - gap - tall], below = ["middle", mid, y + gap + 10];
+  const spots = [];
+  if (Math.abs(s) > .35) spots.push([s > 0 ? "start" : "end", x + Math.sign(s) * gap, y - tall / 2 + 4]);
+  spots.push(...(co >= 0 ? [above, below] : [below, above]));
+  const inside = b => b[0] >= 2 && b[2] <= PLAN_W - 2 && b[1] >= 2 && b[3] <= PLAN_H - 2;
+  const pick = spots.find(sp => { const b = boxOf(sp[0], sp[1], sp[2], wide, tall); return inside(b) && !taken.some(t => overlaps(b, t)); })
+    || spots.find(sp => inside(boxOf(sp[0], sp[1], sp[2], wide, tall))) || spots[0];
+  const [anchor, lx, ly] = pick;
+  taken.push(boxOf(anchor, lx, ly, wide, tall));
   return `<text class="pl-lab" x="${f1(lx)}" y="${f1(ly)}" text-anchor="${anchor}">${lines.map((l, k) => `<tspan x="${f1(lx)}" dy="${k ? 13 : 0}">${esc(l)}</tspan>`).join("")}</text>`;
 }
 function barAcross(h, r, len){
@@ -429,7 +442,7 @@ function barAcross(h, r, len){
 }
 function planSVG(c){
   const p = c.plan;
-  const out = [];
+  const out = [], taken = [];   // taken: label boxes already placed
   const camR = planR(p.camera.dist), [camX, camY] = clockPt(6, camR);
   const mm = +(/(\d+)\s*mm/.exec(c.glance.lens) || [])[1];
   const hfov = mm ? 2 * Math.atan(43.8 / (2 * mm)) : 0;          // GFX sensor width
@@ -450,6 +463,7 @@ function planSVG(c){
     out.push(`<path class="pl-zone" d="M${f1(x0)} ${f1(y0)} A${R} ${R} 0 0 1 ${f1(x1)} ${f1(y1)}"/>`);
     const [lx, ly] = clockPt(z.at, R - 16);
     out.push(`<text class="pl-zlab" x="${f1(lx)}" y="${f1(ly + 4)}" text-anchor="middle">${esc(z.label)}</text>`);
+    taken.push(boxOf("middle", lx, ly + 4, z.label.length * 6.5, 0));
   }
 
   // Light sources, with the light they throw on the subject
@@ -469,7 +483,7 @@ function planSVG(c){
     } else {
       out.push(`<path class="pl-beam lantern" d="M${f1(x)} ${f1(y)} L${PX} ${PY}"/><circle class="pl-lantern" cx="${f1(x)}" cy="${f1(y)}" r="7"/>`);
     }
-    out.push(planLabel(x, y, l.at, l.label, l.kind === "sun" ? 30 : 20));
+    out.push(planLabel(x, y, l.at, l.label, l.kind === "sun" || l.kind === "sky" ? 30 : 20, taken));
     if (k === 0){
       // Angle between the light and the lens axis, the number photographers talk about.
       let d = ((l.at - 6) % 12 + 12) % 12; if (d > 6) d -= 12;
@@ -486,7 +500,7 @@ function planSVG(c){
   for (const m of p.mods || []){
     const r = planR(m.dist), [[ax, ay], [bx, by], [x, y]] = barAcross(m.at, r, 34);
     out.push(`<line class="pl-mod ${m.kind}" x1="${f1(ax)}" y1="${f1(ay)}" x2="${f1(bx)}" y2="${f1(by)}"/>`);
-    out.push(planLabel(x, y, m.at, m.label));
+    out.push(planLabel(x, y, m.at, m.label, 26, taken));   // 26: clear the diagonal bar's own reach
   }
 
   // Subject: shoulders across, head, nose pointing where the face points

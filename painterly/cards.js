@@ -5,6 +5,7 @@
    weather: clear | overcast | fog | snow | storm
    season:  spring | summer | autumn | winter
    place:   water | street | farm | hills | forest | garden | indoors
+   style:   masters | impressionism | pointillism
    painting.wiki: English Wikipedia article titles to try, in order.
    painting.commons: fallback search on Wikimedia Commons.
 
@@ -40,7 +41,7 @@ window.CARDS = [
   ],
   mood: "Quiet absorption in a simple task, lit by one cool opening.",
   palette: ["#e3d6b8", "#c9a13b", "#2f4f8f", "#5b4a36", "#1b2230"],
-  tags: { subject: ["kids", "adults"], light: ["day"], weather: ["clear", "overcast", "fog", "snow", "storm"], season: ["spring", "summer", "autumn", "winter"], place: ["indoors", "farm"] },
+  tags: { subject: ["kids", "adults"], light: ["day"], weather: ["clear", "overcast", "fog", "snow", "storm"], season: ["spring", "summer", "autumn", "winter"], place: ["indoors", "farm"], style: ["masters"] },
   plan: {
     camera: { dist: 3 },
     subject: { facing: 8.5, label: "Face turned to the light" },
@@ -119,7 +120,7 @@ window.CARDS = [
   ],
   mood: "A face surfacing out of darkness: inward, serious, warm.",
   palette: ["#e6c89a", "#a86b2d", "#8e2f22", "#3b2a1c", "#141a22"],
-  tags: { subject: ["kids", "adults"], light: ["day", "golden"], weather: ["clear", "overcast"], season: ["spring", "summer", "autumn"], place: ["forest", "farm"] },
+  tags: { subject: ["kids", "adults"], light: ["day", "golden"], weather: ["clear", "overcast"], season: ["spring", "summer", "autumn"], place: ["forest", "farm"], style: ["masters"] },
   plan: {
     camera: { dist: 2.5 },
     subject: { facing: 6, label: "Turn until the cheek triangle shows" },
@@ -189,7 +190,7 @@ window.CARDS = [
   ],
   mood: "Children in the last warm light, as if the moment is already a memory.",
   palette: ["#f0c77a", "#b8742f", "#6f3d2a", "#4a5a3a", "#27303b"],
-  tags: { subject: ["kids", "family"], light: ["golden"], weather: ["clear", "fog"], season: ["spring", "summer", "autumn"], place: ["farm", "hills", "garden"] },
+  tags: { subject: ["kids", "family"], light: ["golden"], weather: ["clear", "fog"], season: ["spring", "summer", "autumn"], place: ["farm", "hills", "garden"], style: ["masters"] },
   plan: {
     camera: { dist: 6, label: "At the child's eye level" },
     subject: { facing: 6 },
@@ -261,7 +262,7 @@ window.CARDS = [
   ],
   mood: "Twilight hush: small warm lights in a cool world.",
   palette: ["#f3e2b0", "#e0a24a", "#7f93a8", "#45566b", "#1f2a36"],
-  tags: { subject: ["kids", "family"], light: ["blue", "night"], weather: ["clear", "overcast"], season: ["spring", "summer", "autumn", "winter"], place: ["garden", "farm"] },
+  tags: { subject: ["kids", "family"], light: ["blue", "night"], weather: ["clear", "overcast"], season: ["spring", "summer", "autumn", "winter"], place: ["garden", "farm"], style: ["masters", "impressionism"] },
   glance: { when: "15 to 35 minutes after sunset", lens: "GF 80mm f/1.7", exposure: "f/1.7, 1/125, ISO 1600 to 6400" },
   steal: [
     "Two colour temperatures: cool blue-violet ambient, warm lantern glow from below.",
@@ -321,7 +322,7 @@ window.CARDS = [
   ],
   mood: "A single figure alone in a vast soft field at dawn.",
   palette: ["#e9a55a", "#a05a2c", "#6d6a4b", "#4d5b54", "#2a3038"],
-  tags: { subject: ["kids", "adults"], light: ["golden"], weather: ["fog", "clear"], season: ["spring", "summer", "autumn"], place: ["farm", "water"] },
+  tags: { subject: ["kids", "adults"], light: ["golden"], weather: ["fog", "clear"], season: ["spring", "summer", "autumn"], place: ["farm", "water"], style: ["masters"] },
   glance: { when: "Sunrise to 45 minutes after, with mist", lens: "Canon 300mm f/2.8L", exposure: "f/2.8, 1/1000, +1 EV" },
   steal: [
     "The sun sits on the horizon behind the figure.",
@@ -383,7 +384,7 @@ window.CARDS = [
   ],
   mood: "Warm figures in a cold, glowing world.",
   palette: ["#eef0ea", "#b33a2b", "#c59a45", "#2e4a3c", "#8ea3b8"],
-  tags: { subject: ["kids", "family"], light: ["golden", "day"], weather: ["clear", "snow"], season: ["winter"], place: ["farm", "water", "forest", "hills"] },
+  tags: { subject: ["kids", "family"], light: ["golden", "day"], weather: ["clear", "snow"], season: ["winter"], place: ["farm", "water", "forest", "hills"], style: ["masters"] },
   glance: { when: "Winter golden hour (starts mid-afternoon)", lens: "Canon 135mm f/2L", exposure: "f/2, 1/500, +1.7 EV" },
   steal: [
     "Warm clothing colours against a pale, cool world.",
@@ -443,7 +444,7 @@ window.CARDS = [
   ],
   mood: "Honest work, bent backs, dignity, late sun.",
   palette: ["#e3c98f", "#b98a4b", "#8a4a32", "#4d5d6b", "#3a3a2c"],
-  tags: { subject: ["kids", "adults", "family"], light: ["golden", "day"], weather: ["clear", "overcast"], season: ["summer", "autumn"], place: ["farm", "garden"] },
+  tags: { subject: ["kids", "adults", "family"], light: ["golden", "day"], weather: ["clear", "overcast"], season: ["summer", "autumn"], place: ["farm", "garden"], style: ["masters"] },
   glance: { when: "Last 90 minutes before sunset, harvest season", lens: "GF 80mm f/1.7", exposure: "f/4, 1/500, -0.3 EV" },
   steal: [
     "Figures in a frieze, bent in action.",
@@ -504,7 +505,7 @@ window.CARDS = [
   ],
   mood: "The city as a classical scene bathed in low gold.",
   palette: ["#f4d38a", "#d69a4a", "#8a7a5a", "#4f5d6a", "#232a33"],
-  tags: { subject: ["none"], light: ["golden", "blue"], weather: ["clear"], season: ["spring", "summer", "autumn", "winter"], place: ["street", "water", "hills"] },
+  tags: { subject: ["none"], light: ["golden", "blue"], weather: ["clear"], season: ["spring", "summer", "autumn", "winter"], place: ["street", "water", "hills"], style: ["masters"] },
   glance: { when: "30 to 60 minutes before sunset", lens: "GF 80mm f/1.7", exposure: "f/8, ISO 100, bracket ±2" },
   steal: [
     "The sun low in or near the frame.",
@@ -565,7 +566,7 @@ window.CARDS = [
   ],
   mood: "Solitude above the clouds.",
   palette: ["#e8dccb", "#b9b0a8", "#7f8a96", "#4a5563", "#22282f"],
-  tags: { subject: ["none", "adults"], light: ["golden"], weather: ["fog"], season: ["spring", "summer", "autumn", "winter"], place: ["hills", "water"] },
+  tags: { subject: ["none", "adults"], light: ["golden"], weather: ["fog"], season: ["spring", "summer", "autumn", "winter"], place: ["hills", "water"], style: ["masters"] },
   glance: { when: "Sunrise after a clear, calm night", lens: "Contax 645 35mm f/3.5", exposure: "f/8, ISO 100, bracket" },
   steal: [
     "A figure seen from behind (Rückenfigur), dead centre.",
@@ -622,7 +623,7 @@ window.CARDS = [
   ],
   mood: "Light falling like incense through old trees.",
   palette: ["#e7d59a", "#a7a06a", "#3f5a46", "#2c3b31", "#1a2226"],
-  tags: { subject: ["none", "kids"], light: ["golden", "day"], weather: ["fog", "clear"], season: ["spring", "summer", "autumn"], place: ["forest"] },
+  tags: { subject: ["none", "kids"], light: ["golden", "day"], weather: ["fog", "clear"], season: ["spring", "summer", "autumn"], place: ["forest"], style: ["masters"] },
   glance: { when: "1 to 2 hours after sunrise, with mist", lens: "Contax 645 35mm f/3.5", exposure: "f/8, ISO 200, -1 EV" },
   steal: [
     "Shafts of light through mist.",
@@ -679,7 +680,7 @@ window.CARDS = [
   ],
   mood: "Weather passing; one patch of sun on the land.",
   palette: ["#e5d7a8", "#8f9a5a", "#4e5c4a", "#3f4650", "#1c2129"],
-  tags: { subject: ["none"], light: ["day", "golden"], weather: ["storm"], season: ["spring", "summer", "autumn"], place: ["hills", "farm", "water"] },
+  tags: { subject: ["none"], light: ["day", "golden"], weather: ["storm"], season: ["spring", "summer", "autumn"], place: ["hills", "farm", "water"], style: ["masters"] },
   glance: { when: "As a storm front clears", lens: "GF 80mm f/1.7", exposure: "f/8, ISO 100, bracket" },
   steal: [
     "Half the scene under storm, half in sun.",
@@ -732,7 +733,7 @@ window.CARDS = [
   ],
   mood: "Abundance: a golden valley at peak colour.",
   palette: ["#f0c46a", "#c7682f", "#8b3a2a", "#6f86a0", "#2c3530"],
-  tags: { subject: ["none"], light: ["golden", "day"], weather: ["clear", "overcast"], season: ["autumn"], place: ["water", "hills", "farm"] },
+  tags: { subject: ["none"], light: ["golden", "day"], weather: ["clear", "overcast"], season: ["autumn"], place: ["water", "hills", "farm"], style: ["masters"] },
   glance: { when: "Peak foliage, golden hour", lens: "Contax 645 35mm f/3.5", exposure: "f/8, ISO 100" },
   steal: [
     "Warm foreground trees framing the view.",
@@ -790,7 +791,7 @@ window.CARDS = [
     "A low horizon, so the sky and its reflection dominate."
   ],
   palette: ["#efe4c8", "#c9b58a", "#7d8f86", "#465a55", "#232b2d"],
-  tags: { subject: ["none"], light: ["golden", "blue"], weather: ["clear", "overcast", "fog"], season: ["spring", "summer", "autumn"], place: ["water"] },
+  tags: { subject: ["none"], light: ["golden", "blue"], weather: ["clear", "overcast", "fog"], season: ["spring", "summer", "autumn"], place: ["water"], style: ["masters"] },
   glance: { when: "Windless dawn or dusk", lens: "GF 80mm f/1.7", exposure: "f/8, ISO 100, tripod" },
   when: "Windless dawn or dusk. Dawn is usually calmer. Blue hour extends the look.",
   where: "Small lake, pond or slow river with a tree line or building on the far bank.",
@@ -835,7 +836,7 @@ window.CARDS = [
   ],
   mood: "Snow glowing gold and blue, with one small living thing.",
   palette: ["#f4eee0", "#e8d6a8", "#a8b6c8", "#6f7f96", "#39414d"],
-  tags: { subject: ["none"], light: ["day", "golden"], weather: ["clear"], season: ["winter"], place: ["farm"] },
+  tags: { subject: ["none"], light: ["day", "golden"], weather: ["clear"], season: ["winter"], place: ["farm"], style: ["impressionism"] },
   glance: { when: "Sunny afternoon after snowfall", lens: "GF 80mm f/1.7", exposure: "f/8, ISO 100, +1.7 EV" },
   steal: [
     "Backlit snow: shadows of a fence fall toward the viewer.",
@@ -874,5 +875,731 @@ window.CARDS = [
   breakers: ["Grey, underexposed snow", "Neutral grey shadows (auto WB)", "Tire tracks"],
   fallback: "Overcast: switch to Winter Fairytale close-ups.",
   duration: "The low sun gives you about an hour."
+},
+{
+  id: "parasol-hilltop",
+  title: "Woman with a Parasol",
+  kind: "Portrait",
+  images: [
+    { kind: "painting", file: "parasol-hilltop/madame-monet-and-son.jpg", title: "Woman with a Parasol – Madame Monet and Her Son", artist: "Claude Monet", year: "1875", museum: "National Gallery of Art, Washington", wiki: ["Woman_with_a_Parasol_–_Madame_Monet_and_Her_Son"] },
+    { kind: "photo", file: "parasol-hilltop/unsplash-QWv1gY20P-g.jpg", unsplash: "QWv1gY20P-g", by: "Jovan Vasiljević" },
+    { kind: "painting", file: "parasol-hilltop/parasol-facing-left.jpg", title: "Woman with a Parasol, Facing Left", artist: "Claude Monet", year: "1886", museum: "Musée d'Orsay, Paris", commons: "File:Monet - Essai de figure en plein air - femme à l'ombrelle tournée vers la gauche - Musée d’Orsay.jpg" },
+    { kind: "photo", file: "parasol-hilltop/unsplash-HECNkX7TpSc.jpg", unsplash: "HECNkX7TpSc", by: "billow926" }
+  ],
+  mood: "A breezy summer afternoon, seen from below against moving clouds.",
+  palette: ["#f4f0e4", "#a9c4dc", "#5b86b5", "#8aa35a", "#d8c27a"],
+  tags: { subject: ["adults", "kids", "family"], light: ["day", "golden"], weather: ["clear"], season: ["spring", "summer"], place: ["hills", "farm", "garden"], style: ["impressionism"] },
+  plan: {
+    camera: { dist: 5, label: "Low, below their feet, tilted up" },
+    subject: { facing: 5.5, label: "Paused mid-walk, glancing back down at you" },
+    lights: [{ kind: "sun", at: 10.5, dist: 20, label: "Sun high, behind the shoulder" }],
+    mods: [{ kind: "white", at: 4.5, dist: 1.5, label: "White reflector, low" }],
+    zones: [{ at: 12, label: "Open sky and clouds" }]
+  },
+  glance: { when: "Mid-afternoon on a breezy day with cumulus", lens: "Contax 645 140mm f/2.8", exposure: "f/4, 1/1000, +0.7 EV" },
+  steal: [
+    "The camera looks up: the figure stands against sky, not landscape.",
+    "Backlight makes the parasol glow; the face sits in soft coloured shade.",
+    "Wind: the veil, the skirt and the grass all move the same way.",
+    "Shadows are blue and green, never black."
+  ],
+  when: "Mid-afternoon to early golden hour in summer, with a breeze and scattered cumulus. Monet painted it in one sitting; the clouds change in minutes, so work fast.",
+  where: "Any small rise: a meadow hill, dune, dyke or field edge where you can stand below the subject and see only sky behind them. Long grass or wildflowers at their feet.",
+  direction: {
+    pose: "Subject on the crest, you 4 to 6 m below and in front. Sun behind and to one side so the parasol is rim-lit. Ask them to walk along the crest, pause and turn back toward you. A child a few metres behind adds Monet's depth.",
+    prompts: [
+      "Walk along the top, then stop and look back as if I called your name.",
+      "Hold the parasol against the wind, don't fight it.",
+      "Let the scarf go wherever the wind takes it.",
+      "(To the child) Walk up the hill behind her, slowly."
+    ]
+  },
+  wardrobe: ["White or cream long dress in a light fabric that moves", "Sheer scarf or veil", "Straw hat", "Child: white shirt and straw hat", "Nothing dark, nothing printed"],
+  props: ["Parasol: white, lace, or with a pale green lining", "Long sheer scarf"],
+  light: {
+    direction: "Sun behind and to one side, above the subject.",
+    ratio: "About 1:2: sky and grass fill the shadow side with colour.",
+    notes: "Let the parasol go translucent against the sun. Protect the highlights on the dress; the shade side should read blue-green, not grey."
+  },
+  kit: ["Contax 645 140mm f/2.8 (Zeiss colour and flare: made for this)", "Contax 645 35mm f/3.5 (wide and low, lots of sky)", "Canon 135mm f/2L (faster AF if they keep moving)", "White reflector", "Kneeling pad"],
+  settings: [
+    ["Mode", "A"],
+    ["Aperture", "f/4: the face holds while the grass melts"],
+    ["Shutter", "1/1000 or faster for the wind"],
+    ["ISO", "Auto, base 100"],
+    ["White balance", "Fixed 5800K"],
+    ["Film simulation", "Astia (soft skin, bright colour) or Classic Neg."],
+    ["Tone", "Highlight -1, Shadow -1, Colour +1"],
+    ["Exposure", "+0.7 EV against the sky"],
+    ["Focus", "AF-C with eye detect"]
+  ],
+  post: [
+    "Protect the sky: pull highlights until the clouds keep their texture.",
+    "Lift shadows and push them toward blue-green (hue 190, sat 12). No black anywhere.",
+    "Clarity -20, texture -10: soft, not crunchy.",
+    "Vibrance +20, saturation 0; blue and green luminance up a touch.",
+    "Optional brushwork: Photoshop's Oil Paint filter on a copy at 15 to 25% opacity.",
+    "Crop 4:5, figure large and slightly off-centre."
+  ],
+  breakers: ["Horizon or buildings behind the figure (get lower)", "Sun straight overhead: the parasol won't glow", "Stiff synthetic fabric that doesn't move", "Sunglasses"],
+  fallback: "No wind: a helper out of frame lifts the scarf. Overcast: switch to Reading in the Garden.",
+  duration: "Twenty minutes. The clouds change constantly, so keep shooting."
+},
+{
+  id: "garden-reading",
+  title: "Reading in the Garden",
+  kind: "Portrait",
+  images: [
+    { kind: "painting", file: "garden-reading/morisot-reading.jpg", title: "Reading", artist: "Berthe Morisot", year: "1873", museum: "Cleveland Museum of Art", commons: "File:Berthe Morisot - La Lecture (1873).jpg" },
+    { kind: "photo", file: "garden-reading/unsplash-VahrnykTFy0.jpg", unsplash: "VahrnykTFy0", by: "Yen Vu" },
+    { kind: "painting", file: "garden-reading/monet-springtime.jpg", title: "Springtime", artist: "Claude Monet", year: "1872", museum: "Walters Art Museum, Baltimore", commons: "File:Claude Monet - Springtime - Google Art Project.jpg" },
+    { kind: "photo", file: "garden-reading/unsplash-9CILN1ybspA.jpg", unsplash: "9CILN1ybspA", by: "Nguyen Thu Hoai" }
+  ],
+  mood: "Absorbed in a book while the world around softens into colour.",
+  palette: ["#eef0e2", "#b9cfa1", "#6f9a6a", "#c7b6d8", "#f3d9c4"],
+  tags: { subject: ["adults", "kids"], light: ["day"], weather: ["overcast", "clear"], season: ["spring", "summer", "autumn"], place: ["garden", "water", "farm"], style: ["impressionism"] },
+  plan: {
+    camera: { dist: 3.5, label: "At sitting height" },
+    subject: { facing: 8, label: "Head down in the book, face in profile" },
+    lights: [{ kind: "sky", at: 10, dist: 4, label: "Open sky or dappled shade" }],
+    mods: [{ kind: "white", at: 7, dist: 1, label: "Pale blanket as bounce" }],
+    zones: [{ at: 12, label: "Meadow or water, far away" }]
+  },
+  glance: { when: "Soft light: overcast, or dappled shade", lens: "Contax 645 140mm f/2.8", exposure: "f/2.8, 1/500, +0.7 EV" },
+  steal: [
+    "The sitter doesn't know we're there: eyes down, completely absorbed.",
+    "The background dissolves into patches of colour, not detail.",
+    "A pale dress picking up the colours around it: green from the grass, blue from the sky.",
+    "A parasol or fan set aside in the grass as a quiet accent."
+  ],
+  when: "A bright overcast day, or morning and late afternoon in the dappled shade of a tree. Avoid hard midday sun on the face.",
+  where: "Garden, park lawn, orchard, lakeside or riverbank. Pick a spot where the background is 20 m or more away so the 140 melts it.",
+  direction: {
+    pose: "Subject seated on the grass or a low bench, body at an angle to you, face in profile over the book. Shoot from sitting height. Frame loosely: the grass and the dress are half the picture.",
+    prompts: [
+      "Find the best line on the page and read it twice.",
+      "Turn the page when you're ready, not for me.",
+      "Rest the book on your knee and look out at the water."
+    ]
+  },
+  wardrobe: ["White, cream or pale lilac dress with a full skirt", "Straw hat or bonnet", "A ribbon in one colour", "Bare feet or plain shoes"],
+  props: ["Old cloth-bound book", "Parasol or fan, laid in the grass", "Blanket in a pale colour", "Basket"],
+  light: {
+    direction: "Soft top-side light from open sky or through leaves.",
+    ratio: "About 1:2.",
+    notes: "Dappled sun is fine on the dress and the grass, never on the face: a spot of sun on the nose reads as a blemish, not a highlight."
+  },
+  kit: ["Contax 645 140mm f/2.8 (dreamy fall-off, vivid greens)", "Canon 135mm f/2L", "GF 80mm f/1.7 (wider, more garden)", "Pale blanket", "Small stool for your own height"],
+  settings: [
+    ["Mode", "A"],
+    ["Aperture", "f/2.8, wide open on the Contax"],
+    ["Shutter", "1/250 or faster"],
+    ["ISO", "Auto"],
+    ["White balance", "Fixed 5500K on overcast days, 5000K in shade"],
+    ["Film simulation", "Astia or Pro Neg. Std"],
+    ["Tone", "Highlight -1, Shadow -2"],
+    ["Exposure", "+0.7 to +1 EV for a high-key look"],
+    ["Focus", "Eye AF, or single point on the near eye"]
+  ],
+  post: [
+    "High key: lift exposure until the dress is bright but its folds still show.",
+    "Blacks +20. The Impressionists had no black.",
+    "Shadows toward blue-violet (hue 250, sat 10); highlights warm cream.",
+    "Clarity -25 on the background only (masked).",
+    "Greens: hue toward yellow, saturation -10, luminance up.",
+    "Crop 4:5 or 5:4 with space around the figure."
+  ],
+  breakers: ["Phone in hand, earbuds", "A branded book cover", "Hard sun spots on the face", "Busy background close behind"],
+  fallback: "Bright sun everywhere: put them in the shade at the edge of a tree or building and shoot toward the sunny garden for a glowing background.",
+  duration: "As long as they keep reading, so ask them to actually read."
+},
+{
+  id: "riverside-party",
+  title: "Riverside Boating Party",
+  kind: "Portrait",
+  images: [
+    { kind: "painting", file: "riverside-party/luncheon-boating-party.jpg", title: "Luncheon of the Boating Party", artist: "Pierre-Auguste Renoir", year: "1880 to 1881", museum: "The Phillips Collection, Washington", wiki: ["Luncheon_of_the_Boating_Party"] },
+    { kind: "photo", file: "riverside-party/unsplash--7AxXbZekDE.jpg", unsplash: "-7AxXbZekDE", by: "Mason Dahl" },
+    { kind: "painting", file: "riverside-party/moulin-de-la-galette.jpg", title: "Bal du moulin de la Galette", artist: "Pierre-Auguste Renoir", year: "1876", museum: "Musée d'Orsay, Paris", wiki: ["Bal_du_moulin_de_la_Galette"] },
+    { kind: "photo", file: "riverside-party/unsplash-gkBwOHmFmxI.jpg", unsplash: "gkBwOHmFmxI", by: "Anne Nygård" },
+    { kind: "painting", file: "riverside-party/caillebotte-boating-party.jpg", title: "Boating Party", artist: "Gustave Caillebotte", year: "c. 1877 to 1878", museum: "Musée d'Orsay, Paris", commons: "File:G. Caillebotte - La Partie de Bâteau.jpg" }
+  ],
+  mood: "Friends in summer shade by the water, light dropping through the leaves.",
+  palette: ["#f2e6c9", "#e3a86b", "#4f7fa8", "#2f5a44", "#c9d8e0"],
+  tags: { subject: ["adults", "family"], light: ["day", "golden"], weather: ["clear"], season: ["summer"], place: ["water", "garden"], style: ["impressionism"] },
+  plan: {
+    camera: { dist: 4 },
+    subject: { facing: 6, label: "The group, turned toward each other" },
+    lights: [{ kind: "sun", at: 1.5, dist: 20, label: "High sun through leaves" }],
+    zones: [{ at: 12, label: "Bright river behind" }]
+  },
+  glance: { when: "Afternoon, under trees by the water", lens: "Contax 645 35mm f/3.5", exposure: "f/5.6, 1/250, +0.3 EV" },
+  steal: [
+    "Sun falling through leaves in coins of light on faces, hats and cloth.",
+    "A crowded, informal group: people talking to each other, not to us.",
+    "Warm skin and straw hats against cool blue-green shade.",
+    "Water and sky glowing in the gaps."
+  ],
+  when: "A summer afternoon when the sun is high enough to come through a canopy in patches. Later, golden side light makes it warmer.",
+  where: "A riverside terrace, dock, café garden or picnic spot under trees, with boats, oars or water behind.",
+  direction: {
+    pose: "Let the party happen. Set the table or blanket so the group faces in toward each other and slightly toward you. Move until the coins of light fall on hats and shoulders, not eyes. For the boating version, put one rower in the foreground and shoot low from the next boat or the dock.",
+    prompts: [
+      "Pour for each other, not for me.",
+      "Tell the worst joke you know.",
+      "(Rower) Pull long and slow, and look past me at the bank."
+    ]
+  },
+  wardrobe: ["Straw boaters and wide-brimmed hats", "White and striped shirts, sleeves rolled", "Summer dresses in pale blue, white and rose", "Loosened ties, open waistcoats", "Nothing branded"],
+  props: ["Glass bottles and stemmed glasses", "Fruit on a white tablecloth", "Oars and a wooden rowing boat", "A small dog"],
+  light: {
+    direction: "High sun broken up by leaves; bright river behind.",
+    ratio: "Patchy: about 1:3 in the shade, much brighter in the sun spots.",
+    notes: "Expose for the shaded faces and let the sun spots and river go bright. Renoir's shadows are blue-violet: fixed white balance keeps the shade cool."
+  },
+  kit: ["Contax 645 35mm f/3.5 (the whole table, Zeiss colour)", "GF 80mm f/1.7 (pairs and faces)", "Contax 645 140mm f/2.8 (from the bank to the boat)", "Reflector for a face lost in deep shade"],
+  settings: [
+    ["Mode", "A"],
+    ["Aperture", "f/5.6 to f/8 for the group"],
+    ["Shutter", "1/250"],
+    ["ISO", "Auto"],
+    ["White balance", "Fixed 5500K"],
+    ["Film simulation", "Classic Neg. or Astia"],
+    ["Tone", "Highlight -2 for the sun spots, Shadow -1"],
+    ["Exposure", "+0.3 EV"],
+    ["Focus", "Face detect, AF-C"]
+  ],
+  post: [
+    "Warm the sunlit patches, cool the shade: highlights hue 45 sat 15, shadows hue 230 sat 12.",
+    "Lift blacks so the shade stays luminous.",
+    "Clarity -15 and a little glow on the highlights.",
+    "Oranges and reds up for skin and fruit; blues up in the water.",
+    "Crop 4:3 or 5:4 with figures cut by the frame edges, as Renoir did."
+  ],
+  breakers: ["Plastic cups and bottles", "Sunglasses and phones on the table", "Orange life jackets", "A motorboat behind"],
+  fallback: "No shade trees: a café awning or a big parasol breaks up the sun. Overcast: shoot the boating version on the water, which works in flat light.",
+  duration: "An hour. It gets better as people relax."
+},
+{
+  id: "haystacks-series",
+  title: "Haystacks at Sunset",
+  kind: "Landscape",
+  images: [
+    { kind: "painting", file: "haystacks-series/sunset-snow-effect.jpg", title: "Stacks of Wheat (Sunset, Snow Effect)", artist: "Claude Monet", year: "1890 to 1891", museum: "Art Institute of Chicago", commons: "File:Claude Monet - Stacks of Wheat (Sunset, Snow Effect) - 1922.431 - Art Institute of Chicago.jpg" },
+    { kind: "photo", file: "haystacks-series/unsplash-4jijsYHM1UE.jpg", unsplash: "4jijsYHM1UE", by: "Mihály Köles" },
+    { kind: "painting", file: "haystacks-series/end-of-summer.jpg", title: "Stacks of Wheat (End of Summer)", artist: "Claude Monet", year: "1890 to 1891", museum: "Art Institute of Chicago", wiki: ["Haystacks_(Monet_series)"] },
+    { kind: "photo", file: "haystacks-series/unsplash-mCd_HOTQLQ8.jpg", unsplash: "mCd_HOTQLQ8", by: "Jon Sailer" }
+  ],
+  mood: "One humble subject, painted again and again as the light changes it.",
+  palette: ["#f3c77e", "#e27a4a", "#9a5b7a", "#5e6f9e", "#2f3550"],
+  tags: { subject: ["none"], light: ["golden"], weather: ["clear", "overcast", "snow"], season: ["summer", "autumn", "winter"], place: ["farm"], style: ["impressionism"] },
+  glance: { when: "Last hour before sunset, any season", lens: "Contax 645 210mm f/4", exposure: "f/5.6, ISO 100, -0.3 EV" },
+  steal: [
+    "The subject is the light, not the haystack.",
+    "The stack goes dark against a coloured sky, and its shadow is violet, not black.",
+    "Complementary colours: orange sky, blue-violet shadows.",
+    "A series: same spot, different hours and seasons."
+  ],
+  when: "The last hour before sunset, and again at sunrise. Go back to the same stack in snow, frost, fog and summer haze.",
+  where: "Hay or straw bales in a harvested field, from late July. Round bales work; old-style stacks are rare but worth finding.",
+  direction: {
+    pose: "Composition: one or two stacks, low horizon, sun behind or beside them. Stand well back with the 210 to press the stack against the sky and the tree line. Use the same tripod spot on every visit.",
+    prompts: ["Mark your tripod spot with a stick so the series lines up.", "Shoot every ten minutes until the colour goes."]
+  },
+  wardrobe: [],
+  props: [],
+  light: {
+    direction: "Low sun behind or beside the stacks.",
+    ratio: "High toward the sun: bracket.",
+    notes: "The best colour often comes 5 to 15 minutes after the sun drops below the horizon."
+  },
+  kit: ["Contax 645 210mm f/4 (the stack pressed against the sky)", "Contax 645 140mm f/2.8", "Contax 645 35mm f/3.5 (stack in the foreground, huge sky)", "Tripod", "Notebook for the series: date, time, weather"],
+  settings: [
+    ["Mode", "A"],
+    ["Aperture", "f/5.6 to f/8"],
+    ["ISO", "100"],
+    ["White balance", "Fixed 5500K; auto kills the orange"],
+    ["Film simulation", "Velvia for the sky, or Classic Chrome for a quieter series"],
+    ["Bracketing", "-2 / 0 / +2"],
+    ["Release", "2 s timer, IBIS off on the tripod"]
+  ],
+  post: [
+    "Keep the shadow side of the stack coloured: shadows toward violet (hue 260, sat 15).",
+    "Warm the sky without overdoing it: orange saturation -5, luminance +10.",
+    "Lift blacks. Monet has no black.",
+    "Clarity -20, texture -10.",
+    "Edit the whole series with one preset so the differences are the light, not the edit."
+  ],
+  breakers: ["Plastic-wrapped bales", "Tractors or fences in the foreground", "Power lines on the horizon"],
+  fallback: "Flat grey evening: shoot anyway. Monet painted grey days too, and the series needs them.",
+  duration: "An hour per visit; a season for the series."
+},
+{
+  id: "sea-cliffs",
+  title: "Cliffs at Étretat",
+  kind: "Landscape",
+  images: [
+    { kind: "painting", file: "sea-cliffs/cliffs-at-etretat.jpg", title: "The Cliffs at Étretat", artist: "Claude Monet", year: "1885", museum: "Clark Art Institute, Williamstown", commons: "File:Claude Monet The Cliffs at Etretat.jpg" },
+    { kind: "photo", file: "sea-cliffs/unsplash-du0wAZTgkIg.jpg", unsplash: "du0wAZTgkIg", by: "Allyson Beaucourt" },
+    { kind: "painting", file: "sea-cliffs/fecamp.jpg", title: "Fécamp, by the Sea", artist: "Claude Monet", year: "1881", museum: "MuMa, Le Havre", commons: "File:Monet-Fécamp-LeHavre.JPG" },
+    { kind: "photo", file: "sea-cliffs/unsplash-K-KGoOvvHww.jpg", unsplash: "K-KGoOvvHww", by: "Laurent Gence" }
+  ],
+  mood: "White chalk against a restless sea, the light changing every minute.",
+  palette: ["#f1e9d6", "#e6b98f", "#7fb0c4", "#3f6f8c", "#5c7a4a"],
+  tags: { subject: ["none"], light: ["golden", "day"], weather: ["clear", "overcast", "storm"], season: ["spring", "summer", "autumn", "winter"], place: ["water", "hills"], style: ["impressionism"] },
+  glance: { when: "Late afternoon to sunset, low tide", lens: "Contax 645 35mm f/3.5", exposure: "f/8, ISO 100, bracket" },
+  steal: [
+    "Big, simple masses: cliff, sea, sky.",
+    "The cliff face takes the colour of the light: pink, gold, lilac.",
+    "Broken, flickering water rendered as colour, not detail.",
+    "A tiny boat or figure for scale."
+  ],
+  when: "Late afternoon to sunset, when low light rakes the cliff face. Low tide opens the beach and its reflections. A clearing storm gives Monet's drama.",
+  where: "Sea cliffs, chalk or limestone headlands, rocky coasts, lake bluffs: any high bank over water that faces the evening sun.",
+  direction: {
+    pose: "Composition: the cliff on one side filling a third to half the frame; horizon high or low, never centred. Walk both the beach and the cliff top; Monet painted from both. A 1 to 2 second exposure turns the water into paint.",
+    prompts: ["Wait for a gap in the clouds to light the cliff face.", "Try a 1 s exposure with the ND.", "Include one small figure or boat."]
+  },
+  wardrobe: [],
+  props: [],
+  light: {
+    direction: "Side light on the cliff face from a low sun.",
+    ratio: "Moderate to high: bracket toward the sun.",
+    notes: "Check the tide table; some beaches are cut off at high tide. Stay back from the edge: chalk overhangs collapse."
+  },
+  kit: ["Contax 645 35mm f/3.5 (big sky and cliff, the Zeiss colour)", "Contax 645 140mm f/2.8 (a single arch or boat)", "Contax 645 210mm f/4 (headlands stacked up)", "Tripod", "ND filter", "Tide table"],
+  settings: [
+    ["Mode", "A"],
+    ["Aperture", "f/8"],
+    ["ISO", "100"],
+    ["White balance", "Fixed 5500K"],
+    ["Film simulation", "Velvia or Classic Chrome"],
+    ["Bracketing", "-2 / 0 / +2"],
+    ["Shutter", "1/2 to 2 s with the ND for painted water"],
+    ["Release", "2 s timer"]
+  ],
+  post: [
+    "Keep the chalk warm, never pure white.",
+    "Water toward teal and violet; lift its blacks.",
+    "Clarity -20, dehaze -10 on the distance.",
+    "Optional: Oil Paint filter at 15% for brushed water.",
+    "Crop 5:4 or 4:3, like Monet's canvases."
+  ],
+  breakers: ["Crowds on the beach (go early or late)", "Railings and signs on the cliff top", "Crunchy HDR clouds"],
+  fallback: "Fog or rain: shoot the cliffs as a pale shape in grey, a daytime nocturne.",
+  duration: "Two hours around sunset; the tide sets the schedule."
+},
+{
+  id: "harbour-dusk",
+  title: "Harbour at Dusk",
+  kind: "Landscape",
+  images: [
+    { kind: "painting", file: "harbour-dusk/san-giorgio-dusk.jpg", title: "San Giorgio Maggiore at Dusk", artist: "Claude Monet", year: "1908 to 1912", museum: "National Museum Cardiff", wiki: ["San_Giorgio_Maggiore_at_Dusk"] },
+    { kind: "photo", file: "harbour-dusk/unsplash-wZIHFOzLuTQ.jpg", unsplash: "wZIHFOzLuTQ", by: "Henrique Ferreira" },
+    { kind: "painting", file: "harbour-dusk/fighting-temeraire.jpg", title: "The Fighting Temeraire", artist: "J. M. W. Turner", year: "1839", museum: "National Gallery, London", wiki: ["The_Fighting_Temeraire"] },
+    { kind: "photo", file: "harbour-dusk/unsplash-Cp1xdWIjpBU.jpg", unsplash: "Cp1xdWIjpBU", by: "Alessandro Cavestro" },
+    { kind: "painting", file: "harbour-dusk/grand-canal.jpg", title: "Le Grand Canal", artist: "Claude Monet", year: "1908", museum: "Fondation Beyeler, Riehen", commons: "File:Claude Monet, Le Grand Canal.jpg" }
+  ],
+  mood: "Buildings dissolving into the glow of water and sky.",
+  palette: ["#f6c16b", "#e0735a", "#8f5f9a", "#3e4f86", "#1d2440"],
+  tags: { subject: ["none"], light: ["golden", "blue"], weather: ["clear", "fog"], season: ["spring", "summer", "autumn", "winter"], place: ["water", "street"], style: ["impressionism"] },
+  glance: { when: "Sunset and the 30 minutes after", lens: "Contax 645 140mm f/2.8", exposure: "f/5.6, ISO 200, -0.7 EV" },
+  steal: [
+    "Architecture as a silhouette, not a subject: no detail, all glow.",
+    "Sky and water in the same colours, meeting at a soft horizon.",
+    "A warm sun against cool violet buildings.",
+    "One dark shape (a boat, a mooring post) anchors the foreground."
+  ],
+  when: "Sunset and the half hour after, facing the sun. Haze or light fog makes it Monet; clear air makes it Turner.",
+  where: "Any waterfront with buildings across the water: harbour, canal, river quay, lakeside town, port. The Old Port and the Lachine Canal work in Montréal.",
+  direction: {
+    pose: "Composition: horizon low, buildings a thin dark band, sky and its reflection filling the frame. The 140 or 210 isolates one dome or tower against the sun. Add a mooring post or boat as the dark accent.",
+    prompts: ["Put the sun just beside the main building, not behind it.", "Wait for a boat to cross the reflection.", "Stay after sunset: the blue arrives 15 minutes later."]
+  },
+  wardrobe: [],
+  props: [],
+  light: {
+    direction: "Against the light: the sun low behind the buildings.",
+    ratio: "Very high. Expose for the sky and let the buildings go dark.",
+    notes: "For an Impressionist blur, try intentional camera movement: 1/4 s with a slow, steady drift. Take the sharp frame first."
+  },
+  kit: ["Contax 645 140mm f/2.8 (a single dome against the sun)", "Contax 645 210mm f/4 (the skyline pressed flat)", "Contax 645 35mm f/3.5 (wide water, Turner's sky)", "Tripod", "Lens hood"],
+  settings: [
+    ["Mode", "A"],
+    ["Aperture", "f/5.6"],
+    ["ISO", "100 to 400"],
+    ["White balance", "Fixed 5500K to keep the orange"],
+    ["Film simulation", "Velvia or Classic Neg."],
+    ["Exposure", "-0.7 EV to protect the sky"],
+    ["Bracketing", "-2 / 0 / +2"],
+    ["Camera movement", "1/4 s, gentle horizontal or vertical drift"]
+  ],
+  post: [
+    "Let buildings go deep violet, not black (shadows hue 260, sat 20, blacks lifted).",
+    "Warm the highlights (hue 40, sat 20).",
+    "Clarity -30, dehaze -15 for haze.",
+    "Soft glow: a blurred copy at 15% in Screen mode.",
+    "Remove cranes, antennas and neon."
+  ],
+  breakers: ["Sharp modern signs", "HDR halos around buildings", "A blown white sun (slight underexposure keeps its colour)"],
+  fallback: "Clear, flat evening: go wide with the 35 and make it a Turner, sun and sky taking three quarters of the frame.",
+  duration: "45 minutes from sunset."
+},
+{
+  id: "water-garden",
+  title: "Water Lily Garden",
+  kind: "Landscape",
+  images: [
+    { kind: "painting", file: "water-garden/bridge-water-lilies.jpg", title: "Bridge over a Pond of Water Lilies", artist: "Claude Monet", year: "1899", museum: "The Met, New York", commons: "File:Bridge over a Pond of Water Lilies MET DT1854.jpg" },
+    { kind: "photo", file: "water-garden/unsplash-DoHnXH0B420.jpg", unsplash: "DoHnXH0B420", by: "Adil Murshed" },
+    { kind: "painting", file: "water-garden/water-lilies-1906.jpg", title: "Water Lilies", artist: "Claude Monet", year: "1906", museum: "Art Institute of Chicago", commons: "File:Claude Monet - Water Lilies - 1933.1157 - Art Institute of Chicago.jpg" },
+    { kind: "photo", file: "water-garden/unsplash-FCfFf1K7voo.jpg", unsplash: "FCfFf1K7voo", by: "Blaz Erzetic" }
+  ],
+  mood: "Sky, clouds and flowers on the same surface of still water.",
+  palette: ["#dfe8d2", "#9cc08a", "#4f7d5e", "#b9a4d4", "#f0b8c4"],
+  tags: { subject: ["none"], light: ["day", "golden"], weather: ["overcast", "clear"], season: ["summer"], place: ["garden", "water"], style: ["impressionism"] },
+  glance: { when: "Summer mornings, calm air", lens: "Contax 645 210mm f/4", exposure: "f/5.6, 1/250, ISO 200" },
+  steal: [
+    "No horizon: the water fills the frame and the sky appears only as reflection.",
+    "Lilies as dabs of colour on green and violet.",
+    "Willows and banks reflected as dark vertical shapes.",
+    "A footbridge as the only built thing."
+  ],
+  when: "Summer mornings, when the lilies are open; most close by mid-afternoon. Calm air is essential for reflections.",
+  where: "Botanical gardens, lily ponds, marsh boardwalks, park lakes. The ponds at the Montréal Botanical Garden bloom in July and August.",
+  direction: {
+    pose: "Composition: shoot down onto the water with the 210 from the bank until no sky or shore shows, only lilies and reflected clouds. Then step back for the bridge view with the 80: bridge across the top third, pond below.",
+    prompts: ["Find a reflected cloud and put the lilies around it.", "Tilt down until the shoreline leaves the frame.", "Wait for the wind to drop."]
+  },
+  wardrobe: [],
+  props: [],
+  light: {
+    direction: "Soft light from above; a bright sky for the reflections.",
+    ratio: "Low.",
+    notes: "A polariser removes glare, but also the reflections Monet painted. Turn it to taste, or leave it off."
+  },
+  kit: ["Contax 645 210mm f/4 (lilies from the bank, no horizon)", "Contax 645 140mm f/2.8 (close groups, soft background)", "GF 80mm f/1.7 (the bridge view)", "Polariser", "Tripod"],
+  settings: [
+    ["Mode", "A"],
+    ["Aperture", "f/5.6 to f/8"],
+    ["ISO", "200"],
+    ["White balance", "Fixed 5500K"],
+    ["Film simulation", "Astia or Velvia"],
+    ["Exposure", "-0.3 EV so the reflected sky stays blue"],
+    ["Focus", "On the lilies, a third of the way in"]
+  ],
+  post: [
+    "Greens toward blue-green, luminance up; violets up in the shadows.",
+    "Lift blacks to a dark violet.",
+    "Clarity -30 on the water; keep a little on the nearest flowers.",
+    "Optional: a very light Oil Paint filter at 20% for Monet's strokes.",
+    "Try a square or panoramic crop; the late Water Lilies are wide."
+  ],
+  breakers: ["Visible pond edges, pipes or signs", "Coins and litter in the water", "Harsh midday glare"],
+  fallback: "Wind ripples: switch to single flowers with the 140 wide open, or shoot the ripples as abstract colour at 1/4 s.",
+  duration: "An hour; the lilies close by mid-afternoon."
+},
+{
+  id: "boulevard-above",
+  title: "Boulevard from Above",
+  kind: "Landscape",
+  images: [
+    { kind: "painting", file: "boulevard-above/montmartre-spring.jpg", title: "Boulevard Montmartre, Spring", artist: "Camille Pissarro", year: "1897", museum: "Private collection", wiki: ["Boulevard_Montmartre,_Spring"] },
+    { kind: "photo", file: "boulevard-above/unsplash-art3P5jf9yM.jpg", unsplash: "art3P5jf9yM", by: "Lens by Benji" },
+    { kind: "painting", file: "boulevard-above/montmartre-night.jpg", title: "The Boulevard Montmartre at Night", artist: "Camille Pissarro", year: "1897", museum: "National Gallery, London", commons: "File:Camille Pissarro - Boulevard Montmartre at Night - c 1897 - National Gallery UK.jpg" },
+    { kind: "photo", file: "boulevard-above/unsplash-_feTI3bCcp8.jpg", unsplash: "_feTI3bCcp8", by: "Alex varela" }
+  ],
+  mood: "The city as a river of movement, seen from a window high above.",
+  palette: ["#e9e2d0", "#b8b3a4", "#7d8798", "#c99a6a", "#3b4252"],
+  tags: { subject: ["none"], light: ["day", "blue", "night"], weather: ["overcast", "clear", "fog", "snow"], season: ["spring", "summer", "autumn", "winter"], place: ["street"], style: ["impressionism"] },
+  glance: { when: "Any hour, any weather: that's the point", lens: "Contax 645 140mm f/2.8", exposure: "f/8, 1/8 s, ISO 100" },
+  steal: [
+    "A high viewpoint looking down a long street to a vanishing point.",
+    "People and carriages as flicks of paint: movement, not detail.",
+    "Trees and façades framing both sides.",
+    "A series: the same view in rain, sun, night and spring."
+  ],
+  when: "Whenever the weather changes. Rain on the pavement at blue hour is the richest; Pissarro painted the same view 14 times.",
+  where: "A window, balcony, car-park roof or footbridge above a long, straight, tree-lined street. Ask a café or hotel for an upper-floor window.",
+  direction: {
+    pose: "Composition: the street runs from the bottom centre to a vanishing point in the top third, with buildings framing both sides. A slow shutter (1/8 to 1/2 s) blurs traffic and walkers into strokes while the buildings stay sharp.",
+    prompts: ["Wait for a bus or a crowd to cross the lower third.", "Try 1/4 s, then 1 s.", "Come back to the same spot in rain and at night."]
+  },
+  wardrobe: [],
+  props: [],
+  light: {
+    direction: "Soft sky light; in rain, reflections on the road.",
+    ratio: "Low by day, high at night.",
+    notes: "Through glass: lens hood flat on the window, dark cloth around it."
+  },
+  kit: ["Contax 645 140mm f/2.8 (stacks the street into layers)", "GF 80mm f/1.7 (the whole boulevard)", "Contax 645 210mm f/4 (just the crowd)", "Tripod or window clamp", "ND filter for daytime blur", "Dark cloth for window reflections"],
+  settings: [
+    ["Mode", "S or M"],
+    ["Shutter", "1/8 to 1/2 s"],
+    ["Aperture", "f/8 to f/11"],
+    ["ISO", "100"],
+    ["White balance", "Fixed 5000K; at night 4000K keeps the lamps warm"],
+    ["Film simulation", "Classic Neg. or Pro Neg. Std"],
+    ["Release", "2 s timer, IBIS off on the tripod"]
+  ],
+  post: [
+    "Soft, low-contrast base: blacks lifted, highlights down.",
+    "Warm the wet reflections and lamps, cool the sky.",
+    "Clarity -20; the motion blur does the painting.",
+    "Remove or blur modern signs and logos.",
+    "Crop 4:5 or 5:4, like Pissarro's canvases."
+  ],
+  breakers: ["Readable billboards and brand names", "Traffic lights dominating the frame", "Reflections of your own room in the glass"],
+  fallback: "No high viewpoint: stand on a bridge or a stairway and shoot a crowd with the 210 at 1/15 s.",
+  duration: "15 minutes per visit; a season for the series."
+},
+{
+  id: "sunday-riverbank",
+  title: "Sunday on the Riverbank",
+  kind: "Portrait",
+  images: [
+    { kind: "painting", file: "sunday-riverbank/grande-jatte.jpg", title: "A Sunday on La Grande Jatte", artist: "Georges Seurat", year: "1884 to 1886", museum: "Art Institute of Chicago", wiki: ["A_Sunday_Afternoon_on_the_Island_of_La_Grande_Jatte"] },
+    { kind: "photo", file: "sunday-riverbank/unsplash-MRAZ2fJ9hB4.jpg", unsplash: "MRAZ2fJ9hB4", by: "Szabolcs Antal" },
+    { kind: "painting", file: "sunday-riverbank/bathers-asnieres.jpg", title: "Bathers at Asnières", artist: "Georges Seurat", year: "1884", museum: "National Gallery, London", wiki: ["Bathers_at_Asnières"] },
+    { kind: "photo", file: "sunday-riverbank/unsplash-WDWBQ6pCRyc.jpg", unsplash: "WDWBQ6pCRyc", by: "Jim Tran" }
+  ],
+  mood: "Stillness in bright sun: people standing like statues in a shimmering park.",
+  palette: ["#f4ecc2", "#e5a64b", "#6fa25a", "#3f7fb0", "#5a3f63"],
+  tags: { subject: ["adults", "family", "kids"], light: ["day"], weather: ["clear"], season: ["summer"], place: ["water", "garden"], style: ["pointillism"] },
+  plan: {
+    camera: { dist: 15, label: "Far back, level with their heads" },
+    subject: { facing: 9, label: "In profile and still, looking along the river" },
+    lights: [{ kind: "sun", at: 10, dist: 20, label: "High sun from the side" }],
+    zones: [{ at: 12, label: "River and far bank" }]
+  },
+  glance: { when: "Sunny afternoon, sun still high", lens: "Contax 645 210mm f/4", exposure: "f/8, 1/500, -0.3 EV" },
+  steal: [
+    "Figures in strict profile or seen from behind, perfectly still.",
+    "Hard, bright sun with crisp shadows on the grass.",
+    "A frieze: people arranged in parallel layers across the frame.",
+    "Pure colours side by side: orange next to blue, red next to green."
+  ],
+  when: "A clear summer afternoon, roughly 2 to 5 pm, while the sun is still high enough for short, crisp shadows.",
+  where: "A park lawn along a river or lake, with trees for shade and water behind. Riverbanks, quays and lakeside parks on a Sunday.",
+  direction: {
+    pose: "Seurat's people don't interact. Place each person in profile or seen from behind, all facing roughly the same way, and ask them to hold still. Stand far back with the 210 so the layers flatten into a frieze. Keep the camera level, not looking down.",
+    prompts: [
+      "Sit facing the water and don't move until I say.",
+      "Stand straight, chin level, and look along the river.",
+      "Hold the parasol upright, like a statue would."
+    ]
+  },
+  wardrobe: ["Solid, saturated colours: orange, cobalt blue, red, white", "Straw boaters and bonnets", "Long skirts, dark jackets for contrast", "No patterns or logos"],
+  props: ["Parasols", "A small dog", "Fishing rod", "Picnic cloth in one solid colour"],
+  light: {
+    direction: "High sun from the side.",
+    ratio: "About 1:4: hard sun and deep, coloured shade.",
+    notes: "Seurat's shade is never grey: he filled it with complementary colour. Fix the white balance and add colour to the shadows in post."
+  },
+  kit: ["Contax 645 210mm f/4 (flattens the frieze: the Seurat lens)", "Contax 645 140mm f/2.8 (two or three figures)", "Contax 645 35mm f/3.5 (the whole bank)", "Tripod for stillness and matching frames"],
+  settings: [
+    ["Mode", "A"],
+    ["Aperture", "f/8 for depth through the layers"],
+    ["Shutter", "1/500"],
+    ["ISO", "100"],
+    ["White balance", "Fixed 5500K"],
+    ["Film simulation", "Velvia for pure colour, or Astia"],
+    ["Tone", "Highlight -1, Shadow +1"],
+    ["Exposure", "-0.3 EV"],
+    ["Focus", "Single point on the main figure"]
+  ],
+  post: [
+    "Saturate the main colours; mute everything else.",
+    "Colour the shadows: blue-violet in the shade on the grass (hue 250, sat 20), orange in the light.",
+    "Lift blacks hard; keep the whole frame luminous and chalky.",
+    "Dot texture: duplicate the layer, Filter > Pixelate > Pointillize, cell size 6 to 10 on the full 11,648 px file, blend at 20 to 35%.",
+    "Fine grain on top so the dots hold at print size.",
+    "Crop wide: 3:2 or wider."
+  ],
+  breakers: ["People looking at the camera or at phones", "Patterned or branded clothing", "Motion: Seurat's figures never move", "Boats with logos"],
+  fallback: "Overcast: this look needs sun. Switch to Luminous Waterfront, which works in haze.",
+  duration: "Half an hour of patient posing."
+},
+{
+  id: "luminous-waterfront",
+  title: "Luminous Waterfront",
+  kind: "Landscape",
+  images: [
+    { kind: "painting", file: "luminous-waterfront/gravelines-evening.jpg", title: "The Channel of Gravelines, Evening", artist: "Georges Seurat", year: "1890", museum: "MoMA, New York", commons: "File:Georges-Pierre Seurat - The Channel at Gravelines, Evening - Google Art Project.jpg" },
+    { kind: "photo", file: "luminous-waterfront/unsplash-zi-Tvl6VGXY.jpg", unsplash: "zi-Tvl6VGXY", by: "Mike Barra" },
+    { kind: "painting", file: "luminous-waterfront/bec-du-hoc.jpg", title: "Le Bec du Hoc, Grandcamp", artist: "Georges Seurat", year: "1885", museum: "Tate, London", commons: "File:Seurat-Le Bec du Hoc à Grandcamp.jpg" },
+    { kind: "photo", file: "luminous-waterfront/unsplash-yDCMz_cR474.jpg", unsplash: "yDCMz_cR474", by: "Robert Macleod" },
+    { kind: "painting", file: "luminous-waterfront/beach-at-heist.jpg", title: "The Beach at Heist", artist: "Georges Lemmen", year: "1891", museum: "Musée d'Orsay, Paris", commons: "File:Georges Lemmen - Plage à Heist.jpg" },
+    { kind: "painting", file: "luminous-waterfront/bridge-in-london.jpg", title: "Bridge in London", artist: "Jan Toorop", year: "1888 to 1889", museum: "Kröller-Müller Museum, Otterlo", commons: "File:Brug in Londen, eind 1888 - begin 1889 - Jan Toorop - Olieverf op doek - Kroller-Muller - KM 101.491.jpg" }
+  ],
+  mood: "Water and air so still that everything glows evenly.",
+  palette: ["#f2e9cf", "#e7c98f", "#a6c3cf", "#6a8fb0", "#8e7aa6"],
+  tags: { subject: ["none"], light: ["golden", "day", "blue"], weather: ["clear", "fog"], season: ["spring", "summer", "autumn", "winter"], place: ["water", "street"], style: ["pointillism"] },
+  glance: { when: "Calm evening or hazy morning", lens: "Contax 645 35mm f/3.5", exposure: "f/8, ISO 100, +0.3 EV" },
+  steal: [
+    "Emptiness: a few masts, posts or anchors in a large luminous field.",
+    "A straight, calm horizon; sky and water nearly the same brightness.",
+    "No deep shadows: everything glows.",
+    "Seurat framed his late canvases with a painted border of dots in complementary colours."
+  ],
+  when: "Windless evenings after sunset and hazy mornings. Seurat painted these on the Channel coast in summer.",
+  where: "Harbours, marinas, beaches at low tide, piers, canals, river bridges in haze.",
+  direction: {
+    pose: "Composition: very simple. Horizon on a third, one or two vertical accents (mast, post, lamp, anchor) placed with care. Leave a lot of empty sky and water.",
+    prompts: ["Take out everything that isn't needed.", "Put the mast on a third and wait for the water to settle."]
+  },
+  wardrobe: [],
+  props: [],
+  light: {
+    direction: "Soft, low light, the sun behind or to one side and filtered by haze.",
+    ratio: "Very low.",
+    notes: "Haze and still air are the whole look. Check the wind forecast: under 8 km/h."
+  },
+  kit: ["Contax 645 35mm f/3.5 (wide, empty, Zeiss colour)", "Contax 645 140mm f/2.8 (a single boat)", "Contax 645 210mm f/4 (a bridge in haze, as in Toorop's London)", "Tripod"],
+  settings: [
+    ["Mode", "A"],
+    ["Aperture", "f/8"],
+    ["ISO", "100"],
+    ["White balance", "Fixed 5500K"],
+    ["Film simulation", "Astia, or Eterna for low contrast"],
+    ["Exposure", "+0.3 EV, high key"],
+    ["Release", "2 s timer"]
+  ],
+  post: [
+    "High key and flat: blacks up to about 20%, highlights down.",
+    "Split tone: warm light (hue 45, sat 12), violet shadows (hue 265, sat 12).",
+    "Pointillize a copy at 20 to 30% (cell size 6 to 10 on the full file), then fine grain.",
+    "Optional: Seurat's painted border, a 3% frame in the complementary colour run through the same filter.",
+    "Crop 5:4 or 4:3."
+  ],
+  breakers: ["Wind ripples breaking the calm", "Neon buoys and branded boats", "Hard midday light"],
+  fallback: "Bright sun and wind: switch to Sunday on the Riverbank, which wants hard sun.",
+  duration: "30 minutes around sunset."
+},
+{
+  id: "divisionist-portrait",
+  title: "Divisionist Window Portrait",
+  kind: "Portrait",
+  images: [
+    { kind: "painting", file: "divisionist-portrait/van-gogh-self-portrait.jpg", title: "Self-Portrait", artist: "Vincent van Gogh", year: "1887", museum: "Art Institute of Chicago", commons: "File:Vincent van Gogh - Self-Portrait - 1954.326 - Art Institute of Chicago.jpg" },
+    { kind: "photo", file: "divisionist-portrait/unsplash-wX3li6MT_ig.jpg", unsplash: "wX3li6MT_ig", by: "Sean Boyd" },
+    { kind: "painting", file: "divisionist-portrait/luce-morning-interior.jpg", title: "Morning, Interior", artist: "Maximilien Luce", year: "1890", museum: "The Met, New York", commons: "File:Morning, Interior MET DT2164.jpg" },
+    { kind: "photo", file: "divisionist-portrait/unsplash-PHSaxM3KQsU.jpg", unsplash: "PHSaxM3KQsU", by: "Helena Lopes" }
+  ],
+  mood: "Everyday light broken into complementary colours: warm skin, cool room.",
+  palette: ["#f0c38a", "#d9803f", "#5a86c7", "#2f4f8f", "#8fb07a"],
+  tags: { subject: ["adults", "kids"], light: ["day", "golden"], weather: ["clear", "overcast", "fog", "snow", "storm"], season: ["spring", "summer", "autumn", "winter"], place: ["indoors"], style: ["pointillism"] },
+  plan: {
+    camera: { dist: 2.5 },
+    subject: { facing: 7.5, label: "Turned toward the window, eyes past the camera" },
+    lights: [{ kind: "window", at: 10, dist: 1.5, label: "Window, cool daylight" }],
+    mods: [{ kind: "gold", at: 4, dist: 1.2, label: "Gold reflector, warm fill" }],
+    zones: [{ at: 12, label: "Plain, textured wall" }]
+  },
+  glance: { when: "Morning or late afternoon window light", lens: "Contax 645 140mm f/2.8", exposure: "f/2.8, 1/250, ISO 800" },
+  steal: [
+    "Complementary pairs everywhere: orange skin against blue, a red beard against green.",
+    "A plain background brought to life by texture, not objects.",
+    "A morning routine: someone caught doing something ordinary.",
+    "Window light broken into warm and cool."
+  ],
+  when: "Morning or late afternoon, when window light comes in at an angle. Luce's scene is early morning; Van Gogh's is flat studio light.",
+  where: "A bedroom, kitchen or studio with one window and a plain wall. A textured wall (plaster, wallpaper, wood) helps.",
+  direction: {
+    pose: "A head-and-shoulders portrait, or a half-length figure doing something ordinary: lacing boots, reading the paper, drinking coffee. Window to one side and slightly behind; a warm reflector on the shadow side supplies the complementary orange.",
+    prompts: [
+      "Lace your boots like you're late.",
+      "Look out the window and think about the weather.",
+      "(Self-portrait style) Turn your shoulders away, keep your eyes on me."
+    ]
+  },
+  wardrobe: ["A blue jacket or shirt, the complement to skin", "Straw hat or cap", "Red or orange scarf", "Plain fabrics, no prints"],
+  props: ["Coffee bowl or mug", "Newspaper", "Boots", "A plain blue or green blanket on the bed"],
+  light: {
+    direction: "Window slightly behind and to one side; warm reflector opposite.",
+    ratio: "About 1:3. The key is cool, the fill is warm.",
+    notes: "Cool daylight plus a gold reflector puts complementary colours into the face itself, which is what the dots do in paint. Turn off every lamp in the room."
+  },
+  kit: ["Contax 645 140mm f/2.8 (head and shoulders, painterly)", "GF 80mm f/1.7 (half-length in the room)", "Canon 135mm f/2L", "Gold reflector", "A blue or green sheet for the background"],
+  settings: [
+    ["Mode", "A"],
+    ["Aperture", "f/2.8 to f/4"],
+    ["Shutter", "1/250"],
+    ["ISO", "400 to 1600"],
+    ["White balance", "Fixed 5500K: the window stays cool, the reflector warm"],
+    ["Film simulation", "Velvia or Classic Neg."],
+    ["Metering", "Spot on the lit cheek, +0.3 EV"],
+    ["Focus", "Eye AF"]
+  ],
+  post: [
+    "Separate warm and cool: skin highlights hue 35, shadows hue 220, both sat 15 to 20.",
+    "Saturate the complementary background (blue or green) behind warm skin.",
+    "Pointillize a copy at 25 to 40%, cell size 8 to 14; mask it off the eyes so they stay sharp.",
+    "Add grain and keep the blacks lifted.",
+    "Crop 4:5 and tight, like Van Gogh's self-portraits."
+  ],
+  breakers: ["Mixed ceiling lights (turn them off)", "Patterned or branded clothes", "Busy walls: take things down"],
+  fallback: "No good window: a single LED panel at 5600K plays the window, gold reflector opposite.",
+  duration: "15 to 20 minutes."
+},
+{
+  id: "orchard-harvest-dots",
+  title: "Apple Harvest in Dots",
+  kind: "Portrait",
+  images: [
+    { kind: "painting", file: "orchard-harvest-dots/pissarro-apple-harvest.jpg", title: "Apple Harvest", artist: "Camille Pissarro", year: "1888", museum: "Dallas Museum of Art", commons: "File:Camille Pissarro - Apple Harvest - 1955.17.M - Dallas Museum of Art.jpg" },
+    { kind: "photo", file: "orchard-harvest-dots/unsplash-y-N7B95Ciro.jpg", unsplash: "y-N7B95Ciro", by: "Janylah Etienne" },
+    { kind: "photo", file: "orchard-harvest-dots/unsplash-higEHR1vThE.jpg", unsplash: "higEHR1vThE", by: "Daria Kulakova" }
+  ],
+  mood: "People at work under fruit trees, the whole scene glittering with sun.",
+  palette: ["#f2d78c", "#e0894a", "#b8433a", "#7aa35a", "#6f84b8"],
+  tags: { subject: ["adults", "family", "kids"], light: ["day", "golden"], weather: ["clear"], season: ["autumn"], place: ["farm", "garden"], style: ["pointillism"] },
+  plan: {
+    camera: { dist: 7, label: "Through the branches" },
+    subject: { facing: 9, label: "Working, reaching up, face half hidden" },
+    lights: [{ kind: "sun", at: 1.5, dist: 20, label: "Sun through the branches" }],
+    zones: [{ at: 12, label: "Rows of sunlit trees" }]
+  },
+  glance: { when: "Sunny afternoon in apple season", lens: "Contax 645 140mm f/2.8", exposure: "f/5.6, 1/500, 0 EV" },
+  steal: [
+    "Sunlight broken by leaves into warm spots scattered over the ground and the figures.",
+    "Figures bent to the work, faces mostly hidden.",
+    "Shadows on the grass are violet and blue.",
+    "Red apples as the accent against green."
+  ],
+  when: "September and early October afternoons, with the sun coming from the side through the trees.",
+  where: "Pick-your-own orchards, old farm orchards, community gardens with fruit trees.",
+  direction: {
+    pose: "Let them pick. Stand back with the 140 and frame through the branches so leaves and apples blur in the foreground. Two or three figures at different depths: one reaching, one bending, one carrying.",
+    prompts: ["Fill the basket from the low branches first.", "Pass the apples down to the basket.", "Shake the branch gently and collect what falls."]
+  },
+  wardrobe: ["Headscarves and straw hats", "Aprons in blue or white", "Skirts and shirts in solid, muted colours", "No logos"],
+  props: ["Wicker baskets", "Wooden ladder", "Long pole with a hook", "Cloth spread on the grass"],
+  light: {
+    direction: "Side sun filtered by the canopy.",
+    ratio: "About 1:3, patchy.",
+    notes: "Expose for the sunlit leaves and let the shade go blue; the dots in post will open it up."
+  },
+  kit: ["Contax 645 140mm f/2.8 (foreground blur through the branches)", "Contax 645 35mm f/3.5 (the whole row)", "Contax 645 210mm f/4 (figures from far away)"],
+  settings: [
+    ["Mode", "A"],
+    ["Aperture", "f/4 to f/5.6"],
+    ["Shutter", "1/500"],
+    ["ISO", "Auto"],
+    ["White balance", "Fixed 5500K"],
+    ["Film simulation", "Velvia or Astia"],
+    ["Exposure", "0 to -0.3 EV"],
+    ["Focus", "AF-C, zone"]
+  ],
+  post: [
+    "Greens toward yellow-green in the light and blue-green in the shade.",
+    "Violet shadows on the grass (hue 260, sat 18).",
+    "Pointillize a copy at 20 to 35%, cell size 6 to 10, then grain on top.",
+    "Lift blacks: the scene should shimmer, not punch.",
+    "Crop 5:4 with the figures low in the frame."
+  ],
+  breakers: ["Plastic buckets and crates", "Price signs and parked cars", "Bright rubber boots"],
+  fallback: "Overcast: the sparkle disappears. Use the same wardrobe for the Harvest Genre Scene card instead.",
+  duration: "An hour; picking keeps everyone busy."
 }
 ];

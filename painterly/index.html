@@ -85,8 +85,46 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .plate .missing{position:absolute;inset:8% 10%;display:none;align-items:flex-end;padding:14px;border-radius:2px;color:rgba(236,227,207,.85);font-size:.85rem}
 .plate.no-img img{display:none}
 .plate.no-img .missing{display:flex}
-.plate figcaption{margin-top:16px;font-size:.82rem;color:var(--ink-2);text-align:center;line-height:1.35}
+.plate figcaption{margin-top:12px;font-size:.82rem;color:var(--ink-2);text-align:center;line-height:1.35;min-height:3.4em}
 .plate figcaption em{font-family:var(--display);font-size:.98rem;color:var(--ink)}
+.plate figcaption a{color:var(--ink);text-decoration-color:var(--line);text-underline-offset:2px}
+.plate .tap{position:absolute;top:0;bottom:0;width:50%;z-index:1;-webkit-tap-highlight-color:transparent}
+.plate .tap.prev{left:0}
+.plate .tap.next{right:0}
+.pips{display:flex;gap:5px;width:min(100%,220px);margin-top:18px}
+.pips i{flex:1;height:3px;border-radius:2px;background:var(--line)}
+.pips i.on{background:var(--ink)}
+.plate .kind{margin-top:8px;font:500 .72rem/1 var(--text);letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+
+/* Setup plan */
+.plan{margin:4px 0 14px}
+.plan svg{display:block;width:100%;max-width:400px;margin:0 auto;background:var(--panel);border-radius:10px}
+.plan figcaption{font-size:.85rem;color:var(--ink-2);margin-top:8px;line-height:1.4}
+.pl-fov{fill:rgba(236,227,207,.05)}
+.pl-axis{stroke:var(--ink-2);stroke-width:1;stroke-dasharray:3 4;opacity:.6}
+.pl-dim{fill:var(--ink-2);font:400 11px var(--text)}
+.pl-lab{fill:var(--ink);font:400 12px var(--text)}
+.pl-zone{fill:none;stroke:var(--ink-2);stroke-width:6;stroke-linecap:round;opacity:.25}
+.pl-zlab{fill:var(--ink-2);font:italic 400 13px var(--display)}
+.pl-beam{stroke:none;opacity:.2}
+.pl-beam.window,.pl-beam.sky{fill:#b9cde6}
+.pl-beam.sun{fill:#e9b949;opacity:.28}
+.pl-beam.lantern{stroke:#e89a3c;stroke-width:14;opacity:.2}
+.pl-window{stroke:#b9cde6;stroke-width:5;stroke-linecap:round}
+.pl-sky{stroke:#b9cde6;stroke-width:3;stroke-dasharray:2 5;stroke-linecap:round}
+.pl-sun circle{fill:#e9b949}
+.pl-sun line{stroke:#e9b949;stroke-width:2;stroke-linecap:round}
+.pl-lantern{fill:#e89a3c}
+.pl-mod{stroke-width:5;stroke-linecap:round}
+.pl-mod.black{stroke:#06090d;filter:drop-shadow(0 0 1px #5a6676)}
+.pl-mod.white{stroke:var(--ink)}
+.pl-mod.gold{stroke:var(--gold)}
+.pl-arc{fill:none;stroke:var(--gold);stroke-width:1.2}
+.pl-deg{fill:var(--gold);font:500 11px var(--text)}
+.pl-body{fill:#5a6676}
+.pl-head{fill:var(--ink)}
+.pl-gaze{stroke:var(--ink);stroke-width:1.2;stroke-dasharray:2 3}
+.pl-cam rect{fill:var(--ink-2)}
 
 .body{padding:18px 22px 36px}
 .title{font:italic 400 2.15rem/1.08 var(--display);margin:0;letter-spacing:.005em}
@@ -209,15 +247,17 @@ const KEY = "painterly.v1";
 const HOME = { lat: 45.5017, lon: -73.5673, label: "Montréal" };
 const GROUPS = [
   ["subject", "Who's in front of the camera", [["kids","Kids"],["adults","Adults"],["family","Family group"],["none","No people"]]],
+  ["place", "Where you are", [["water","By the water"],["street","City streets"],["farm","Farm and fields"],["hills","Hills and mountains"],["forest","Forest"],["garden","Garden or park"],["indoors","Indoors and doorways"]]],
   ["light", "Light", [["golden","Golden hour"],["blue","Blue hour"],["day","Daytime"],["night","After dark"]]],
   ["weather", "Weather", [["clear","Clear"],["overcast","Overcast"],["fog","Fog or mist"],["snow","Snow"],["storm","Storm clearing"]]],
   ["season", "Season", [["spring","Spring"],["summer","Summer"],["autumn","Autumn"],["winter","Winter"]]]
 ];
 
 /* ---------- state ---------- */
-function defaults(){ return { kept:[], skipped:[], history:[], checks:{}, filters:{subject:[],light:[],weather:[],season:[]}, matchNow:false, loc:null, img:{} }; }
+function defaults(){ return { kept:[], skipped:[], history:[], checks:{}, filters:{subject:[],place:[],light:[],weather:[],season:[]}, matchNow:false, loc:null, img:{} }; }
 let S;
 try { S = Object.assign(defaults(), JSON.parse(localStorage.getItem(KEY) || "{}")); } catch(e){ S = defaults(); }
+S.filters = Object.assign(defaults().filters, S.filters);   // groups added since the phone last saved
 function save(){ try { localStorage.setItem(KEY, JSON.stringify(S)); } catch(e){} }
 const byId = id => CARDS.find(c => c.id === id);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
@@ -325,7 +365,149 @@ function loadImg(img, c){
     });
   }
 }
-function refreshImages(){ document.querySelectorAll("img[data-card]").forEach(img => { const c = byId(img.dataset.card); if (c && !img.complete) loadImg(img, c); }); }
+function refreshImages(){ document.querySelectorAll("img[data-card]").forEach(img => { const c = byId(img.dataset.card); if (c && !c.images && !img.complete) loadImg(img, c); }); }
+
+/* ---------- gallery: several paintings and photos per card ---------- */
+const gallery = c => c.images || [{ kind: "painting", legacy: true, ...c.painting }];
+const firstSrc = c => c.images ? Promise.resolve(`img/${c.images[0].file}`) : LOCAL.has(c.id) ? Promise.resolve(`img/${c.id}.jpg`) : paintingURL(c);
+const UTM = "utm_source=painterly_field_cards&utm_medium=referral";
+function credit(im){
+  if (im.kind === "photo") return `Photograph by <a href="https://unsplash.com/photos/${esc(im.unsplash)}?${UTM}" target="_blank" rel="noopener">${esc(im.by)}</a>
+    on <a href="https://unsplash.com/?${UTM}" target="_blank" rel="noopener">Unsplash</a>`;
+  return `<em>${esc(im.title)}</em><br>${esc(im.artist)}, ${esc(im.year)}<br>${esc(im.museum)}`;
+}
+const altText = im => im.kind === "photo" ? `Reference photograph by ${im.by}` : `${im.title} by ${im.artist}`;
+function showImage(fig, c, i){
+  const ims = gallery(c);
+  i = (i + ims.length) % ims.length;
+  const im = ims[i], img = fig.querySelector("img");
+  fig.dataset.i = i;
+  fig.classList.remove("no-img");
+  fig.querySelector("figcaption").innerHTML = credit(im);
+  fig.querySelectorAll(".pips i").forEach((p, k) => p.classList.toggle("on", k === i));
+  const kind = fig.querySelector(".kind"); if (kind) kind.textContent = im.kind === "photo" ? "Photograph" : "Painting";
+  img.alt = altText(im);
+  if (im.legacy) return loadImg(img, c);
+  img.onerror = () => fig.classList.add("no-img");
+  img.src = `img/${im.file}`;
+  const next = ims[(i + 1) % ims.length]; if (next.file) new Image().src = `img/${next.file}`;
+}
+function plateHTML(c){
+  const ims = gallery(c), many = ims.length > 1;
+  return `<figure class="plate" data-gal="${c.id}">
+    <div class="frame"><img data-card="${c.id}" decoding="async">
+      <div class="missing" style="background:linear-gradient(160deg, ${c.palette.join(",")})">Image not loaded yet. It appears once you're online.</div>
+      ${many ? `<button class="tap prev" data-step="-1" aria-label="Previous image"></button><button class="tap next" data-step="1" aria-label="Next image"></button>` : ""}
+    </div>
+    ${many ? `<div class="pips" aria-hidden="true">${ims.map(() => "<i></i>").join("")}</div><span class="kind"></span>` : ""}
+    <figcaption></figcaption>
+  </figure>`;
+}
+function initPlate(root, c){ const fig = root.querySelector(".plate"); if (fig) showImage(fig, c, 0); }
+
+/* ---------- setup plan: top-down diagram of camera, subject and light ---------- */
+const PLAN_W = 360, PLAN_H = 290, PX = 180, PY = 150;
+const clockPt = (h, r) => { const a = h / 12 * 2 * Math.PI; return [PX + r * Math.sin(a), PY - r * Math.cos(a)]; };
+const planR = d => Math.min(118, 34 + 34 * Math.sqrt(d));   // schematic: near things spread out, far things pinned to the rim
+const f1 = n => Math.round(n * 10) / 10;
+function planLabel(x, y, h, text, gap = 20){
+  // Put the label outward from its icon, wrapped to two short lines, kept inside the drawing.
+  const words = String(text).split(" "), lines = [""];
+  for (const w of words){ const l = lines[lines.length-1]; if (l && (l + " " + w).length > 14 && lines.length < 3) lines.push(w); else lines[lines.length-1] = l ? l + " " + w : w; }
+  const s = Math.sin(h / 6 * Math.PI), co = Math.cos(h / 6 * Math.PI);
+  const anchor = s > .35 ? "start" : s < -.35 ? "end" : "middle";
+  const wide = Math.max(...lines.map(l => l.length)) * 6;
+  let lx = x + s * gap, ly = y - co * (gap + 2) - (co > .35 ? (lines.length - 1) * 13 : 0) + 4;
+  if (anchor === "end") lx = Math.max(lx, wide + 4); else if (anchor === "start") lx = Math.min(lx, PLAN_W - wide - 4);
+  else lx = Math.min(Math.max(lx, wide / 2 + 4), PLAN_W - wide / 2 - 4);
+  return `<text class="pl-lab" x="${f1(lx)}" y="${f1(ly)}" text-anchor="${anchor}">${lines.map((l, k) => `<tspan x="${f1(lx)}" dy="${k ? 13 : 0}">${esc(l)}</tspan>`).join("")}</text>`;
+}
+function barAcross(h, r, len){
+  // A short segment perpendicular to the line toward the subject (window, flag, reflector).
+  const [x, y] = clockPt(h, r), a = h / 6 * Math.PI, dx = Math.cos(a) * len / 2, dy = Math.sin(a) * len / 2;
+  return [[x - dx, y - dy], [x + dx, y + dy], [x, y]];
+}
+function planSVG(c){
+  const p = c.plan;
+  const out = [];
+  const camR = planR(p.camera.dist), [camX, camY] = clockPt(6, camR);
+  const mm = +(/(\d+)\s*mm/.exec(c.glance.lens) || [])[1];
+  const hfov = mm ? 2 * Math.atan(43.8 / (2 * mm)) : 0;          // GFX sensor width
+
+  // Lens axis and field of view
+  if (hfov){
+    const L = camR + 40, t = Math.tan(hfov / 2) * L;
+    out.push(`<path class="pl-fov" d="M${f1(camX)} ${f1(camY)} L${f1(camX - t)} ${f1(camY - L)} L${f1(camX + t)} ${f1(camY - L)}Z"/>`);
+  }
+  out.push(`<line class="pl-axis" x1="${PX}" y1="${PY}" x2="${f1(camX)}" y2="${f1(camY)}"/>`);
+  out.push(`<text class="pl-dim" x="${PX + 8}" y="${f1((PY + camY) / 2 + 12)}">${esc(p.camera.dist)} m</text>`);
+
+  // Zones: what lies in that direction
+  for (const z of p.zones || []){
+    const a0 = (z.at - .9) / 6 * Math.PI, a1 = (z.at + .9) / 6 * Math.PI, R = 138;
+    const P = a => [PX + R * Math.sin(a), PY - R * Math.cos(a)];
+    const [x0, y0] = P(a0), [x1, y1] = P(a1);
+    out.push(`<path class="pl-zone" d="M${f1(x0)} ${f1(y0)} A${R} ${R} 0 0 1 ${f1(x1)} ${f1(y1)}"/>`);
+    const [lx, ly] = clockPt(z.at, R - 16);
+    out.push(`<text class="pl-zlab" x="${f1(lx)}" y="${f1(ly + 4)}" text-anchor="middle">${esc(z.label)}</text>`);
+  }
+
+  // Light sources, with the light they throw on the subject
+  (p.lights || []).forEach((l, k) => {
+    const r = l.kind === "sun" ? 126 : planR(l.dist);
+    const [x, y] = clockPt(l.at, r);
+    if (l.kind === "window" || l.kind === "sky"){
+      const [[ax, ay], [bx, by]] = barAcross(l.at, r, l.kind === "sky" ? 64 : 46);
+      out.push(`<path class="pl-beam ${l.kind}" d="M${f1(ax)} ${f1(ay)} L${f1(bx)} ${f1(by)} L${PX} ${PY}Z"/>`);
+      out.push(`<line class="pl-${l.kind}" x1="${f1(ax)}" y1="${f1(ay)}" x2="${f1(bx)}" y2="${f1(by)}"/>`);
+    } else if (l.kind === "sun"){
+      const [[ax, ay], [bx, by]] = barAcross(l.at, r, 22);
+      out.push(`<path class="pl-beam sun" d="M${f1(ax)} ${f1(ay)} L${f1(bx)} ${f1(by)} L${PX} ${PY}Z"/>`);
+      out.push(`<g class="pl-sun">${[0,1,2,3,4,5,6,7].map(i => { const a = i * Math.PI / 4;
+        return `<line x1="${f1(x + 13 * Math.cos(a))}" y1="${f1(y + 13 * Math.sin(a))}" x2="${f1(x + 18 * Math.cos(a))}" y2="${f1(y + 18 * Math.sin(a))}"/>`; }).join("")}
+        <circle cx="${f1(x)}" cy="${f1(y)}" r="9"/></g>`);
+    } else {
+      out.push(`<path class="pl-beam lantern" d="M${f1(x)} ${f1(y)} L${PX} ${PY}"/><circle class="pl-lantern" cx="${f1(x)}" cy="${f1(y)}" r="7"/>`);
+    }
+    out.push(planLabel(x, y, l.at, l.label, l.kind === "sun" ? 30 : 20));
+    if (k === 0){
+      // Angle between the light and the lens axis, the number photographers talk about.
+      let d = ((l.at - 6) % 12 + 12) % 12; if (d > 6) d -= 12;
+      const deg = Math.round(Math.abs(d) * 30), ar = 30;
+      if (deg >= 15){
+        const [sx, sy] = clockPt(6, ar), [ex, ey] = clockPt(l.at, ar), [mx, my] = clockPt(6 + d / 2, ar + 13);
+        out.push(`<path class="pl-arc" d="M${f1(sx)} ${f1(sy)} A${ar} ${ar} 0 0 ${d > 0 ? 1 : 0} ${f1(ex)} ${f1(ey)}"/>`);
+        out.push(`<text class="pl-deg" x="${f1(mx)}" y="${f1(my + 4)}" text-anchor="middle">${deg}°</text>`);
+      }
+    }
+  });
+
+  // Modifiers: flags, reflectors
+  for (const m of p.mods || []){
+    const r = planR(m.dist), [[ax, ay], [bx, by], [x, y]] = barAcross(m.at, r, 34);
+    out.push(`<line class="pl-mod ${m.kind}" x1="${f1(ax)}" y1="${f1(ay)}" x2="${f1(bx)}" y2="${f1(by)}"/>`);
+    out.push(planLabel(x, y, m.at, m.label));
+  }
+
+  // Subject: shoulders across, head, nose pointing where the face points
+  const fa = p.subject.facing / 6 * Math.PI, fx = Math.sin(fa), fy = -Math.cos(fa);
+  out.push(`<ellipse class="pl-body" cx="${PX}" cy="${PY}" rx="19" ry="8" transform="rotate(${f1(p.subject.facing * 30)} ${PX} ${PY})"/>`);
+  out.push(`<line class="pl-gaze" x1="${f1(PX + fx * 12)}" y1="${f1(PY + fy * 12)}" x2="${f1(PX + fx * 30)}" y2="${f1(PY + fy * 30)}"/>`);
+  out.push(`<circle class="pl-head" cx="${PX}" cy="${PY}" r="9"/>`);
+  out.push(`<path class="pl-head" d="M${f1(PX + fx * 13)} ${f1(PY + fy * 13)} L${f1(PX + fx * 7 - fy * 4)} ${f1(PY + fy * 7 + fx * 4)} L${f1(PX + fx * 7 + fy * 4)} ${f1(PY + fy * 7 - fx * 4)}Z"/>`);
+
+  // Camera, lens toward the subject
+  out.push(`<g class="pl-cam"><rect x="${f1(camX - 13)}" y="${f1(camY - 2)}" width="26" height="16" rx="3"/><rect x="${f1(camX - 6)}" y="${f1(camY - 9)}" width="12" height="8" rx="1.5"/></g>`);
+
+  const note = [
+    `Seen from above, camera at the bottom.`,
+    mm ? `${mm} mm lens: the shaded wedge is what it sees (${Math.round(hfov * 180 / Math.PI)}° wide).` : "",
+    p.subject.label ? `Subject: ${p.subject.label.charAt(0).toLowerCase() + p.subject.label.slice(1)}.` : "",
+    p.camera.label ? `Camera: ${p.camera.label.charAt(0).toLowerCase() + p.camera.label.slice(1)}.` : ""
+  ].filter(Boolean).join(" ");
+  return `<figure class="plan"><svg viewBox="0 0 ${PLAN_W} ${PLAN_H}" role="img" aria-label="Setup seen from above. ${esc(note)}">${out.join("")}</svg>
+    <figcaption>${esc(note)}</figcaption></figure>`;
+}
 
 /* ---------- card rendering ---------- */
 function checks(c, sec, items, fn){
@@ -341,16 +523,10 @@ function progress(c){
   return n ? `${n} of ${total} checked` : "";
 }
 function cardHTML(c){
-  const p = c.painting;
   const people = c.kind === "Portrait";
-  const grad = `linear-gradient(160deg, ${c.palette.join(",")})`;
   return `
   <div class="stamp" aria-hidden="true"><span class="keep">Keep</span><span class="skip">Skip</span></div>
-  <figure class="plate">
-    <div class="frame"><img data-card="${c.id}" alt="${esc(p.title)} by ${esc(p.artist)}" decoding="async">
-      <div class="missing" style="background:${grad}">Painting not loaded yet. It appears once you're online.</div></div>
-    <figcaption><em>${esc(p.title)}</em><br>${esc(p.artist)}, ${esc(p.year)}<br>${esc(p.museum)}</figcaption>
-  </figure>
+  ${plateHTML(c)}
   <div class="body">
     <h2 class="title">${esc(c.title)}</h2>
     <p class="mood">${esc(c.mood)}</p>
@@ -365,7 +541,7 @@ function cardHTML(c){
 
     <section class="sec"><h3>When and where</h3><p>${esc(c.when)}</p><p>${esc(c.where)}</p></section>
 
-    <section class="sec"><h3>${people ? "Posing and direction" : "Composition"}</h3><p>${esc(c.direction.pose)}</p>
+    <section class="sec"><h3>${people ? "Posing and direction" : "Composition"}</h3>${c.plan ? planSVG(c) : ""}<p>${esc(c.direction.pose)}</p>
       ${c.direction.prompts.length ? `<h4>${people ? "Say this" : "Look for"}</h4><ul class="prompts">${c.direction.prompts.map(s => `<li>${esc(s)}</li>`).join("")}</ul>` : ""}
     </section>
 
@@ -393,7 +569,7 @@ function cardHTML(c){
 
 /* ---------- filtering ---------- */
 function matches(c){
-  for (const [g] of GROUPS){ const sel = S.filters[g]; if (sel.length && !sel.some(v => c.tags[g].includes(v))) return false; }
+  for (const [g] of GROUPS){ const sel = S.filters[g]; if (sel.length && !sel.some(v => (c.tags[g] || []).includes(v))) return false; }
   if (S.matchNow && !c.tags.light.includes(currentPhase)) return false;
   return true;
 }
@@ -423,7 +599,7 @@ function renderDeck(){
     el.dataset.id = c.id;
     el.innerHTML = cardHTML(c);
     deckEl.appendChild(el);
-    loadImg(el.querySelector("img"), c);
+    initPlate(el, c);
   });
   attachSwipe(deckEl.lastElementChild);
 }
@@ -452,15 +628,15 @@ function attachSwipe(el){
   const keepS = el.querySelector(".stamp .keep"), skipS = el.querySelector(".stamp .skip");
   let x0=0, y0=0, dx=0, mode=null, pid=null;
   el.addEventListener("pointerdown", e => {
-    if (e.target.closest("button,label,input,a")) return;
-    x0 = e.clientX; y0 = e.clientY; dx = 0; mode = null; pid = e.pointerId;
+    if (e.target.closest("button:not(.tap),label,input,a")) return;   // gallery taps may still start a swipe
+    x0 = e.clientX; y0 = e.clientY; dx = 0; mode = null; pid = e.pointerId; el.dragged = false;
     el.classList.remove("snap");
   });
   el.addEventListener("pointermove", e => {
     if (e.pointerId !== pid) return;
     const mx = e.clientX - x0, my = e.clientY - y0;
     if (!mode){
-      if (Math.abs(mx) > 10 && Math.abs(mx) > Math.abs(my)*1.2){ mode = "h"; el.setPointerCapture(pid); }
+      if (Math.abs(mx) > 10 && Math.abs(mx) > Math.abs(my)*1.2){ mode = "h"; el.dragged = true; el.setPointerCapture(pid); }
       else if (Math.abs(my) > 10) mode = "v";
     }
     if (mode !== "h") return;
@@ -472,6 +648,7 @@ function attachSwipe(el){
   const end = e => {
     if (e.pointerId !== pid) return;
     pid = null;
+    setTimeout(() => { el.dragged = false; });   // after the click that follows this pointerup
     if (mode === "h" && Math.abs(dx) > 100) return decide(dx > 0 ? "keep" : "skip");
     el.classList.add("snap"); el.style.transform = ""; keepS.style.opacity = skipS.style.opacity = 0;
   };
@@ -494,9 +671,7 @@ function renderList(){
     <h2>Landscapes</h2>${CARDS.filter(c => c.kind === "Landscape").map(c => row(c, S.kept.includes(c.id) ? "Kept" : "")).join("")}
     <div style="margin-top:20px;display:flex;gap:10px;flex-wrap:wrap">${kept.length ? `<button class="btn" data-reset="kept">Clear kept cards</button>` : ""}<button class="btn" data-reset="deck">Start the deck again</button></div>`;
   listEl.querySelectorAll("[data-thumb]").forEach(t => {
-    const c = byId(t.dataset.thumb);
-    const go = u => { if (u) t.style.backgroundImage = `url("${u}")`; };
-    if (LOCAL.has(c.id)) go(`img/${c.id}.jpg`); else paintingURL(c).then(go);
+    firstSrc(byId(t.dataset.thumb)).then(u => { if (u) t.style.backgroundImage = `url("${u}")`; });
   });
 }
 function openReader(id){
@@ -507,7 +682,7 @@ function openReader(id){
     <button class="icon-btn" data-togglekeep="${id}">${S.kept.includes(id) ? "Remove from kept" : "Keep for today"}</button></div>
     <article class="card">${cardHTML(c)}</article>`;
   document.body.appendChild(wrap);
-  loadImg(wrap.querySelector("img"), c);
+  initPlate(wrap, c);
   wrap.querySelector("[data-close]").focus();
 }
 
@@ -535,9 +710,9 @@ function openFilters(){
       <div class="group"><div class="chips"><button class="chip" data-now aria-pressed="${S.matchNow}">Match the light right now</button></div></div>
       ${GROUPS.map(([g,label,opts]) => `<div class="group"><span>${label}</span><div class="chips">${opts.map(([v,t]) =>
         `<button class="chip" data-g="${g}" data-v="${v}" aria-pressed="${S.filters[g].includes(v)}">${t}</button>`).join("")}</div></div>`).join("")}
-      <div class="foot"><button class="btn primary" data-done>Show ${deckCards().length} cards</button><button class="btn" data-clearf>Clear conditions</button></div>
+      <div class="foot"><button class="btn primary" data-done>Show ${deckCards().length} card${deckCards().length === 1 ? "" : "s"}</button><button class="btn" data-clearf>Clear conditions</button></div>
       <div class="group"><span>Sun times are for ${esc(loc.label)}</span><div class="chips"><button class="chip" data-loc>Use my location</button>${S.loc ? `<button class="chip" data-home>Back to Montréal</button>` : ""}</div></div>
-      <div class="group"><span>Offline</span><button class="btn" data-offline>Save all paintings for offline use</button><p class="small" data-offmsg>Do this once on Wi-Fi before a hike.</p></div>`;
+      <div class="group"><span>Offline</span><button class="btn" data-offline>Save all images for offline use</button><p class="small" data-offmsg>Do this once on Wi-Fi before a hike.</p></div>`;
   };
   draw();
   const close = () => { scrim.remove(); sh.remove(); updateFilterBtn(); if (view === "deck") renderDeck(); };
@@ -556,11 +731,12 @@ function openFilters(){
     }
     else if (b.hasAttribute("data-offline")){
       const msg = sh.querySelector("[data-offmsg]"); b.disabled = true; let ok = 0;
-      for (const c of CARDS){
-        msg.textContent = `Saving ${ok+1} of ${CARDS.length}: ${c.painting.title}`;
-        try { const u = LOCAL.has(c.id) ? `img/${c.id}.jpg` : await paintingURL(c); if (u){ await fetch(u, { mode: u.startsWith("http") ? "no-cors" : "same-origin" }); ok++; } } catch(e){}
+      const jobs = CARDS.flatMap(c => gallery(c).map(im => [c, im]));
+      for (const [c, im] of jobs){
+        msg.textContent = `Saving ${ok+1} of ${jobs.length}: ${c.title}`;
+        try { const u = im.legacy ? await firstSrc(c) : `img/${im.file}`; if (u){ await fetch(u, { mode: u.startsWith("http") ? "no-cors" : "same-origin" }); ok++; } } catch(e){}
       }
-      msg.textContent = ok === CARDS.length ? `All ${ok} paintings saved. The app works without signal now.` : `${ok} of ${CARDS.length} saved. Try again on a better connection.`;
+      msg.textContent = ok === jobs.length ? `All ${ok} images saved. The app works without signal now.` : `${ok} of ${jobs.length} saved. Try again on a better connection.`;
       b.disabled = false;
     }
   };
@@ -590,7 +766,12 @@ document.addEventListener("change", e => {
 });
 document.addEventListener("click", e => {
   const b = e.target.closest("button"); if (!b) return;
-  if (b.dataset.clear){ delete S.checks[b.dataset.clear]; save();
+  if (b.dataset.step){
+    if (b.closest(".card")?.dragged) return;   // the end of a swipe, not a tap
+    const fig = b.closest(".plate");
+    showImage(fig, byId(fig.dataset.gal), +fig.dataset.i + +b.dataset.step);
+  }
+  else if (b.dataset.clear){ delete S.checks[b.dataset.clear]; save();
     document.querySelectorAll(`input[data-card="${b.dataset.clear}"]`).forEach(i => i.checked = false);
     document.querySelectorAll(`[data-prog="${b.dataset.clear}"]`).forEach(p => p.textContent = ""); }
   else if (b.dataset.reset === "deck"){ S.skipped = []; S.history = S.history.filter(h => h[0] === "keep"); save(); show("deck"); }

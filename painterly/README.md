@@ -12,20 +12,30 @@ kit, camera settings, illusion-breakers and the editing workflow.
 3. After a minute the site is at `https://<your-username>.github.io/painterly/`.
 4. On the iPhone, open it in Safari, tap Share, then "Add to Home Screen".
 
-## Paintings
+## Images
 
-By default the app looks each painting up on Wikipedia the first time it's shown.
-For a self-contained site, run this once on your computer and commit the result:
+Each card lists its `images`: public-domain paintings and a couple of Unsplash
+photographs, alternating. The viewer taps the left or right half of the image to flip
+through them. Each image is named exactly (a Wikipedia article, a Wikimedia Commons
+file, or an Unsplash photo id), so choosing them is a human job; the script only
+downloads what the cards name:
 
     python3 fetch_paintings.py
 
-It saves the images to `img/` plus an `img/index.json`, and the app uses those first.
-Look through them: if a lookup picked the wrong image, replace that `img/<card-id>.jpg`
-with one you prefer.
+It saves anything missing to `img/<card-id>/`, resized to 1600 px, and keeps what's
+already there. It needs `node` and `curl`. Look at new images before committing.
+
+A card can still use a single `painting` with a Wikipedia lookup instead of `images`;
+the script saves that to `img/<card-id>.jpg` and lists it in `img/index.json`.
+
+## Setup diagrams
+
+A card with a `plan` gets a top-down drawing of camera, subject, light and reflectors
+in its "Posing and direction" section. The format is described at the top of `cards.js`.
 
 ## Offline
 
-Open "Conditions" and tap "Save all paintings for offline use" once on Wi-Fi. After that
+Open "Conditions" and tap "Save all images for offline use" (about 30 MB) once on Wi-Fi. After that
 the whole deck works without signal. Sun times are computed on the phone.
 
 ## Editing cards

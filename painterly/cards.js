@@ -4,19 +4,50 @@
    light:   golden | blue | day | night
    weather: clear | overcast | fog | snow | storm
    season:  spring | summer | autumn | winter
+   place:   water | street | farm | hills | forest | garden | indoors
    painting.wiki: English Wikipedia article titles to try, in order.
-   painting.commons: fallback search on Wikimedia Commons. */
+   painting.commons: fallback search on Wikimedia Commons.
+
+   images (optional, replaces painting): a gallery the viewer taps through.
+     { kind: "painting", file, title, artist, year, museum, wiki: [...] }
+     { kind: "painting", file, ..., commons: "File:<exact Wikimedia Commons file name>" }
+     { kind: "photo", file, unsplash: "<photo id>", by: "<photographer>" }
+     `file` is relative to img/. Run fetch_paintings.py to download missing files.
+
+   plan (optional): top-down diagram of the setup, drawn instead of guessing from text.
+     Positions are clock hours around the subject as drawn on screen:
+     the camera is always at 6, 12 is behind the subject, 9 is frame left, 3 is frame right.
+     camera:  { dist }                     metres from the subject
+     subject: { facing, label }            clock hour the face points to
+     lights:  [{ kind, at, dist, label }]  kind: window | sky | sun | lantern
+     mods:    [{ kind, at, dist, label }]  kind: black | white | gold
+     zones:   [{ at, label }]              what lies in that direction (background, trees) */
 
 window.CARDS = [
 {
   id: "vermeer-window",
   title: "Vermeer Window Portrait",
   kind: "Portrait",
-  painting: { title: "The Milkmaid", artist: "Johannes Vermeer", year: "c. 1658", museum: "Rijksmuseum, Amsterdam",
-    wiki: ["The_Milkmaid_(Vermeer)"], commons: "Vermeer Het melkmeisje Google Art Project" },
+  images: [
+    { kind: "painting", file: "vermeer-window/milkmaid.jpg", title: "The Milkmaid", artist: "Johannes Vermeer", year: "c. 1658", museum: "Rijksmuseum, Amsterdam",
+      wiki: ["The_Milkmaid_(Vermeer)"] },
+    { kind: "painting", file: "vermeer-window/letter-open-window.jpg", title: "Girl Reading a Letter at an Open Window", artist: "Johannes Vermeer", year: "c. 1657 to 1659", museum: "Gemäldegalerie Alte Meister, Dresden",
+      wiki: ["Girl_Reading_a_Letter_at_an_Open_Window"] },
+    { kind: "photo", file: "vermeer-window/unsplash-ynz-KiVxaB8.jpg", unsplash: "ynz-KiVxaB8", by: "Gantas Vaičiulėnas" },
+    { kind: "painting", file: "vermeer-window/water-pitcher.jpg", title: "Young Woman with a Water Pitcher", artist: "Johannes Vermeer", year: "c. 1662", museum: "The Met, New York",
+      wiki: ["Young_Woman_with_a_Water_Pitcher"] },
+    { kind: "photo", file: "vermeer-window/unsplash-PUX5LdNIdOM.jpg", unsplash: "PUX5LdNIdOM", by: "Nicole Geri" }
+  ],
   mood: "Quiet absorption in a simple task, lit by one cool opening.",
   palette: ["#e3d6b8", "#c9a13b", "#2f4f8f", "#5b4a36", "#1b2230"],
-  tags: { subject: ["kids", "adults"], light: ["day"], weather: ["clear", "overcast", "fog", "snow", "storm"], season: ["spring", "summer", "autumn", "winter"] },
+  tags: { subject: ["kids", "adults"], light: ["day"], weather: ["clear", "overcast", "fog", "snow", "storm"], season: ["spring", "summer", "autumn", "winter"], place: ["indoors", "farm"] },
+  plan: {
+    camera: { dist: 3 },
+    subject: { facing: 8.5, label: "Face turned to the light" },
+    lights: [{ kind: "window", at: 9, dist: 1.2, label: "Window 1 to 1.5 m" }],
+    mods: [{ kind: "black", at: 3, dist: 1.6, label: "Dark cloth" }],
+    zones: [{ at: 12, label: "Lit wall, graded" }]
+  },
   glance: { when: "Any daytime hour, overcast is best", lens: "GF 80mm f/1.7", exposure: "f/2.8, 1/125, spot +0.7 EV" },
   steal: [
     "Light enters from one side, high, and wraps the face and hands.",
@@ -79,11 +110,23 @@ window.CARDS = [
   id: "rembrandt-forest-edge",
   title: "Rembrandt Forest Edge",
   kind: "Portrait",
-  painting: { title: "Titus at his Desk", artist: "Rembrandt van Rijn", year: "1655", museum: "Museum Boijmans Van Beuningen, Rotterdam",
-    wiki: ["Titus_at_a_Lectern", "Titus_at_His_Desk"], commons: "Rembrandt Titus at his desk Boijmans" },
+  images: [
+    { kind: "painting", file: "rembrandt-forest-edge/titus-desk.jpg", title: "Titus at his Desk", artist: "Rembrandt van Rijn", year: "1655", museum: "Museum Boijmans Van Beuningen, Rotterdam", wiki: ["Titus_at_a_Lectern", "Titus_at_His_Desk"] },
+    { kind: "photo", file: "rembrandt-forest-edge/unsplash-uNaSs6pRzj4.jpg", unsplash: "uNaSs6pRzj4", by: "Esther Masscheleyn" },
+    { kind: "painting", file: "rembrandt-forest-edge/girl-at-a-window.jpg", title: "Girl at a Window", artist: "Rembrandt van Rijn", year: "1645", museum: "Dulwich Picture Gallery, London", commons: "File:Rembrandt Harmensz van Rijn - Girl at a Window - Google Art Project.jpg" },
+    { kind: "photo", file: "rembrandt-forest-edge/unsplash-XbxQbS1NMKE.jpg", unsplash: "XbxQbS1NMKE", by: "Janko Ferlič" },
+    { kind: "painting", file: "rembrandt-forest-edge/two-circles.jpg", title: "Self-Portrait with Two Circles", artist: "Rembrandt van Rijn", year: "c. 1665 to 1669", museum: "Kenwood House, London", wiki: ["Self-Portrait_with_Two_Circles"] }
+  ],
   mood: "A face surfacing out of darkness: inward, serious, warm.",
   palette: ["#e6c89a", "#a86b2d", "#8e2f22", "#3b2a1c", "#141a22"],
-  tags: { subject: ["kids", "adults"], light: ["day", "golden"], weather: ["clear", "overcast"], season: ["spring", "summer", "autumn"] },
+  tags: { subject: ["kids", "adults"], light: ["day", "golden"], weather: ["clear", "overcast"], season: ["spring", "summer", "autumn"], place: ["forest", "farm"] },
+  plan: {
+    camera: { dist: 2.5 },
+    subject: { facing: 6, label: "Turn until the cheek triangle shows" },
+    lights: [{ kind: "sky", at: 7.5, dist: 4, label: "Open sky, 45° and above" }],
+    mods: [{ kind: "black", at: 3.5, dist: 1.2, label: "Black flag" }],
+    zones: [{ at: 12, label: "Deep forest" }]
+  },
   glance: { when: "Late afternoon or overcast, in open shade", lens: "Contax 645 140mm f/2.8", exposure: "f/2.8, 1/250, spot +0.7 EV" },
   steal: [
     "One high light from the upper side; the rest of the picture falls into warm dark brown.",
@@ -138,11 +181,22 @@ window.CARDS = [
   id: "golden-fairytale-child",
   title: "Golden Fairytale Child",
   kind: "Portrait",
-  painting: { title: "Autumn Leaves", artist: "John Everett Millais", year: "1856", museum: "Manchester Art Gallery",
-    wiki: ["Autumn_Leaves_(Millais)", "Autumn_Leaves_(painting)"], commons: "Millais Autumn Leaves 1856" },
+  images: [
+    { kind: "painting", file: "golden-fairytale-child/autumn-leaves.jpg", title: "Autumn Leaves", artist: "John Everett Millais", year: "1856", museum: "Manchester Art Gallery", wiki: ["Autumn_Leaves_(Millais)"] },
+    { kind: "photo", file: "golden-fairytale-child/unsplash-8jCCf6kw3LU.jpg", unsplash: "8jCCf6kw3LU", by: "Aakash Makwana" },
+    { kind: "painting", file: "golden-fairytale-child/snap-the-whip.jpg", title: "Snap the Whip", artist: "Winslow Homer", year: "1872", museum: "Butler Institute of American Art, Youngstown", commons: "File:Winslow Homer - Snap the Whip (Butler Institute of American Art).jpg" },
+    { kind: "photo", file: "golden-fairytale-child/unsplash-OEi76hVLRko.jpg", unsplash: "OEi76hVLRko", by: "Vitalii Khodzinskyi" }
+  ],
   mood: "Children in the last warm light, as if the moment is already a memory.",
   palette: ["#f0c77a", "#b8742f", "#6f3d2a", "#4a5a3a", "#27303b"],
-  tags: { subject: ["kids", "family"], light: ["golden"], weather: ["clear", "fog"], season: ["spring", "summer", "autumn"] },
+  tags: { subject: ["kids", "family"], light: ["golden"], weather: ["clear", "fog"], season: ["spring", "summer", "autumn"], place: ["farm", "hills", "garden"] },
+  plan: {
+    camera: { dist: 6, label: "At the child's eye level" },
+    subject: { facing: 6 },
+    lights: [{ kind: "sun", at: 10.5, dist: 20, label: "Low sun, not dead behind" }],
+    mods: [{ kind: "gold", at: 4.5, dist: 1.2, label: "Gold reflector" }],
+    zones: [{ at: 12, label: "Trees in shadow" }]
+  },
   glance: { when: "Last 45 minutes before sunset", lens: "Canon 135mm f/2L", exposure: "f/2, 1/500, +1.3 EV" },
   steal: [
     "Figures lit from behind by a glowing dusk sky.",
@@ -198,11 +252,16 @@ window.CARDS = [
   id: "blue-hour-lantern",
   title: "Blue Hour Lantern Portrait",
   kind: "Portrait",
-  painting: { title: "Carnation, Lily, Lily, Rose", artist: "John Singer Sargent", year: "1885 to 1886", museum: "Tate Britain, London",
-    wiki: ["Carnation,_Lily,_Lily,_Rose"], commons: "Sargent Carnation Lily Lily Rose" },
+  images: [
+    { kind: "painting", file: "blue-hour-lantern/carnation-lily.jpg", title: "Carnation, Lily, Lily, Rose", artist: "John Singer Sargent", year: "1885 to 1886", museum: "Tate Britain, London", wiki: ["Carnation,_Lily,_Lily,_Rose"] },
+    { kind: "photo", file: "blue-hour-lantern/unsplash-ZkcWw0wiTo0.jpg", unsplash: "ZkcWw0wiTo0", by: "Julia Florczak" },
+    { kind: "painting", file: "blue-hour-lantern/skagen-summer-evening.jpg", title: "Summer Evening on Skagen's Southern Beach", artist: "Peder Severin Krøyer", year: "1893", museum: "Skagens Museum", wiki: ["Summer_Evening_on_Skagen's_Southern_Beach"] },
+    { kind: "photo", file: "blue-hour-lantern/unsplash-aEL0oAJibJA.jpg", unsplash: "aEL0oAJibJA", by: "rehan shaik" },
+    { kind: "painting", file: "blue-hour-lantern/hopeless-dawn.jpg", title: "A Hopeless Dawn", artist: "Frank Bramley", year: "1888", museum: "Tate Britain, London", commons: "File:Frank Bramley - A Hopeless Dawn 1888.jpg" }
+  ],
   mood: "Twilight hush: small warm lights in a cool world.",
   palette: ["#f3e2b0", "#e0a24a", "#7f93a8", "#45566b", "#1f2a36"],
-  tags: { subject: ["kids", "family"], light: ["blue", "night"], weather: ["clear", "overcast"], season: ["spring", "summer", "autumn", "winter"] },
+  tags: { subject: ["kids", "family"], light: ["blue", "night"], weather: ["clear", "overcast"], season: ["spring", "summer", "autumn", "winter"], place: ["garden", "farm"] },
   glance: { when: "15 to 35 minutes after sunset", lens: "GF 80mm f/1.7", exposure: "f/1.7, 1/125, ISO 1600 to 6400" },
   steal: [
     "Two colour temperatures: cool blue-violet ambient, warm lantern glow from below.",
@@ -254,11 +313,15 @@ window.CARDS = [
   id: "misty-meadow-300",
   title: "Misty Meadow Figure",
   kind: "Portrait",
-  painting: { title: "The Song of the Lark", artist: "Jules Breton", year: "1884", museum: "Art Institute of Chicago",
-    wiki: ["The_Song_of_the_Lark_(Jules_Breton)", "The_Song_of_the_Lark_(painting)"], commons: "Jules Breton The Song of the Lark" },
+  images: [
+    { kind: "painting", file: "misty-meadow-300/song-of-the-lark.jpg", title: "The Song of the Lark", artist: "Jules Breton", year: "1884", museum: "Art Institute of Chicago", wiki: ["The_Song_of_the_Lark_(Jules_Breton)"] },
+    { kind: "photo", file: "misty-meadow-300/unsplash-j4OKEDZZ5oY.jpg", unsplash: "j4OKEDZZ5oY", by: "Pouya Hajiebrahimi" },
+    { kind: "painting", file: "misty-meadow-300/angelus.jpg", title: "The Angelus", artist: "Jean-François Millet", year: "1857 to 1859", museum: "Musée d'Orsay, Paris", wiki: ["The_Angelus_(painting)"] },
+    { kind: "photo", file: "misty-meadow-300/unsplash-rACvP0D0KK0.jpg", unsplash: "rACvP0D0KK0", by: "Leonie Zettl" }
+  ],
   mood: "A single figure alone in a vast soft field at dawn.",
   palette: ["#e9a55a", "#a05a2c", "#6d6a4b", "#4d5b54", "#2a3038"],
-  tags: { subject: ["kids", "adults"], light: ["golden"], weather: ["fog", "clear"], season: ["spring", "summer", "autumn"] },
+  tags: { subject: ["kids", "adults"], light: ["golden"], weather: ["fog", "clear"], season: ["spring", "summer", "autumn"], place: ["farm", "water"] },
   glance: { when: "Sunrise to 45 minutes after, with mist", lens: "Canon 300mm f/2.8L", exposure: "f/2.8, 1/1000, +1 EV" },
   steal: [
     "The sun sits on the horizon behind the figure.",
@@ -312,11 +375,15 @@ window.CARDS = [
   id: "winter-fairytale",
   title: "Winter Fairytale",
   kind: "Portrait",
-  painting: { title: "Winter Landscape with Ice Skaters", artist: "Hendrick Avercamp", year: "c. 1608", museum: "Rijksmuseum, Amsterdam",
-    wiki: ["Winter_Landscape_with_Ice_Skaters"], commons: "Avercamp Winter landscape with ice skaters Rijksmuseum" },
+  images: [
+    { kind: "painting", file: "winter-fairytale/ice-skaters.jpg", title: "Winter Landscape with Ice Skaters", artist: "Hendrick Avercamp", year: "c. 1608", museum: "Rijksmuseum, Amsterdam", commons: "File:Avercamp, Hendrick - Winterlandschap met schaatsers - SK-A-1718.jpg" },
+    { kind: "photo", file: "winter-fairytale/unsplash-cIJanQTb9u8.jpg", unsplash: "cIJanQTb9u8", by: "M G" },
+    { kind: "painting", file: "winter-fairytale/hunters-in-the-snow.jpg", title: "The Hunters in the Snow", artist: "Pieter Bruegel the Elder", year: "1565", museum: "Kunsthistorisches Museum, Vienna", wiki: ["The_Hunters_in_the_Snow"] },
+    { kind: "photo", file: "winter-fairytale/unsplash-msty1V5qc8U.jpg", unsplash: "msty1V5qc8U", by: "Vitolda Klein" }
+  ],
   mood: "Warm figures in a cold, glowing world.",
   palette: ["#eef0ea", "#b33a2b", "#c59a45", "#2e4a3c", "#8ea3b8"],
-  tags: { subject: ["kids", "family"], light: ["golden", "day"], weather: ["clear", "snow"], season: ["winter"] },
+  tags: { subject: ["kids", "family"], light: ["golden", "day"], weather: ["clear", "snow"], season: ["winter"], place: ["farm", "water", "forest", "hills"] },
   glance: { when: "Winter golden hour (starts mid-afternoon)", lens: "Canon 135mm f/2L", exposure: "f/2, 1/500, +1.7 EV" },
   steal: [
     "Warm clothing colours against a pale, cool world.",
@@ -368,11 +435,15 @@ window.CARDS = [
   id: "harvest-genre",
   title: "Harvest Genre Scene",
   kind: "Portrait",
-  painting: { title: "The Gleaners", artist: "Jean-François Millet", year: "1857", museum: "Musée d'Orsay, Paris",
-    wiki: ["The_Gleaners"], commons: "Millet The Gleaners Orsay" },
+  images: [
+    { kind: "painting", file: "harvest-genre/gleaners.jpg", title: "The Gleaners", artist: "Jean-François Millet", year: "1857", museum: "Musée d'Orsay, Paris", wiki: ["The_Gleaners"] },
+    { kind: "photo", file: "harvest-genre/unsplash-OhvkoOYlASk.jpg", unsplash: "OhvkoOYlASk", by: "Boudewijn Huysmans" },
+    { kind: "painting", file: "harvest-genre/harvesters.jpg", title: "The Harvesters", artist: "Pieter Bruegel the Elder", year: "1565", museum: "The Met, New York", commons: "File:Pieter Bruegel the Elder- The Harvesters - Google Art Project.jpg" },
+    { kind: "photo", file: "harvest-genre/unsplash-Cb0x53ecH50.jpg", unsplash: "Cb0x53ecH50", by: "Mieke Campbell" }
+  ],
   mood: "Honest work, bent backs, dignity, late sun.",
   palette: ["#e3c98f", "#b98a4b", "#8a4a32", "#4d5d6b", "#3a3a2c"],
-  tags: { subject: ["kids", "adults", "family"], light: ["golden", "day"], weather: ["clear", "overcast"], season: ["summer", "autumn"] },
+  tags: { subject: ["kids", "adults", "family"], light: ["golden", "day"], weather: ["clear", "overcast"], season: ["summer", "autumn"], place: ["farm", "garden"] },
   glance: { when: "Last 90 minutes before sunset, harvest season", lens: "GF 80mm f/1.7", exposure: "f/4, 1/500, -0.3 EV" },
   steal: [
     "Figures in a frieze, bent in action.",
@@ -424,11 +495,16 @@ window.CARDS = [
   id: "golden-city-vista",
   title: "Golden Hour City Vista",
   kind: "Landscape",
-  painting: { title: "Seaport with the Embarkation of the Queen of Sheba", artist: "Claude Lorrain", year: "1648", museum: "National Gallery, London",
-    wiki: ["Seaport_with_the_Embarkation_of_the_Queen_of_Sheba"], commons: "Claude Lorrain Embarkation of the Queen of Sheba" },
+  images: [
+    { kind: "painting", file: "golden-city-vista/queen-of-sheba.jpg", title: "Seaport with the Embarkation of the Queen of Sheba", artist: "Claude Lorrain", year: "1648", museum: "National Gallery, London", wiki: ["Seaport_with_the_Embarkation_of_the_Queen_of_Sheba"] },
+    { kind: "photo", file: "golden-city-vista/unsplash-Y4RGiczCLYM.jpg", unsplash: "Y4RGiczCLYM", by: "Leo_Visions" },
+    { kind: "painting", file: "golden-city-vista/dido-building-carthage.jpg", title: "Dido Building Carthage", artist: "J. M. W. Turner", year: "1815", museum: "National Gallery, London", wiki: ["Dido_building_Carthage"] },
+    { kind: "photo", file: "golden-city-vista/unsplash-f3uezdb4yuA.jpg", unsplash: "f3uezdb4yuA", by: "Zhang qc" },
+    { kind: "painting", file: "golden-city-vista/impression-sunrise.jpg", title: "Impression, Sunrise", artist: "Claude Monet", year: "1872", museum: "Musée Marmottan Monet, Paris", wiki: ["Impression,_Sunrise"] }
+  ],
   mood: "The city as a classical scene bathed in low gold.",
   palette: ["#f4d38a", "#d69a4a", "#8a7a5a", "#4f5d6a", "#232a33"],
-  tags: { subject: ["none"], light: ["golden", "blue"], weather: ["clear"], season: ["spring", "summer", "autumn", "winter"] },
+  tags: { subject: ["none"], light: ["golden", "blue"], weather: ["clear"], season: ["spring", "summer", "autumn", "winter"], place: ["street", "water", "hills"] },
   glance: { when: "30 to 60 minutes before sunset", lens: "GF 80mm f/1.7", exposure: "f/8, ISO 100, bracket ±2" },
   steal: [
     "The sun low in or near the frame.",
@@ -481,11 +557,15 @@ window.CARDS = [
   id: "misty-valley-dawn",
   title: "Misty Valley Dawn",
   kind: "Landscape",
-  painting: { title: "Wanderer above the Sea of Fog", artist: "Caspar David Friedrich", year: "c. 1818", museum: "Hamburger Kunsthalle",
-    wiki: ["Wanderer_above_the_Sea_of_Fog"], commons: "Friedrich Wanderer above the sea of fog" },
+  images: [
+    { kind: "painting", file: "misty-valley-dawn/wanderer.jpg", title: "Wanderer above the Sea of Fog", artist: "Caspar David Friedrich", year: "c. 1818", museum: "Hamburger Kunsthalle", wiki: ["Wanderer_above_the_Sea_of_Fog"] },
+    { kind: "photo", file: "misty-valley-dawn/unsplash-5tsth5IUg8I.jpg", unsplash: "5tsth5IUg8I", by: "iuliu illes" },
+    { kind: "painting", file: "misty-valley-dawn/morning-mist.jpg", title: "Morning Mist in the Mountains", artist: "Caspar David Friedrich", year: "1808", museum: "Heidecksburg Castle, Rudolstadt", commons: "File:Friedrich - Morning mist in the mountains.jpg" },
+    { kind: "photo", file: "misty-valley-dawn/unsplash-8vHxfKOqkLw.jpg", unsplash: "8vHxfKOqkLw", by: "Diwei Zhu" }
+  ],
   mood: "Solitude above the clouds.",
   palette: ["#e8dccb", "#b9b0a8", "#7f8a96", "#4a5563", "#22282f"],
-  tags: { subject: ["none", "adults"], light: ["golden"], weather: ["fog"], season: ["spring", "summer", "autumn", "winter"] },
+  tags: { subject: ["none", "adults"], light: ["golden"], weather: ["fog"], season: ["spring", "summer", "autumn", "winter"], place: ["hills", "water"] },
   glance: { when: "Sunrise after a clear, calm night", lens: "Contax 645 35mm f/3.5", exposure: "f/8, ISO 100, bracket" },
   steal: [
     "A figure seen from behind (Rückenfigur), dead centre.",
@@ -534,11 +614,15 @@ window.CARDS = [
   id: "forest-cathedral",
   title: "Forest Cathedral",
   kind: "Landscape",
-  painting: { title: "Morning in a Pine Forest", artist: "Ivan Shishkin and Konstantin Savitsky", year: "1889", museum: "Tretyakov Gallery, Moscow",
-    wiki: ["Morning_in_a_Pine_Forest"], commons: "Shishkin Morning in a Pine Forest" },
+  images: [
+    { kind: "painting", file: "forest-cathedral/morning-pine-forest.jpg", title: "Morning in a Pine Forest", artist: "Ivan Shishkin and Konstantin Savitsky", year: "1889", museum: "Tretyakov Gallery, Moscow", wiki: ["Morning_in_a_Pine_Forest"] },
+    { kind: "photo", file: "forest-cathedral/unsplash-tLNRTxieD7k.jpg", unsplash: "tLNRTxieD7k", by: "Kristine Weilert" },
+    { kind: "painting", file: "forest-cathedral/in-the-woods.jpg", title: "In the Woods", artist: "Asher Brown Durand", year: "1855", museum: "The Met, New York", commons: "File:Durand Asher B In The Woods.jpg" },
+    { kind: "photo", file: "forest-cathedral/unsplash-7aEhliQraPI.jpg", unsplash: "7aEhliQraPI", by: "Erik van Dijk" }
+  ],
   mood: "Light falling like incense through old trees.",
   palette: ["#e7d59a", "#a7a06a", "#3f5a46", "#2c3b31", "#1a2226"],
-  tags: { subject: ["none", "kids"], light: ["golden", "day"], weather: ["fog", "clear"], season: ["spring", "summer", "autumn"] },
+  tags: { subject: ["none", "kids"], light: ["golden", "day"], weather: ["fog", "clear"], season: ["spring", "summer", "autumn"], place: ["forest"] },
   glance: { when: "1 to 2 hours after sunrise, with mist", lens: "Contax 645 35mm f/3.5", exposure: "f/8, ISO 200, -1 EV" },
   steal: [
     "Shafts of light through mist.",
@@ -586,11 +670,16 @@ window.CARDS = [
   id: "storm-light",
   title: "Storm Light",
   kind: "Landscape",
-  painting: { title: "The Oxbow (View from Mount Holyoke)", artist: "Thomas Cole", year: "1836", museum: "The Met, New York",
-    wiki: ["The_Oxbow"], commons: "Thomas Cole View from Mount Holyoke Oxbow" },
+  images: [
+    { kind: "painting", file: "storm-light/oxbow.jpg", title: "The Oxbow (View from Mount Holyoke)", artist: "Thomas Cole", year: "1836", museum: "The Met, New York", wiki: ["The_Oxbow"] },
+    { kind: "photo", file: "storm-light/unsplash-JRL_gXQwpeA.jpg", unsplash: "JRL_gXQwpeA", by: "Maria Budanova" },
+    { kind: "painting", file: "storm-light/haarlem-bleaching-fields.jpg", title: "View of Haarlem with Bleaching Fields", artist: "Jacob van Ruisdael", year: "c. 1670 to 1675", museum: "Kunsthaus Zürich", wiki: ["View_of_Haarlem_with_Bleaching_Fields"] },
+    { kind: "photo", file: "storm-light/unsplash-usyY_TmYbgw.jpg", unsplash: "usyY_TmYbgw", by: "Thomas-Olivier Guimond" },
+    { kind: "painting", file: "storm-light/salisbury-meadows.jpg", title: "Salisbury Cathedral from the Meadows", artist: "John Constable", year: "1831", museum: "Tate Britain, London", wiki: ["Salisbury_Cathedral_from_the_Meadows"] }
+  ],
   mood: "Weather passing; one patch of sun on the land.",
   palette: ["#e5d7a8", "#8f9a5a", "#4e5c4a", "#3f4650", "#1c2129"],
-  tags: { subject: ["none"], light: ["day", "golden"], weather: ["storm"], season: ["spring", "summer", "autumn"] },
+  tags: { subject: ["none"], light: ["day", "golden"], weather: ["storm"], season: ["spring", "summer", "autumn"], place: ["hills", "farm", "water"] },
   glance: { when: "As a storm front clears", lens: "GF 80mm f/1.7", exposure: "f/8, ISO 100, bracket" },
   steal: [
     "Half the scene under storm, half in sun.",
@@ -635,11 +724,15 @@ window.CARDS = [
   id: "autumn-grandeur",
   title: "Autumn Grandeur",
   kind: "Landscape",
-  painting: { title: "Autumn – On the Hudson River", artist: "Jasper Francis Cropsey", year: "1860", museum: "National Gallery of Art, Washington",
-    wiki: ["Autumn_–_On_the_Hudson_River", "Autumn_-_On_the_Hudson_River"], commons: "Cropsey Autumn On the Hudson River" },
+  images: [
+    { kind: "painting", file: "autumn-grandeur/autumn-hudson.jpg", title: "Autumn – On the Hudson River", artist: "Jasper Francis Cropsey", year: "1860", museum: "National Gallery of Art, Washington", wiki: ["Autumn_–_On_the_Hudson_River"] },
+    { kind: "photo", file: "autumn-grandeur/unsplash-ipGnsZawLqY.jpg", unsplash: "ipGnsZawLqY", by: "Rob Wingate" },
+    { kind: "painting", file: "autumn-grandeur/starrucca-viaduct.jpg", title: "Starrucca Viaduct, Pennsylvania", artist: "Jasper Francis Cropsey", year: "1865", museum: "Toledo Museum of Art", commons: "File:Jasper Francis Cropsey - Starrucca Viaduct, Pennsylvania - Google Art Project.jpg" },
+    { kind: "photo", file: "autumn-grandeur/unsplash-k2V1H5bEWwY.jpg", unsplash: "k2V1H5bEWwY", by: "Rob Wicks" }
+  ],
   mood: "Abundance: a golden valley at peak colour.",
   palette: ["#f0c46a", "#c7682f", "#8b3a2a", "#6f86a0", "#2c3530"],
-  tags: { subject: ["none"], light: ["golden", "day"], weather: ["clear", "overcast"], season: ["autumn"] },
+  tags: { subject: ["none"], light: ["golden", "day"], weather: ["clear", "overcast"], season: ["autumn"], place: ["water", "hills", "farm"] },
   glance: { when: "Peak foliage, golden hour", lens: "Contax 645 35mm f/3.5", exposure: "f/8, ISO 100" },
   steal: [
     "Warm foreground trees framing the view.",
@@ -683,9 +776,13 @@ window.CARDS = [
   id: "still-water-mirror",
   title: "Still Water Mirror",
   kind: "Landscape",
-  painting: { title: "Twilight in the Wilderness", artist: "Frederic Edwin Church", year: "1860", museum: "Cleveland Museum of Art",
-    wiki: ["Twilight_in_the_Wilderness"], commons: "Twilight in the Wilderness Frederic Edwin Church" },
-  palette: ["#f2c46b", "#d9673a", "#8e3b3b", "#3d4a5c", "#1c2224"],
+  images: [
+    { kind: "painting", file: "still-water-mirror/twilight-wilderness.jpg", title: "Twilight in the Wilderness", artist: "Frederic Edwin Church", year: "1860", museum: "Cleveland Museum of Art", wiki: ["Twilight_in_the_Wilderness"] },
+    { kind: "photo", file: "still-water-mirror/unsplash-AbR69d3Xn6g.jpg", unsplash: "AbR69d3Xn6g", by: "Dana Luig" },
+    { kind: "painting", file: "still-water-mirror/lake-george.jpg", title: "Lake George", artist: "John Frederick Kensett", year: "1869", museum: "The Met, New York", commons: "File:Kensett John F Lake George.jpg" },
+    { kind: "photo", file: "still-water-mirror/unsplash-BiBM6WVuKUw.jpg", unsplash: "BiBM6WVuKUw", by: "Dylan Crawford" }
+  ],
+  mood: "The sky's last colour, doubled in water that doesn't move.",
   steal: [
     "The sky's colour repeated in still water below it.",
     "A dark, silhouetted tree line separating sky from reflection.",
@@ -693,7 +790,7 @@ window.CARDS = [
     "A low horizon, so the sky and its reflection dominate."
   ],
   palette: ["#efe4c8", "#c9b58a", "#7d8f86", "#465a55", "#232b2d"],
-  tags: { subject: ["none"], light: ["golden", "blue"], weather: ["clear", "overcast", "fog"], season: ["spring", "summer", "autumn"] },
+  tags: { subject: ["none"], light: ["golden", "blue"], weather: ["clear", "overcast", "fog"], season: ["spring", "summer", "autumn"], place: ["water"] },
   glance: { when: "Windless dawn or dusk", lens: "GF 80mm f/1.7", exposure: "f/8, ISO 100, tripod" },
   when: "Windless dawn or dusk. Dawn is usually calmer. Blue hour extends the look.",
   where: "Small lake, pond or slow river with a tree line or building on the far bank.",
@@ -730,11 +827,15 @@ window.CARDS = [
   id: "winter-magpie",
   title: "Blue Shadow Snow",
   kind: "Landscape",
-  painting: { title: "The Magpie", artist: "Claude Monet", year: "1868 to 1869", museum: "Musée d'Orsay, Paris",
-    wiki: ["The_Magpie_(Monet)", "The_Magpie_(painting)"], commons: "Monet The Magpie Orsay" },
+  images: [
+    { kind: "painting", file: "winter-magpie/magpie.jpg", title: "The Magpie", artist: "Claude Monet", year: "1868 to 1869", museum: "Musée d'Orsay, Paris", wiki: ["The_Magpie_(Monet)"] },
+    { kind: "photo", file: "winter-magpie/unsplash-2TSNvwAQJYs.jpg", unsplash: "2TSNvwAQJYs", by: "Thao Nguyen" },
+    { kind: "painting", file: "winter-magpie/hoarfrost.jpg", title: "Hoarfrost", artist: "Camille Pissarro", year: "1873", museum: "Musée d'Orsay, Paris", commons: "File:Camille Pissarro, Gelee blanche (Hoarfrost), 1873.jpg" },
+    { kind: "photo", file: "winter-magpie/unsplash-e5mUQRUhUc.jpg", unsplash: "-e5mUQRUhUc", by: "Michael Hamments" }
+  ],
   mood: "Snow glowing gold and blue, with one small living thing.",
   palette: ["#f4eee0", "#e8d6a8", "#a8b6c8", "#6f7f96", "#39414d"],
-  tags: { subject: ["none"], light: ["day", "golden"], weather: ["clear"], season: ["winter"] },
+  tags: { subject: ["none"], light: ["day", "golden"], weather: ["clear"], season: ["winter"], place: ["farm"] },
   glance: { when: "Sunny afternoon after snowfall", lens: "GF 80mm f/1.7", exposure: "f/8, ISO 100, +1.7 EV" },
   steal: [
     "Backlit snow: shadows of a fence fall toward the viewer.",

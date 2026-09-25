@@ -6,6 +6,8 @@
    season:  spring | summer | autumn | winter
    place:   water | street | farm | hills | forest | garden | indoors
    style:   masters | impressionism | pointillism
+   The lens filter needs no tag: it reads the lenses named in glance.lens and kit
+   (35mm, 80mm, 135mm, 140mm, 210mm, 300mm), so write them with "mm" there.
    painting.wiki: English Wikipedia article titles to try, in order.
    painting.commons: fallback search on Wikimedia Commons.
 

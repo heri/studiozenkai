@@ -251,11 +251,15 @@ const GROUPS = [
   ["place", "Where you are", [["water","By the water"],["street","City streets"],["farm","Farm and fields"],["hills","Hills and mountains"],["forest","Forest"],["garden","Garden or park"],["indoors","Indoors and doorways"]]],
   ["light", "Light", [["golden","Golden hour"],["blue","Blue hour"],["day","Daytime"],["night","After dark"]]],
   ["weather", "Weather", [["clear","Clear"],["overcast","Overcast"],["fog","Fog or mist"],["snow","Snow"],["storm","Storm clearing"]]],
-  ["season", "Season", [["spring","Spring"],["summer","Summer"],["autumn","Autumn"],["winter","Winter"]]]
+  ["season", "Season", [["spring","Spring"],["summer","Summer"],["autumn","Autumn"],["winter","Winter"]]],
+  ["lens", "Lenses in your bag", [["c35","Contax 35mm"],["gf80","GF 80mm"],["c135","Canon 135mm"],["c140","Contax 140mm"],["c210","Contax 210mm"],["c300","Canon 300mm"]]]
 ];
+// Lens tags come from each card's own lens line and kit list, so new cards are covered automatically.
+const LENS_RE = { c35: /\b35mm/, gf80: /\b80mm/, c135: /\b135mm/, c140: /\b140mm/, c210: /\b210mm/, c300: /\b300mm/ };
+for (const c of CARDS) c.tags.lens = Object.keys(LENS_RE).filter(k => [c.glance.lens, ...c.kit].some(s => LENS_RE[k].test(s)));
 
 /* ---------- state ---------- */
-function defaults(){ return { kept:[], skipped:[], history:[], checks:{}, filters:{style:[],subject:[],place:[],light:[],weather:[],season:[]}, matchNow:false, loc:null, img:{} }; }
+function defaults(){ return { kept:[], skipped:[], history:[], checks:{}, filters:{style:[],subject:[],place:[],light:[],weather:[],season:[],lens:[]}, matchNow:false, loc:null, img:{} }; }
 let S;
 try { S = Object.assign(defaults(), JSON.parse(localStorage.getItem(KEY) || "{}")); } catch(e){ S = defaults(); }
 S.filters = Object.assign(defaults().filters, S.filters);   // groups added since the phone last saved

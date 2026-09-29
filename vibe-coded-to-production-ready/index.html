@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>From vibe-coded to production-ready · Studio Zenkai</title>
+<meta name="description" content="You built an app with AI. Heri Rakotomalala makes your vibe-coded app safe to run for your team or customers: audits, hardening, and ongoing care.">
+<link rel="canonical" href="https://studiozenkai.com/vibe-coded-to-production-ready/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Studio Zenkai">
+<meta property="og:url" content="https://studiozenkai.com/vibe-coded-to-production-ready/">
+<meta property="og:title" content="Your AI-built app works on your laptop. Is it ready for your company?">
+<meta property="og:description" content="Audits, hardening and ongoing care for vibe-coded apps, by Heri Rakotomalala.">
+<meta property="og:image" content="https://studiozenkai.com/vibe-coded-to-production-ready/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Your AI-built app works on your laptop. Is it ready for your company? Studio Zenkai">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@heri">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F3F5F4; --surface:#FFFFFF; --ink:#18252E; --muted:#56646D;
+  --line:#D5DCDA; --blue:#23407A; --ok:#2F7D5B; --warn:#B7790B; --bad:#A23B2A;
+  --band:#18252E;
+  --display:"Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --text:"Source Serif 4", Georgia, "Times New Roman", serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#121A20; --surface:#1A252D; --ink:#E6ECEA; --muted:#A3B0B6;
+    --line:#2E3C45; --blue:#8FB0EC; --ok:#5DBB8E; --warn:#E3AE45; --bad:#E4806E;
+    --band:#060A0D;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#121A20; --surface:#1A252D; --ink:#E6ECEA; --muted:#A3B0B6;
+  --line:#2E3C45; --blue:#8FB0EC; --ok:#5DBB8E; --warn:#E3AE45; --bad:#E4806E;
+  --band:#060A0D;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--text);font-size:1.125rem;line-height:1.65}
+a{color:var(--blue)}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:4px}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1.5rem}
+.wide{max-width:60rem}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0}
+header.top a{font-family:var(--display);font-weight:700;color:var(--ink);text-decoration:none;font-size:1rem}
+header.top nav a{font-weight:500;color:var(--muted);margin-left:1.25rem}
+h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0}
+h1{font-size:clamp(2.4rem,6vw,4rem);font-weight:700;letter-spacing:-0.02em;margin:3.5rem 0 1.25rem;max-width:14ch}
+h2{font-size:clamp(1.6rem,3.4vw,2.2rem);font-weight:700;letter-spacing:-0.01em;margin-bottom:1rem}
+h3{font-size:1.2rem;font-weight:700;margin-bottom:.35rem}
+p{margin:0 0 1rem}
+.lede{font-size:1.3rem;color:var(--muted);max-width:36rem}
+.btns{display:flex;flex-wrap:wrap;gap:.75rem;margin:2rem 0 4.5rem}
+.btn{font-family:var(--display);font-weight:500;font-size:1rem;padding:.85rem 1.3rem;border-radius:8px;text-decoration:none;border:2px solid var(--ink);color:var(--ink);background:transparent;cursor:pointer}
+.btn.primary{background:var(--ink);color:var(--paper)}
+section{padding:4rem 0;border-top:1px solid var(--line)}
+.story{font-size:1.2rem}
+.story p:first-child{font-style:italic}
+
+/* checklist: the one bold element */
+.check{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:clamp(1.25rem,4vw,2.5rem);display:grid;grid-template-columns:1fr;gap:2rem}
+@media (min-width:860px){.check{grid-template-columns:1fr 17rem}}
+.group{margin-bottom:1.5rem}
+.group h3{color:var(--muted);font-size:1rem;font-weight:500;margin-bottom:.5rem}
+.item{display:flex;gap:.8rem;align-items:flex-start;padding:.55rem 0;border-bottom:1px dashed var(--line);cursor:pointer}
+.item input{appearance:none;flex:none;width:1.4rem;height:1.4rem;margin-top:.2rem;border:2px solid var(--muted);border-radius:5px;display:grid;place-content:center;cursor:pointer;background:var(--surface)}
+.item input::after{content:"";width:.7rem;height:.38rem;border-left:3px solid var(--paper);border-bottom:3px solid var(--paper);transform:rotate(-45deg) translate(1px,-1px);opacity:0}
+.item input:checked{background:var(--ok);border-color:var(--ok)}
+.item input:checked::after{opacity:1}
+.item span{font-size:1.02rem;line-height:1.45}
+.item small{display:block;color:var(--muted);font-size:.9rem}
+.score{align-self:start;position:sticky;top:calc(1.5rem + env(safe-area-inset-top,0px));border-left:6px solid var(--bad);padding:.25rem 0 .25rem 1.25rem;transition:border-color .3s}
+.score .num{font-family:var(--display);font-weight:700;font-size:4.5rem;line-height:1;letter-spacing:-0.03em}
+.score .num small{font-size:1.5rem;color:var(--muted);font-weight:500}
+.score .verdict{font-family:var(--display);font-weight:700;font-size:1.25rem;margin:.6rem 0 .4rem}
+.score p{font-size:.98rem;color:var(--muted)}
+.meter{height:8px;background:var(--line);border-radius:4px;overflow:hidden;margin:.75rem 0 1rem}
+.meter i{display:block;height:100%;width:0;background:var(--bad);transition:width .3s,background .3s}
+@media (prefers-reduced-motion:reduce){.meter i,.score{transition:none}}
+.lead{margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid var(--line)}
+.lead label{display:block;font-family:var(--display);font-weight:500;font-size:.95rem;margin-bottom:.3rem}
+.lead label small{color:var(--muted);font-weight:500}
+.lead input,.lead textarea{display:block;width:100%;font:inherit;font-size:1rem;color:var(--ink);background:var(--surface);border:1.5px solid var(--muted);border-radius:8px;padding:.6rem .7rem;margin-bottom:.9rem}
+.lead textarea{resize:vertical;min-height:4.5rem}
+.lead .btn{width:100%}
+.lead .fine{font-size:.85rem;line-height:1.45;margin:.75rem 0 0}
+.lead .gotcha{position:absolute;left:-9999px}
+.lead-msg{font-size:.98rem;margin-top:1rem}
+
+.offers{list-style:none;padding:0;margin:0;counter-reset:o}
+.offers>li{display:grid;grid-template-columns:3rem 1fr;gap:0 1rem;padding:1.5rem 0;border-bottom:1px solid var(--line)}
+.offers>li::before{counter-increment:o;content:counter(o);font-family:var(--display);font-weight:700;font-size:2rem;color:var(--blue);line-height:1}
+.sample{margin:1.25rem 0 1rem}
+.sample img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:8px;box-shadow:0 1px 2px rgba(24,37,46,.06),0 8px 24px rgba(24,37,46,.08)}
+.sample figcaption{font-size:.9rem;color:var(--muted);margin-top:.5rem}
+.tiers{display:grid;grid-template-columns:1fr;gap:1rem;margin:1.25rem 0 .75rem}
+@media (min-width:560px){.tiers{grid-template-columns:1fr 1fr}}
+.tier{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1rem 1.1rem}
+.tier h4{font-family:var(--display);font-weight:500;font-size:.9rem;color:var(--muted);margin:0 0 .3rem}
+.tier .amount{font-family:var(--display);font-weight:700;font-size:1.35rem;line-height:1.2;margin-bottom:.5rem}
+.tier .amount small{font-size:.9rem;font-weight:500;color:var(--muted)}
+.tier ul{margin:0 0 .6rem;padding-left:1.1rem;font-size:.97rem}
+.tier p{font-size:.95rem;color:var(--muted);margin:0;line-height:1.5}
+.offers .price{font-family:var(--display);font-size:.95rem;color:var(--muted);margin-top:.35rem}
+.bio{display:grid;grid-template-columns:1fr;gap:1.25rem 2rem;align-items:start}
+@media (min-width:640px){.bio{grid-template-columns:8rem 1fr}}
+.bio img{display:block;width:8rem;height:8rem;border-radius:12px;object-fit:cover;background:var(--line)}
+.proof{display:grid;grid-template-columns:1fr;gap:1.5rem 2rem;margin-top:1.5rem}
+@media (min-width:560px){.proof{grid-template-columns:1fr 1fr}}
+.proof b{display:block;font-family:var(--display);font-size:1.6rem;line-height:1.15;margin-bottom:.25rem}
+.proof span{color:var(--muted);font-size:1rem}
+details{border-bottom:1px solid var(--line);padding:1rem 0}
+summary{font-family:var(--display);font-weight:500;font-size:1.1rem;cursor:pointer}
+details p{margin:.75rem 0 0}
+.final{text-align:left;padding-bottom:5rem}
+.threat{background:var(--band);color:#F3F5F4;border-top:none}
+.threat h2{color:#F3F5F4}
+.threat a{color:inherit;opacity:.75}
+.risks{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:2rem 2.5rem;margin:2rem 0 1rem}
+.risks h3{font-size:1.5rem;color:#F3F5F4;margin-bottom:.6rem;padding-top:1rem;border-top:3px solid #F08A75}
+.risks p{font-size:1.02rem;line-height:1.55;opacity:.9;margin:0}
+.threat .punch{font-family:var(--display);font-weight:500;font-size:clamp(1.25rem,2.6vw,1.6rem);line-height:1.3;max-width:40rem;margin:1.5rem 0 0}
+footer{color:var(--muted);font-size:.95rem;padding:2rem 0 3rem;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <a href="https://studiozenkai.com/">Studio Zenkai</a>
+    <nav><a href="#check">Checklist</a><a href="#offers">Services</a></nav>
+  </header>
+
+  <h1>Your AI-built app works on your laptop. Is it ready for your company?</h1>
+  <p class="lede">You built something useful over a few weekends. Before your team or your customers depend on it, it needs three things AI tools rarely give you: security, room to grow, and someone to keep it running. I'm a software engineer with 13 years of production experience. I'll find what's missing, fix what matters, and look after it so you don't have to.</p>
+  <div class="btns">
+    <a class="btn primary" href="https://cal.com/heri-rakotomalala/20min">Book a 20-minute call</a>
+    <a class="btn" href="#check">Check your app first</a>
+  </div>
+</div>
+
+<section>
+  <div class="wrap story">
+    <p>It started with one workflow. I built a tool that moved purchasing data from Procurify into Sage 50, doing the work of five full-time junior accountants. After seeing that, the finance director bet fully on AI. He spent two months of evenings and weekends with Claude building a replacement for the company's purchasing and accounting software. It worked. It would save tens of thousands of dollars a year. Then someone asked who else could log in, where the data was backed up, and what happens when he's on vacation.</p>
+    <p>That's the moment this service is for. Your app isn't bad. It was built to prove an idea, and now it has to survive real people, real data and real mistakes. That takes a different set of skills from the ones that got it working.</p>
+  </div>
+</section>
+
+<section class="threat" id="risks">
+  <div class="wrap wide">
+    <h2>Three ways a weekend app lets you down</h2>
+    <div class="risks">
+      <div>
+        <h3>Anyone can probe it</h3>
+        <p>Organizations with full IT departments still get breached. In August 2026, attackers stole the personal information of 350,000 people from Quebec's construction commission (<a href="https://www.lapresse.ca/actualites/2026-09-04/cyberattaque-a-la-ccq/des-pirates-russes-ont-vole-les-donnees-de-350-000-personnes.php">La Presse</a>). A weekend app has no security team at all, and researchers who audited 200 AI-built apps found flaws in 91% of them (<a href="https://arxiv.org/abs/2606.23130">study</a>).</p>
+      </div>
+      <div>
+        <h3>It works on your MacBook</h3>
+        <p>It's fast with fifty test rows. Will it hold up with your whole database, a year of history, and your entire team logging in on Monday morning? Slow pages and timeouts usually show up the same week everyone starts relying on the app.</p>
+      </div>
+      <div>
+        <h3>Who answers the tickets?</h3>
+        <p>You had time this weekend, even enough to find it a good name and make it look polished. Will you have time in two weeks, when you're buried in your real job, your boss wants a change, your team needs help, and customer tickets start piling up?</p>
+      </div>
+    </div>
+    <p class="punch">Security, scale and upkeep. That's the part I take off your plate.</p>
+  </div>
+</section>
+
+<section id="check">
+  <div class="wrap wide">
+    <h2>Is your app ready for real users?</h2>
+    <p style="color:var(--muted);max-width:40rem">Tick what's true today. Be honest: your answers stay on this page unless you choose to send them to me.</p>
+
+    <div class="check">
+      <div id="items">
+        <div class="group">
+          <h3>Who can get in</h3>
+          <label class="item"><input type="checkbox" data-k="Sign in with company accounts"><span>People sign in with their company account, not a shared password<small>If someone leaves, you can cut their access in one place.</small></span></label>
+          <label class="item"><input type="checkbox" data-k="Role-based access"><span>People only see and change what their role allows</span></label>
+          <label class="item"><input type="checkbox" data-k="Audit log"><span>You can see who changed what, and when</span></label>
+        </div>
+        <div class="group">
+          <h3>Your data</h3>
+          <label class="item"><input type="checkbox" data-k="Tested backups"><span>Backups run automatically, and you've tested restoring one</span></label>
+          <label class="item"><input type="checkbox" data-k="Secrets out of code"><span>Passwords and API keys are not written in the code</span></label>
+          <label class="item"><input type="checkbox" data-k="Personal information protected"><span>You know which personal information it holds, and it's protected<small>Privacy laws like Canada's PIPEDA, Quebec's Law 25 and California's CCPA set real obligations.</small></span></label>
+        </div>
+        <div class="group">
+          <h3>When it breaks</h3>
+          <label class="item"><input type="checkbox" data-k="Tested at real scale"><span>It runs on a proper server and has been tried with your real data volume, not a sample</span></label>
+          <label class="item"><input type="checkbox" data-k="Alerts"><span>You find out it's down before your users tell you</span></label>
+          <label class="item"><input type="checkbox" data-k="Searchable error logs"><span>Errors are recorded somewhere you can search</span></label>
+        </div>
+        <div class="group" style="margin-bottom:0">
+          <h3>When it changes</h3>
+          <label class="item"><input type="checkbox" data-k="Version control"><span>The code is in version control, with its full history</span></label>
+          <label class="item"><input type="checkbox" data-k="Automated tests"><span>Changes are tested automatically before users see them</span></label>
+          <label class="item"><input type="checkbox" data-k="Not a single point of failure"><span>Someone other than the author could fix it tomorrow</span></label>
+        </div>
+      </div>
+
+      <aside class="score" id="score">
+        <div aria-live="polite">
+          <div class="num"><span id="n">0</span><small> / 12</small></div>
+          <div class="meter"><i id="bar"></i></div>
+          <div class="verdict" id="verdict">Not ready for real users</div>
+          <p id="advice">That's normal for an app built to prove an idea. An audit will show you what to fix first.</p>
+        </div>
+        <form class="lead" id="lead" action="https://formspree.io/f/xppwblnn" method="POST">
+          <label for="lead-email">Your email</label>
+          <input type="email" id="lead-email" name="email" required autocomplete="email">
+          <label for="lead-about">What does your app do? <small>(optional)</small></label>
+          <textarea id="lead-about" name="about" rows="3"></textarea>
+          <input type="hidden" name="score" id="f-score">
+          <input type="hidden" name="verdict" id="f-verdict">
+          <input type="hidden" name="missing" id="f-missing">
+          <input type="hidden" name="_subject" id="f-subject">
+          <input type="text" name="_gotcha" class="gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="btn primary" type="submit">Send me my results</button>
+          <p class="fine">Sent through Formspree, a US service. I use your email only to reply about your app. No mailing list.</p>
+        </form>
+        <p class="lead-msg" id="lead-msg" role="status" hidden></p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="offers">
+  <div class="wrap">
+    <h2>How I can help</h2>
+    <p>Most clients start with the audit. You decide what happens next.</p>
+    <ol class="offers">
+      <li><div><h3>Production-readiness audit</h3>
+        <p>I review your app's code, hosting and data handling against the checklist above, plus the details it doesn't cover. You get a written report in plain language: what's risky, what can wait, and what it would take to fix.</p>
+        <figure class="sample">
+          <a href="sample-audit.jpg"><img src="sample-audit.jpg" width="1696" height="1526" loading="lazy" alt="A page from an audit report on a family activity app. It scores 2 of 12 checklist items met, 4 partly met and 6 not met. Finding 1, critical: family photos can be downloaded by anyone, because they are stored at numbered addresses with no sign-in. How likely: high. Fix: random file names served only to signed-in family members, about 1 to 2 days."></a>
+          <figcaption>A page from a real audit. Identifying details removed.</figcaption>
+        </figure>
+        <div class="tiers">
+          <div class="tier"><h4>Side project</h4><div class="amount">$2,000 USD</div><ul><li>Report in 2 business days</li></ul><p>For side projects and internal tools getting ready for real users.</p></div>
+          <div class="tier"><h4>Critical application</h4><div class="amount">$4,000 USD</div><ul><li>Report in 4 business days</li></ul><p>For apps that handle sensitive customer data or need to scale to millions of requests a day.</p></div>
+        </div>
+        <div class="price">Fixed price, agreed before I start</div></div></li>
+      <li><div><h3>Hardening</h3>
+        <p>I fix the gaps from the audit: sign-in and permissions, backups, monitoring, secure hosting, tests. I keep your app and the way you built it. This isn't a rewrite unless you ask for one.</p>
+        <div class="price">Scoped from the audit, fixed price per milestone</div></div></li>
+      <li><div><h3>Ongoing care</h3>
+        <p>A monthly retainer: I watch the alerts, apply updates, review the changes you and your AI tools make, and answer the "is this safe?" questions as they come up.</p>
+        <p>More importantly, I tell you about problems before they happen. Security gaps, an app that will slow down as your team grows, code that will be hard to change next year: you hear it from me first, with a plan, instead of reading about your app on the front page of the New York Times.</p>
+        <div class="tiers">
+          <div class="tier"><h4>Side project</h4><div class="amount">From $2,000 USD <small>/ month</small></div><ul><li>Reply by the next business day</li><li>Up to 8 hours a month</li></ul><p>For side projects going to the next level, from 0 to 50 customers.</p></div>
+          <div class="tier"><h4>Critical application</h4><div class="amount">From $4,000 USD <small>/ month</small></div><ul><li>Reply within 4 business hours</li><li>Up to 20 hours a month</li></ul><p>For critical apps that handle sensitive customer data and need regular audits and more.</p></div>
+        </div>
+        <div class="price">Cancel any time</div></div></li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Who you'd be working with</h2>
+    <div class="bio">
+      <img src="heri.jpg" width="450" height="450" alt="Heri Rakotomalala" loading="lazy">
+      <div>
+        <p>I'm Heri Rakotomalala, a software engineer working with clients across Canada and the US. I've spent 13 years keeping business-critical systems running, including a trading platform for private-company shares and the core operations system of Canada's largest venue of its kind. I build with AI tools every day, so I know what they do well and where they quietly cut corners.</p>
+        <p>In 2012 I co-organized Montreal's first Startup Weekend, where teams built a company in 54 hours. I told <a href="https://www.lapresse.ca/techno/internet/201201/26/01-4489732-une-fin-de-semaine-de-startups-a-montreal.php">La Presse</a> that about 30% of those projects were still running six months later. AI tools have made the weekend part easy. The six months after it are still the hard part.</p>
+      </div>
+    </div>
+    <div class="proof">
+      <div><b>99.9% uptime</b><span>on the operations system I own today</span></div>
+      <div><b>SEC-registered</b><span>trading platform I worked on as lead engineer at Nasdaq Private Market</span></div>
+      <div><b>25x throughput</b><span>after redesigning a critical integration</span></div>
+      <div><b>5 people's work</b><span>automated by a Procurify-to-Sage 50 integration I built</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Questions</h2>
+    <details><summary>Will you tell me to throw it away and start over?</summary>
+      <p>Rarely. Most AI-built apps have a sound core and a missing layer around it. I'll only recommend a rebuild if fixing would cost more, and I'll show you the numbers.</p></details>
+    <details><summary>I'm not technical. Will I understand the report?</summary>
+      <p>Yes. It's written for the person who owns the risk, not for engineers. Each finding says what could happen, how likely it is, and what fixing it costs.</p></details>
+    <details><summary>What tools and languages do you work with?</summary>
+      <p>Claude Code, Python, TypeScript, Elixir, Ruby, and the usual databases and cloud hosts. If I'm not the right fit, I'll say so on the first call.</p></details>
+    <details><summary>Do you work in French?</summary>
+      <p>Oui. I work in English and French, and I am based in Quebec (here's <a href="https://www.youtube.com/watch?v=YmKIue8iNyY">an interview I gave to Les Affaires</a>, in French). I've often worked with teams on the US East and West Coasts, as well as in Japan and Singapore.</p></details>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Tell me what you built</h2>
+    <p>Wherever you are in Canada or the US, a short call is enough to know whether an audit makes sense. No preparation needed; just bring the app.</p>
+    <div class="btns" style="margin-bottom:0">
+      <a class="btn primary" href="https://cal.com/heri-rakotomalala/20min">Book a 20-minute call</a>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <footer>Studio Zenkai · Heri Rakotomalala · <a href="mailto:heri@studiozenkai.com">heri@studiozenkai.com</a></footer>
+</div>
+
+<script>
+(function(){
+  var boxes = Array.prototype.slice.call(document.querySelectorAll('#items input'));
+  var n = document.getElementById('n'), bar = document.getElementById('bar'),
+      verdict = document.getElementById('verdict'), advice = document.getElementById('advice'),
+      score = document.getElementById('score'), form = document.getElementById('lead'),
+      msg = document.getElementById('lead-msg');
+  var levels = [
+    {max:4, c:'--bad', v:'Not ready for real users', a:"That's normal for an app built to prove an idea. An audit will show you what to fix first."},
+    {max:8, c:'--warn', v:'Close, with gaps that matter', a:'The foundations are there. The missing pieces are usually the ones that hurt when something goes wrong.'},
+    {max:11, c:'--warn', v:'Nearly there', a:'A short review would confirm the details and close the last gaps.'},
+    {max:12, c:'--ok', v:'Production-grade', a:'Impressive. Ongoing care keeps it that way as you and your AI tools keep changing it.'}
+  ];
+  function update(){
+    var on = boxes.filter(function(b){return b.checked});
+    var k = on.length, lv = levels.filter(function(l){return k <= l.max})[0];
+    var col = getComputedStyle(document.documentElement).getPropertyValue(lv.c);
+    n.textContent = k; bar.style.width = (k/12*100)+'%'; bar.style.background = col;
+    score.style.borderLeftColor = col; verdict.textContent = lv.v; advice.textContent = lv.a;
+    var missing = boxes.filter(function(b){return !b.checked}).map(function(b){return '- '+b.dataset.k});
+    document.getElementById('f-score').value = k+'/12';
+    document.getElementById('f-verdict').value = lv.v;
+    document.getElementById('f-missing').value = missing.join('\n') || '- nothing';
+    document.getElementById('f-subject').value = 'Checklist lead: '+k+'/12';
+  }
+  boxes.forEach(function(b){b.addEventListener('change', update)});
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var btn = form.querySelector('button');
+    btn.disabled = true; btn.textContent = 'Sending...';
+    fetch(form.action, {method:'POST', body:new FormData(form), headers:{'Accept':'application/json'}})
+      .then(function(r){
+        if (!r.ok) throw new Error(r.status);
+        form.hidden = true;
+        msg.textContent = "Thanks. I'll reply personally within a business day with what I'd fix first.";
+        msg.hidden = false;
+      })
+      .catch(function(){
+        btn.disabled = false; btn.textContent = 'Send me my results';
+        msg.innerHTML = 'That didn’t go through. Please try again, or write to <a href="mailto:heri@studiozenkai.com">heri@studiozenkai.com</a>.';
+        msg.hidden = false;
+      });
+  });
+  update();
+})();
+</script>
+</body>
+</html>

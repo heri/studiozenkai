@@ -1,0 +1,997 @@
+{
+ "generated": "2026-10-04T23:04:40+00:00",
+ "address": "2675 boul. Poirier",
+ "site_url": "https://studiozenkai.com/2675poirier",
+ "timezone": "America/Toronto",
+ "units": [
+  "101",
+  "102",
+  "201",
+  "202",
+  "301",
+  "302"
+ ],
+ "jobs": [
+  "Bins",
+  "Front & snow",
+  "Back yard",
+  "Repairs"
+ ],
+ "unit_colors": {
+  "302": [
+   "#dbeafe",
+   "#1d4ed8"
+  ],
+  "102": [
+   "#dcfce7",
+   "#15803d"
+  ],
+  "101": [
+   "#fef3c7",
+   "#a16207"
+  ],
+  "202": [
+   "#fce7f3",
+   "#be185d"
+  ],
+  "201": [
+   "#ede9fe",
+   "#6d28d9"
+  ],
+  "301": [
+   "#ffedd5",
+   "#c2410c"
+  ]
+ },
+ "months": [
+  "2026-10",
+  "2026-11",
+  "2026-12"
+ ],
+ "range": {
+  "from": "2026-10-01",
+  "to": "2026-12-31"
+ },
+ "job_info": {
+  "Bins": {
+   "short": "Garbage, recycling & compost",
+   "long": {
+    "all": "Take bins out at 7pm the evening before pickup, bring them back at 7pm on pickup day. Keep the garbage area clean: no bags on the ground, lids closed, never leave bags beside a full bin."
+   }
+  },
+  "Front & snow": {
+   "short": "Front yard & entrance",
+   "long": {
+    "fall": "Rake front leaves (paper bags, out with compost). Shovel and salt if it snows.",
+    "winter": "After every snowfall: shovel the entrance and stairs, then salt. Keep bins reachable on pickup days.",
+    "spring_summer": "Front garden maintenance: weeding, tidying, watering. Shovel and salt if a late snow falls."
+   }
+  },
+  "Back yard": {
+   "short": "Back yard & garden",
+   "long": {
+    "fall": "Rake back-yard leaves (paper bags, out with compost).",
+    "winter": "No regular task in winter. Keep the back yard tidy.",
+    "spring_summer": "Back garden maintenance: weeding, tidying, watering."
+   }
+  },
+  "Repairs": {
+   "short": "Small fixes",
+   "long": {
+    "all": "Main door lock and handle, light bulbs (entrance, hallways), stairs, other small fixes. Post what you fixed (and any receipt) in the WhatsApp group."
+   }
+  }
+ },
+ "periods": [
+  {
+   "index": 0,
+   "start": "2026-10-05",
+   "end": "2026-10-18",
+   "season": "fall",
+   "team": {
+    "Bins": "302",
+    "Front & snow": "102",
+    "Back yard": "101",
+    "Repairs": "202"
+   },
+   "tasks": {
+    "Bins": "Take bins out at 7pm the evening before pickup, bring them back at 7pm on pickup day. Keep the garbage area clean: no bags on the ground, lids closed, never leave bags beside a full bin.",
+    "Front & snow": "Rake front leaves (paper bags, out with compost). Shovel and salt if it snows.",
+    "Back yard": "Rake back-yard leaves (paper bags, out with compost).",
+    "Repairs": "Main door lock and handle, light bulbs (entrance, hallways), stairs, other small fixes. Post what you fixed (and any receipt) in the WhatsApp group."
+   }
+  },
+  {
+   "index": 1,
+   "start": "2026-10-19",
+   "end": "2026-11-01",
+   "season": "fall",
+   "team": {
+    "Bins": "301",
+    "Front & snow": "302",
+    "Back yard": "102",
+    "Repairs": "101"
+   },
+   "tasks": {
+    "Bins": "Take bins out at 7pm the evening before pickup, bring them back at 7pm on pickup day. Keep the garbage area clean: no bags on the ground, lids closed, never leave bags beside a full bin.",
+    "Front & snow": "Rake front leaves (paper bags, out with compost). Shovel and salt if it snows.",
+    "Back yard": "Rake back-yard leaves (paper bags, out with compost).",
+    "Repairs": "Main door lock and handle, light bulbs (entrance, hallways), stairs, other small fixes. Post what you fixed (and any receipt) in the WhatsApp group."
+   }
+  },
+  {
+   "index": 2,
+   "start": "2026-11-02",
+   "end": "2026-11-15",
+   "season": "fall",
+   "team": {
+    "Bins": "201",
+    "Front & snow": "301",
+    "Back yard": "302",
+    "Repairs": "102"
+   },
+   "tasks": {
+    "Bins": "Take bins out at 7pm the evening before pickup, bring them back at 7pm on pickup day. Keep the garbage area clean: no bags on the ground, lids closed, never leave bags beside a full bin.",
+    "Front & snow": "Rake front leaves (paper bags, out with compost). Shovel and salt if it snows.",
+    "Back yard": "Rake back-yard leaves (paper bags, out with compost).",
+    "Repairs": "Main door lock and handle, light bulbs (entrance, hallways), stairs, other small fixes. Post what you fixed (and any receipt) in the WhatsApp group."
+   }
+  },
+  {
+   "index": 3,
+   "start": "2026-11-16",
+   "end": "2026-11-29",
+   "season": "fall",
+   "team": {
+    "Bins": "202",
+    "Front & snow": "201",
+    "Back yard": "301",
+    "Repairs": "302"
+   },
+   "tasks": {
+    "Bins": "Take bins out at 7pm the evening before pickup, bring them back at 7pm on pickup day. Keep the garbage area clean: no bags on the ground, lids closed, never leave bags beside a full bin.",
+    "Front & snow": "Rake front leaves (paper bags, out with compost). Shovel and salt if it snows.",
+    "Back yard": "Rake back-yard leaves (paper bags, out with compost).",
+    "Repairs": "Main door lock and handle, light bulbs (entrance, hallways), stairs, other small fixes. Post what you fixed (and any receipt) in the WhatsApp group."
+   }
+  },
+  {
+   "index": 4,
+   "start": "2026-11-30",
+   "end": "2026-12-13",
+   "season": "winter",
+   "team": {
+    "Bins": "101",
+    "Front & snow": "202",
+    "Back yard": "201",
+    "Repairs": "301"
+   },
+   "tasks": {
+    "Bins": "Take bins out at 7pm the evening before pickup, bring them back at 7pm on pickup day. Keep the garbage area clean: no bags on the ground, lids closed, never leave bags beside a full bin.",
+    "Front & snow": "After every snowfall: shovel the entrance and stairs, then salt. Keep bins reachable on pickup days.",
+    "Back yard": "No regular task in winter. Keep the back yard tidy.",
+    "Repairs": "Main door lock and handle, light bulbs (entrance, hallways), stairs, other small fixes. Post what you fixed (and any receipt) in the WhatsApp group."
+   }
+  },
+  {
+   "index": 5,
+   "start": "2026-12-14",
+   "end": "2026-12-27",
+   "season": "winter",
+   "team": {
+    "Bins": "102",
+    "Front & snow": "101",
+    "Back yard": "202",
+    "Repairs": "201"
+   },
+   "tasks": {
+    "Bins": "Take bins out at 7pm the evening before pickup, bring them back at 7pm on pickup day. Keep the garbage area clean: no bags on the ground, lids closed, never leave bags beside a full bin.",
+    "Front & snow": "After every snowfall: shovel the entrance and stairs, then salt. Keep bins reachable on pickup days.",
+    "Back yard": "No regular task in winter. Keep the back yard tidy.",
+    "Repairs": "Main door lock and handle, light bulbs (entrance, hallways), stairs, other small fixes. Post what you fixed (and any receipt) in the WhatsApp group."
+   }
+  },
+  {
+   "index": 6,
+   "start": "2026-12-28",
+   "end": "2027-01-10",
+   "season": "winter",
+   "team": {
+    "Bins": "302",
+    "Front & snow": "102",
+    "Back yard": "101",
+    "Repairs": "202"
+   },
+   "tasks": {
+    "Bins": "Take bins out at 7pm the evening before pickup, bring them back at 7pm on pickup day. Keep the garbage area clean: no bags on the ground, lids closed, never leave bags beside a full bin.",
+    "Front & snow": "After every snowfall: shovel the entrance and stairs, then salt. Keep bins reachable on pickup days.",
+    "Back yard": "No regular task in winter. Keep the back yard tidy.",
+    "Repairs": "Main door lock and handle, light bulbs (entrance, hallways), stairs, other small fixes. Post what you fixed (and any receipt) in the WhatsApp group."
+   }
+  }
+ ],
+ "days": {
+  "2026-10-05": {
+   "period": 0,
+   "bins": "302",
+   "actions": [
+    {
+     "stream": "recycling_compost",
+     "kind": "out",
+     "time": "19:00",
+     "text": "Take Recycling & Compost bins out",
+     "unit": "302",
+     "note": null
+    }
+   ]
+  },
+  "2026-10-06": {
+   "period": 0,
+   "bins": "302",
+   "actions": [
+    {
+     "stream": "recycling_compost",
+     "kind": "back",
+     "time": "19:00",
+     "text": "Bring back Recycling & Compost bins",
+     "unit": "302",
+     "note": null
+    }
+   ]
+  },
+  "2026-10-07": {
+   "period": 0,
+   "bins": "302",
+   "actions": []
+  },
+  "2026-10-08": {
+   "period": 0,
+   "bins": "302",
+   "actions": []
+  },
+  "2026-10-09": {
+   "period": 0,
+   "bins": "302",
+   "actions": []
+  },
+  "2026-10-10": {
+   "period": 0,
+   "bins": "302",
+   "actions": []
+  },
+  "2026-10-11": {
+   "period": 0,
+   "bins": "302",
+   "actions": []
+  },
+  "2026-10-12": {
+   "period": 0,
+   "bins": "302",
+   "actions": [
+    {
+     "stream": "recycling_compost",
+     "kind": "out",
+     "time": "19:00",
+     "text": "Take Recycling & Compost bins out",
+     "unit": "302",
+     "note": null
+    }
+   ]
+  },
+  "2026-10-13": {
+   "period": 0,
+   "bins": "302",
+   "actions": [
+    {
+     "stream": "recycling_compost",
+     "kind": "back",
+     "time": "19:00",
+     "text": "Bring back Recycling & Compost bins",
+     "unit": "302",
+     "note": null
+    }
+   ]
+  },
+  "2026-10-14": {
+   "period": 0,
+   "bins": "302",
+   "actions": []
+  },
+  "2026-10-15": {
+   "period": 0,
+   "bins": "302",
+   "actions": [
+    {
+     "stream": "garbage",
+     "kind": "out",
+     "time": "19:00",
+     "text": "Take Garbage bin out",
+     "unit": "302",
+     "note": null
+    }
+   ]
+  },
+  "2026-10-16": {
+   "period": 0,
+   "bins": "302",
+   "actions": [
+    {
+     "stream": "garbage",
+     "kind": "back",
+     "time": "19:00",
+     "text": "Bring back Garbage bin",
+     "unit": "302",
+     "note": null
+    }
+   ]
+  },
+  "2026-10-17": {
+   "period": 0,
+   "bins": "302",
+   "actions": []
+  },
+  "2026-10-18": {
+   "period": 0,
+   "bins": "302",
+   "actions": []
+  },
+  "2026-10-19": {
+   "period": 1,
+   "bins": "301",
+   "actions": [
+    {
+     "stream": "recycling_compost",
+     "kind": "out",
+     "time": "19:00",
+     "text": "Take Recycling & Compost bins out",
+     "unit": "301",
+     "note": null
+    }
+   ]
+  },
+  "2026-10-20": {
+   "period": 1,
+   "bins": "301",
+   "actions": [
+    {
+     "stream": "recycling_compost",
+     "kind": "back",
+     "time": "19:00",
+     "text": "Bring back Recycling & Compost bins",
+     "unit": "301",
+     "note": null
+    }
+   ]
+  },
+  "2026-10-21": {
+   "period": 1,
+   "bins": "301",
+   "actions": []
+  },
+  "2026-10-22": {
+   "period": 1,
+   "bins": "301",
+   "actions": []
+  },
+  "2026-10-23": {
+   "period": 1,
+   "bins": "301",
+   "actions": []
+  },
+  "2026-10-24": {
+   "period": 1,
+   "bins": "301",
+   "actions": []
+  },
+  "2026-10-25": {
+   "period": 1,
+   "bins": "301",
+   "actions": []
+  },
+  "2026-10-26": {
+   "period": 1,
+   "bins": "301",
+   "actions": [
+    {
+     "stream": "recycling_compost",
+     "kind": "out",
+     "time": "19:00",
+     "text": "Take Recycling & Compost bins out",
+     "unit": "301",
+     "note": null
+    }
+   ]
+  },
+  "2026-10-27": {
+   "period": 1,
+   "bins": "301",
+   "actions": [
+    {
+     "stream": "recycling_compost",
+     "kind": "back",
+     "time": "19:00",
+     "text": "Bring back Recycling & Compost bins",
+     "unit": "301",
+     "note": null
+    }
+   ]
+  },
+  "2026-10-28": {
+   "period": 1,
+   "bins": "301",
+   "actions": []
+  },
+  "2026-10-29": {
+   "period": 1,
+   "bins": "301",
+   "actions": [
+    {
+     "stream": "garbage",
+     "kind": "out",
+     "time": "19:00",
+     "text": "Take Garbage bin out",
+     "unit": "301",
+     "note": null
+    }
+   ]
+  },
+  "2026-10-30": {
+   "period": 1,
+   "bins": "301",
+   "actions": [
+    {
+     "stream": "garbage",
+     "kind": "back",
+     "time": "19:00",
+     "text": "Bring back Garbage bin",
+     "unit": "301",
+     "note": null
+    }
+   ]
+  },
+  "2026-10-31": {
+   "period": 1,
+   "bins": "301",
+   "actions": []
+  },
+  "2026-11-01": {
+   "period": 1,
+   "bins": "301",
+   "actions": []
+  },
+  "2026-11-02": {
+   "period": 2,
+   "bins": "201",
+   "actions": [
+    {
+     "stream": "recycling_compost",
+     "kind": "out",
+     "time": "19:00",
+     "text": "Take Recycling & Compost bins out",
+     "unit": "201",
+     "note": null
+    }
+   ]
+  },
+  "2026-11-03": {
+   "period": 2,
+   "bins": "201",
+   "actions": [
+    {
+     "stream": "recycling_compost",
+     "kind": "back",
+     "time": "19:00",
+     "text": "Bring back Recycling & Compost bins",
+     "unit": "201",
+     "note": null
+    }
+   ]
+  },
+  "2026-11-04": {
+   "period": 2,
+   "bins": "201",
+   "actions": []
+  },
+  "2026-11-05": {
+   "period": 2,
+   "bins": "201",
+   "actions": []
+  },
+  "2026-11-06": {
+   "period": 2,
+   "bins": "201",
+   "actions": []
+  },
+  "2026-11-07": {
+   "period": 2,
+   "bins": "201",
+   "actions": []
+  },
+  "2026-11-08": {
+   "period": 2,
+   "bins": "201",
+   "actions": []
+  },
+  "2026-11-09": {
+   "period": 2,
+   "bins": "201",
+   "actions": [
+    {
+     "stream": "recycling_compost",
+     "kind": "out",
+     "time": "19:00",
+     "text": "Take Recycling & Compost bins out",
+     "unit": "201",
+     "note": null
+    }
+   ]
+  },
+  "2026-11-10": {
+   "period": 2,
+   "bins": "201",
+   "actions": [
+    {
+     "stream": "recycling_compost",
+     "kind": "back",
+     "time": "19:00",
+     "text": "Bring back Recycling & Compost bins",
+     "unit": "201",
+     "note": null
+    }
+   ]
+  },
+  "2026-11-11": {
+   "period": 2,
+   "bins": "201",
+   "actions": []
+  },
+  "2026-11-12": {
+   "period": 2,
+   "bins": "201",
+   "actions": [
+    {
+     "stream": "garbage",
+     "kind": "out",
+     "time": "19:00",
+     "text": "Take Garbage bin out",
+     "unit": "201",
+     "note": null
+    }
+   ]
+  },
+  "2026-11-13": {
+   "period": 2,
+   "bins": "201",
+   "actions": [
+    {
+     "stream": "garbage",
+     "kind": "back",
+     "time": "19:00",
+     "text": "Bring back Garbage bin",
+     "unit": "201",
+     "note": null
+    }
+   ]
+  },
+  "2026-11-14": {
+   "period": 2,
+   "bins": "201",
+   "actions": []
+  },
+  "2026-11-15": {
+   "period": 2,
+   "bins": "201",
+   "actions": []
+  },
+  "2026-11-16": {
+   "period": 3,
+   "bins": "202",
+   "actions": [
+    {
+     "stream": "recycling_compost",
+     "kind": "out",
+     "time": "19:00",
+     "text": "Take Recycling & Compost bins out",
+     "unit": "202",
+     "note": null
+    }
+   ]
+  },
+  "2026-11-17": {
+   "period": 3,
+   "bins": "202",
+   "actions": [
+    {
+     "stream": "recycling_compost",
+     "kind": "back",
+     "time": "19:00",
+     "text": "Bring back Recycling & Compost bins",
+     "unit": "202",
+     "note": null
+    }
+   ]
+  },
+  "2026-11-18": {
+   "period": 3,
+   "bins": "202",
+   "actions": []
+  },
+  "2026-11-19": {
+   "period": 3,
+   "bins": "202",
+   "actions": []
+  },
+  "2026-11-20": {
+   "period": 3,
+   "bins": "202",
+   "actions": []
+  },
+  "2026-11-21": {
+   "period": 3,
+   "bins": "202",
+   "actions": []
+  },
+  "2026-11-22": {
+   "period": 3,
+   "bins": "202",
+   "actions": []
+  },
+  "2026-11-23": {
+   "period": 3,
+   "bins": "202",
+   "actions": [
+    {
+     "stream": "recycling_compost",
+     "kind": "out",
+     "time": "19:00",
+     "text": "Take Recycling & Compost bins out",
+     "unit": "202",
+     "note": null
+    }
+   ]
+  },
+  "2026-11-24": {
+   "period": 3,
+   "bins": "202",
+   "actions": [
+    {
+     "stream": "recycling_compost",
+     "kind": "back",
+     "time": "19:00",
+     "text": "Bring back Recycling & Compost bins",
+     "unit": "202",
+     "note": null
+    }
+   ]
+  },
+  "2026-11-25": {
+   "period": 3,
+   "bins": "202",
+   "actions": []
+  },
+  "2026-11-26": {
+   "period": 3,
+   "bins": "202",
+   "actions": [
+    {
+     "stream": "garbage",
+     "kind": "out",
+     "time": "19:00",
+     "text": "Take Garbage bin out",
+     "unit": "202",
+     "note": null
+    }
+   ]
+  },
+  "2026-11-27": {
+   "period": 3,
+   "bins": "202",
+   "actions": [
+    {
+     "stream": "garbage",
+     "kind": "back",
+     "time": "19:00",
+     "text": "Bring back Garbage bin",
+     "unit": "202",
+     "note": null
+    }
+   ]
+  },
+  "2026-11-28": {
+   "period": 3,
+   "bins": "202",
+   "actions": []
+  },
+  "2026-11-29": {
+   "period": 3,
+   "bins": "202",
+   "actions": []
+  },
+  "2026-11-30": {
+   "period": 4,
+   "bins": "101",
+   "actions": [
+    {
+     "stream": "recycling_compost",
+     "kind": "out",
+     "time": "19:00",
+     "text": "Take Recycling & Compost bins out",
+     "unit": "101",
+     "note": null
+    }
+   ]
+  },
+  "2026-12-01": {
+   "period": 4,
+   "bins": "101",
+   "actions": [
+    {
+     "stream": "recycling_compost",
+     "kind": "back",
+     "time": "19:00",
+     "text": "Bring back Recycling & Compost bins",
+     "unit": "101",
+     "note": null
+    }
+   ]
+  },
+  "2026-12-02": {
+   "period": 4,
+   "bins": "101",
+   "actions": []
+  },
+  "2026-12-03": {
+   "period": 4,
+   "bins": "101",
+   "actions": []
+  },
+  "2026-12-04": {
+   "period": 4,
+   "bins": "101",
+   "actions": []
+  },
+  "2026-12-05": {
+   "period": 4,
+   "bins": "101",
+   "actions": []
+  },
+  "2026-12-06": {
+   "period": 4,
+   "bins": "101",
+   "actions": []
+  },
+  "2026-12-07": {
+   "period": 4,
+   "bins": "101",
+   "actions": [
+    {
+     "stream": "recycling_compost",
+     "kind": "out",
+     "time": "19:00",
+     "text": "Take Recycling & Compost bins out",
+     "unit": "101",
+     "note": null
+    }
+   ]
+  },
+  "2026-12-08": {
+   "period": 4,
+   "bins": "101",
+   "actions": [
+    {
+     "stream": "recycling_compost",
+     "kind": "back",
+     "time": "19:00",
+     "text": "Bring back Recycling & Compost bins",
+     "unit": "101",
+     "note": null
+    }
+   ]
+  },
+  "2026-12-09": {
+   "period": 4,
+   "bins": "101",
+   "actions": []
+  },
+  "2026-12-10": {
+   "period": 4,
+   "bins": "101",
+   "actions": [
+    {
+     "stream": "garbage",
+     "kind": "out",
+     "time": "19:00",
+     "text": "Take Garbage bin out",
+     "unit": "101",
+     "note": null
+    }
+   ]
+  },
+  "2026-12-11": {
+   "period": 4,
+   "bins": "101",
+   "actions": [
+    {
+     "stream": "garbage",
+     "kind": "back",
+     "time": "19:00",
+     "text": "Bring back Garbage bin",
+     "unit": "101",
+     "note": null
+    }
+   ]
+  },
+  "2026-12-12": {
+   "period": 4,
+   "bins": "101",
+   "actions": []
+  },
+  "2026-12-13": {
+   "period": 4,
+   "bins": "101",
+   "actions": []
+  },
+  "2026-12-14": {
+   "period": 5,
+   "bins": "102",
+   "actions": [
+    {
+     "stream": "recycling_compost",
+     "kind": "out",
+     "time": "19:00",
+     "text": "Take Recycling & Compost bins out",
+     "unit": "102",
+     "note": null
+    }
+   ]
+  },
+  "2026-12-15": {
+   "period": 5,
+   "bins": "102",
+   "actions": [
+    {
+     "stream": "recycling_compost",
+     "kind": "back",
+     "time": "19:00",
+     "text": "Bring back Recycling & Compost bins",
+     "unit": "102",
+     "note": null
+    }
+   ]
+  },
+  "2026-12-16": {
+   "period": 5,
+   "bins": "102",
+   "actions": []
+  },
+  "2026-12-17": {
+   "period": 5,
+   "bins": "102",
+   "actions": []
+  },
+  "2026-12-18": {
+   "period": 5,
+   "bins": "102",
+   "actions": []
+  },
+  "2026-12-19": {
+   "period": 5,
+   "bins": "102",
+   "actions": []
+  },
+  "2026-12-20": {
+   "period": 5,
+   "bins": "102",
+   "actions": []
+  },
+  "2026-12-21": {
+   "period": 5,
+   "bins": "102",
+   "actions": [
+    {
+     "stream": "recycling_compost",
+     "kind": "out",
+     "time": "19:00",
+     "text": "Take Recycling & Compost bins out",
+     "unit": "102",
+     "note": null
+    }
+   ]
+  },
+  "2026-12-22": {
+   "period": 5,
+   "bins": "102",
+   "actions": [
+    {
+     "stream": "recycling_compost",
+     "kind": "back",
+     "time": "19:00",
+     "text": "Bring back Recycling & Compost bins",
+     "unit": "102",
+     "note": null
+    }
+   ]
+  },
+  "2026-12-23": {
+   "period": 5,
+   "bins": "102",
+   "actions": []
+  },
+  "2026-12-24": {
+   "period": 5,
+   "bins": "102",
+   "actions": [
+    {
+     "stream": "garbage",
+     "kind": "out",
+     "time": "19:00",
+     "text": "Take Garbage bin out",
+     "unit": "102",
+     "note": "Christmas Day, confirm on Info-Collecte"
+    }
+   ]
+  },
+  "2026-12-25": {
+   "period": 5,
+   "bins": "102",
+   "actions": [
+    {
+     "stream": "garbage",
+     "kind": "back",
+     "time": "19:00",
+     "text": "Bring back Garbage bin",
+     "unit": "102",
+     "note": "Christmas Day, confirm on Info-Collecte"
+    }
+   ]
+  },
+  "2026-12-26": {
+   "period": 5,
+   "bins": "102",
+   "actions": []
+  },
+  "2026-12-27": {
+   "period": 5,
+   "bins": "102",
+   "actions": []
+  },
+  "2026-12-28": {
+   "period": 6,
+   "bins": "302",
+   "actions": [
+    {
+     "stream": "recycling_compost",
+     "kind": "out",
+     "time": "19:00",
+     "text": "Take Recycling & Compost bins out",
+     "unit": "302",
+     "note": null
+    }
+   ]
+  },
+  "2026-12-29": {
+   "period": 6,
+   "bins": "302",
+   "actions": [
+    {
+     "stream": "recycling_compost",
+     "kind": "back",
+     "time": "19:00",
+     "text": "Bring back Recycling & Compost bins",
+     "unit": "302",
+     "note": null
+    }
+   ]
+  },
+  "2026-12-30": {
+   "period": 6,
+   "bins": "302",
+   "actions": []
+  },
+  "2026-12-31": {
+   "period": 6,
+   "bins": "302",
+   "actions": []
+  }
+ }
+}

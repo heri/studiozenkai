@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>2675 boul. Poirier · Building duty calendar</title>
+<meta name="description" content="Who takes the bins out, shovels, rakes and fixes things at 2675 boul. Poirier: calendar, your unit's tasks and calendar feeds.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1f2937">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <h1 data-i18n="title">2675 boul. Poirier</h1>
+    <p class="sub" data-i18n="subtitle">Building duty calendar</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="now" class="now" aria-live="polite" hidden></section>
+
+  <section id="calendar" class="card" aria-labelledby="month-title">
+    <div class="cal-head">
+      <button type="button" class="nav" id="prev" aria-label="Previous month">‹</button>
+      <h2 id="month-title">…</h2>
+      <button type="button" class="nav" id="next" aria-label="Next month">›</button>
+    </div>
+    <p class="rule" id="rule"></p>
+    <ul class="legend" id="legend"></ul>
+    <div class="grid" id="grid" role="grid"></div>
+    <div id="agenda" class="agenda"></div>
+    <h3 class="h3" id="who-title"></h3>
+    <div id="who" class="who"></div>
+    <p class="print"><a id="print-link" href="#"></a></p>
+  </section>
+
+  <section id="mine" class="card" aria-labelledby="mine-title">
+    <h2 id="mine-title"></h2>
+    <label class="picker">
+      <span id="pick-label"></span>
+      <select id="unit"></select>
+    </label>
+    <div id="mine-body"></div>
+  </section>
+
+  <section id="faq" class="card" aria-labelledby="faq-title">
+    <h2 id="faq-title"></h2>
+    <div id="faq-body"></div>
+  </section>
+</main>
+
+<footer class="wrap foot" id="foot"></footer>
+
+<noscript><p class="wrap">This page needs JavaScript to show the calendar.</p></noscript>
+<script src="app.js"></script>
+</body>
+</html>

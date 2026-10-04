@@ -1,0 +1,69 @@
+{
+  "address": "2675 boul. Poirier",
+  "site_url": "https://studiozenkai.com/2675poirier",
+  "timezone": "America/Toronto",
+  "units": ["302", "102", "101", "202", "201", "301"],
+  "start": "2026-10-05",
+  "period_days": 14,
+  "jobs": ["Bins", "Front & snow", "Back yard", "Repairs"],
+  "collections": {
+    "recycling_compost": { "weekday": "TU" },
+    "garbage": { "weekday": "FR", "every_weeks": 2, "anchor": "2026-10-02" },
+    "time": "19:00"
+  },
+  "seasons": { "fall": [10, 11], "winter": [12, 1, 2, 3], "spring_summer": [4, 5, 6, 7, 8, 9] },
+  "exceptions": [
+    { "date": "2026-12-25", "stream": "garbage", "note": "Christmas Day, confirm on Info-Collecte" }
+  ],
+  "overrides": [],
+  "unit_colors": {
+    "302": ["#dbeafe", "#1d4ed8"], "102": ["#dcfce7", "#15803d"], "101": ["#fef3c7", "#a16207"],
+    "202": ["#fce7f3", "#be185d"], "201": ["#ede9fe", "#6d28d9"], "301": ["#ffedd5", "#c2410c"]
+  },
+  "job_info": {
+    "Bins": {
+      "short": "Garbage, recycling & compost",
+      "print": {
+        "all": "Take recycling & compost (Mon 7pm) and garbage (Thu 7pm) bins to the curb, bring them back the next day at 7pm. Keep the garbage area clean."
+      },
+      "long": {
+        "all": "Take bins out at 7pm the evening before pickup, bring them back at 7pm on pickup day. Keep the garbage area clean: no bags on the ground, lids closed, never leave bags beside a full bin."
+      }
+    },
+    "Front & snow": {
+      "short": "Front yard & entrance",
+      "print": {
+        "fall": "Rake the leaves in front. If it snows: shovel and salt the entrance and stairs.",
+        "winter": "After every snowfall: shovel the entrance and stairs, then salt.",
+        "spring_summer": "Front garden maintenance: weeding, tidying, watering."
+      },
+      "long": {
+        "fall": "Rake front leaves (paper bags, out with compost). Shovel and salt if it snows.",
+        "winter": "After every snowfall: shovel the entrance and stairs, then salt. Keep bins reachable on pickup days.",
+        "spring_summer": "Front garden maintenance: weeding, tidying, watering. Shovel and salt if a late snow falls."
+      }
+    },
+    "Back yard": {
+      "short": "Back yard & garden",
+      "print": {
+        "fall": "Rake the leaves in the back yard.",
+        "winter": "Keep the back yard tidy (no regular task in winter).",
+        "spring_summer": "Back garden maintenance: weeding, tidying, watering."
+      },
+      "long": {
+        "fall": "Rake back-yard leaves (paper bags, out with compost).",
+        "winter": "No regular task in winter. Keep the back yard tidy.",
+        "spring_summer": "Back garden maintenance: weeding, tidying, watering."
+      }
+    },
+    "Repairs": {
+      "short": "Small fixes",
+      "print": {
+        "all": "Main door lock, light bulbs (entrance, hallways), stairs, other small fixes."
+      },
+      "long": {
+        "all": "Main door lock and handle, light bulbs (entrance, hallways), stairs, other small fixes. Post what you fixed (and any receipt) in the WhatsApp group."
+      }
+    }
+  }
+}

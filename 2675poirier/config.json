@@ -7,62 +7,107 @@
   "period_days": 14,
   "jobs": ["Bins", "Front & snow", "Back yard", "Repairs"],
   "collections": {
-    "recycling_compost": { "weekday": "TU" },
+    "compost": { "weekday": "TU" },
+    "recycling": { "weekday": "TU", "per_unit": true },
     "garbage": { "weekday": "FR", "every_weeks": 2, "anchor": "2026-10-02" },
     "time": "19:00"
   },
   "seasons": { "fall": [10, 11], "winter": [12, 1, 2, 3], "spring_summer": [4, 5, 6, 7, 8, 9] },
   "exceptions": [
-    { "date": "2026-12-25", "stream": "garbage", "note": "Christmas Day, confirm on Info-Collecte" }
+    { "date": "2026-12-25", "stream": "garbage",
+      "note": { "en": "Christmas Day, confirm on Info-Collecte", "fr": "Jour de Noël, à confirmer sur Info-Collecte" } }
   ],
   "overrides": [],
   "unit_colors": {
     "302": ["#dbeafe", "#1d4ed8"], "102": ["#dcfce7", "#15803d"], "101": ["#fef3c7", "#a16207"],
     "202": ["#fce7f3", "#be185d"], "201": ["#ede9fe", "#6d28d9"], "301": ["#ffedd5", "#c2410c"]
   },
+  "everyone": {
+    "name": { "en": "Everyone", "fr": "Tous" },
+    "long": {
+      "en": "Recycling: every unit has its own bin. Put it out Monday at 7pm and bring it back in Tuesday at 7pm, every week.",
+      "fr": "Recyclage : chaque unité a son propre bac. Sortez-le le lundi à 19 h et rentrez-le le mardi à 19 h, chaque semaine."
+    }
+  },
   "job_info": {
     "Bins": {
-      "short": "Garbage, recycling & compost",
+      "name": { "en": "Bins", "fr": "Bacs" },
+      "short": { "en": "Garbage & compost", "fr": "Ordures et compost" },
       "print": {
-        "all": "Take recycling & compost (Mon 7pm) and garbage (Thu 7pm) bins to the curb, bring them back the next day at 7pm. Keep the garbage area clean."
+        "en": { "all": "Take compost (Mon 7pm) and garbage (Thu 7pm) bins to the curb, bring them back the next day at 7pm. Keep the garbage area clean." },
+        "fr": { "all": "Sortir le bac brun (lun. 19 h) et le bac à ordures (jeu. 19 h), les rentrer le lendemain à 19 h. Garder l'espace poubelles propre." }
       },
       "long": {
-        "all": "Take bins out at 7pm the evening before pickup, bring them back at 7pm on pickup day. Keep the garbage area clean: no bags on the ground, lids closed, never leave bags beside a full bin."
+        "en": { "all": "Take the compost and garbage bins out at 7pm the evening before pickup, bring them back at 7pm on pickup day. Keep the garbage area clean: no bags on the ground, lids closed, never leave bags beside a full bin. Recycling isn't part of this job: each unit handles its own bin." },
+        "fr": { "all": "Sortir le bac brun (compost) et le bac à ordures à 19 h la veille de la collecte, les rentrer à 19 h le jour de la collecte. Garder l'espace poubelles propre : aucun sac par terre, couvercles fermés, jamais de sacs à côté d'un bac plein. Le recyclage ne fait pas partie de cette tâche : chaque unité s'occupe de son propre bac." }
       }
     },
     "Front & snow": {
-      "short": "Front yard & entrance",
+      "name": { "en": "Front & snow", "fr": "Devant et neige" },
+      "short": { "en": "Front yard & entrance", "fr": "Devant et entrée" },
       "print": {
-        "fall": "Rake the leaves in front. If it snows: shovel and salt the entrance and stairs.",
-        "winter": "After every snowfall: shovel the entrance and stairs, then salt.",
-        "spring_summer": "Front garden maintenance: weeding, tidying, watering."
+        "en": {
+          "fall": "Rake the leaves in front. If it snows: shovel and salt the entrance and stairs.",
+          "winter": "After every snowfall: shovel the entrance and stairs, then salt.",
+          "spring_summer": "Front garden maintenance: weeding, tidying, watering."
+        },
+        "fr": {
+          "fall": "Ramasser les feuilles devant. S'il neige : pelleter et saler l'entrée et l'escalier.",
+          "winter": "Après chaque chute de neige : pelleter l'entrée et l'escalier, puis saler.",
+          "spring_summer": "Entretien du jardin avant : désherber, ranger, arroser."
+        }
       },
       "long": {
-        "fall": "Rake front leaves (paper bags, out with compost). Shovel and salt if it snows.",
-        "winter": "After every snowfall: shovel the entrance and stairs, then salt. Keep bins reachable on pickup days.",
-        "spring_summer": "Front garden maintenance: weeding, tidying, watering. Shovel and salt if a late snow falls."
+        "en": {
+          "fall": "Rake front leaves (paper bags, out with compost). Shovel and salt if it snows.",
+          "winter": "After every snowfall: shovel the entrance and stairs, then salt. Keep bins reachable on pickup days.",
+          "spring_summer": "Front garden maintenance: weeding, tidying, watering. Shovel and salt if a late snow falls."
+        },
+        "fr": {
+          "fall": "Ramasser les feuilles devant (sacs en papier, sortis avec le compost). Pelleter et saler s'il neige.",
+          "winter": "Après chaque chute de neige : pelleter l'entrée et l'escalier, puis saler. Garder les bacs accessibles les jours de collecte.",
+          "spring_summer": "Entretien du jardin avant : désherber, ranger, arroser. Pelleter et saler en cas de neige tardive."
+        }
       }
     },
     "Back yard": {
-      "short": "Back yard & garden",
+      "name": { "en": "Back yard", "fr": "Cour arrière" },
+      "short": { "en": "Back yard & garden", "fr": "Cour et jardin arrière" },
       "print": {
-        "fall": "Rake the leaves in the back yard.",
-        "winter": "Keep the back yard tidy (no regular task in winter).",
-        "spring_summer": "Back garden maintenance: weeding, tidying, watering."
+        "en": {
+          "fall": "Rake the leaves in the back yard.",
+          "winter": "Keep the back yard tidy (no regular task in winter).",
+          "spring_summer": "Back garden maintenance: weeding, tidying, watering."
+        },
+        "fr": {
+          "fall": "Ramasser les feuilles dans la cour arrière.",
+          "winter": "Garder la cour arrière propre (pas de tâche régulière en hiver).",
+          "spring_summer": "Entretien du jardin arrière : désherber, ranger, arroser."
+        }
       },
       "long": {
-        "fall": "Rake back-yard leaves (paper bags, out with compost).",
-        "winter": "No regular task in winter. Keep the back yard tidy.",
-        "spring_summer": "Back garden maintenance: weeding, tidying, watering."
+        "en": {
+          "fall": "Rake back-yard leaves (paper bags, out with compost).",
+          "winter": "No regular task in winter. Keep the back yard tidy.",
+          "spring_summer": "Back garden maintenance: weeding, tidying, watering."
+        },
+        "fr": {
+          "fall": "Ramasser les feuilles de la cour arrière (sacs en papier, sortis avec le compost).",
+          "winter": "Pas de tâche régulière en hiver. Garder la cour arrière propre.",
+          "spring_summer": "Entretien du jardin arrière : désherber, ranger, arroser."
+        }
       }
     },
     "Repairs": {
-      "short": "Small fixes",
+      "name": { "en": "Repairs", "fr": "Réparations" },
+      "short": { "en": "Small fixes", "fr": "Petites réparations" },
       "print": {
-        "all": "Main door lock, light bulbs (entrance, hallways), stairs, other small fixes."
+        "en": { "all": "Main door lock, light bulbs (entrance, hallways), stairs, other small fixes." },
+        "fr": { "all": "Serrure de la porte principale, ampoules (entrée, couloirs), escalier, autres petites réparations." }
       },
       "long": {
-        "all": "Main door lock and handle, light bulbs (entrance, hallways), stairs, other small fixes. Post what you fixed (and any receipt) in the WhatsApp group."
+        "en": { "all": "Main door lock and handle, light bulbs (entrance, hallways), stairs, other small fixes. Post what you fixed (and any receipt) in the WhatsApp group." },
+        "fr": { "all": "Serrure et poignée de la porte principale, ampoules (entrée, couloirs), escalier, autres petites réparations. Publier ce qui a été réparé (et tout reçu) dans le groupe WhatsApp." }
       }
     }
   }

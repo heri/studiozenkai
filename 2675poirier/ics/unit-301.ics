@@ -29,20 +29,21 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:2675poirier-301-20261019-duty-bins@studiozenkai.com
-DTSTAMP:20261004T230440Z
+DTSTAMP:20261008T203324Z
 DTSTART;VALUE=DATE:20261019
 DTEND;VALUE=DATE:20261102
 TRANSP:TRANSPARENT
 SUMMARY:On duty: Bins
-DESCRIPTION:Oct 19 – Nov 1: Take bins out at 7pm the evening before picku
- p\, bring them back at 7pm on pickup day. Keep the garbage area clean: no 
- bags on the ground\, lids closed\, never leave bags beside a full bin.\n\n
- Can't do it? Swap with another unit and write it on the calendar in the en
- trance.\nhttps://studiozenkai.com/2675poirier
+DESCRIPTION:Oct 19 – Nov 1: Take the compost and garbage bins out at 7pm 
+ the evening before pickup\, bring them back at 7pm on pickup day. Keep the
+  garbage area clean: no bags on the ground\, lids closed\, never leave bag
+ s beside a full bin. Recycling isn't part of this job: each unit handles i
+ ts own bin.\n\nCan't do it? Swap with another unit and write it on the cal
+ endar in the entrance.\nhttps://studiozenkai.com/2675poirier
 END:VEVENT
 BEGIN:VEVENT
 UID:2675poirier-301-20261102-duty-front-snow@studiozenkai.com
-DTSTAMP:20261004T230440Z
+DTSTAMP:20261008T203324Z
 DTSTART;VALUE=DATE:20261102
 DTEND;VALUE=DATE:20261116
 TRANSP:TRANSPARENT
@@ -54,7 +55,7 @@ DESCRIPTION:Nov 2 – Nov 15: Rake front leaves (paper bags\, out with comp
 END:VEVENT
 BEGIN:VEVENT
 UID:2675poirier-301-20261116-duty-back-yard@studiozenkai.com
-DTSTAMP:20261004T230440Z
+DTSTAMP:20261008T203324Z
 DTSTART;VALUE=DATE:20261116
 DTEND;VALUE=DATE:20261130
 TRANSP:TRANSPARENT
@@ -65,7 +66,7 @@ DESCRIPTION:Nov 16 – Nov 29: Rake back-yard leaves (paper bags\, out with
 END:VEVENT
 BEGIN:VEVENT
 UID:2675poirier-301-20261130-duty-repairs@studiozenkai.com
-DTSTAMP:20261004T230440Z
+DTSTAMP:20261008T203324Z
 DTSTART;VALUE=DATE:20261130
 DTEND;VALUE=DATE:20261214
 TRANSP:TRANSPARENT
@@ -77,68 +78,184 @@ DESCRIPTION:Nov 30 – Dec 13: Main door lock and handle\, light bulbs (ent
  75poirier
 END:VEVENT
 BEGIN:VEVENT
-UID:2675poirier-301-20261019-recycling-compost-out@studiozenkai.com
-DTSTAMP:20261004T230440Z
+UID:2675poirier-301-20261005-recycling-out@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261005T190000
+DTEND;TZID=America/Toronto:20261005T191500
+SUMMARY:Take your Recycling bin out
+DESCRIPTION:Take your Recycling bin out.\nBins may be at the curb from 7pm 
+ the evening before to 7am on pickup day.\nhttps://studiozenkai.com/2675poi
+ rier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Take your Recycling bin out
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-301-20261006-recycling-back@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261006T190000
+DTEND;TZID=America/Toronto:20261006T191500
+SUMMARY:Bring back your Recycling bin
+DESCRIPTION:Bring back your Recycling bin.\nBins may be at the curb from 7p
+ m the evening before to 7am on pickup day.\nhttps://studiozenkai.com/2675p
+ oirier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Bring back your Recycling bin
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-301-20261012-recycling-out@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261012T190000
+DTEND;TZID=America/Toronto:20261012T191500
+SUMMARY:Take your Recycling bin out
+DESCRIPTION:Take your Recycling bin out.\nBins may be at the curb from 7pm 
+ the evening before to 7am on pickup day.\nhttps://studiozenkai.com/2675poi
+ rier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Take your Recycling bin out
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-301-20261013-recycling-back@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261013T190000
+DTEND;TZID=America/Toronto:20261013T191500
+SUMMARY:Bring back your Recycling bin
+DESCRIPTION:Bring back your Recycling bin.\nBins may be at the curb from 7p
+ m the evening before to 7am on pickup day.\nhttps://studiozenkai.com/2675p
+ oirier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Bring back your Recycling bin
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-301-20261019-compost-out@studiozenkai.com
+DTSTAMP:20261008T203324Z
 DTSTART;TZID=America/Toronto:20261019T190000
 DTEND;TZID=America/Toronto:20261019T191500
-SUMMARY:Take Recycling & Compost bins out
-DESCRIPTION:Take Recycling & Compost bins out.\nBins may be at the curb fro
- m 7pm the evening before to 7am on pickup day.\nhttps://studiozenkai.com/2
- 675poirier
+SUMMARY:Take Compost bin out
+DESCRIPTION:Take Compost bin out.\nBins may be at the curb from 7pm the eve
+ ning before to 7am on pickup day.\nhttps://studiozenkai.com/2675poirier
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Take Recycling & Compost bins out
+DESCRIPTION:Take Compost bin out
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:2675poirier-301-20261020-recycling-compost-back@studiozenkai.com
-DTSTAMP:20261004T230440Z
+UID:2675poirier-301-20261019-recycling-out@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261019T190000
+DTEND;TZID=America/Toronto:20261019T191500
+SUMMARY:Take your Recycling bin out
+DESCRIPTION:Take your Recycling bin out.\nBins may be at the curb from 7pm 
+ the evening before to 7am on pickup day.\nhttps://studiozenkai.com/2675poi
+ rier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Take your Recycling bin out
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-301-20261020-compost-back@studiozenkai.com
+DTSTAMP:20261008T203324Z
 DTSTART;TZID=America/Toronto:20261020T190000
 DTEND;TZID=America/Toronto:20261020T191500
-SUMMARY:Bring back Recycling & Compost bins
-DESCRIPTION:Bring back Recycling & Compost bins.\nBins may be at the curb f
- rom 7pm the evening before to 7am on pickup day.\nhttps://studiozenkai.com
- /2675poirier
+SUMMARY:Bring back Compost bin
+DESCRIPTION:Bring back Compost bin.\nBins may be at the curb from 7pm the e
+ vening before to 7am on pickup day.\nhttps://studiozenkai.com/2675poirier
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Bring back Recycling & Compost bins
+DESCRIPTION:Bring back Compost bin
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:2675poirier-301-20261026-recycling-compost-out@studiozenkai.com
-DTSTAMP:20261004T230440Z
+UID:2675poirier-301-20261020-recycling-back@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261020T190000
+DTEND;TZID=America/Toronto:20261020T191500
+SUMMARY:Bring back your Recycling bin
+DESCRIPTION:Bring back your Recycling bin.\nBins may be at the curb from 7p
+ m the evening before to 7am on pickup day.\nhttps://studiozenkai.com/2675p
+ oirier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Bring back your Recycling bin
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-301-20261026-compost-out@studiozenkai.com
+DTSTAMP:20261008T203324Z
 DTSTART;TZID=America/Toronto:20261026T190000
 DTEND;TZID=America/Toronto:20261026T191500
-SUMMARY:Take Recycling & Compost bins out
-DESCRIPTION:Take Recycling & Compost bins out.\nBins may be at the curb fro
- m 7pm the evening before to 7am on pickup day.\nhttps://studiozenkai.com/2
- 675poirier
+SUMMARY:Take Compost bin out
+DESCRIPTION:Take Compost bin out.\nBins may be at the curb from 7pm the eve
+ ning before to 7am on pickup day.\nhttps://studiozenkai.com/2675poirier
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Take Recycling & Compost bins out
+DESCRIPTION:Take Compost bin out
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:2675poirier-301-20261027-recycling-compost-back@studiozenkai.com
-DTSTAMP:20261004T230440Z
-DTSTART;TZID=America/Toronto:20261027T190000
-DTEND;TZID=America/Toronto:20261027T191500
-SUMMARY:Bring back Recycling & Compost bins
-DESCRIPTION:Bring back Recycling & Compost bins.\nBins may be at the curb f
- rom 7pm the evening before to 7am on pickup day.\nhttps://studiozenkai.com
- /2675poirier
+UID:2675poirier-301-20261026-recycling-out@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261026T190000
+DTEND;TZID=America/Toronto:20261026T191500
+SUMMARY:Take your Recycling bin out
+DESCRIPTION:Take your Recycling bin out.\nBins may be at the curb from 7pm 
+ the evening before to 7am on pickup day.\nhttps://studiozenkai.com/2675poi
+ rier
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Bring back Recycling & Compost bins
+DESCRIPTION:Take your Recycling bin out
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-301-20261027-compost-back@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261027T190000
+DTEND;TZID=America/Toronto:20261027T191500
+SUMMARY:Bring back Compost bin
+DESCRIPTION:Bring back Compost bin.\nBins may be at the curb from 7pm the e
+ vening before to 7am on pickup day.\nhttps://studiozenkai.com/2675poirier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Bring back Compost bin
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-301-20261027-recycling-back@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261027T190000
+DTEND;TZID=America/Toronto:20261027T191500
+SUMMARY:Bring back your Recycling bin
+DESCRIPTION:Bring back your Recycling bin.\nBins may be at the curb from 7p
+ m the evening before to 7am on pickup day.\nhttps://studiozenkai.com/2675p
+ oirier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Bring back your Recycling bin
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2675poirier-301-20261029-garbage-out@studiozenkai.com
-DTSTAMP:20261004T230440Z
+DTSTAMP:20261008T203324Z
 DTSTART;TZID=America/Toronto:20261029T190000
 DTEND;TZID=America/Toronto:20261029T191500
 SUMMARY:Take Garbage bin out
@@ -152,7 +269,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2675poirier-301-20261030-garbage-back@studiozenkai.com
-DTSTAMP:20261004T230440Z
+DTSTAMP:20261008T203324Z
 DTSTART;TZID=America/Toronto:20261030T190000
 DTEND;TZID=America/Toronto:20261030T191500
 SUMMARY:Bring back Garbage bin
@@ -161,6 +278,276 @@ DESCRIPTION:Bring back Garbage bin.\nBins may be at the curb from 7pm the e
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Bring back Garbage bin
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-301-20261102-recycling-out@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261102T190000
+DTEND;TZID=America/Toronto:20261102T191500
+SUMMARY:Take your Recycling bin out
+DESCRIPTION:Take your Recycling bin out.\nBins may be at the curb from 7pm 
+ the evening before to 7am on pickup day.\nhttps://studiozenkai.com/2675poi
+ rier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Take your Recycling bin out
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-301-20261103-recycling-back@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261103T190000
+DTEND;TZID=America/Toronto:20261103T191500
+SUMMARY:Bring back your Recycling bin
+DESCRIPTION:Bring back your Recycling bin.\nBins may be at the curb from 7p
+ m the evening before to 7am on pickup day.\nhttps://studiozenkai.com/2675p
+ oirier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Bring back your Recycling bin
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-301-20261109-recycling-out@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261109T190000
+DTEND;TZID=America/Toronto:20261109T191500
+SUMMARY:Take your Recycling bin out
+DESCRIPTION:Take your Recycling bin out.\nBins may be at the curb from 7pm 
+ the evening before to 7am on pickup day.\nhttps://studiozenkai.com/2675poi
+ rier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Take your Recycling bin out
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-301-20261110-recycling-back@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261110T190000
+DTEND;TZID=America/Toronto:20261110T191500
+SUMMARY:Bring back your Recycling bin
+DESCRIPTION:Bring back your Recycling bin.\nBins may be at the curb from 7p
+ m the evening before to 7am on pickup day.\nhttps://studiozenkai.com/2675p
+ oirier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Bring back your Recycling bin
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-301-20261116-recycling-out@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261116T190000
+DTEND;TZID=America/Toronto:20261116T191500
+SUMMARY:Take your Recycling bin out
+DESCRIPTION:Take your Recycling bin out.\nBins may be at the curb from 7pm 
+ the evening before to 7am on pickup day.\nhttps://studiozenkai.com/2675poi
+ rier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Take your Recycling bin out
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-301-20261117-recycling-back@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261117T190000
+DTEND;TZID=America/Toronto:20261117T191500
+SUMMARY:Bring back your Recycling bin
+DESCRIPTION:Bring back your Recycling bin.\nBins may be at the curb from 7p
+ m the evening before to 7am on pickup day.\nhttps://studiozenkai.com/2675p
+ oirier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Bring back your Recycling bin
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-301-20261123-recycling-out@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261123T190000
+DTEND;TZID=America/Toronto:20261123T191500
+SUMMARY:Take your Recycling bin out
+DESCRIPTION:Take your Recycling bin out.\nBins may be at the curb from 7pm 
+ the evening before to 7am on pickup day.\nhttps://studiozenkai.com/2675poi
+ rier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Take your Recycling bin out
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-301-20261124-recycling-back@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261124T190000
+DTEND;TZID=America/Toronto:20261124T191500
+SUMMARY:Bring back your Recycling bin
+DESCRIPTION:Bring back your Recycling bin.\nBins may be at the curb from 7p
+ m the evening before to 7am on pickup day.\nhttps://studiozenkai.com/2675p
+ oirier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Bring back your Recycling bin
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-301-20261130-recycling-out@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261130T190000
+DTEND;TZID=America/Toronto:20261130T191500
+SUMMARY:Take your Recycling bin out
+DESCRIPTION:Take your Recycling bin out.\nBins may be at the curb from 7pm 
+ the evening before to 7am on pickup day.\nhttps://studiozenkai.com/2675poi
+ rier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Take your Recycling bin out
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-301-20261201-recycling-back@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261201T190000
+DTEND;TZID=America/Toronto:20261201T191500
+SUMMARY:Bring back your Recycling bin
+DESCRIPTION:Bring back your Recycling bin.\nBins may be at the curb from 7p
+ m the evening before to 7am on pickup day.\nhttps://studiozenkai.com/2675p
+ oirier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Bring back your Recycling bin
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-301-20261207-recycling-out@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261207T190000
+DTEND;TZID=America/Toronto:20261207T191500
+SUMMARY:Take your Recycling bin out
+DESCRIPTION:Take your Recycling bin out.\nBins may be at the curb from 7pm 
+ the evening before to 7am on pickup day.\nhttps://studiozenkai.com/2675poi
+ rier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Take your Recycling bin out
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-301-20261208-recycling-back@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261208T190000
+DTEND;TZID=America/Toronto:20261208T191500
+SUMMARY:Bring back your Recycling bin
+DESCRIPTION:Bring back your Recycling bin.\nBins may be at the curb from 7p
+ m the evening before to 7am on pickup day.\nhttps://studiozenkai.com/2675p
+ oirier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Bring back your Recycling bin
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-301-20261214-recycling-out@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261214T190000
+DTEND;TZID=America/Toronto:20261214T191500
+SUMMARY:Take your Recycling bin out
+DESCRIPTION:Take your Recycling bin out.\nBins may be at the curb from 7pm 
+ the evening before to 7am on pickup day.\nhttps://studiozenkai.com/2675poi
+ rier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Take your Recycling bin out
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-301-20261215-recycling-back@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261215T190000
+DTEND;TZID=America/Toronto:20261215T191500
+SUMMARY:Bring back your Recycling bin
+DESCRIPTION:Bring back your Recycling bin.\nBins may be at the curb from 7p
+ m the evening before to 7am on pickup day.\nhttps://studiozenkai.com/2675p
+ oirier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Bring back your Recycling bin
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-301-20261221-recycling-out@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261221T190000
+DTEND;TZID=America/Toronto:20261221T191500
+SUMMARY:Take your Recycling bin out
+DESCRIPTION:Take your Recycling bin out.\nBins may be at the curb from 7pm 
+ the evening before to 7am on pickup day.\nhttps://studiozenkai.com/2675poi
+ rier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Take your Recycling bin out
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-301-20261222-recycling-back@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261222T190000
+DTEND;TZID=America/Toronto:20261222T191500
+SUMMARY:Bring back your Recycling bin
+DESCRIPTION:Bring back your Recycling bin.\nBins may be at the curb from 7p
+ m the evening before to 7am on pickup day.\nhttps://studiozenkai.com/2675p
+ oirier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Bring back your Recycling bin
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-301-20261228-recycling-out@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261228T190000
+DTEND;TZID=America/Toronto:20261228T191500
+SUMMARY:Take your Recycling bin out
+DESCRIPTION:Take your Recycling bin out.\nBins may be at the curb from 7pm 
+ the evening before to 7am on pickup day.\nhttps://studiozenkai.com/2675poi
+ rier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Take your Recycling bin out
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-301-20261229-recycling-back@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261229T190000
+DTEND;TZID=America/Toronto:20261229T191500
+SUMMARY:Bring back your Recycling bin
+DESCRIPTION:Bring back your Recycling bin.\nBins may be at the curb from 7p
+ m the evening before to 7am on pickup day.\nhttps://studiozenkai.com/2675p
+ oirier
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Bring back your Recycling bin
 TRIGGER:-PT30M
 END:VALARM
 END:VEVENT

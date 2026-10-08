@@ -1,19 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>2675 boul. Poirier · Building duty calendar</title>
-<meta name="description" content="Who takes the bins out, shovels, rakes and fixes things at 2675 boul. Poirier: calendar, your unit's tasks and calendar feeds.">
+<title>2675 boul. Poirier · Calendrier des tâches / Building duty calendar</title>
+<meta name="description" content="Qui sort les bacs, pellette, ramasse les feuilles et répare au 2675 boul. Poirier. Who takes the bins out, shovels, rakes and fixes things at 2675 boul. Poirier.">
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#1f2937">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header class="top">
-  <div class="wrap">
-    <h1 data-i18n="title">2675 boul. Poirier</h1>
-    <p class="sub" data-i18n="subtitle">Building duty calendar</p>
+  <div class="wrap top-row">
+    <div>
+      <h1 data-i18n="title">2675 boul. Poirier</h1>
+      <p class="sub" data-i18n="subtitle">Calendrier des tâches · Building duty calendar</p>
+    </div>
+    <div id="lang" class="lang" role="group" aria-label="Langue / Language">
+      <button type="button" value="fr" lang="fr">Français</button>
+      <button type="button" value="en" lang="en">English</button>
+    </div>
   </div>
 </header>
 
@@ -52,7 +58,7 @@
 
 <footer class="wrap foot" id="foot"></footer>
 
-<noscript><p class="wrap">This page needs JavaScript to show the calendar.</p></noscript>
+<noscript><p class="wrap">Cette page a besoin de JavaScript pour afficher le calendrier. This page needs JavaScript to show the calendar.</p></noscript>
 <script src="app.js"></script>
 </body>
 </html>

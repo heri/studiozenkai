@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-04T23:04:40+00:00",
+ "generated": "2026-10-08T20:33:24+00:00",
  "address": "2675 boul. Poirier",
  "site_url": "https://studiozenkai.com/2675poirier",
  "timezone": "America/Toronto",
@@ -54,32 +54,122 @@
  },
  "job_info": {
   "Bins": {
-   "short": "Garbage, recycling & compost",
+   "name": {
+    "en": "Bins",
+    "fr": "Bacs"
+   },
+   "short": {
+    "en": "Garbage & compost",
+    "fr": "Ordures et compost"
+   },
    "long": {
-    "all": "Take bins out at 7pm the evening before pickup, bring them back at 7pm on pickup day. Keep the garbage area clean: no bags on the ground, lids closed, never leave bags beside a full bin."
+    "en": {
+     "all": "Take the compost and garbage bins out at 7pm the evening before pickup, bring them back at 7pm on pickup day. Keep the garbage area clean: no bags on the ground, lids closed, never leave bags beside a full bin. Recycling isn't part of this job: each unit handles its own bin."
+    },
+    "fr": {
+     "all": "Sortir le bac brun (compost) et le bac à ordures à 19 h la veille de la collecte, les rentrer à 19 h le jour de la collecte. Garder l'espace poubelles propre : aucun sac par terre, couvercles fermés, jamais de sacs à côté d'un bac plein. Le recyclage ne fait pas partie de cette tâche : chaque unité s'occupe de son propre bac."
+    }
    }
   },
   "Front & snow": {
-   "short": "Front yard & entrance",
+   "name": {
+    "en": "Front & snow",
+    "fr": "Devant et neige"
+   },
+   "short": {
+    "en": "Front yard & entrance",
+    "fr": "Devant et entrée"
+   },
    "long": {
-    "fall": "Rake front leaves (paper bags, out with compost). Shovel and salt if it snows.",
-    "winter": "After every snowfall: shovel the entrance and stairs, then salt. Keep bins reachable on pickup days.",
-    "spring_summer": "Front garden maintenance: weeding, tidying, watering. Shovel and salt if a late snow falls."
+    "en": {
+     "fall": "Rake front leaves (paper bags, out with compost). Shovel and salt if it snows.",
+     "winter": "After every snowfall: shovel the entrance and stairs, then salt. Keep bins reachable on pickup days.",
+     "spring_summer": "Front garden maintenance: weeding, tidying, watering. Shovel and salt if a late snow falls."
+    },
+    "fr": {
+     "fall": "Ramasser les feuilles devant (sacs en papier, sortis avec le compost). Pelleter et saler s'il neige.",
+     "winter": "Après chaque chute de neige : pelleter l'entrée et l'escalier, puis saler. Garder les bacs accessibles les jours de collecte.",
+     "spring_summer": "Entretien du jardin avant : désherber, ranger, arroser. Pelleter et saler en cas de neige tardive."
+    }
    }
   },
   "Back yard": {
-   "short": "Back yard & garden",
+   "name": {
+    "en": "Back yard",
+    "fr": "Cour arrière"
+   },
+   "short": {
+    "en": "Back yard & garden",
+    "fr": "Cour et jardin arrière"
+   },
    "long": {
-    "fall": "Rake back-yard leaves (paper bags, out with compost).",
-    "winter": "No regular task in winter. Keep the back yard tidy.",
-    "spring_summer": "Back garden maintenance: weeding, tidying, watering."
+    "en": {
+     "fall": "Rake back-yard leaves (paper bags, out with compost).",
+     "winter": "No regular task in winter. Keep the back yard tidy.",
+     "spring_summer": "Back garden maintenance: weeding, tidying, watering."
+    },
+    "fr": {
+     "fall": "Ramasser les feuilles de la cour arrière (sacs en papier, sortis avec le compost).",
+     "winter": "Pas de tâche régulière en hiver. Garder la cour arrière propre.",
+     "spring_summer": "Entretien du jardin arrière : désherber, ranger, arroser."
+    }
    }
   },
   "Repairs": {
-   "short": "Small fixes",
+   "name": {
+    "en": "Repairs",
+    "fr": "Réparations"
+   },
+   "short": {
+    "en": "Small fixes",
+    "fr": "Petites réparations"
+   },
    "long": {
-    "all": "Main door lock and handle, light bulbs (entrance, hallways), stairs, other small fixes. Post what you fixed (and any receipt) in the WhatsApp group."
+    "en": {
+     "all": "Main door lock and handle, light bulbs (entrance, hallways), stairs, other small fixes. Post what you fixed (and any receipt) in the WhatsApp group."
+    },
+    "fr": {
+     "all": "Serrure et poignée de la porte principale, ampoules (entrée, couloirs), escalier, autres petites réparations. Publier ce qui a été réparé (et tout reçu) dans le groupe WhatsApp."
+    }
    }
+  }
+ },
+ "everyone": {
+  "name": {
+   "en": "Everyone",
+   "fr": "Tous"
+  },
+  "long": {
+   "en": "Recycling: every unit has its own bin. Put it out Monday at 7pm and bring it back in Tuesday at 7pm, every week.",
+   "fr": "Recyclage : chaque unité a son propre bac. Sortez-le le lundi à 19 h et rentrez-le le mardi à 19 h, chaque semaine."
+  }
+ },
+ "action_text": {
+  "en": {
+   "compost.out": "Take Compost bin out",
+   "compost.back": "Bring back Compost bin",
+   "recycling.out": "Everyone: Recycling out",
+   "recycling.back": "Everyone: Recycling back",
+   "garbage.out": "Take Garbage bin out",
+   "garbage.back": "Bring back Garbage bin"
+  },
+  "fr": {
+   "compost.out": "Sortir le bac brun",
+   "compost.back": "Rentrer le bac brun",
+   "recycling.out": "Recyclage (tous) : sortir",
+   "recycling.back": "Recyclage (tous) : rentrer",
+   "garbage.out": "Sortir le bac à ordures",
+   "garbage.back": "Rentrer le bac à ordures"
+  }
+ },
+ "own_text": {
+  "en": {
+   "recycling.out": "Take your Recycling bin out",
+   "recycling.back": "Bring back your Recycling bin"
+  },
+  "fr": {
+   "recycling.out": "Sortir votre bac de recyclage",
+   "recycling.back": "Rentrer votre bac de recyclage"
   }
  },
  "periods": [
@@ -93,12 +183,6 @@
     "Front & snow": "102",
     "Back yard": "101",
     "Repairs": "202"
-   },
-   "tasks": {
-    "Bins": "Take bins out at 7pm the evening before pickup, bring them back at 7pm on pickup day. Keep the garbage area clean: no bags on the ground, lids closed, never leave bags beside a full bin.",
-    "Front & snow": "Rake front leaves (paper bags, out with compost). Shovel and salt if it snows.",
-    "Back yard": "Rake back-yard leaves (paper bags, out with compost).",
-    "Repairs": "Main door lock and handle, light bulbs (entrance, hallways), stairs, other small fixes. Post what you fixed (and any receipt) in the WhatsApp group."
    }
   },
   {
@@ -111,12 +195,6 @@
     "Front & snow": "302",
     "Back yard": "102",
     "Repairs": "101"
-   },
-   "tasks": {
-    "Bins": "Take bins out at 7pm the evening before pickup, bring them back at 7pm on pickup day. Keep the garbage area clean: no bags on the ground, lids closed, never leave bags beside a full bin.",
-    "Front & snow": "Rake front leaves (paper bags, out with compost). Shovel and salt if it snows.",
-    "Back yard": "Rake back-yard leaves (paper bags, out with compost).",
-    "Repairs": "Main door lock and handle, light bulbs (entrance, hallways), stairs, other small fixes. Post what you fixed (and any receipt) in the WhatsApp group."
    }
   },
   {
@@ -129,12 +207,6 @@
     "Front & snow": "301",
     "Back yard": "302",
     "Repairs": "102"
-   },
-   "tasks": {
-    "Bins": "Take bins out at 7pm the evening before pickup, bring them back at 7pm on pickup day. Keep the garbage area clean: no bags on the ground, lids closed, never leave bags beside a full bin.",
-    "Front & snow": "Rake front leaves (paper bags, out with compost). Shovel and salt if it snows.",
-    "Back yard": "Rake back-yard leaves (paper bags, out with compost).",
-    "Repairs": "Main door lock and handle, light bulbs (entrance, hallways), stairs, other small fixes. Post what you fixed (and any receipt) in the WhatsApp group."
    }
   },
   {
@@ -147,12 +219,6 @@
     "Front & snow": "201",
     "Back yard": "301",
     "Repairs": "302"
-   },
-   "tasks": {
-    "Bins": "Take bins out at 7pm the evening before pickup, bring them back at 7pm on pickup day. Keep the garbage area clean: no bags on the ground, lids closed, never leave bags beside a full bin.",
-    "Front & snow": "Rake front leaves (paper bags, out with compost). Shovel and salt if it snows.",
-    "Back yard": "Rake back-yard leaves (paper bags, out with compost).",
-    "Repairs": "Main door lock and handle, light bulbs (entrance, hallways), stairs, other small fixes. Post what you fixed (and any receipt) in the WhatsApp group."
    }
   },
   {
@@ -165,12 +231,6 @@
     "Front & snow": "202",
     "Back yard": "201",
     "Repairs": "301"
-   },
-   "tasks": {
-    "Bins": "Take bins out at 7pm the evening before pickup, bring them back at 7pm on pickup day. Keep the garbage area clean: no bags on the ground, lids closed, never leave bags beside a full bin.",
-    "Front & snow": "After every snowfall: shovel the entrance and stairs, then salt. Keep bins reachable on pickup days.",
-    "Back yard": "No regular task in winter. Keep the back yard tidy.",
-    "Repairs": "Main door lock and handle, light bulbs (entrance, hallways), stairs, other small fixes. Post what you fixed (and any receipt) in the WhatsApp group."
    }
   },
   {
@@ -183,12 +243,6 @@
     "Front & snow": "101",
     "Back yard": "202",
     "Repairs": "201"
-   },
-   "tasks": {
-    "Bins": "Take bins out at 7pm the evening before pickup, bring them back at 7pm on pickup day. Keep the garbage area clean: no bags on the ground, lids closed, never leave bags beside a full bin.",
-    "Front & snow": "After every snowfall: shovel the entrance and stairs, then salt. Keep bins reachable on pickup days.",
-    "Back yard": "No regular task in winter. Keep the back yard tidy.",
-    "Repairs": "Main door lock and handle, light bulbs (entrance, hallways), stairs, other small fixes. Post what you fixed (and any receipt) in the WhatsApp group."
    }
   },
   {
@@ -201,12 +255,6 @@
     "Front & snow": "102",
     "Back yard": "101",
     "Repairs": "202"
-   },
-   "tasks": {
-    "Bins": "Take bins out at 7pm the evening before pickup, bring them back at 7pm on pickup day. Keep the garbage area clean: no bags on the ground, lids closed, never leave bags beside a full bin.",
-    "Front & snow": "After every snowfall: shovel the entrance and stairs, then salt. Keep bins reachable on pickup days.",
-    "Back yard": "No regular task in winter. Keep the back yard tidy.",
-    "Repairs": "Main door lock and handle, light bulbs (entrance, hallways), stairs, other small fixes. Post what you fixed (and any receipt) in the WhatsApp group."
    }
   }
  ],
@@ -216,11 +264,15 @@
    "bins": "302",
    "actions": [
     {
-     "stream": "recycling_compost",
+     "stream": "compost",
      "kind": "out",
-     "time": "19:00",
-     "text": "Take Recycling & Compost bins out",
      "unit": "302",
+     "note": null
+    },
+    {
+     "stream": "recycling",
+     "kind": "out",
+     "unit": null,
      "note": null
     }
    ]
@@ -230,11 +282,15 @@
    "bins": "302",
    "actions": [
     {
-     "stream": "recycling_compost",
+     "stream": "compost",
      "kind": "back",
-     "time": "19:00",
-     "text": "Bring back Recycling & Compost bins",
      "unit": "302",
+     "note": null
+    },
+    {
+     "stream": "recycling",
+     "kind": "back",
+     "unit": null,
      "note": null
     }
    ]
@@ -269,11 +325,15 @@
    "bins": "302",
    "actions": [
     {
-     "stream": "recycling_compost",
+     "stream": "compost",
      "kind": "out",
-     "time": "19:00",
-     "text": "Take Recycling & Compost bins out",
      "unit": "302",
+     "note": null
+    },
+    {
+     "stream": "recycling",
+     "kind": "out",
+     "unit": null,
      "note": null
     }
    ]
@@ -283,11 +343,15 @@
    "bins": "302",
    "actions": [
     {
-     "stream": "recycling_compost",
+     "stream": "compost",
      "kind": "back",
-     "time": "19:00",
-     "text": "Bring back Recycling & Compost bins",
      "unit": "302",
+     "note": null
+    },
+    {
+     "stream": "recycling",
+     "kind": "back",
+     "unit": null,
      "note": null
     }
    ]
@@ -304,8 +368,6 @@
     {
      "stream": "garbage",
      "kind": "out",
-     "time": "19:00",
-     "text": "Take Garbage bin out",
      "unit": "302",
      "note": null
     }
@@ -318,8 +380,6 @@
     {
      "stream": "garbage",
      "kind": "back",
-     "time": "19:00",
-     "text": "Bring back Garbage bin",
      "unit": "302",
      "note": null
     }
@@ -340,11 +400,15 @@
    "bins": "301",
    "actions": [
     {
-     "stream": "recycling_compost",
+     "stream": "compost",
      "kind": "out",
-     "time": "19:00",
-     "text": "Take Recycling & Compost bins out",
      "unit": "301",
+     "note": null
+    },
+    {
+     "stream": "recycling",
+     "kind": "out",
+     "unit": null,
      "note": null
     }
    ]
@@ -354,11 +418,15 @@
    "bins": "301",
    "actions": [
     {
-     "stream": "recycling_compost",
+     "stream": "compost",
      "kind": "back",
-     "time": "19:00",
-     "text": "Bring back Recycling & Compost bins",
      "unit": "301",
+     "note": null
+    },
+    {
+     "stream": "recycling",
+     "kind": "back",
+     "unit": null,
      "note": null
     }
    ]
@@ -393,11 +461,15 @@
    "bins": "301",
    "actions": [
     {
-     "stream": "recycling_compost",
+     "stream": "compost",
      "kind": "out",
-     "time": "19:00",
-     "text": "Take Recycling & Compost bins out",
      "unit": "301",
+     "note": null
+    },
+    {
+     "stream": "recycling",
+     "kind": "out",
+     "unit": null,
      "note": null
     }
    ]
@@ -407,11 +479,15 @@
    "bins": "301",
    "actions": [
     {
-     "stream": "recycling_compost",
+     "stream": "compost",
      "kind": "back",
-     "time": "19:00",
-     "text": "Bring back Recycling & Compost bins",
      "unit": "301",
+     "note": null
+    },
+    {
+     "stream": "recycling",
+     "kind": "back",
+     "unit": null,
      "note": null
     }
    ]
@@ -428,8 +504,6 @@
     {
      "stream": "garbage",
      "kind": "out",
-     "time": "19:00",
-     "text": "Take Garbage bin out",
      "unit": "301",
      "note": null
     }
@@ -442,8 +516,6 @@
     {
      "stream": "garbage",
      "kind": "back",
-     "time": "19:00",
-     "text": "Bring back Garbage bin",
      "unit": "301",
      "note": null
     }
@@ -464,11 +536,15 @@
    "bins": "201",
    "actions": [
     {
-     "stream": "recycling_compost",
+     "stream": "compost",
      "kind": "out",
-     "time": "19:00",
-     "text": "Take Recycling & Compost bins out",
      "unit": "201",
+     "note": null
+    },
+    {
+     "stream": "recycling",
+     "kind": "out",
+     "unit": null,
      "note": null
     }
    ]
@@ -478,11 +554,15 @@
    "bins": "201",
    "actions": [
     {
-     "stream": "recycling_compost",
+     "stream": "compost",
      "kind": "back",
-     "time": "19:00",
-     "text": "Bring back Recycling & Compost bins",
      "unit": "201",
+     "note": null
+    },
+    {
+     "stream": "recycling",
+     "kind": "back",
+     "unit": null,
      "note": null
     }
    ]
@@ -517,11 +597,15 @@
    "bins": "201",
    "actions": [
     {
-     "stream": "recycling_compost",
+     "stream": "compost",
      "kind": "out",
-     "time": "19:00",
-     "text": "Take Recycling & Compost bins out",
      "unit": "201",
+     "note": null
+    },
+    {
+     "stream": "recycling",
+     "kind": "out",
+     "unit": null,
      "note": null
     }
    ]
@@ -531,11 +615,15 @@
    "bins": "201",
    "actions": [
     {
-     "stream": "recycling_compost",
+     "stream": "compost",
      "kind": "back",
-     "time": "19:00",
-     "text": "Bring back Recycling & Compost bins",
      "unit": "201",
+     "note": null
+    },
+    {
+     "stream": "recycling",
+     "kind": "back",
+     "unit": null,
      "note": null
     }
    ]
@@ -552,8 +640,6 @@
     {
      "stream": "garbage",
      "kind": "out",
-     "time": "19:00",
-     "text": "Take Garbage bin out",
      "unit": "201",
      "note": null
     }
@@ -566,8 +652,6 @@
     {
      "stream": "garbage",
      "kind": "back",
-     "time": "19:00",
-     "text": "Bring back Garbage bin",
      "unit": "201",
      "note": null
     }
@@ -588,11 +672,15 @@
    "bins": "202",
    "actions": [
     {
-     "stream": "recycling_compost",
+     "stream": "compost",
      "kind": "out",
-     "time": "19:00",
-     "text": "Take Recycling & Compost bins out",
      "unit": "202",
+     "note": null
+    },
+    {
+     "stream": "recycling",
+     "kind": "out",
+     "unit": null,
      "note": null
     }
    ]
@@ -602,11 +690,15 @@
    "bins": "202",
    "actions": [
     {
-     "stream": "recycling_compost",
+     "stream": "compost",
      "kind": "back",
-     "time": "19:00",
-     "text": "Bring back Recycling & Compost bins",
      "unit": "202",
+     "note": null
+    },
+    {
+     "stream": "recycling",
+     "kind": "back",
+     "unit": null,
      "note": null
     }
    ]
@@ -641,11 +733,15 @@
    "bins": "202",
    "actions": [
     {
-     "stream": "recycling_compost",
+     "stream": "compost",
      "kind": "out",
-     "time": "19:00",
-     "text": "Take Recycling & Compost bins out",
      "unit": "202",
+     "note": null
+    },
+    {
+     "stream": "recycling",
+     "kind": "out",
+     "unit": null,
      "note": null
     }
    ]
@@ -655,11 +751,15 @@
    "bins": "202",
    "actions": [
     {
-     "stream": "recycling_compost",
+     "stream": "compost",
      "kind": "back",
-     "time": "19:00",
-     "text": "Bring back Recycling & Compost bins",
      "unit": "202",
+     "note": null
+    },
+    {
+     "stream": "recycling",
+     "kind": "back",
+     "unit": null,
      "note": null
     }
    ]
@@ -676,8 +776,6 @@
     {
      "stream": "garbage",
      "kind": "out",
-     "time": "19:00",
-     "text": "Take Garbage bin out",
      "unit": "202",
      "note": null
     }
@@ -690,8 +788,6 @@
     {
      "stream": "garbage",
      "kind": "back",
-     "time": "19:00",
-     "text": "Bring back Garbage bin",
      "unit": "202",
      "note": null
     }
@@ -712,11 +808,15 @@
    "bins": "101",
    "actions": [
     {
-     "stream": "recycling_compost",
+     "stream": "compost",
      "kind": "out",
-     "time": "19:00",
-     "text": "Take Recycling & Compost bins out",
      "unit": "101",
+     "note": null
+    },
+    {
+     "stream": "recycling",
+     "kind": "out",
+     "unit": null,
      "note": null
     }
    ]
@@ -726,11 +826,15 @@
    "bins": "101",
    "actions": [
     {
-     "stream": "recycling_compost",
+     "stream": "compost",
      "kind": "back",
-     "time": "19:00",
-     "text": "Bring back Recycling & Compost bins",
      "unit": "101",
+     "note": null
+    },
+    {
+     "stream": "recycling",
+     "kind": "back",
+     "unit": null,
      "note": null
     }
    ]
@@ -765,11 +869,15 @@
    "bins": "101",
    "actions": [
     {
-     "stream": "recycling_compost",
+     "stream": "compost",
      "kind": "out",
-     "time": "19:00",
-     "text": "Take Recycling & Compost bins out",
      "unit": "101",
+     "note": null
+    },
+    {
+     "stream": "recycling",
+     "kind": "out",
+     "unit": null,
      "note": null
     }
    ]
@@ -779,11 +887,15 @@
    "bins": "101",
    "actions": [
     {
-     "stream": "recycling_compost",
+     "stream": "compost",
      "kind": "back",
-     "time": "19:00",
-     "text": "Bring back Recycling & Compost bins",
      "unit": "101",
+     "note": null
+    },
+    {
+     "stream": "recycling",
+     "kind": "back",
+     "unit": null,
      "note": null
     }
    ]
@@ -800,8 +912,6 @@
     {
      "stream": "garbage",
      "kind": "out",
-     "time": "19:00",
-     "text": "Take Garbage bin out",
      "unit": "101",
      "note": null
     }
@@ -814,8 +924,6 @@
     {
      "stream": "garbage",
      "kind": "back",
-     "time": "19:00",
-     "text": "Bring back Garbage bin",
      "unit": "101",
      "note": null
     }
@@ -836,11 +944,15 @@
    "bins": "102",
    "actions": [
     {
-     "stream": "recycling_compost",
+     "stream": "compost",
      "kind": "out",
-     "time": "19:00",
-     "text": "Take Recycling & Compost bins out",
      "unit": "102",
+     "note": null
+    },
+    {
+     "stream": "recycling",
+     "kind": "out",
+     "unit": null,
      "note": null
     }
    ]
@@ -850,11 +962,15 @@
    "bins": "102",
    "actions": [
     {
-     "stream": "recycling_compost",
+     "stream": "compost",
      "kind": "back",
-     "time": "19:00",
-     "text": "Bring back Recycling & Compost bins",
      "unit": "102",
+     "note": null
+    },
+    {
+     "stream": "recycling",
+     "kind": "back",
+     "unit": null,
      "note": null
     }
    ]
@@ -889,11 +1005,15 @@
    "bins": "102",
    "actions": [
     {
-     "stream": "recycling_compost",
+     "stream": "compost",
      "kind": "out",
-     "time": "19:00",
-     "text": "Take Recycling & Compost bins out",
      "unit": "102",
+     "note": null
+    },
+    {
+     "stream": "recycling",
+     "kind": "out",
+     "unit": null,
      "note": null
     }
    ]
@@ -903,11 +1023,15 @@
    "bins": "102",
    "actions": [
     {
-     "stream": "recycling_compost",
+     "stream": "compost",
      "kind": "back",
-     "time": "19:00",
-     "text": "Bring back Recycling & Compost bins",
      "unit": "102",
+     "note": null
+    },
+    {
+     "stream": "recycling",
+     "kind": "back",
+     "unit": null,
      "note": null
     }
    ]
@@ -924,10 +1048,11 @@
     {
      "stream": "garbage",
      "kind": "out",
-     "time": "19:00",
-     "text": "Take Garbage bin out",
      "unit": "102",
-     "note": "Christmas Day, confirm on Info-Collecte"
+     "note": {
+      "en": "Christmas Day, confirm on Info-Collecte",
+      "fr": "Jour de Noël, à confirmer sur Info-Collecte"
+     }
     }
    ]
   },
@@ -938,10 +1063,11 @@
     {
      "stream": "garbage",
      "kind": "back",
-     "time": "19:00",
-     "text": "Bring back Garbage bin",
      "unit": "102",
-     "note": "Christmas Day, confirm on Info-Collecte"
+     "note": {
+      "en": "Christmas Day, confirm on Info-Collecte",
+      "fr": "Jour de Noël, à confirmer sur Info-Collecte"
+     }
     }
    ]
   },
@@ -960,11 +1086,15 @@
    "bins": "302",
    "actions": [
     {
-     "stream": "recycling_compost",
+     "stream": "compost",
      "kind": "out",
-     "time": "19:00",
-     "text": "Take Recycling & Compost bins out",
      "unit": "302",
+     "note": null
+    },
+    {
+     "stream": "recycling",
+     "kind": "out",
+     "unit": null,
      "note": null
     }
    ]
@@ -974,11 +1104,15 @@
    "bins": "302",
    "actions": [
     {
-     "stream": "recycling_compost",
+     "stream": "compost",
      "kind": "back",
-     "time": "19:00",
-     "text": "Bring back Recycling & Compost bins",
      "unit": "302",
+     "note": null
+    },
+    {
+     "stream": "recycling",
+     "kind": "back",
+     "unit": null,
      "note": null
     }
    ]

@@ -1,0 +1,577 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//studiozenkai.com//2675 Poirier duty calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:2675 Poirier – Unité 102
+X-WR-TIMEZONE:America/Toronto
+X-WR-CALDESC:Tâches de l'unité 102 au 2675 boul. Poirier. https://studioz
+ enkai.com/2675poirier/?lang=fr
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:America/Toronto
+X-LIC-LOCATION:America/Toronto
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:2675poirier-102-20261005-duty-front-snow@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;VALUE=DATE:20261005
+DTEND;VALUE=DATE:20261019
+TRANSP:TRANSPARENT
+SUMMARY:De service : Devant et neige
+DESCRIPTION:5 oct. – 18 oct. : Ramasser les feuilles devant (sacs en papi
+ er\, sortis avec le compost). Pelleter et saler s'il neige.\n\nEmpêché? 
+ Échangez avec une autre unité et notez-le sur le calendrier de l'entrée
+ .\nhttps://studiozenkai.com/2675poirier/?lang=fr
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-102-20261019-duty-back-yard@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;VALUE=DATE:20261019
+DTEND;VALUE=DATE:20261102
+TRANSP:TRANSPARENT
+SUMMARY:De service : Cour arrière
+DESCRIPTION:19 oct. – 1 nov. : Ramasser les feuilles de la cour arrière 
+ (sacs en papier\, sortis avec le compost).\n\nEmpêché? Échangez avec un
+ e autre unité et notez-le sur le calendrier de l'entrée.\nhttps://studio
+ zenkai.com/2675poirier/?lang=fr
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-102-20261102-duty-repairs@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261116
+TRANSP:TRANSPARENT
+SUMMARY:De service : Réparations
+DESCRIPTION:2 nov. – 15 nov. : Serrure et poignée de la porte principale
+ \, ampoules (entrée\, couloirs)\, escalier\, autres petites réparations.
+  Publier ce qui a été réparé (et tout reçu) dans le groupe WhatsApp.\
+ n\nEmpêché? Échangez avec une autre unité et notez-le sur le calendrie
+ r de l'entrée.\nhttps://studiozenkai.com/2675poirier/?lang=fr
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-102-20261214-duty-bins@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;VALUE=DATE:20261214
+DTEND;VALUE=DATE:20261228
+TRANSP:TRANSPARENT
+SUMMARY:De service : Bacs
+DESCRIPTION:14 déc. – 27 déc. : Sortir le bac brun (compost) et le bac 
+ à ordures à 19 h la veille de la collecte\, les rentrer à 19 h le jour 
+ de la collecte. Garder l'espace poubelles propre : aucun sac par terre\, c
+ ouvercles fermés\, jamais de sacs à côté d'un bac plein. Le recyclage 
+ ne fait pas partie de cette tâche : chaque unité s'occupe de son propre 
+ bac.\n\nEmpêché? Échangez avec une autre unité et notez-le sur le cale
+ ndrier de l'entrée.\nhttps://studiozenkai.com/2675poirier/?lang=fr
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-102-20261228-duty-front-snow@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;VALUE=DATE:20261228
+DTEND;VALUE=DATE:20270111
+TRANSP:TRANSPARENT
+SUMMARY:De service : Devant et neige
+DESCRIPTION:28 déc. – 10 janv. : Après chaque chute de neige : pelleter
+  l'entrée et l'escalier\, puis saler. Garder les bacs accessibles les jou
+ rs de collecte.\n\nEmpêché? Échangez avec une autre unité et notez-le 
+ sur le calendrier de l'entrée.\nhttps://studiozenkai.com/2675poirier/?lan
+ g=fr
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-102-20261005-recycling-out@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261005T190000
+DTEND;TZID=America/Toronto:20261005T191500
+SUMMARY:Sortir votre bac de recyclage
+DESCRIPTION:Sortir votre bac de recyclage.\nLes bacs peuvent être au bord 
+ de la rue de 19 h la veille jusqu'à 7 h le jour de la collecte.\nhttps://
+ studiozenkai.com/2675poirier/?lang=fr
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Sortir votre bac de recyclage
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-102-20261006-recycling-back@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261006T190000
+DTEND;TZID=America/Toronto:20261006T191500
+SUMMARY:Rentrer votre bac de recyclage
+DESCRIPTION:Rentrer votre bac de recyclage.\nLes bacs peuvent être au bord
+  de la rue de 19 h la veille jusqu'à 7 h le jour de la collecte.\nhttps:/
+ /studiozenkai.com/2675poirier/?lang=fr
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Rentrer votre bac de recyclage
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-102-20261012-recycling-out@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261012T190000
+DTEND;TZID=America/Toronto:20261012T191500
+SUMMARY:Sortir votre bac de recyclage
+DESCRIPTION:Sortir votre bac de recyclage.\nLes bacs peuvent être au bord 
+ de la rue de 19 h la veille jusqu'à 7 h le jour de la collecte.\nhttps://
+ studiozenkai.com/2675poirier/?lang=fr
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Sortir votre bac de recyclage
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-102-20261013-recycling-back@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261013T190000
+DTEND;TZID=America/Toronto:20261013T191500
+SUMMARY:Rentrer votre bac de recyclage
+DESCRIPTION:Rentrer votre bac de recyclage.\nLes bacs peuvent être au bord
+  de la rue de 19 h la veille jusqu'à 7 h le jour de la collecte.\nhttps:/
+ /studiozenkai.com/2675poirier/?lang=fr
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Rentrer votre bac de recyclage
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-102-20261019-recycling-out@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261019T190000
+DTEND;TZID=America/Toronto:20261019T191500
+SUMMARY:Sortir votre bac de recyclage
+DESCRIPTION:Sortir votre bac de recyclage.\nLes bacs peuvent être au bord 
+ de la rue de 19 h la veille jusqu'à 7 h le jour de la collecte.\nhttps://
+ studiozenkai.com/2675poirier/?lang=fr
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Sortir votre bac de recyclage
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-102-20261020-recycling-back@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261020T190000
+DTEND;TZID=America/Toronto:20261020T191500
+SUMMARY:Rentrer votre bac de recyclage
+DESCRIPTION:Rentrer votre bac de recyclage.\nLes bacs peuvent être au bord
+  de la rue de 19 h la veille jusqu'à 7 h le jour de la collecte.\nhttps:/
+ /studiozenkai.com/2675poirier/?lang=fr
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Rentrer votre bac de recyclage
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-102-20261026-recycling-out@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261026T190000
+DTEND;TZID=America/Toronto:20261026T191500
+SUMMARY:Sortir votre bac de recyclage
+DESCRIPTION:Sortir votre bac de recyclage.\nLes bacs peuvent être au bord 
+ de la rue de 19 h la veille jusqu'à 7 h le jour de la collecte.\nhttps://
+ studiozenkai.com/2675poirier/?lang=fr
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Sortir votre bac de recyclage
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-102-20261027-recycling-back@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261027T190000
+DTEND;TZID=America/Toronto:20261027T191500
+SUMMARY:Rentrer votre bac de recyclage
+DESCRIPTION:Rentrer votre bac de recyclage.\nLes bacs peuvent être au bord
+  de la rue de 19 h la veille jusqu'à 7 h le jour de la collecte.\nhttps:/
+ /studiozenkai.com/2675poirier/?lang=fr
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Rentrer votre bac de recyclage
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-102-20261102-recycling-out@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261102T190000
+DTEND;TZID=America/Toronto:20261102T191500
+SUMMARY:Sortir votre bac de recyclage
+DESCRIPTION:Sortir votre bac de recyclage.\nLes bacs peuvent être au bord 
+ de la rue de 19 h la veille jusqu'à 7 h le jour de la collecte.\nhttps://
+ studiozenkai.com/2675poirier/?lang=fr
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Sortir votre bac de recyclage
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-102-20261103-recycling-back@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261103T190000
+DTEND;TZID=America/Toronto:20261103T191500
+SUMMARY:Rentrer votre bac de recyclage
+DESCRIPTION:Rentrer votre bac de recyclage.\nLes bacs peuvent être au bord
+  de la rue de 19 h la veille jusqu'à 7 h le jour de la collecte.\nhttps:/
+ /studiozenkai.com/2675poirier/?lang=fr
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Rentrer votre bac de recyclage
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-102-20261109-recycling-out@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261109T190000
+DTEND;TZID=America/Toronto:20261109T191500
+SUMMARY:Sortir votre bac de recyclage
+DESCRIPTION:Sortir votre bac de recyclage.\nLes bacs peuvent être au bord 
+ de la rue de 19 h la veille jusqu'à 7 h le jour de la collecte.\nhttps://
+ studiozenkai.com/2675poirier/?lang=fr
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Sortir votre bac de recyclage
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-102-20261110-recycling-back@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261110T190000
+DTEND;TZID=America/Toronto:20261110T191500
+SUMMARY:Rentrer votre bac de recyclage
+DESCRIPTION:Rentrer votre bac de recyclage.\nLes bacs peuvent être au bord
+  de la rue de 19 h la veille jusqu'à 7 h le jour de la collecte.\nhttps:/
+ /studiozenkai.com/2675poirier/?lang=fr
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Rentrer votre bac de recyclage
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-102-20261116-recycling-out@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261116T190000
+DTEND;TZID=America/Toronto:20261116T191500
+SUMMARY:Sortir votre bac de recyclage
+DESCRIPTION:Sortir votre bac de recyclage.\nLes bacs peuvent être au bord 
+ de la rue de 19 h la veille jusqu'à 7 h le jour de la collecte.\nhttps://
+ studiozenkai.com/2675poirier/?lang=fr
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Sortir votre bac de recyclage
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-102-20261117-recycling-back@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261117T190000
+DTEND;TZID=America/Toronto:20261117T191500
+SUMMARY:Rentrer votre bac de recyclage
+DESCRIPTION:Rentrer votre bac de recyclage.\nLes bacs peuvent être au bord
+  de la rue de 19 h la veille jusqu'à 7 h le jour de la collecte.\nhttps:/
+ /studiozenkai.com/2675poirier/?lang=fr
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Rentrer votre bac de recyclage
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-102-20261123-recycling-out@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261123T190000
+DTEND;TZID=America/Toronto:20261123T191500
+SUMMARY:Sortir votre bac de recyclage
+DESCRIPTION:Sortir votre bac de recyclage.\nLes bacs peuvent être au bord 
+ de la rue de 19 h la veille jusqu'à 7 h le jour de la collecte.\nhttps://
+ studiozenkai.com/2675poirier/?lang=fr
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Sortir votre bac de recyclage
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-102-20261124-recycling-back@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261124T190000
+DTEND;TZID=America/Toronto:20261124T191500
+SUMMARY:Rentrer votre bac de recyclage
+DESCRIPTION:Rentrer votre bac de recyclage.\nLes bacs peuvent être au bord
+  de la rue de 19 h la veille jusqu'à 7 h le jour de la collecte.\nhttps:/
+ /studiozenkai.com/2675poirier/?lang=fr
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Rentrer votre bac de recyclage
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-102-20261130-recycling-out@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261130T190000
+DTEND;TZID=America/Toronto:20261130T191500
+SUMMARY:Sortir votre bac de recyclage
+DESCRIPTION:Sortir votre bac de recyclage.\nLes bacs peuvent être au bord 
+ de la rue de 19 h la veille jusqu'à 7 h le jour de la collecte.\nhttps://
+ studiozenkai.com/2675poirier/?lang=fr
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Sortir votre bac de recyclage
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-102-20261201-recycling-back@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261201T190000
+DTEND;TZID=America/Toronto:20261201T191500
+SUMMARY:Rentrer votre bac de recyclage
+DESCRIPTION:Rentrer votre bac de recyclage.\nLes bacs peuvent être au bord
+  de la rue de 19 h la veille jusqu'à 7 h le jour de la collecte.\nhttps:/
+ /studiozenkai.com/2675poirier/?lang=fr
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Rentrer votre bac de recyclage
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-102-20261207-recycling-out@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261207T190000
+DTEND;TZID=America/Toronto:20261207T191500
+SUMMARY:Sortir votre bac de recyclage
+DESCRIPTION:Sortir votre bac de recyclage.\nLes bacs peuvent être au bord 
+ de la rue de 19 h la veille jusqu'à 7 h le jour de la collecte.\nhttps://
+ studiozenkai.com/2675poirier/?lang=fr
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Sortir votre bac de recyclage
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-102-20261208-recycling-back@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261208T190000
+DTEND;TZID=America/Toronto:20261208T191500
+SUMMARY:Rentrer votre bac de recyclage
+DESCRIPTION:Rentrer votre bac de recyclage.\nLes bacs peuvent être au bord
+  de la rue de 19 h la veille jusqu'à 7 h le jour de la collecte.\nhttps:/
+ /studiozenkai.com/2675poirier/?lang=fr
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Rentrer votre bac de recyclage
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-102-20261214-compost-out@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261214T190000
+DTEND;TZID=America/Toronto:20261214T191500
+SUMMARY:Sortir le bac brun
+DESCRIPTION:Sortir le bac brun.\nLes bacs peuvent être au bord de la rue d
+ e 19 h la veille jusqu'à 7 h le jour de la collecte.\nhttps://studiozenka
+ i.com/2675poirier/?lang=fr
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Sortir le bac brun
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-102-20261214-recycling-out@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261214T190000
+DTEND;TZID=America/Toronto:20261214T191500
+SUMMARY:Sortir votre bac de recyclage
+DESCRIPTION:Sortir votre bac de recyclage.\nLes bacs peuvent être au bord 
+ de la rue de 19 h la veille jusqu'à 7 h le jour de la collecte.\nhttps://
+ studiozenkai.com/2675poirier/?lang=fr
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Sortir votre bac de recyclage
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-102-20261215-compost-back@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261215T190000
+DTEND;TZID=America/Toronto:20261215T191500
+SUMMARY:Rentrer le bac brun
+DESCRIPTION:Rentrer le bac brun.\nLes bacs peuvent être au bord de la rue 
+ de 19 h la veille jusqu'à 7 h le jour de la collecte.\nhttps://studiozenk
+ ai.com/2675poirier/?lang=fr
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Rentrer le bac brun
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-102-20261215-recycling-back@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261215T190000
+DTEND;TZID=America/Toronto:20261215T191500
+SUMMARY:Rentrer votre bac de recyclage
+DESCRIPTION:Rentrer votre bac de recyclage.\nLes bacs peuvent être au bord
+  de la rue de 19 h la veille jusqu'à 7 h le jour de la collecte.\nhttps:/
+ /studiozenkai.com/2675poirier/?lang=fr
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Rentrer votre bac de recyclage
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-102-20261221-compost-out@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261221T190000
+DTEND;TZID=America/Toronto:20261221T191500
+SUMMARY:Sortir le bac brun
+DESCRIPTION:Sortir le bac brun.\nLes bacs peuvent être au bord de la rue d
+ e 19 h la veille jusqu'à 7 h le jour de la collecte.\nhttps://studiozenka
+ i.com/2675poirier/?lang=fr
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Sortir le bac brun
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-102-20261221-recycling-out@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261221T190000
+DTEND;TZID=America/Toronto:20261221T191500
+SUMMARY:Sortir votre bac de recyclage
+DESCRIPTION:Sortir votre bac de recyclage.\nLes bacs peuvent être au bord 
+ de la rue de 19 h la veille jusqu'à 7 h le jour de la collecte.\nhttps://
+ studiozenkai.com/2675poirier/?lang=fr
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Sortir votre bac de recyclage
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-102-20261222-compost-back@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261222T190000
+DTEND;TZID=America/Toronto:20261222T191500
+SUMMARY:Rentrer le bac brun
+DESCRIPTION:Rentrer le bac brun.\nLes bacs peuvent être au bord de la rue 
+ de 19 h la veille jusqu'à 7 h le jour de la collecte.\nhttps://studiozenk
+ ai.com/2675poirier/?lang=fr
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Rentrer le bac brun
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-102-20261222-recycling-back@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261222T190000
+DTEND;TZID=America/Toronto:20261222T191500
+SUMMARY:Rentrer votre bac de recyclage
+DESCRIPTION:Rentrer votre bac de recyclage.\nLes bacs peuvent être au bord
+  de la rue de 19 h la veille jusqu'à 7 h le jour de la collecte.\nhttps:/
+ /studiozenkai.com/2675poirier/?lang=fr
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Rentrer votre bac de recyclage
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-102-20261224-garbage-out@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261224T190000
+DTEND;TZID=America/Toronto:20261224T191500
+SUMMARY:Sortir le bac à ordures (date à confirmer)
+DESCRIPTION:Sortir le bac à ordures.\nJour de Noël\, à confirmer sur Inf
+ o-Collecte\nLes bacs peuvent être au bord de la rue de 19 h la veille jus
+ qu'à 7 h le jour de la collecte.\nhttps://studiozenkai.com/2675poirier/?l
+ ang=fr
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Sortir le bac à ordures (date à confirmer)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-102-20261225-garbage-back@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261225T190000
+DTEND;TZID=America/Toronto:20261225T191500
+SUMMARY:Rentrer le bac à ordures (date à confirmer)
+DESCRIPTION:Rentrer le bac à ordures.\nJour de Noël\, à confirmer sur In
+ fo-Collecte\nLes bacs peuvent être au bord de la rue de 19 h la veille ju
+ squ'à 7 h le jour de la collecte.\nhttps://studiozenkai.com/2675poirier/?
+ lang=fr
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Rentrer le bac à ordures (date à confirmer)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-102-20261228-recycling-out@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261228T190000
+DTEND;TZID=America/Toronto:20261228T191500
+SUMMARY:Sortir votre bac de recyclage
+DESCRIPTION:Sortir votre bac de recyclage.\nLes bacs peuvent être au bord 
+ de la rue de 19 h la veille jusqu'à 7 h le jour de la collecte.\nhttps://
+ studiozenkai.com/2675poirier/?lang=fr
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Sortir votre bac de recyclage
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2675poirier-102-20261229-recycling-back@studiozenkai.com
+DTSTAMP:20261008T203324Z
+DTSTART;TZID=America/Toronto:20261229T190000
+DTEND;TZID=America/Toronto:20261229T191500
+SUMMARY:Rentrer votre bac de recyclage
+DESCRIPTION:Rentrer votre bac de recyclage.\nLes bacs peuvent être au bord
+  de la rue de 19 h la veille jusqu'à 7 h le jour de la collecte.\nhttps:/
+ /studiozenkai.com/2675poirier/?lang=fr
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Rentrer votre bac de recyclage
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+END:VCALENDAR

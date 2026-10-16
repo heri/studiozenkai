@@ -46,6 +46,11 @@ button, select, input { font: inherit; color: inherit; }
 .cal-head h2 { margin: 0; text-align: center; flex: 1; font-size: 22px; }
 .nav { width: 44px; height: 44px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); font-size: 24px; line-height: 1; cursor: pointer; }
 .nav:disabled { opacity: .3; cursor: default; }
+.months { display: flex; margin: 12px auto 0; max-width: 420px; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.months button { flex: 1; min-height: 40px; padding: 0 6px; border: 0; background: var(--surface); font-size: 14px; font-weight: 700; cursor: pointer; }
+.months button + button { border-left: 1px solid var(--line); }
+.months button[aria-pressed="true"] { background: var(--ink); color: #fff; }
+.months button.is-now:not([aria-pressed="true"]) { text-decoration: underline; text-underline-offset: 3px; }
 .rule { color: var(--muted); font-size: 13.5px; margin: 8px 0 6px; text-align: center; }
 .legend { list-style: none; padding: 0; margin: 0 0 10px; display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: center; font-size: 13px; }
 .legend li { display: flex; align-items: center; gap: 6px; }

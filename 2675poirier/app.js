@@ -11,7 +11,7 @@
       docTitle: "2675 boul. Poirier · Building duty calendar",
       title: "2675 boul. Poirier",
       subtitle: "Building duty calendar · 4 jobs, 4 units, every 2 weeks · 2 units off",
-      prev: "Previous month", next: "Next month",
+      prev: "Previous month", next: "Next month", monthsLabel: "Choose a month",
       rule: "Bins go to the curb at 7pm the evening before pickup and come back in at 7pm on pickup day.",
       legend: { compost: "Compost (pickup every Tuesday)", recycling: "Recycling: each unit, own bin (Tuesday)", garbage: "Garbage (every other Friday)" },
       legendBins: "Day colour = unit on bins duty",
@@ -67,7 +67,7 @@
       docTitle: "2675 boul. Poirier · Calendrier des tâches",
       title: "2675 boul. Poirier",
       subtitle: "Calendrier des tâches · 4 tâches, 4 unités, aux 2 semaines · 2 unités en congé",
-      prev: "Mois précédent", next: "Mois suivant",
+      prev: "Mois précédent", next: "Mois suivant", monthsLabel: "Choisir un mois",
       rule: "Les bacs vont au bord de la rue à 19 h la veille de la collecte et sont rentrés à 19 h le jour de la collecte.",
       legend: { compost: "Bac brun / compost (chaque mardi)", recycling: "Recyclage : chaque unité, son bac (mardi)", garbage: "Ordures (un vendredi sur deux)" },
       legendBins: "Couleur du jour = unité de service aux bacs",
@@ -210,6 +210,14 @@
     var mName = fMonth(first);
     $("month-title").textContent = mName;
     $("prev").disabled = monthIdx === 0; $("next").disabled = monthIdx === months.length - 1;
+    // month switcher: one button per generated month
+    var thisYear = today.slice(0, 4);
+    $("months").setAttribute("aria-label", T.monthsLabel);
+    $("months").innerHTML = months.map(function (m, i) {
+      var d = parse(m + "-01"), name = fmt(d, m.slice(0, 4) === thisYear ? { month: "long" } : { month: "long", year: "numeric" });
+      return '<button type="button" data-i="' + i + '" aria-pressed="' + (i === monthIdx) + '"' + (m === today.slice(0, 7) ? ' class="is-now"' : "") + ">" +
+        esc(name.charAt(0).toUpperCase() + name.slice(1)) + "</button>";
+    }).join("");
 
     var start = addDays(first, -((first.getDay() + 6) % 7));
     var end = addDays(last, (7 - last.getDay()) % 7);
@@ -392,6 +400,8 @@
     var cur = today.slice(0, 7);
     monthIdx = months.indexOf(cur);
     if (monthIdx < 0) monthIdx = cur > months[months.length - 1] ? months.length - 1 : 0;
+    var qm = months.indexOf(new URLSearchParams(location.search).get("month"));   // e.g. ?month=2026-11
+    if (qm >= 0) monthIdx = qm;
 
     var q = new URLSearchParams(location.search).get("unit");
     unit = (q && S.units.indexOf(q) >= 0) ? q : store(STORE_KEY);
@@ -400,6 +410,10 @@
     renderAll();
     $("prev").onclick = function () { if (monthIdx > 0) { monthIdx--; renderMonth(); } };
     $("next").onclick = function () { if (monthIdx < months.length - 1) { monthIdx++; renderMonth(); } };
+    $("months").onclick = function (e) {
+      var b = e.target.closest("button[data-i]");
+      if (b) { monthIdx = +b.getAttribute("data-i"); renderMonth(); }
+    };
     $("unit").onchange = function () { unit = this.value || null; store(STORE_KEY, unit || ""); renderNow(); renderMonth(); renderMine(); };
   }
 

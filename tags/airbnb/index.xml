@@ -6,15 +6,8 @@
     <description>Recent content in Airbnb on Studio Zenkai</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 11 Oct 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2026 09:00:00 -0400</lastBuildDate>
     <atom:link href="https://studiozenkai.com/tags/airbnb/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>How Does Airbnb Revenue Work?</title>
-      <link>https://studiozenkai.com/post/bonus-airbnb-revenue-modelization/</link>
-      <pubDate>Sun, 11 Oct 2026 12:00:00 +0000</pubDate>
-      <guid>https://studiozenkai.com/post/bonus-airbnb-revenue-modelization/</guid>
-      <description>\[&#xA;\begin{aligned}&#xA;R = N × OR × AR&#xA;\end{aligned}&#xA;\]&lt;p&gt;Where:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;N is number of rentable nights per year (365 - maintenance days). You want maintenance days to be as low as possible, but not as much as lowering the customer experience. Start at 15 days reserved for upkeep and work your way down.&lt;/li&gt;&#xA;&lt;li&gt;OR is average Occupancy Rate. It was 0.8 during the pandemic but can be as low as 0.2 in low season (spring/fall)&lt;/li&gt;&#xA;&lt;li&gt;AR is Average Nightly rate, $250 in low season and up to $700 in high season&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Variables affecting revenue:&lt;/p&gt;</description>
-    </item>
     <item>
       <title>Teaching an AI to Run My Chalet While I&#39;m at the Beach</title>
       <link>https://studiozenkai.com/post/castoros-ai-butler-arthur/</link>

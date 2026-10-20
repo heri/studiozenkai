@@ -2,6 +2,7 @@
 date = "2026-10-11T12:00:00-00:00"
 title = "How Does Airbnb Revenue Work?"
 tags = ['airbnb', 'entrepreneurship']
+draft = true
 +++
 
  \[

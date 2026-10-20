@@ -25,14 +25,21 @@ So as you can see, I am comfortable in deep Quebec or France countryside, in a h
 
 ## Software work
 
-What I work with: Ruby on Rails, PostgreSQL, Redis, TypeScript, React and React Native, Elixir/Phoenix, Python. I write about [Rails](https://studiozenkai.com/tags/rails/), [TypeScript](https://studiozenkai.com/tags/typescript/), [PostgreSQL](https://studiozenkai.com/tags/postgresql/) and [React Native](https://studiozenkai.com/tags/react-native/).
+I work on diverse open source software projects and also have ongoing [consultancy work, taking vibe-coded apps to production](https://studiozenkai.com/vibe-coded-to-production-ready/): performance, security, and integrating complex systems together. Some of what keeps me busy:
 
-* **Lead Software Engineer, Nasdaq Private Market** (remote, from 2024). A trading platform for private-company stock. Cut average API response times on holdings and order systems from 30 seconds to 400ms. Rails, PostgreSQL, Redis, React.
-* **Senior Software Engineer, Klue** (remote, 2021 to 2024). Sped up the top five endpoints of the main Rails app by 210% through refactoring, async job redesign and PostgreSQL tuning. Led the Slack, Teams and Salesforce integrations. Rails 7, TypeScript.
-* **Senior Engineer, Decathlon** (remote, 2019 to 2021). Grew the open Sport Places API from 60,000 to 1.3 million places across 22 countries. Team lead and product owner within 7 months. Rails 6, Python, GCP.
-* **Lead Full-Stack Developer, Playground** (Montréal, 2017 to 2019). Two Rails applications for Canada's biggest venue of its kind: a high-volume player API, about 1.2 million daily sessions from external webhooks, data pipelines and executive reporting. Rails, MySQL, SQL Server, Redis, Sidekiq.
-* **Ruby Engineer and Consultant, MadMedia** (Montréal, 2012 to 2017). Built MVPs with more than 20 founders, including damava.com. Rails, React, Node.js.
-* **My own products:** [My Challenge Coin](https://mychallengecoin.app) and [CastorOS](https://castoros.app), both on the App Store, with mobile apps in React Native and TypeScript. See [projects](https://studiozenkai.com/projects/).
+* **My own products.** [CastorOS](https://castoros.app), a digital butler for chalet owners with an AI concierge named Arthur, and [My Challenge Coin](https://mychallengecoin.app), a family app where kids earn coins for real challenges. Both are on the App Store, built with React Native and TypeScript on Elixir/Phoenix backends.
+* **Speed experiments.** How fast can a JSON API get in [Rust](https://github.com/heri/rust_pure_api), [Crystal](https://github.com/heri/crystal_kemal) or plain Ruby? I benchmark it, then [write up what I find](https://studiozenkai.com/tags/performance/).
+* **Making old and new systems talk.** A [C# console app that drives Sage 50](https://studiozenkai.com/post/unix-shell-csharp/), or a [TypeScript sidecar that keeps a Rails app under an 80ms timeout](https://studiozenkai.com/post/maven-fastify-ruby/).
+
+Additionally, I've also worked with public companies and high-growth startups:
+
+* **Nasdaq Private Market**, lead software engineer (from 2024). A trading platform for private-company stock. Took average API response times on holdings and orders from 30 seconds to 400ms.
+* **Klue**, senior software engineer (2021 to 2024). Made the top five endpoints of the main Rails app 210% faster, and led the Slack, Teams and Salesforce integrations.
+* **Decathlon**, senior engineer (2019 to 2021). Grew the open Sport Places API from 60,000 to 1.3 million places in 22 countries. Became team lead within 7 months.
+* **Playground**, lead full-stack developer (2017 to 2019). Rails systems for Canada's biggest venue of its kind, handling about 1.2 million sessions a day.
+* **MadMedia**, Ruby engineer and consultant (2012 to 2017). Built MVPs with more than 20 founders. One of them, damava.com, is still running.
+
+Day to day, that means Ruby on Rails, PostgreSQL, TypeScript, React Native, Elixir and Python. I write about [Rails](https://studiozenkai.com/tags/rails/), [TypeScript](https://studiozenkai.com/tags/typescript/), [PostgreSQL](https://studiozenkai.com/tags/postgresql/) and [React Native](https://studiozenkai.com/tags/react-native/).
 
 Key lessons from life:
 

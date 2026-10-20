@@ -1,7 +1,7 @@
 +++
 date = "2025-11-03T12:00:00-00:00"
 title = "Rails, Legacy DBs and the 80ms timeout: the MAVEN sidecar"
-tags = ['personal', 'software', 'ruby']
+tags = ['personal', 'software', 'ruby', 'rails', 'typescript']
 +++
 
 Given my Github profile and published articles, it is clear my favorite programming language is Ruby. It is elegant, concise, and allows teams to ship features fast.

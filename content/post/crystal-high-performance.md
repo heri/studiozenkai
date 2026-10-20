@@ -1,7 +1,7 @@
 +++
 date = "2024-05-06T10:35:26-04:00"
 title = "Kemal: Performance for Rails Developers"
-tags = ['software', 'performance', 'ruby']
+tags = ['software', 'performance', 'ruby', 'rails', 'postgresql']
 +++
 
 Ruby is elegant, expressive, and gets the job done—most of the time. But for high traffic, your monolith feels like a mule dragging a cart uphill. Enter Crystal and the micro framework Kemal: a duo similar to Ruby’s syntax but has C-like performance. It’s a choice that promises speed, simplicity, and a dash of thrill.

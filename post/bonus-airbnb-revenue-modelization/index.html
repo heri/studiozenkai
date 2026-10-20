@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>How Does Airbnb Revenue Work? · Studio Zenkai</title>
+    <meta name="description" content="\[ \begin{aligned} R = N × OR × AR \end{aligned} \]Where:
+N is number of rentable nights per year (365 - maintenance days). You want maintenance days to be as …">
+    <link rel="canonical" href="https://studiozenkai.com/post/bonus-airbnb-revenue-modelization/">
+    <meta property="og:site_name" content="Studio Zenkai">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://studiozenkai.com/post/bonus-airbnb-revenue-modelization/">
+    <meta property="og:title" content="How Does Airbnb Revenue Work?">
+    <meta property="og:description" content="\[ \begin{aligned} R = N × OR × AR \end{aligned} \]Where:
+N is number of rentable nights per year (365 - maintenance days). You want maintenance days to be as …">
+    <meta property="og:image" content="https://studiozenkai.com/images/background-cover.jpg">
+    <meta property="article:published_time" content="2026-10-11T12:00:00&#43;00:00">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@heri">
+
+    <link rel="stylesheet" type="text/css" href="https://studiozenkai.com/css/uno.css" />
+    <link rel="stylesheet" type="text/css" href="https://studiozenkai.com/css/lightGallery.css" />
+
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <link rel="webmention" href="https://webmention.io/studiozenkai.com/webmention" />
+    <link rel="pingback" href="https://webmention.io/studiozenkai.com/xmlrpc" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://studiozenkai.com/js/main.min.js"></script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Heri Rakotomalala",
+            "url": "https://studiozenkai.com",
+            "sameAs": [
+            "https://github.com/heri"
+            ]
+        }
+        </script>
+</head>
+
+
+<body>
+  <div id="scriptHeader">
+    <span class="mobile btn-mobile-menu">
+            <i class="fa fa-bars btn-mobile-menu__icon"></i>
+            <i class="fa fa-times btn-mobile-close__icon hidden"> </i>
+    </span>
+    <header class="
+        
+            panel-cover panel-cover--collapsed
+        " >
+    <div class="panel-main">
+        <div class="panel-main__inner panel-inverted">
+            <div class="panel-main__content"> 
+                <h1 class="panel-cover__title panel-title">
+                    <a href="https://studiozenkai.com/"  title="link to homepage for Heri Rakotomalala">Studio Zenkai</a>
+                </h1>
+                <hr class="panel-cover__divider" />
+                <p class="panel-cover__description">Bold and Clear, without excess • Kaizen 改善 • With Purpose</p>
+                <hr class="panel-cover__divider panel-cover__divider--secondary" />
+                <p>Studio Zenkai is dedicated to the craft of programming, photography and living sustainably. <a href="https://studiozenkai.com/post/about-heri/">About me →</a>  </p>
+                <hr class="panel-cover__divider panel-cover__divider--secondary" />
+                <div class="navigation-wrapper">
+                    <nav class="cover-navigation cover-navigation--primary">
+                        <ul class="navigation">
+                            <li class="navigation__item"><a href="https://studiozenkai.com/post" title="link to Studio Zenkai blog" class="blog-button">Articles</a> </li>
+                            <li class="navigation__item"><a href="https://studiozenkai.com/projects/" title="link to Studio Zenkai projects" class="blog-button">Projects</a> </li>
+                            
+                            
+                       </ul>
+                    </nav> <nav class="cover-navigation navigation--social">
+    <ul class="navigation">
+
+        <li class="navigation__item">
+            <a href="https://twitter.com/heri" title="@heri on Twitter" rel="me nofollow"> <i
+                    class='fa fa-twitter'></i> <span class="label">Twitter</span> </a>
+        </li>
+
+        <li class="navigation__item">
+            <a href="https://github.com/heri" title="heri on github" rel="me authn nofollow"> <i
+                    class='fa fa-github'></i> <span class="label">Github</span> </a>
+        </li>
+
+        <li class="navigation__item">
+            <a href="https://www.instagram.com/heri_rakotomalala/" rel="nofollow" title="Heri on instagram"><i class="fa fa-instagram"></i><span
+                class="label">Instagram</span></a>
+        </li>
+
+        <li class="navigation__item">
+            <a href="mailto:heri@studiozenkai.com" title="Email" rel="nofollow"> <i
+                    class='fa fa-envelope-o'></i> <span class="label">Email</span> </a>
+        </li>
+    </ul>
+</nav>
+ </div>
+            </div>
+        </div>
+        <div class="panel-cover--overlay"></div>
+    </div>
+</header>
+</div>
+<noscript>
+    <style>
+        #scriptHeader {display:none;}
+        .navigation-wrapper{
+            display: block;
+            top: 0;
+        }
+    </style>
+
+    <header class="panel-cover panel-cover--collapsed" style="background-image: url()">
+        <div class="panel-main">
+            <div class="panel-main__inner panel-inverted">
+                <div class="panel-main__content"> 
+                    <h1 class="panel-cover__title panel-title">
+                        <a href="https://studiozenkai.com/"  title="link to homepage for Heri Rakotomalala">Studio Zenkai</a>
+                    </h1>
+                    <hr class="panel-cover__divider" />
+                    <p class="panel-cover__description">  Studio Zenkai is dedicated to the craft of programming, photography and living sustainably.  </p>
+                    <hr class="panel-cover__divider panel-cover__divider--secondary" />
+                    <div class="navigation-wrapper">
+                        <nav class="cover-navigation cover-navigation--primary">
+                            <ul class="navigation">
+                                <li class="navigation__item"><a href="https://studiozenkai.com/#blog" title="link to Studio Zenkai blog" class="blog-button">Blog</a> </li></br>
+                                <li class="navigation__item"><a href="https://studiozenkai.com/projects/" title="link to Studio Zenkai projects" class="blog-button">Projects</a> </li></br>
+                                
+                                
+                           </ul>
+                        </nav> <nav class="cover-navigation navigation--social">
+    <ul class="navigation">
+
+        <li class="navigation__item">
+            <a href="https://twitter.com/heri" title="@heri on Twitter" rel="me nofollow"> <i
+                    class='fa fa-twitter'></i> <span class="label">Twitter</span> </a>
+        </li>
+
+        <li class="navigation__item">
+            <a href="https://github.com/heri" title="heri on github" rel="me authn nofollow"> <i
+                    class='fa fa-github'></i> <span class="label">Github</span> </a>
+        </li>
+
+        <li class="navigation__item">
+            <a href="https://www.instagram.com/heri_rakotomalala/" rel="nofollow" title="Heri on instagram"><i class="fa fa-instagram"></i><span
+                class="label">Instagram</span></a>
+        </li>
+
+        <li class="navigation__item">
+            <a href="mailto:heri@studiozenkai.com" title="Email" rel="nofollow"> <i
+                    class='fa fa-envelope-o'></i> <span class="label">Email</span> </a>
+        </li>
+    </ul>
+</nav>
+ </div>
+                </div>
+            </div>
+            <div class="panel-cover--overlay"></div>
+        </div>
+    </header>
+</noscript>
+
+  <div class="content-wrapper">
+    <div class="content-wrapper__inner">
+      <div class="post">
+        <h1>How Does Airbnb Revenue Work?</h1>
+        <span class="post-date">Sun, Oct 11, 2026</span>
+        \[
+\begin{aligned}
+R = N × OR × AR
+\end{aligned}
+\]<p>Where:</p>
+<ul>
+<li>N is number of rentable nights per year (365 - maintenance days). You want maintenance days to be as low as possible, but not as much as lowering the customer experience. Start at 15 days reserved for upkeep and work your way down.</li>
+<li>OR is average Occupancy Rate. It was 0.8 during the pandemic but can be as low as 0.2 in low season (spring/fall)</li>
+<li>AR is Average Nightly rate, $250 in low season and up to $700 in high season</li>
+</ul>
+<p>Variables affecting revenue:</p>
+<ul>
+<li>Size: number of bedrooms and bathrooms is directly proportional to R</li>
+<li>Unicity: Revenue is divided if there are other properties with the same features</li>
+<li>Recency: Properties with modern amenities and design have higher revenues</li>
+<li>Presentation: Naming, Photography, Graphic Design, Copywriting should be done professionally.</li>
+<li>Location: Proximity to a high-volume tourism center boost revenues. This can be are a ski resort, a national park, a lake or a popular travel destination. The closer, the better.</li>
+<li>Amenities: Features like a hot tub, dock, bbq or boats increase AR.</li>
+<li>Marketing: Direct marketing, Social Media Leverage or repeat customers reducing dependence on Airbnb&rsquo;s algorithm.</li>
+<li>Pricing Strategy: Dynamic pricing, discounts, per person pricing, additional services. For example, if you have 3 bedrooms but if a group only need 2 beds, you can close the third bedroom and reduce total cost.</li>
+<li>Seasonality: High demand in summer/winter vs. off-season occupancy.</li>
+</ul>
+
+        <div class="post-tags">In <a href="https://studiozenkai.com/tags/airbnb/" >Airbnb</a>        <a href="https://studiozenkai.com/tags/entrepreneurship/" >Entrepreneurship</a>        </div>
+        <div id="sharing">
+    Like what you read ? Take a moment to like or share the post so others can read it too:
+    <ul>
+        <li>
+            <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fstudiozenkai.com%2fpost%2fbonus-airbnb-revenue-modelization%2f" class="facebook"
+                aria-label="share on Facebook" rel="nofollow">
+                <i class="fa fa-facebook"></i>
+            </a>
+        </li>
+        <li>
+            <a href="http://twitter.com/share?url=https%3a%2f%2fstudiozenkai.com%2fpost%2fbonus-airbnb-revenue-modelization%2f&text=How%20Does%20Airbnb%20Revenue%20Work%3f&via=heri"
+                class="twitter" aria-label="share on Twitter" rel="nofollow">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        <li>
+            <a href="mailto:?subject=Check%20out%20How%20Does%20Airbnb%20Revenue%20Work%3f.&body= Read more at https%3a%2f%2fstudiozenkai.com%2fpost%2fbonus-airbnb-revenue-modelization%2f"
+                class="twitter" aria-label="share on Email" rel="nofollow">
+                <i class="fa fa-envelope-o"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+<div class="sharing">
+
+    <p>© Heri Rakotomalala. All rights reserved. Handcrafted HTML, published with <a href="https://gohugo.io"
+            rel="nofollow">Hugo</a> and <a href="https://github.com/heri" rel="nofollow">Github</a>.</p>
+
+    <p>Heri Rakotomalala is an engineer working on small and innovative projects in Montréal. Originally from
+        Madagascar, he has lived 7 years in East Africa, studied Engineering and made friends in France, built a
+        community center in Esteli and is busy coding and taking care of kids in Montréal. This site covers spontaneous
+        thoughts, small and big projects as well as interests. Read <a
+            href="https://studiozenkai.com/post/about-heri/">more about Heri</a></p>
+
+</div>
+
+        
+      </div>
+    </div>
+  </div>
+
+</body>
+
+
+</html>

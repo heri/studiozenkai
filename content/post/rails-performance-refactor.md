@@ -2,7 +2,7 @@
 +++
 date = "2022-10-06T12:00:00-00:00"
 title = "Rails Performance exercise"
-tags = ['software', 'ruby', 'performance']
+tags = ['software', 'ruby', 'performance', 'rails']
 +++
 
 Here is a typical Rails endpoint:

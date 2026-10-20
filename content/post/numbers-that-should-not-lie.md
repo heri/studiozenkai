@@ -1,7 +1,7 @@
 +++
 date = "2026-05-26T08:00:00-04:00"
 title = "Numbers That Should Not Change After the Fact"
-tags = ['software', 'rails', 'mobile', 'ios']
+tags = ['software', 'rails', 'mobile', 'ios', 'typescript', 'react-native']
 draft = true
 +++
 

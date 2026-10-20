@@ -6,8 +6,22 @@
     <description>Recent content in Tags on Studio Zenkai</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 05 Sep 2026 09:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 11 Oct 2026 12:00:00 +0000</lastBuildDate>
     <atom:link href="https://studiozenkai.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Airbnb</title>
+      <link>https://studiozenkai.com/tags/airbnb/</link>
+      <pubDate>Sun, 11 Oct 2026 12:00:00 +0000</pubDate>
+      <guid>https://studiozenkai.com/tags/airbnb/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Entrepreneurship</title>
+      <link>https://studiozenkai.com/tags/entrepreneurship/</link>
+      <pubDate>Sun, 11 Oct 2026 12:00:00 +0000</pubDate>
+      <guid>https://studiozenkai.com/tags/entrepreneurship/</guid>
+      <description></description>
+    </item>
     <item>
       <title>AI</title>
       <link>https://studiozenkai.com/tags/ai/</link>
@@ -58,24 +72,10 @@
       <description></description>
     </item>
     <item>
-      <title>Airbnb</title>
-      <link>https://studiozenkai.com/tags/airbnb/</link>
-      <pubDate>Tue, 21 Jul 2026 09:00:00 -0400</pubDate>
-      <guid>https://studiozenkai.com/tags/airbnb/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Elixir</title>
       <link>https://studiozenkai.com/tags/elixir/</link>
       <pubDate>Tue, 21 Jul 2026 09:00:00 -0400</pubDate>
       <guid>https://studiozenkai.com/tags/elixir/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Entrepreneurship</title>
-      <link>https://studiozenkai.com/tags/entrepreneurship/</link>
-      <pubDate>Tue, 21 Jul 2026 09:00:00 -0400</pubDate>
-      <guid>https://studiozenkai.com/tags/entrepreneurship/</guid>
       <description></description>
     </item>
     <item>
@@ -149,10 +149,24 @@
       <description></description>
     </item>
     <item>
+      <title>Rails</title>
+      <link>https://studiozenkai.com/tags/rails/</link>
+      <pubDate>Mon, 03 Nov 2025 12:00:00 +0000</pubDate>
+      <guid>https://studiozenkai.com/tags/rails/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Ruby</title>
       <link>https://studiozenkai.com/tags/ruby/</link>
       <pubDate>Mon, 03 Nov 2025 12:00:00 +0000</pubDate>
       <guid>https://studiozenkai.com/tags/ruby/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Typescript</title>
+      <link>https://studiozenkai.com/tags/typescript/</link>
+      <pubDate>Mon, 03 Nov 2025 12:00:00 +0000</pubDate>
+      <guid>https://studiozenkai.com/tags/typescript/</guid>
       <description></description>
     </item>
     <item>
@@ -219,6 +233,20 @@
       <description></description>
     </item>
     <item>
+      <title>Postgresql</title>
+      <link>https://studiozenkai.com/tags/postgresql/</link>
+      <pubDate>Tue, 10 Sep 2024 12:00:00 +0000</pubDate>
+      <guid>https://studiozenkai.com/tags/postgresql/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>React-Native</title>
+      <link>https://studiozenkai.com/tags/react-native/</link>
+      <pubDate>Tue, 10 Sep 2024 12:00:00 +0000</pubDate>
+      <guid>https://studiozenkai.com/tags/react-native/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Performance</title>
       <link>https://studiozenkai.com/tags/performance/</link>
       <pubDate>Fri, 09 Aug 2024 12:00:00 +0000</pubDate>
@@ -230,13 +258,6 @@
       <link>https://studiozenkai.com/tags/rust/</link>
       <pubDate>Mon, 04 Mar 2024 06:00:00 -0400</pubDate>
       <guid>https://studiozenkai.com/tags/rust/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Typescript</title>
-      <link>https://studiozenkai.com/tags/typescript/</link>
-      <pubDate>Tue, 02 Jan 2024 12:00:00 +0000</pubDate>
-      <guid>https://studiozenkai.com/tags/typescript/</guid>
       <description></description>
     </item>
     <item>

@@ -2,7 +2,7 @@
 +++
 date = "2023-08-04T12:00:00-00:00"
 title = "Open Redirects in Rails"
-tags = ['software', 'ruby', 'security']
+tags = ['software', 'ruby', 'security', 'rails']
 +++
 
 Ruby On Rails makes things easy. Sometimes, too easy. That’s the problem with `redirect_to params[:url]`.

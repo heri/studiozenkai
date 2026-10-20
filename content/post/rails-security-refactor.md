@@ -2,7 +2,7 @@
 +++
 date = "2023-10-06T12:00:00-00:00"
 title = "Securing a Rails endpoint"
-tags = ['software', 'ruby', 'security']
+tags = ['software', 'ruby', 'security', 'rails']
 +++
 
 Here is a typical Rails endpoint:

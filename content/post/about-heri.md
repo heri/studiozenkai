@@ -1,7 +1,7 @@
 +++
 date = "2024-09-10T12:00:00-00:00"
 title = "About Heri"
-tags = ['personal', 'montréal', 'career', 'software', 'photography', 'art']
+tags = ['personal', 'montréal', 'career', 'software', 'photography', 'art', 'rails', 'typescript', 'postgresql', 'react-native']
 +++
 
 
@@ -22,6 +22,17 @@ Key facts:
 * Maintains and operates [a chalet on Airbnb](https://studiozenkai.com/post/airbnb-vacation-home/), deep in Québec countryside. I build docks and Adirondack chairs, chase away beavers and mice, [have fun with the kids](https://studiozenkai.com/post/chalet-life/) and can tell you the minute differences between bedsheets from Costco or Ikea, or 7 reasons why Dawn is better.
 
 So as you can see, I am comfortable in deep Quebec or France countryside, in a hacking space or in a neighorhood hip hop event. But due to my history, I am somehow allergic to alcohol (or at least at the level they are consumed in Western countries), debt and social norms.
+
+## Software work
+
+What I work with: Ruby on Rails, PostgreSQL, Redis, TypeScript, React and React Native, Elixir/Phoenix, Python. I write about [Rails](https://studiozenkai.com/tags/rails/), [TypeScript](https://studiozenkai.com/tags/typescript/), [PostgreSQL](https://studiozenkai.com/tags/postgresql/) and [React Native](https://studiozenkai.com/tags/react-native/).
+
+* **Lead Software Engineer, Nasdaq Private Market** (remote, from 2024). A trading platform for private-company stock. Cut average API response times on holdings and order systems from 30 seconds to 400ms. Rails, PostgreSQL, Redis, React.
+* **Senior Software Engineer, Klue** (remote, 2021 to 2024). Sped up the top five endpoints of the main Rails app by 210% through refactoring, async job redesign and PostgreSQL tuning. Led the Slack, Teams and Salesforce integrations. Rails 7, TypeScript.
+* **Senior Engineer, Decathlon** (remote, 2019 to 2021). Grew the open Sport Places API from 60,000 to 1.3 million places across 22 countries. Team lead and product owner within 7 months. Rails 6, Python, GCP.
+* **Lead Full-Stack Developer, Playground** (Montréal, 2017 to 2019). Two Rails applications for Canada's biggest venue of its kind: a high-volume player API, about 1.2 million daily sessions from external webhooks, data pipelines and executive reporting. Rails, MySQL, SQL Server, Redis, Sidekiq.
+* **Ruby Engineer and Consultant, MadMedia** (Montréal, 2012 to 2017). Built MVPs with more than 20 founders, including damava.com. Rails, React, Node.js.
+* **My own products:** [My Challenge Coin](https://mychallengecoin.app) and [CastorOS](https://castoros.app), both on the App Store, with mobile apps in React Native and TypeScript. See [projects](https://studiozenkai.com/projects/).
 
 Key lessons from life:
 

@@ -23,13 +23,14 @@
                 <hr class="panel-cover__divider" />
                 <p class="panel-cover__description">Bold and Clear, without excess • Kaizen 改善 • With Purpose</p>
                 <hr class="panel-cover__divider panel-cover__divider--secondary" />
-                <p>Studio Zenkai is dedicated to the craft of programming, photography and living sustainably. <a href="https://studiozenkai.com/post/about-heri/">About me →</a>  </p>
+                <p>Studio Zenkai is dedicated to the craft of programming, photography and living sustainably. <a class="about-link" href="https://studiozenkai.com/post/about-heri/">About me →</a>  </p>
                 <hr class="panel-cover__divider panel-cover__divider--secondary" />
                 <div class="navigation-wrapper">
                     <nav class="cover-navigation cover-navigation--primary">
                         <ul class="navigation">
                             <li class="navigation__item"><a href="{{ .Site.BaseURL }}post" title="link to {{ .Site.Title }} blog" class="blog-button">Articles</a> </li>
                             <li class="navigation__item"><a href="{{ .Site.BaseURL }}projects/" title="link to {{ .Site.Title }} projects" class="blog-button">Projects</a> </li>
+                            <li class="navigation__item"><a href="{{ .Site.BaseURL }}post/about-heri/" title="about {{ .Site.Params.author }}" class="blog-button">About</a> </li>
                             {{ if .Site.Params.cv }}</br><li class="navigation__item"><a href="{{ .Site.Params.cv  }}" title="link to my CV " class="blog-button">CV</a> </li></br> {{ end }}
                             {{ if .Site.Params.legalnotice }}<li class="navigation__item"><a href="{{ .Site.Params.legalnotice  }}" title="link to the legal notice " class="blog-button">Legal notice</a> </li></br> {{ end }}
                        </ul>
@@ -65,6 +66,7 @@
                             <ul class="navigation">
                                 <li class="navigation__item"><a href="{{ .Site.BaseURL }}#blog" title="link to {{ .Site.Title }} blog" class="blog-button">Blog</a> </li></br>
                                 <li class="navigation__item"><a href="{{ .Site.BaseURL }}projects/" title="link to {{ .Site.Title }} projects" class="blog-button">Projects</a> </li></br>
+                                <li class="navigation__item"><a href="{{ .Site.BaseURL }}post/about-heri/" title="about {{ .Site.Params.author }}" class="blog-button">About</a> </li></br>
                                 {{ if .Site.Params.cv }}<li class="navigation__item"><a href="{{ .Site.Params.cv  }}" title="link to my CV " class="blog-button">CV</a> </li></br> {{ end }}
                                 {{ if .Site.Params.legalnotice }}<li class="navigation__item"><a href="{{ .Site.Params.legalnotice  }}" title="link to the legal notice " class="blog-button">Legal notice</a> </li></br> {{ end }}
                            </ul>

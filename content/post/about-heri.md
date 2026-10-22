@@ -1,6 +1,7 @@
 +++
 date = "2024-09-10T12:00:00-00:00"
 title = "About Heri"
+description = "Heri Rakotomalala is an engineer and photographer in Montréal. He builds CastorOS and My Challenge Coin and helps teams take vibe-coded apps to production."
 tags = ['personal', 'montréal', 'career', 'software', 'photography', 'art', 'rails', 'typescript', 'postgresql', 'react-native']
 +++
 

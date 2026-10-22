@@ -10,7 +10,7 @@
 
     {{- /* Description: front matter first, then the post summary, then the site description. */}}
     {{- $desc := .Site.Params.description }}
-    {{- if .Description }}{{ $desc = .Description }}{{ else if and .IsPage .Summary }}{{ $desc = .Summary | plainify | htmlUnescape | truncate 160 }}{{ end }}
+    {{- if .Description }}{{ $desc = .Description }}{{ else if and .IsPage .Summary }}{{ $desc = .Summary | plainify | htmlUnescape | replaceRE `\s+` " " | strings.TrimSpace | truncate 160 }}{{ end }}
     <meta name="description" content="{{ $desc }}">
     <link rel="canonical" href="{{ .Permalink }}">
 
@@ -56,4 +56,11 @@
             ]
         }
         </script>
+    {{- /* Article-level structured data for blog posts: author, dates, topics. */}}
+    {{- if and .IsPage (eq .Section "post") }}
+    {{- $author := dict "@type" "Person" "name" .Site.Params.author "url" "https://studiozenkai.com/post/about-heri/" }}
+    {{- $ld := dict "@context" "https://schema.org" "@type" "BlogPosting" "headline" .Title "description" $desc "url" .Permalink "mainEntityOfPage" .Permalink "image" $img "inLanguage" "en" "author" $author "publisher" $author "datePublished" (.Date.Format "2006-01-02T15:04:05-07:00") "dateModified" (.Lastmod.Format "2006-01-02T15:04:05-07:00") }}
+    {{- with .Params.tags }}{{ $ld = merge $ld (dict "keywords" .) }}{{ end }}
+    <script type="application/ld+json">{{ $ld | jsonify | safeJS }}</script>
+    {{- end }}
 </head>

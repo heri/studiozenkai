@@ -272,6 +272,14 @@ footer a{font-weight:600}
    "mainEntity": [
     {
      "@type": "Question",
+     "name": "Our app is half-built and stuck. Can you help?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Stuck usually looks like one of a few things: a bug the AI keeps \"fixing\" without fixing, a new feature that breaks two old ones, a deployment that won't work, or code nobody on the team can follow anymore. The audit tells you what is actually blocking you and what to do first. Hardening then gets you unstuck: I fix the blockers in your own code and accounts, and leave the app in a state your team can keep building on."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Is vibe coding safe for production?",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -510,6 +518,8 @@ footer a{font-weight:600}
 
 <section class="card" id="faq" aria-labelledby="faq-h">
   <h2 id="faq-h">Frequently asked questions</h2>
+  <details><summary>Our app is half-built and stuck. Can you help?</summary>
+    <p>Yes. Stuck usually looks like one of a few things: a bug the AI keeps "fixing" without fixing, a new feature that breaks two old ones, a deployment that won't work, or code nobody on the team can follow anymore. The audit tells you what is actually blocking you and what to do first. Hardening then gets you unstuck: I fix the blockers in your own code and accounts, and leave the app in a state your team can keep building on.</p></details>
   <details><summary>Is vibe coding safe for production?</summary>
     <p>It can be, for the right app. Internal tools and early products built with AI can run safely in production once the basics are in place: proper sign-in and permissions, secrets kept out of the code, backups, monitoring and tests. The risk comes from skipping that layer, which AI tools rarely add on their own. The checklist above covers it.</p></details>
   <details><summary>How much does a vibe code audit cost?</summary>

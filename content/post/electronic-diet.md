@@ -12,7 +12,7 @@ Not just for the body, but for the mind too. Exercise is not just sweating or li
 
 You win when you push past the point where others quit.
 
-First is physical exercise. You can either do cardio, which is lighter activity for long periods of time, or inversely intensity training. I mix trail running, martial arts, weights, cold showers, hike and [serious handyman work](https://studiozenkai.com/post/lessons-from-vacation-property-airbnb/). Physical exercise not only makes you look good, it brings a range of proven health and mental benefits. Skip it, and you’re trading years of life for years of laziness.
+First is physical exercise. You can either do cardio, which is lighter activity for long periods of time, or inversely intensity training. I mix trail running, martial arts, weights, cold showers, hike and [serious handyman work](https://studiozenkai.com/post/airbnb-the-good-the-bad-the-profitable/). Physical exercise not only makes you look good, it brings a range of proven health and mental benefits. Skip it, and you’re trading years of life for years of laziness.
 
 Second form is diet. Eating less. Eating clean. [Or eating at defined times](https://dailyhealthpoints.wordpress.com/2017/01/07/improving-metabolism-with-intermittent-fasting/) -- or not all. In 2015, I did not eat any type of artificial sugar or processed foods. It was a challenge ! I have friends who stopped drinking alcohol for months. Every 3 months, I do not eat for a whole weekend. Why? Because in many ways, modern life encourages us towards over-eating, and also pushes us towards ultra processed foods, stuffing us like geese at a foie gras factory. Severely cutting your diet taking back control. There are also multiple proven health benefits.
 

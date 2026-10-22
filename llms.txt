@@ -1,0 +1,37 @@
+# Studio Zenkai
+
+> Studio Zenkai is the site of Heri Rakotomalala, a software engineer and photographer based in Montréal, Quebec, Canada. He builds his own products (CastorOS and My Challenge Coin), runs speed experiments in Rust and Crystal, and offers consultancy that takes vibe-coded apps (built with Lovable, Bolt, Replit, Cursor, Claude Code or GitHub Copilot) to production: audits, hardening and ongoing care. He works in English and French with clients across Canada and the US.
+
+## Consultancy: vibe-coded app to production
+
+For teams whose AI-built app works but isn't ready for employees or customers to depend on, including apps that are half-built and stuck.
+
+- [From vibe-coded to production-ready](https://studiozenkai.com/vibe-coded-to-production-ready/): the service page, with an interactive 12-point readiness checklist, prices and FAQ.
+- Production-readiness audit: $2,000 USD with a report in 2 business days (side projects and internal tools), or $4,000 USD in 4 business days (critical apps handling sensitive customer data or high traffic). Fixed price, credited toward hardening.
+- Hardening: fixes the gaps found in the audit (sign-in and permissions, backups, monitoring, secure hosting, tests) in the client's own GitHub and hosting accounts. Scoped from the audit, fixed price per milestone.
+- Ongoing care: from $2,000 USD per month (next-business-day reply, up to 8 hours) or from $4,000 USD per month (reply within 4 business hours, up to 20 hours). Cancel any time.
+- Availability: two clients at a time.
+- Contact: book a 20-minute call at https://cal.com/heri-rakotomalala/20min or email heri@studiozenkai.com.
+
+## About
+
+- [About Heri](https://studiozenkai.com/post/about-heri/): background, software work and work history (Nasdaq Private Market, Klue, Decathlon, Playground, MadMedia).
+- [Projects](https://studiozenkai.com/projects/): CastorOS (Elixir/Phoenix, React Native and TypeScript), My Challenge Coin (React Native and TypeScript), L'Étoile Rouge chalet, photography.
+- Stack: Ruby on Rails, PostgreSQL, TypeScript, React Native, Elixir/Phoenix, Python.
+
+## Writing
+
+- [The Vibe-Coded App Checklist: 12 Questions Before Your Team Depends On It](https://studiozenkai.com/post/vibe-coded-app-checklist/)
+- [Teaching an AI to Run My Chalet While I'm at the Beach](https://studiozenkai.com/post/castoros-ai-butler-arthur/)
+- [Stepping out of the Unix Shell: Automating Sage 50 with C#](https://studiozenkai.com/post/unix-shell-csharp/)
+- [Rails, Legacy DBs and the 80ms timeout: the MAVEN sidecar](https://studiozenkai.com/post/maven-fastify-ruby/)
+- [Securing a Rails endpoint](https://studiozenkai.com/post/rails-security-refactor/)
+- [TypeScript for Ruby developers](https://studiozenkai.com/post/typescript-for-ruby-developers/)
+- [Kemal: Performance for Rails Developers](https://studiozenkai.com/post/crystal-high-performance/)
+- Topics: [Rails](https://studiozenkai.com/tags/rails/), [TypeScript](https://studiozenkai.com/tags/typescript/), [PostgreSQL](https://studiozenkai.com/tags/postgresql/), [security](https://studiozenkai.com/tags/security/), [performance](https://studiozenkai.com/tags/performance/), [AI](https://studiozenkai.com/tags/ai/)
+
+## Optional
+
+- [All articles](https://studiozenkai.com/post/)
+- [Sitemap](https://studiozenkai.com/sitemap.xml)
+- [GitHub](https://github.com/heri)

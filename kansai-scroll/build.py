@@ -478,6 +478,29 @@ def render_end(trip, count):
                    esc(note), link_html)
 
 
+def head_meta(trip):
+    """Description, canonical and share tags, from the optional url,
+    page_description and og_image keys in trip.toml."""
+    url = trip.get("url")
+    if not url:
+        return ""
+    title = esc(trip.get("title", "A Scroll"))
+    desc = esc(trip.get("page_description", trip.get("subtitle", "")))
+    tags = ['<meta name="description" content="%s">' % desc,
+            '<link rel="canonical" href="%s">' % esc(url),
+            '<meta property="og:site_name" content="Studio Zenkai">',
+            '<meta property="og:type" content="website">',
+            '<meta property="og:url" content="%s">' % esc(url),
+            '<meta property="og:title" content="%s">' % title,
+            '<meta property="og:description" content="%s">' % desc]
+    if trip.get("og_image"):
+        tags += ['<meta property="og:image" content="%s">' % esc(trip["og_image"]),
+                 '<meta property="og:image:width" content="1200">',
+                 '<meta property="og:image:height" content="630">',
+                 '<meta name="twitter:card" content="summary_large_image">']
+    return "\n".join(tags) + "\n"
+
+
 def render_page(trip, body):
     families = "&family=".join(FONTS[r][0] for r in ("mincho", "serif", "mono"))
     return """<!doctype html>
@@ -486,7 +509,7 @@ def render_page(trip, body):
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>%s</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
+%s<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=%s&display=swap" rel="stylesheet">
 <style>%s</style>
@@ -500,7 +523,7 @@ def render_page(trip, body):
 <button class="nav" id="next" aria-label="Forward">›</button>
 <script>%s</script>
 </body>
-</html>""" % (esc(trip.get("title", "A Scroll")), families, build_css(), body, PAGE_JS)
+</html>""" % (esc(trip.get("title", "A Scroll")), head_meta(trip), families, build_css(), body, PAGE_JS)
 
 
 PAGE_JS = r"""

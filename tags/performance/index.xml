@@ -69,7 +69,7 @@
       <link>https://studiozenkai.com/post/ruby-performance-checklist/</link>
       <pubDate>Mon, 08 May 2017 10:35:26 -0400</pubDate>
       <guid>https://studiozenkai.com/post/ruby-performance-checklist/</guid>
-      <description>&lt;p&gt;I shipped many applications, using a variety of frameworks, through &lt;a href=&#34;http://studiozenkai.com/challenge/&#34;&gt;my current 1 year challenge&lt;/a&gt; or startups. Ruby issues include low performance, such as servers needing more RAM, not able to sustain large traffic, or slow rendering. Since this is a recurring issue, here is a checklist to help developers get their Ruby app faster:&lt;/p&gt;</description>
+      <description>&lt;p&gt;I shipped many applications, using a variety of frameworks, through &lt;a href=&#34;https://studiozenkai.com/challenge/&#34;&gt;my current 1 year challenge&lt;/a&gt; or startups. Ruby issues include low performance, such as servers needing more RAM, not able to sustain large traffic, or slow rendering. Since this is a recurring issue, here is a checklist to help developers get their Ruby app faster:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Why my next laptop won&#39;t be an Apple</title>
@@ -84,13 +84,6 @@
       <pubDate>Sun, 17 Apr 2016 12:55:51 -0400</pubDate>
       <guid>https://studiozenkai.com/post/programming/</guid>
       <description>&lt;p&gt;In six months I have shipped many apps, as an entrepreneur or as a freelancer. I have also contributed to open source projects and advised other projects. Yet I’m educated as an electrical engineer, not as a software engineer and consider myself largely self-taught in the area of programming.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Playbook</title>
-      <link>https://studiozenkai.com/post/playbook/</link>
-      <pubDate>Fri, 15 Jan 2016 12:22:27 -0400</pubDate>
-      <guid>https://studiozenkai.com/post/playbook/</guid>
-      <description>&lt;p&gt;Bonjour!&lt;/p&gt;&#xA;&lt;p&gt;Nous offrons &lt;em&gt;une expertise technique pour un résultat de qualité&lt;/em&gt; dans le développement de plateformes transactionnelles, de financement, de médias:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Cuda Cores Ranking for Machine learning</title>

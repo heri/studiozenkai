@@ -55,7 +55,7 @@
       <link>https://studiozenkai.com/post/balancing-developer-happinness-and-customer-success/</link>
       <pubDate>Tue, 12 Nov 2024 12:00:00 +0000</pubDate>
       <guid>https://studiozenkai.com/post/balancing-developer-happinness-and-customer-success/</guid>
-      <description>&lt;p&gt;Your most valuable customer is frustrated because features are late. Meanwhile, your engineering team is drowning in overtime, and attrition is climbing. How do you keep customers happy without burning out your team?&lt;/p&gt;&#xA;&lt;p&gt;I have already written about the &lt;a href=&#34;https://studiozenkai.com/post/understanding-engineering-managers/i&#34;&gt;value of an Engineering Manager&lt;/a&gt;, for a single. But what happens for a whole organization?&lt;/p&gt;&#xA;&lt;p&gt;To tackle this, I designed the &lt;strong&gt;Weighted Customer Happiness&lt;/strong&gt; (WCH) and the &lt;strong&gt;Customer-Developer Delivery Index&lt;/strong&gt; (CDDI) — two metrics designed to balance customer priorities and developer well-being.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Your most valuable customer is frustrated because features are late. Meanwhile, your engineering team is drowning in overtime, and attrition is climbing. How do you keep customers happy without burning out your team?&lt;/p&gt;&#xA;&lt;p&gt;I have already written about the &lt;a href=&#34;https://studiozenkai.com/post/understanding-engineering-managers/&#34;&gt;value of an Engineering Manager&lt;/a&gt;, for a single. But what happens for a whole organization?&lt;/p&gt;&#xA;&lt;p&gt;To tackle this, I designed the &lt;strong&gt;Weighted Customer Happiness&lt;/strong&gt; (WCH) and the &lt;strong&gt;Customer-Developer Delivery Index&lt;/strong&gt; (CDDI) — two metrics designed to balance customer priorities and developer well-being.&lt;/p&gt;</description>
     </item>
     <item>
       <title>About Heri</title>
@@ -209,7 +209,7 @@
       <link>https://studiozenkai.com/post/ruby-performance-checklist/</link>
       <pubDate>Mon, 08 May 2017 10:35:26 -0400</pubDate>
       <guid>https://studiozenkai.com/post/ruby-performance-checklist/</guid>
-      <description>&lt;p&gt;I shipped many applications, using a variety of frameworks, through &lt;a href=&#34;http://studiozenkai.com/challenge/&#34;&gt;my current 1 year challenge&lt;/a&gt; or startups. Ruby issues include low performance, such as servers needing more RAM, not able to sustain large traffic, or slow rendering. Since this is a recurring issue, here is a checklist to help developers get their Ruby app faster:&lt;/p&gt;</description>
+      <description>&lt;p&gt;I shipped many applications, using a variety of frameworks, through &lt;a href=&#34;https://studiozenkai.com/challenge/&#34;&gt;my current 1 year challenge&lt;/a&gt; or startups. Ruby issues include low performance, such as servers needing more RAM, not able to sustain large traffic, or slow rendering. Since this is a recurring issue, here is a checklist to help developers get their Ruby app faster:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Why my next laptop won&#39;t be an Apple</title>
@@ -231,13 +231,6 @@
       <pubDate>Sun, 17 Apr 2016 12:55:51 -0400</pubDate>
       <guid>https://studiozenkai.com/post/programming/</guid>
       <description>&lt;p&gt;In six months I have shipped many apps, as an entrepreneur or as a freelancer. I have also contributed to open source projects and advised other projects. Yet I’m educated as an electrical engineer, not as a software engineer and consider myself largely self-taught in the area of programming.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Playbook</title>
-      <link>https://studiozenkai.com/post/playbook/</link>
-      <pubDate>Fri, 15 Jan 2016 12:22:27 -0400</pubDate>
-      <guid>https://studiozenkai.com/post/playbook/</guid>
-      <description>&lt;p&gt;Bonjour!&lt;/p&gt;&#xA;&lt;p&gt;Nous offrons &lt;em&gt;une expertise technique pour un résultat de qualité&lt;/em&gt; dans le développement de plateformes transactionnelles, de financement, de médias:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Cuda Cores Ranking for Machine learning</title>

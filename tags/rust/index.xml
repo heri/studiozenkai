@@ -34,7 +34,7 @@
       <link>https://studiozenkai.com/post/ruby-performance-checklist/</link>
       <pubDate>Mon, 08 May 2017 10:35:26 -0400</pubDate>
       <guid>https://studiozenkai.com/post/ruby-performance-checklist/</guid>
-      <description>&lt;p&gt;I shipped many applications, using a variety of frameworks, through &lt;a href=&#34;http://studiozenkai.com/challenge/&#34;&gt;my current 1 year challenge&lt;/a&gt; or startups. Ruby issues include low performance, such as servers needing more RAM, not able to sustain large traffic, or slow rendering. Since this is a recurring issue, here is a checklist to help developers get their Ruby app faster:&lt;/p&gt;</description>
+      <description>&lt;p&gt;I shipped many applications, using a variety of frameworks, through &lt;a href=&#34;https://studiozenkai.com/challenge/&#34;&gt;my current 1 year challenge&lt;/a&gt; or startups. Ruby issues include low performance, such as servers needing more RAM, not able to sustain large traffic, or slow rendering. Since this is a recurring issue, here is a checklist to help developers get their Ruby app faster:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

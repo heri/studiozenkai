@@ -13,6 +13,10 @@
     {{- if .Description }}{{ $desc = .Description }}{{ else if and .IsPage .Summary }}{{ $desc = .Summary | plainify | htmlUnescape | replaceRE `\s+` " " | strings.TrimSpace | truncate 160 }}{{ end }}
     <meta name="description" content="{{ $desc }}">
     <link rel="canonical" href="{{ .Permalink }}">
+    {{- /* Tag pages with a single post are too thin to index; let crawlers follow through to the post. */}}
+    {{- if and (eq .Kind "term") (lt (len .Pages) 2) }}
+    <meta name="robots" content="noindex, follow">
+    {{- end }}
 
     {{- /* Share image: front matter `image`, then the first image in the post, then the site cover. */}}
     {{- $img := partial "share-image.html" . }}

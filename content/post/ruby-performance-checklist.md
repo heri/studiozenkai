@@ -4,7 +4,7 @@ title = "Ruby Performance checklist"
 tags = ['software', 'ruby', 'rust', 'performance', 'rails', 'postgresql']
 +++
 
-I shipped many applications, using a variety of frameworks, through [my current 1 year challenge](http://studiozenkai.com/challenge/) or startups. Ruby issues include low performance, such as servers needing more RAM, not able to sustain large traffic, or slow rendering. Since this is a recurring issue, here is a checklist to help developers get their Ruby app faster:
+I shipped many applications, using a variety of frameworks, through [my current 1 year challenge](/challenge/) or startups. Ruby issues include low performance, such as servers needing more RAM, not able to sustain large traffic, or slow rendering. Since this is a recurring issue, here is a checklist to help developers get their Ruby app faster:
 <!--more-->
 ## Code complexity
 

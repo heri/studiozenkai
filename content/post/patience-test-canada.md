@@ -90,6 +90,6 @@ To each its own.
 For me, I have sent since then an invoice from the electricity company. The company is owned by the government of Québec, and I guess they must have heard of it. It is now late March and I do hope I will get the card before I move out 1st of July.
 ### Notes
 
-[1] See [previous post on bots](http://studiozenkai.com/post/bots/) to read about machine learning.
+[1] See [previous post on bots](/post/bots/) to read about machine learning.
 
 [2] Don't mistake me, Canada and Québec are amazing countries. _Qui aîme bien chatie bien_.

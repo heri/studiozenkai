@@ -8,6 +8,11 @@ end_note = "{count} cards of perhaps one hundred. The rest of the scroll is bein
 end_link_url = "https://studiozenkai.com/post/japan-does-not-shout/"
 end_link_text = "Read the full reflection"
 
+# Share and search metadata for the page <head> (optional).
+url = "https://studiozenkai.com/kansai/"
+page_description = "A family trip through Osaka, Kyoto, Nara and Tokyo in June 2026, told as a horizontally scrolling travelogue: one photo and a short note per stop."
+og_image = "https://studiozenkai.com/kansai-scroll/og.jpg"
+
 [cities]
 Osaka = "大阪"
 Kyoto = "京都"

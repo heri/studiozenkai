@@ -1,3 +1,9 @@
+---
+title: "A Kansai Scroll — generator"
+description: "The Python script behind A Kansai Scroll. A photo and a short text file per stop become one horizontally scrolling travelogue page."
+image: "https://studiozenkai.com/kansai-scroll/og.jpg"
+---
+
 # A Kansai Scroll — generator
 
 A static, horizontally-scrolling *meisho-e* travelogue, generated from plain text files.

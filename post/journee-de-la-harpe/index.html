@@ -24,6 +24,17 @@
         .about-link { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.3em; text-decoration-color: rgba(255, 255, 255, 0.5); white-space: nowrap; }
         .about-link:hover { text-decoration-color: #fff; }
          
+        .newsletter { margin: 2.5em 0 1.5em; padding: 1.5em 1.6em; border: 1px solid #E5E5E5; border-radius: 8px; background: #FAFAFA; }
+        .newsletter h3 { margin: 0 0 .4em; padding: 0; text-indent: 0; text-align: left; font-family: "Ubuntu", sans-serif; font-style: normal; font-weight: bold; font-size: 1.3em; line-height: 1.3; color: #333; }
+        .newsletter p { font-size: 1em; }
+        .newsletter p { margin: 0 0 1em; line-height: 1.5; }
+        .newsletter__form { display: flex; flex-wrap: wrap; gap: .6em; margin: 0; }
+        .newsletter__form input { flex: 1 1 14em; min-width: 0; padding: .7em .9em; font: inherit; font-size: 1em; color: #333; background: #FFF; border: 1px solid #CCC; border-radius: 6px; }
+        .newsletter__form input:focus { outline: 2px solid #5BA4E5; outline-offset: 1px; border-color: #5BA4E5; }
+        .newsletter__form button { flex: none; padding: .7em 1.4em; font: inherit; font-size: 1em; font-weight: bold; color: #FFF; background: #3D7FC1; border: 0; border-radius: 6px; cursor: pointer; }
+        .newsletter__form button:hover { background: #2F6AA6; }
+        .visually-hidden { position: absolute !important; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+         
         .panel-cover:not(.panel-cover--collapsed) .panel-main__inner { padding-bottom: 190px; }
         .latest { position: absolute; left: 0; right: 0; bottom: 0; z-index: 850; padding: 0 40px 28px; }
         .panel-cover--collapsed .latest { display: none; }
@@ -251,17 +262,21 @@
 </div>
 
 
+<section class="newsletter">
+  <h3>Get the next experiment in your inbox</h3>
+  <p>Benchmarks, drone-detection field notes, and Rails in production. Every two weeks, no spam.</p>
+  <form action="https://app.kit.com/forms/10087057/subscriptions" method="post" class="newsletter__form">
+    <label for="nl-email" class="visually-hidden">Email address</label>
+    <input id="nl-email" type="email" name="email_address" placeholder="you@example.com" autocomplete="email" required>
+    <button type="submit">Subscribe</button>
+  </form>
+</section>
+
+
 <div class="sharing">
-
     <p>© Heri Rakotomalala. All rights reserved. Handcrafted HTML, published with <a href="https://gohugo.io"
-            rel="nofollow">Hugo</a> and <a href="https://github.com/heri" rel="nofollow">Github</a>.</p>
-
-    <p>Heri Rakotomalala is an engineer working on small and innovative projects in Montréal. Originally from
-        Madagascar, he has lived 7 years in East Africa, studied Engineering and made friends in France, built a
-        community center in Esteli and is busy coding and taking care of kids in Montréal. This site covers spontaneous
-        thoughts, small and big projects as well as interests. Read <a
-            href="https://studiozenkai.com/post/about-heri/">more about Heri</a></p>
-
+            rel="nofollow">Hugo</a> and <a href="https://github.com/heri" rel="nofollow">Github</a>. <a
+            href="https://studiozenkai.com/post/about-heri/">Read more about Heri</a></p>
 </div>
 
         

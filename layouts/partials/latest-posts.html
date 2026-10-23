@@ -1,0 +1,19 @@
+{{- /* Homepage strip: the three most recent articles, so visitors see there is a blog. */ -}}
+{{- $posts := (where .Site.RegularPages "Section" "post").ByDate.Reverse | first 3 }}
+<div class="latest">
+    <div class="latest__head"><span>Latest articles</span><a href="{{ .Site.BaseURL }}post/">All articles →</a></div>
+    <div class="latest__grid">
+        {{- range $posts }}
+        {{- $desc := .Description }}
+        {{- if not $desc }}{{ $desc = .Summary | plainify | htmlUnescape | replaceRE `\s+` " " | strings.TrimSpace }}{{ end }}
+        <a class="latest__card" href="{{ .Permalink }}">
+            <span class="latest__thumb" style="background-image:url('{{ partial "share-image.html" . }}')"></span>
+            <span class="latest__text">
+                <span class="latest__date">{{ .Date.Format "02 Jan 2006" }}</span>
+                <span class="latest__title">{{ .Title }}</span>
+                <span class="latest__desc">{{ $desc | truncate 120 }}</span>
+            </span>
+        </a>
+        {{- end }}
+    </div>
+</div>

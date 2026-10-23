@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://studiozenkai.com/post/</loc>
     <lastmod>2026-10-11T12:00:00+00:00</lastmod>
@@ -308,5 +309,22 @@
     <loc>https://studiozenkai.com/projects/</loc>
   </url><url>
     <loc>https://studiozenkai.com/vibe-coded-to-production-ready/</loc>
+    <image:image><image:loc>https://studiozenkai.com/vibe-coded-to-production-ready/og.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://studiozenkai.com/kansai/</loc>
+    <image:image><image:loc>https://studiozenkai.com/kansai-scroll/og.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://studiozenkai.com/kansai-scroll/</loc>
+    <image:image><image:loc>https://studiozenkai.com/kansai-scroll/og.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://studiozenkai.com/painterly/</loc>
+    <image:image><image:loc>https://studiozenkai.com/painterly/og.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://studiozenkai.com/challenge/</loc>
+    <image:image><image:loc>https://studiozenkai.com/challenge/og.jpg</image:loc></image:image>
   </url>
 </urlset>

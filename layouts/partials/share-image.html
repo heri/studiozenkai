@@ -1,0 +1,6 @@
+{{- /* Returns a page's share image as an absolute URL: front matter `image`,
+       then the first image in the content, then the site cover. */ -}}
+{{- $img := "images/background-cover.jpg" -}}
+{{- with .Params.image }}{{ $img = . }}{{ else }}{{ if .IsPage }}{{ with findRESubmatch `<img[^>]+src="([^"]+)"` .Content 1 }}{{ $img = index (index . 0) 1 }}{{ end }}{{ end }}{{ end -}}
+{{- if not (hasPrefix $img "http") }}{{ $img = absURL $img }}{{ end -}}
+{{- return $img -}}

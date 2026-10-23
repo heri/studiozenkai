@@ -15,9 +15,7 @@
     <link rel="canonical" href="{{ .Permalink }}">
 
     {{- /* Share image: front matter `image`, then the first image in the post, then the site cover. */}}
-    {{- $img := "images/background-cover.jpg" }}
-    {{- with .Params.image }}{{ $img = . }}{{ else }}{{ if .IsPage }}{{ with findRESubmatch `<img[^>]+src="([^"]+)"` .Content 1 }}{{ $img = index (index . 0) 1 }}{{ end }}{{ end }}{{ end }}
-    {{- if not (hasPrefix $img "http") }}{{ $img = absURL $img }}{{ end }}
+    {{- $img := partial "share-image.html" . }}
     <meta property="og:site_name" content="{{ .Site.Title }}">
     <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
     <meta property="og:url" content="{{ .Permalink }}">
@@ -35,6 +33,30 @@
     <style>
         .about-link { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.3em; text-decoration-color: rgba(255, 255, 255, 0.5); white-space: nowrap; }
         .about-link:hover { text-decoration-color: #fff; }
+        /* Homepage "Latest articles" strip */
+        .panel-cover:not(.panel-cover--collapsed) .panel-main__inner { padding-bottom: 190px; }
+        .latest { position: absolute; left: 0; right: 0; bottom: 0; z-index: 850; padding: 0 40px 28px; }
+        .panel-cover--collapsed .latest { display: none; }
+        .latest__head { max-width: 1100px; margin: 0 auto 10px; display: flex; justify-content: space-between; align-items: baseline; color: #fff; font-size: .8em; letter-spacing: 2px; text-transform: uppercase; opacity: .9; }
+        .latest__head a { color: #fff; letter-spacing: 1px; text-transform: none; font-size: 1.05em; text-decoration: underline; text-underline-offset: .3em; text-decoration-color: rgba(255, 255, 255, .5); }
+        .latest__grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+        .latest__card { display: flex; gap: 12px; align-items: stretch; background: rgba(20, 22, 30, .55); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, .18); border-radius: 10px; padding: 10px; color: #fff; text-decoration: none; text-align: left; transition: background .2s; }
+        .latest__card:hover { background: rgba(20, 22, 30, .75); color: #fff; }
+        .latest__thumb { flex: none; width: 84px; border-radius: 6px; background-size: cover; background-position: center; }
+        .latest__text { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+        .latest__date { font-size: .7em; letter-spacing: 1px; text-transform: uppercase; opacity: .75; }
+        .latest__title { font-weight: bold; font-size: .95em; line-height: 1.25; }
+        .latest__desc { font-size: .78em; line-height: 1.35; opacity: .85; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        @media all and (max-width: 960px) {
+            .panel-cover:not(.panel-cover--collapsed) { overflow-y: auto; -webkit-overflow-scrolling: touch; }
+            .panel-cover:not(.panel-cover--collapsed) .panel-main__inner { padding-bottom: 0; }
+            .latest { position: static; padding: 22px 0 28px; }
+            .latest__grid { grid-template-columns: 1fr; gap: 8px; }
+            .latest__desc { display: none; }
+            .latest__thumb { width: 52px; height: 52px; }
+            /* The "About me" link already sits above; save room on small screens. */
+            .navigation__item--about { display: none; }
+        }
     </style>
 
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">

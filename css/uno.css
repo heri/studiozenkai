@@ -2788,8 +2788,13 @@ nav {
 
   .navigation__item {
     width: 100%;
-    margin: 0 0 .4em 0; } 
+    margin: 0 0 .4em 0; }
   }
+
+  /* The homepage cover is taller than the screen, so vertical centering leaves the title flush with the top. */
+  body.homepage .panel-main__inner {
+    padding-top: 60px;
+    padding-bottom: 40px; }
 }
 @media all and (max-width: 340px) {
   .panel-main__inner {

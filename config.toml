@@ -16,8 +16,8 @@ theme = "hugo-uno"
 
 [params]
   author = "Heri Rakotomalala"
-  Subtitle = "Software, photography, and sustainability articles by Heri"
-  description = "Studio Zenkai is dedicated to the craft of programming, photography and living sustainably."
+  Subtitle = "Software, photography, and side projects by Heri"
+  description = "Studio Zenkai is dedicated to the craft of software, photography, and curious side projects."
   math = true
   cusdis = false
   twitter = "heri"

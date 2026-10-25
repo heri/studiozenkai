@@ -32,6 +32,8 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@{{ .Site.Params.twitter }}">
 
+    <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ "index.xml" | absURL }}">
+
     <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/uno.css" />
     <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/lightGallery.css" />
     <style>

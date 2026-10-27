@@ -48,8 +48,10 @@ L10N = {
 }
 
 
-def build(year, month, out, R=None, lang="en"):
+def build(year, month, out, R=None, lang="en", compact=False):
     R = R or Rules(); T = L10N[lang]
+    # compact: tighter "Who does what" rows and section gaps, used only when the normal layout overflows
+    sgap, prh = (14, 20) if compact else (22, 24)
     def fmt(d): return f"{T['abbr'][d.month]} {d.day}" if lang == "en" else f"{d.day} {T['abbr'][d.month]}"
     W, H = letter; M = 40; gw = W - 2 * M
     INK = black; MUTED = HexColor("#555555"); LIGHT = HexColor("#e6e6e6"); OUT = HexColor("#f2f2f2")
@@ -116,7 +118,7 @@ def build(year, month, out, R=None, lang="en"):
                         c.drawString(x + 14, ty, ln); ty -= 8
         y -= rh
     c.setStrokeColor(INK); c.setLineWidth(1); c.rect(M, y, gw, gtop - y, stroke=1, fill=0)
-    y -= 22
+    y -= sgap
 
     c.setFillColor(INK); c.setFont("Helvetica-Bold", 12); c.drawString(M, y, T["who"]); y -= 8
     cx = [M + 8, M + 128, M + 228, M + 338, M + 428]
@@ -126,16 +128,16 @@ def build(year, month, out, R=None, lang="en"):
     first, last = month_bounds(year, month)
     for b in R.periods_overlapping(first, last):
         s, e = R.period_range(b)
-        ry = y - 24
-        c.setFillColor(SH[b % 2]); c.setStrokeColor(INK); c.setLineWidth(0.8); c.rect(M, ry, gw, 24, stroke=1, fill=1)
-        c.setFillColor(INK); c.setFont("Helvetica-Bold", 9.5); c.drawString(cx[0], ry + 8, f"{fmt(s)} - {fmt(e)}")
+        ry = y - prh
+        c.setFillColor(SH[b % 2]); c.setStrokeColor(INK); c.setLineWidth(0.8); c.rect(M, ry, gw, prh, stroke=1, fill=1)
+        c.setFillColor(INK); c.setFont("Helvetica-Bold", 9.5); c.drawString(cx[0], ry + prh / 2 - 4, f"{fmt(s)} - {fmt(e)}")
         for k, u in enumerate(R.team(b)):
             t = T["unit"] + " " + u; tw = c.stringWidth(t, "Helvetica-Bold", 10.5) + 14
             c.setFillColor(white); c.setStrokeColor(INK); c.setLineWidth(1)
-            c.roundRect(cx[k + 1], ry + 3.5, tw, 17, 3, stroke=1, fill=1)
-            c.setFillColor(INK); c.setFont("Helvetica-Bold", 10.5); c.drawString(cx[k + 1] + 7, ry + 8, t)
-        y -= 24
-    y -= 22
+            c.roundRect(cx[k + 1], ry + (prh - 17) / 2, tw, 17, 3, stroke=1, fill=1)
+            c.setFillColor(INK); c.setFont("Helvetica-Bold", 10.5); c.drawString(cx[k + 1] + 7, ry + prh / 2 - 4, t)
+        y -= prh
+    y -= sgap
 
     # definitions (left) + QR (right)
     qsize = 78; tx_w = gw - qsize - 20
@@ -149,6 +151,16 @@ def build(year, month, out, R=None, lang="en"):
         c.setFont("Helvetica", 9)
         for ln in lines: c.drawString(M + 85, y, ln); y -= 12
         y -= 3
+    # house rules, as one more row: only the first `print_count` fit; the website shows all of them
+    rules = R.living["items"][:R.living.get("print_count", 0)]
+    if rules:
+        c.setFont("Helvetica-Bold", 9); c.drawString(M, y, tr(R.living["title"], lang))
+        c.setFont("Helvetica", 9)
+        rw = (gw if y < qtop - qsize - 34 else tx_w) - 95   # full width once below the QR caption
+        for item in rules:
+            for i, ln in enumerate(simpleSplit(tr(item, lang), "Helvetica", 9, rw)):
+                if i == 0: c.drawString(M + 85, y, "•")
+                c.drawString(M + 95, y, ln); y -= 12
     url = T["url"].format(site=R.site_url)
     w = qr.QrCodeWidget(url); bx = w.getBounds(); bw, bh = bx[2] - bx[0], bx[3] - bx[1]
     dr = Drawing(qsize, qsize, transform=[qsize / bw, 0, 0, qsize / bh, 0, 0]); dr.add(w)
@@ -157,8 +169,11 @@ def build(year, month, out, R=None, lang="en"):
     c.setFont("Helvetica", 7.5); c.drawCentredString(qx + qsize / 2, qtop - qsize - 19, T["qr2"])
     c.setFont("Helvetica", 7); c.setFillColor(MUTED)
     c.drawRightString(W - M, qtop - qsize - 30, R.site_url.replace("https://", ""))
+    low = min(y, qtop - qsize - 30)   # lowest point drawn, so callers can check the page fits
+    if low < M and not compact:
+        return build(year, month, out, R, lang, compact=True)
     c.showPage(); c.save()
-    return min(y, qtop - qsize - 30)   # lowest point drawn, so callers can check the page fits
+    return low
 
 
 if __name__ == "__main__":

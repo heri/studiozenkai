@@ -33,7 +33,8 @@ config file, one generator, regenerate once a month.
 
 | Stream | When | Bins out | Bins back |
 |---|---|---|---|
-| Recycling + Compost | Every **Tuesday** | Monday 7pm | Tuesday 7pm |
+| Compost (shared brown bin) | Every **Tuesday** | Monday 7pm | Tuesday 7pm |
+| Recycling (**each unit has its own bin**) | Every **Tuesday** | Monday 7pm, by **every unit** | Tuesday 7pm, by every unit |
 | Garbage (black bin) | Every **other Friday**, anchored on **2026-10-02** (so Oct 16, Oct 30, Nov 13, Nov 27, Dec 11, Dec 25…) | Thursday 7pm | Friday 7pm |
 | Large items | 1st Friday of the month | Not part of the rotation; each owner handles their own | — |
 
@@ -81,7 +82,7 @@ Snow can fall in Nov or Apr; the Front & snow unit handles any snowfall in any m
 
 | Job | Short (printout) | All year | Fall | Winter | Spring/Summer |
 |---|---|---|---|---|---|
-| **Bins** | Garbage, recycling & compost | Take bins out at 7pm the evening before pickup, bring them back at 7pm on pickup day. Keep the garbage area clean: no bags on the ground, lids closed, never leave bags beside a full bin. | | | |
+| **Bins** | Garbage & compost (not recycling) | Take bins out at 7pm the evening before pickup, bring them back at 7pm on pickup day. Keep the garbage area clean: no bags on the ground, lids closed, never leave bags beside a full bin. | | | |
 | **Front & snow** | Front yard & entrance | | Rake front leaves (paper bags, out with compost). Shovel and salt if it snows. | After every snowfall: shovel the entrance and stairs, then salt. Keep bins reachable on pickup days. | Front garden maintenance: weeding, tidying, **watering**. |
 | **Back yard** | Back yard & garden | | Rake back-yard leaves. | No regular task (open question below). | Back garden maintenance: weeding, tidying, **watering**. |
 | **Repairs** | Small fixes | Main door lock and handle, light bulbs (entrance, hallways), stairs, other small fixes. Post what you fixed (and any receipt) in the WhatsApp group. | | | |
@@ -264,6 +265,17 @@ the result, so the website and iCal never go stale. Printing stays manual.
 ---
 
 ## Decisions log
+
+- Oct 2026: each unit has its **own recycling bin**. Recycling is no longer part of the Bins job: every unit puts its
+  own bin out Monday 7pm and back Tuesday 7pm (`collections.recycling.per_unit: true`). It shows on the shared calendar
+  as "Everyone: Recycling out/back" (hollow circle marker) and in **every** unit's iCal feed every week.
+- Oct 2026: **French everywhere** (Quebec; assume some residents don't read English). Every text in `config.json` is
+  `{"en", "fr"}`. The website has a Français/English switcher (default French unless the browser prefers English;
+  `?lang=fr|en`; remembered in localStorage). Outputs per language: `print/YYYY-MM.pdf` + `print/YYYY-MM-fr.pdf`
+  (French QR opens `?lang=fr`), `ics/unit-XXX.ics` + `ics/unit-XXX-fr.ics`.
+- Oct 2026: **"Vivre ensemble" house rules** in `config.json` (`living_together`). The website shows all items; the
+  PDF shows the first `print_count` (2) as a last row of "What each job covers". When a 6-week month would overflow,
+  `make_pdf.py` redraws in a compact layout (tighter "Who does what" rows and section gaps); day cells never shrink.
 
 - Weekly turns were rejected. With garbage every other Friday and 6 units, weekly turns meant 3 units would never do garbage.
   **2-week periods** give every unit both streams fairly.

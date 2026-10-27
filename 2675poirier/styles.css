@@ -138,6 +138,8 @@ details[open] summary::after { content: "–"; }
 .ans ul { margin: 0; padding-left: 18px; }
 .ans li { margin: 4px 0; }
 .ans h4 { margin: 12px 0 4px; font-size: 15px; }
+.rules { margin: 0; padding-left: 20px; }
+.rules li { margin: 6px 0; }
 .ans dl { margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: 4px 12px; font-size: 14px; }
 .ans dt { color: var(--muted); }
 .ans dd { margin: 0; }

@@ -58,6 +58,7 @@ class Rules:
         self.exceptions = cfg.get("exceptions", [])
         self.job_info = cfg["job_info"]
         self.everyone = cfg.get("everyone", {})
+        self.living = cfg.get("living_together", {"title": {}, "items": [], "print_count": 0})
         self.colors = cfg["unit_colors"]
 
     def _job_index(self, job):

@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-08T20:33:24+00:00",
+ "generated": "2026-10-27T14:57:54+00:00",
  "address": "2675 boul. Poirier",
  "site_url": "https://studiozenkai.com/2675poirier",
  "timezone": "America/Toronto",
@@ -143,6 +143,26 @@
    "en": "Recycling: every unit has its own bin. Put it out Monday at 7pm and bring it back in Tuesday at 7pm, every week.",
    "fr": "Recyclage : chaque unité a son propre bac. Sortez-le le lundi à 19 h et rentrez-le le mardi à 19 h, chaque semaine."
   }
+ },
+ "living_together": {
+  "title": {
+   "en": "Living together",
+   "fr": "Vivre ensemble"
+  },
+  "items": [
+   {
+    "en": "Shared spaces (stairs, yards, entrance) belong to everyone: leave them as you found them.",
+    "fr": "Les espaces communs (escaliers, cours, entrée) sont à tous : laissez-les comme vous les avez trouvés."
+   },
+   {
+    "en": "Respect each unit's privacy, peace and quiet, and property.",
+    "fr": "Respectez l’intimité, le calme et la propriété de chaque logement."
+   },
+   {
+    "en": "It only works if everyone does their part.",
+    "fr": "Ça fonctionne seulement si tout le monde contribue."
+   }
+  ]
  },
  "action_text": {
   "en": {

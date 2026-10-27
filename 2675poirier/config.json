@@ -29,6 +29,18 @@
       "fr": "Recyclage : chaque unité a son propre bac. Sortez-le le lundi à 19 h et rentrez-le le mardi à 19 h, chaque semaine."
     }
   },
+  "living_together": {
+    "title": { "en": "Living together", "fr": "Vivre ensemble" },
+    "print_count": 2,
+    "items": [
+      { "en": "Shared spaces (stairs, yards, entrance) belong to everyone: leave them as you found them.",
+        "fr": "Les espaces communs (escaliers, cours, entrée) sont à tous : laissez-les comme vous les avez trouvés." },
+      { "en": "Respect each unit's privacy, peace and quiet, and property.",
+        "fr": "Respectez l’intimité, le calme et la propriété de chaque logement." },
+      { "en": "It only works if everyone does their part.",
+        "fr": "Ça fonctionne seulement si tout le monde contribue." }
+    ]
+  },
   "job_info": {
     "Bins": {
       "name": { "en": "Bins", "fr": "Bacs" },

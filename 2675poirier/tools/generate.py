@@ -76,6 +76,7 @@ def build_schedule(R, months, first, last, generated):
         "range": {"from": iso(first), "to": iso(last)},
         "job_info": {j: {k: R.job_info[j][k] for k in ("name", "short", "long")} for j in R.jobs},
         "everyone": R.everyone,
+        "living_together": {"title": R.living["title"], "items": R.living["items"]},
         "action_text": action_text, "own_text": own_text,
         "periods": periods, "days": days,
     }

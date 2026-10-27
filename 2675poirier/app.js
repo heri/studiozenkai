@@ -363,6 +363,15 @@
     }).join("");
   }
 
+  // ---------- Living together (house rules) ----------
+  function renderLiving() {
+    var L = S.living_together, items = (L && L.items) || [];
+    $("living").hidden = !items.length;
+    if (!items.length) return;
+    $("living-title").textContent = L.title[lang];
+    $("living-body").innerHTML = items.map(function (it) { return "<li>" + esc(it[lang]) + "</li>"; }).join("");
+  }
+
   function renderStatic() {
     document.documentElement.lang = lang;
     document.title = T.docTitle;
@@ -375,7 +384,7 @@
     $("foot").textContent = T.foot(fmt(new Date(S.generated), { year: "numeric", month: "long", day: "numeric" }));
   }
 
-  function renderAll() { renderStatic(); renderNow(); renderMonth(); renderMine(); renderFaq(); }
+  function renderAll() { renderStatic(); renderNow(); renderMonth(); renderMine(); renderLiving(); renderFaq(); }
 
   function setLang(l, save) {
     lang = LANGS.indexOf(l) >= 0 ? l : "fr"; T = STR[lang];

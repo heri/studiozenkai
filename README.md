@@ -5,7 +5,7 @@ This repository contains the source code for the Studio Zenkai website, which is
 
 ## Overview
 
-Studio Zenkai is dedicated to the craft of programming, photography, and living sustainably. The site is built using [Hugo](https://gohugo.io), an open-source static site generator written in Go. The pages are rendered using Handlebars templates.
+Studio Zenkai is dedicated to the craft of software, photography, and curious side projects. The site is built using [Hugo](https://gohugo.io), an open-source static site generator written in Go. The pages are rendered using Handlebars templates.
 
 ## Deployment
 

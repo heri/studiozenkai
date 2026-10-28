@@ -46,8 +46,8 @@
       "name": { "en": "Bins", "fr": "Bacs" },
       "short": { "en": "Garbage & compost", "fr": "Ordures et compost" },
       "print": {
-        "en": { "all": "Take compost (Mon 7pm) and garbage (Thu 7pm) bins to the curb, bring them back the next day at 7pm. Keep the garbage area clean." },
-        "fr": { "all": "Sortir le bac brun (lun. 19 h) et le bac à ordures (jeu. 19 h), les rentrer le lendemain à 19 h. Garder l'espace poubelles propre." }
+        "en": { "all": "Take compost (Mon 7pm) and garbage (Thu 7pm) bins to the curb, bring them back the next day at 7pm. Garbage is every other week: the 2nd week of your period. Keep the garbage area clean." },
+        "fr": { "all": "Sortir le bac brun (lun. 19 h) et le bac à ordures (jeu. 19 h), les rentrer le lendemain à 19 h. Les ordures, c'est aux deux semaines : la 2e semaine de votre période. Garder l'espace poubelles propre." }
       },
       "long": {
         "en": { "all": "Take the compost and garbage bins out at 7pm the evening before pickup, bring them back at 7pm on pickup day. Keep the garbage area clean: no bags on the ground, lids closed, never leave bags beside a full bin. Recycling isn't part of this job: each unit handles its own bin." },

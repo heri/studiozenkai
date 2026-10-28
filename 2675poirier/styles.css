@@ -51,8 +51,7 @@ button, select, input { font: inherit; color: inherit; }
 .months button + button { border-left: 1px solid var(--line); }
 .months button[aria-pressed="true"] { background: var(--ink); color: #fff; }
 .months button.is-now:not([aria-pressed="true"]) { text-decoration: underline; text-underline-offset: 3px; }
-.rule { color: var(--muted); font-size: 13.5px; margin: 8px 0 6px; text-align: center; }
-.legend { list-style: none; padding: 0; margin: 0 0 10px; display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: center; font-size: 13px; }
+.legend { list-style: none; padding: 0; margin: 12px 0 10px; display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: center; font-size: 13px; }
 .legend li { display: flex; align-items: center; gap: 6px; }
 .legend .sw { display: inline-block; width: 14px; height: 10px; border-radius: 2px; background: linear-gradient(90deg, #dbeafe 50%, #dcfce7 50%); border: 1px solid var(--line); vertical-align: -1px; }
 

@@ -274,8 +274,11 @@ the result, so the website and iCal never go stale. Printing stays manual.
   `?lang=fr|en`; remembered in localStorage). Outputs per language: `print/YYYY-MM.pdf` + `print/YYYY-MM-fr.pdf`
   (French QR opens `?lang=fr`), `ics/unit-XXX.ics` + `ics/unit-XXX-fr.ics`.
 - Oct 2026: **"Vivre ensemble" house rules** in `config.json` (`living_together`). The website shows all items; the
-  PDF shows the first `print_count` (2) as a last row of "What each job covers". When a 6-week month would overflow,
-  `make_pdf.py` redraws in a compact layout (tighter "Who does what" rows and section gaps); day cells never shrink.
+  PDF shows the first `print_count` (2) as a last row of "Let's do our part:".
+- Oct 2026: **simplified printout** (supersedes the PDF design rules above): no month grid, no bin-timing line, no legend,
+  no "Who does what" title. The page is: title + month, the periods table, then "Let's do our part:" (job one-liners,
+  an "Everyone" recycling row, house rules) with the QR on the right. The website keeps its calendar (it mirrors the
+  iCal feeds) but drops the bin-timing line and the "Who does what" title; subtitle is "Building calendar".
 
 - Weekly turns were rejected. With garbage every other Friday and 6 units, weekly turns meant 3 units would never do garbage.
   **2-week periods** give every unit both streams fairly.

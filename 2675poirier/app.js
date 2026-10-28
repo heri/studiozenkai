@@ -10,16 +10,15 @@
       locale: "en-CA",
       docTitle: "2675 boul. Poirier · Building duty calendar",
       title: "2675 boul. Poirier",
-      subtitle: "Building duty calendar · 4 jobs, 4 units, every 2 weeks · 2 units off",
+      subtitle: "Building calendar",
       prev: "Previous month", next: "Next month", monthsLabel: "Choose a month",
-      rule: "Bins go to the curb at 7pm the evening before pickup and come back in at 7pm on pickup day.",
       legend: { compost: "Compost (pickup every Tuesday)", recycling: "Recycling: each unit, own bin (Tuesday)", garbage: "Garbage (every other Friday)" },
       legendBins: "Day colour = unit on bins duty",
       weekdays: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
       bins: "Bins", unit: "Unit", all: "All", at7: "7pm:", at7long: "7pm",
       short: { out: "Out", back: "Back" },
       agendaTitle: function (m) { return "Bin actions in " + m; },
-      whoTitle: "Who does what", period: "Period",
+      period: "Period",
       printLink: function (m) { return "Printable calendar for " + m + " (PDF)"; },
       nowToday: "Tonight at 7pm", nowNext: "Next bin action", nowOnDuty: "On bins duty now",
       nowStarts: function (d) { return "The rotation starts on " + d + "."; },
@@ -66,16 +65,15 @@
       locale: "fr-CA",
       docTitle: "2675 boul. Poirier · Calendrier des tâches",
       title: "2675 boul. Poirier",
-      subtitle: "Calendrier des tâches · 4 tâches, 4 unités, aux 2 semaines · 2 unités en congé",
+      subtitle: "Calendrier de l’immeuble",
       prev: "Mois précédent", next: "Mois suivant", monthsLabel: "Choisir un mois",
-      rule: "Les bacs vont au bord de la rue à 19 h la veille de la collecte et sont rentrés à 19 h le jour de la collecte.",
       legend: { compost: "Bac brun / compost (chaque mardi)", recycling: "Recyclage : chaque unité, son bac (mardi)", garbage: "Ordures (un vendredi sur deux)" },
       legendBins: "Couleur du jour = unité de service aux bacs",
       weekdays: ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"],
       bins: "Bacs", unit: "Unité", all: "Tous", at7: "19 h :", at7long: "19 h",
       short: { out: "Sortir", back: "Rentrer" },
       agendaTitle: function (m) { return "Bacs en " + m.toLowerCase(); },
-      whoTitle: "Qui fait quoi", period: "Période",
+      period: "Période",
       printLink: function (m) { return "Calendrier imprimable de " + m.toLowerCase() + " (PDF)"; },
       nowToday: "Ce soir à 19 h", nowNext: "Prochaine sortie des bacs", nowOnDuty: "De service aux bacs",
       nowStarts: function (d) { return "La rotation commence le " + d + "."; },
@@ -264,7 +262,6 @@
     $("agenda").innerHTML = rows.length ? '<h3 class="h3">' + esc(T.agendaTitle(mName)) + "</h3><ul>" + rows.join("") + "</ul>" : "";
 
     // who does what
-    $("who-title").textContent = T.whoTitle;
     var w = '<div class="wrow whead"><div>' + T.period + "</div>" + S.jobs.map(function (j) { return "<div>" + esc(jobName(j)) + "</div>"; }).join("") + "</div>";
     periodsIn(iso(first), iso(last)).forEach(function (p) {
       var cur = p.start <= today && today <= p.end;
@@ -378,7 +375,6 @@
     document.querySelectorAll("[data-i18n]").forEach(function (el) { el.textContent = T[el.getAttribute("data-i18n")]; });
     document.querySelectorAll("#lang button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.value === lang)); });
     $("prev").setAttribute("aria-label", T.prev); $("next").setAttribute("aria-label", T.next);
-    $("rule").textContent = T.rule;
     $("legend").innerHTML = ["compost", "recycling", "garbage"].map(function (s) { return "<li>" + marker(s) + " " + T.legend[s] + "</li>"; }).join("") +
       '<li><span class="sw"></span> ' + T.legendBins + "</li>";
     $("foot").textContent = T.foot(fmt(new Date(S.generated), { year: "numeric", month: "long", day: "numeric" }));
